@@ -33,10 +33,10 @@ function hero() {
 
 function subnav() {
   const items = [
+    ["conjugador", "Conjugador"],
     ["lengua", "Conoce la lengua"],
     ["ortografia", "Ortografía"],
     ["gramatica", "Cómo se conjuga"],
-    ["conjugador", "Conjugador"],
   ];
   return `<nav class="subnav" aria-label="Secciones"><div class="wrap"><ul>
     ${items.map(([id, label]) => `<li><a href="#${id}">${label}</a></li>`).join("")}
@@ -172,6 +172,14 @@ function conjugator() {
       </ul>
       <p class="error" data-error hidden></p>
       <div data-result aria-live="polite"></div>
+      <div class="card card--blanca learn-more">
+        <h3>¿Quieres saber más?</h3>
+        <ul>
+          <li><a href="#lengua">Conoce la lengua</a>: quién la habla y dónde.</li>
+          <li><a href="#ortografia">Ortografía</a>: cada letra con una palabra de ejemplo.</li>
+          <li><a href="#gramatica">Cómo se conjuga</a>: los proclíticos y por qué cambia la raíz.</li>
+        </ul>
+      </div>
     </div>
   </section>`;
 }
@@ -192,7 +200,7 @@ function comingSoon() {
 if (lang.status !== "available") {
   root.innerHTML = hero() + comingSoon();
 } else {
-  root.innerHTML = hero() + subnav() + about() + orthography() + grammar() + conjugator() + source();
+  root.innerHTML = hero() + subnav() + conjugator() + about() + orthography() + grammar() + source();
   setupConjugator();
 }
 

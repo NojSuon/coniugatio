@@ -34,12 +34,17 @@ export function escapeHtml(text) {
     .replaceAll('"', "&quot;");
 }
 
-// A word in an indigenous language. Fredoka cannot compose the line-below
-// mark (U+0331), so those words switch to Nunito Sans Bold (manual §5).
+// A word in an indigenous language, in Fredoka Bold (manual §12).
+// Fredoka has no glyph for the line-below mark (U+0331, as in u̱), so the
+// line is drawn with CSS under the letter and the real mark is kept in a
+// visually hidden span: the word looks consistent and still copies as "u̱".
 export function langWord(text, tag = "span", extra = "") {
-  const compose = /̱/.test(String(text));
-  const cls = `lang${compose ? " lang--compose" : ""}${extra ? " " + extra : ""}`;
-  return `<${tag} class="${cls}" lang="ote">${escapeHtml(text)}</${tag}>`;
+  const html = escapeHtml(String(text).normalize("NFC")).replace(
+    /(\p{L})̱/gu,
+    '<span class="lb">$1<span class="lb-mark">̱</span></span>'
+  );
+  const cls = `lang${extra ? " " + extra : ""}`;
+  return `<${tag} class="${cls}" lang="ote">${html}</${tag}>`;
 }
 
 export function renderHeader(current) {

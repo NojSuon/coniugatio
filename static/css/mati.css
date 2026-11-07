@@ -107,16 +107,26 @@ p { margin: 0; max-width: 65ch; }
 :focus-visible { outline: 3px solid var(--mati-turquesa-mar); outline-offset: 3px; }
 
 /* Words in an indigenous language: always Fredoka Bold with an accent colour
-   (§12). Words with the line-below mark (u̱, o̱…) fall back to Nunito Sans
-   Bold, which Fredoka cannot compose (§5, character coverage). */
+   (§12). Fredoka lacks the line-below mark (u̱, o̱…; §5 character coverage),
+   so .lb draws it as an underline and .lb-mark hides the real character. */
 .lang {
   font-family: var(--font-titulo);
   font-weight: 700;
   color: var(--serie-texto);
 }
-.lang.lang--compose {
-  font-family: "Nunito Sans", "Noto Sans", sans-serif;
-  font-weight: 800;
+.lb {
+  position: relative;
+  text-decoration: underline;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.12em;
+  text-decoration-skip-ink: none;
+}
+.lb-mark {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 /* Tags / badges — Fredoka 600, 14px, +0.02em, radius 14px */
@@ -387,8 +397,13 @@ table.data td .lang { font-size: 20px; }
 .tense .caption { margin: 2px 0 10px; }
 .tense table.data td { padding: 10px 14px; }
 .tense .person { font-size: 14px; color: var(--mati-cafe-tierra); }
-.tense .lang { font-size: 19px; }
+.tense .lang { font-size: 19px; white-space: nowrap; }
 .tense .clitic { color: var(--serie-acento); }
+
+.learn-more { margin-top: 32px; }
+.learn-more ul { margin: 8px 0 0; padding-left: 20px; }
+.learn-more li { margin-top: 4px; }
+.learn-more a { font-family: var(--font-titulo); font-weight: 600; color: var(--serie-texto); }
 
 .source { margin-top: 40px; font-size: 14px; color: var(--mati-cafe-tierra); }
 .source strong { color: var(--mati-tinta); }
