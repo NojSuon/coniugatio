@@ -271,37 +271,71 @@ function renderResult(data, own = false) {
     : `<p class="notice result-note">Este verbo no está en nuestra lista, así que aplicamos las reglas generales. Revisa sus formas en el diccionario: algunos verbos cambian de manera distinta.</p>`;
 
   const es = (text) => (text ? `<span class="es" lang="es">${e(text)}</span>` : "");
+  // A dash where a construction has no such person (imperatives are 2nd
+  // person only); Otomí explains its missing 3rd person plural instead.
+  const EMPTY = `<span class="caption" aria-label="no existe">—</span>`;
+  const noPlural = (lang.conjugator || {}).no_plural
+    ? `<span class="caption">${e(lang.conjugator.no_plural)}</span>`
+    : EMPTY;
 
   const table = (t) => `
     <div class="tense">
       <h4>${e(t.name)}</h4>
       <p class="caption">${e(t.description)}</p>
-      <table class="data">
+      <div class="table-scroll"><table class="data">
         <thead><tr><th scope="col">Persona</th><th scope="col">Singular</th><th scope="col">Plural</th></tr></thead>
         <tbody>${t.rows
           .map(
             (r) => `<tr>
               <th scope="row" class="person">${e(r.person)}</th>
-              <td>${w(r.singular)}${es(r.es_singular)}</td>
-              <td>${
-                r.plural ? w(r.plural) : `<span class="caption">igual, con ${w("ya")} en el sustantivo</span>`
-              }${es(r.es_plural)}</td>
+              <td>${r.singular ? w(r.singular) : EMPTY}${es(r.es_singular)}</td>
+              <td>${r.plural ? w(r.plural) : noPlural}${es(r.es_plural)}</td>
             </tr>`
           )
           .join("")}</tbody>
-      </table>
+      </table></div>
     </div>`;
+
+  // One group of tables at a time, with buttons to switch between them.
+  const shown = groups.includes(lastGroup) ? lastGroup : groups[0];
+  const tabs =
+    groups.length < 2
+      ? ""
+      : `<div class="group-tabs" role="tablist" aria-label="Grupos de tiempos">${groups
+          .map((g, i) => {
+            const n = data.tables.filter((t) => t.group === g).length;
+            return `<button type="button" role="tab" data-group-tab="${i}" aria-selected="${g === shown}">${e(g)} <span class="count">${n}</span></button>`;
+          })
+          .join("")}</div>`;
+  const panels = groups
+    .map((g, i) => {
+      const tables = data.tables.filter((t) => t.group === g).map(table).join("");
+      const hidden = g === shown ? "" : " hidden";
+      return `<div class="tense-group" role="tabpanel" data-group-panel="${i}" data-group-name="${e(g)}"${hidden}>
+          <h3>${e(g)}</h3><div class="tense-grid">${tables}</div></div>`;
+    })
+    .join("");
 
   return `
     <div class="result-head">${w(data.root)}${data.meaning ? `<span class="caption">«${e(data.meaning)}»</span>` : ""}</div>
     ${status}
-    ${groups
-      .map(
-        (g) => `<div class="tense-group"><h3>${e(g)}</h3>
-          <div class="tense-grid">${data.tables.filter((t) => t.group === g).map(table).join("")}</div></div>`
-      )
-      .join("")}`;
+    ${tabs}
+    ${panels}`;
 }
+
+// The group shown last stays selected when another verb is conjugated.
+let lastGroup = null;
+
+document.addEventListener("click", (ev) => {
+  const tab = ev.target.closest?.("[data-group-tab]");
+  if (!tab) return;
+  const box = tab.closest("[data-result], [data-own-result]");
+  box.querySelectorAll("[data-group-tab]").forEach((b) => b.setAttribute("aria-selected", String(b === tab)));
+  box.querySelectorAll("[data-group-panel]").forEach((p) => {
+    p.hidden = p.dataset.groupPanel !== tab.dataset.groupTab;
+    if (!p.hidden) lastGroup = p.dataset.groupName;
+  });
+});
 
 function setupConjugator() {
   const form = document.querySelector("[data-form]");

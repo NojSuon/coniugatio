@@ -413,12 +413,15 @@ table.data td .lang { font-size: 20px; }
 .error { color: var(--mati-guajillo); font-weight: 700; margin-top: 12px; }
 
 .tense-group h3 { margin: 28px 0 12px; color: var(--serie-texto); }
-.tense-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+/* min(100%, …) keeps a column from ever being wider than the screen; each
+   table scrolls inside its card if a form is very long. */
+.tense-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+.tense { min-width: 0; }
 .tense h4 { font-family: var(--font-titulo); font-weight: 600; font-size: 19px; margin: 0; }
 .tense .caption { margin: 2px 0 10px; }
 .tense table.data td { padding: 10px 14px; }
 .tense .person { font-size: 14px; color: var(--mati-cafe-tierra); }
-.tense .lang { font-size: 19px; white-space: nowrap; }
+.tense .lang { font-size: 19px; }
 .tense .es { display: block; font-size: 14px; line-height: 1.35; color: var(--mati-cafe-tierra); margin-top: 2px; }
 .tense .clitic { color: var(--serie-acento); }
 
@@ -442,3 +445,19 @@ table.data td .lang { font-size: 20px; }
   * { transition: none !important; scroll-behavior: auto !important; }
 }
 html { scroll-behavior: smooth; }
+
+/* Buttons to switch between groups of tenses */
+.group-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 4px; }
+.group-tabs button {
+  font: 600 16px var(--font-titulo); color: var(--serie-texto);
+  background: var(--mati-blanco); border: 2px solid var(--serie-fondo);
+  border-radius: 999px; padding: 8px 16px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.group-tabs button:hover { border-color: var(--serie-solido); }
+.group-tabs button[aria-selected="true"] { background: var(--serie-solido); border-color: var(--serie-solido); color: var(--mati-blanco); }
+.group-tabs .count {
+  font: 700 12px var(--font-cuerpo); min-width: 22px; height: 22px; border-radius: 11px;
+  display: inline-grid; place-items: center; background: var(--serie-fondo); color: var(--serie-texto);
+}
+.group-tabs button[aria-selected="true"] .count { background: var(--mati-blanco); }
