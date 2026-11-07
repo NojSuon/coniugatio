@@ -7,6 +7,9 @@
 //! dist/404.html
 //! dist/data/languages.json   home page cards
 //! dist/data/<slug>.json      everything about one language
+//! dist/en/...                the same pages in English, with
+//! dist/data/en/...           data/languages/en/<slug>.json merged over
+//!                            each language (only the text that changes)
 //! dist/static/...            css, js, images
 //! dist/pkg/...               the conjugator compiled to WebAssembly
 //! ```
@@ -25,7 +28,7 @@ use std::{
     process::Command,
 };
 
-use coniugatio_core::{Engine, Summary};
+use coniugatio_core::{conjugate::Options as ConjugateOptions, Engine, Summary};
 use serde_json::Value;
 
 struct Options {
@@ -79,6 +82,51 @@ fn main() {
 struct Language {
     summary: Summary,
     raw: Value,
+    /// The same data with the English text merged in.
+    en: Value,
+    summary_en: Summary,
+}
+
+/// Merges an English overlay into a language's data. Objects merge key by
+/// key. Arrays of objects with an "id" or "entry" (tenses, persons, types,
+/// lexicon) merge by that key; other arrays merge position by position, so
+/// an overlay only lists the text it translates, in the same order.
+fn merge(base: &mut Value, over: &Value) {
+    match (base, over) {
+        (Value::Object(b), Value::Object(o)) => {
+            for (k, v) in o {
+                // An "es" spec is replaced whole: merging it would keep a
+                // Spanish auxiliary ("acabar") in an English construction.
+                if k == "es" {
+                    b.insert(k.clone(), v.clone());
+                    continue;
+                }
+                match b.get_mut(k) {
+                    Some(slot) => merge(slot, v),
+                    None => {
+                        b.insert(k.clone(), v.clone());
+                    }
+                }
+            }
+        }
+        (Value::Array(b), Value::Array(o)) => {
+            let key = |v: &Value| {
+                ["id", "entry"]
+                    .iter()
+                    .find_map(|k| v.get(*k).and_then(Value::as_str).map(|s| (*k, s.to_string())))
+            };
+            for (i, v) in o.iter().enumerate() {
+                let by_key = key(v).and_then(|(k, id)| {
+                    b.iter().position(|x| x.get(k).and_then(Value::as_str) == Some(id.as_str()))
+                });
+                match by_key.or_else(|| key(v).is_none().then_some(i).filter(|&i| i < b.len())) {
+                    Some(j) => merge(&mut b[j], v),
+                    None => b.push(v.clone()),
+                }
+            }
+        }
+        (b, o) => *b = o.clone(),
+    }
 }
 
 fn load_languages(dir: &Path) -> Result<Vec<Language>, String> {
@@ -91,6 +139,14 @@ fn load_languages(dir: &Path) -> Result<Vec<Language>, String> {
         let ctx = |e: &dyn std::fmt::Display| format!("{}: {e}", path.display());
         let raw: Value = serde_json::from_str(&fs::read_to_string(&path).map_err(|e| ctx(&e))?).map_err(|e| ctx(&e))?;
         let summary: Summary = serde_json::from_value(raw.clone()).map_err(|e| ctx(&e))?;
+        let mut en = raw.clone();
+        let en_path = dir.join("en").join(path.file_name().unwrap());
+        if en_path.exists() {
+            let over: Value = serde_json::from_str(&fs::read_to_string(&en_path).map_err(|e| ctx(&e))?)
+                .map_err(|e| format!("{}: {e}", en_path.display()))?;
+            merge(&mut en, &over);
+        }
+        let summary_en: Summary = serde_json::from_value(en.clone()).map_err(|e| ctx(&e))?;
 
         // Catch data mistakes at build time rather than in the browser.
         if let Some(c) = raw.get("conjugation") {
@@ -98,10 +154,26 @@ fn load_languages(dir: &Path) -> Result<Vec<Language>, String> {
             for word in conj.lexicon_words() {
                 conj.conjugate(&word).map_err(|e| ctx(&format!("lexicon verb {word:?}: {e}")))?;
             }
+            // The English pages: every form of a lexicon verb should have
+            // its English equivalent.
+            let conj_en: Engine = serde_json::from_value(en["conjugation"].clone()).map_err(|e| ctx(&e))?;
+            let opts = ConjugateOptions { lang: Some("en".into()), ..Default::default() };
+            for word in conj_en.lexicon_words() {
+                let r = conj_en.conjugate_with(&word, &opts).map_err(|e| ctx(&format!("lexicon verb {word:?}: {e}")))?;
+                let missing: Vec<&str> = r
+                    .tables
+                    .iter()
+                    .filter(|t| t.rows.iter().any(|row| !row.singular.is_empty() && row.es_singular.is_none()))
+                    .map(|t| t.id.as_str())
+                    .collect();
+                if !missing.is_empty() {
+                    eprintln!("warning: {}: no English for {word:?} in {missing:?}", path.display());
+                }
+            }
         } else if summary.status == "available" {
             return Err(ctx(&"status is \"available\" but there is no \"conjugation\" block"));
         }
-        list.push(Language { summary, raw });
+        list.push(Language { summary, raw, en, summary_en });
     }
     list.sort_by_key(|l| l.summary.order);
     Ok(list)
@@ -143,7 +215,10 @@ fn build(root: &Path, opts: &Options) -> Result<(), String> {
     write(&out.join("data/languages.json"), serde_json::to_string(&summaries).unwrap())?;
     for lang in &languages {
         write(&out.join(format!("data/{}.json", lang.summary.slug)), serde_json::to_string(&lang.raw).unwrap())?;
+        write(&out.join(format!("data/en/{}.json", lang.summary.slug)), serde_json::to_string(&lang.en).unwrap())?;
     }
+    let summaries_en: Vec<&Summary> = languages.iter().map(|l| &l.summary_en).collect();
+    write(&out.join("data/en/languages.json"), serde_json::to_string(&summaries_en).unwrap())?;
 
     let templates = root.join("static");
     copy_assets(&templates, &out.join("static"))?;
@@ -152,11 +227,15 @@ fn build(root: &Path, opts: &Options) -> Result<(), String> {
     let base = opts.base.as_str();
     write(&out.join("index.html"), render(&read("index.html")?, &[("base", base)]))?;
     write(&out.join("404.html"), render(&read("404.html")?, &[("base", base)]))?;
+    write(&out.join("en/index.html"), render(&read("en/index.html")?, &[("base", base)]))?;
     let page = read("language.html")?;
+    let page_en = read("en/language.html")?;
     for lang in &languages {
         let s = &lang.summary;
         let html = render(&page, &[("base", base), ("slug", &s.slug), ("title", &s.endonym)]);
         write(&out.join(&s.slug).join("index.html"), html)?;
+        let html = render(&page_en, &[("base", base), ("slug", &s.slug), ("title", &s.endonym)]);
+        write(&out.join("en").join(&s.slug).join("index.html"), html)?;
     }
     // Lets GitHub Pages serve files and folders as they are.
     write(&out.join(".nojekyll"), "")?;

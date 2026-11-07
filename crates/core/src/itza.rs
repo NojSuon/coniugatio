@@ -504,7 +504,7 @@ impl Conjugation {
         let es = |tense: &Tense, person: &Person, plural: bool| -> Option<String> {
             let meaning = es_meaning.as_deref()?;
             let p = person.es? + if plural { 3 } else { 0 };
-            spanish::render(meaning, tense.es.as_ref()?, p, tense.negative)
+            crate::gloss(opts, meaning, tense.es.as_ref()?, p, tense.negative)
         };
 
         let tables = self
@@ -819,6 +819,7 @@ mod tests {
         let opts = |kind: &str, es: &str| Options {
             es: Some(es.into()),
             kind: Some(kind.into()),
+            ..Default::default()
         };
         let c = itza();
         // Bare roots work once the type is chosen.
@@ -849,6 +850,7 @@ mod tests {
                 &Options {
                     es: Some("señalar".into()),
                     kind: None,
+                    ..Default::default()
                 },
             )
             .unwrap();

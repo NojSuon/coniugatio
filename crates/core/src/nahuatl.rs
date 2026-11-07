@@ -438,13 +438,15 @@ impl Conjugation {
             .map(str::to_string)
             .or_else(|| match (entry, with_ki) {
                 (Some(e), _) => e.es.clone(),
-                (None, Some(e)) => e.es.as_ref().map(|m| format!("{m}lo")),
+                (None, Some(e)) => e.es.as_ref().map(|m| {
+                    if opts.english() { format!("{m} it") } else { format!("{m}lo") }
+                }),
                 _ => None,
             });
         let es = |tense: &Tense, person: &Person, plural: bool| -> Option<String> {
             let meaning = es_meaning.as_deref()?;
             let p = person.es? + if plural { 3 } else { 0 };
-            spanish::render(meaning, tense.es.as_ref()?, p, tense.negative)
+            crate::gloss(opts, meaning, tense.es.as_ref()?, p, tense.negative)
         };
 
         let tables = self
@@ -714,6 +716,7 @@ mod tests {
         let opts = Options {
             es: Some("trabajar".into()),
             kind: Some("none".into()),
+            ..Default::default()
         };
         let r = c.conjugate_with("tekiti", &opts).unwrap();
         assert_eq!(r.tables[0].rows[0].singular, "nitekiti");
@@ -726,6 +729,7 @@ mod tests {
         let opts = Options {
             es: Some("escribirlo".into()),
             kind: Some("ki".into()),
+            ..Default::default()
         };
         let r = c.conjugate_with("ijkuiloa", &opts).unwrap();
         assert_eq!(r.tables[0].rows[0].singular, "nikijkuiloa");

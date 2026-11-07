@@ -4,6 +4,7 @@
 //! and to WebAssembly (runs in the visitor's browser).
 
 pub mod conjugate;
+pub mod english;
 pub mod itza;
 pub mod nahuatl;
 pub mod otomi;
@@ -54,6 +55,23 @@ impl Engine {
             Engine::Nahuatl(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Purhepecha(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
+    }
+}
+
+/// The equivalent of a form in the page's language: Spanish, or English
+/// when `opts.lang` is "en" (the English pages give `es` specs and
+/// meanings in English, see `data/languages/en/`).
+pub fn gloss(
+    opts: &conjugate::Options,
+    meaning: &str,
+    es: &spanish::Es,
+    person: usize,
+    negative: bool,
+) -> Option<String> {
+    if opts.english() {
+        english::render(meaning, es, person, negative)
+    } else {
+        spanish::render(meaning, es, person, negative)
     }
 }
 

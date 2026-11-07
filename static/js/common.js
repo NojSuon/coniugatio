@@ -11,6 +11,22 @@ export const LOGO_SVG = `
   <path d="M54 54h46v11H82.5v24H100v11H54V89h17.5V65H54z"/>
 </svg>`;
 
+// ---------- Language of the page ----------
+// Spanish pages live at /coniugatio/…, English ones at /coniugatio/en/….
+export const EN = document.documentElement.lang === "en";
+// The Spanish or the English text, for the page's language.
+export const t = (es, en) => (EN ? en : es);
+// Home page of the current language, relative to <base href>.
+export const HOME = EN ? "en/" : "./";
+
+// The same page in the other language: /otomi/ ⇄ /en/otomi/.
+function otherLanguageHref() {
+  const base = new URL(document.baseURI).pathname;
+  const here = location.pathname.startsWith(base) ? location.pathname.slice(base.length) : "";
+  const path = EN ? here.replace(/^en(\/|$)/, "") : `en/${here}`;
+  return (path || "./") + location.search + location.hash;
+}
+
 // Pages use <base href> so the site works under /coniugatio/ on GitHub Pages.
 // With a base, "#section" links would point at the home page, so in-page
 // links are handled here instead.
@@ -61,14 +77,19 @@ export function renderHeader(current) {
     `<li><a href="${href}"${current === key ? ' aria-current="page"' : ""}>${label}</a></li>`;
   el.innerHTML = `
     <div class="wrap">
-      <a class="brand" href="./">${LOGO_SVG}<span>Mati Mati</span></a>
-      <nav class="site-nav" aria-label="Principal">
-        <ul>
-          ${link("./", "Inicio", "home")}
-          ${link("./#lenguas", "Lenguas", "lenguas")}
-          ${link("./#mati", "Mati Mati", "mati")}
-        </ul>
-      </nav>
+      <a class="brand" href="${HOME}">${LOGO_SVG}<span>Mati Mati</span></a>
+      <div class="header-end">
+        <nav class="site-nav" aria-label="${t("Principal", "Main")}">
+          <ul>
+            ${link(HOME, t("Inicio", "Home"), "home")}
+            ${link(`${HOME}#lenguas`, t("Lenguas", "Languages"), "lenguas")}
+            ${link(`${HOME}#mati`, "Mati Mati", "mati")}
+          </ul>
+        </nav>
+        ${EN
+          ? `<a class="lang-switch" href="${otherLanguageHref()}" hreflang="es" lang="es" aria-label="Ver esta página en español">ES</a>`
+          : `<a class="lang-switch" href="${otherLanguageHref()}" hreflang="en" lang="en" aria-label="Read this page in English">EN</a>`}
+      </div>
     </div>`;
 }
 
@@ -77,8 +98,16 @@ export function renderFooter() {
   if (!el) return;
   el.innerHTML = `
     <div class="wrap">
-      <a class="brand" href="./">${LOGO_SVG}<span>Mati Mati</span></a>
-      <p>Aprende, preserva y comparte lenguas indígenas.<br>
-        Síguenos en <a href="https://www.instagram.com/matidemati" rel="noopener">@matidemati</a>.</p>
+      <a class="brand" href="${HOME}">${LOGO_SVG}<span>Mati Mati</span></a>
+      <p>${t("Aprende, preserva y comparte lenguas indígenas.", "Learn, preserve and share Indigenous languages.")}<br>
+        ${t("Síguenos en", "Follow us at")} <a href="https://www.instagram.com/matidemati" rel="noopener">@matidemati</a>.</p>
     </div>`;
 }
+
+// Keeps the language switch pointing at the same verb and section after the
+// URL changes (?verbo=…, #conjugador).
+export function refreshLanguageSwitch() {
+  const a = document.querySelector(".lang-switch");
+  if (a) a.setAttribute("href", otherLanguageHref());
+}
+window.addEventListener("hashchange", refreshLanguageSwitch);

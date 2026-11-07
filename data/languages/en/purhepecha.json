@@ -1,0 +1,218 @@
+{
+  "name": "Purépecha",
+  "variant": "P'urhépecha of the Meseta and the Lake",
+  "region": "Michoacán, Mexico",
+  "summary": "Aspect, tense and person suffixes added to the root, one after another.",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb in the infinitive (with -ni) or just the root: uandani «speak», t'ireni «eat», ch'anani «play». Accents are optional; if you type them, they are kept.",
+    "own": {
+      "hint": "Type any verb in the infinitive and its meaning in English. We conjugate it by adding the suffixes to the root.",
+      "label": "Verb in the infinitive",
+      "es_placeholder": "plough",
+      "types_help": "With a plural object, -a- is added after the root: exe-a-xati «he/she is seeing them». Write the meaning with «them»: «see them»."
+    },
+    "types": [
+      { "id": "", "label": "No object or a singular object" },
+      { "id": "pl", "label": "With a plural object (-a-): exeaxati" }
+    ]
+  },
+  "source": {
+    "full": "Ma. Guadalupe Hernández Dimas, Roberto Fabián Luis and Sereno Coló, Curso de lengua p'urhépecha (para no hablantes), notes from Fernando Nava's class, Instituto de Investigaciones Antropológicas, UNAM, 1998–1999; Alberto Medina Pérez, Guía lingüística p'urhépecha, Universidad Michoacana de San Nicolás de Hidalgo, 2006. See also: Paul P. de Wolf, Curso básico del tarasco hablado, El Colegio de Michoacán."
+  },
+  "about": [
+    "P'urhépecha (or Purépecha, also called Tarascan) is spoken in Michoacán: on the Meseta, around Lake Pátzcuaro, in the Cañada de los Once Pueblos and in the Ciénega de Zacapu. More than 140,000 people speak it.",
+    "It is a language isolate: it has no known relatives in Mexico or anywhere else in the Americas. It was the language of one of the great states of Mesoamerica, whose capital was Tzintzuntzan.",
+    "It is an agglutinative language and uses almost no prefixes: the verb grows by adding suffixes to the root, one after another. A single verb can have more than ten syllables."
+  ],
+  "orthography": {
+    "intro": "We use today's P'urhépecha alphabet: 6 vowels and 21 consonants. The apostrophe marks an aspirated consonant (with a puff of air), and ï is a central vowel, between i and u.",
+    "letters": [
+      { "meaning": "hit" },
+      { "meaning": "ten" },
+      { "meaning": "canoe" },
+      { "meaning": "play" },
+      { "meaning": "mom" },
+      { "meaning": "see, look" },
+      { "meaning": "with" },
+      { "meaning": "firewood" },
+      { "meaning": "spider" },
+      { "meaning": "rain" },
+      { "meaning": "atole (corn drink)" },
+      { "meaning": "chili" },
+      { "meaning": "heart" },
+      { "meaning": "go" },
+      { "meaning": "tree" },
+      { "meaning": "island" },
+      { "meaning": "song" },
+      { "meaning": "reed" },
+      { "meaning": "butterfly" },
+      { "meaning": "plough" },
+      { "meaning": "steal" },
+      { "meaning": "four" },
+      { "meaning": "eat" },
+      { "meaning": "hen" },
+      { "meaning": "earthworm" },
+      { "meaning": "speak" },
+      { "meaning": "scold" }
+    ],
+    "vowels": [{ "title": "Vowels" }],
+    "notes": [
+      "No P'urhépecha word begins with b, d, g, ï, nh, r or rh, except loanwords from Spanish. B, d and g appear after m or n: témbeni, náandi, pirésïnga.",
+      "Every word ends in a vowel. If the last vowel isn't stressed, it is pronounced very weakly or almost not at all: uandani sounds almost like «uandan».",
+      "The written accent marks the stressed syllable and can change the meaning: karáni «write», kárani «fly». Books mostly write it on the verb root (piré-, uandá-).",
+      "Pronunciation is shown in brackets with the International Phonetic Alphabet (IPA)."
+    ]
+  },
+  "grammar": {
+    "intro": "A P'urhépecha verb is built from left to right: the root and then, in order, the suffixes that say how the action unfolds, when, whether it is a statement or a question, and how many do it.",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "Root", "description": "The infinitive without -ni." },
+          { "slot": "Aspect", "description": "-xa now, -sïn by habit, -s done, -xam about to." },
+          { "slot": "Tense", "description": "-p- past, -a future, -pirin conditional; nothing in the present." },
+          { "slot": "Mood", "description": "-ka 1st and 2nd person, -ti 3rd; -ki / -pi in questions." },
+          { "slot": "Plural", "description": "-ksï we and they, -jtsï you all." }
+        ]
+      },
+      {
+        "title": "The verb endings",
+        "description": "They are added to the root. After m or n, ka and ti become ga and di: sïn + ka → sïnga.",
+        "columns": ["Tense", "1st and 2nd", "3rd", "Question"],
+        "rows": [
+          { "label": "Present actual" },
+          { "label": "Present habitual" },
+          { "label": "Present perfect" },
+          { "label": "Present inceptive" },
+          { "label": "Past actual" },
+          { "label": "Past habitual" },
+          { "label": "Past perfect" },
+          { "label": "Past inceptive" },
+          { "label": "Future" },
+          { "label": "Conditional" }
+        ],
+        "note": "The question forms work for every person: ¿uandaxaki? «is he/she speaking?», ¿uandaxakiksï? «are they speaking?»."
+      },
+      {
+        "title": "The persons",
+        "description": "Pronouns are hardly used: the verb already says who. To stress the subject, the pronoun or a clitic attached to the verb is used.",
+        "columns": ["Person", "Pronoun", "Clitic", "Example"],
+        "rows": [{ "label": "I" }, { "label": "you" }, { "label": "he, she" }, { "label": "we" }, { "label": "you all" }, { "label": "they" }],
+        "note": "In the conjugator the singular clitics (-ni, -re) are not written; the plural ones are."
+      },
+      {
+        "title": "Four aspects",
+        "description": "Before the tense, P'urhépecha says how the action unfolds. Each aspect has a present and a past.",
+        "items": [
+          { "name": "Actual", "description": "What is happening right now.", "examples": [{ "meaning": "I am eating · I was eating" }] },
+          { "name": "Habitual", "description": "What one does by habit, or knows how to do.", "examples": [{ "meaning": "I dance · I used to dance" }] },
+          { "name": "Perfect", "description": "What has been done.", "examples": [{ "meaning": "I have sung · I sang" }] },
+          { "name": "Inceptive", "description": "What is about to happen.", "examples": [{ "meaning": "I am about to sing · I was about to sing" }] }
+        ]
+      },
+      {
+        "title": "Orders",
+        "description": "The imperative is the bare root; in the plural, -e is added. To forbid, ásï goes before it, never «no». Ia adds «now, already».",
+        "items": [
+          { "translation": "speak!" },
+          { "translation": "speak! (you all)" },
+          { "translation": "don't speak!" },
+          { "translation": "don't eat! (you all)" },
+          { "translation": "write now!" }
+        ]
+      },
+      {
+        "title": "Verbs with an irregular future",
+        "description": "Jarhani, jurhani, nirani and a few others change rha or ra to u in the future, and in the conditional they keep only the first syllable.",
+        "items": [
+          { "name": "be", "description": "Future jaua-, conditional ja-.", "examples": [{ "meaning": "I will be · I would be" }] },
+          { "name": "go", "description": "Future niua-, conditional ni-.", "examples": [{ "meaning": "I will go · I would go" }] },
+          { "name": "come", "description": "Future jua-, conditional ju-.", "examples": [{ "meaning": "I will come · I would come" }] }
+        ]
+      },
+      {
+        "title": "Plural object",
+        "description": "When what receives the action is plural, the verb takes -a- after the root, and the noun takes -ni.",
+        "items": [
+          { "translation": "These hens are eating earthworms." },
+          { "translation": "I will see the gentlemen." },
+          { "translation": "Look at the dancers! (you all)" }
+        ]
+      },
+      {
+        "title": "Example sentences",
+        "items": [
+          { "translation": "How did you wake up? (good morning)" },
+          { "translation": "Well, and you?" },
+          { "translation": "Thank you." },
+          { "translation": "Karla speaks in P'urhépecha." },
+          { "translation": "I want to sing." }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "1st person" },
+      { "id": "2", "label": "2nd person" },
+      { "id": "3", "label": "3rd person" }
+    ],
+    "tenses": [
+      { "id": "actual", "group": "Present", "name": "Present actual", "description": "What is happening now (-xa)." },
+      { "id": "habitual", "group": "Present", "name": "Present habitual", "description": "What one does by habit, or knows how to do (-sïn)." },
+      { "id": "perfective", "group": "Present", "name": "Present perfect", "description": "What has just been done (-s)." },
+      { "id": "inceptive", "group": "Present", "name": "Present inceptive", "description": "What is about to happen (-xam).", "es": { "tense": "present", "aux": "be", "link": "about to" } },
+      { "id": "past-actual", "group": "Past", "name": "Past actual", "description": "What was happening when something interrupted it (-xap)." },
+      { "id": "past-habitual", "group": "Past", "name": "Past habitual", "description": "What one used to do and no longer does (-sïamp)." },
+      { "id": "past-perfective", "group": "Past", "name": "Past perfect", "description": "What was done and finished (-sp)." },
+      { "id": "past-inceptive", "group": "Past", "name": "Past inceptive", "description": "What was about to happen (-xanamp).", "es": { "tense": "preterite", "aux": "be", "link": "about to" } },
+      { "id": "future", "group": "Future and conditional", "name": "Future", "description": "What is going to happen (-a)." },
+      { "id": "conditional", "group": "Future and conditional", "name": "Conditional", "description": "What would happen (-pirin)." },
+      { "id": "imperative", "group": "Orders", "name": "Imperative", "description": "The bare root; -e in the plural." },
+      { "id": "vetative", "group": "Orders", "name": "Vetative", "description": "To forbid: ásï + root." },
+      { "id": "q-actual", "group": "Questions", "name": "Present actual", "description": "-xaki, for every person." },
+      { "id": "q-habitual", "group": "Questions", "name": "Present habitual", "description": "-sïni." },
+      { "id": "q-perfective", "group": "Questions", "name": "Present perfect", "description": "-ski." },
+      { "id": "q-past-actual", "group": "Questions", "name": "Past actual", "description": "-xepi." },
+      { "id": "q-past-habitual", "group": "Questions", "name": "Past habitual", "description": "-sïambi." },
+      { "id": "q-past-perfective", "group": "Questions", "name": "Past perfect", "description": "-spi." },
+      { "id": "q-future", "group": "Questions", "name": "Future", "description": "-a." },
+      { "id": "q-conditional", "group": "Questions", "name": "Conditional", "description": "-pirini." },
+      { "id": "neg-actual", "group": "Negative", "name": "Present actual", "description": "no + verb." },
+      { "id": "neg-habitual", "group": "Negative", "name": "Present habitual", "description": "no + verb." },
+      { "id": "neg-past-perfective", "group": "Negative", "name": "Past perfect", "description": "no + verb." },
+      { "id": "neg-future", "group": "Negative", "name": "Future", "description": "no + verb." }
+    ],
+    "lexicon": [
+      { "entry": "uandani", "meaning": "speak", "es": "speak" },
+      { "entry": "pireni", "meaning": "sing", "es": "sing" },
+      { "entry": "t'ireni", "meaning": "eat", "es": "eat" },
+      { "entry": "exeni", "meaning": "see, look", "es": "see" },
+      { "entry": "xukani", "meaning": "scold", "es": "scold" },
+      { "entry": "ch'anani", "meaning": "play", "es": "play" },
+      { "entry": "karani", "meaning": "write", "es": "write" },
+      { "entry": "arhintani", "meaning": "read", "es": "read" },
+      { "entry": "uarhani", "meaning": "dance", "es": "dance" },
+      { "entry": "piani", "meaning": "buy", "es": "buy" },
+      { "entry": "sïpani", "meaning": "steal", "es": "steal" },
+      { "entry": "atani", "meaning": "hit; hunt", "es": "hit" },
+      { "entry": "jupani", "meaning": "wash", "es": "wash" },
+      { "entry": "uarhoni", "meaning": "fish", "es": "fish" },
+      { "entry": "urhuni", "meaning": "grind", "es": "grind" },
+      { "entry": "tepeni", "meaning": "weave", "es": "weave" },
+      { "entry": "uiriani", "meaning": "run", "es": "run" },
+      { "entry": "tarheni", "meaning": "plough", "es": "plough" },
+      { "entry": "jatani", "meaning": "ride", "es": "ride" },
+      { "entry": "k'uini", "meaning": "sleep", "es": "sleep" },
+      { "entry": "anchikurhini", "meaning": "work", "es": "work" },
+      { "entry": "jorhengurhini", "meaning": "learn", "es": "learn" },
+      { "entry": "mitini", "meaning": "know", "es": "know" },
+      { "entry": "uekani", "meaning": "want", "es": "want" },
+      { "entry": "uni", "meaning": "be able; do", "es": "be able to" },
+      { "entry": "jarhani", "meaning": "be (somewhere), there is", "es": "be", "note": "Irregular future jauaka; conditional japiringa." },
+      { "entry": "nirani", "meaning": "go", "es": "go", "note": "Irregular future niuaka; conditional nipiringa." },
+      { "entry": "jurhani", "meaning": "come", "es": "come", "note": "Irregular future juaka; conditional jupiringa." }
+    ]
+  }
+}

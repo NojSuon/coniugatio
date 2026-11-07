@@ -92,11 +92,19 @@ pub struct Options {
     /// (otomí: "n"; itza: "I", "T", "Tt"). Empty means "detect".
     #[serde(default)]
     pub kind: Option<String>,
+    /// Language of the page: "en" gives English equivalents and messages;
+    /// anything else, Spanish.
+    #[serde(default)]
+    pub lang: Option<String>,
 }
 
 impl Options {
     pub fn es(&self) -> Option<&str> {
         self.es.as_deref().map(str::trim).filter(|s| !s.is_empty())
+    }
+
+    pub fn english(&self) -> bool {
+        self.lang.as_deref() == Some("en")
     }
 
     pub fn kind(&self) -> Option<&str> {
@@ -143,6 +151,26 @@ pub enum Error {
     InvalidVerb,
     /// The verb's class can't be told from the word (Itza).
     UnknownClass,
+}
+
+impl Error {
+    /// The message in English, for the English pages.
+    pub fn english(&self) -> &'static str {
+        match self {
+            Error::EmptyVerb => "Type the root of a verb.",
+            Error::InvalidVerb => "The root can only have letters and apostrophes.",
+            Error::UnknownClass => "We can't tell what type of verb this is. Write it as in the dictionary, with -Vl if it is intransitive (wenel, «sleep») or -ik if it is transitive (ilik, «see»), or choose its type in «Conjugate your verb».",
+        }
+    }
+
+    /// The message in the page's language.
+    pub fn message(&self, opts: &Options) -> String {
+        if opts.english() {
+            self.english().to_string()
+        } else {
+            self.to_string()
+        }
+    }
 }
 
 impl std::fmt::Display for Error {
@@ -232,7 +260,8 @@ impl Conjugation {
                         let stem = stem_for(p, &person.id);
                         let es = |offset: usize| -> Option<String> {
                             let meaning = es_meaning.as_deref()?;
-                            spanish::render(
+                            crate::gloss(
+                                opts,
                                 meaning,
                                 p.es.as_ref()?,
                                 person.es? + offset,
@@ -352,6 +381,7 @@ mod tests {
         let opts = Options {
             es: Some("cantar".into()),
             kind: None,
+            ..Default::default()
         };
         let r = otomi().conjugate_with("tuhu", &opts).unwrap();
         assert!(!r.known);
@@ -363,6 +393,7 @@ mod tests {
         let n = Options {
             es: None,
             kind: Some("n".into()),
+            ..Default::default()
         };
         let r = otomi().conjugate_with("tsaya", &n).unwrap();
         assert_eq!(form(&r, "preterite", 0), "dá ntsaya");

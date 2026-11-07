@@ -2,7 +2,7 @@
 
 A website where people can learn about indigenous languages and conjugate their verbs, built with the Mati Mati brand.
 
-Live site: https://nojsuon.github.io/coniugatio/
+Live site: https://nojsuon.github.io/coniugatio/ (in English: https://nojsuon.github.io/coniugatio/en/)
 
 ## How it works
 
@@ -38,6 +38,14 @@ cargo test --workspace --exclude coniugatio-wasm
 ## Publishing
 
 Every push to `main` builds the site and deploys it to GitHub Pages (`.github/workflows/pages.yml`).
+
+## English pages
+
+Every page also exists in English under `/en/` (`/coniugatio/en/otomi/`…), with a button at the top right to switch between the two.
+
+- **Text:** `data/languages/en/<slug>.json` holds only the translated text and is merged over the Spanish file at build time. Objects merge key by key, lists of tenses, persons and verbs merge by `id` or `entry`, and other lists merge by position, so keep the same order.
+- **Equivalents:** on English pages each tense's `es` spec and each verb's `es` meaning are given in English, and `crates/core/src/english.rs` conjugates them ("I was singing"). Constructions use English auxiliaries: `{ "tense": "present", "aux": "need", "link": "to" }`.
+- **Checks:** the build warns when a listed verb has a form without its English equivalent.
 
 ## Adding a language
 
