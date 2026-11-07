@@ -45,7 +45,7 @@ pub struct Paradigm {
     pub secondary: bool,
     /// Spanish tense used for the translation.
     #[serde(default)]
-    pub es: Option<spanish::Tense>,
+    pub es: Option<spanish::Es>,
     /// Translate with "no".
     #[serde(default)]
     pub negative: bool,
@@ -222,7 +222,7 @@ impl Conjugation {
                         let stem = stem_for(p, &person.id);
                         let es = |offset: usize| -> Option<String> {
                             let meaning = es_meaning.as_deref()?;
-                            spanish::conjugate(meaning, p.es?, person.es? + offset, p.negative)
+                            spanish::render(meaning, p.es.as_ref()?, person.es? + offset, p.negative)
                         };
                         Some(Row {
                             es_singular: es(0),

@@ -1,9 +1,11 @@
 //! A small Spanish conjugator, used to show the Spanish equivalent next to
-//! each conjugated form ("dá pädi" → "yo supe").
+//! each conjugated form ("dá pädi" → "yo supe", "k'ab'et inwenel" →
+//! "yo necesito dormir").
 //!
 //! Regular -ar/-er/-ir verbs follow the rules; irregular verbs used in the
-//! lexicons are listed in `irregular`. A meaning like "beber agua" conjugates
-//! the first word and keeps the rest; "reírse" is conjugated as reflexive.
+//! lexicons and as auxiliaries are listed in `irregular`. A meaning like
+//! "beber agua" conjugates the first word and keeps the rest; "reírse" is
+//! conjugated as reflexive.
 
 use serde::{Deserialize, Serialize};
 
@@ -14,9 +16,67 @@ pub enum Tense {
     Preterite,
     Future,
     Imperfect,
+    /// estoy durmiendo
     Progressive,
     /// he visto, has dormido…
     Perfect,
+    /// (que) yo duerma
+    Subjunctive,
+    /// ¡duerme!, ¡duerman! (2nd person only)
+    Imperative,
+    /// yo podría
+    Conditional,
+}
+
+/// How a tense is said in Spanish. Either just a tense ("present"), or a
+/// construction:
+///
+/// ```json
+/// { "tense": "present", "aux": "tener", "link": "que" }   // tengo que dormir
+/// { "tense": "present", "before": "cuando" }             // cuando yo duermo
+/// { "tense": "preterite", "adverb": "casi" }             // yo casi dormí
+/// { "tense": "present", "aux": "ir", "link": "a", "pronoun": false } // vamos a dormir
+/// ```
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum Es {
+    Simple(Tense),
+    Spec(Spec),
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Spec {
+    pub tense: Tense,
+    /// Auxiliary verb, conjugated; the meaning follows as an infinitive.
+    #[serde(default)]
+    pub aux: Option<String>,
+    /// Word between the auxiliary and the infinitive: "a", "de", "que".
+    #[serde(default)]
+    pub link: Option<String>,
+    /// Words before the subject pronoun: "cuando", "que".
+    #[serde(default)]
+    pub before: Option<String>,
+    /// Adverb after the subject pronoun: "casi", "ya".
+    #[serde(default)]
+    pub adverb: Option<String>,
+    /// Show the subject pronoun (yo, tú…). Default: yes.
+    #[serde(default = "yes")]
+    pub pronoun: bool,
+}
+
+fn yes() -> bool {
+    true
+}
+
+impl Es {
+    fn spec(&self) -> Spec {
+        match self {
+            Es::Simple(tense) => {
+                Spec { tense: *tense, aux: None, link: None, before: None, adverb: None, pronoun: true }
+            }
+            Es::Spec(s) => s.clone(),
+        }
+    }
 }
 
 /// yo, tú, él/ella, nosotros, ustedes, ellos/ellas
@@ -32,19 +92,31 @@ struct Irregular {
     present: Option<Six>,
     preterite: Option<Six>,
     imperfect: Option<Six>,
+    subjunctive: Option<Six>,
     future_stem: Option<&'static str>,
     gerund: Option<&'static str>,
     participle: Option<&'static str>,
+    /// Affirmative "tú" imperative: sal, ven, ve.
+    imperative: Option<&'static str>,
 }
 
-const NONE: Irregular =
-    Irregular { present: None, preterite: None, imperfect: None, future_stem: None, gerund: None, participle: None };
+const NONE: Irregular = Irregular {
+    present: None,
+    preterite: None,
+    imperfect: None,
+    subjunctive: None,
+    future_stem: None,
+    gerund: None,
+    participle: None,
+    imperative: None,
+};
 
 fn irregular(inf: &str) -> Irregular {
     match inf {
         "saber" => Irregular {
             present: Some(["sé", "sabes", "sabe", "sabemos", "saben", "saben"]),
             preterite: Some(["supe", "supiste", "supo", "supimos", "supieron", "supieron"]),
+            subjunctive: Some(["sepa", "sepas", "sepa", "sepamos", "sepan", "sepan"]),
             future_stem: Some("sabr"),
             ..NONE
         },
@@ -58,6 +130,7 @@ fn irregular(inf: &str) -> Irregular {
         "dormir" => Irregular {
             present: Some(["duermo", "duermes", "duerme", "dormimos", "duermen", "duermen"]),
             preterite: Some(["dormí", "dormiste", "durmió", "dormimos", "durmieron", "durmieron"]),
+            subjunctive: Some(["duerma", "duermas", "duerma", "durmamos", "duerman", "duerman"]),
             gerund: Some("durmiendo"),
             ..NONE
         },
@@ -68,6 +141,7 @@ fn irregular(inf: &str) -> Irregular {
             future_stem: Some("oir"),
             gerund: Some("oyendo"),
             participle: Some("oído"),
+            ..NONE
         },
         "moler" => Irregular {
             present: Some(["muelo", "mueles", "muele", "molemos", "muelen", "muelen"]),
@@ -77,15 +151,19 @@ fn irregular(inf: &str) -> Irregular {
             present: Some(["río", "ríes", "ríe", "reímos", "ríen", "ríen"]),
             preterite: Some(["reí", "reíste", "rio", "reímos", "rieron", "rieron"]),
             imperfect: Some(["reía", "reías", "reía", "reíamos", "reían", "reían"]),
+            subjunctive: Some(["ría", "rías", "ría", "riamos", "rían", "rían"]),
             future_stem: Some("reir"),
             gerund: Some("riendo"),
             participle: Some("reído"),
+            ..NONE
         },
         "ir" => Irregular {
             present: Some(["voy", "vas", "va", "vamos", "van", "van"]),
             preterite: Some(["fui", "fuiste", "fue", "fuimos", "fueron", "fueron"]),
             imperfect: Some(["iba", "ibas", "iba", "íbamos", "iban", "iban"]),
+            subjunctive: Some(["vaya", "vayas", "vaya", "vayamos", "vayan", "vayan"]),
             gerund: Some("yendo"),
+            imperative: Some("ve"),
             ..NONE
         },
         "venir" => Irregular {
@@ -93,16 +171,19 @@ fn irregular(inf: &str) -> Irregular {
             preterite: Some(["vine", "viniste", "vino", "vinimos", "vinieron", "vinieron"]),
             future_stem: Some("vendr"),
             gerund: Some("viniendo"),
+            imperative: Some("ven"),
             ..NONE
         },
         "salir" => Irregular {
             present: Some(["salgo", "sales", "sale", "salimos", "salen", "salen"]),
             future_stem: Some("saldr"),
+            imperative: Some("sal"),
             ..NONE
         },
         "morir" => Irregular {
             present: Some(["muero", "mueres", "muere", "morimos", "mueren", "mueren"]),
             preterite: Some(["morí", "moriste", "murió", "morimos", "murieron", "murieron"]),
+            subjunctive: Some(["muera", "mueras", "muera", "muramos", "mueran", "mueran"]),
             gerund: Some("muriendo"),
             participle: Some("muerto"),
             ..NONE
@@ -114,9 +195,45 @@ fn irregular(inf: &str) -> Irregular {
             participle: Some("caído"),
             ..NONE
         },
+        // Auxiliaries used in periphrases.
+        "poder" => Irregular {
+            present: Some(["puedo", "puedes", "puede", "podemos", "pueden", "pueden"]),
+            preterite: Some(["pude", "pudiste", "pudo", "pudimos", "pudieron", "pudieron"]),
+            future_stem: Some("podr"),
+            gerund: Some("pudiendo"),
+            ..NONE
+        },
+        "tener" => Irregular {
+            present: Some(["tengo", "tienes", "tiene", "tenemos", "tienen", "tienen"]),
+            preterite: Some(["tuve", "tuviste", "tuvo", "tuvimos", "tuvieron", "tuvieron"]),
+            future_stem: Some("tendr"),
+            imperative: Some("ten"),
+            ..NONE
+        },
+        "querer" => Irregular {
+            present: Some(["quiero", "quieres", "quiere", "queremos", "quieren", "quieren"]),
+            preterite: Some(["quise", "quisiste", "quiso", "quisimos", "quisieron", "quisieron"]),
+            future_stem: Some("querr"),
+            ..NONE
+        },
+        "soler" => Irregular {
+            present: Some(["suelo", "sueles", "suele", "solemos", "suelen", "suelen"]),
+            ..NONE
+        },
+        "empezar" => Irregular {
+            present: Some(["empiezo", "empiezas", "empieza", "empezamos", "empiezan", "empiezan"]),
+            ..NONE
+        },
+        "comenzar" => Irregular {
+            present: Some(["comienzo", "comienzas", "comienza", "comenzamos", "comienzan", "comienzan"]),
+            ..NONE
+        },
         _ => NONE,
     }
 }
+
+const FUTURE: Six = ["é", "ás", "á", "emos", "án", "án"];
+const CONDITIONAL: Six = ["ía", "ías", "ía", "íamos", "ían", "ían"];
 
 fn regular(inf: &str, tense: Tense, p: usize) -> String {
     let (stem, class) = inf.split_at(inf.len() - 2);
@@ -128,14 +245,44 @@ fn regular(inf: &str, tense: Tense, p: usize) -> String {
         (Tense::Preterite, _) => ["í", "iste", "ió", "imos", "ieron", "ieron"],
         (Tense::Imperfect, "ar") => ["aba", "abas", "aba", "ábamos", "aban", "aban"],
         (Tense::Imperfect, _) => ["ía", "ías", "ía", "íamos", "ían", "ían"],
-        (Tense::Future, _) => return format!("{inf}{}", ["é", "ás", "á", "emos", "án", "án"][p]),
-        (Tense::Progressive | Tense::Perfect, _) => unreachable!(),
+        (Tense::Future, _) => return format!("{inf}{}", FUTURE[p]),
+        (Tense::Conditional, _) => return format!("{inf}{}", CONDITIONAL[p]),
+        _ => unreachable!("composite tense"),
     };
     // Spelling changes before -é: buscar → busqué, pagar → pagué, cazar → cacé.
     if tense == Tense::Preterite && p == 0 && class == "ar" {
         for (end, repl) in [("c", "qu"), ("g", "gu"), ("z", "c")] {
             if let Some(s) = stem.strip_suffix(end) {
                 return format!("{s}{repl}é");
+            }
+        }
+    }
+    format!("{stem}{}", endings[p])
+}
+
+/// Present subjunctive, built from the "yo" form of the present:
+/// salgo → salga, busco → busque, muelo → muela / molamos.
+fn subjunctive(inf: &str, irr: &Irregular, p: usize) -> String {
+    if let Some(f) = irr.subjunctive {
+        return f[p].to_string();
+    }
+    let (inf_stem, class) = inf.split_at(inf.len() - 2);
+    let yo = irr.present.map(|f| f[0].to_string()).unwrap_or_else(|| regular(inf, Tense::Present, 0));
+    let mut stem = yo.strip_suffix('o').unwrap_or(&yo).to_string();
+    // Stem-changing verbs keep the infinitive stem for "nosotros": molamos.
+    let diphthong = |s: &str| s.contains("ue") || s.contains("ie");
+    if p == 3 && diphthong(&stem) && !diphthong(inf_stem) {
+        stem = inf_stem.to_string();
+    }
+    let endings: Six = if class == "ar" {
+        ["e", "es", "e", "emos", "en", "en"]
+    } else {
+        ["a", "as", "a", "amos", "an", "an"]
+    };
+    if class == "ar" {
+        for (end, repl) in [("c", "qu"), ("g", "gu"), ("z", "c")] {
+            if let Some(s) = stem.strip_suffix(end) {
+                return format!("{s}{repl}{}", endings[p]);
             }
         }
     }
@@ -158,46 +305,100 @@ fn gerund(inf: &str, irr: &Irregular) -> String {
     format!("{stem}{}", if class == "ar" { "ando" } else { "iendo" })
 }
 
-/// Conjugates a Spanish meaning such as "comer", "reírse" or "beber agua".
-/// `person` is 0..6 in the order of [`PRONOUNS`]. Returns `None` when the
-/// first word is not an infinitive.
-pub fn conjugate(meaning: &str, tense: Tense, person: usize, negative: bool) -> Option<String> {
+/// One finite form of an infinitive (no pronouns). Imperative and its
+/// negative only exist for "tú" (1) and "ustedes" (4).
+fn finite(inf: &str, tense: Tense, p: usize, negative: bool) -> String {
+    let plain = inf.replace('í', "i");
+    let irr = irregular(inf);
+    let pick = |forms: Option<Six>| forms.map(|f| f[p].to_string());
+    match tense {
+        Tense::Present => pick(irr.present).unwrap_or_else(|| regular(&plain, tense, p)),
+        Tense::Preterite => pick(irr.preterite).unwrap_or_else(|| regular(&plain, tense, p)),
+        Tense::Imperfect => pick(irr.imperfect).unwrap_or_else(|| regular(&plain, tense, p)),
+        Tense::Future => irr.future_stem.map(|s| format!("{s}{}", FUTURE[p])).unwrap_or_else(|| regular(&plain, tense, p)),
+        Tense::Conditional => {
+            irr.future_stem.map(|s| format!("{s}{}", CONDITIONAL[p])).unwrap_or_else(|| regular(&plain, tense, p))
+        }
+        Tense::Progressive => format!("{} {}", ESTAR[p], gerund(&plain, &irr)),
+        Tense::Perfect => format!("{} {}", HABER[p], participle(&plain, &irr)),
+        Tense::Subjunctive => subjunctive(&plain, &irr, p),
+        // "tú": ¡duerme! / ¡no duermas!; "ustedes": ¡duerman! / ¡no duerman!
+        Tense::Imperative if p == 1 && !negative => irr
+            .imperative
+            .map(str::to_string)
+            // The "tú" imperative is the él/ella present: duerme, come.
+            .unwrap_or_else(|| irr.present.map(|f| f[2].to_string()).unwrap_or_else(|| regular(&plain, Tense::Present, 2))),
+        Tense::Imperative => subjunctive(&plain, &irr, if p == 1 { 1 } else { 4 }),
+    }
+}
+
+/// Splits "reírse" / "beber agua" into (infinitive, reflexive, rest).
+fn split(meaning: &str) -> Option<(String, bool, Vec<String>)> {
     let mut words = meaning.split_whitespace();
     let first = words.next()?;
-    let rest: Vec<&str> = words.collect();
-
+    let rest = words.map(str::to_string).collect();
     let (inf, reflexive) = match first.strip_suffix("se") {
-        Some(base) if base.ends_with(['r']) => (base, true),
+        Some(base) if base.ends_with('r') => (base, true),
         _ => (first, false),
     };
     if !(inf.ends_with("ar") || inf.ends_with("er") || inf.ends_with("ir") || inf.ends_with("ír")) {
         return None;
     }
-    let inf_plain = inf.replace('í', "i");
-    let irr = irregular(inf);
+    Some((inf.to_string(), reflexive, rest))
+}
 
-    let verb = match tense {
-        Tense::Present => irr.present.map(|f| f[person].to_string()),
-        Tense::Preterite => irr.preterite.map(|f| f[person].to_string()),
-        Tense::Imperfect => irr.imperfect.map(|f| f[person].to_string()),
-        Tense::Future => irr
-            .future_stem
-            .map(|s| format!("{s}{}", ["é", "ás", "á", "emos", "án", "án"][person])),
-        Tense::Progressive => Some(format!("{} {}", ESTAR[person], gerund(&inf_plain, &irr))),
-        Tense::Perfect => Some(format!("{} {}", HABER[person], participle(&inf_plain, &irr))),
+/// Says a meaning ("dormir", "reírse", "beber agua") in Spanish for one
+/// person (0..6, in the order of [`PRONOUNS`]). Returns `None` when the
+/// meaning doesn't start with an infinitive, or the form doesn't exist
+/// (an imperative for "yo").
+pub fn render(meaning: &str, es: &Es, person: usize, negative: bool) -> Option<String> {
+    let spec = es.spec();
+    let (inf, reflexive, rest) = split(meaning)?;
+    let imperative = spec.tense == Tense::Imperative;
+    if imperative && person != 1 && person != 4 {
+        return None;
     }
-    .unwrap_or_else(|| regular(&inf_plain, tense, person));
 
-    let mut parts = vec![PRONOUNS[person].to_string()];
+    let mut parts: Vec<String> = Vec::new();
+    if let Some(b) = &spec.before {
+        parts.push(b.clone());
+    }
+    if spec.pronoun && !imperative {
+        parts.push(PRONOUNS[person].into());
+    }
+    if let Some(a) = &spec.adverb {
+        parts.push(a.clone());
+    }
     if negative {
         parts.push("no".into());
     }
-    if reflexive {
-        parts.push(REFLEXIVE[person].into());
+    match &spec.aux {
+        Some(aux) => {
+            // tengo que dormir, acabo de reírme
+            parts.push(finite(aux, spec.tense, person, negative));
+            if let Some(l) = &spec.link {
+                parts.push(l.clone());
+            }
+            parts.push(if reflexive { format!("{inf}{}", REFLEXIVE[person]) } else { inf.clone() });
+        }
+        None => {
+            if imperative && reflexive {
+                return None; // ¡ríete! needs an enclitic; not supported
+            }
+            if reflexive {
+                parts.push(REFLEXIVE[person].into());
+            }
+            parts.push(finite(&inf, spec.tense, person, negative));
+        }
     }
-    parts.push(verb);
-    parts.extend(rest.iter().map(|w| w.to_string()));
-    Some(parts.join(" "))
+    parts.extend(rest);
+    let text = parts.join(" ");
+    Some(if imperative { format!("¡{text}!") } else { text })
+}
+
+/// Shorthand for a simple tense.
+pub fn conjugate(meaning: &str, tense: Tense, person: usize, negative: bool) -> Option<String> {
+    render(meaning, &Es::Simple(tense), person, negative)
 }
 
 #[cfg(test)]
@@ -206,6 +407,10 @@ mod tests {
 
     fn c(m: &str, t: Tense, p: usize) -> String {
         conjugate(m, t, p, false).unwrap()
+    }
+
+    fn spec(json: &str) -> Es {
+        serde_json::from_str(json).unwrap()
     }
 
     #[test]
@@ -261,6 +466,55 @@ mod tests {
         assert_eq!(c("caer", Tense::Preterite, 2), "él/ella cayó");
         assert_eq!(c("llegar", Tense::Preterite, 0), "yo llegué");
         assert_eq!(conjugate("ver", Tense::Perfect, 0, true).unwrap(), "yo no he visto");
+    }
+
+    #[test]
+    fn subjunctive_imperative_conditional() {
+        let que = spec(r#"{"tense":"subjunctive","before":"que"}"#);
+        assert_eq!(render("dormir", &que, 0, false).unwrap(), "que yo duerma");
+        assert_eq!(render("dormir", &que, 3, false).unwrap(), "que nosotros durmamos");
+        assert_eq!(render("salir", &que, 1, false).unwrap(), "que tú salgas");
+        assert_eq!(render("buscar", &que, 2, false).unwrap(), "que él/ella busque");
+        assert_eq!(render("llegar", &que, 0, false).unwrap(), "que yo llegue");
+        assert_eq!(render("moler", &que, 3, false).unwrap(), "que nosotros molamos");
+        assert_eq!(render("ir", &que, 0, false).unwrap(), "que yo vaya");
+        let imp = Es::Simple(Tense::Imperative);
+        assert_eq!(render("dormir", &imp, 1, false).unwrap(), "¡duerme!");
+        assert_eq!(render("dormir", &imp, 4, false).unwrap(), "¡duerman!");
+        assert_eq!(render("dormir", &imp, 1, true).unwrap(), "¡no duermas!");
+        assert_eq!(render("salir", &imp, 1, false).unwrap(), "¡sal!");
+        assert_eq!(render("venir", &imp, 1, false).unwrap(), "¡ven!");
+        assert_eq!(render("dormir", &imp, 0, false), None);
+        assert_eq!(c("caer", Tense::Conditional, 1), "tú caerías");
+    }
+
+    #[test]
+    fn periphrases() {
+        let r = |json: &str, p: usize| render("dormir", &spec(json), p, false).unwrap();
+        assert_eq!(r(r#"{"tense":"present","aux":"necesitar"}"#, 0), "yo necesito dormir");
+        assert_eq!(r(r#"{"tense":"present","aux":"tener","link":"que"}"#, 0), "yo tengo que dormir");
+        assert_eq!(r(r#"{"tense":"present","aux":"poder"}"#, 2), "él/ella puede dormir");
+        assert_eq!(r(r#"{"tense":"present","aux":"soler"}"#, 1), "tú sueles dormir");
+        assert_eq!(r(r#"{"tense":"present","aux":"querer"}"#, 0), "yo quiero dormir");
+        assert_eq!(r(r#"{"tense":"present","aux":"acabar","link":"de"}"#, 0), "yo acabo de dormir");
+        assert_eq!(r(r#"{"tense":"preterite","aux":"empezar","link":"a"}"#, 0), "yo empecé a dormir");
+        assert_eq!(r(r#"{"tense":"preterite","aux":"comenzar","link":"a"}"#, 0), "yo comencé a dormir");
+        assert_eq!(r(r#"{"tense":"preterite","aux":"terminar","link":"de"}"#, 2), "él/ella terminó de dormir");
+        assert_eq!(r(r#"{"tense":"preterite","adverb":"casi"}"#, 0), "yo casi dormí");
+        assert_eq!(r(r#"{"tense":"preterite","adverb":"ya"}"#, 0), "yo ya dormí");
+        assert_eq!(r(r#"{"tense":"present","before":"cuando"}"#, 0), "cuando yo duermo");
+        assert_eq!(r(r#"{"tense":"present","aux":"ir","link":"a"}"#, 0), "yo voy a dormir");
+        assert_eq!(r(r#"{"tense":"present","aux":"ir","link":"a","pronoun":false}"#, 3), "vamos a dormir");
+        assert_eq!(r(r#"{"tense":"imperative","aux":"venir","link":"a"}"#, 1), "¡ven a dormir!");
+        assert_eq!(r(r#"{"tense":"imperative","aux":"venir","link":"a"}"#, 4), "¡vengan a dormir!");
+        assert_eq!(
+            r(r#"{"tense":"conditional","aux":"poder","before":"cuidado:"}"#, 1),
+            "cuidado: tú podrías dormir"
+        );
+        assert_eq!(
+            render("reírse", &spec(r#"{"tense":"present","aux":"acabar","link":"de"}"#), 0, false).unwrap(),
+            "yo acabo de reírme"
+        );
     }
 
     #[test]

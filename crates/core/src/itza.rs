@@ -1,20 +1,24 @@
 //! Conjugation for Itza' Maya (Itzaj).
 //!
 //! Source: Charles Andrew Hofling with Fernando Tesucún, *Itzaj Maya Grammar*
-//! (University of Utah Press, 2000), §2.1 (person markers) and §3.1–3.2
-//! (aspect, status and verb root classes); negation from §19.1.
+//! (University of Utah Press, 2000): §2.1 person markers; §3.1–3.2 aspect,
+//! status and verb classes; §15 tense, aspect and mood (auxiliaries,
+//! dependent status, imperative, admonitive, hortative, ka'aj future);
+//! §19.1 negation. Long vowels are not written (Mati Mati spelling).
 //!
 //! A verb is entered the way Hofling's dictionary lists it, in the
 //! incompletive status: `wenel` (intransitive, harmonic -Vl), `ilik` (root
-//! transitive, -ik) or `jantik` (transitive derived with -t). The engine then
-//! builds every form from the root:
+//! transitive, -ik) or `jantik` (transitive derived with -t). Every
+//! construction is built from the verb's stems:
 //!
 //! ```text
-//! incompletive  k-in-wen-el      k-in-w-il-ik
-//! durative      tan in-wen-el    tan in-w-il-ik
-//! completive    wen-een          t-in-w-il-aj
-//! perfect       wen-a'an-en      in-w-il-m-aj
-//! assurative    je' in-wen-el-ej je' in-w-il-ik-ej
+//!                 intransitive (wenel)   transitive (ilik)
+//! incompletive    k-in-wen-el            k-in-w-il-ik
+//! completive      wen-en                 t-in-w-il-aj
+//! perfect         wen-a'an-en            in-w-il-m-aj
+//! dependent       (ka') wen-ek-en        (ka') in-w-il-a'
+//! imperative      wen-en!                il-a'!
+//! auxiliaries     k'ab'et in-wen-el      k'ab'et in-w-il-ik
 //! ```
 
 use serde::{Deserialize, Serialize};
@@ -32,19 +36,40 @@ pub enum Class {
     Tt,
 }
 
+/// One construction (a table on the page).
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
 pub enum Aspect {
-    /// k- … (habitual present)
+    /// k- … : habitual present (§15.2.1)
     Incompletive,
-    /// tan … (ongoing action)
+    /// tan … : ongoing action (§15.2.2)
     Durative,
-    /// t- … -aj (transitive) / root + Set B (intransitive)
-    Completive,
-    /// … -m-aj (transitive) / -a'an + Set B (intransitive)
-    Perfect,
-    /// je' … -ej (the speaker is sure it will happen)
+    /// je' … -ej : the speaker is sure it will happen (§15.2.3)
     Assurative,
+    /// kil … -ej : "when" (§3.1.1.1)
+    Punctual,
+    /// tantoj … : just happened (§3.1.1.1)
+    Immediate,
+    /// <word> + Set A verb: k'ab'et, olak, patal, suk, tak, yan (§3.1.1.2.1)
+    Auxiliary,
+    /// <word>-ij + Set A verb: kajij, jop'ij, jo'mij, ts'o'kij (§3.1.1.2.2)
+    Phasal,
+    /// t- … -aj (transitive) / root + Set B (intransitive) (§3.1.2)
+    Completive,
+    /// … -m-aj (transitive) / -a'an + Set B (intransitive) (§3.3.1.1.1.2)
+    Perfect,
+    /// ka'aj ti … / ka'aj + dependent: "going to" (§15.4.2.1)
+    Go,
+    /// ka' + dependent status: "that …" (§3.1.3)
+    Subjunctive,
+    /// -en (intransitive) / -V', -ej (transitive), 2nd person (§15.4.1)
+    Imperative,
+    /// b'ikij + dependent: warning, "you could …" (§15.4.2.2)
+    Admonitive,
+    /// ko'ox: "let's …", 1st person plural (§15.4.2.3)
+    Hortative,
+    /// ko'on / ko'one'ex: "come and …", 2nd person (§15.4.2.3)
+    Come,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -55,10 +80,13 @@ pub struct Tense {
     #[serde(default)]
     pub description: String,
     pub aspect: Aspect,
+    /// The auxiliary for `auxiliary` and `phasal` aspects.
+    #[serde(default)]
+    pub word: Option<String>,
     #[serde(default)]
     pub negative: bool,
     #[serde(default)]
-    pub es: Option<spanish::Tense>,
+    pub es: Option<spanish::Es>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -72,6 +100,13 @@ pub struct Entry {
     /// Irregular root for the completive and perfect (b'el → b'in).
     #[serde(default)]
     pub completive: Option<String>,
+    /// Irregular dependent stem: intransitive before Set B (b'el → xi'ik,
+    /// tal → tak); transitive after Set A (il → ila').
+    #[serde(default)]
+    pub dependent: Option<String>,
+    /// Irregular singular imperative (b'el → xen).
+    #[serde(default)]
+    pub imperative: Option<String>,
     #[serde(default)]
     pub note: Option<String>,
 }
@@ -98,13 +133,17 @@ fn has_vowel(s: &str) -> bool {
 struct Verb {
     class: Class,
     /// Bare root: "wen", "il", "jan".
-    #[cfg_attr(not(test), allow(dead_code))]
     root: String,
     /// Root used in the completive and perfect (usually the same).
     completive_root: String,
     /// Stem used after the Set A prefix in non-completive aspects:
     /// "wenel", "ilik", "jantik", "b'el".
     incompletive: String,
+    /// Dependent stem: "wenek", "xi'ik" (intransitive, before Set B) or
+    /// "uk'u'", "ila'", "jantej" (transitive, after Set A).
+    dependent: String,
+    /// Singular imperative: "wenen", "xen", "uk'u'", "jantej".
+    imperative: String,
 }
 
 impl Class {
@@ -118,9 +157,27 @@ impl Class {
     }
 }
 
-/// First vowel of the root, which the intransitive suffix repeats: wen-el.
+/// First vowel of the root, which harmonic suffixes repeat: wen-el, wen-ek,
+/// uk'-u'.
 fn harmonic_vowel(root: &str) -> char {
     root.chars().find(|c| is_vowel(*c)).unwrap_or('e')
+}
+
+impl Verb {
+    fn new(class: Class, root: String, incompletive: String, entry: Option<&Entry>) -> Verb {
+        let v = harmonic_vowel(&root);
+        let completive_root = entry.and_then(|e| e.completive.clone()).unwrap_or_else(|| root.clone());
+        let dependent = entry.and_then(|e| e.dependent.clone()).unwrap_or_else(|| match class {
+            Class::I => format!("{root}{v}k"),
+            Class::T => format!("{root}{v}'"),
+            Class::Tt => format!("{root}tej"),
+        });
+        let imperative = entry.and_then(|e| e.imperative.clone()).unwrap_or_else(|| match class {
+            Class::I => format!("{root}en"),
+            _ => dependent.clone(),
+        });
+        Verb { class, root, completive_root, incompletive, dependent, imperative }
+    }
 }
 
 /// Builds a verb once its class is known, from a bare root (wen → wenel,
@@ -129,18 +186,18 @@ fn from_class(word: &str, class: Class) -> std::result::Result<Verb, Error> {
     if !has_vowel(word) {
         return Err(Error::InvalidVerb);
     }
-    let verb = match class {
+    match class {
         Class::I => {
             let parsed = parse_as(word, None, Class::I)?;
             if parsed.root != word {
                 return Ok(parsed);
             }
             let incompletive = format!("{word}{}l", harmonic_vowel(word));
-            Verb { class, root: word.into(), completive_root: word.into(), incompletive }
+            Ok(Verb::new(class, word.into(), incompletive, None))
         }
         Class::T => {
             let root = word.strip_suffix("ik").filter(|r| has_vowel(r)).unwrap_or(word);
-            Verb { class, root: root.into(), completive_root: root.into(), incompletive: format!("{root}ik") }
+            Ok(Verb::new(class, root.into(), format!("{root}ik"), None))
         }
         Class::Tt => {
             let root = word
@@ -148,10 +205,9 @@ fn from_class(word: &str, class: Class) -> std::result::Result<Verb, Error> {
                 .or_else(|| word.strip_suffix('t'))
                 .filter(|r| has_vowel(r))
                 .unwrap_or(word);
-            Verb { class, root: root.into(), completive_root: root.into(), incompletive: format!("{root}tik") }
+            Ok(Verb::new(class, root.into(), format!("{root}tik"), None))
         }
-    };
-    Ok(verb)
+    }
 }
 
 fn parse(word: &str, entry: Option<&Entry>) -> std::result::Result<Verb, Error> {
@@ -206,8 +262,7 @@ fn parse_as(word: &str, entry: Option<&Entry>, class: Class) -> std::result::Res
             }
         }
     };
-    let completive_root = entry.and_then(|e| e.completive.clone()).unwrap_or_else(|| root.clone());
-    Ok(Verb { class, root, completive_root, incompletive: word.to_string() })
+    Ok(Verb::new(class, root, word.to_string(), entry))
 }
 
 /// Set A (ergative) prefix + stem, with the glide before vowels
@@ -238,13 +293,12 @@ fn plural_suffix(person: usize, plural: bool) -> &'static str {
     }
 }
 
-/// Set B (absolutive) suffixes. The long -een/-eech appear on completive
-/// intransitives (wen-een "I slept"); the short ones elsewhere.
-fn set_b(person: usize, plural: bool, long: bool, third: &'static str) -> &'static str {
+/// Set B (absolutive) suffixes; `third` is -ij in the completive, -Ø
+/// elsewhere. (Hofling writes -een/-eech in the completive; long vowels
+/// are not written here.)
+fn set_b(person: usize, plural: bool, third: &'static str) -> &'static str {
     match (person, plural) {
-        (0, false) if long => "een",
         (0, false) => "en",
-        (1, false) if long => "eech",
         (1, false) => "ech",
         (2, false) => third,
         (0, true) => "o'on",
@@ -253,24 +307,61 @@ fn set_b(person: usize, plural: bool, long: bool, third: &'static str) -> &'stat
     }
 }
 
-fn form(verb: &Verb, aspect: Aspect, person: usize, plural: bool) -> String {
-    let subject = |stem: &str| format!("{}{}", set_a(person, plural, stem), plural_suffix(person, plural));
+/// Builds one form, or `None` when the construction has no such person
+/// (imperatives are 2nd person, ko'ox is 1st person plural).
+fn form(verb: &Verb, tense: &Tense, person: usize, plural: bool) -> Option<String> {
     let transitive = verb.class != Class::I;
     let t = if verb.class == Class::Tt { "t" } else { "" };
-    match aspect {
+    let word = tense.word.as_deref().unwrap_or("");
+    // Set A + incompletive stem + plural: inwenel, kuyilikoo'.
+    let a_verb = || format!("{}{}", set_a(person, plural, &verb.incompletive), plural_suffix(person, plural));
+    // Dependent status: wenek-en (Set B) / inw-il-a' (Set A).
+    let dependent = || {
+        if transitive {
+            format!("{}{}", set_a(person, plural, &verb.dependent), plural_suffix(person, plural))
+        } else {
+            format!("{}{}", verb.dependent, set_b(person, plural, ""))
+        }
+    };
+    let second = person == 1;
+
+    if tense.negative {
+        return match tense.aspect {
+            // The negative present uses the durative (§19.1.5).
+            Aspect::Incompletive => Some(format!("ma' tan {}", a_verb())),
+            // Negative imperative: ma' + incompletive stem (§19.1.3).
+            Aspect::Imperative => second.then(|| format!("ma' {}", a_verb())),
+            // Unrealized perfect: ma' + dependent status (§19.1.6).
+            Aspect::Perfect => Some(format!("ma' {}", dependent())),
+            _ => {
+                let plain = Tense { negative: false, ..tense.clone() };
+                form(verb, &plain, person, plural).map(|f| format!("ma' {f}"))
+            }
+        };
+    }
+
+    Some(match tense.aspect {
         Aspect::Incompletive => {
             // k- merges with the 1st person plural ki-.
-            let s = subject(&verb.incompletive);
-            if s.starts_with("ki") && person == 0 && plural {
+            let s = a_verb();
+            if person == 0 && plural {
                 s
             } else {
                 format!("k{s}")
             }
         }
-        Aspect::Durative => format!("tan {}", subject(&verb.incompletive)),
-        Aspect::Assurative => format!("je' {}ej", subject(&verb.incompletive)),
+        Aspect::Durative => format!("tan {}", a_verb()),
+        Aspect::Assurative => format!("je' {}ej", a_verb()),
+        Aspect::Punctual => format!("kil {}ej", a_verb()),
+        Aspect::Immediate => format!("tantoj {}", a_verb()),
+        Aspect::Auxiliary => format!("{word} {}", a_verb()),
+        Aspect::Phasal => format!("{word}ij {}", a_verb()),
         Aspect::Completive if transitive => {
-            let s = subject(&format!("{}{t}aj", verb.completive_root));
+            let s = format!(
+                "{}{}",
+                set_a(person, plural, &format!("{}{t}aj", verb.completive_root)),
+                plural_suffix(person, plural)
+            );
             // t- has the form ti- before ki-.
             if person == 0 && plural {
                 format!("ti{s}")
@@ -278,11 +369,48 @@ fn form(verb: &Verb, aspect: Aspect, person: usize, plural: bool) -> String {
                 format!("t{s}")
             }
         }
-        Aspect::Completive => format!("{}{}", verb.completive_root, set_b(person, plural, true, "ij")),
+        Aspect::Completive => format!("{}{}", verb.completive_root, set_b(person, plural, "ij")),
         // In the perfect, -t- is replaced by -m: jan-t-ik → in-jan-m-aj.
-        Aspect::Perfect if transitive => subject(&format!("{}maj", verb.completive_root)),
-        Aspect::Perfect => format!("{}a'an{}", verb.completive_root, set_b(person, plural, false, "")),
-    }
+        Aspect::Perfect if transitive => format!(
+            "{}{}",
+            set_a(person, plural, &format!("{}maj", verb.completive_root)),
+            plural_suffix(person, plural)
+        ),
+        Aspect::Perfect => format!("{}a'an{}", verb.completive_root, set_b(person, plural, "")),
+        // Intransitives: (b'el) inka'aj ti wenel; transitives take the
+        // dependent status: inka'aj inwila'.
+        Aspect::Go if transitive => format!("{} {}", set_a(person, plural, "ka'aj"), dependent()),
+        Aspect::Go => format!(
+            "{}{} ti {}",
+            set_a(person, plural, "ka'aj"),
+            plural_suffix(person, plural),
+            verb.incompletive
+        ),
+        Aspect::Subjunctive => format!("ka' {}", dependent()),
+        // b'ikij contracts to b'ik before ki- (§15.4.2.2, note 7).
+        Aspect::Admonitive if transitive && person == 0 && plural => format!("b'ik {}", dependent()),
+        Aspect::Admonitive => format!("b'ikij {}", dependent()),
+        Aspect::Imperative if !second => return None,
+        Aspect::Imperative => {
+            if plural {
+                format!("{}e'ex!", verb.imperative)
+            } else {
+                format!("{}!", verb.imperative)
+            }
+        }
+        Aspect::Hortative if !(person == 0 && plural) => return None,
+        Aspect::Hortative if transitive => format!("ko'ox {}", dependent()),
+        Aspect::Hortative => format!("ko'ox ti {}", verb.incompletive),
+        Aspect::Come if !second => return None,
+        Aspect::Come => {
+            let ko = if plural { "ko'one'ex" } else { "ko'on" };
+            if transitive {
+                format!("{ko} {}", dependent())
+            } else {
+                format!("{ko} ti {}", verb.incompletive)
+            }
+        }
+    })
 }
 
 /// Lower-cases and writes every glottal stop as a straight apostrophe.
@@ -326,7 +454,8 @@ impl Conjugation {
 
         let es = |tense: &Tense, person: &Person, plural: bool| -> Option<String> {
             let meaning = es_meaning.as_deref()?;
-            spanish::conjugate(meaning, tense.es?, person.es? + if plural { 3 } else { 0 }, tense.negative)
+            let p = person.es? + if plural { 3 } else { 0 };
+            spanish::render(meaning, tense.es.as_ref()?, p, tense.negative)
         };
 
         let tables = self
@@ -341,24 +470,20 @@ impl Conjugation {
                     .persons
                     .iter()
                     .enumerate()
-                    .map(|(i, person)| {
-                        // Under negation the incompletive is expressed with the
-                        // durative: ma' tan inwenel "I don't sleep" (§19.1.5).
-                        let aspect = match (tense.negative, tense.aspect) {
-                            (true, Aspect::Incompletive) => Aspect::Durative,
-                            (_, a) => a,
-                        };
-                        let neg = if tense.negative { "ma' " } else { "" };
-                        let sg = format!("{neg}{}", form(&verb, aspect, i, false));
-                        let pl = format!("{neg}{}", form(&verb, aspect, i, true));
-                        Row {
+                    .filter_map(|(i, person)| {
+                        let sg = form(&verb, tense, i, false);
+                        let pl = form(&verb, tense, i, true);
+                        if sg.is_none() && pl.is_none() {
+                            return None;
+                        }
+                        Some(Row {
                             person: person.label.clone(),
                             clitic: String::new(),
-                            singular: sg,
-                            plural: Some(pl),
-                            es_singular: es(tense, person, false),
-                            es_plural: es(tense, person, true),
-                        }
+                            es_singular: sg.as_ref().and_then(|_| es(tense, person, false)),
+                            es_plural: pl.as_ref().and_then(|_| es(tense, person, true)),
+                            singular: sg.unwrap_or_default(),
+                            plural: pl,
+                        })
                     })
                     .collect(),
             })
@@ -388,11 +513,33 @@ mod tests {
         parse(word, None).unwrap()
     }
 
+    fn tense(aspect: Aspect) -> Tense {
+        Tense {
+            id: String::new(),
+            group: String::new(),
+            name: String::new(),
+            description: String::new(),
+            aspect,
+            word: None,
+            negative: false,
+            es: None,
+        }
+    }
+
+    fn f(word: &str, aspect: Aspect, person: usize, plural: bool) -> String {
+        form(&v(word), &tense(aspect), person, plural).unwrap()
+    }
+
     fn all(word: &str, aspect: Aspect) -> Vec<String> {
-        let verb = parse(word, None).unwrap();
-        (0..3)
-            .flat_map(|p| [form(&verb, aspect, p, false), form(&verb, aspect, p, true)])
-            .collect()
+        (0..3).flat_map(|p| [f(word, aspect, p, false), f(word, aspect, p, true)]).collect()
+    }
+
+    /// Singular and plural of one table for one person, from the real data.
+    fn row(verb: &str, id: &str, person: usize) -> (String, Option<String>, Option<String>) {
+        let r = itza().conjugate(verb).unwrap();
+        let t = r.tables.iter().find(|t| t.id == id).unwrap_or_else(|| panic!("no table {id}"));
+        let row = t.rows.iter().find(|r| r.person.starts_with(&format!("{}.", person + 1))).unwrap();
+        (row.singular.clone(), row.plural.clone(), row.es_singular.clone())
     }
 
     #[test]
@@ -420,54 +567,121 @@ mod tests {
         ]);
     }
 
-    // §2.1.1 (3), §3.2.2.2; Hofling 1991 §7.2.1.2 (k'och-een)
+    // §2.1.1 (3), §3.2.2.2 (long -een written short)
     #[test]
     fn completive() {
         assert_eq!(all("ilik", Aspect::Completive), [
             "tinwilaj", "tikiwilaj", "tawilaj", "tawilaje'ex", "tuyilaj", "tuyilajoo'"
         ]);
         assert_eq!(all("k'ochol", Aspect::Completive), [
-            "k'ocheen", "k'ocho'on", "k'ocheech", "k'oche'ex", "k'ochij", "k'ochoo'"
+            "k'ochen", "k'ocho'on", "k'ochech", "k'oche'ex", "k'ochij", "k'ochoo'"
         ]);
-        assert_eq!(form(&v("jantik"), Aspect::Completive, 0, false), "tinjantaj");
+        assert_eq!(f("jantik", Aspect::Completive, 0, false), "tinjantaj");
     }
 
-    // Hofling 1991 §7.3.1.3, §7.3.2 (in-han-m-ah); §3.1.2 (wen-a'an)
     #[test]
     fn perfect() {
-        assert_eq!(form(&v("ilik"), Aspect::Perfect, 0, false), "inwilmaj");
-        assert_eq!(form(&v("jantik"), Aspect::Perfect, 0, false), "injanmaj");
-        assert_eq!(form(&v("wenel"), Aspect::Perfect, 2, false), "wena'an");
-        assert_eq!(form(&v("wenel"), Aspect::Perfect, 0, false), "wena'anen");
+        assert_eq!(f("ilik", Aspect::Perfect, 0, false), "inwilmaj");
+        assert_eq!(f("jantik", Aspect::Perfect, 0, false), "injanmaj");
+        assert_eq!(f("wenel", Aspect::Perfect, 2, false), "wena'an");
+        assert_eq!(f("wenel", Aspect::Perfect, 0, false), "wena'anen");
     }
 
     #[test]
-    fn durative_and_assurative() {
-        assert_eq!(form(&v("wenel"), Aspect::Durative, 2, false), "tan uwenel");
-        assert_eq!(form(&v("ilik"), Aspect::Durative, 0, true), "tan kiwilik");
-        assert_eq!(form(&v("wenel"), Aspect::Assurative, 0, false), "je' inwenelej");
+    fn uninflected_aspects() {
+        assert_eq!(f("wenel", Aspect::Durative, 2, false), "tan uwenel");
+        assert_eq!(f("ilik", Aspect::Durative, 0, true), "tan kiwilik");
+        assert_eq!(f("wenel", Aspect::Assurative, 0, false), "je' inwenelej");
+        // kil u-wen-el-ej, tantoj u-wen-el (§3.1.1.1)
+        assert_eq!(f("wenel", Aspect::Punctual, 2, false), "kil uwenelej");
+        assert_eq!(f("wenel", Aspect::Immediate, 2, false), "tantoj uwenel");
     }
 
+    // §3.1.1.2: k'ab'eet im-b'et-ik, pat-al u-wen-el, kaj-ij im-meyaj-t-ik
     #[test]
-    fn labial_assimilation() {
-        // im-b'el, im-b'et-ik (§3.1.1.2, §19.1.7)
-        let c = itza();
-        let r = c.conjugate("b'el").unwrap();
-        let inc = r.tables.iter().find(|t| t.id == "incompletive").unwrap();
-        assert_eq!(inc.rows[0].singular, "kimb'el");
-        let com = r.tables.iter().find(|t| t.id == "completive").unwrap();
-        assert_eq!(com.rows[2].singular, "b'inij");
+    fn auxiliaries() {
+        assert_eq!(row("wenel", "kabet", 0).0, "k'ab'et inwenel");
+        assert_eq!(row("wenel", "patal", 2).0, "patal uwenel");
+        assert_eq!(row("wenel", "patal", 2).2.as_deref(), Some("él/ella puede dormir"));
+        assert_eq!(row("wenel", "yan", 2).1.as_deref(), Some("yan uweneloo'"));
+        assert_eq!(row("wenel", "olak", 0).2.as_deref(), Some("yo casi dormí"));
+        assert_eq!(row("wenel", "kaj", 0).0, "kajij inwenel");
+        assert_eq!(row("wenel", "kaj", 0).2.as_deref(), Some("yo empecé a dormir"));
+        assert_eq!(row("wenel", "tsok", 2).0, "ts'o'kij uwenel");
     }
 
+    // §15.4.2.1: (b'el) u-ka'aj ti wen-el; u-ka'aj u-jan-t-ej
     #[test]
-    fn negatives_and_spanish() {
+    fn go_future() {
+        assert_eq!(row("wenel", "go", 2).0, "uka'aj ti wenel");
+        assert_eq!(row("wenel", "go", 2).1.as_deref(), Some("uka'ajoo' ti wenel"));
+        assert_eq!(row("wenel", "go", 0).2.as_deref(), Some("yo voy a dormir"));
+        assert_eq!(row("jantik", "go", 2).0, "uka'aj ujantej");
+        assert_eq!(row("ilik", "go", 0).0, "inka'aj inwila'");
+    }
+
+    // §3.1.3, §15.4.2: ka' wen-ek-ech, ka' uy-uk'-u', ka' u-jan-t-ej
+    #[test]
+    fn subjunctive() {
+        assert_eq!(row("wenel", "subjunctive", 1).0, "ka' wenekech");
+        assert_eq!(row("wenel", "subjunctive", 2).0, "ka' wenek");
+        assert_eq!(row("k'ochol", "subjunctive", 0).0, "ka' k'ochoken");
+        assert_eq!(row("uk'ik", "subjunctive", 2).0, "ka' uyuk'u'");
+        assert_eq!(row("ilik", "subjunctive", 0).0, "ka' inwila'");
+        assert_eq!(row("jantik", "subjunctive", 2).0, "ka' ujantej");
+        assert_eq!(row("wenel", "subjunctive", 0).2.as_deref(), Some("que yo duerma"));
+        // b'el is irregular: xi'ik (§3.2.2.1, note 10)
+        assert_eq!(row("b'el", "subjunctive", 1).0, "ka' xi'ikech");
+    }
+
+    // §15.4.1: wen-en!, il-a'!, jan-t-ej!, xen!; ma' a-wen-el!
+    #[test]
+    fn imperative() {
+        let (sg, pl, es) = row("wenel", "imperative", 1);
+        assert_eq!((sg.as_str(), pl.as_deref(), es.as_deref()), ("wenen!", Some("wenene'ex!"), Some("¡duerme!")));
+        assert_eq!(row("ilik", "imperative", 1).0, "ila'!");
+        assert_eq!(row("jantik", "imperative", 1).0, "jantej!");
+        assert_eq!(row("b'el", "imperative", 1).0, "xen!");
+        assert_eq!(row("wenel", "neg-imperative", 1).0, "ma' awenel");
+        assert_eq!(row("wenel", "neg-imperative", 1).2.as_deref(), Some("¡no duermas!"));
+        // Only the 2nd person has an imperative.
         let r = itza().conjugate("wenel").unwrap();
-        let t = |id: &str| r.tables.iter().find(|t| t.id == id).unwrap();
-        assert_eq!(t("neg-incompletive").rows[0].singular, "ma' tan inwenel");
-        assert_eq!(t("neg-completive").rows[2].singular, "ma' wenij");
-        assert_eq!(t("incompletive").rows[0].es_singular.as_deref(), Some("yo duermo"));
-        assert_eq!(t("completive").rows[2].es_plural.as_deref(), Some("ellos/ellas durmieron"));
-        assert_eq!(t("neg-incompletive").rows[0].es_singular.as_deref(), Some("yo no duermo"));
+        let t = r.tables.iter().find(|t| t.id == "imperative").unwrap();
+        assert_eq!(t.rows.len(), 1);
+    }
+
+    // §15.4.2.2: B'ikij lub'-uk-ech!; b'iik ki-kim-es
+    #[test]
+    fn admonitive() {
+        assert_eq!(row("lub'ul", "admonitive", 1).0, "b'ikij lub'ukech");
+        assert_eq!(row("ilik", "admonitive", 0).1.as_deref(), Some("b'ik kiwila'"));
+    }
+
+    // §15.4.2.3: Ko'ox ti p'at-äl; ko'ox kiw-il-a'; ko'on-e'ex ti jan-al
+    #[test]
+    fn hortative_and_come() {
+        let (sg, pl, _) = row("wenel", "hortative", 0);
+        assert_eq!((sg.as_str(), pl.as_deref()), ("", Some("ko'ox ti wenel")));
+        assert_eq!(row("ilik", "hortative", 0).1.as_deref(), Some("ko'ox kiwila'"));
+        assert_eq!(row("wenel", "come", 1).0, "ko'on ti wenel");
+        assert_eq!(row("wenel", "come", 1).1.as_deref(), Some("ko'one'ex ti wenel"));
+        assert_eq!(row("wenel", "come", 1).2.as_deref(), Some("¡ven a dormir!"));
+    }
+
+    #[test]
+    fn negatives() {
+        assert_eq!(row("wenel", "neg-incompletive", 0).0, "ma' tan inwenel");
+        assert_eq!(row("wenel", "neg-incompletive", 0).2.as_deref(), Some("yo no duermo"));
+        assert_eq!(row("wenel", "neg-completive", 2).0, "ma' wenij");
+        // Unrealized perfect: Ma' jan-ak-en "I haven't eaten" (§19.1.6)
+        assert_eq!(row("wenel", "neg-perfect", 0).0, "ma' weneken");
+        assert_eq!(row("wenel", "neg-perfect", 0).2.as_deref(), Some("yo no he dormido"));
+    }
+
+    #[test]
+    fn labial_assimilation_and_irregular_b_el() {
+        assert_eq!(row("b'el", "incompletive", 0).0, "kimb'el");
+        assert_eq!(row("b'el", "completive", 2).0, "b'inij");
     }
 
     #[test]
