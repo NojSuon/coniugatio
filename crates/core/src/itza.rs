@@ -283,18 +283,18 @@ fn set_a(person: usize, plural: bool, stem: &str) -> String {
     format!("{prefix}{stem}")
 }
 
-/// Plural suffix that goes with a Set A subject: 2pl -e'ex, 3pl -oo'.
+/// Plural suffix that goes with a Set A subject: 2pl -e'ex, 3pl -o'.
 /// The 1st person plural (exclusive) has none.
 fn plural_suffix(person: usize, plural: bool) -> &'static str {
     match (person, plural) {
         (1, true) => "e'ex",
-        (2, true) => "oo'",
+        (2, true) => "o'",
         _ => "",
     }
 }
 
 /// Set B (absolutive) suffixes; `third` is -ij in the completive, -Ø
-/// elsewhere. (Hofling writes -een/-eech in the completive; long vowels
+/// elsewhere. (Hofling writes -een/-eech and -oo'; long vowels
 /// are not written here.)
 fn set_b(person: usize, plural: bool, third: &'static str) -> &'static str {
     match (person, plural) {
@@ -303,7 +303,7 @@ fn set_b(person: usize, plural: bool, third: &'static str) -> &'static str {
         (2, false) => third,
         (0, true) => "o'on",
         (1, true) => "e'ex",
-        _ => "oo'",
+        _ => "o'",
     }
 }
 
@@ -313,7 +313,7 @@ fn form(verb: &Verb, tense: &Tense, person: usize, plural: bool) -> Option<Strin
     let transitive = verb.class != Class::I;
     let t = if verb.class == Class::Tt { "t" } else { "" };
     let word = tense.word.as_deref().unwrap_or("");
-    // Set A + incompletive stem + plural: inwenel, kuyilikoo'.
+    // Set A + incompletive stem + plural: inwenel, kuyiliko'.
     let a_verb = || format!("{}{}", set_a(person, plural, &verb.incompletive), plural_suffix(person, plural));
     // Dependent status: wenek-en (Set B) / inw-il-a' (Set A).
     let dependent = || {
@@ -560,10 +560,10 @@ mod tests {
     #[test]
     fn incompletive() {
         assert_eq!(all("ilik", Aspect::Incompletive), [
-            "kinwilik", "kiwilik", "kawilik", "kawilike'ex", "kuyilik", "kuyilikoo'"
+            "kinwilik", "kiwilik", "kawilik", "kawilike'ex", "kuyilik", "kuyiliko'"
         ]);
         assert_eq!(all("talel", Aspect::Incompletive), [
-            "kintalel", "kitalel", "katalel", "katalele'ex", "kutalel", "kutaleloo'"
+            "kintalel", "kitalel", "katalel", "katalele'ex", "kutalel", "kutalelo'"
         ]);
     }
 
@@ -571,10 +571,10 @@ mod tests {
     #[test]
     fn completive() {
         assert_eq!(all("ilik", Aspect::Completive), [
-            "tinwilaj", "tikiwilaj", "tawilaj", "tawilaje'ex", "tuyilaj", "tuyilajoo'"
+            "tinwilaj", "tikiwilaj", "tawilaj", "tawilaje'ex", "tuyilaj", "tuyilajo'"
         ]);
         assert_eq!(all("k'ochol", Aspect::Completive), [
-            "k'ochen", "k'ocho'on", "k'ochech", "k'oche'ex", "k'ochij", "k'ochoo'"
+            "k'ochen", "k'ocho'on", "k'ochech", "k'oche'ex", "k'ochij", "k'ocho'"
         ]);
         assert_eq!(f("jantik", Aspect::Completive, 0, false), "tinjantaj");
     }
@@ -603,7 +603,7 @@ mod tests {
         assert_eq!(row("wenel", "kabet", 0).0, "k'ab'et inwenel");
         assert_eq!(row("wenel", "patal", 2).0, "patal uwenel");
         assert_eq!(row("wenel", "patal", 2).2.as_deref(), Some("él/ella puede dormir"));
-        assert_eq!(row("wenel", "yan", 2).1.as_deref(), Some("yan uweneloo'"));
+        assert_eq!(row("wenel", "yan", 2).1.as_deref(), Some("yan uwenelo'"));
         assert_eq!(row("wenel", "olak", 0).2.as_deref(), Some("yo casi dormí"));
         assert_eq!(row("wenel", "kaj", 0).0, "kajij inwenel");
         assert_eq!(row("wenel", "kaj", 0).2.as_deref(), Some("yo empecé a dormir"));
@@ -614,7 +614,7 @@ mod tests {
     #[test]
     fn go_future() {
         assert_eq!(row("wenel", "go", 2).0, "uka'aj ti wenel");
-        assert_eq!(row("wenel", "go", 2).1.as_deref(), Some("uka'ajoo' ti wenel"));
+        assert_eq!(row("wenel", "go", 2).1.as_deref(), Some("uka'ajo' ti wenel"));
         assert_eq!(row("wenel", "go", 0).2.as_deref(), Some("yo voy a dormir"));
         assert_eq!(row("jantik", "go", 2).0, "uka'aj ujantej");
         assert_eq!(row("ilik", "go", 0).0, "inka'aj inwila'");

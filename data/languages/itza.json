@@ -290,8 +290,8 @@
           },
           {
             "slot": "Plural",
-            "description": "-e'ex para «ustedes», -oo' para «ellos».",
-            "example": "-oo'"
+            "description": "-e'ex para «ustedes», -o' para «ellos».",
+            "example": "-o'"
           }
         ]
       },
@@ -343,8 +343,8 @@
           {
             "label": "ellos, ellas",
             "cells": [
-              "u(y)- … -oo'",
-              "-oo'"
+              "u(y)- … -o'",
+              "-o'"
             ]
           }
         ],
@@ -567,11 +567,11 @@
             "translation": "Llegué el viernes."
           },
           {
-            "text": "Tan uyok'ol a' misoo'ej.",
+            "text": "Tan uyok'ol a' miso'ej.",
             "translation": "Los gatos están maullando."
           },
           {
-            "text": "Tuyilajoo' juntul ajchab'.",
+            "text": "Tuyilajo' juntul ajchab'.",
             "translation": "Miraron un oso hormiguero."
           },
           {
