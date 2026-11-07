@@ -590,6 +590,249 @@
             "translation": "Está caro."
           }
         ]
+      },
+      {
+        "type": "affixes",
+        "title": "Todos los afijos del verbo",
+        "description": "Cada pieza que un verbo puede llevar: prefijos, sufijos, partículas y cambios de raíz.",
+        "items": [
+          {
+            "affix": "dí, gí, di",
+            "kind": "proclítico",
+            "meaning": "Presente: yo, tú, él/ella",
+            "example": "dí tsi",
+            "translation": "yo como"
+          },
+          {
+            "affix": "dá, gá, bi",
+            "kind": "proclítico",
+            "meaning": "Pretérito",
+            "example": "bi zi",
+            "translation": "comió"
+          },
+          {
+            "affix": "ga, gi, da",
+            "kind": "proclítico",
+            "meaning": "Futuro",
+            "example": "da zi",
+            "translation": "comerá"
+          },
+          {
+            "affix": "ndí, ngí, mí",
+            "kind": "proclítico",
+            "meaning": "Copretérito",
+            "example": "ndí tsi",
+            "translation": "yo comía"
+          },
+          {
+            "affix": "drí, grí, ri",
+            "kind": "proclítico",
+            "meaning": "Presente progresivo",
+            "example": "drí tsi",
+            "translation": "estoy comiendo"
+          },
+          {
+            "affix": "ndrí, ngrí, mrí",
+            "kind": "proclítico",
+            "meaning": "Copretérito progresivo",
+            "example": "ndrí tsi",
+            "translation": "estaba comiendo"
+          },
+          {
+            "affix": "stá, xká, xa",
+            "kind": "proclítico",
+            "meaning": "Antepresente: hace poco",
+            "example": "xa zi",
+            "translation": "ha comido"
+          },
+          {
+            "affix": "xka, xki, sta",
+            "kind": "proclítico",
+            "meaning": "Futuro próximo",
+            "example": "sta zi",
+            "translation": "va a comer"
+          },
+          {
+            "affix": "ndá, ngá, mí",
+            "kind": "proclítico",
+            "meaning": "Pretérito adverbial: «cuando…»",
+            "example": "ndá tsi",
+            "translation": "cuando comí"
+          },
+          {
+            "affix": "gí, bí · duá, guá, bá",
+            "kind": "proclítico",
+            "meaning": "Acción en otro sitio: presente · pretérito",
+            "example": "bá zi",
+            "translation": "comió allá"
+          },
+          {
+            "affix": "bá, uá",
+            "kind": "proclítico",
+            "meaning": "Imperativo en otro sitio",
+            "example": "bá tsi",
+            "translation": "¡come allá!"
+          },
+          {
+            "affix": "drá, grí, dra",
+            "kind": "proclítico",
+            "meaning": "Alejamiento: presente",
+            "example": "dra tsi",
+            "translation": "va comiendo"
+          },
+          {
+            "affix": "ndrá, ngrá, ndra",
+            "kind": "proclítico",
+            "meaning": "Alejamiento: copretérito",
+            "example": "ndra tsi",
+            "translation": "iba comiendo"
+          },
+          {
+            "affix": "grá, grí, drá",
+            "kind": "proclítico",
+            "meaning": "Alejamiento: futuro · subjuntivo presente",
+            "example": "drá zi",
+            "translation": "que coma"
+          },
+          {
+            "affix": "gra, gri, dri",
+            "kind": "proclítico",
+            "meaning": "Subjuntivo pretérito (contrario a la realidad)",
+            "example": "dri zi",
+            "translation": "si comiera"
+          },
+          {
+            "affix": "hin-",
+            "kind": "prefijo",
+            "meaning": "Negación, antes del proclítico",
+            "example": "hindí tsi",
+            "translation": "no como"
+          },
+          {
+            "affix": "o",
+            "kind": "partícula",
+            "meaning": "Prohibición, con la 2.ª y 3.ª persona",
+            "example": "ogi ma",
+            "translation": "no te vayas"
+          },
+          {
+            "affix": "mä",
+            "kind": "auxiliar",
+            "meaning": "«Ir a»: futuro próximo, con el proclítico del futuro",
+            "example": "mä ga ma",
+            "translation": "voy a ir"
+          },
+          {
+            "affix": "forma B",
+            "kind": "cambio de raíz",
+            "meaning": "Pretérito y futuro de la 3.ª persona: la consonante se vuelve sonora (p → b, t → d, ts → z, k → g)",
+            "example": "bi bädi",
+            "translation": "lo supo"
+          },
+          {
+            "affix": "forma Y",
+            "kind": "cambio de raíz",
+            "meaning": "Raíces con vocal o h inicial: suman y, o ñ si la vocal es nasal",
+            "example": "bi hyandi",
+            "translation": "lo vio"
+          },
+          {
+            "affix": "forma T",
+            "kind": "cambio de raíz",
+            "meaning": "Actor indeterminado («lo hicieron»): f, th, ts, j, s, t'",
+            "example": "bi fädi",
+            "translation": "lo supieron"
+          },
+          {
+            "affix": "n-, m- (forma N)",
+            "kind": "prefijo",
+            "meaning": "Tiempos secundarios de los verbos que no cambian su consonante o tienen el complemento incorporado",
+            "example": "dá nsagi",
+            "translation": "brinqué"
+          },
+          {
+            "affix": "n-, m-",
+            "kind": "prefijo",
+            "meaning": "Reflexivo y recíproco, en todos los tiempos",
+            "example": "ntsabi",
+            "translation": "se cansa"
+          },
+          {
+            "affix": "n-, m-",
+            "kind": "prefijo",
+            "meaning": "Participio pasivo (con la raíz de actor indeterminado)",
+            "example": "nt'o̱de",
+            "translation": "oído"
+          },
+          {
+            "affix": "n-",
+            "kind": "prefijo",
+            "meaning": "Verbo hecho de un sustantivo",
+            "example": "ntse̱",
+            "translation": "hacer frío"
+          },
+          {
+            "affix": "-hu̱",
+            "kind": "sufijo",
+            "meaning": "Plural de la 1.ª y 2.ª persona",
+            "example": "dí tsihu̱",
+            "translation": "comemos"
+          },
+          {
+            "affix": "-gi, -ki, -gagi, -kagi",
+            "kind": "sufijo",
+            "meaning": "Complemento de 1.ª persona: «me»",
+            "example": "sugagi",
+            "translation": "me cuida"
+          },
+          {
+            "affix": "-'a'i, -a'i",
+            "kind": "sufijo",
+            "meaning": "Complemento de 2.ª persona: «te»",
+            "example": "tsa'a'i",
+            "translation": "te muerde"
+          },
+          {
+            "affix": "-bi, -pi, -babi, -uabi, -pabi",
+            "kind": "sufijo",
+            "meaning": "Complemento indirecto de 3.ª persona: «le, se lo»",
+            "example": "papabi",
+            "translation": "se lo vende"
+          },
+          {
+            "affix": "-ä, -u̱",
+            "kind": "sufijo",
+            "meaning": "Objeto directo como demostrativo: singular, plural"
+          },
+          {
+            "affix": "-te",
+            "kind": "sufijo",
+            "meaning": "Complemento indefinido: «a la gente, a alguien»",
+            "example": "pite",
+            "translation": "espantar (a la gente)"
+          },
+          {
+            "affix": "-ui",
+            "kind": "sufijo",
+            "meaning": "Recíproco: «el uno al otro»",
+            "example": "ma'tiui",
+            "translation": "insultarse"
+          },
+          {
+            "affix": "-mpi, -pi",
+            "kind": "sufijo",
+            "meaning": "Aplicativo: hacerlo para o hacia alguien",
+            "example": "hämpi",
+            "translation": "traer a alguien"
+          },
+          {
+            "affix": "-di, -ts'i, -t'i, -ni, -hi, -gi…",
+            "kind": "sufijo temático",
+            "meaning": "Forman el tema del verbo; los complejos (-ti, -ki, -'tsi…) suman transitividad",
+            "example": "fu̱di · fu̱ti",
+            "translation": "empezar · empezar algo"
+          }
+        ]
       }
     ]
   },
@@ -685,6 +928,211 @@
         "es": "progressive"
       },
       {
+        "id": "near-perfect",
+        "group": "Tiempos próximos",
+        "name": "Antepresente",
+        "description": "Lo que acaba de pasar, hace poco (stá, xká, xa).",
+        "forms": {
+          "1": "stá",
+          "2": "xká",
+          "3": "xa"
+        },
+        "stems": {
+          "2": "Y",
+          "3": "BY"
+        },
+        "secondary": true,
+        "es": "perfect"
+      },
+      {
+        "id": "near-future",
+        "group": "Tiempos próximos",
+        "name": "Futuro próximo",
+        "description": "Lo que va a pasar pronto (xka, xki, sta).",
+        "forms": {
+          "1": "xka",
+          "2": "xki",
+          "3": "sta"
+        },
+        "stems": {
+          "2": "Y",
+          "3": "BY"
+        },
+        "secondary": true,
+        "es": {
+          "tense": "present",
+          "aux": "ir",
+          "link": "a"
+        }
+      },
+      {
+        "id": "adverbial-past",
+        "group": "Pasado",
+        "name": "Pretérito adverbial",
+        "description": "Una acción pasada cuando pasó otra: «cuando trabajé…» (ndá, ngá, mí).",
+        "forms": {
+          "1": "ndá",
+          "2": "ngá",
+          "3": "mí"
+        },
+        "stems": {
+          "2": "Y",
+          "3": "BY"
+        },
+        "secondary": true,
+        "es": {
+          "tense": "preterite",
+          "before": "cuando"
+        }
+      },
+      {
+        "id": "past-progressive",
+        "group": "Pasado",
+        "name": "Copretérito progresivo",
+        "description": "Lo que estaba pasando (ndrí, ngrí, mrí).",
+        "forms": {
+          "1": "ndrí",
+          "2": "ngrí",
+          "3": "mrí"
+        },
+        "es": "past_progressive"
+      },
+      {
+        "id": "elsewhere-present",
+        "group": "En otro sitio",
+        "name": "Presente en otro sitio",
+        "description": "La acción pasa en otro lugar (gí, bí).",
+        "forms": {
+          "2": "gí",
+          "3": "bí"
+        },
+        "es": {
+          "tense": "present",
+          "after": "allá"
+        }
+      },
+      {
+        "id": "elsewhere-preterite",
+        "group": "En otro sitio",
+        "name": "Pretérito en otro sitio",
+        "description": "Pasó en otro lugar (duá, guá, bá).",
+        "forms": {
+          "1": "duá",
+          "2": "guá",
+          "3": "bá"
+        },
+        "stems": {
+          "2": "Y",
+          "3": "BY"
+        },
+        "secondary": true,
+        "es": {
+          "tense": "preterite",
+          "after": "allá"
+        }
+      },
+      {
+        "id": "elsewhere-imperative",
+        "group": "En otro sitio",
+        "name": "Imperativo en otro sitio",
+        "description": "Una orden para hacerlo en otro lugar (bá).",
+        "forms": {
+          "2": "bá"
+        },
+        "es": {
+          "tense": "imperative",
+          "after": "allá"
+        }
+      },
+      {
+        "id": "away-present",
+        "group": "Alejamiento",
+        "name": "Presente de alejamiento",
+        "description": "Mientras el sujeto se va alejando (drá, grí, dra).",
+        "forms": {
+          "1": "drá",
+          "2": "grí",
+          "3": "dra"
+        },
+        "es": {
+          "tense": "present",
+          "aux": "ir",
+          "link": "-ndo"
+        }
+      },
+      {
+        "id": "away-imperfect",
+        "group": "Alejamiento",
+        "name": "Copretérito de alejamiento",
+        "description": "Se iba alejando mientras lo hacía (ndrá, ngrá, ndra).",
+        "forms": {
+          "1": "ndrá",
+          "2": "ngrá",
+          "3": "ndra"
+        },
+        "es": {
+          "tense": "imperfect",
+          "aux": "ir",
+          "link": "-ndo"
+        }
+      },
+      {
+        "id": "away-future",
+        "group": "Alejamiento",
+        "name": "Futuro de alejamiento",
+        "description": "Se irá alejando mientras lo hace (grá, grí, drá).",
+        "forms": {
+          "1": "grá",
+          "2": "grí",
+          "3": "drá"
+        },
+        "es": {
+          "tense": "future",
+          "aux": "ir",
+          "link": "-ndo"
+        }
+      },
+      {
+        "id": "subjunctive",
+        "group": "Subjuntivo",
+        "name": "Presente y futuro",
+        "description": "Lo que se desea o se espera: «que…» (grá, grí, drá).",
+        "forms": {
+          "1": "grá",
+          "2": "grí",
+          "3": "drá"
+        },
+        "stems": {
+          "2": "Y",
+          "3": "BY"
+        },
+        "secondary": true,
+        "es": {
+          "tense": "subjunctive",
+          "before": "que"
+        }
+      },
+      {
+        "id": "past-subjunctive",
+        "group": "Subjuntivo",
+        "name": "Pretérito (contrario a la realidad)",
+        "description": "Lo que habría sido: «si…» (gra, gri, dri).",
+        "forms": {
+          "1": "gra",
+          "2": "gri",
+          "3": "dri"
+        },
+        "stems": {
+          "2": "Y",
+          "3": "BY"
+        },
+        "secondary": true,
+        "es": {
+          "tense": "past_subjunctive",
+          "before": "si"
+        }
+      },
+      {
         "id": "neg-present",
         "group": "Negativo",
         "name": "Presente",
@@ -713,6 +1161,24 @@
         },
         "secondary": true,
         "es": "preterite",
+        "negative": true
+      },
+      {
+        "id": "neg-future",
+        "group": "Negativo",
+        "name": "Futuro",
+        "description": "hin- + proclítico del futuro.",
+        "forms": {
+          "1": "hinga",
+          "2": "hingi",
+          "3": "hinda"
+        },
+        "stems": {
+          "2": "Y",
+          "3": "BY"
+        },
+        "secondary": true,
+        "es": "future",
         "negative": true
       }
     ],

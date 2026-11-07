@@ -13,10 +13,22 @@
       "types_help": "If you type the dictionary form (wenel, ilik, jantik), we detect it ourselves."
     },
     "types": [
-      { "id": "", "label": "Detect it" },
-      { "id": "I", "label": "Intransitive: wen → wenel" },
-      { "id": "T", "label": "Transitive: il → ilik" },
-      { "id": "Tt", "label": "With -t: meyaj → meyajtik" }
+      {
+        "id": "",
+        "label": "Detect it"
+      },
+      {
+        "id": "I",
+        "label": "Intransitive: wen → wenel"
+      },
+      {
+        "id": "T",
+        "label": "Transitive: il → ilik"
+      },
+      {
+        "id": "Tt",
+        "label": "With -t: meyaj → meyajtik"
+      }
     ]
   },
   "source": {
@@ -30,35 +42,93 @@
   "orthography": {
     "intro": "This is the spelling of the Academia de Lenguas Mayas de Guatemala, with ts and ts' for the affricates. The apostrophe (') marks a glottalized consonant (k', t') or a glottal stop, a short break in the voice.",
     "letters": [
-      { "meaning": "night" },
-      { "meaning": "meat" },
-      { "meaning": "jaguar" },
-      { "meaning": "sew" },
-      { "meaning": "bird" },
-      { "meaning": "star" },
-      { "meaning": "eye" },
-      { "meaning": "water" },
-      { "meaning": "honey" },
-      { "meaning": "arm, hand" },
-      { "meaning": "earth, land" },
-      { "meaning": "person" },
-      { "meaning": "house" },
-      { "meaning": "cornfield" },
-      { "meaning": "head" },
-      { "meaning": "tomato" },
-      { "meaning": "goblin" },
-      { "meaning": "cold" },
-      { "meaning": "forehead" },
-      { "meaning": "language, word" },
-      { "meaning": "horse" },
-      { "meaning": "give" },
-      { "meaning": "drink" },
-      { "meaning": "tortilla" },
-      { "meaning": "wasp" },
-      { "meaning": "crab" },
-      { "meaning": "sky" }
+      {
+        "meaning": "night"
+      },
+      {
+        "meaning": "meat"
+      },
+      {
+        "meaning": "jaguar"
+      },
+      {
+        "meaning": "sew"
+      },
+      {
+        "meaning": "bird"
+      },
+      {
+        "meaning": "star"
+      },
+      {
+        "meaning": "eye"
+      },
+      {
+        "meaning": "water"
+      },
+      {
+        "meaning": "honey"
+      },
+      {
+        "meaning": "arm, hand"
+      },
+      {
+        "meaning": "earth, land"
+      },
+      {
+        "meaning": "person"
+      },
+      {
+        "meaning": "house"
+      },
+      {
+        "meaning": "cornfield"
+      },
+      {
+        "meaning": "head"
+      },
+      {
+        "meaning": "tomato"
+      },
+      {
+        "meaning": "goblin"
+      },
+      {
+        "meaning": "cold"
+      },
+      {
+        "meaning": "forehead"
+      },
+      {
+        "meaning": "language, word"
+      },
+      {
+        "meaning": "horse"
+      },
+      {
+        "meaning": "give"
+      },
+      {
+        "meaning": "drink"
+      },
+      {
+        "meaning": "tortilla"
+      },
+      {
+        "meaning": "wasp"
+      },
+      {
+        "meaning": "crab"
+      },
+      {
+        "meaning": "sky"
+      }
     ],
-    "vowels": [{ "title": "Vowels" }],
+    "vowels": [
+      {
+        "title": "Vowels"
+      }
+    ],
     "notes": [
       "A vowel can have a glottal stop in the middle: kan «snake», ka'an «sky». Ä is always short.",
       "Long vowels are not written: a single vowel is written.",
@@ -71,131 +141,751 @@
     "blocks": [
       {
         "items": [
-          { "slot": "Auxiliary", "description": "Optional word that adds a meaning: k'ab'et «need», tak «want»." },
-          { "slot": "Aspect", "description": "When or how the action happens: k- habit, tan now." },
-          { "slot": "Person (set A)", "description": "Who does the action." },
-          { "slot": "Verb", "description": "The root." },
-          { "slot": "Status", "description": "Suffix that changes with the aspect: -el, -ik, -aj…" },
-          { "slot": "Plural", "description": "-e'ex for «you all», -o' for «they»." }
+          {
+            "slot": "Auxiliary",
+            "description": "Optional word that adds a meaning: k'ab'et «need», tak «want»."
+          },
+          {
+            "slot": "Aspect",
+            "description": "When or how the action happens: k- habit, tan now."
+          },
+          {
+            "slot": "Person (set A)",
+            "description": "Who does the action."
+          },
+          {
+            "slot": "Verb",
+            "description": "The root."
+          },
+          {
+            "slot": "Status",
+            "description": "Suffix that changes with the aspect: -el, -ik, -aj…"
+          },
+          {
+            "slot": "Plural",
+            "description": "-e'ex for «you all», -o' for «they»."
+          }
         ]
       },
       {
         "title": "Two sets of person markers",
         "description": "Set A goes before the verb; set B, after it. Before a vowel, set A adds w or y: in-w-il, u-y-il.",
-        "columns": ["Person", "Set A", "Set B"],
-        "rows": [{ "label": "I" }, { "label": "you" }, { "label": "he, she" }, { "label": "we" }, { "label": "you all" }, { "label": "they" }],
+        "columns": [
+          "Person",
+          "Set A",
+          "Set B"
+        ],
+        "rows": [
+          {
+            "label": "I"
+          },
+          {
+            "label": "you"
+          },
+          {
+            "label": "he, she"
+          },
+          {
+            "label": "we"
+          },
+          {
+            "label": "you all"
+          },
+          {
+            "label": "they"
+          }
+        ],
         "note": "«We» with -e'ex at the end includes the listener: kiwenele'ex «we all sleep»."
       },
       {
         "title": "In the past, the person moves",
         "description": "In the present, set A marks who does the action in every verb. In the past, intransitive verbs use set B at the end.",
-        "items": [{ "translation": "I sleep" }, { "translation": "I slept" }, { "translation": "I see it" }, { "translation": "I saw it" }]
+        "items": [
+          {
+            "translation": "I sleep"
+          },
+          {
+            "translation": "I slept"
+          },
+          {
+            "translation": "I see it"
+          },
+          {
+            "translation": "I saw it"
+          }
+        ]
       },
       {
         "title": "Three types of verb",
         "items": [
-          { "name": "Intransitive", "description": "No object. Its suffix repeats the vowel of the root: wen-el, jok'-ol, nak'-äl.", "examples": [{ "meaning": "I slept" }, { "meaning": "I arrived" }] },
-          { "name": "Root transitive", "description": "Takes an object. In the past it takes t- and -aj.", "examples": [{ "meaning": "I saw it" }, { "meaning": "I drank it" }] },
-          { "name": "Transitive with -t", "description": "The -t- makes transitive verbs. In the perfect the -t- changes to -m-.", "examples": [{ "meaning": "I ate it" }, { "meaning": "I have eaten it" }] }
+          {
+            "name": "Intransitive",
+            "description": "No object. Its suffix repeats the vowel of the root: wen-el, jok'-ol, nak'-äl.",
+            "examples": [
+              {
+                "meaning": "I slept"
+              },
+              {
+                "meaning": "I arrived"
+              }
+            ]
+          },
+          {
+            "name": "Root transitive",
+            "description": "Takes an object. In the past it takes t- and -aj.",
+            "examples": [
+              {
+                "meaning": "I saw it"
+              },
+              {
+                "meaning": "I drank it"
+              }
+            ]
+          },
+          {
+            "name": "Transitive with -t",
+            "description": "The -t- makes transitive verbs. In the perfect the -t- changes to -m-.",
+            "examples": [
+              {
+                "meaning": "I ate it"
+              },
+              {
+                "meaning": "I have eaten it"
+              }
+            ]
+          }
         ]
       },
       {
         "title": "Auxiliary words",
         "description": "They come before the verb, which keeps its person prefix and its -Vl or -ik suffix, without k-.",
         "items": [
-          { "translation": "I need to sleep" },
-          { "translation": "I want to sleep" },
-          { "translation": "I have to sleep" },
-          { "translation": "I can sleep" },
-          { "translation": "I usually sleep" },
-          { "translation": "I almost slept" },
-          { "translation": "I started to sleep" },
-          { "translation": "I already slept" }
+          {
+            "translation": "I need to sleep"
+          },
+          {
+            "translation": "I want to sleep"
+          },
+          {
+            "translation": "I have to sleep"
+          },
+          {
+            "translation": "I can sleep"
+          },
+          {
+            "translation": "I usually sleep"
+          },
+          {
+            "translation": "I almost slept"
+          },
+          {
+            "translation": "I started to sleep"
+          },
+          {
+            "translation": "I already slept"
+          }
         ]
       },
       {
         "title": "The moods: dependent status",
         "description": "For what isn't real yet (wishes, orders, warnings), the verb takes the dependent status: -Vk in intransitive verbs and -V' or -ej in transitive ones.",
         "items": [
-          { "name": "Subjunctive", "description": "«That…»: what may or may not happen.", "examples": [{ "meaning": "that you sleep" }, { "meaning": "that he/she drink it" }] },
-          { "name": "Imperative", "description": "Orders. In the negative, ma' is used with the present.", "examples": [{ "meaning": "sleep!" }, { "meaning": "don't sleep!" }] },
-          { "name": "Warning", "description": "Warns about something that could happen.", "examples": [{ "meaning": "careful, you might fall!" }] },
-          { "name": "Hortative", "description": "«Let's…». With ko'on, «come and…».", "examples": [{ "meaning": "let's sleep" }, { "meaning": "let's see it" }] }
+          {
+            "name": "Subjunctive",
+            "description": "«That…»: what may or may not happen.",
+            "examples": [
+              {
+                "meaning": "that you sleep"
+              },
+              {
+                "meaning": "that he/she drink it"
+              }
+            ]
+          },
+          {
+            "name": "Imperative",
+            "description": "Orders. In the negative, ma' is used with the present.",
+            "examples": [
+              {
+                "meaning": "sleep!"
+              },
+              {
+                "meaning": "don't sleep!"
+              }
+            ]
+          },
+          {
+            "name": "Warning",
+            "description": "Warns about something that could happen.",
+            "examples": [
+              {
+                "meaning": "careful, you might fall!"
+              }
+            ]
+          },
+          {
+            "name": "Hortative",
+            "description": "«Let's…». With ko'on, «come and…».",
+            "examples": [
+              {
+                "meaning": "let's sleep"
+              },
+              {
+                "meaning": "let's see it"
+              }
+            ]
+          }
         ]
       },
       {
         "title": "Negation: ma'",
         "description": "To negate the present, tan is used, the marker of what is happening.",
-        "items": [{ "translation": "I don't sleep" }, { "translation": "he/she didn't sleep" }, { "translation": "I didn't see it" }]
+        "items": [
+          {
+            "translation": "I don't sleep"
+          },
+          {
+            "translation": "he/she didn't sleep"
+          },
+          {
+            "translation": "I didn't see it"
+          }
+        ]
       },
       {
         "title": "Example sentences",
         "items": [
-          { "translation": "I arrived on Friday." },
-          { "translation": "The cats are meowing." },
-          { "translation": "They looked at an anteater." },
-          { "translation": "I'm hungry." },
-          { "translation": "Yes, I'm going!" }
+          {
+            "translation": "I arrived on Friday."
+          },
+          {
+            "translation": "The cats are meowing."
+          },
+          {
+            "translation": "They looked at an anteater."
+          },
+          {
+            "translation": "I'm hungry."
+          },
+          {
+            "translation": "Yes, I'm going!"
+          }
+        ]
+      },
+      {
+        "title": "Every affix of the verb",
+        "description": "Every piece a verb can take: prefixes, suffixes, particles and root changes.",
+        "items": [
+          {
+            "kind": "aspect",
+            "meaning": "Incompletive: habit, what always happens",
+            "translation": "I sleep"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Durative: what is happening",
+            "translation": "I am sleeping"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Punctual: «when…»",
+            "translation": "when I sleep"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Immediate past",
+            "translation": "I have just slept"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Completive of transitive verbs",
+            "translation": "I saw it"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Assurative: what will surely happen",
+            "translation": "I will sleep"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "«Going to»: near future",
+            "translation": "I'm going to sleep"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Need, wish, obligation, ability, habit",
+            "translation": "I need to sleep"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "«Almost»",
+            "translation": "I almost slept"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Start, begin, finish, already",
+            "translation": "I started to sleep"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Subjunctive: «that…»",
+            "translation": "that I sleep"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Warning: «careful!»",
+            "translation": "careful, I might sleep"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Hortative: «let's…»",
+            "translation": "let's sleep"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Invitation: «come and…»",
+            "translation": "come and sleep"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Negation",
+            "translation": "I don't sleep"
+          },
+          {
+            "kind": "prefix (set A)",
+            "meaning": "Subject: I, you, he/she; before a vowel they add w or y",
+            "translation": "I see it"
+          },
+          {
+            "kind": "prefix (set A)",
+            "meaning": "Subject: we",
+            "translation": "we see it"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Set A plural: you all, they",
+            "translation": "you all sleep"
+          },
+          {
+            "kind": "suffix (set B)",
+            "meaning": "Object; intransitive subject in the completive: I, you, he/she",
+            "translation": "I slept"
+          },
+          {
+            "kind": "suffix (set B)",
+            "meaning": "We, you all, they",
+            "translation": "they slept"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Intransitive incompletive: repeats the root vowel",
+            "translation": "sleep"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Transitive incompletive",
+            "translation": "I see it"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Transitive completive",
+            "translation": "I saw it"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Intransitive dependent: subjunctive, warning",
+            "translation": "that I sleep"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Transitive dependent",
+            "translation": "that I see it"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Intransitive imperative",
+            "translation": "sleep!"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Perfect: transitive, intransitive",
+            "translation": "I have seen it"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Makes transitive verbs (in the perfect, -m-)",
+            "translation": "eat it"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Closes the punctual and the assurative",
+            "translation": "I will sleep"
+          }
         ]
       }
     ]
   },
   "conjugation": {
     "persons": [
-      { "id": "1", "label": "1st person" },
-      { "id": "2", "label": "2nd person" },
-      { "id": "3", "label": "3rd person" }
+      {
+        "id": "1",
+        "label": "1st person"
+      },
+      {
+        "id": "2",
+        "label": "2nd person"
+      },
+      {
+        "id": "3",
+        "label": "3rd person"
+      }
     ],
     "tenses": [
-      { "id": "incompletive", "group": "Aspects", "name": "Habitual present", "description": "What always happens, or by habit (k-)." },
-      { "id": "durative", "group": "Aspects", "name": "Present progressive", "description": "What is happening now (tan)." },
-      { "id": "punctual", "group": "Aspects", "name": "Punctual: «when…»", "description": "When something happens (kil … -ej).", "es": { "tense": "present", "before": "when" } },
-      { "id": "immediate", "group": "Aspects", "name": "Immediate past", "description": "Something that has just happened (tantoj).", "es": { "tense": "perfect", "adverb": "just" } },
-      { "id": "completive", "group": "Past", "name": "Preterite", "description": "What already happened (t- … -aj)." },
-      { "id": "perfect", "group": "Past", "name": "Perfect", "description": "What has already happened (-m-aj, -a'an)." },
-      { "id": "assurative", "group": "Future", "name": "Certain future", "description": "What will surely happen (je' … -ej)." },
-      { "id": "go", "group": "Future", "name": "Near future", "description": "What you are about to go and do (ka'aj, «go to»).", "es": { "tense": "progressive", "aux": "go", "link": "to" } },
-      { "id": "kabet", "group": "Auxiliaries", "name": "Need", "description": "«I need to…» (k'ab'et).", "es": { "tense": "present", "aux": "need", "link": "to" } },
-      { "id": "tak", "group": "Auxiliaries", "name": "Wish", "description": "«I want to…» (tak).", "es": { "tense": "present", "aux": "want", "link": "to" } },
-      { "id": "yan", "group": "Auxiliaries", "name": "Obligation", "description": "«I have to…» (yan).", "es": { "tense": "present", "aux": "have", "link": "to" } },
-      { "id": "patal", "group": "Auxiliaries", "name": "Ability", "description": "«I can…» (patal).", "es": { "tense": "present", "aux": "can" } },
-      { "id": "suk", "group": "Auxiliaries", "name": "Habit", "description": "«I usually…» (suk).", "es": { "tense": "present", "adverb": "usually" } },
-      { "id": "olak", "group": "Auxiliaries", "name": "Almost", "description": "«I almost…» (olak).", "es": { "tense": "preterite", "adverb": "almost" } },
-      { "id": "kaj", "group": "Start and finish", "name": "Start", "description": "«I started to…» (kajij).", "es": { "tense": "preterite", "aux": "start", "link": "to" } },
-      { "id": "jop", "group": "Start and finish", "name": "Begin", "description": "«I began to…» (jop'ij).", "es": { "tense": "preterite", "aux": "begin", "link": "to" } },
-      { "id": "jom", "group": "Start and finish", "name": "Finish", "description": "«I finished…» (jo'mij).", "es": { "tense": "preterite", "aux": "finish", "link": "-ing" } },
-      { "id": "tsok", "group": "Start and finish", "name": "Already", "description": "«Already…», something finished (ts'o'kij).", "es": { "tense": "preterite", "adverb": "already" } },
-      { "id": "subjunctive", "group": "Moods", "name": "Subjunctive", "description": "What may or may not happen: «that…» (ka').", "es": { "tense": "subjunctive", "before": "that" } },
-      { "id": "imperative", "group": "Moods", "name": "Imperative", "description": "To give orders." },
-      { "id": "admonitive", "group": "Moods", "name": "Warning", "description": "«Careful!», something that could happen (b'ikij).", "es": { "tense": "present", "aux": "might", "before": "careful!" } },
-      { "id": "hortative", "group": "Moods", "name": "Hortative", "description": "«Let's…» (ko'ox).", "es": { "tense": "present", "before": "let's", "pronoun": false } },
-      { "id": "come", "group": "Moods", "name": "Invitation", "description": "«Come and…» (ko'on, ko'one'ex).", "es": { "tense": "imperative", "aux": "come", "link": "and" } },
-      { "id": "neg-incompletive", "group": "Negative", "name": "Present", "description": "ma' + tan." },
-      { "id": "neg-completive", "group": "Negative", "name": "Preterite", "description": "ma' + preterite." },
-      { "id": "neg-perfect", "group": "Negative", "name": "Perfect", "description": "What hasn't happened yet: ma' + -Vk." },
-      { "id": "neg-imperative", "group": "Negative", "name": "Imperative", "description": "To say «don't do it»: ma' + a-." }
+      {
+        "id": "incompletive",
+        "group": "Aspects",
+        "name": "Habitual present",
+        "description": "What always happens, or by habit (k-)."
+      },
+      {
+        "id": "durative",
+        "group": "Aspects",
+        "name": "Present progressive",
+        "description": "What is happening now (tan)."
+      },
+      {
+        "id": "punctual",
+        "group": "Aspects",
+        "name": "Punctual: «when…»",
+        "description": "When something happens (kil … -ej).",
+        "es": {
+          "tense": "present",
+          "before": "when"
+        }
+      },
+      {
+        "id": "immediate",
+        "group": "Aspects",
+        "name": "Immediate past",
+        "description": "Something that has just happened (tantoj).",
+        "es": {
+          "tense": "perfect",
+          "adverb": "just"
+        }
+      },
+      {
+        "id": "completive",
+        "group": "Past",
+        "name": "Preterite",
+        "description": "What already happened (t- … -aj)."
+      },
+      {
+        "id": "perfect",
+        "group": "Past",
+        "name": "Perfect",
+        "description": "What has already happened (-m-aj, -a'an)."
+      },
+      {
+        "id": "assurative",
+        "group": "Future",
+        "name": "Certain future",
+        "description": "What will surely happen (je' … -ej)."
+      },
+      {
+        "id": "go",
+        "group": "Future",
+        "name": "Near future",
+        "description": "What you are about to go and do (ka'aj, «go to»).",
+        "es": {
+          "tense": "progressive",
+          "aux": "go",
+          "link": "to"
+        }
+      },
+      {
+        "id": "kabet",
+        "group": "Auxiliaries",
+        "name": "Need",
+        "description": "«I need to…» (k'ab'et).",
+        "es": {
+          "tense": "present",
+          "aux": "need",
+          "link": "to"
+        }
+      },
+      {
+        "id": "tak",
+        "group": "Auxiliaries",
+        "name": "Wish",
+        "description": "«I want to…» (tak).",
+        "es": {
+          "tense": "present",
+          "aux": "want",
+          "link": "to"
+        }
+      },
+      {
+        "id": "yan",
+        "group": "Auxiliaries",
+        "name": "Obligation",
+        "description": "«I have to…» (yan).",
+        "es": {
+          "tense": "present",
+          "aux": "have",
+          "link": "to"
+        }
+      },
+      {
+        "id": "patal",
+        "group": "Auxiliaries",
+        "name": "Ability",
+        "description": "«I can…» (patal).",
+        "es": {
+          "tense": "present",
+          "aux": "can"
+        }
+      },
+      {
+        "id": "suk",
+        "group": "Auxiliaries",
+        "name": "Habit",
+        "description": "«I usually…» (suk).",
+        "es": {
+          "tense": "present",
+          "adverb": "usually"
+        }
+      },
+      {
+        "id": "olak",
+        "group": "Auxiliaries",
+        "name": "Almost",
+        "description": "«I almost…» (olak).",
+        "es": {
+          "tense": "preterite",
+          "adverb": "almost"
+        }
+      },
+      {
+        "id": "kaj",
+        "group": "Start and finish",
+        "name": "Start",
+        "description": "«I started to…» (kajij).",
+        "es": {
+          "tense": "preterite",
+          "aux": "start",
+          "link": "to"
+        }
+      },
+      {
+        "id": "jop",
+        "group": "Start and finish",
+        "name": "Begin",
+        "description": "«I began to…» (jop'ij).",
+        "es": {
+          "tense": "preterite",
+          "aux": "begin",
+          "link": "to"
+        }
+      },
+      {
+        "id": "jom",
+        "group": "Start and finish",
+        "name": "Finish",
+        "description": "«I finished…» (jo'mij).",
+        "es": {
+          "tense": "preterite",
+          "aux": "finish",
+          "link": "-ing"
+        }
+      },
+      {
+        "id": "tsok",
+        "group": "Start and finish",
+        "name": "Already",
+        "description": "«Already…», something finished (ts'o'kij).",
+        "es": {
+          "tense": "preterite",
+          "adverb": "already"
+        }
+      },
+      {
+        "id": "subjunctive",
+        "group": "Moods",
+        "name": "Subjunctive",
+        "description": "What may or may not happen: «that…» (ka').",
+        "es": {
+          "tense": "subjunctive",
+          "before": "that"
+        }
+      },
+      {
+        "id": "imperative",
+        "group": "Moods",
+        "name": "Imperative",
+        "description": "To give orders."
+      },
+      {
+        "id": "admonitive",
+        "group": "Moods",
+        "name": "Warning",
+        "description": "«Careful!», something that could happen (b'ikij).",
+        "es": {
+          "tense": "present",
+          "aux": "might",
+          "before": "careful!"
+        }
+      },
+      {
+        "id": "hortative",
+        "group": "Moods",
+        "name": "Hortative",
+        "description": "«Let's…» (ko'ox).",
+        "es": {
+          "tense": "present",
+          "before": "let's",
+          "pronoun": false
+        }
+      },
+      {
+        "id": "come",
+        "group": "Moods",
+        "name": "Invitation",
+        "description": "«Come and…» (ko'on, ko'one'ex).",
+        "es": {
+          "tense": "imperative",
+          "aux": "come",
+          "link": "and"
+        }
+      },
+      {
+        "id": "neg-incompletive",
+        "group": "Negative",
+        "name": "Present",
+        "description": "ma' + tan."
+      },
+      {
+        "id": "neg-completive",
+        "group": "Negative",
+        "name": "Preterite",
+        "description": "ma' + preterite."
+      },
+      {
+        "id": "neg-perfect",
+        "group": "Negative",
+        "name": "Perfect",
+        "description": "What hasn't happened yet: ma' + -Vk."
+      },
+      {
+        "id": "neg-imperative",
+        "group": "Negative",
+        "name": "Imperative",
+        "description": "To say «don't do it»: ma' + a-."
+      }
     ],
     "lexicon": [
-      { "entry": "wenel", "meaning": "sleep", "es": "sleep" },
-      { "entry": "jok'ol", "meaning": "go out, leave", "es": "go out" },
-      { "entry": "k'ochol", "meaning": "arrive", "es": "arrive" },
-      { "entry": "okol", "meaning": "enter", "es": "enter" },
-      { "entry": "lub'ul", "meaning": "fall", "es": "fall" },
-      { "entry": "kimil", "meaning": "die", "es": "die" },
-      { "entry": "nak'äl", "meaning": "go up", "es": "go up" },
-      { "entry": "emel", "meaning": "go down", "es": "go down" },
-      { "entry": "ok'ol", "meaning": "cry", "es": "cry" },
-      { "entry": "talel", "meaning": "come", "es": "come", "note": "Takes -el; subjunctive tak, imperative ko'ten" },
-      { "entry": "b'el", "meaning": "go", "es": "go", "note": "Irregular: b'el, past b'in, subjunctive xi'ik, imperative xen" },
-      { "entry": "ilik", "meaning": "see", "es": "see", "note": "Subjunctive and imperative ila' (not il-i')" },
-      { "entry": "uk'ik", "meaning": "drink", "es": "drink" },
-      { "entry": "chäkik", "meaning": "cook", "es": "cook" },
-      { "entry": "ch'äkik", "meaning": "cut", "es": "cut" },
-      { "entry": "mächik", "meaning": "grab", "es": "grab" },
-      { "entry": "mänik", "meaning": "buy", "es": "buy" },
-      { "entry": "ts'onik", "meaning": "shoot", "es": "shoot" },
-      { "entry": "jantik", "meaning": "eat", "es": "eat" },
-      { "entry": "cha'antik", "meaning": "look at", "es": "look at" }
+      {
+        "entry": "wenel",
+        "meaning": "sleep",
+        "es": "sleep"
+      },
+      {
+        "entry": "jok'ol",
+        "meaning": "go out, leave",
+        "es": "go out"
+      },
+      {
+        "entry": "k'ochol",
+        "meaning": "arrive",
+        "es": "arrive"
+      },
+      {
+        "entry": "okol",
+        "meaning": "enter",
+        "es": "enter"
+      },
+      {
+        "entry": "lub'ul",
+        "meaning": "fall",
+        "es": "fall"
+      },
+      {
+        "entry": "kimil",
+        "meaning": "die",
+        "es": "die"
+      },
+      {
+        "entry": "nak'äl",
+        "meaning": "go up",
+        "es": "go up"
+      },
+      {
+        "entry": "emel",
+        "meaning": "go down",
+        "es": "go down"
+      },
+      {
+        "entry": "ok'ol",
+        "meaning": "cry",
+        "es": "cry"
+      },
+      {
+        "entry": "talel",
+        "meaning": "come",
+        "es": "come",
+        "note": "Takes -el; subjunctive tak, imperative ko'ten"
+      },
+      {
+        "entry": "b'el",
+        "meaning": "go",
+        "es": "go",
+        "note": "Irregular: b'el, past b'in, subjunctive xi'ik, imperative xen"
+      },
+      {
+        "entry": "ilik",
+        "meaning": "see",
+        "es": "see",
+        "note": "Subjunctive and imperative ila' (not il-i')"
+      },
+      {
+        "entry": "uk'ik",
+        "meaning": "drink",
+        "es": "drink"
+      },
+      {
+        "entry": "chäkik",
+        "meaning": "cook",
+        "es": "cook"
+      },
+      {
+        "entry": "ch'äkik",
+        "meaning": "cut",
+        "es": "cut"
+      },
+      {
+        "entry": "mächik",
+        "meaning": "grab",
+        "es": "grab"
+      },
+      {
+        "entry": "mänik",
+        "meaning": "buy",
+        "es": "buy"
+      },
+      {
+        "entry": "ts'onik",
+        "meaning": "shoot",
+        "es": "shoot"
+      },
+      {
+        "entry": "jantik",
+        "meaning": "eat",
+        "es": "eat"
+      },
+      {
+        "entry": "cha'antik",
+        "meaning": "look at",
+        "es": "look at"
+      }
     ]
   }
 }

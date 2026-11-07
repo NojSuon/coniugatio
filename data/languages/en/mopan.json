@@ -10,14 +10,29 @@
       "hint": "Type any verb and its meaning in English. If we don't detect it right, choose its type.",
       "label": "Verb",
       "es_placeholder": "go in",
-      "types_help": "Transitive verbs end in -ik (käxtik «look for it»); write their meaning with «it». Positionals end in -tal. Root verbs end in a vowel + l repeating the vowel (emel, okol); activity verbs (janal, meyaj, tz'iib') make their past with uch."
+      "types_help": "Transitive verbs end in -ik (käxtik «look for it»); write their meaning with «it». Positionals end in -tal. Root verbs end in a vowel + l repeating the vowel (emel, okol); activity verbs (janal, meyaj, ts'iib') make their past with uch."
     },
     "types": [
-      { "id": "", "label": "Detect it" },
-      { "id": "I", "label": "Root intransitive: emel → emeen" },
-      { "id": "A", "label": "Activity: janal → uchi injanal" },
-      { "id": "P", "label": "Positional: jittal → jitlajeen" },
-      { "id": "T", "label": "Transitive: ilik → inwilaj" }
+      {
+        "id": "",
+        "label": "Detect it"
+      },
+      {
+        "id": "I",
+        "label": "Root intransitive: emel → emeen"
+      },
+      {
+        "id": "A",
+        "label": "Activity: janal → uchi injanal"
+      },
+      {
+        "id": "P",
+        "label": "Positional: jittal → jitlajeen"
+      },
+      {
+        "id": "T",
+        "label": "Transitive: ilik → inwilaj"
+      }
     ]
   },
   "source": {
@@ -31,39 +46,102 @@
   "orthography": {
     "intro": "We use the alphabet of the Academia de Lenguas Mayas de Guatemala: 6 vowels, which can be short or long, and plain or glottalized consonants. The apostrophe (') marks a glottalized consonant (k', t') or a glottal stop, a short break in the voice.",
     "letters": [
-      { "meaning": "moon, month" },
-      { "meaning": "hog plum" },
-      { "meaning": "wife" },
-      { "meaning": "gopher" },
-      { "meaning": "red" },
-      { "meaning": "bird" },
-      { "meaning": "that one" },
-      { "meaning": "go down" },
-      { "meaning": "see it" },
-      { "meaning": "water, rain" },
-      { "meaning": "bee, honey" },
-      { "meaning": "day, sun" },
-      { "meaning": "earth, land" },
-      { "meaning": "cat" },
-      { "meaning": "house" },
-      { "meaning": "home" },
-      { "meaning": "be able" },
-      { "meaning": "clay jar" },
-      { "meaning": "thick rope" },
-      { "meaning": "afraid" },
-      { "meaning": "come" },
-      { "meaning": "word, language" },
-      { "meaning": "hair" },
-      { "meaning": "child" },
-      { "meaning": "drink" },
-      { "meaning": "man" },
-      { "meaning": "also" },
-      { "meaning": "rock (a hammock)" }
+      {
+        "meaning": "moon, month"
+      },
+      {
+        "meaning": "hog plum"
+      },
+      {
+        "meaning": "wife"
+      },
+      {
+        "meaning": "gopher"
+      },
+      {
+        "meaning": "red"
+      },
+      {
+        "meaning": "bird"
+      },
+      {
+        "meaning": "that one"
+      },
+      {
+        "meaning": "go down"
+      },
+      {
+        "meaning": "see it"
+      },
+      {
+        "meaning": "water, rain"
+      },
+      {
+        "meaning": "bee, honey"
+      },
+      {
+        "meaning": "day, sun"
+      },
+      {
+        "meaning": "earth, land"
+      },
+      {
+        "meaning": "cat"
+      },
+      {
+        "meaning": "house"
+      },
+      {
+        "meaning": "home"
+      },
+      {
+        "meaning": "be able"
+      },
+      {
+        "meaning": "clay jar"
+      },
+      {
+        "meaning": "thick rope"
+      },
+      {
+        "meaning": "afraid"
+      },
+      {
+        "meaning": "come"
+      },
+      {
+        "meaning": "word, language"
+      },
+      {
+        "meaning": "hair"
+      },
+      {
+        "meaning": "child"
+      },
+      {
+        "meaning": "drink"
+      },
+      {
+        "meaning": "man"
+      },
+      {
+        "meaning": "also"
+      },
+      {
+        "meaning": "rock (a hammock)"
+      }
     ],
-    "vowels": [{ "title": "Short vowels" }, { "title": "Long vowels" }],
+    "vowels": [
+      {
+        "title": "Short vowels"
+      },
+      {
+        "title": "Long vowels"
+      }
+    ],
     "notes": [
       "Vowel length changes the meaning: kok «gravel», kook «deaf»; mis «cat», miis «broom».",
-      "B' and d' are implosive: air flows in as you say them. The other glottalized consonants (ch', k', p', t', tz') push it out.",
+      "B' and d' are implosive: air flows in as you say them. The other glottalized consonants (ch', k', p', t', ts') push it out.",
       "R, f, g and d' appear almost only in loanwords and a few words.",
       "Pronunciation is shown in brackets with the International Phonetic Alphabet (IPA)."
     ]
@@ -73,103 +151,576 @@
     "blocks": [
       {
         "items": [
-          { "slot": "Aspect", "description": "walak habit, tan going on, yan has to, ka' «that…»." },
-          { "slot": "Set A", "description": "in-, a-, u-, ti- joined to the verb; before a vowel inw-, aw-, uy-, tiw-." },
-          { "slot": "Verb", "description": "The root." },
-          { "slot": "Status", "description": "-ik, -aj, -V' in transitive verbs." },
-          { "slot": "Plural", "description": "-e'ex you all, -oo' they." }
+          {
+            "slot": "Aspect",
+            "description": "walak habit, tan going on, yan has to, ka' «that…»."
+          },
+          {
+            "slot": "Set A",
+            "description": "in-, a-, u-, ti- joined to the verb; before a vowel inw-, aw-, uy-, tiw-."
+          },
+          {
+            "slot": "Verb",
+            "description": "The root."
+          },
+          {
+            "slot": "Status",
+            "description": "-ik, -aj, -V' in transitive verbs."
+          },
+          {
+            "slot": "Plural",
+            "description": "-e'ex you all, -oo' they."
+          }
         ]
       },
       {
         "title": "Two sets of pronouns",
         "description": "Set A goes joined before the verb: who does the action. Set B goes at the end: the object, and the subject of intransitive verbs in the past and the subjunctive.",
-        "columns": ["Person", "Set A", "Before a vowel", "Set B"],
-        "rows": [{ "label": "I" }, { "label": "you" }, { "label": "he, she" }, { "label": "we" }, { "label": "you all" }, { "label": "they" }],
+        "columns": [
+          "Person",
+          "Set A",
+          "Before a vowel",
+          "Set B"
+        ],
+        "rows": [
+          {
+            "label": "I"
+          },
+          {
+            "label": "you"
+          },
+          {
+            "label": "he, she"
+          },
+          {
+            "label": "we"
+          },
+          {
+            "label": "you all"
+          },
+          {
+            "label": "they"
+          }
+        ],
         "note": "«We» with -e'ex at the end includes the listener: tiwemele'ex «we all go down»."
       },
       {
         "title": "Three ways of saying «it happened»",
         "description": "In the completive, each type of intransitive verb marks the person in its own way.",
         "items": [
-          { "name": "Root verbs", "description": "Verbs in vowel + l repeating the vowel, and tal, b'eel: the root and set B.", "examples": [{ "meaning": "I went down" }, { "meaning": "he/she left" }] },
-          { "name": "Activity verbs", "description": "Verbs like janal, meyaj, tz'iib': uchi «it happened» + the verb with its pronoun.", "examples": [{ "meaning": "I ate" }] },
-          { "name": "Positionals", "description": "Verbs in -tal that say how the body ends up.", "examples": [{ "meaning": "I lay down" }] }
+          {
+            "name": "Root verbs",
+            "description": "Verbs in vowel + l repeating the vowel, and tal, b'eel: the root and set B.",
+            "examples": [
+              {
+                "meaning": "I went down"
+              },
+              {
+                "meaning": "he/she left"
+              }
+            ]
+          },
+          {
+            "name": "Activity verbs",
+            "description": "Verbs like janal, meyaj, ts'iib': uchi «it happened» + the verb with its pronoun.",
+            "examples": [
+              {
+                "meaning": "I ate"
+              }
+            ]
+          },
+          {
+            "name": "Positionals",
+            "description": "Verbs in -tal that say how the body ends up.",
+            "examples": [
+              {
+                "meaning": "I lay down"
+              }
+            ]
+          }
         ]
       },
       {
         "title": "Transitive verbs",
         "description": "The transitive completive takes no aspect prefix. In the subjunctive and the imperative, root verbs end in a vowel echoing the root's; -t- verbs, in -e.",
         "items": [
-          { "translation": "I am seeing it" },
-          { "translation": "I saw it" },
-          { "translation": "I eat it (usually)" },
-          { "translation": "that he/she eat it" },
-          { "translation": "eat it!" }
+          {
+            "translation": "I am seeing it"
+          },
+          {
+            "translation": "I saw it"
+          },
+          {
+            "translation": "I eat it (usually)"
+          },
+          {
+            "translation": "that he/she eat it"
+          },
+          {
+            "translation": "eat it!"
+          }
         ]
       },
       {
         "title": "Negation and orders",
         "description": "Ma' negates; with the ongoing aspect it becomes ma' t-. To forbid, ma' goes with the 2nd-person pronoun.",
         "items": [
-          { "translation": "he/she doesn't go" },
-          { "translation": "don't go!" },
-          { "translation": "go away!" },
-          { "translation": "go down!" }
+          {
+            "translation": "he/she doesn't go"
+          },
+          {
+            "translation": "don't go!"
+          },
+          {
+            "translation": "go away!"
+          },
+          {
+            "translation": "go down!"
+          }
         ]
       },
       {
         "title": "Example sentences",
         "items": [
-          { "translation": "Is there work?" },
-          { "translation": "I slept at night." },
-          { "translation": "Here comes my wife." },
-          { "translation": "The child woke up." }
+          {
+            "translation": "Is there work?"
+          },
+          {
+            "translation": "I slept at night."
+          },
+          {
+            "translation": "Here comes my wife."
+          },
+          {
+            "translation": "The child woke up."
+          }
+        ]
+      },
+      {
+        "title": "Every affix of the verb",
+        "description": "Every piece a verb can take: prefixes, suffixes, particles and root changes.",
+        "items": [
+          {
+            "kind": "aspect",
+            "meaning": "Habitual",
+            "translation": "I go down"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Durative",
+            "translation": "I am going down"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Completive: unmarked",
+            "translation": "I saw it"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "«Happen»: completive and subjunctive of activity verbs",
+            "translation": "I ate"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Subjunctive: «that…»",
+            "translation": "that you go down"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Obligative: have to",
+            "translation": "he/she has to go"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Ability: can",
+            "translation": "I can do it"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Habit, with set B",
+            "translation": "I usually eat it"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Inceptive: start, with set B",
+            "translation": "I started to go"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Assurative",
+            "translation": "he/she will be able to do it"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Immediate past; still"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Celeritive: quickly"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Necessitative"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Terminative: come to an end",
+            "translation": "the work is finished"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Negation; ma' t- with the incompletive",
+            "translation": "he/she doesn't go"
+          },
+          {
+            "kind": "particle",
+            "meaning": "«Never»"
+          },
+          {
+            "kind": "prefix (set A)",
+            "meaning": "Subject: I, you, he/she, we; before a vowel w or y",
+            "translation": "I am seeing it"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Set A plural: you all, they; ti- … -e'ex is «we» including the listener",
+            "translation": "we all go down"
+          },
+          {
+            "kind": "suffix (set B)",
+            "meaning": "Intransitive subject in the completive",
+            "translation": "I went down"
+          },
+          {
+            "kind": "suffix (set B)",
+            "meaning": "Subject in the dependent status; object",
+            "translation": "that I go down"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Transitive incompletive",
+            "translation": "I am seeing it"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Transitive completive",
+            "translation": "I saw it"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Transitive dependent: root, with -t-, causative",
+            "translation": "that he/she eat it"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Intransitive dependent",
+            "translation": "that you come"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Intransitive imperative",
+            "translation": "go down!"
+          },
+          {
+            "kind": "status suffix",
+            "meaning": "Transitive imperative",
+            "translation": "look at it!"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Positionals: completive, dependent, imperative",
+            "translation": "I lay down"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Completive of inchoatives (from adjectives)",
+            "translation": "it turned white"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Positionals and inchoatives, in the incompletive",
+            "translation": "he/she is lying down"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Derived transitive",
+            "translation": "eat it"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Causative",
+            "translation": "he/she is lowering it"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Causative of adjectives and positionals",
+            "translation": "he/she is whitening it"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Antipassive (a few verbs)",
+            "translation": "I slept"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Passive",
+            "translation": "it is being bent"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Agentless passive",
+            "translation": "it is being bent (by someone)"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Participle",
+            "translation": "submerged"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Passive participle",
+            "translation": "bought"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Positional participle"
+          }
         ]
       }
     ]
   },
   "conjugation": {
     "persons": [
-      { "id": "1", "label": "1st person" },
-      { "id": "2", "label": "2nd person" },
-      { "id": "3", "label": "3rd person" }
+      {
+        "id": "1",
+        "label": "1st person"
+      },
+      {
+        "id": "2",
+        "label": "2nd person"
+      },
+      {
+        "id": "3",
+        "label": "3rd person"
+      },
+      {
+        "id": "4",
+        "label": "1st person inclusive (with you)"
+      }
     ],
     "tenses": [
-      { "id": "habitual", "group": "Aspects", "name": "Habitual", "description": "What one does by habit (walak)." },
-      { "id": "durative", "group": "Aspects", "name": "Durative", "description": "What is happening (tan)." },
-      { "id": "completive", "group": "Past", "name": "Completive", "description": "What already happened: set B in root verbs, uch in activity verbs, -aj in transitive verbs." },
-      { "id": "obligative", "group": "Auxiliaries", "name": "Obligative", "description": "«I have to…» (yan).", "es": { "tense": "present", "aux": "have", "link": "to" } },
-      { "id": "abilitative", "group": "Auxiliaries", "name": "Ability", "description": "«I can…» (paatal).", "es": { "tense": "present", "aux": "can" } },
-      { "id": "subjunctive", "group": "Moods", "name": "Subjunctive", "description": "«That…»: what isn't real yet (ka' + dependent status).", "es": { "tense": "subjunctive", "before": "that" } },
-      { "id": "imperative", "group": "Moods", "name": "Imperative", "description": "Orders: -en in intransitive verbs." },
-      { "id": "prohibitive", "group": "Moods", "name": "Prohibitive", "description": "«Don't do it!»: ma' a…" },
-      { "id": "negative", "group": "Negative", "name": "Present", "description": "ma' t- + pronoun + verb." }
+      {
+        "id": "habitual",
+        "group": "Aspects",
+        "name": "Habitual",
+        "description": "What one does by habit (walak)."
+      },
+      {
+        "id": "durative",
+        "group": "Aspects",
+        "name": "Durative",
+        "description": "What is happening (tan)."
+      },
+      {
+        "id": "completive",
+        "group": "Past",
+        "name": "Completive",
+        "description": "What already happened: set B in root verbs, uch in activity verbs, -aj in transitive verbs."
+      },
+      {
+        "id": "obligative",
+        "group": "Auxiliaries",
+        "name": "Obligative",
+        "description": "«I have to…» (yan).",
+        "es": {
+          "tense": "present",
+          "aux": "have",
+          "link": "to"
+        }
+      },
+      {
+        "id": "abilitative",
+        "group": "Auxiliaries",
+        "name": "Ability",
+        "description": "«I can…» (paatal).",
+        "es": {
+          "tense": "present",
+          "aux": "can"
+        }
+      },
+      {
+        "id": "subjunctive",
+        "group": "Moods",
+        "name": "Subjunctive",
+        "description": "«That…»: what isn't real yet (ka' + dependent status).",
+        "es": {
+          "tense": "subjunctive",
+          "before": "that"
+        }
+      },
+      {
+        "id": "imperative",
+        "group": "Moods",
+        "name": "Imperative",
+        "description": "Orders: -en in intransitive verbs."
+      },
+      {
+        "id": "prohibitive",
+        "group": "Moods",
+        "name": "Prohibitive",
+        "description": "«Don't do it!»: ma' a…"
+      },
+      {
+        "id": "negative",
+        "group": "Negative",
+        "name": "Present",
+        "description": "ma' t- + pronoun + verb."
+      },
+      {
+        "id": "customary",
+        "group": "Auxiliaries",
+        "name": "Habit",
+        "description": "«I usually…» (suk).",
+        "es": {
+          "tense": "present",
+          "adverb": "usually"
+        }
+      },
+      {
+        "id": "inceptive",
+        "group": "Auxiliaries",
+        "name": "Inceptive",
+        "description": "«I started to…» (kajal).",
+        "es": {
+          "tense": "preterite",
+          "aux": "start",
+          "link": "to"
+        }
+      }
     ],
     "lexicon": [
-      { "entry": "emel", "meaning": "go down", "es": "go down" },
-      { "entry": "okol", "meaning": "go in", "es": "go in" },
-      { "entry": "jok'ol", "meaning": "go out", "es": "go out" },
-      { "entry": "k'ochol", "meaning": "arrive", "es": "arrive" },
-      { "entry": "tal", "meaning": "come", "es": "come" },
-      { "entry": "b'eel", "meaning": "go", "es": "go", "note": "Irregular: past b'ini, subjunctive xi'ik, imperative xen" },
-      { "entry": "wäyäl", "meaning": "sleep", "es": "sleep", "note": "Past wäyneen, imperative wäynen" },
-      { "entry": "uk'ul", "meaning": "drink", "es": "drink" },
-      { "entry": "janal", "meaning": "eat", "es": "eat" },
-      { "entry": "meyaj", "meaning": "work", "es": "work" },
-      { "entry": "tz'iib'", "meaning": "write", "es": "write" },
-      { "entry": "ok'ol", "meaning": "cry", "es": "cry" },
-      { "entry": "alka'", "meaning": "run", "es": "run" },
-      { "entry": "ichkil", "meaning": "bathe", "es": "bathe" },
-      { "entry": "noytal", "meaning": "sit down", "es": "sit down" },
-      { "entry": "wa'tal", "meaning": "stand up", "es": "stand up" },
-      { "entry": "jittal", "meaning": "lie down", "es": "lie down" },
-      { "entry": "ilik", "meaning": "see it", "es": "see it" },
-      { "entry": "b'etik", "meaning": "do it, make it", "es": "do it" },
-      { "entry": "jantik", "meaning": "eat it", "es": "eat it" },
-      { "entry": "käxtik", "meaning": "look for it", "es": "look for it" },
-      { "entry": "u'yik", "meaning": "hear it", "es": "hear it" },
-      { "entry": "eeltik", "meaning": "know it", "es": "know it" },
-      { "entry": "cha'antik", "meaning": "look at it", "es": "look at it" }
+      {
+        "entry": "emel",
+        "meaning": "go down",
+        "es": "go down"
+      },
+      {
+        "entry": "okol",
+        "meaning": "go in",
+        "es": "go in"
+      },
+      {
+        "entry": "jok'ol",
+        "meaning": "go out",
+        "es": "go out"
+      },
+      {
+        "entry": "k'ochol",
+        "meaning": "arrive",
+        "es": "arrive"
+      },
+      {
+        "entry": "tal",
+        "meaning": "come",
+        "es": "come"
+      },
+      {
+        "entry": "b'eel",
+        "meaning": "go",
+        "es": "go",
+        "note": "Irregular: past b'ini, subjunctive xi'ik, imperative xen"
+      },
+      {
+        "entry": "wäyäl",
+        "meaning": "sleep",
+        "es": "sleep",
+        "note": "Past wäyneen, imperative wäynen"
+      },
+      {
+        "entry": "uk'ul",
+        "meaning": "drink",
+        "es": "drink"
+      },
+      {
+        "entry": "janal",
+        "meaning": "eat",
+        "es": "eat"
+      },
+      {
+        "entry": "meyaj",
+        "meaning": "work",
+        "es": "work"
+      },
+      {
+        "entry": "ts'iib'",
+        "meaning": "write",
+        "es": "write"
+      },
+      {
+        "entry": "ok'ol",
+        "meaning": "cry",
+        "es": "cry"
+      },
+      {
+        "entry": "alka'",
+        "meaning": "run",
+        "es": "run"
+      },
+      {
+        "entry": "ichkil",
+        "meaning": "bathe",
+        "es": "bathe"
+      },
+      {
+        "entry": "noytal",
+        "meaning": "sit down",
+        "es": "sit down"
+      },
+      {
+        "entry": "wa'tal",
+        "meaning": "stand up",
+        "es": "stand up"
+      },
+      {
+        "entry": "jittal",
+        "meaning": "lie down",
+        "es": "lie down"
+      },
+      {
+        "entry": "ilik",
+        "meaning": "see it",
+        "es": "see it"
+      },
+      {
+        "entry": "b'etik",
+        "meaning": "do it, make it",
+        "es": "do it"
+      },
+      {
+        "entry": "jantik",
+        "meaning": "eat it",
+        "es": "eat it"
+      },
+      {
+        "entry": "käxtik",
+        "meaning": "look for it",
+        "es": "look for it"
+      },
+      {
+        "entry": "u'yik",
+        "meaning": "hear it",
+        "es": "hear it"
+      },
+      {
+        "entry": "eeltik",
+        "meaning": "know it",
+        "es": "know it"
+      },
+      {
+        "entry": "cha'antik",
+        "meaning": "look at it",
+        "es": "look at it"
+      }
     ]
   }
 }

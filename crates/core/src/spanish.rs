@@ -21,6 +21,11 @@ pub enum Tense {
     /// estaba durmiendo
     #[serde(rename = "past_progressive")]
     PastProgressive,
+    /// había dormido
+    Pluperfect,
+    /// (que) yo durmiera
+    #[serde(rename = "past_subjunctive")]
+    PastSubjunctive,
     /// he visto, has dormido…
     Perfect,
     /// (que) yo duerma
@@ -74,6 +79,9 @@ pub struct Spec {
     /// Said as a question: ¿él canta?
     #[serde(default)]
     pub question: bool,
+    /// Words after the verb: "allá" (yo canto allá).
+    #[serde(default)]
+    pub after: Option<String>,
 }
 
 fn yes() -> bool {
@@ -92,6 +100,7 @@ impl Es {
                 pronoun: true,
                 negative: false,
                 question: false,
+                after: None,
             },
             Es::Spec(s) => s.clone(),
         }
@@ -110,6 +119,7 @@ const ESTABA: [&str; 6] = [
     "estaban",
     "estaban",
 ];
+const HABIA: [&str; 6] = ["había", "habías", "había", "habíamos", "habían", "habían"];
 const HABER: [&str; 6] = ["he", "has", "ha", "hemos", "han", "han"];
 
 type Six = [&'static str; 6];
@@ -505,7 +515,21 @@ fn finite(inf: &str, tense: Tense, p: usize, negative: bool) -> String {
         Tense::Progressive => format!("{} {}", ESTAR[p], gerund(&plain, &irr)),
         Tense::PastProgressive => format!("{} {}", ESTABA[p], gerund(&plain, &irr)),
         Tense::Perfect => format!("{} {}", HABER[p], participle(&plain, &irr)),
+        Tense::Pluperfect => format!("{} {}", HABIA[p], participle(&plain, &irr)),
         Tense::Subjunctive => subjunctive(&plain, &irr, p),
+        // From the 3rd person plural of the preterite: durmieron → durmiera.
+        Tense::PastSubjunctive => {
+            let ellos = irr
+                .preterite
+                .map(|f| f[5].to_string())
+                .unwrap_or_else(|| regular(&plain, Tense::Preterite, 5));
+            let stem = ellos.strip_suffix("ron").unwrap_or(&ellos);
+            if p == 3 {
+                format!("{}ramos", accent_last_vowel(stem))
+            } else {
+                format!("{stem}{}", ["ra", "ras", "ra", "", "ran", "ran"][p])
+            }
+        }
         // "tú": ¡duerme! / ¡no duermas!; "ustedes": ¡duerman! / ¡no duerman!
         Tense::Imperative if p == 1 && !negative => irr
             .imperative
@@ -520,6 +544,30 @@ fn finite(inf: &str, tense: Tense, p: usize, negative: bool) -> String {
         // Resolved to imperative or subjunctive in `render`.
         Tense::Optative => subjunctive(&plain, &irr, p),
     }
+}
+
+/// durmie → durmié (for durmiéramos).
+fn accent_last_vowel(s: &str) -> String {
+    let chars: Vec<char> = s.chars().collect();
+    let Some(i) = chars.iter().rposition(|c| "aeiou".contains(*c)) else {
+        return s.to_string();
+    };
+    chars
+        .iter()
+        .enumerate()
+        .map(|(j, &c)| {
+            if j != i {
+                return c;
+            }
+            match c {
+                'a' => 'á',
+                'e' => 'é',
+                'i' => 'í',
+                'o' => 'ó',
+                _ => 'ú',
+            }
+        })
+        .collect()
 }
 
 /// A meaning split into its parts: "reírse" → reflexive, "hacerlo" →
@@ -663,10 +711,19 @@ pub fn render(meaning: &str, es: &Es, person: usize, negative: bool) -> Option<S
         Some(aux) => {
             // tengo que dormir, acabo de reírme, voy a hacerlo
             parts.push(finite(aux, spec.tense, person, negative));
-            if let Some(l) = &spec.link {
-                parts.push(l.clone());
+            match spec.link.as_deref() {
+                // "-ndo": the meaning as a gerund (voy cantando).
+                Some("-ndo") => {
+                    let irr = irregular(&m.inf);
+                    let g = gerund(&m.inf.replace('í', "i"), &irr);
+                    parts.push(format!("{g}{}", clitics.concat()));
+                }
+                Some(l) => {
+                    parts.push(l.to_string());
+                    parts.push(format!("{}{}", m.inf, clitics.concat()));
+                }
+                None => parts.push(format!("{}{}", m.inf, clitics.concat())),
             }
-            parts.push(format!("{}{}", m.inf, clitics.concat()));
         }
         // ¡hazlo!, ¡alégrate!: affirmative orders take the pronouns after.
         None if imperative && !negative && !clitics.is_empty() => {
@@ -681,6 +738,7 @@ pub fn render(meaning: &str, es: &Es, person: usize, negative: bool) -> Option<S
         }
     }
     parts.extend(m.rest);
+    parts.extend(spec.after.clone());
     let text = parts.join(" ");
     Some(if imperative {
         format!("¡{text}!")
@@ -738,6 +796,33 @@ mod tests {
         assert_eq!(c("moler", Tense::Present, 2), "él/ella muele");
         assert_eq!(c("jugar", Tense::Present, 0), "yo juego");
         assert_eq!(c("nacer", Tense::Present, 0), "yo nazco");
+        assert_eq!(c("cantar", Tense::PastSubjunctive, 0), "yo cantara");
+        assert_eq!(c("hacer", Tense::Pluperfect, 3), "nosotros habíamos hecho");
+        assert_eq!(
+            c("dormir", Tense::PastSubjunctive, 3),
+            "nosotros durmiéramos"
+        );
+        assert_eq!(c("ir", Tense::PastSubjunctive, 5), "ellos/ellas fueran");
+        assert_eq!(
+            render(
+                "cantar",
+                &spec(r#"{"tense":"present","aux":"ir","link":"-ndo"}"#),
+                0,
+                false
+            )
+            .unwrap(),
+            "yo voy cantando"
+        );
+        assert_eq!(
+            render(
+                "cantar",
+                &spec(r#"{"tense":"present","after":"allá"}"#),
+                0,
+                false
+            )
+            .unwrap(),
+            "yo canto allá"
+        );
         assert_eq!(c("despertar", Tense::Imperative, 1), "¡despierta!");
         assert_eq!(c("volver", Tense::Perfect, 0), "yo he vuelto");
         assert_eq!(c("sentarse", Tense::Present, 0), "yo me siento");

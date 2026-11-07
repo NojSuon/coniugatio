@@ -13,7 +13,14 @@
     "label": "Verbo",
     "hint": "Escribe el verbo como en el diccionario: wenel «dormir», janal «comer», kultal «sentarse», xokik «leerlo». Los tonos (á) son parte de la palabra.",
     "placeholder": "wenel",
-    "keyboard": ["'", "á", "é", "í", "ó", "ú"],
+    "keyboard": [
+      "'",
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
     "own": {
       "hint": "Escribe cualquier verbo y su significado en español. Si no lo detectamos bien, elige su tipo.",
       "label": "Verbo",
@@ -22,11 +29,26 @@
       "types_help": "Los transitivos terminan en -ik (kaxtik «buscarlo»); escribe su significado con «lo». Los posicionales terminan en -tal. Los de raíz terminan en vocal + l repitiendo la vocal (wenel, okol); los de actividad (janal, meyaj, báaxal) forman su pasado con -naj-."
     },
     "types": [
-      { "id": "", "label": "Detectar solo" },
-      { "id": "I", "label": "Intransitivo de raíz: wenel → jweenen" },
-      { "id": "A", "label": "De actividad: janal → janalnajen" },
-      { "id": "P", "label": "Posicional: kultal → kullajen" },
-      { "id": "T", "label": "Transitivo: xokik → tin xokaj" }
+      {
+        "id": "",
+        "label": "Detectar solo"
+      },
+      {
+        "id": "I",
+        "label": "Intransitivo de raíz: wenel → jweenen"
+      },
+      {
+        "id": "A",
+        "label": "De actividad: janal → janalnajen"
+      },
+      {
+        "id": "P",
+        "label": "Posicional: kultal → kullajen"
+      },
+      {
+        "id": "T",
+        "label": "Transitivo: xokik → tin xokaj"
+      }
     ]
   },
   "source": {
@@ -41,37 +63,258 @@
   "orthography": {
     "intro": "Usamos las Normas de escritura para la lengua maya del INALI: 5 vocales, que pueden ser cortas, largas, con tono alto o con saltillo, y 20 consonantes. El apóstrofo (') es el saltillo o una consonante glotalizada (k', t'), que se pronuncia con un golpe de la garganta.",
     "letters": [
-      { "letter": "'", "ipa": "ʔ", "word": "ja'", "meaning": "agua" },
-      { "letter": "a", "ipa": "a", "word": "ak'ab", "meaning": "noche" },
-      { "letter": "b", "ipa": "ɓ", "word": "báalam", "meaning": "jaguar" },
-      { "letter": "ch", "ipa": "tʃ", "word": "chak", "meaning": "rojo" },
-      { "letter": "ch'", "ipa": "tʃʼ", "word": "ch'íich'", "meaning": "pájaro" },
-      { "letter": "e", "ipa": "e", "word": "ek'", "meaning": "estrella" },
-      { "letter": "i", "ipa": "i", "word": "ich", "meaning": "ojo" },
-      { "letter": "j", "ipa": "h", "word": "jool", "meaning": "agujero, puerta" },
-      { "letter": "k", "ipa": "k", "word": "kaab", "meaning": "abeja, miel" },
-      { "letter": "k'", "ipa": "kʼ", "word": "k'iin", "meaning": "sol, día" },
-      { "letter": "l", "ipa": "l", "word": "lu'um", "meaning": "tierra" },
-      { "letter": "m", "ipa": "m", "word": "máak", "meaning": "persona" },
-      { "letter": "n", "ipa": "n", "word": "naj", "meaning": "casa" },
-      { "letter": "o", "ipa": "o", "word": "ool", "meaning": "ánimo, corazón" },
-      { "letter": "p", "ipa": "p", "word": "peek'", "meaning": "perro" },
-      { "letter": "p'", "ipa": "pʼ", "word": "p'aak", "meaning": "tomate" },
-      { "letter": "s", "ipa": "s", "word": "sak", "meaning": "blanco" },
-      { "letter": "t", "ipa": "t", "word": "tuunich", "meaning": "piedra" },
-      { "letter": "t'", "ipa": "tʼ", "word": "t'aan", "meaning": "palabra, lengua" },
-      { "letter": "ts", "ipa": "ts", "word": "tsíimin", "meaning": "caballo" },
-      { "letter": "ts'", "ipa": "tsʼ", "word": "ts'íib", "meaning": "escritura" },
-      { "letter": "u", "ipa": "u", "word": "uj", "meaning": "luna" },
-      { "letter": "w", "ipa": "w", "word": "wíinik", "meaning": "hombre, persona" },
-      { "letter": "x", "ipa": "ʃ", "word": "xíiw", "meaning": "hierba" },
-      { "letter": "y", "ipa": "j", "word": "yuum", "meaning": "señor, padre" }
+      {
+        "letter": "'",
+        "ipa": "ʔ",
+        "word": "ja'",
+        "meaning": "agua"
+      },
+      {
+        "letter": "a",
+        "ipa": "a",
+        "word": "ak'ab",
+        "meaning": "noche"
+      },
+      {
+        "letter": "b",
+        "ipa": "ɓ",
+        "word": "báalam",
+        "meaning": "jaguar"
+      },
+      {
+        "letter": "ch",
+        "ipa": "tʃ",
+        "word": "chak",
+        "meaning": "rojo"
+      },
+      {
+        "letter": "ch'",
+        "ipa": "tʃʼ",
+        "word": "ch'íich'",
+        "meaning": "pájaro"
+      },
+      {
+        "letter": "e",
+        "ipa": "e",
+        "word": "ek'",
+        "meaning": "estrella"
+      },
+      {
+        "letter": "i",
+        "ipa": "i",
+        "word": "ich",
+        "meaning": "ojo"
+      },
+      {
+        "letter": "j",
+        "ipa": "h",
+        "word": "jool",
+        "meaning": "agujero, puerta"
+      },
+      {
+        "letter": "k",
+        "ipa": "k",
+        "word": "kaab",
+        "meaning": "abeja, miel"
+      },
+      {
+        "letter": "k'",
+        "ipa": "kʼ",
+        "word": "k'iin",
+        "meaning": "sol, día"
+      },
+      {
+        "letter": "l",
+        "ipa": "l",
+        "word": "lu'um",
+        "meaning": "tierra"
+      },
+      {
+        "letter": "m",
+        "ipa": "m",
+        "word": "máak",
+        "meaning": "persona"
+      },
+      {
+        "letter": "n",
+        "ipa": "n",
+        "word": "naj",
+        "meaning": "casa"
+      },
+      {
+        "letter": "o",
+        "ipa": "o",
+        "word": "ool",
+        "meaning": "ánimo, corazón"
+      },
+      {
+        "letter": "p",
+        "ipa": "p",
+        "word": "peek'",
+        "meaning": "perro"
+      },
+      {
+        "letter": "p'",
+        "ipa": "pʼ",
+        "word": "p'aak",
+        "meaning": "tomate"
+      },
+      {
+        "letter": "s",
+        "ipa": "s",
+        "word": "sak",
+        "meaning": "blanco"
+      },
+      {
+        "letter": "t",
+        "ipa": "t",
+        "word": "tuunich",
+        "meaning": "piedra"
+      },
+      {
+        "letter": "t'",
+        "ipa": "tʼ",
+        "word": "t'aan",
+        "meaning": "palabra, lengua"
+      },
+      {
+        "letter": "ts",
+        "ipa": "ts",
+        "word": "tsíimin",
+        "meaning": "caballo"
+      },
+      {
+        "letter": "ts'",
+        "ipa": "tsʼ",
+        "word": "ts'íib",
+        "meaning": "escritura"
+      },
+      {
+        "letter": "u",
+        "ipa": "u",
+        "word": "uj",
+        "meaning": "luna"
+      },
+      {
+        "letter": "w",
+        "ipa": "w",
+        "word": "wíinik",
+        "meaning": "hombre, persona"
+      },
+      {
+        "letter": "x",
+        "ipa": "ʃ",
+        "word": "xíiw",
+        "meaning": "hierba"
+      },
+      {
+        "letter": "y",
+        "ipa": "j",
+        "word": "yuum",
+        "meaning": "señor, padre"
+      }
     ],
     "vowels": [
-      { "title": "Vocales cortas", "items": [{ "letter": "a", "ipa": "a" }, { "letter": "e", "ipa": "e" }, { "letter": "i", "ipa": "i" }, { "letter": "o", "ipa": "o" }, { "letter": "u", "ipa": "u" }] },
-      { "title": "Largas, tono bajo", "items": [{ "letter": "aa", "ipa": "aː" }, { "letter": "ee", "ipa": "eː" }, { "letter": "ii", "ipa": "iː" }, { "letter": "oo", "ipa": "oː" }, { "letter": "uu", "ipa": "uː" }] },
-      { "title": "Largas, tono alto", "items": [{ "letter": "áa", "ipa": "áː" }, { "letter": "ée", "ipa": "éː" }, { "letter": "íi", "ipa": "íː" }, { "letter": "óo", "ipa": "óː" }, { "letter": "úu", "ipa": "úː" }] },
-      { "title": "Rearticuladas", "items": [{ "letter": "a'a", "ipa": "aʔa" }, { "letter": "e'e", "ipa": "eʔe" }, { "letter": "i'i", "ipa": "iʔi" }, { "letter": "o'o", "ipa": "oʔo" }, { "letter": "u'u", "ipa": "uʔu" }] }
+      {
+        "title": "Vocales cortas",
+        "items": [
+          {
+            "letter": "a",
+            "ipa": "a"
+          },
+          {
+            "letter": "e",
+            "ipa": "e"
+          },
+          {
+            "letter": "i",
+            "ipa": "i"
+          },
+          {
+            "letter": "o",
+            "ipa": "o"
+          },
+          {
+            "letter": "u",
+            "ipa": "u"
+          }
+        ]
+      },
+      {
+        "title": "Largas, tono bajo",
+        "items": [
+          {
+            "letter": "aa",
+            "ipa": "aː"
+          },
+          {
+            "letter": "ee",
+            "ipa": "eː"
+          },
+          {
+            "letter": "ii",
+            "ipa": "iː"
+          },
+          {
+            "letter": "oo",
+            "ipa": "oː"
+          },
+          {
+            "letter": "uu",
+            "ipa": "uː"
+          }
+        ]
+      },
+      {
+        "title": "Largas, tono alto",
+        "items": [
+          {
+            "letter": "áa",
+            "ipa": "áː"
+          },
+          {
+            "letter": "ée",
+            "ipa": "éː"
+          },
+          {
+            "letter": "íi",
+            "ipa": "íː"
+          },
+          {
+            "letter": "óo",
+            "ipa": "óː"
+          },
+          {
+            "letter": "úu",
+            "ipa": "úː"
+          }
+        ]
+      },
+      {
+        "title": "Rearticuladas",
+        "items": [
+          {
+            "letter": "a'a",
+            "ipa": "aʔa"
+          },
+          {
+            "letter": "e'e",
+            "ipa": "eʔe"
+          },
+          {
+            "letter": "i'i",
+            "ipa": "iʔi"
+          },
+          {
+            "letter": "o'o",
+            "ipa": "oʔo"
+          },
+          {
+            "letter": "u'u",
+            "ipa": "uʔu"
+          }
+        ]
+      }
     ],
     "notes": [
       "El tono alto solo se marca en las vocales largas, con un acento sobre la primera: áak «tortuga», aak «verde, fresco».",
@@ -86,25 +329,92 @@
       {
         "type": "formula",
         "items": [
-          { "slot": "Aspecto", "description": "k- costumbre, táan en curso, ts'o'ok ya, yaan tiene que…", "example": "k-" },
-          { "slot": "Pronombre (juego A)", "description": "Quién lo hace: in, a, u, k.", "example": "in" },
-          { "slot": "Verbo", "description": "El verbo; con vocal inicial suma w- o y-: in w-il-ik.", "example": "xok" },
-          { "slot": "Estatus", "description": "-ik, -aj, -ej en los transitivos.", "example": "-ik" },
-          { "slot": "Plural", "description": "-e'ex ustedes, -o'ob ellos.", "example": "-o'ob" }
+          {
+            "slot": "Aspecto",
+            "description": "k- costumbre, táan en curso, ts'o'ok ya, yaan tiene que…",
+            "example": "k-"
+          },
+          {
+            "slot": "Pronombre (juego A)",
+            "description": "Quién lo hace: in, a, u, k.",
+            "example": "in"
+          },
+          {
+            "slot": "Verbo",
+            "description": "El verbo; con vocal inicial suma w- o y-: in w-il-ik.",
+            "example": "xok"
+          },
+          {
+            "slot": "Estatus",
+            "description": "-ik, -aj, -ej en los transitivos.",
+            "example": "-ik"
+          },
+          {
+            "slot": "Plural",
+            "description": "-e'ex ustedes, -o'ob ellos.",
+            "example": "-o'ob"
+          }
         ]
       },
       {
         "type": "table",
         "title": "Dos juegos de pronombres",
         "description": "El juego A va antes del verbo y marca a quien hace la acción. El juego B va al final: marca al objeto, y al sujeto en el completivo intransitivo y el futuro con bíin.",
-        "columns": ["Persona", "Juego A", "Ante vocal", "Juego B"],
+        "columns": [
+          "Persona",
+          "Juego A",
+          "Ante vocal",
+          "Juego B"
+        ],
         "rows": [
-          { "label": "yo", "cells": ["in", "in w-", "-en"] },
-          { "label": "tú", "cells": ["a", "a w-", "-ech"] },
-          { "label": "él, ella", "cells": ["u", "u y-", "-ij / —"] },
-          { "label": "nosotros", "cells": ["k", "k", "-o'on"] },
-          { "label": "ustedes", "cells": ["a … -e'ex", "a w- … -e'ex", "-e'ex"] },
-          { "label": "ellos, ellas", "cells": ["u … -o'ob", "u y- … -o'ob", "-o'ob"] }
+          {
+            "label": "yo",
+            "cells": [
+              "in",
+              "in w-",
+              "-en"
+            ]
+          },
+          {
+            "label": "tú",
+            "cells": [
+              "a",
+              "a w-",
+              "-ech"
+            ]
+          },
+          {
+            "label": "él, ella",
+            "cells": [
+              "u",
+              "u y-",
+              "-ij / —"
+            ]
+          },
+          {
+            "label": "nosotros",
+            "cells": [
+              "k",
+              "k",
+              "-o'on"
+            ]
+          },
+          {
+            "label": "ustedes",
+            "cells": [
+              "a … -e'ex",
+              "a w- … -e'ex",
+              "-e'ex"
+            ]
+          },
+          {
+            "label": "ellos, ellas",
+            "cells": [
+              "u … -o'ob",
+              "u y- … -o'ob",
+              "-o'ob"
+            ]
+          }
         ],
         "note": "El aspecto k- (costumbre) se une al pronombre: k + in → kin, k + a → ka, k + u → ku."
       },
@@ -113,9 +423,52 @@
         "title": "Tres maneras de decir «ya pasó»",
         "description": "En el completivo, los intransitivos usan el juego B y su forma depende del tipo de verbo.",
         "items": [
-          { "tag": "j- … -en", "name": "De raíz", "description": "Verbos en vocal + l que repite la vocal de la raíz, y los de movimiento. La vocal corta se alarga.", "examples": [{ "from": "wenel", "to": "jweenen", "meaning": "dormí" }, { "from": "bin", "to": "jbinen", "meaning": "me fui" }] },
-          { "tag": "-naj-", "name": "De actividad", "description": "Verbos como janal, meyaj, báaxal.", "examples": [{ "from": "janal", "to": "janalnajen", "meaning": "comí" }, { "from": "meyaj", "to": "meyajnajech", "meaning": "trabajaste" }] },
-          { "tag": "-laj-", "name": "Posicionales", "description": "Verbos en -tal que dicen cómo queda el cuerpo.", "examples": [{ "from": "kultal", "to": "kullajen", "meaning": "me senté" }] }
+          {
+            "tag": "j- … -en",
+            "name": "De raíz",
+            "description": "Verbos en vocal + l que repite la vocal de la raíz, y los de movimiento. La vocal corta se alarga.",
+            "examples": [
+              {
+                "from": "wenel",
+                "to": "jweenen",
+                "meaning": "dormí"
+              },
+              {
+                "from": "bin",
+                "to": "jbinen",
+                "meaning": "me fui"
+              }
+            ]
+          },
+          {
+            "tag": "-naj-",
+            "name": "De actividad",
+            "description": "Verbos como janal, meyaj, báaxal.",
+            "examples": [
+              {
+                "from": "janal",
+                "to": "janalnajen",
+                "meaning": "comí"
+              },
+              {
+                "from": "meyaj",
+                "to": "meyajnajech",
+                "meaning": "trabajaste"
+              }
+            ]
+          },
+          {
+            "tag": "-laj-",
+            "name": "Posicionales",
+            "description": "Verbos en -tal que dicen cómo queda el cuerpo.",
+            "examples": [
+              {
+                "from": "kultal",
+                "to": "kullajen",
+                "meaning": "me senté"
+              }
+            ]
+          }
         ]
       },
       {
@@ -123,11 +476,26 @@
         "title": "Los transitivos: -ik, -aj, -ej",
         "description": "El completivo transitivo lleva t- unido al pronombre. El futuro con bíin lleva -ej, que solo se escribe en singular y al final de la frase.",
         "items": [
-          { "text": "kin xokik", "translation": "lo leo" },
-          { "text": "tin xokaj", "translation": "lo leí" },
-          { "text": "bíin in xokej", "translation": "algún día lo leeré" },
-          { "text": "ts'o'ok u xokik", "translation": "ya lo leyó" },
-          { "text": "xokej", "translation": "¡léelo!" }
+          {
+            "text": "kin xokik",
+            "translation": "lo leo"
+          },
+          {
+            "text": "tin xokaj",
+            "translation": "lo leí"
+          },
+          {
+            "text": "bíin in xokej",
+            "translation": "algún día lo leeré"
+          },
+          {
+            "text": "ts'o'ok u xokik",
+            "translation": "ya lo leyó"
+          },
+          {
+            "text": "xokej",
+            "translation": "¡léelo!"
+          }
         ]
       },
       {
@@ -135,12 +503,30 @@
         "title": "Auxiliares",
         "description": "Palabras que van antes del pronombre y agregan un sentido.",
         "items": [
-          { "text": "taak in janal", "translation": "quiero comer" },
-          { "text": "k'a'abet in janal", "translation": "necesito comer" },
-          { "text": "yaan in janal", "translation": "tengo que comer" },
-          { "text": "suuk in janal", "translation": "acostumbro comer" },
-          { "text": "jo'op' in janal", "translation": "empecé a comer" },
-          { "text": "táant in janale'", "translation": "acabo de comer" }
+          {
+            "text": "taak in janal",
+            "translation": "quiero comer"
+          },
+          {
+            "text": "k'a'abet in janal",
+            "translation": "necesito comer"
+          },
+          {
+            "text": "yaan in janal",
+            "translation": "tengo que comer"
+          },
+          {
+            "text": "suuk in janal",
+            "translation": "acostumbro comer"
+          },
+          {
+            "text": "jo'op' in janal",
+            "translation": "empecé a comer"
+          },
+          {
+            "text": "táant in janale'",
+            "translation": "acabo de comer"
+          }
         ]
       },
       {
@@ -148,22 +534,297 @@
         "title": "Órdenes y negación",
         "description": "El imperativo intransitivo termina en -en o -nen; el transitivo, en -ej. Ma' niega y la frase suele cerrar con -i'.",
         "items": [
-          { "text": "xooknen", "translation": "¡estudia!" },
-          { "text": "xeen", "translation": "¡vete!" },
-          { "text": "kóoten", "translation": "¡ven!" },
-          { "text": "ma' a wenel", "translation": "¡no duermas!" },
-          { "text": "ma' tin wojéeltiki'", "translation": "no lo sé" }
+          {
+            "text": "xooknen",
+            "translation": "¡estudia!"
+          },
+          {
+            "text": "xeen",
+            "translation": "¡vete!"
+          },
+          {
+            "text": "kóoten",
+            "translation": "¡ven!"
+          },
+          {
+            "text": "ma' a wenel",
+            "translation": "¡no duermas!"
+          },
+          {
+            "text": "ma' tin wojéeltiki'",
+            "translation": "no lo sé"
+          }
         ]
       },
       {
         "type": "pairs",
         "title": "Frases de ejemplo",
         "items": [
-          { "text": "Bix a beel?", "translation": "¿Cómo estás?" },
-          { "text": "Ma'alob, kux teech?", "translation": "Bien, ¿y tú?" },
-          { "text": "Jach Dios bo'otik.", "translation": "Muchas gracias." },
-          { "text": "Ba'ax a k'aaba'?", "translation": "¿Cómo te llamas?" },
-          { "text": "Táan in kanik maayat'aan.", "translation": "Estoy aprendiendo maya." }
+          {
+            "text": "Bix a beel?",
+            "translation": "¿Cómo estás?"
+          },
+          {
+            "text": "Ma'alob, kux teech?",
+            "translation": "Bien, ¿y tú?"
+          },
+          {
+            "text": "Jach Dios bo'otik.",
+            "translation": "Muchas gracias."
+          },
+          {
+            "text": "Ba'ax a k'aaba'?",
+            "translation": "¿Cómo te llamas?"
+          },
+          {
+            "text": "Táan in kanik maayat'aan.",
+            "translation": "Estoy aprendiendo maya."
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Todos los afijos del verbo",
+        "description": "Cada pieza que un verbo puede llevar: prefijos, sufijos, partículas y cambios de raíz.",
+        "items": [
+          {
+            "affix": "k-",
+            "kind": "aspecto",
+            "meaning": "Habitual; se une al pronombre: kin, ka, ku",
+            "example": "kin wenel",
+            "translation": "duermo"
+          },
+          {
+            "affix": "táan",
+            "kind": "aspecto",
+            "meaning": "Durativo",
+            "example": "táan in wenel",
+            "translation": "estoy durmiendo"
+          },
+          {
+            "affix": "ts'o'ok",
+            "kind": "aspecto",
+            "meaning": "Terminativo: ya",
+            "example": "ts'o'ok in wenel",
+            "translation": "ya dormí"
+          },
+          {
+            "affix": "táant … -e'",
+            "kind": "aspecto",
+            "meaning": "Perfecto inmediato",
+            "example": "táant in wenele'",
+            "translation": "acabo de dormir"
+          },
+          {
+            "affix": "t-",
+            "kind": "aspecto",
+            "meaning": "Completivo transitivo; se une al pronombre: tin, ta, tu",
+            "example": "tin xokaj",
+            "translation": "lo leí"
+          },
+          {
+            "affix": "j-",
+            "kind": "aspecto",
+            "meaning": "Completivo de los verbos de raíz y de movimiento",
+            "example": "jweenen",
+            "translation": "dormí"
+          },
+          {
+            "affix": "-naj-",
+            "kind": "sufijo de aspecto",
+            "meaning": "Completivo de los verbos de actividad",
+            "example": "janalnajen",
+            "translation": "comí"
+          },
+          {
+            "affix": "-laj-",
+            "kind": "sufijo de aspecto",
+            "meaning": "Completivo de los posicionales",
+            "example": "kullajen",
+            "translation": "me senté"
+          },
+          {
+            "affix": "-chaj-",
+            "kind": "sufijo de aspecto",
+            "meaning": "Completivo de los adjetivos verbalizados",
+            "example": "náachchajen",
+            "translation": "me alejé"
+          },
+          {
+            "affix": "bíin",
+            "kind": "aspecto",
+            "meaning": "Futuro indefinido",
+            "example": "bíin weneken",
+            "translation": "algún día dormiré"
+          },
+          {
+            "affix": "-Vk, -nak, -lak",
+            "kind": "sufijo",
+            "meaning": "Subjuntivo tras bíin, úuch y sáam, según el tipo de verbo",
+            "example": "bíin janalnaken",
+            "translation": "algún día comeré"
+          },
+          {
+            "affix": "úuch, sáam",
+            "kind": "auxiliar",
+            "meaning": "Pasado remoto, pasado reciente",
+            "example": "úuch weneken",
+            "translation": "hace mucho que dormí"
+          },
+          {
+            "affix": "je'el … -e'",
+            "kind": "aspecto",
+            "meaning": "Asegurativo",
+            "example": "je'el in wenele'",
+            "translation": "sí dormiré"
+          },
+          {
+            "affix": "yaan",
+            "kind": "aspecto",
+            "meaning": "Obligatorio: tener que",
+            "example": "yaan in wenel",
+            "translation": "tengo que dormir"
+          },
+          {
+            "affix": "k-i-n (teen)",
+            "kind": "aspecto",
+            "meaning": "Definitivo: «soy quien lo hará»",
+            "example": "teen kin janal",
+            "translation": "yo soy quien comerá"
+          },
+          {
+            "affix": "n-i-ka'aj",
+            "kind": "aspecto",
+            "meaning": "Inmediato: «voy a…»",
+            "example": "nika'aj janal",
+            "translation": "voy a comer"
+          },
+          {
+            "affix": "taak, k'a'abet, suuk",
+            "kind": "auxiliar",
+            "meaning": "Deseo, necesidad, costumbre",
+            "example": "taak in wenel",
+            "translation": "quiero dormir"
+          },
+          {
+            "affix": "jo'op', káaj, léek",
+            "kind": "auxiliar",
+            "meaning": "Incipiente: empezar",
+            "example": "jo'op' in wenel",
+            "translation": "empecé a dormir"
+          },
+          {
+            "affix": "in, a, u, k",
+            "kind": "prefijo (juego A)",
+            "meaning": "Sujeto: yo, tú, él/ella, nosotros",
+            "example": "táan in wenel",
+            "translation": "estoy durmiendo"
+          },
+          {
+            "affix": "in w-, a w-, u y-",
+            "kind": "prefijo (juego A)",
+            "meaning": "El juego A ante vocal",
+            "example": "kin wilik",
+            "translation": "lo veo"
+          },
+          {
+            "affix": "-e'ex, -o'ob",
+            "kind": "sufijo",
+            "meaning": "Plural del juego A: ustedes, ellos",
+            "example": "ka wenele'ex",
+            "translation": "duermen (ustedes)"
+          },
+          {
+            "affix": "-en, -ech, -ij / Ø, -o'on, -e'ex, -o'ob",
+            "kind": "sufijo (juego B)",
+            "meaning": "Objeto; sujeto del completivo intransitivo y del futuro con bíin",
+            "example": "jweenech",
+            "translation": "dormiste"
+          },
+          {
+            "affix": "-ik",
+            "kind": "sufijo de estatus",
+            "meaning": "Transitivo incompletivo",
+            "example": "kin xokik",
+            "translation": "lo leo"
+          },
+          {
+            "affix": "-aj",
+            "kind": "sufijo de estatus",
+            "meaning": "Transitivo completivo",
+            "example": "tin xokaj",
+            "translation": "lo leí"
+          },
+          {
+            "affix": "-ej",
+            "kind": "sufijo de estatus",
+            "meaning": "Transitivo subjuntivo; se escribe solo en singular y al final",
+            "example": "bíin in xokej",
+            "translation": "algún día lo leeré"
+          },
+          {
+            "affix": "-t-",
+            "kind": "sufijo",
+            "meaning": "Transitivizador",
+            "example": "jaantik",
+            "translation": "comerlo"
+          },
+          {
+            "affix": "-s-",
+            "kind": "sufijo",
+            "meaning": "Causativo",
+            "example": "jóok'sik",
+            "translation": "sacarlo"
+          },
+          {
+            "affix": "-tal",
+            "kind": "sufijo",
+            "meaning": "Posicionales y adjetivos verbalizados (intransitivo)",
+            "example": "kultal",
+            "translation": "sentarse"
+          },
+          {
+            "affix": "-kun-t-, -kíin-t-",
+            "kind": "sufijo",
+            "meaning": "Causativo de posicionales y adjetivos",
+            "example": "chakkuntik",
+            "translation": "enrojecerlo"
+          },
+          {
+            "affix": "-ankil",
+            "kind": "sufijo",
+            "meaning": "Verbos cíclicos: lo que pasa cada cierto tiempo",
+            "example": "loolankil",
+            "translation": "florecer"
+          },
+          {
+            "affix": "-en, -nen",
+            "kind": "sufijo",
+            "meaning": "Imperativo intransitivo",
+            "example": "xooknen",
+            "translation": "¡estudia!"
+          },
+          {
+            "affix": "-ej · -e'ex",
+            "kind": "sufijo",
+            "meaning": "Imperativo transitivo · su plural",
+            "example": "xokej",
+            "translation": "¡léelo!"
+          },
+          {
+            "affix": "ma' … -i'",
+            "kind": "partícula",
+            "meaning": "Negación",
+            "example": "ma' tin weneli'",
+            "translation": "no duermo"
+          },
+          {
+            "affix": "-e'",
+            "kind": "sufijo",
+            "meaning": "Topicalizador: cierra táant y je'el",
+            "example": "je'el in wenele'",
+            "translation": "sí dormiré"
+          }
         ]
       }
     ]
@@ -171,69 +832,452 @@
   "conjugation": {
     "engine": "yucatec",
     "persons": [
-      { "id": "1", "label": "1.ª persona", "es": 0 },
-      { "id": "2", "label": "2.ª persona", "es": 1 },
-      { "id": "3", "label": "3.ª persona", "es": 2 }
+      {
+        "id": "1",
+        "label": "1.ª persona",
+        "es": 0
+      },
+      {
+        "id": "2",
+        "label": "2.ª persona",
+        "es": 1
+      },
+      {
+        "id": "3",
+        "label": "3.ª persona",
+        "es": 2
+      }
     ],
     "tenses": [
-      { "id": "habitual", "group": "Aspectos", "name": "Habitual", "description": "Lo que se hace de costumbre (k-).", "form": "habitual", "es": "present" },
-      { "id": "durative", "group": "Aspectos", "name": "Durativo", "description": "Lo que está pasando ahora (táan).", "form": "durative", "es": "progressive" },
-      { "id": "terminative", "group": "Aspectos", "name": "Terminativo", "description": "Lo que ya se hizo (ts'o'ok).", "form": "terminative", "es": { "tense": "preterite", "adverb": "ya" } },
-      { "id": "recent", "group": "Aspectos", "name": "Perfecto inmediato", "description": "Lo que se acaba de hacer (táant … -e').", "form": "recent", "es": { "tense": "present", "aux": "acabar", "link": "de" } },
-      { "id": "completive", "group": "Pasado", "name": "Completivo", "description": "Lo que pasó y terminó: j- / -naj- / -laj- en los intransitivos, t- … -aj en los transitivos.", "form": "completive", "es": "preterite" },
-      { "id": "earlier", "group": "Pasado", "name": "Pasado reciente", "description": "Hace rato, el mismo día (sáam).", "form": "earlier", "es": { "tense": "preterite", "before": "hace rato que" } },
-      { "id": "remote", "group": "Pasado", "name": "Pasado remoto", "description": "Hace mucho tiempo, para narrar (úuch).", "form": "remote", "es": { "tense": "preterite", "before": "hace mucho tiempo que" } },
-      { "id": "assurative", "group": "Futuro", "name": "Asegurativo", "description": "Lo que de seguro va a pasar (je'el … -e').", "form": "assurative", "es": { "tense": "future", "adverb": "sí" } },
-      { "id": "compulsive", "group": "Futuro", "name": "Obligatorio", "description": "Lo que tiene que pasar (yaan).", "form": "compulsive", "es": { "tense": "present", "aux": "tener", "link": "que" } },
-      { "id": "future", "group": "Futuro", "name": "Futuro indefinido", "description": "Algún día, sin certeza (bíin).", "form": "future", "es": { "tense": "future", "before": "algún día" } },
-      { "id": "desiderative", "group": "Auxiliares", "name": "Deseo", "description": "«Quiero…» (taak).", "form": "desiderative", "es": { "tense": "present", "aux": "querer" } },
-      { "id": "necessity", "group": "Auxiliares", "name": "Necesidad", "description": "«Necesito…» (k'a'abet).", "form": "necessity", "es": { "tense": "present", "aux": "necesitar" } },
-      { "id": "custom", "group": "Auxiliares", "name": "Costumbre", "description": "«Acostumbro…» (suuk).", "form": "custom", "es": { "tense": "present", "aux": "soler" } },
-      { "id": "incipient", "group": "Auxiliares", "name": "Incipiente", "description": "«Empecé a…» (jo'op').", "form": "incipient", "es": { "tense": "preterite", "aux": "empezar", "link": "a" } },
-      { "id": "imperative", "group": "Modos", "name": "Imperativo", "description": "Órdenes: -en / -nen, -ej en los transitivos.", "form": "imperative", "es": "imperative" },
-      { "id": "prohibitive", "group": "Modos", "name": "Prohibitivo", "description": "«¡No lo hagas!»: ma' a…", "form": "prohibitive", "es": { "tense": "imperative", "negative": true } },
-      { "id": "neg-habitual", "group": "Negativo", "name": "Habitual", "description": "ma' t-… -i'.", "form": "habitual", "negative": true, "es": "present" },
-      { "id": "neg-durative", "group": "Negativo", "name": "Durativo", "description": "ma' táan … -i'.", "form": "durative", "negative": true, "es": "progressive" },
-      { "id": "neg-completive", "group": "Negativo", "name": "Completivo", "description": "ma' + completivo + -i'.", "form": "completive", "negative": true, "es": "preterite" }
+      {
+        "id": "habitual",
+        "group": "Aspectos",
+        "name": "Habitual",
+        "description": "Lo que se hace de costumbre (k-).",
+        "form": "habitual",
+        "es": "present"
+      },
+      {
+        "id": "durative",
+        "group": "Aspectos",
+        "name": "Durativo",
+        "description": "Lo que está pasando ahora (táan).",
+        "form": "durative",
+        "es": "progressive"
+      },
+      {
+        "id": "terminative",
+        "group": "Aspectos",
+        "name": "Terminativo",
+        "description": "Lo que ya se hizo (ts'o'ok).",
+        "form": "terminative",
+        "es": {
+          "tense": "preterite",
+          "adverb": "ya"
+        }
+      },
+      {
+        "id": "recent",
+        "group": "Aspectos",
+        "name": "Perfecto inmediato",
+        "description": "Lo que se acaba de hacer (táant … -e').",
+        "form": "recent",
+        "es": {
+          "tense": "present",
+          "aux": "acabar",
+          "link": "de"
+        }
+      },
+      {
+        "id": "completive",
+        "group": "Pasado",
+        "name": "Completivo",
+        "description": "Lo que pasó y terminó: j- / -naj- / -laj- en los intransitivos, t- … -aj en los transitivos.",
+        "form": "completive",
+        "es": "preterite"
+      },
+      {
+        "id": "earlier",
+        "group": "Pasado",
+        "name": "Pasado reciente",
+        "description": "Hace rato, el mismo día (sáam).",
+        "form": "earlier",
+        "es": {
+          "tense": "preterite",
+          "before": "hace rato que"
+        }
+      },
+      {
+        "id": "remote",
+        "group": "Pasado",
+        "name": "Pasado remoto",
+        "description": "Hace mucho tiempo, para narrar (úuch).",
+        "form": "remote",
+        "es": {
+          "tense": "preterite",
+          "before": "hace mucho tiempo que"
+        }
+      },
+      {
+        "id": "assurative",
+        "group": "Futuro",
+        "name": "Asegurativo",
+        "description": "Lo que de seguro va a pasar (je'el … -e').",
+        "form": "assurative",
+        "es": {
+          "tense": "future",
+          "adverb": "sí"
+        }
+      },
+      {
+        "id": "compulsive",
+        "group": "Futuro",
+        "name": "Obligatorio",
+        "description": "Lo que tiene que pasar (yaan).",
+        "form": "compulsive",
+        "es": {
+          "tense": "present",
+          "aux": "tener",
+          "link": "que"
+        }
+      },
+      {
+        "id": "future",
+        "group": "Futuro",
+        "name": "Futuro indefinido",
+        "description": "Algún día, sin certeza (bíin).",
+        "form": "future",
+        "es": {
+          "tense": "future",
+          "before": "algún día"
+        }
+      },
+      {
+        "id": "desiderative",
+        "group": "Auxiliares",
+        "name": "Deseo",
+        "description": "«Quiero…» (taak).",
+        "form": "desiderative",
+        "es": {
+          "tense": "present",
+          "aux": "querer"
+        }
+      },
+      {
+        "id": "necessity",
+        "group": "Auxiliares",
+        "name": "Necesidad",
+        "description": "«Necesito…» (k'a'abet).",
+        "form": "necessity",
+        "es": {
+          "tense": "present",
+          "aux": "necesitar"
+        }
+      },
+      {
+        "id": "custom",
+        "group": "Auxiliares",
+        "name": "Costumbre",
+        "description": "«Acostumbro…» (suuk).",
+        "form": "custom",
+        "es": {
+          "tense": "present",
+          "aux": "soler"
+        }
+      },
+      {
+        "id": "incipient",
+        "group": "Auxiliares",
+        "name": "Incipiente",
+        "description": "«Empecé a…» (jo'op').",
+        "form": "incipient",
+        "es": {
+          "tense": "preterite",
+          "aux": "empezar",
+          "link": "a"
+        }
+      },
+      {
+        "id": "imperative",
+        "group": "Modos",
+        "name": "Imperativo",
+        "description": "Órdenes: -en / -nen, -ej en los transitivos.",
+        "form": "imperative",
+        "es": "imperative"
+      },
+      {
+        "id": "prohibitive",
+        "group": "Modos",
+        "name": "Prohibitivo",
+        "description": "«¡No lo hagas!»: ma' a…",
+        "form": "prohibitive",
+        "es": {
+          "tense": "imperative",
+          "negative": true
+        }
+      },
+      {
+        "id": "neg-habitual",
+        "group": "Negativo",
+        "name": "Habitual",
+        "description": "ma' t-… -i'.",
+        "form": "habitual",
+        "negative": true,
+        "es": "present"
+      },
+      {
+        "id": "neg-durative",
+        "group": "Negativo",
+        "name": "Durativo",
+        "description": "ma' táan … -i'.",
+        "form": "durative",
+        "negative": true,
+        "es": "progressive"
+      },
+      {
+        "id": "neg-completive",
+        "group": "Negativo",
+        "name": "Completivo",
+        "description": "ma' + completivo + -i'.",
+        "form": "completive",
+        "negative": true,
+        "es": "preterite"
+      }
     ],
     "lexicon": [
-      { "entry": "wenel", "class": "I", "meaning": "dormir", "es": "dormir" },
-      { "entry": "okol", "class": "I", "meaning": "entrar", "es": "entrar" },
-      { "entry": "jóok'ol", "class": "I", "meaning": "salir", "es": "salir" },
-      { "entry": "k'uchul", "class": "I", "completive": "k'uch", "meaning": "llegar", "es": "llegar" },
-      { "entry": "na'akal", "class": "I", "meaning": "subir", "es": "subir" },
-      { "entry": "éemel", "class": "I", "meaning": "bajar", "es": "bajar" },
-      { "entry": "lúubul", "class": "I", "meaning": "caer", "es": "caer" },
-      { "entry": "kíimil", "class": "I", "meaning": "morir", "es": "morir" },
-      { "entry": "síijil", "class": "I", "meaning": "nacer", "es": "nacer" },
-      { "entry": "ajal", "class": "I", "meaning": "despertar", "es": "despertar" },
-      { "entry": "bin", "class": "I", "completive": "bin", "future": "xi'", "imperative": "xeen", "meaning": "ir", "es": "ir", "note": "Irregular: futuro bíin xi'iken, imperativo xeen" },
-      { "entry": "taal", "class": "I", "completive": "taal", "future": "tal", "imperative": "kóoten", "meaning": "venir", "es": "venir", "note": "Futuro bíin talaken, imperativo kóoten" },
-      { "entry": "u'ul", "class": "I", "completive": "u'ul", "future": "u'ul", "meaning": "volver, regresar", "es": "volver" },
-      { "entry": "máan", "class": "I", "meaning": "pasar", "es": "pasar" },
-      { "entry": "janal", "class": "A", "meaning": "comer", "es": "comer" },
-      { "entry": "meyaj", "class": "A", "meaning": "trabajar", "es": "trabajar" },
-      { "entry": "báaxal", "class": "A", "meaning": "jugar", "es": "jugar" },
-      { "entry": "xook", "class": "A", "meaning": "estudiar, leer", "es": "estudiar" },
-      { "entry": "ts'íib", "class": "A", "meaning": "escribir", "es": "escribir" },
-      { "entry": "áalkab", "class": "A", "meaning": "correr", "es": "correr" },
-      { "entry": "ichkíil", "class": "A", "meaning": "bañarse", "es": "bañarse" },
-      { "entry": "koonol", "class": "A", "meaning": "vender", "es": "vender" },
-      { "entry": "kultal", "class": "P", "meaning": "sentarse", "es": "sentarse" },
-      { "entry": "wa'altal", "class": "P", "meaning": "pararse", "es": "pararse" },
-      { "entry": "chiltal", "class": "P", "meaning": "acostarse", "es": "acostarse" },
-      { "entry": "ilik", "class": "T", "meaning": "verlo", "es": "verlo" },
-      { "entry": "xokik", "class": "T", "meaning": "leerlo", "es": "leerlo" },
-      { "entry": "beetik", "class": "T", "meaning": "hacerlo", "es": "hacerlo" },
-      { "entry": "a'alik", "class": "T", "meaning": "decirlo", "es": "decirlo" },
-      { "entry": "uk'ik", "class": "T", "meaning": "beberlo", "es": "beberlo" },
-      { "entry": "jaantik", "class": "T", "meaning": "comerlo", "es": "comerlo" },
-      { "entry": "kaxtik", "class": "T", "meaning": "buscarlo", "es": "buscarlo" },
-      { "entry": "ojéeltik", "class": "T", "meaning": "saberlo", "es": "saberlo" },
-      { "entry": "kanik", "class": "T", "meaning": "aprenderlo", "es": "aprenderlo" },
-      { "entry": "bisik", "class": "T", "meaning": "llevarlo", "es": "llevarlo" },
-      { "entry": "taasik", "class": "T", "meaning": "traerlo", "es": "traerlo" },
-      { "entry": "u'uyik", "class": "T", "meaning": "oírlo", "es": "oírlo" }
+      {
+        "entry": "wenel",
+        "class": "I",
+        "meaning": "dormir",
+        "es": "dormir"
+      },
+      {
+        "entry": "okol",
+        "class": "I",
+        "meaning": "entrar",
+        "es": "entrar"
+      },
+      {
+        "entry": "jóok'ol",
+        "class": "I",
+        "meaning": "salir",
+        "es": "salir"
+      },
+      {
+        "entry": "k'uchul",
+        "class": "I",
+        "completive": "k'uch",
+        "meaning": "llegar",
+        "es": "llegar"
+      },
+      {
+        "entry": "na'akal",
+        "class": "I",
+        "meaning": "subir",
+        "es": "subir"
+      },
+      {
+        "entry": "éemel",
+        "class": "I",
+        "meaning": "bajar",
+        "es": "bajar"
+      },
+      {
+        "entry": "lúubul",
+        "class": "I",
+        "meaning": "caer",
+        "es": "caer"
+      },
+      {
+        "entry": "kíimil",
+        "class": "I",
+        "meaning": "morir",
+        "es": "morir"
+      },
+      {
+        "entry": "síijil",
+        "class": "I",
+        "meaning": "nacer",
+        "es": "nacer"
+      },
+      {
+        "entry": "ajal",
+        "class": "I",
+        "meaning": "despertar",
+        "es": "despertar"
+      },
+      {
+        "entry": "bin",
+        "class": "I",
+        "completive": "bin",
+        "future": "xi'",
+        "imperative": "xeen",
+        "meaning": "ir",
+        "es": "ir",
+        "note": "Irregular: futuro bíin xi'iken, imperativo xeen"
+      },
+      {
+        "entry": "taal",
+        "class": "I",
+        "completive": "taal",
+        "future": "tal",
+        "imperative": "kóoten",
+        "meaning": "venir",
+        "es": "venir",
+        "note": "Futuro bíin talaken, imperativo kóoten"
+      },
+      {
+        "entry": "u'ul",
+        "class": "I",
+        "completive": "u'ul",
+        "future": "u'ul",
+        "meaning": "volver, regresar",
+        "es": "volver"
+      },
+      {
+        "entry": "máan",
+        "class": "I",
+        "meaning": "pasar",
+        "es": "pasar"
+      },
+      {
+        "entry": "janal",
+        "class": "A",
+        "meaning": "comer",
+        "es": "comer"
+      },
+      {
+        "entry": "meyaj",
+        "class": "A",
+        "meaning": "trabajar",
+        "es": "trabajar"
+      },
+      {
+        "entry": "báaxal",
+        "class": "A",
+        "meaning": "jugar",
+        "es": "jugar"
+      },
+      {
+        "entry": "xook",
+        "class": "A",
+        "meaning": "estudiar, leer",
+        "es": "estudiar"
+      },
+      {
+        "entry": "ts'íib",
+        "class": "A",
+        "meaning": "escribir",
+        "es": "escribir"
+      },
+      {
+        "entry": "áalkab",
+        "class": "A",
+        "meaning": "correr",
+        "es": "correr"
+      },
+      {
+        "entry": "ichkíil",
+        "class": "A",
+        "meaning": "bañarse",
+        "es": "bañarse"
+      },
+      {
+        "entry": "koonol",
+        "class": "A",
+        "meaning": "vender",
+        "es": "vender"
+      },
+      {
+        "entry": "kultal",
+        "class": "P",
+        "meaning": "sentarse",
+        "es": "sentarse"
+      },
+      {
+        "entry": "wa'altal",
+        "class": "P",
+        "meaning": "pararse",
+        "es": "pararse"
+      },
+      {
+        "entry": "chiltal",
+        "class": "P",
+        "meaning": "acostarse",
+        "es": "acostarse"
+      },
+      {
+        "entry": "ilik",
+        "class": "T",
+        "meaning": "verlo",
+        "es": "verlo"
+      },
+      {
+        "entry": "xokik",
+        "class": "T",
+        "meaning": "leerlo",
+        "es": "leerlo"
+      },
+      {
+        "entry": "beetik",
+        "class": "T",
+        "meaning": "hacerlo",
+        "es": "hacerlo"
+      },
+      {
+        "entry": "a'alik",
+        "class": "T",
+        "meaning": "decirlo",
+        "es": "decirlo"
+      },
+      {
+        "entry": "uk'ik",
+        "class": "T",
+        "meaning": "beberlo",
+        "es": "beberlo"
+      },
+      {
+        "entry": "jaantik",
+        "class": "T",
+        "meaning": "comerlo",
+        "es": "comerlo"
+      },
+      {
+        "entry": "kaxtik",
+        "class": "T",
+        "meaning": "buscarlo",
+        "es": "buscarlo"
+      },
+      {
+        "entry": "ojéeltik",
+        "class": "T",
+        "meaning": "saberlo",
+        "es": "saberlo"
+      },
+      {
+        "entry": "kanik",
+        "class": "T",
+        "meaning": "aprenderlo",
+        "es": "aprenderlo"
+      },
+      {
+        "entry": "bisik",
+        "class": "T",
+        "meaning": "llevarlo",
+        "es": "llevarlo"
+      },
+      {
+        "entry": "taasik",
+        "class": "T",
+        "meaning": "traerlo",
+        "es": "traerlo"
+      },
+      {
+        "entry": "u'uyik",
+        "class": "T",
+        "meaning": "oírlo",
+        "es": "oírlo"
+      }
     ]
   }
 }
