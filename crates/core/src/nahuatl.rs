@@ -310,8 +310,8 @@ fn build(verb: &Verb, form: Form, person: usize, plural: bool) -> Option<String>
         Form::Conditional => (verb.short(), "skia", "skiaj"),
         Form::Optative => (verb.short(), "", "kan"),
         Form::Admonitive => (verb.admonitive(), "", "tin"),
-        Form::Going => (verb.root.clone(), "tiu", "tiuij"),
-        Form::Went => (verb.root.clone(), "to", "toj"),
+        Form::Going => (verb.root.clone(), "tiu", "tin"),
+        Form::Went => (verb.root.clone(), "to", "ton"),
     };
 
     // Subject: the optative uses xi- for "tú" and "ustedes" (§5.5.2).
@@ -632,6 +632,8 @@ mod tests {
             "kichiuani"
         );
         assert_eq!(build(&chiua, Form::Going, 0, false).unwrap(), "nikchiuatiu");
+        assert_eq!(build(&chiua, Form::Going, 0, true).unwrap(), "tikchiuatin");
+        assert_eq!(build(&chiua, Form::Went, 0, true).unwrap(), "otikchiuaton");
         assert_eq!(build(&chiua, Form::Went, 0, false).unwrap(), "onikchiuato");
         let ixmati = verb("ixmati", Object::Ki, None, false);
         assert_eq!(
@@ -737,10 +739,18 @@ mod tests {
         let present = |verb: &str| {
             let r = c.conjugate(verb).unwrap();
             let rows = &r.tables[0].rows;
-            (rows[0].singular.clone(), rows[2].singular.clone(), rows[0].es_singular.clone())
+            (
+                rows[0].singular.clone(),
+                rows[2].singular.clone(),
+                rows[0].es_singular.clone(),
+            )
         };
         for e in &c.lexicon {
-            assert!(!e.entry.starts_with('k') || e.object == Object::None, "{}", e.entry);
+            assert!(
+                !e.entry.starts_with('k') || e.object == Object::None,
+                "{}",
+                e.entry
+            );
             // The citation form is what the engine gives for the 3rd person.
             assert_eq!(present(&e.entry).1, e.entry, "{}", e.entry);
         }

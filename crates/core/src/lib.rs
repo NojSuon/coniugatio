@@ -7,6 +7,7 @@ pub mod conjugate;
 pub mod itza;
 pub mod nahuatl;
 pub mod otomi;
+pub mod purhepecha;
 pub mod spanish;
 
 use serde::{Deserialize, Serialize};
@@ -22,6 +23,8 @@ pub enum Engine {
     /// Subject + object prefixes, tense suffixes, four past classes.
     /// See `nahuatl`.
     Nahuatl(nahuatl::Conjugation),
+    /// Root + aspect + tense + mode + person suffixes. See `purhepecha`.
+    Purhepecha(purhepecha::Conjugation),
 }
 
 impl Engine {
@@ -39,6 +42,7 @@ impl Engine {
             Engine::Otomi(c) => c.conjugate_with(verb, opts),
             Engine::Itza(c) => c.conjugate_with(verb, opts),
             Engine::Nahuatl(c) => c.conjugate_with(verb, opts),
+            Engine::Purhepecha(c) => c.conjugate_with(verb, opts),
         }
     }
 
@@ -48,6 +52,7 @@ impl Engine {
             Engine::Otomi(c) => c.lexicon.iter().map(|e| e.root.clone()).collect(),
             Engine::Itza(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Nahuatl(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Purhepecha(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
     }
 }
