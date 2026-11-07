@@ -46,4 +46,9 @@ Every push to `main` builds the site and deploys it to GitHub Pages (`.github/wo
 
 ## Sources
 
-Otomí (hñähñu): Hernández Cruz, Victoria Torquemada y Sinclair Crawford, *Diccionario del hñähñu (otomí) del Valle del Mezquital*, Instituto Lingüístico de Verano, 2010. All text in an indigenous language should be checked with speakers before publishing.
+- Otomí (hñähñu): Hernández Cruz, Victoria Torquemada y Sinclair Crawford, *Diccionario del hñähñu (otomí) del Valle del Mezquital*, Instituto Lingüístico de Verano, 2010.
+- Maya itza': Charles Andrew Hofling con Fernando Tesucún, *Itzaj Maya Grammar*, University of Utah Press, 2000; *Jiilt'an Maya Itza: Vocabulario Itza'*, Academia de Lenguas Mayas de Guatemala, 2001.
+
+All text in an indigenous language should be checked with speakers before publishing.
+
+Each language's `conjugation` block names its `engine` (`otomi` or `itza`), which selects the rules in `crates/core`.

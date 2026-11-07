@@ -4,10 +4,38 @@
 //! and to WebAssembly (runs in the visitor's browser).
 
 pub mod conjugate;
+pub mod itza;
 pub mod otomi;
 pub mod spanish;
 
 use serde::{Deserialize, Serialize};
+
+/// A language's `conjugation` block. The `engine` field picks the rules.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(tag = "engine", rename_all = "lowercase")]
+pub enum Engine {
+    /// Proclitic + root (hñähñu). See `conjugate` and `otomi`.
+    Otomi(conjugate::Conjugation),
+    /// Aspect + Set A/B person markers + status suffixes. See `itza`.
+    Itza(itza::Conjugation),
+}
+
+impl Engine {
+    pub fn conjugate(&self, verb: &str) -> Result<conjugate::Result, conjugate::Error> {
+        match self {
+            Engine::Otomi(c) => c.conjugate(verb),
+            Engine::Itza(c) => c.conjugate(verb),
+        }
+    }
+
+    /// Dictionary forms of the verbs in the lexicon (used to check the data).
+    pub fn lexicon_words(&self) -> Vec<String> {
+        match self {
+            Engine::Otomi(c) => c.lexicon.iter().map(|e| e.root.clone()).collect(),
+            Engine::Itza(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+        }
+    }
+}
 
 /// The fields every `data/languages/*.json` file must have. Used on the home
 /// page cards.
