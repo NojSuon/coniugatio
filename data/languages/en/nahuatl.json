@@ -13,15 +13,30 @@
       "types_help": "If it takes ki-, write the meaning with «it»: «do it». The past-tense class is worked out from the shape of the root."
     },
     "types": [
-      { "id": "none", "label": "No object: kochi, tekiti" },
-      { "id": "ki", "label": "With ki- «it»: kichiua" },
-      { "id": "tla", "label": "With tla- «something»: tlakua" },
-      { "id": "te", "label": "With te- «someone»: temachtia" },
-      { "id": "mo", "label": "Reflexive mo-: mopaktia" }
+      {
+        "id": "none",
+        "label": "No object: kochi, tekiti"
+      },
+      {
+        "id": "ki",
+        "label": "With ki- «it»: kichiua"
+      },
+      {
+        "id": "tla",
+        "label": "With tla- «something»: tlakua"
+      },
+      {
+        "id": "te",
+        "label": "With te- «someone»: temachtia"
+      },
+      {
+        "id": "mo",
+        "label": "Reflexive mo-: mopaktia"
+      }
     ]
   },
   "source": {
-    "full": "Thelma D. Sullivan, Compendio de la gramática náhuatl (UNAM, Instituto de Investigaciones Históricas); David Charles Wright Carr, Lectura del náhuatl, revised and expanded edition (INALI, 2016). Spelling: Tlâjkuilolpamitl (SEP), following Sun's Nahuatl course."
+    "full": "Thelma D. Sullivan, Compendio de la gramática náhuatl (UNAM, Instituto de Investigaciones Históricas); David Charles Wright Carr, Lectura del náhuatl, revised and expanded edition (INALI, 2016). Spelling: Tlâjkuilolpamitl, revised (SEP)."
   },
   "about": [
     "Nahuatl is a Uto-Aztecan language spoken by about one and a half million people in Mexico. Central Nahuatl (NHN) is spoken in parts of Milpa Alta, Tláhuac and Texcoco, in the Valley of Mexico.",
@@ -31,26 +46,69 @@
   "orthography": {
     "intro": "We use Tlâjkuilolpamitl, the SEP spelling: 4 vowels and 14 consonants. J is the glottal stop, u sounds like w, and the circumflex (â, ê, î, ô) marks a vowel that absorbed another when two words joined.",
     "letters": [
-      { "meaning": "water" },
-      { "meaning": "dog" },
-      { "meaning": "skunk" },
-      { "meaning": "cotton" },
-      { "meaning": "word" },
-      { "meaning": "house" },
-      { "meaning": "day, sun" },
-      { "meaning": "fish" },
-      { "meaning": "prickly pear" },
-      { "meaning": "man" },
-      { "meaning": "butterfly" },
-      { "meaning": "woman" },
-      { "meaning": "rabbit" },
-      { "meaning": "person" },
-      { "meaning": "hair" },
-      { "meaning": "cow" },
-      { "meaning": "flower" },
-      { "meaning": "night" }
+      {
+        "meaning": "water"
+      },
+      {
+        "meaning": "dog"
+      },
+      {
+        "meaning": "skunk"
+      },
+      {
+        "meaning": "cotton"
+      },
+      {
+        "meaning": "word"
+      },
+      {
+        "meaning": "house"
+      },
+      {
+        "meaning": "day, sun"
+      },
+      {
+        "meaning": "fish"
+      },
+      {
+        "meaning": "prickly pear"
+      },
+      {
+        "meaning": "man"
+      },
+      {
+        "meaning": "butterfly"
+      },
+      {
+        "meaning": "woman"
+      },
+      {
+        "meaning": "rabbit"
+      },
+      {
+        "meaning": "person"
+      },
+      {
+        "meaning": "hair"
+      },
+      {
+        "meaning": "cow"
+      },
+      {
+        "meaning": "flower"
+      },
+      {
+        "meaning": "night"
+      }
     ],
-    "vowels": [{ "title": "Vowels" }, { "title": "Merged vowels" }],
+    "vowels": [
+      {
+        "title": "Vowels"
+      },
+      {
+        "title": "Merged vowels"
+      }
+    ],
     "notes": [
       "The circumflex doesn't change the sound: it shows that this vowel absorbed another when the word was formed. No + iknitl → nôkniu «my brother»; tla + ijtoa → tlâjtoa «speak».",
       "U is always a consonant, like w: uakax, siuatl. Ku is read [kʷ]: kualli «good».",
@@ -63,105 +121,559 @@
     "blocks": [
       {
         "items": [
-          { "slot": "Past", "description": "o- marks the preterite." },
-          { "slot": "Subject", "description": "ni- I, ti- you or we, an- you all." },
-          { "slot": "Object", "description": "ki- «it», tla- «something», te- «someone», mo- reflexive." },
-          { "slot": "Verb", "description": "The root." },
-          { "slot": "Tense and plural", "description": "-s future, -ya imperfect, -j / -kej plural." }
+          {
+            "slot": "Past",
+            "description": "o- marks the preterite."
+          },
+          {
+            "slot": "Subject",
+            "description": "ni- I, ti- you or we, an- you all."
+          },
+          {
+            "slot": "Object",
+            "description": "ki- «it», tla- «something», te- «someone», mo- reflexive."
+          },
+          {
+            "slot": "Verb",
+            "description": "The root."
+          },
+          {
+            "slot": "Tense and plural",
+            "description": "-s future, -ya imperfect, -j / -kej plural."
+          }
         ]
       },
       {
         "title": "Subject and object prefixes",
         "description": "The 3rd person has no subject prefix. Ti- is «you» or «we»: the plural has -j at the end.",
-        "columns": ["Person", "Subject", "Object", "Reflexive"],
-        "rows": [{ "label": "I" }, { "label": "you" }, { "label": "he, she" }, { "label": "we" }, { "label": "you all" }, { "label": "they" }],
+        "columns": [
+          "Person",
+          "Subject",
+          "Object",
+          "Reflexive"
+        ],
+        "rows": [
+          {
+            "label": "I"
+          },
+          {
+            "label": "you"
+          },
+          {
+            "label": "he, she"
+          },
+          {
+            "label": "we"
+          },
+          {
+            "label": "you all"
+          },
+          {
+            "label": "they"
+          }
+        ],
         "note": "Ki- becomes k- after a vowel: ni + ki + chiua → nikchiua."
       },
       {
         "title": "Four classes of verbs in the past",
         "description": "Each verb makes its past in one of four ways. All of them start with o-.",
         "items": [
-          { "name": "Adds -k", "description": "Verbs that end in two consonants + vowel, and a few others.", "examples": [{ "meaning": "it passed" }, { "meaning": "he/she shouted" }] },
-          { "name": "Drops the last vowel", "description": "The most common class. A final m becomes n.", "examples": [{ "meaning": "he/she made" }, { "meaning": "he/she lived" }] },
-          { "name": "-ia, -oa → -j", "description": "They drop the final a and add -j.", "examples": [{ "meaning": "he/she spoke" }] },
-          { "name": "Adds -j", "description": "A few verbs, like kua «eat».", "examples": [{ "meaning": "he/she ate" }] }
+          {
+            "name": "Adds -k",
+            "description": "Verbs that end in two consonants + vowel, and a few others.",
+            "examples": [
+              {
+                "meaning": "it passed"
+              },
+              {
+                "meaning": "he/she shouted"
+              }
+            ]
+          },
+          {
+            "name": "Drops the last vowel",
+            "description": "The most common class. A final m becomes n.",
+            "examples": [
+              {
+                "meaning": "he/she made"
+              },
+              {
+                "meaning": "he/she lived"
+              }
+            ]
+          },
+          {
+            "name": "-ia, -oa → -j",
+            "description": "They drop the final a and add -j.",
+            "examples": [
+              {
+                "meaning": "he/she spoke"
+              }
+            ]
+          },
+          {
+            "name": "Adds -j",
+            "description": "A few verbs, like kua «eat».",
+            "examples": [
+              {
+                "meaning": "he/she ate"
+              }
+            ]
+          }
         ]
       },
       {
         "title": "Vowels that merge",
         "description": "When a prefix ending in a vowel meets a verb that starts with i, the i disappears and the other vowel takes a circumflex.",
-        "items": [{ "translation": "speak" }, { "translation": "write" }, { "translation": "see you" }, { "translation": "my brother" }]
+        "items": [
+          {
+            "translation": "speak"
+          },
+          {
+            "translation": "write"
+          },
+          {
+            "translation": "see you"
+          },
+          {
+            "translation": "my brother"
+          }
+        ]
       },
       {
         "title": "The moods",
         "description": "With ma you ask for things; with xi- you give an order to «you» or «you all»; amo negates.",
         "items": [
-          { "translation": "do it!" },
-          { "translation": "do it! (you all)" },
-          { "translation": "let me do it" },
-          { "translation": "don't do it!" },
-          { "translation": "careful, don't fall!" }
+          {
+            "translation": "do it!"
+          },
+          {
+            "translation": "do it! (you all)"
+          },
+          {
+            "translation": "let me do it"
+          },
+          {
+            "translation": "don't do it!"
+          },
+          {
+            "translation": "careful, don't fall!"
+          }
         ]
       },
       {
         "title": "Example sentences",
         "items": [
-          { "translation": "How are you?" },
-          { "translation": "What are you doing?" },
-          { "translation": "What happened?" },
-          { "translation": "Nice to meet you." },
-          { "translation": "See you." }
+          {
+            "translation": "How are you?"
+          },
+          {
+            "translation": "What are you doing?"
+          },
+          {
+            "translation": "What happened?"
+          },
+          {
+            "translation": "Nice to meet you."
+          },
+          {
+            "translation": "See you."
+          }
+        ]
+      },
+      {
+        "title": "Every affix of the verb",
+        "description": "Every piece a verb can take: prefixes, suffixes, particles and root changes.",
+        "items": [
+          {
+            "kind": "prefix",
+            "meaning": "Past: preterite, pluperfect, «went to»",
+            "translation": "I made"
+          },
+          {
+            "kind": "subject prefix",
+            "meaning": "Subject: I, you, he/she",
+            "translation": "I sleep"
+          },
+          {
+            "kind": "subject prefix",
+            "meaning": "Subject: we, you all, they",
+            "translation": "we sleep"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Order to you or you all (optative)",
+            "translation": "do it!"
+          },
+          {
+            "kind": "object prefix",
+            "meaning": "Object: me, you, him/her/it, us, you all, them",
+            "translation": "I make it"
+          },
+          {
+            "kind": "object prefix",
+            "meaning": "Indefinite object: «something»",
+            "translation": "I eat (something)"
+          },
+          {
+            "kind": "object prefix",
+            "meaning": "Indefinite object: «someone»",
+            "translation": "I teach (someone)"
+          },
+          {
+            "kind": "reflexive prefix",
+            "meaning": "Reflexive: myself, yourself/himself, ourselves",
+            "translation": "I am happy"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Wish or order (optative); warning",
+            "translation": "let me sleep"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Negation",
+            "translation": "I don't sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Plural of the present and several tenses",
+            "translation": "we sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Imperfect",
+            "translation": "I used to sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Preterite, by verb class",
+            "translation": "it passed"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Pluperfect: «had…»",
+            "translation": "I had slept"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Future",
+            "translation": "I will sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Conditional",
+            "translation": "I would sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Habitual",
+            "translation": "I usually sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Present progressive",
+            "translation": "I am sleeping"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Plural of the optative",
+            "translation": "let us sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Plural of the admonitive and of «going to»",
+            "translation": "we are going to sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "«Going to» do something",
+            "translation": "I'm going to sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "«Went to» do something",
+            "translation": "I went to sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Passive",
+            "translation": "it is made"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Impersonal: «people…»",
+            "translation": "people sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Causative: make someone do it",
+            "translation": "he/she puts him/her to sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Applicative: do it for someone",
+            "translation": "he/she makes it for him/her"
+          }
         ]
       }
     ]
   },
   "conjugation": {
     "persons": [
-      { "id": "1", "label": "1st person" },
-      { "id": "2", "label": "2nd person" },
-      { "id": "3", "label": "3rd person" }
+      {
+        "id": "1",
+        "label": "1st person"
+      },
+      {
+        "id": "2",
+        "label": "2nd person"
+      },
+      {
+        "id": "3",
+        "label": "3rd person"
+      }
     ],
     "tenses": [
-      { "id": "present", "group": "Indicative", "name": "Present", "description": "What happens now or always." },
-      { "id": "progressive", "group": "Indicative", "name": "Present progressive", "description": "What is happening now (-tika)." },
-      { "id": "habitual", "group": "Indicative", "name": "Habitual", "description": "What one usually does (-ni).", "es": { "tense": "present", "adverb": "usually" } },
-      { "id": "imperfect", "group": "Indicative", "name": "Imperfect", "description": "What used to happen (-ya)." },
-      { "id": "preterite", "group": "Indicative", "name": "Preterite", "description": "What already happened (o-)." },
-      { "id": "future", "group": "Indicative", "name": "Future", "description": "What is going to happen (-s, -skej)." },
-      { "id": "conditional", "group": "Moods", "name": "Conditional", "description": "What would happen (-skia)." },
-      { "id": "optative", "group": "Moods", "name": "Optative", "description": "Orders and wishes: xi- for you and you all, ma for the others." },
-      { "id": "admonitive", "group": "Moods", "name": "Admonitive", "description": "Warning: «don't…», «careful!» (ma + past).", "es": { "tense": "optative", "negative": true } },
-      { "id": "going", "group": "Going to do something", "name": "Going to", "description": "Going with the purpose of doing it (-tiu; plural -tin).", "es": { "tense": "progressive", "aux": "go", "link": "to" } },
-      { "id": "went", "group": "Going to do something", "name": "Went to", "description": "Went with the purpose of doing it (o- … -to; plural -ton).", "es": { "tense": "preterite", "aux": "go", "link": "to" } },
-      { "id": "neg-present", "group": "Negative", "name": "Present", "description": "amo + present." },
-      { "id": "neg-preterite", "group": "Negative", "name": "Preterite", "description": "amo + preterite." },
-      { "id": "neg-optative", "group": "Negative", "name": "Optative", "description": "amo + optative: «don't do it!»." }
+      {
+        "id": "present",
+        "group": "Indicative",
+        "name": "Present",
+        "description": "What happens now or always."
+      },
+      {
+        "id": "progressive",
+        "group": "Indicative",
+        "name": "Present progressive",
+        "description": "What is happening now (-tika)."
+      },
+      {
+        "id": "habitual",
+        "group": "Indicative",
+        "name": "Habitual",
+        "description": "What one usually does (-ni).",
+        "es": {
+          "tense": "present",
+          "adverb": "usually"
+        }
+      },
+      {
+        "id": "imperfect",
+        "group": "Indicative",
+        "name": "Imperfect",
+        "description": "What used to happen (-ya)."
+      },
+      {
+        "id": "preterite",
+        "group": "Indicative",
+        "name": "Preterite",
+        "description": "What already happened (o-)."
+      },
+      {
+        "id": "future",
+        "group": "Indicative",
+        "name": "Future",
+        "description": "What is going to happen (-s, -skej)."
+      },
+      {
+        "id": "conditional",
+        "group": "Moods",
+        "name": "Conditional",
+        "description": "What would happen (-skia)."
+      },
+      {
+        "id": "optative",
+        "group": "Moods",
+        "name": "Optative",
+        "description": "Orders and wishes: xi- for you and you all, ma for the others."
+      },
+      {
+        "id": "admonitive",
+        "group": "Moods",
+        "name": "Admonitive",
+        "description": "Warning: «don't…», «careful!» (ma + past).",
+        "es": {
+          "tense": "optative",
+          "negative": true
+        }
+      },
+      {
+        "id": "going",
+        "group": "Going to do something",
+        "name": "Going to",
+        "description": "Going with the purpose of doing it (-tiu; plural -tin).",
+        "es": {
+          "tense": "progressive",
+          "aux": "go",
+          "link": "to"
+        }
+      },
+      {
+        "id": "went",
+        "group": "Going to do something",
+        "name": "Went to",
+        "description": "Went with the purpose of doing it (o- … -to; plural -ton).",
+        "es": {
+          "tense": "preterite",
+          "aux": "go",
+          "link": "to"
+        }
+      },
+      {
+        "id": "neg-present",
+        "group": "Negative",
+        "name": "Present",
+        "description": "amo + present."
+      },
+      {
+        "id": "neg-preterite",
+        "group": "Negative",
+        "name": "Preterite",
+        "description": "amo + preterite."
+      },
+      {
+        "id": "neg-optative",
+        "group": "Negative",
+        "name": "Optative",
+        "description": "amo + optative: «don't do it!»."
+      },
+      {
+        "id": "pluperfect",
+        "group": "Indicative",
+        "name": "Pluperfect",
+        "description": "What had already happened (o- … -ka)."
+      },
+      {
+        "id": "neg-future",
+        "group": "Negative",
+        "name": "Future",
+        "description": "amo + future."
+      }
     ],
     "lexicon": [
-      { "entry": "tlachiua", "meaning": "make, do", "es": "make" },
-      { "entry": "tlâtta", "meaning": "see, look", "es": "see" },
-      { "entry": "tlâjtoa", "meaning": "speak, say", "es": "speak" },
-      { "entry": "tlâjkuiloa", "meaning": "write", "es": "write" },
-      { "entry": "tlakua", "meaning": "eat", "es": "eat" },
-      { "entry": "tlapoua", "meaning": "read, count", "es": "read" },
-      { "entry": "tlamati", "meaning": "know", "es": "know" },
-      { "entry": "tlâxmati", "meaning": "know (someone)", "es": "know" },
-      { "entry": "tlakaki", "meaning": "hear, listen", "es": "listen" },
-      { "entry": "tlamaka", "meaning": "give", "es": "give" },
-      { "entry": "tlanotsa", "meaning": "call", "es": "call" },
-      { "entry": "tlaneki", "meaning": "want", "es": "want" },
-      { "entry": "kochi", "meaning": "sleep", "es": "sleep" },
-      { "entry": "nemi", "meaning": "live, walk about", "es": "live", "note": "Past onen: m becomes n" },
-      { "entry": "paki", "meaning": "be happy", "es": "be happy" },
-      { "entry": "choka", "meaning": "cry", "es": "cry", "note": "Class 1: past ochokak" },
-      { "entry": "pano", "meaning": "pass", "es": "pass", "note": "Class 1: past opanok" },
-      { "entry": "uetska", "meaning": "laugh", "es": "laugh" },
-      { "entry": "tsajtsi", "meaning": "shout", "es": "shout" },
-      { "entry": "uetsi", "meaning": "fall", "es": "fall" },
-      { "entry": "miki", "meaning": "die", "es": "die" },
-      { "entry": "kalaki", "meaning": "go in", "es": "go in" },
-      { "entry": "kisa", "meaning": "go out", "es": "go out" },
-      { "entry": "tekiti", "meaning": "work", "es": "work" }
+      {
+        "entry": "tlachiua",
+        "meaning": "make, do",
+        "es": "make"
+      },
+      {
+        "entry": "tlâtta",
+        "meaning": "see, look",
+        "es": "see"
+      },
+      {
+        "entry": "tlâjtoa",
+        "meaning": "speak, say",
+        "es": "speak"
+      },
+      {
+        "entry": "tlâjkuiloa",
+        "meaning": "write",
+        "es": "write"
+      },
+      {
+        "entry": "tlakua",
+        "meaning": "eat",
+        "es": "eat"
+      },
+      {
+        "entry": "tlapoua",
+        "meaning": "read, count",
+        "es": "read"
+      },
+      {
+        "entry": "tlamati",
+        "meaning": "know",
+        "es": "know"
+      },
+      {
+        "entry": "tlâxmati",
+        "meaning": "know (someone)",
+        "es": "know"
+      },
+      {
+        "entry": "tlakaki",
+        "meaning": "hear, listen",
+        "es": "listen"
+      },
+      {
+        "entry": "tlamaka",
+        "meaning": "give",
+        "es": "give"
+      },
+      {
+        "entry": "tlanotsa",
+        "meaning": "call",
+        "es": "call"
+      },
+      {
+        "entry": "tlaneki",
+        "meaning": "want",
+        "es": "want"
+      },
+      {
+        "entry": "kochi",
+        "meaning": "sleep",
+        "es": "sleep"
+      },
+      {
+        "entry": "nemi",
+        "meaning": "live, walk about",
+        "es": "live",
+        "note": "Past onen: m becomes n"
+      },
+      {
+        "entry": "paki",
+        "meaning": "be happy",
+        "es": "be happy"
+      },
+      {
+        "entry": "choka",
+        "meaning": "cry",
+        "es": "cry",
+        "note": "Class 1: past ochokak"
+      },
+      {
+        "entry": "pano",
+        "meaning": "pass",
+        "es": "pass",
+        "note": "Class 1: past opanok"
+      },
+      {
+        "entry": "uetska",
+        "meaning": "laugh",
+        "es": "laugh"
+      },
+      {
+        "entry": "tsajtsi",
+        "meaning": "shout",
+        "es": "shout"
+      },
+      {
+        "entry": "uetsi",
+        "meaning": "fall",
+        "es": "fall"
+      },
+      {
+        "entry": "miki",
+        "meaning": "die",
+        "es": "die"
+      },
+      {
+        "entry": "kalaki",
+        "meaning": "go in",
+        "es": "go in"
+      },
+      {
+        "entry": "kisa",
+        "meaning": "go out",
+        "es": "go out"
+      },
+      {
+        "entry": "tekiti",
+        "meaning": "work",
+        "es": "work"
+      }
     ]
   }
 }

@@ -13,8 +13,14 @@
       "types_help": "Some verbs add n- in the past and the future. The dictionary shows it with «Pret. dá n…»."
     },
     "types": [
-      { "id": "", "label": "Regular" },
-      { "id": "n", "label": "With n- in the past and future" }
+      {
+        "id": "",
+        "label": "Regular"
+      },
+      {
+        "id": "n",
+        "label": "With n- in the past and future"
+      }
     ],
     "no_plural": "same, with ya on the noun"
   },
@@ -29,48 +35,135 @@
   "orthography": {
     "intro": "This is the spelling used by the dictionary, adapted to the orthography of the Academia de la Cultura Hñähñu. The apostrophe (') is the glottal stop, a short break in the voice.",
     "letters": [
-      { "meaning": "bury" },
-      { "meaning": "sleep" },
-      { "meaning": "thief" },
-      { "meaning": "milk" },
-      { "meaning": "corn earworm" },
-      { "meaning": "a place name" },
-      { "meaning": "water" },
-      { "meaning": "comb (hair)" },
-      { "meaning": "throw away" },
-      { "meaning": "horse" },
-      { "meaning": "bricklayer" },
-      { "meaning": "earth, land" },
-      { "meaning": "peach" },
-      { "meaning": "blood" },
-      { "meaning": "prickly pear" },
-      { "meaning": "snake" },
-      { "meaning": "small" },
-      { "meaning": "stone mortar" },
-      { "meaning": "gourd for sucking agave sap" },
-      { "meaning": "mouth" },
-      { "meaning": "one" },
-      { "meaning": "head" },
-      { "meaning": "road" },
-      { "meaning": "write" },
-      { "meaning": "hear" },
-      { "meaning": "count" },
-      { "meaning": "the" },
-      { "meaning": "bridge" },
-      { "meaning": "comb" },
-      { "meaning": "run" },
-      { "meaning": "atole (corn drink)" },
-      { "meaning": "ear of corn" },
-      { "meaning": "cold" },
-      { "meaning": "tooth" },
-      { "meaning": "give" },
-      { "meaning": "hurt" },
-      { "meaning": "leaf" },
-      { "meaning": "candle" },
-      { "meaning": "rain" },
-      { "meaning": "cry" }
+      {
+        "meaning": "bury"
+      },
+      {
+        "meaning": "sleep"
+      },
+      {
+        "meaning": "thief"
+      },
+      {
+        "meaning": "milk"
+      },
+      {
+        "meaning": "corn earworm"
+      },
+      {
+        "meaning": "a place name"
+      },
+      {
+        "meaning": "water"
+      },
+      {
+        "meaning": "comb (hair)"
+      },
+      {
+        "meaning": "throw away"
+      },
+      {
+        "meaning": "horse"
+      },
+      {
+        "meaning": "bricklayer"
+      },
+      {
+        "meaning": "earth, land"
+      },
+      {
+        "meaning": "peach"
+      },
+      {
+        "meaning": "blood"
+      },
+      {
+        "meaning": "prickly pear"
+      },
+      {
+        "meaning": "snake"
+      },
+      {
+        "meaning": "small"
+      },
+      {
+        "meaning": "stone mortar"
+      },
+      {
+        "meaning": "gourd for sucking agave sap"
+      },
+      {
+        "meaning": "mouth"
+      },
+      {
+        "meaning": "one"
+      },
+      {
+        "meaning": "head"
+      },
+      {
+        "meaning": "road"
+      },
+      {
+        "meaning": "write"
+      },
+      {
+        "meaning": "hear"
+      },
+      {
+        "meaning": "count"
+      },
+      {
+        "meaning": "the"
+      },
+      {
+        "meaning": "bridge"
+      },
+      {
+        "meaning": "comb"
+      },
+      {
+        "meaning": "run"
+      },
+      {
+        "meaning": "atole (corn drink)"
+      },
+      {
+        "meaning": "ear of corn"
+      },
+      {
+        "meaning": "cold"
+      },
+      {
+        "meaning": "tooth"
+      },
+      {
+        "meaning": "give"
+      },
+      {
+        "meaning": "hurt"
+      },
+      {
+        "meaning": "leaf"
+      },
+      {
+        "meaning": "candle"
+      },
+      {
+        "meaning": "rain"
+      },
+      {
+        "meaning": "cry"
+      }
     ],
-    "vowels": [{ "title": "Oral vowels" }, { "title": "Nasal vowels" }],
+    "vowels": [
+      {
+        "title": "Oral vowels"
+      },
+      {
+        "title": "Nasal vowels"
+      }
+    ],
     "notes": [
       "Of the nasal vowels, only ä is written. Ë, ï and ü exist in the language, but they are usually not marked.",
       "The glottal stop comes after ch, k, t and ts (k'eñä), and before b, m, n, ñ, r, u and y ('ba, 'ñu).",
@@ -83,30 +176,93 @@
     "blocks": [
       {
         "items": [
-          { "slot": "Proclitic", "description": "Person and tense. With hin- in front, the sentence is negative." },
-          { "slot": "Root", "description": "The verb. In the preterite and the future its first letter can change." },
-          { "slot": "Plural", "description": "Suffix -hu̱ for «we» and «you all»." }
+          {
+            "slot": "Proclitic",
+            "description": "Person and tense. With hin- in front, the sentence is negative."
+          },
+          {
+            "slot": "Root",
+            "description": "The verb. In the preterite and the future its first letter can change."
+          },
+          {
+            "slot": "Plural",
+            "description": "Suffix -hu̱ for «we» and «you all»."
+          }
         ]
       },
       {
         "title": "The tone of the proclitic changes the meaning",
         "description": "Look at the accent: it marks a high tone.",
         "items": [
-          { "translation": "I tell him/her" },
-          { "translation": "he/she tells him/her" },
-          { "translation": "I told him/her" },
-          { "translation": "he/she will tell him/her" },
-          { "translation": "you told him/her" },
-          { "translation": "I will tell him/her" }
+          {
+            "translation": "I tell him/her"
+          },
+          {
+            "translation": "he/she tells him/her"
+          },
+          {
+            "translation": "I told him/her"
+          },
+          {
+            "translation": "he/she will tell him/her"
+          },
+          {
+            "translation": "you told him/her"
+          },
+          {
+            "translation": "I will tell him/her"
+          }
         ]
       },
       {
         "title": "The root changes too",
         "description": "In the preterite and the future, many roots change their first consonant. That is how the secondary forms of the root are made.",
         "items": [
-          { "name": "Form B", "description": "The consonant becomes voiced: p → b, t → d, th → d, ts → z, k → g, j → g, f → m.", "examples": [{ "meaning": "he/she knew it" }, { "meaning": "he/she bought it" }, { "meaning": "he/she ground it" }] },
-          { "name": "Form Y", "description": "If the root starts with a vowel or with h + vowel, y is added (or ñ if the vowel is nasal).", "examples": [{ "meaning": "he/she looked for it" }, { "meaning": "he/she heard it" }, { "meaning": "he/she slept" }] },
-          { "name": "Form N", "description": "Some verbs keep their consonant but add n- (or m-). The dictionary shows it with the 1st person of the preterite.", "examples": [{ "meaning": "I jumped" }, { "meaning": "he/she laughed" }, { "meaning": "I drank water" }] }
+          {
+            "name": "Form B",
+            "description": "The consonant becomes voiced: p → b, t → d, th → d, ts → z, k → g, j → g, f → m.",
+            "examples": [
+              {
+                "meaning": "he/she knew it"
+              },
+              {
+                "meaning": "he/she bought it"
+              },
+              {
+                "meaning": "he/she ground it"
+              }
+            ]
+          },
+          {
+            "name": "Form Y",
+            "description": "If the root starts with a vowel or with h + vowel, y is added (or ñ if the vowel is nasal).",
+            "examples": [
+              {
+                "meaning": "he/she looked for it"
+              },
+              {
+                "meaning": "he/she heard it"
+              },
+              {
+                "meaning": "he/she slept"
+              }
+            ]
+          },
+          {
+            "name": "Form N",
+            "description": "Some verbs keep their consonant but add n- (or m-). The dictionary shows it with the 1st person of the preterite.",
+            "examples": [
+              {
+                "meaning": "I jumped"
+              },
+              {
+                "meaning": "he/she laughed"
+              },
+              {
+                "meaning": "I drank water"
+              }
+            ]
+          }
         ]
       },
       {
@@ -114,61 +270,508 @@
           {
             "title": "The plural with -hu̱",
             "description": "In everyday speech, the suffix -hu̱ changes the end of the root:",
-            "examples": [{ "meaning": "drink" }, { "meaning": "work" }, { "meaning": "look" }, { "meaning": "think" }, { "meaning": "buy" }]
+            "examples": [
+              {
+                "meaning": "drink"
+              },
+              {
+                "meaning": "work"
+              },
+              {
+                "meaning": "look"
+              },
+              {
+                "meaning": "think"
+              },
+              {
+                "meaning": "buy"
+              }
+            ]
           },
           {
             "title": "Being something: proclitic + ra",
             "description": "To say «I am», «you are» or «he/she is» with a noun, the proclitic joins the article ra.",
-            "columns": ["Tense", "1st", "2nd", "3rd"],
-            "rows": [{ "label": "Present" }, { "label": "Imperfect" }, { "label": "Future" }]
+            "columns": [
+              "Tense",
+              "1st",
+              "2nd",
+              "3rd"
+            ],
+            "rows": [
+              {
+                "label": "Present"
+              },
+              {
+                "label": "Imperfect"
+              },
+              {
+                "label": "Future"
+              }
+            ]
           }
         ]
       },
       {
         "title": "Example sentences",
         "items": [
-          { "translation": "I am studying Spanish." },
-          { "translation": "I go to sleep early." },
-          { "translation": "But he/she doesn't dance." },
-          { "translation": "I didn't see it." },
-          { "translation": "It's expensive." }
+          {
+            "translation": "I am studying Spanish."
+          },
+          {
+            "translation": "I go to sleep early."
+          },
+          {
+            "translation": "But he/she doesn't dance."
+          },
+          {
+            "translation": "I didn't see it."
+          },
+          {
+            "translation": "It's expensive."
+          }
+        ]
+      },
+      {
+        "title": "Every affix of the verb",
+        "description": "Every piece a verb can take: prefixes, suffixes, particles and root changes.",
+        "items": [
+          {
+            "kind": "proclitic",
+            "meaning": "Present: I, you, he/she",
+            "translation": "I eat"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Preterite",
+            "translation": "he/she ate"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Future",
+            "translation": "he/she will eat"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Imperfect",
+            "translation": "I used to eat"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Present progressive",
+            "translation": "I am eating"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Past progressive",
+            "translation": "I was eating"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Present perfect: a short while ago",
+            "translation": "he/she has eaten"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Near future",
+            "translation": "he/she is going to eat"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Adverbial preterite: «when…»",
+            "translation": "when I ate"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Action elsewhere: present · preterite",
+            "translation": "he/she ate over there"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Imperative, elsewhere",
+            "translation": "eat over there!"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Moving away: present",
+            "translation": "he/she goes along eating"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Moving away: imperfect",
+            "translation": "he/she was going along eating"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Moving away: future · present subjunctive",
+            "translation": "that he/she eat"
+          },
+          {
+            "kind": "proclitic",
+            "meaning": "Past subjunctive (contrary to fact)",
+            "translation": "if he/she ate"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Negation, before the proclitic",
+            "translation": "I don't eat"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Prohibition, with the 2nd and 3rd person",
+            "translation": "don't go"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "«Going to»: near future, with the future proclitic",
+            "translation": "I'm going to go"
+          },
+          {
+            "kind": "root change",
+            "meaning": "3rd person preterite and future: the consonant becomes voiced (p → b, t → d, ts → z, k → g)",
+            "translation": "he/she knew it"
+          },
+          {
+            "kind": "root change",
+            "meaning": "Roots starting with a vowel or h: add y, or ñ if the vowel is nasal",
+            "translation": "he/she saw it"
+          },
+          {
+            "kind": "root change",
+            "meaning": "Indeterminate actor («they did it»): f, th, ts, j, s, t'",
+            "translation": "they knew it"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Secondary tenses of verbs that keep their consonant or have an incorporated object",
+            "translation": "I jumped"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Reflexive and reciprocal, in every tense",
+            "translation": "he/she gets tired"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Passive participle (with the indeterminate-actor root)",
+            "translation": "heard"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Verb made from a noun",
+            "translation": "be cold (weather)"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Plural of the 1st and 2nd person",
+            "translation": "we eat"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "1st person object: «me»",
+            "translation": "he/she looks after me"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "2nd person object: «you»",
+            "translation": "it bites you"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "3rd person indirect object: «to him/her»",
+            "translation": "he/she sells it to him/her"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Direct object as a demonstrative: singular, plural"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Indefinite object: «people, someone»",
+            "translation": "frighten (people)"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Reciprocal: «each other»",
+            "translation": "insult each other"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Applicative: do it for or towards someone",
+            "translation": "bring someone"
+          },
+          {
+            "kind": "stem suffix",
+            "meaning": "Form the verb stem; the complex ones (-ti, -ki, -'tsi…) add transitivity",
+            "translation": "begin · begin something"
+          }
         ]
       }
     ]
   },
   "conjugation": {
     "persons": [
-      { "id": "1", "label": "1st person" },
-      { "id": "2", "label": "2nd person" },
-      { "id": "3", "label": "3rd person" }
+      {
+        "id": "1",
+        "label": "1st person"
+      },
+      {
+        "id": "2",
+        "label": "2nd person"
+      },
+      {
+        "id": "3",
+        "label": "3rd person"
+      }
     ],
     "paradigms": [
-      { "id": "present", "group": "Affirmative", "name": "Present", "description": "What happens now or always." },
-      { "id": "preterite", "group": "Affirmative", "name": "Preterite", "description": "What already happened." },
-      { "id": "future", "group": "Affirmative", "name": "Future", "description": "What is going to happen." },
-      { "id": "imperfect", "group": "Affirmative", "name": "Imperfect", "description": "What used to happen in the past." },
-      { "id": "progressive", "group": "Affirmative", "name": "Present progressive", "description": "What is happening right now." },
-      { "id": "neg-present", "group": "Negative", "name": "Present", "description": "hin- + the present proclitic." },
-      { "id": "neg-preterite", "group": "Negative", "name": "Preterite", "description": "hin- + the preterite proclitic." }
+      {
+        "id": "present",
+        "group": "Affirmative",
+        "name": "Present",
+        "description": "What happens now or always."
+      },
+      {
+        "id": "preterite",
+        "group": "Affirmative",
+        "name": "Preterite",
+        "description": "What already happened."
+      },
+      {
+        "id": "future",
+        "group": "Affirmative",
+        "name": "Future",
+        "description": "What is going to happen."
+      },
+      {
+        "id": "imperfect",
+        "group": "Affirmative",
+        "name": "Imperfect",
+        "description": "What used to happen in the past."
+      },
+      {
+        "id": "progressive",
+        "group": "Affirmative",
+        "name": "Present progressive",
+        "description": "What is happening right now."
+      },
+      {
+        "id": "neg-present",
+        "group": "Negative",
+        "name": "Present",
+        "description": "hin- + the present proclitic."
+      },
+      {
+        "id": "neg-preterite",
+        "group": "Negative",
+        "name": "Preterite",
+        "description": "hin- + the preterite proclitic."
+      },
+      {
+        "id": "near-perfect",
+        "group": "Near tenses",
+        "name": "Present perfect",
+        "description": "What has just happened, a short while ago (stá, xká, xa)."
+      },
+      {
+        "id": "near-future",
+        "group": "Near tenses",
+        "name": "Near future",
+        "description": "What is about to happen (xka, xki, sta).",
+        "es": {
+          "tense": "progressive",
+          "aux": "go",
+          "link": "to"
+        }
+      },
+      {
+        "id": "adverbial-past",
+        "group": "Past",
+        "name": "Adverbial preterite",
+        "description": "A past action when another happened: «when I worked…» (ndá, ngá, mí).",
+        "es": {
+          "tense": "preterite",
+          "before": "when"
+        }
+      },
+      {
+        "id": "past-progressive",
+        "group": "Past",
+        "name": "Past progressive",
+        "description": "What was happening (ndrí, ngrí, mrí)."
+      },
+      {
+        "id": "elsewhere-present",
+        "group": "Elsewhere",
+        "name": "Present, elsewhere",
+        "description": "The action happens somewhere else (gí, bí).",
+        "es": {
+          "tense": "present",
+          "after": "over there"
+        }
+      },
+      {
+        "id": "elsewhere-preterite",
+        "group": "Elsewhere",
+        "name": "Preterite, elsewhere",
+        "description": "It happened somewhere else (duá, guá, bá).",
+        "es": {
+          "tense": "preterite",
+          "after": "over there"
+        }
+      },
+      {
+        "id": "elsewhere-imperative",
+        "group": "Elsewhere",
+        "name": "Imperative, elsewhere",
+        "description": "An order to do it somewhere else (bá).",
+        "es": {
+          "tense": "imperative",
+          "after": "over there"
+        }
+      },
+      {
+        "id": "away-present",
+        "group": "Moving away",
+        "name": "Present, moving away",
+        "description": "While the subject is moving away (drá, grí, dra).",
+        "es": {
+          "tense": "present",
+          "aux": "go",
+          "link": "-ing"
+        }
+      },
+      {
+        "id": "away-imperfect",
+        "group": "Moving away",
+        "name": "Imperfect, moving away",
+        "description": "Was moving away while doing it (ndrá, ngrá, ndra).",
+        "es": {
+          "tense": "past_progressive",
+          "aux": "go",
+          "link": "-ing"
+        }
+      },
+      {
+        "id": "away-future",
+        "group": "Moving away",
+        "name": "Future, moving away",
+        "description": "Will move away while doing it (grá, grí, drá).",
+        "es": {
+          "tense": "future",
+          "aux": "go",
+          "link": "-ing"
+        }
+      },
+      {
+        "id": "subjunctive",
+        "group": "Subjunctive",
+        "name": "Present and future",
+        "description": "What is wished or expected: «that…» (grá, grí, drá).",
+        "es": {
+          "tense": "subjunctive",
+          "before": "that"
+        }
+      },
+      {
+        "id": "past-subjunctive",
+        "group": "Subjunctive",
+        "name": "Past (contrary to fact)",
+        "description": "What would have been: «if…» (gra, gri, dri).",
+        "es": {
+          "tense": "past_subjunctive",
+          "before": "if"
+        }
+      },
+      {
+        "id": "neg-future",
+        "group": "Negative",
+        "name": "Future",
+        "description": "hin- + the future proclitic."
+      }
     ],
     "lexicon": [
-      { "meaning": "eat, drink", "es": "eat" },
-      { "meaning": "know", "es": "know", "note": "Pret. bi bädi" },
-      { "meaning": "buy", "es": "buy", "note": "Pret. bi dai" },
-      { "meaning": "wash", "es": "wash", "note": "Pret. bi meni" },
-      { "meaning": "look for", "es": "look for", "note": "Pret. bi hyoni" },
-      { "meaning": "see, look", "es": "see", "note": "Pret. bi hyandi" },
-      { "meaning": "sleep", "es": "sleep", "note": "Pret. bi 'ñähä" },
-      { "meaning": "hear", "es": "hear", "note": "Pret. bi 'yo̱de" },
-      { "meaning": "grind", "es": "grind", "note": "Pret. bi gu̱ni" },
-      { "meaning": "take out", "es": "take out", "note": "Pret. bi gu̱ki" },
-      { "meaning": "split", "es": "split", "note": "Pret. bi hyeke" },
-      { "meaning": "dance", "es": "dance" },
-      { "meaning": "harvest", "es": "harvest" },
-      { "meaning": "jump", "es": "jump", "note": "Pret. dá nsagi" },
-      { "meaning": "laugh", "es": "laugh", "note": "Pret. bi nthede" },
-      { "meaning": "rest", "es": "rest", "note": "Pret. bi ntsaya" },
-      { "meaning": "drink water", "es": "drink water", "note": "Pret. dá ntsithe" }
+      {
+        "meaning": "eat, drink",
+        "es": "eat"
+      },
+      {
+        "meaning": "know",
+        "es": "know",
+        "note": "Pret. bi bädi"
+      },
+      {
+        "meaning": "buy",
+        "es": "buy",
+        "note": "Pret. bi dai"
+      },
+      {
+        "meaning": "wash",
+        "es": "wash",
+        "note": "Pret. bi meni"
+      },
+      {
+        "meaning": "look for",
+        "es": "look for",
+        "note": "Pret. bi hyoni"
+      },
+      {
+        "meaning": "see, look",
+        "es": "see",
+        "note": "Pret. bi hyandi"
+      },
+      {
+        "meaning": "sleep",
+        "es": "sleep",
+        "note": "Pret. bi 'ñähä"
+      },
+      {
+        "meaning": "hear",
+        "es": "hear",
+        "note": "Pret. bi 'yo̱de"
+      },
+      {
+        "meaning": "grind",
+        "es": "grind",
+        "note": "Pret. bi gu̱ni"
+      },
+      {
+        "meaning": "take out",
+        "es": "take out",
+        "note": "Pret. bi gu̱ki"
+      },
+      {
+        "meaning": "split",
+        "es": "split",
+        "note": "Pret. bi hyeke"
+      },
+      {
+        "meaning": "dance",
+        "es": "dance"
+      },
+      {
+        "meaning": "harvest",
+        "es": "harvest"
+      },
+      {
+        "meaning": "jump",
+        "es": "jump",
+        "note": "Pret. dá nsagi"
+      },
+      {
+        "meaning": "laugh",
+        "es": "laugh",
+        "note": "Pret. bi nthede"
+      },
+      {
+        "meaning": "rest",
+        "es": "rest",
+        "note": "Pret. bi ntsaya"
+      },
+      {
+        "meaning": "drink water",
+        "es": "drink water",
+        "note": "Pret. dá ntsithe"
+      }
     ]
   }
 }

@@ -396,7 +396,11 @@ fn build(verb: &Verb, tense: &Tense, person: usize, plural: bool) -> Option<Stri
     };
     // ma' … -i' closes a negative: ma' tin weneli'.
     Some(if tense.negative {
-        format!("{word}i'")
+        if word.starts_with("ma' ") {
+            format!("{word}i'")
+        } else {
+            format!("ma' {word}i'")
+        }
     } else {
         word
     })
@@ -632,6 +636,7 @@ mod tests {
         assert_eq!(six("ojéeltik", "neg-habitual")[0], "ma' tin wojéeltiki'");
         assert_eq!(six("xokik", "neg-completive")[0], "ma' tin xokaji'");
         assert_eq!(six("bin", "neg-completive")[0], "ma' jbineni'");
+        assert_eq!(six("wenel", "neg-durative")[0], "ma' táan in weneli'");
     }
 
     #[test]

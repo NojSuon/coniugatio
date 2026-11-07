@@ -130,6 +130,23 @@ const BLOCKS = {
     </div>`,
 
   grid: (b) => `<div class="grid-2">${b.blocks.map(block).join("")}</div>`,
+
+  // Every affix a verb can take: affix, kind, what it marks, example.
+  affixes: (b) => `<div class="card card--blanca">${heading(b)}
+      <div class="table-scroll"><table class="data affix-table">
+        <thead><tr>
+          <th scope="col">${t("Afijo", "Affix")}</th>
+          <th scope="col">${t("Tipo", "Kind")}</th>
+          <th scope="col">${t("Qué indica", "What it marks")}</th>
+          <th scope="col">${t("Ejemplo", "Example")}</th>
+        </tr></thead>
+        <tbody>${b.items
+          .map(
+            (a) => `<tr><th scope="row">${w(a.affix)}</th><td>${e(a.kind)}</td><td>${e(a.meaning)}</td>
+              <td>${a.example ? w(a.example) : ""}${a.translation ? ` <span class="caption">«${e(a.translation)}»</span>` : ""}</td></tr>`
+          )
+          .join("")}</tbody>
+      </table></div></div>`,
 };
 
 function block(b) {

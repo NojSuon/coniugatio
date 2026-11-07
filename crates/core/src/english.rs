@@ -250,8 +250,8 @@ fn phrase(v: &str, tense: Tense, p: usize) -> Phrase {
             rest: vec![],
             support: Some((if p == 2 { "does" } else { "do" }, v.to_string())),
         },
-        Tense::Preterite if v == "be" => simple(be_past(p).into(), vec![]),
-        Tense::Preterite => Phrase {
+        Tense::Preterite | Tense::PastSubjunctive if v == "be" => simple(be_past(p).into(), vec![]),
+        Tense::Preterite | Tense::PastSubjunctive => Phrase {
             finite: past(v),
             rest: vec![],
             support: Some(("did", v.to_string())),
@@ -266,6 +266,7 @@ fn phrase(v: &str, tense: Tense, p: usize) -> Phrase {
         Tense::Progressive => with(be_present(p), gerund(v)),
         Tense::PastProgressive => with(be_past(p), gerund(v)),
         Tense::Perfect => with(if p == 2 { "has" } else { "have" }, participle(v)),
+        Tense::Pluperfect => with("had", participle(v)),
         // Subjunctive, imperative and optative are built in `render`.
         Tense::Subjunctive | Tense::Imperative | Tense::Optative => simple(v.to_string(), vec![]),
     }
@@ -285,6 +286,7 @@ pub fn render(meaning: &str, es: &Es, person: usize, negative: bool) -> Option<S
             pronoun: true,
             negative: false,
             question: false,
+            after: None,
         },
         Es::Spec(s) => s.clone(),
     };
@@ -323,6 +325,7 @@ pub fn render(meaning: &str, es: &Es, person: usize, negative: bool) -> Option<S
     }
     let finish = |mut parts: Vec<String>, end: &str| {
         parts.extend(tail.iter().cloned());
+        parts.extend(spec.after.clone());
         let text = parts.join(" ");
         Some(match end {
             "!" => format!("{text}!"),
@@ -479,6 +482,7 @@ mod tests {
         );
         assert_eq!(r("write", r#""perfect""#, 2, false), "he/she has written");
         assert_eq!(r("sing", r#""conditional""#, 5, false), "they would sing");
+        assert_eq!(r("make", r#""pluperfect""#, 0, false), "I had made");
         assert_eq!(r("be", r#""present""#, 0, false), "I am");
         assert_eq!(r("be", r#""preterite""#, 5, false), "they were");
     }

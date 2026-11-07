@@ -13,7 +13,15 @@
     "label": "Verbo",
     "hint": "Escribe el verbo en infinitivo (con -ni) o solo la raíz: uandani «hablar», t'ireni «comer», ch'anani «jugar». Los acentos son opcionales; si los escribes, se conservan.",
     "placeholder": "uandani",
-    "keyboard": ["ï", "'", "á", "é", "í", "ó", "ú"],
+    "keyboard": [
+      "ï",
+      "'",
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
     "own": {
       "hint": "Escribe cualquier verbo en infinitivo y su significado en español. Lo conjugamos sumando los sufijos a la raíz.",
       "label": "Verbo en infinitivo",
@@ -22,8 +30,14 @@
       "types_help": "Con objeto plural se agrega -a- después de la raíz: exe-a-xati «los está viendo». Escribe el significado con «los»: «verlos»."
     },
     "types": [
-      { "id": "", "label": "Sin objeto o con objeto singular" },
-      { "id": "pl", "label": "Con objeto plural (-a-): exeaxati" }
+      {
+        "id": "",
+        "label": "Sin objeto o con objeto singular"
+      },
+      {
+        "id": "pl",
+        "label": "Con objeto plural (-a-): exeaxati"
+      }
     ]
   },
   "source": {
@@ -38,44 +52,197 @@
   "orthography": {
     "intro": "Usamos el alfabeto p'urhépecha actual: 6 vocales y 21 consonantes. El apóstrofo marca una consonante aspirada (con un soplo de aire) y la ï es una vocal central, entre la i y la u.",
     "letters": [
-      { "letter": "a", "ipa": "a", "word": "atani", "meaning": "pegar" },
-      { "letter": "b", "ipa": "b", "word": "témbeni", "meaning": "diez" },
-      { "letter": "ch", "ipa": "tʃ", "word": "chekakua", "meaning": "canoa" },
-      { "letter": "ch'", "ipa": "tʃʰ", "word": "ch'anani", "meaning": "jugar" },
-      { "letter": "d", "ipa": "d", "word": "náandi", "meaning": "mamá" },
-      { "letter": "e", "ipa": "e", "word": "exeni", "meaning": "ver, mirar" },
-      { "letter": "g", "ipa": "ɡ", "word": "jingóni", "meaning": "con" },
-      { "letter": "i", "ipa": "i", "word": "iuíkua", "meaning": "leña" },
-      { "letter": "ï", "ipa": "ɨ", "word": "sïkuapu", "meaning": "araña" },
-      { "letter": "j", "ipa": "x", "word": "janikua", "meaning": "lluvia" },
-      { "letter": "k", "ipa": "k", "word": "kamata", "meaning": "atole" },
-      { "letter": "k'", "ipa": "kʰ", "word": "k'auasï", "meaning": "chile" },
-      { "letter": "m", "ipa": "m", "word": "mintsita", "meaning": "corazón" },
-      { "letter": "n", "ipa": "n", "word": "nirani", "meaning": "ir" },
-      { "letter": "nh", "ipa": "ŋ", "word": "anhátapu", "meaning": "árbol" },
-      { "letter": "o", "ipa": "o", "word": "ómikua", "meaning": "isla" },
-      { "letter": "p", "ipa": "p", "word": "pirekua", "meaning": "canción" },
-      { "letter": "p'", "ipa": "pʰ", "word": "p'atamu", "meaning": "carrizo" },
-      { "letter": "r", "ipa": "ɾ", "word": "parákata", "meaning": "mariposa" },
-      { "letter": "rh", "ipa": "ɽ", "word": "tarheni", "meaning": "arar" },
-      { "letter": "s", "ipa": "s", "word": "sïpani", "meaning": "robar" },
-      { "letter": "t", "ipa": "t", "word": "t'amu", "meaning": "cuatro" },
-      { "letter": "t'", "ipa": "tʰ", "word": "t'ireni", "meaning": "comer" },
-      { "letter": "ts", "ipa": "ts", "word": "tsikata", "meaning": "gallina" },
-      { "letter": "ts'", "ipa": "tsʰ", "word": "ts'irakua", "meaning": "lombriz" },
-      { "letter": "u", "ipa": "u", "word": "uandani", "meaning": "hablar" },
-      { "letter": "x", "ipa": "ʃ", "word": "xukani", "meaning": "regañar" }
+      {
+        "letter": "a",
+        "ipa": "a",
+        "word": "atani",
+        "meaning": "pegar"
+      },
+      {
+        "letter": "b",
+        "ipa": "b",
+        "word": "témbeni",
+        "meaning": "diez"
+      },
+      {
+        "letter": "ch",
+        "ipa": "tʃ",
+        "word": "chekakua",
+        "meaning": "canoa"
+      },
+      {
+        "letter": "ch'",
+        "ipa": "tʃʰ",
+        "word": "ch'anani",
+        "meaning": "jugar"
+      },
+      {
+        "letter": "d",
+        "ipa": "d",
+        "word": "náandi",
+        "meaning": "mamá"
+      },
+      {
+        "letter": "e",
+        "ipa": "e",
+        "word": "exeni",
+        "meaning": "ver, mirar"
+      },
+      {
+        "letter": "g",
+        "ipa": "ɡ",
+        "word": "jingóni",
+        "meaning": "con"
+      },
+      {
+        "letter": "i",
+        "ipa": "i",
+        "word": "iuíkua",
+        "meaning": "leña"
+      },
+      {
+        "letter": "ï",
+        "ipa": "ɨ",
+        "word": "sïkuapu",
+        "meaning": "araña"
+      },
+      {
+        "letter": "j",
+        "ipa": "x",
+        "word": "janikua",
+        "meaning": "lluvia"
+      },
+      {
+        "letter": "k",
+        "ipa": "k",
+        "word": "kamata",
+        "meaning": "atole"
+      },
+      {
+        "letter": "k'",
+        "ipa": "kʰ",
+        "word": "k'auasï",
+        "meaning": "chile"
+      },
+      {
+        "letter": "m",
+        "ipa": "m",
+        "word": "mintsita",
+        "meaning": "corazón"
+      },
+      {
+        "letter": "n",
+        "ipa": "n",
+        "word": "nirani",
+        "meaning": "ir"
+      },
+      {
+        "letter": "nh",
+        "ipa": "ŋ",
+        "word": "anhátapu",
+        "meaning": "árbol"
+      },
+      {
+        "letter": "o",
+        "ipa": "o",
+        "word": "ómikua",
+        "meaning": "isla"
+      },
+      {
+        "letter": "p",
+        "ipa": "p",
+        "word": "pirekua",
+        "meaning": "canción"
+      },
+      {
+        "letter": "p'",
+        "ipa": "pʰ",
+        "word": "p'atamu",
+        "meaning": "carrizo"
+      },
+      {
+        "letter": "r",
+        "ipa": "ɾ",
+        "word": "parákata",
+        "meaning": "mariposa"
+      },
+      {
+        "letter": "rh",
+        "ipa": "ɽ",
+        "word": "tarheni",
+        "meaning": "arar"
+      },
+      {
+        "letter": "s",
+        "ipa": "s",
+        "word": "sïpani",
+        "meaning": "robar"
+      },
+      {
+        "letter": "t",
+        "ipa": "t",
+        "word": "t'amu",
+        "meaning": "cuatro"
+      },
+      {
+        "letter": "t'",
+        "ipa": "tʰ",
+        "word": "t'ireni",
+        "meaning": "comer"
+      },
+      {
+        "letter": "ts",
+        "ipa": "ts",
+        "word": "tsikata",
+        "meaning": "gallina"
+      },
+      {
+        "letter": "ts'",
+        "ipa": "tsʰ",
+        "word": "ts'irakua",
+        "meaning": "lombriz"
+      },
+      {
+        "letter": "u",
+        "ipa": "u",
+        "word": "uandani",
+        "meaning": "hablar"
+      },
+      {
+        "letter": "x",
+        "ipa": "ʃ",
+        "word": "xukani",
+        "meaning": "regañar"
+      }
     ],
     "vowels": [
       {
         "title": "Vocales",
         "items": [
-          { "letter": "a", "ipa": "a" },
-          { "letter": "e", "ipa": "e" },
-          { "letter": "i", "ipa": "i" },
-          { "letter": "ï", "ipa": "ɨ" },
-          { "letter": "o", "ipa": "o" },
-          { "letter": "u", "ipa": "u" }
+          {
+            "letter": "a",
+            "ipa": "a"
+          },
+          {
+            "letter": "e",
+            "ipa": "e"
+          },
+          {
+            "letter": "i",
+            "ipa": "i"
+          },
+          {
+            "letter": "ï",
+            "ipa": "ɨ"
+          },
+          {
+            "letter": "o",
+            "ipa": "o"
+          },
+          {
+            "letter": "u",
+            "ipa": "u"
+          }
         ]
       }
     ],
@@ -92,29 +259,124 @@
       {
         "type": "formula",
         "items": [
-          { "slot": "Raíz", "description": "El infinitivo sin -ni.", "example": "uanda" },
-          { "slot": "Aspecto", "description": "-xa ahora, -sïn de costumbre, -s ya hecho, -xam a punto de.", "example": "-s" },
-          { "slot": "Tiempo", "description": "-p- pasado, -a futuro, -pirin condicional; nada en presente.", "example": "-p" },
-          { "slot": "Modo", "description": "-ka 1.ª y 2.ª persona, -ti 3.ª; -ki / -pi en preguntas.", "example": "-ti" },
-          { "slot": "Plural", "description": "-ksï nosotros y ellos, -jtsï ustedes.", "example": "-ksï" }
+          {
+            "slot": "Raíz",
+            "description": "El infinitivo sin -ni.",
+            "example": "uanda"
+          },
+          {
+            "slot": "Aspecto",
+            "description": "-xa ahora, -sïn de costumbre, -s ya hecho, -xam a punto de.",
+            "example": "-s"
+          },
+          {
+            "slot": "Tiempo",
+            "description": "-p- pasado, -a futuro, -pirin condicional; nada en presente.",
+            "example": "-p"
+          },
+          {
+            "slot": "Modo",
+            "description": "-ka 1.ª y 2.ª persona, -ti 3.ª; -ki / -pi en preguntas.",
+            "example": "-ti"
+          },
+          {
+            "slot": "Plural",
+            "description": "-ksï nosotros y ellos, -jtsï ustedes.",
+            "example": "-ksï"
+          }
         ]
       },
       {
         "type": "table",
         "title": "Las terminaciones del verbo",
         "description": "Se suman a la raíz. Después de m o n, ka y ti se vuelven ga y di: sïn + ka → sïnga.",
-        "columns": ["Tiempo", "1.ª y 2.ª", "3.ª", "Pregunta"],
+        "columns": [
+          "Tiempo",
+          "1.ª y 2.ª",
+          "3.ª",
+          "Pregunta"
+        ],
         "rows": [
-          { "label": "Presente actual", "cells": ["-xaka", "-xati", "-xaki"] },
-          { "label": "Presente habitual", "cells": ["-sïnga", "-sïndi", "-sïni"] },
-          { "label": "Presente perfecto", "cells": ["-ska", "-sti", "-ski"] },
-          { "label": "Presente incoativo", "cells": ["-xamga", "-xamdi", "-xamki"] },
-          { "label": "Pasado actual", "cells": ["-xapka", "-xapti", "-xepi"] },
-          { "label": "Pasado habitual", "cells": ["-sïampka", "-sïampti", "-sïambi"] },
-          { "label": "Pasado perfecto", "cells": ["-spka", "-spti", "-spi"] },
-          { "label": "Pasado incoativo", "cells": ["-xanampka", "-xanampti", "-xanambi"] },
-          { "label": "Futuro", "cells": ["-aka", "-ati", "-a"] },
-          { "label": "Condicional", "cells": ["-piringa", "-pirindi", "-pirini"] }
+          {
+            "label": "Presente actual",
+            "cells": [
+              "-xaka",
+              "-xati",
+              "-xaki"
+            ]
+          },
+          {
+            "label": "Presente habitual",
+            "cells": [
+              "-sïnga",
+              "-sïndi",
+              "-sïni"
+            ]
+          },
+          {
+            "label": "Presente perfecto",
+            "cells": [
+              "-ska",
+              "-sti",
+              "-ski"
+            ]
+          },
+          {
+            "label": "Presente incoativo",
+            "cells": [
+              "-xamga",
+              "-xamdi",
+              "-xamki"
+            ]
+          },
+          {
+            "label": "Pasado actual",
+            "cells": [
+              "-xapka",
+              "-xapti",
+              "-xepi"
+            ]
+          },
+          {
+            "label": "Pasado habitual",
+            "cells": [
+              "-sïampka",
+              "-sïampti",
+              "-sïambi"
+            ]
+          },
+          {
+            "label": "Pasado perfecto",
+            "cells": [
+              "-spka",
+              "-spti",
+              "-spi"
+            ]
+          },
+          {
+            "label": "Pasado incoativo",
+            "cells": [
+              "-xanampka",
+              "-xanampti",
+              "-xanambi"
+            ]
+          },
+          {
+            "label": "Futuro",
+            "cells": [
+              "-aka",
+              "-ati",
+              "-a"
+            ]
+          },
+          {
+            "label": "Condicional",
+            "cells": [
+              "-piringa",
+              "-pirindi",
+              "-pirini"
+            ]
+          }
         ],
         "note": "Las formas de pregunta valen para todas las personas: ¿uandaxaki? «¿está hablando?», ¿uandaxakiksï? «¿están hablando?»."
       },
@@ -122,14 +384,61 @@
         "type": "table",
         "title": "Las personas",
         "description": "Los pronombres casi no se usan: el verbo ya dice quién. Para remarcar al sujeto se usa el pronombre o un clítico pegado al verbo.",
-        "columns": ["Persona", "Pronombre", "Clítico", "Ejemplo"],
+        "columns": [
+          "Persona",
+          "Pronombre",
+          "Clítico",
+          "Ejemplo"
+        ],
         "rows": [
-          { "label": "yo", "cells": ["ji", "-ni", "uandaxaka(ni)"] },
-          { "label": "tú", "cells": ["t'u", "-re", "uandaxaka(re)"] },
-          { "label": "él, ella", "cells": ["imá", "—", "uandaxati"] },
-          { "label": "nosotros", "cells": ["jucha", "-ksï", "uandaxakaksï"] },
-          { "label": "ustedes", "cells": ["cha", "-jtsï", "uandaxakajtsï"] },
-          { "label": "ellos, ellas", "cells": ["ts'ïmá", "-ksï", "uandaxatiksï"] }
+          {
+            "label": "yo",
+            "cells": [
+              "ji",
+              "-ni",
+              "uandaxaka(ni)"
+            ]
+          },
+          {
+            "label": "tú",
+            "cells": [
+              "t'u",
+              "-re",
+              "uandaxaka(re)"
+            ]
+          },
+          {
+            "label": "él, ella",
+            "cells": [
+              "imá",
+              "—",
+              "uandaxati"
+            ]
+          },
+          {
+            "label": "nosotros",
+            "cells": [
+              "jucha",
+              "-ksï",
+              "uandaxakaksï"
+            ]
+          },
+          {
+            "label": "ustedes",
+            "cells": [
+              "cha",
+              "-jtsï",
+              "uandaxakajtsï"
+            ]
+          },
+          {
+            "label": "ellos, ellas",
+            "cells": [
+              "ts'ïmá",
+              "-ksï",
+              "uandaxatiksï"
+            ]
+          }
         ],
         "note": "En el conjugador los clíticos de singular (-ni, -re) no se escriben; los de plural, sí."
       },
@@ -138,10 +447,54 @@
         "title": "Cuatro aspectos",
         "description": "Antes que el tiempo, el p'urhépecha dice cómo transcurre la acción. Cada aspecto tiene presente y pasado.",
         "items": [
-          { "tag": "-xa", "name": "Actual", "description": "Lo que está pasando en este momento.", "examples": [{ "from": "t'irexaka", "to": "t'irexapka", "meaning": "estoy comiendo · estaba comiendo" }] },
-          { "tag": "-sïn", "name": "Habitual", "description": "Lo que se hace de costumbre, o se sabe hacer.", "examples": [{ "from": "uarhasïnga", "to": "uarhasïampka", "meaning": "bailo · bailaba" }] },
-          { "tag": "-s", "name": "Perfecto", "description": "Lo que ya se hizo.", "examples": [{ "from": "pireska", "to": "pirespka", "meaning": "he cantado · canté" }] },
-          { "tag": "-xam", "name": "Incoativo", "description": "Lo que está a punto de pasar.", "examples": [{ "from": "pirexamga", "to": "pirexanampka", "meaning": "estoy a punto de cantar · estaba a punto de cantar" }] }
+          {
+            "tag": "-xa",
+            "name": "Actual",
+            "description": "Lo que está pasando en este momento.",
+            "examples": [
+              {
+                "from": "t'irexaka",
+                "to": "t'irexapka",
+                "meaning": "estoy comiendo · estaba comiendo"
+              }
+            ]
+          },
+          {
+            "tag": "-sïn",
+            "name": "Habitual",
+            "description": "Lo que se hace de costumbre, o se sabe hacer.",
+            "examples": [
+              {
+                "from": "uarhasïnga",
+                "to": "uarhasïampka",
+                "meaning": "bailo · bailaba"
+              }
+            ]
+          },
+          {
+            "tag": "-s",
+            "name": "Perfecto",
+            "description": "Lo que ya se hizo.",
+            "examples": [
+              {
+                "from": "pireska",
+                "to": "pirespka",
+                "meaning": "he cantado · canté"
+              }
+            ]
+          },
+          {
+            "tag": "-xam",
+            "name": "Incoativo",
+            "description": "Lo que está a punto de pasar.",
+            "examples": [
+              {
+                "from": "pirexamga",
+                "to": "pirexanampka",
+                "meaning": "estoy a punto de cantar · estaba a punto de cantar"
+              }
+            ]
+          }
         ]
       },
       {
@@ -149,11 +502,26 @@
         "title": "Órdenes",
         "description": "El imperativo es la raíz sola; en plural se le suma -e. Para prohibir se pone ásï antes, nunca «no». Ia agrega «ya, ahora».",
         "items": [
-          { "text": "uanda", "translation": "¡habla!" },
-          { "text": "uandae", "translation": "¡hablen!" },
-          { "text": "ásï uanda", "translation": "¡no hables!" },
-          { "text": "ásï t'iree", "translation": "¡no coman!" },
-          { "text": "kara ia", "translation": "¡escribe ya!" }
+          {
+            "text": "uanda",
+            "translation": "¡habla!"
+          },
+          {
+            "text": "uandae",
+            "translation": "¡hablen!"
+          },
+          {
+            "text": "ásï uanda",
+            "translation": "¡no hables!"
+          },
+          {
+            "text": "ásï t'iree",
+            "translation": "¡no coman!"
+          },
+          {
+            "text": "kara ia",
+            "translation": "¡escribe ya!"
+          }
         ]
       },
       {
@@ -161,9 +529,42 @@
         "title": "Verbos con futuro irregular",
         "description": "Jarhani, jurhani, nirani y otros cambian rha o ra por u en el futuro, y en el condicional solo conservan la primera sílaba.",
         "items": [
-          { "tag": "jarhani", "name": "estar", "description": "Futuro jaua-, condicional ja-.", "examples": [{ "from": "jauaka", "to": "japiringa", "meaning": "estaré · estaría" }] },
-          { "tag": "nirani", "name": "ir", "description": "Futuro niua-, condicional ni-.", "examples": [{ "from": "niuaka", "to": "nipiringa", "meaning": "iré · iría" }] },
-          { "tag": "jurhani", "name": "venir", "description": "Futuro jua-, condicional ju-.", "examples": [{ "from": "juaka", "to": "jupiringa", "meaning": "vendré · vendría" }] }
+          {
+            "tag": "jarhani",
+            "name": "estar",
+            "description": "Futuro jaua-, condicional ja-.",
+            "examples": [
+              {
+                "from": "jauaka",
+                "to": "japiringa",
+                "meaning": "estaré · estaría"
+              }
+            ]
+          },
+          {
+            "tag": "nirani",
+            "name": "ir",
+            "description": "Futuro niua-, condicional ni-.",
+            "examples": [
+              {
+                "from": "niuaka",
+                "to": "nipiringa",
+                "meaning": "iré · iría"
+              }
+            ]
+          },
+          {
+            "tag": "jurhani",
+            "name": "venir",
+            "description": "Futuro jua-, condicional ju-.",
+            "examples": [
+              {
+                "from": "juaka",
+                "to": "jupiringa",
+                "meaning": "vendré · vendría"
+              }
+            ]
+          }
         ]
       },
       {
@@ -171,20 +572,212 @@
         "title": "Objeto plural",
         "description": "Cuando lo que recibe la acción es plural, el verbo lleva -a- después de la raíz, y el sustantivo lleva -ni.",
         "items": [
-          { "text": "Tsïmi tsikataecha ts'ïrakuaechani t'ireaxati.", "translation": "Estas gallinas están comiendo lombrices." },
-          { "text": "Exeauaka achaatiichani.", "translation": "Veré a los señores." },
-          { "text": "Exeaue uarharichani.", "translation": "Vean a los danzantes." }
+          {
+            "text": "Tsïmi tsikataecha ts'ïrakuaechani t'ireaxati.",
+            "translation": "Estas gallinas están comiendo lombrices."
+          },
+          {
+            "text": "Exeauaka achaatiichani.",
+            "translation": "Veré a los señores."
+          },
+          {
+            "text": "Exeaue uarharichani.",
+            "translation": "Vean a los danzantes."
+          }
         ]
       },
       {
         "type": "pairs",
         "title": "Frases de ejemplo",
         "items": [
-          { "text": "¿Náts'i eranteski?", "translation": "¿Cómo amaneciste?" },
-          { "text": "Sési, ¿ka cha?", "translation": "Bien, ¿y usted?" },
-          { "text": "Diosï meiamu.", "translation": "Gracias." },
-          { "text": "Karla uandasïndi p'urhépecha jimpo.", "translation": "Karla habla en p'urhépecha." },
-          { "text": "Ji uekasïnga pireni.", "translation": "Quiero cantar." }
+          {
+            "text": "¿Náts'i eranteski?",
+            "translation": "¿Cómo amaneciste?"
+          },
+          {
+            "text": "Sési, ¿ka cha?",
+            "translation": "Bien, ¿y usted?"
+          },
+          {
+            "text": "Diosï meiamu.",
+            "translation": "Gracias."
+          },
+          {
+            "text": "Karla uandasïndi p'urhépecha jimpo.",
+            "translation": "Karla habla en p'urhépecha."
+          },
+          {
+            "text": "Ji uekasïnga pireni.",
+            "translation": "Quiero cantar."
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Todos los afijos del verbo",
+        "description": "Cada pieza que un verbo puede llevar: prefijos, sufijos, partículas y cambios de raíz.",
+        "items": [
+          {
+            "affix": "-xa-",
+            "kind": "sufijo de aspecto",
+            "meaning": "Actual: lo que pasa ahora",
+            "example": "pirexaka",
+            "translation": "estoy cantando"
+          },
+          {
+            "affix": "-sïn-",
+            "kind": "sufijo de aspecto",
+            "meaning": "Habitual",
+            "example": "piresïnga",
+            "translation": "canto"
+          },
+          {
+            "affix": "-s-",
+            "kind": "sufijo de aspecto",
+            "meaning": "Perfecto",
+            "example": "pireska",
+            "translation": "he cantado"
+          },
+          {
+            "affix": "-xam-",
+            "kind": "sufijo de aspecto",
+            "meaning": "Incoativo: a punto de",
+            "example": "pirexamga",
+            "translation": "estoy a punto de cantar"
+          },
+          {
+            "affix": "-sïam-",
+            "kind": "sufijo de aspecto",
+            "meaning": "Habitual en el pasado",
+            "example": "piresïampka",
+            "translation": "cantaba"
+          },
+          {
+            "affix": "-xanam-",
+            "kind": "sufijo de aspecto",
+            "meaning": "Incoativo en el pasado",
+            "example": "pirexanampka",
+            "translation": "estaba a punto de cantar"
+          },
+          {
+            "affix": "-p-",
+            "kind": "sufijo de tiempo",
+            "meaning": "Pasado",
+            "example": "pirespka",
+            "translation": "canté"
+          },
+          {
+            "affix": "-a-",
+            "kind": "sufijo de tiempo",
+            "meaning": "Futuro",
+            "example": "pireaka",
+            "translation": "cantaré"
+          },
+          {
+            "affix": "-pirin-",
+            "kind": "sufijo de tiempo",
+            "meaning": "Condicional",
+            "example": "pirepiringa",
+            "translation": "cantaría"
+          },
+          {
+            "affix": "-ka, -ga",
+            "kind": "sufijo de modo",
+            "meaning": "Indicativo de la 1.ª y 2.ª persona (-ga después de nasal)",
+            "example": "piresïnga",
+            "translation": "canto"
+          },
+          {
+            "affix": "-ti, -di",
+            "kind": "sufijo de modo",
+            "meaning": "Indicativo de la 3.ª persona (-di después de nasal)",
+            "example": "piresïndi",
+            "translation": "canta"
+          },
+          {
+            "affix": "-ki, -ni, -pi, -a",
+            "kind": "sufijo de modo",
+            "meaning": "Interrogativo, para todas las personas",
+            "example": "pirexaki",
+            "translation": "¿está cantando?"
+          },
+          {
+            "affix": "-ksï",
+            "kind": "sufijo de persona",
+            "meaning": "Plural: nosotros, ellos",
+            "example": "pireskaksï",
+            "translation": "hemos cantado"
+          },
+          {
+            "affix": "-jtsï",
+            "kind": "sufijo de persona",
+            "meaning": "Plural: ustedes",
+            "example": "pireskajtsï",
+            "translation": "han cantado (ustedes)"
+          },
+          {
+            "affix": "-ni, -re",
+            "kind": "clítico",
+            "meaning": "Sujeto opcional: yo, tú",
+            "example": "pirexakani",
+            "translation": "estoy cantando (yo)"
+          },
+          {
+            "affix": "-a-",
+            "kind": "sufijo",
+            "meaning": "Objeto plural, después de la raíz; con el futuro, -aua-",
+            "example": "exeaxati",
+            "translation": "los está viendo"
+          },
+          {
+            "affix": "-e",
+            "kind": "sufijo",
+            "meaning": "Imperativo plural",
+            "example": "uandae",
+            "translation": "¡hablen!"
+          },
+          {
+            "affix": "ásï",
+            "kind": "partícula",
+            "meaning": "Vetativo: prohibición",
+            "example": "ásï uanda",
+            "translation": "¡no hables!"
+          },
+          {
+            "affix": "ia",
+            "kind": "partícula",
+            "meaning": "«Ya, ahora», en las órdenes",
+            "example": "kara ia",
+            "translation": "¡escribe ya!"
+          },
+          {
+            "affix": "no",
+            "kind": "partícula",
+            "meaning": "Negación",
+            "example": "no piresïnga",
+            "translation": "no canto"
+          },
+          {
+            "affix": "-ni",
+            "kind": "sufijo",
+            "meaning": "Infinitivo",
+            "example": "pireni",
+            "translation": "cantar"
+          },
+          {
+            "affix": "-kua",
+            "kind": "sufijo",
+            "meaning": "Sustantivo de la acción o del objeto",
+            "example": "pirekua",
+            "translation": "canción"
+          },
+          {
+            "affix": "-ri",
+            "kind": "sufijo",
+            "meaning": "Quien lo hace (agentivo)",
+            "example": "pireri",
+            "translation": "cantor"
+          }
         ]
       }
     ]
@@ -192,65 +785,449 @@
   "conjugation": {
     "engine": "purhepecha",
     "persons": [
-      { "id": "1", "label": "1.ª persona", "es": 0 },
-      { "id": "2", "label": "2.ª persona", "es": 1 },
-      { "id": "3", "label": "3.ª persona", "es": 2 }
+      {
+        "id": "1",
+        "label": "1.ª persona",
+        "es": 0
+      },
+      {
+        "id": "2",
+        "label": "2.ª persona",
+        "es": 1
+      },
+      {
+        "id": "3",
+        "label": "3.ª persona",
+        "es": 2
+      }
     ],
     "tenses": [
-      { "id": "actual", "group": "Presente", "name": "Presente actual", "description": "Lo que está pasando ahora (-xa).", "form": "actual", "es": "progressive" },
-      { "id": "habitual", "group": "Presente", "name": "Presente habitual", "description": "Lo que se hace de costumbre, o se sabe hacer (-sïn).", "form": "habitual", "es": "present" },
-      { "id": "perfective", "group": "Presente", "name": "Presente perfecto", "description": "Lo que se acaba de hacer (-s).", "form": "perfective", "es": "perfect" },
-      { "id": "inceptive", "group": "Presente", "name": "Presente incoativo", "description": "Lo que está a punto de pasar (-xam).", "form": "inceptive", "es": { "tense": "present", "aux": "estar", "link": "a punto de" } },
-      { "id": "past-actual", "group": "Pasado", "name": "Pasado actual", "description": "Lo que estaba pasando cuando algo lo interrumpió (-xap).", "form": "actual", "past": true, "es": "past_progressive" },
-      { "id": "past-habitual", "group": "Pasado", "name": "Pasado habitual", "description": "Lo que se hacía antes y ya no (-sïamp).", "form": "habitual", "past": true, "es": "imperfect" },
-      { "id": "past-perfective", "group": "Pasado", "name": "Pasado perfecto", "description": "Lo que se hizo y quedó terminado (-sp).", "form": "perfective", "past": true, "es": "preterite" },
-      { "id": "past-inceptive", "group": "Pasado", "name": "Pasado incoativo", "description": "Lo que estuvo a punto de pasar (-xanamp).", "form": "inceptive", "past": true, "es": { "tense": "imperfect", "aux": "estar", "link": "a punto de" } },
-      { "id": "future", "group": "Futuro y condicional", "name": "Futuro", "description": "Lo que va a pasar (-a).", "form": "future", "es": "future" },
-      { "id": "conditional", "group": "Futuro y condicional", "name": "Condicional", "description": "Lo que pasaría (-pirin).", "form": "conditional", "es": "conditional" },
-      { "id": "imperative", "group": "Órdenes", "name": "Imperativo", "description": "La raíz sola; -e en plural.", "form": "imperative", "es": "imperative" },
-      { "id": "vetative", "group": "Órdenes", "name": "Vetativo", "description": "Para prohibir: ásï + raíz.", "form": "vetative", "es": { "tense": "imperative", "negative": true } },
-      { "id": "q-actual", "group": "Preguntas", "name": "Presente actual", "description": "-xaki, para todas las personas.", "form": "actual", "question": true, "es": { "tense": "progressive", "question": true } },
-      { "id": "q-habitual", "group": "Preguntas", "name": "Presente habitual", "description": "-sïni.", "form": "habitual", "question": true, "es": { "tense": "present", "question": true } },
-      { "id": "q-perfective", "group": "Preguntas", "name": "Presente perfecto", "description": "-ski.", "form": "perfective", "question": true, "es": { "tense": "perfect", "question": true } },
-      { "id": "q-past-actual", "group": "Preguntas", "name": "Pasado actual", "description": "-xepi.", "form": "actual", "past": true, "question": true, "es": { "tense": "past_progressive", "question": true } },
-      { "id": "q-past-habitual", "group": "Preguntas", "name": "Pasado habitual", "description": "-sïambi.", "form": "habitual", "past": true, "question": true, "es": { "tense": "imperfect", "question": true } },
-      { "id": "q-past-perfective", "group": "Preguntas", "name": "Pasado perfecto", "description": "-spi.", "form": "perfective", "past": true, "question": true, "es": { "tense": "preterite", "question": true } },
-      { "id": "q-future", "group": "Preguntas", "name": "Futuro", "description": "-a.", "form": "future", "question": true, "es": { "tense": "future", "question": true } },
-      { "id": "q-conditional", "group": "Preguntas", "name": "Condicional", "description": "-pirini.", "form": "conditional", "question": true, "es": { "tense": "conditional", "question": true } },
-      { "id": "neg-actual", "group": "Negativo", "name": "Presente actual", "description": "no + verbo.", "form": "actual", "negative": true, "es": "progressive" },
-      { "id": "neg-habitual", "group": "Negativo", "name": "Presente habitual", "description": "no + verbo.", "form": "habitual", "negative": true, "es": "present" },
-      { "id": "neg-past-perfective", "group": "Negativo", "name": "Pasado perfecto", "description": "no + verbo.", "form": "perfective", "past": true, "negative": true, "es": "preterite" },
-      { "id": "neg-future", "group": "Negativo", "name": "Futuro", "description": "no + verbo.", "form": "future", "negative": true, "es": "future" }
+      {
+        "id": "actual",
+        "group": "Presente",
+        "name": "Presente actual",
+        "description": "Lo que está pasando ahora (-xa).",
+        "form": "actual",
+        "es": "progressive"
+      },
+      {
+        "id": "habitual",
+        "group": "Presente",
+        "name": "Presente habitual",
+        "description": "Lo que se hace de costumbre, o se sabe hacer (-sïn).",
+        "form": "habitual",
+        "es": "present"
+      },
+      {
+        "id": "perfective",
+        "group": "Presente",
+        "name": "Presente perfecto",
+        "description": "Lo que se acaba de hacer (-s).",
+        "form": "perfective",
+        "es": "perfect"
+      },
+      {
+        "id": "inceptive",
+        "group": "Presente",
+        "name": "Presente incoativo",
+        "description": "Lo que está a punto de pasar (-xam).",
+        "form": "inceptive",
+        "es": {
+          "tense": "present",
+          "aux": "estar",
+          "link": "a punto de"
+        }
+      },
+      {
+        "id": "past-actual",
+        "group": "Pasado",
+        "name": "Pasado actual",
+        "description": "Lo que estaba pasando cuando algo lo interrumpió (-xap).",
+        "form": "actual",
+        "past": true,
+        "es": "past_progressive"
+      },
+      {
+        "id": "past-habitual",
+        "group": "Pasado",
+        "name": "Pasado habitual",
+        "description": "Lo que se hacía antes y ya no (-sïamp).",
+        "form": "habitual",
+        "past": true,
+        "es": "imperfect"
+      },
+      {
+        "id": "past-perfective",
+        "group": "Pasado",
+        "name": "Pasado perfecto",
+        "description": "Lo que se hizo y quedó terminado (-sp).",
+        "form": "perfective",
+        "past": true,
+        "es": "preterite"
+      },
+      {
+        "id": "past-inceptive",
+        "group": "Pasado",
+        "name": "Pasado incoativo",
+        "description": "Lo que estuvo a punto de pasar (-xanamp).",
+        "form": "inceptive",
+        "past": true,
+        "es": {
+          "tense": "imperfect",
+          "aux": "estar",
+          "link": "a punto de"
+        }
+      },
+      {
+        "id": "future",
+        "group": "Futuro y condicional",
+        "name": "Futuro",
+        "description": "Lo que va a pasar (-a).",
+        "form": "future",
+        "es": "future"
+      },
+      {
+        "id": "conditional",
+        "group": "Futuro y condicional",
+        "name": "Condicional",
+        "description": "Lo que pasaría (-pirin).",
+        "form": "conditional",
+        "es": "conditional"
+      },
+      {
+        "id": "imperative",
+        "group": "Órdenes",
+        "name": "Imperativo",
+        "description": "La raíz sola; -e en plural.",
+        "form": "imperative",
+        "es": "imperative"
+      },
+      {
+        "id": "vetative",
+        "group": "Órdenes",
+        "name": "Vetativo",
+        "description": "Para prohibir: ásï + raíz.",
+        "form": "vetative",
+        "es": {
+          "tense": "imperative",
+          "negative": true
+        }
+      },
+      {
+        "id": "q-actual",
+        "group": "Preguntas",
+        "name": "Presente actual",
+        "description": "-xaki, para todas las personas.",
+        "form": "actual",
+        "question": true,
+        "es": {
+          "tense": "progressive",
+          "question": true
+        }
+      },
+      {
+        "id": "q-habitual",
+        "group": "Preguntas",
+        "name": "Presente habitual",
+        "description": "-sïni.",
+        "form": "habitual",
+        "question": true,
+        "es": {
+          "tense": "present",
+          "question": true
+        }
+      },
+      {
+        "id": "q-perfective",
+        "group": "Preguntas",
+        "name": "Presente perfecto",
+        "description": "-ski.",
+        "form": "perfective",
+        "question": true,
+        "es": {
+          "tense": "perfect",
+          "question": true
+        }
+      },
+      {
+        "id": "q-past-actual",
+        "group": "Preguntas",
+        "name": "Pasado actual",
+        "description": "-xepi.",
+        "form": "actual",
+        "past": true,
+        "question": true,
+        "es": {
+          "tense": "past_progressive",
+          "question": true
+        }
+      },
+      {
+        "id": "q-past-habitual",
+        "group": "Preguntas",
+        "name": "Pasado habitual",
+        "description": "-sïambi.",
+        "form": "habitual",
+        "past": true,
+        "question": true,
+        "es": {
+          "tense": "imperfect",
+          "question": true
+        }
+      },
+      {
+        "id": "q-past-perfective",
+        "group": "Preguntas",
+        "name": "Pasado perfecto",
+        "description": "-spi.",
+        "form": "perfective",
+        "past": true,
+        "question": true,
+        "es": {
+          "tense": "preterite",
+          "question": true
+        }
+      },
+      {
+        "id": "q-future",
+        "group": "Preguntas",
+        "name": "Futuro",
+        "description": "-a.",
+        "form": "future",
+        "question": true,
+        "es": {
+          "tense": "future",
+          "question": true
+        }
+      },
+      {
+        "id": "q-conditional",
+        "group": "Preguntas",
+        "name": "Condicional",
+        "description": "-pirini.",
+        "form": "conditional",
+        "question": true,
+        "es": {
+          "tense": "conditional",
+          "question": true
+        }
+      },
+      {
+        "id": "neg-actual",
+        "group": "Negativo",
+        "name": "Presente actual",
+        "description": "no + verbo.",
+        "form": "actual",
+        "negative": true,
+        "es": "progressive"
+      },
+      {
+        "id": "neg-habitual",
+        "group": "Negativo",
+        "name": "Presente habitual",
+        "description": "no + verbo.",
+        "form": "habitual",
+        "negative": true,
+        "es": "present"
+      },
+      {
+        "id": "neg-past-perfective",
+        "group": "Negativo",
+        "name": "Pasado perfecto",
+        "description": "no + verbo.",
+        "form": "perfective",
+        "past": true,
+        "negative": true,
+        "es": "preterite"
+      },
+      {
+        "id": "neg-future",
+        "group": "Negativo",
+        "name": "Futuro",
+        "description": "no + verbo.",
+        "form": "future",
+        "negative": true,
+        "es": "future"
+      }
     ],
     "lexicon": [
-      { "entry": "uandani", "root": "uanda", "meaning": "hablar", "es": "hablar" },
-      { "entry": "pireni", "root": "pire", "meaning": "cantar", "es": "cantar" },
-      { "entry": "t'ireni", "root": "t'ire", "meaning": "comer", "es": "comer" },
-      { "entry": "exeni", "root": "exe", "meaning": "ver, mirar", "es": "ver" },
-      { "entry": "xukani", "root": "xuka", "meaning": "regañar", "es": "regañar" },
-      { "entry": "ch'anani", "root": "ch'ana", "meaning": "jugar", "es": "jugar" },
-      { "entry": "karani", "root": "kara", "meaning": "escribir", "es": "escribir" },
-      { "entry": "arhintani", "root": "arhinta", "meaning": "leer", "es": "leer" },
-      { "entry": "uarhani", "root": "uarha", "meaning": "bailar", "es": "bailar" },
-      { "entry": "piani", "root": "pia", "meaning": "comprar", "es": "comprar" },
-      { "entry": "sïpani", "root": "sïpa", "meaning": "robar", "es": "robar" },
-      { "entry": "atani", "root": "ata", "meaning": "pegar; cazar", "es": "pegar" },
-      { "entry": "jupani", "root": "jupa", "meaning": "lavar", "es": "lavar" },
-      { "entry": "uarhoni", "root": "uarho", "meaning": "pescar", "es": "pescar" },
-      { "entry": "urhuni", "root": "urhu", "meaning": "moler", "es": "moler" },
-      { "entry": "tepeni", "root": "tepe", "meaning": "tejer", "es": "tejer" },
-      { "entry": "uiriani", "root": "uiria", "meaning": "correr", "es": "correr" },
-      { "entry": "tarheni", "root": "tarhe", "meaning": "arar", "es": "arar" },
-      { "entry": "jatani", "root": "jata", "meaning": "montar", "es": "montar" },
-      { "entry": "k'uini", "root": "k'ui", "meaning": "dormir", "es": "dormir" },
-      { "entry": "anchikurhini", "root": "anchikurhi", "meaning": "trabajar", "es": "trabajar" },
-      { "entry": "jorhengurhini", "root": "jorhengurhi", "meaning": "aprender, enseñarse", "es": "aprender" },
-      { "entry": "mitini", "root": "miti", "meaning": "saber", "es": "saber" },
-      { "entry": "uekani", "root": "ueka", "meaning": "querer", "es": "querer" },
-      { "entry": "uni", "root": "u", "meaning": "poder; hacer", "es": "poder" },
-      { "entry": "jarhani", "root": "jarha", "future": "jau", "short": "ja", "meaning": "estar, haber", "es": "estar", "note": "Futuro irregular jauaka; condicional japiringa." },
-      { "entry": "nirani", "root": "nira", "future": "niu", "short": "ni", "meaning": "ir", "es": "ir", "note": "Futuro irregular niuaka; condicional nipiringa." },
-      { "entry": "jurhani", "root": "jurha", "future": "ju", "short": "ju", "meaning": "venir", "es": "venir", "note": "Futuro irregular juaka; condicional jupiringa." }
+      {
+        "entry": "uandani",
+        "root": "uanda",
+        "meaning": "hablar",
+        "es": "hablar"
+      },
+      {
+        "entry": "pireni",
+        "root": "pire",
+        "meaning": "cantar",
+        "es": "cantar"
+      },
+      {
+        "entry": "t'ireni",
+        "root": "t'ire",
+        "meaning": "comer",
+        "es": "comer"
+      },
+      {
+        "entry": "exeni",
+        "root": "exe",
+        "meaning": "ver, mirar",
+        "es": "ver"
+      },
+      {
+        "entry": "xukani",
+        "root": "xuka",
+        "meaning": "regañar",
+        "es": "regañar"
+      },
+      {
+        "entry": "ch'anani",
+        "root": "ch'ana",
+        "meaning": "jugar",
+        "es": "jugar"
+      },
+      {
+        "entry": "karani",
+        "root": "kara",
+        "meaning": "escribir",
+        "es": "escribir"
+      },
+      {
+        "entry": "arhintani",
+        "root": "arhinta",
+        "meaning": "leer",
+        "es": "leer"
+      },
+      {
+        "entry": "uarhani",
+        "root": "uarha",
+        "meaning": "bailar",
+        "es": "bailar"
+      },
+      {
+        "entry": "piani",
+        "root": "pia",
+        "meaning": "comprar",
+        "es": "comprar"
+      },
+      {
+        "entry": "sïpani",
+        "root": "sïpa",
+        "meaning": "robar",
+        "es": "robar"
+      },
+      {
+        "entry": "atani",
+        "root": "ata",
+        "meaning": "pegar; cazar",
+        "es": "pegar"
+      },
+      {
+        "entry": "jupani",
+        "root": "jupa",
+        "meaning": "lavar",
+        "es": "lavar"
+      },
+      {
+        "entry": "uarhoni",
+        "root": "uarho",
+        "meaning": "pescar",
+        "es": "pescar"
+      },
+      {
+        "entry": "urhuni",
+        "root": "urhu",
+        "meaning": "moler",
+        "es": "moler"
+      },
+      {
+        "entry": "tepeni",
+        "root": "tepe",
+        "meaning": "tejer",
+        "es": "tejer"
+      },
+      {
+        "entry": "uiriani",
+        "root": "uiria",
+        "meaning": "correr",
+        "es": "correr"
+      },
+      {
+        "entry": "tarheni",
+        "root": "tarhe",
+        "meaning": "arar",
+        "es": "arar"
+      },
+      {
+        "entry": "jatani",
+        "root": "jata",
+        "meaning": "montar",
+        "es": "montar"
+      },
+      {
+        "entry": "k'uini",
+        "root": "k'ui",
+        "meaning": "dormir",
+        "es": "dormir"
+      },
+      {
+        "entry": "anchikurhini",
+        "root": "anchikurhi",
+        "meaning": "trabajar",
+        "es": "trabajar"
+      },
+      {
+        "entry": "jorhengurhini",
+        "root": "jorhengurhi",
+        "meaning": "aprender, enseñarse",
+        "es": "aprender"
+      },
+      {
+        "entry": "mitini",
+        "root": "miti",
+        "meaning": "saber",
+        "es": "saber"
+      },
+      {
+        "entry": "uekani",
+        "root": "ueka",
+        "meaning": "querer",
+        "es": "querer"
+      },
+      {
+        "entry": "uni",
+        "root": "u",
+        "meaning": "poder; hacer",
+        "es": "poder"
+      },
+      {
+        "entry": "jarhani",
+        "root": "jarha",
+        "future": "jau",
+        "short": "ja",
+        "meaning": "estar, haber",
+        "es": "estar",
+        "note": "Futuro irregular jauaka; condicional japiringa."
+      },
+      {
+        "entry": "nirani",
+        "root": "nira",
+        "future": "niu",
+        "short": "ni",
+        "meaning": "ir",
+        "es": "ir",
+        "note": "Futuro irregular niuaka; condicional nipiringa."
+      },
+      {
+        "entry": "jurhani",
+        "root": "jurha",
+        "future": "ju",
+        "short": "ju",
+        "meaning": "venir",
+        "es": "venir",
+        "note": "Futuro irregular juaka; condicional jupiringa."
+      }
     ]
   }
 }

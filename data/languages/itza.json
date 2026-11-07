@@ -583,6 +583,216 @@
             "translation": "¡Sí voy!"
           }
         ]
+      },
+      {
+        "type": "affixes",
+        "title": "Todos los afijos del verbo",
+        "description": "Cada pieza que un verbo puede llevar: prefijos, sufijos, partículas y cambios de raíz.",
+        "items": [
+          {
+            "affix": "k-",
+            "kind": "aspecto",
+            "meaning": "Incompletivo: costumbre, lo que pasa siempre",
+            "example": "kinwenel",
+            "translation": "duermo"
+          },
+          {
+            "affix": "tan",
+            "kind": "aspecto",
+            "meaning": "Durativo: lo que está pasando",
+            "example": "tan inwenel",
+            "translation": "estoy durmiendo"
+          },
+          {
+            "affix": "kil … -ej",
+            "kind": "aspecto",
+            "meaning": "Puntual: «cuando…»",
+            "example": "kil inwenelej",
+            "translation": "cuando duermo"
+          },
+          {
+            "affix": "tantoj",
+            "kind": "aspecto",
+            "meaning": "Pasado inmediato",
+            "example": "tantoj inwenel",
+            "translation": "acabo de dormir"
+          },
+          {
+            "affix": "t-",
+            "kind": "aspecto",
+            "meaning": "Completivo de los transitivos",
+            "example": "tinwilaj",
+            "translation": "lo vi"
+          },
+          {
+            "affix": "je' … -ej",
+            "kind": "aspecto",
+            "meaning": "Asegurativo: lo que seguro pasará",
+            "example": "je' inwenelej",
+            "translation": "dormiré"
+          },
+          {
+            "affix": "ka'aj",
+            "kind": "auxiliar",
+            "meaning": "«Ir a»: futuro cercano",
+            "example": "inka'aj ti wenel",
+            "translation": "voy a dormir"
+          },
+          {
+            "affix": "k'ab'et, tak, yan, patal, suk",
+            "kind": "auxiliar",
+            "meaning": "Necesidad, deseo, obligación, habilidad, costumbre",
+            "example": "k'ab'et inwenel",
+            "translation": "necesito dormir"
+          },
+          {
+            "affix": "olak",
+            "kind": "auxiliar",
+            "meaning": "«Casi»",
+            "example": "olak inwenel",
+            "translation": "casi dormí"
+          },
+          {
+            "affix": "kajij, jop'ij, jo'mij, ts'o'kij",
+            "kind": "auxiliar",
+            "meaning": "Empezar, comenzar, terminar, ya",
+            "example": "kajij inwenel",
+            "translation": "empecé a dormir"
+          },
+          {
+            "affix": "ka'",
+            "kind": "partícula",
+            "meaning": "Subjuntivo: «que…»",
+            "example": "ka' weneken",
+            "translation": "que duerma"
+          },
+          {
+            "affix": "b'ikij",
+            "kind": "partícula",
+            "meaning": "Advertencia: «¡cuidado!»",
+            "example": "b'ikij weneken",
+            "translation": "¡cuidado!, podría dormir"
+          },
+          {
+            "affix": "ko'ox",
+            "kind": "partícula",
+            "meaning": "Exhortativo: «vamos a…»",
+            "example": "ko'ox ti wenel",
+            "translation": "vamos a dormir"
+          },
+          {
+            "affix": "ko'on, ko'one'ex",
+            "kind": "partícula",
+            "meaning": "Invitación: «ven a…»",
+            "example": "ko'on ti wenel",
+            "translation": "ven a dormir"
+          },
+          {
+            "affix": "ma'",
+            "kind": "partícula",
+            "meaning": "Negación",
+            "example": "ma' tan inwenel",
+            "translation": "no duermo"
+          },
+          {
+            "affix": "in(w)-, a(w)-, u(y)-",
+            "kind": "prefijo (juego A)",
+            "meaning": "Sujeto: yo, tú, él/ella; ante vocal suman w o y",
+            "example": "kinwilik",
+            "translation": "lo veo"
+          },
+          {
+            "affix": "k-, ki-",
+            "kind": "prefijo (juego A)",
+            "meaning": "Sujeto: nosotros",
+            "example": "kiwilik",
+            "translation": "lo vemos"
+          },
+          {
+            "affix": "-e'ex, -o'",
+            "kind": "sufijo",
+            "meaning": "Plural del juego A: ustedes, ellos",
+            "example": "kawenele'ex",
+            "translation": "duermen (ustedes)"
+          },
+          {
+            "affix": "-en, -ech, -ij / Ø",
+            "kind": "sufijo (juego B)",
+            "meaning": "Objeto; sujeto intransitivo en el completivo: yo, tú, él/ella",
+            "example": "wenen",
+            "translation": "dormí"
+          },
+          {
+            "affix": "-o'on, -e'ex, -o'",
+            "kind": "sufijo (juego B)",
+            "meaning": "Nosotros, ustedes, ellos",
+            "example": "weno'",
+            "translation": "durmieron"
+          },
+          {
+            "affix": "-Vl",
+            "kind": "sufijo de estatus",
+            "meaning": "Incompletivo intransitivo: repite la vocal de la raíz",
+            "example": "wenel",
+            "translation": "dormir"
+          },
+          {
+            "affix": "-ik",
+            "kind": "sufijo de estatus",
+            "meaning": "Incompletivo transitivo",
+            "example": "kinwilik",
+            "translation": "lo veo"
+          },
+          {
+            "affix": "-aj",
+            "kind": "sufijo de estatus",
+            "meaning": "Completivo transitivo",
+            "example": "tinwilaj",
+            "translation": "lo vi"
+          },
+          {
+            "affix": "-Vk",
+            "kind": "sufijo de estatus",
+            "meaning": "Dependiente intransitivo: subjuntivo, advertencia",
+            "example": "ka' weneken",
+            "translation": "que duerma"
+          },
+          {
+            "affix": "-V', -ej",
+            "kind": "sufijo de estatus",
+            "meaning": "Dependiente transitivo",
+            "example": "ka' inwila'",
+            "translation": "que lo vea"
+          },
+          {
+            "affix": "-en",
+            "kind": "sufijo de estatus",
+            "meaning": "Imperativo intransitivo",
+            "example": "wenen!",
+            "translation": "¡duerme!"
+          },
+          {
+            "affix": "-maj, -a'an",
+            "kind": "sufijo",
+            "meaning": "Perfecto: transitivo, intransitivo",
+            "example": "inwilmaj",
+            "translation": "lo he visto"
+          },
+          {
+            "affix": "-t-",
+            "kind": "sufijo",
+            "meaning": "Forma verbos transitivos (en el perfecto, -m-)",
+            "example": "jantik",
+            "translation": "comerlo"
+          },
+          {
+            "affix": "-ej",
+            "kind": "sufijo",
+            "meaning": "Cierra el puntual y el asegurativo",
+            "example": "je' inwenelej",
+            "translation": "dormiré"
+          }
+        ]
       }
     ]
   },

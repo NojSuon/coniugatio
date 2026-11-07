@@ -77,6 +77,8 @@ pub enum Form {
     Going,
     /// onikchiuato: "fui a hacerlo"
     Went,
+    /// onikchiuka, otlâjtojka: "lo había hecho" (past stem + -ka).
+    Pluperfect,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -312,6 +314,11 @@ fn build(verb: &Verb, form: Form, person: usize, plural: bool) -> Option<String>
         Form::Admonitive => (verb.admonitive(), "", "tin"),
         Form::Going => (verb.root.clone(), "tiu", "tin"),
         Form::Went => (verb.root.clone(), "to", "ton"),
+        // Sullivan: the past stem + -ka (-j-ka in classes 3 and 4).
+        Form::Pluperfect => match verb.class {
+            1 | 2 => (verb.preterite().0, "ka", "kaj"),
+            _ => (verb.preterite().0, "jka", "jkaj"),
+        },
     };
 
     // Subject: the optative uses xi- for "tú" and "ustedes" (§5.5.2).
@@ -347,7 +354,7 @@ fn build(verb: &Verb, form: Form, person: usize, plural: bool) -> Option<String>
     };
 
     let mut pieces = Vec::new();
-    if matches!(form, Form::Preterite | Form::Went) {
+    if matches!(form, Form::Preterite | Form::Went | Form::Pluperfect) {
         pieces.push((Piece::Antecessive, "o".to_string()));
     }
     pieces.push((Piece::Subject, subject));
@@ -543,7 +550,7 @@ mod tests {
         assert_eq!(infer_class("machtia"), 3);
     }
 
-    // Wright Carr §5.1.1–5.1.3; Sun's course: tikchiua
+    // Wright Carr §5.1.1–5.1.3: tikchiua
     #[test]
     fn present() {
         let chiua = verb("chiua", Object::Ki, None, false);
@@ -599,7 +606,7 @@ mod tests {
         );
     }
 
-    // The circumflex marks a merged vowel (Sun's course: tlâjtoa, tôttaskej)
+    // The circumflex marks a merged vowel (Tlâjkuilolpamitl: tlâjtoa, tôttaskej)
     #[test]
     fn vowel_merging() {
         let tlajtoa = verb("ijtoa", Object::Tla, None, true);
@@ -641,6 +648,14 @@ mod tests {
         assert_eq!(build(&chiua, Form::Going, 0, true).unwrap(), "tikchiuatin");
         assert_eq!(build(&chiua, Form::Went, 0, true).unwrap(), "otikchiuaton");
         assert_eq!(build(&chiua, Form::Went, 0, false).unwrap(), "onikchiuato");
+        assert_eq!(
+            build(&chiua, Form::Pluperfect, 0, false).unwrap(),
+            "onikchiuka"
+        );
+        assert_eq!(
+            build(&chiua, Form::Pluperfect, 0, true).unwrap(),
+            "otikchiukaj"
+        );
         let ixmati = verb("ixmati", Object::Ki, None, false);
         assert_eq!(
             build(&ixmati, Form::Future, 0, false).unwrap(),
