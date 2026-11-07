@@ -2,7 +2,7 @@
   "name": "Zoque",
   "variant": "Central Zoque (Copainalá)",
   "region": "Copainalá, Chiapas",
-  "summary": "A Mixe-Zoquean language of northwestern Chiapas. Its speakers call it otetsame or ote; in Copainalá and Tecpatán, tsunitsame.",
+  "summary": "A Mixe-Zoquean language of northwestern Chiapas. In Copainalá and Tecpatán its speakers call it tsunitsame or tsuni; in other towns, otetsame or ote.",
   "conjugator": {
     "label": "Root or verb",
     "hint": "Type the root of the verb (poy «run», tsäjk «do it») or its past form, as in the dictionary (poyu, tsyäjku).",
@@ -28,7 +28,7 @@
   },
   "about": [
     "Zoque is a language of the Mixe-Zoquean family, related to Mixe and Popoluca. It is spoken in northwestern Chiapas, in towns such as Copainalá, Tecpatán, Ocotepec, Chapultenango, Francisco León and Tapalapa, and also in the Chimalapas of Oaxaca.",
-    "Its speakers call it otetsame or ote, and in Copainalá and Tecpatán tsunitsame or tsuni. The eruption of the Chichonal volcano in 1982 displaced many Zoque communities and scattered their speakers.",
+    "In Copainalá and Tecpatán its speakers call it tsunitsame or tsuni; in other towns, otetsame or ote. The eruption of the Chichonal volcano in 1982 displaced many Zoque communities and scattered their speakers.",
     "The Zoque verb marks the person twice: with prefixes that change the first consonant of the root (tsäjk → tsyäjku «he/she did it») and with pronouns attached at the end (poyu'äj «I ran»). It tells apart «we» with and without the listener."
   ],
   "orthography": {

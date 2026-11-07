@@ -1,13 +1,13 @@
 {
   "slug": "zoque",
   "name": "zoque",
-  "endonym": "otetsame",
+  "endonym": "tsunitsame",
   "variant": "zoque del centro (Copainalá)",
   "region": "Copainalá, Chiapas",
   "status": "available",
   "order": 7,
   "series": "jade",
-  "summary": "Lengua mixe-zoque del noroeste de Chiapas. Sus hablantes la llaman otetsame u ote; en Copainalá y Tecpatán, tsunitsame.",
+  "summary": "Lengua mixe-zoque del noroeste de Chiapas. En Copainalá y Tecpatán sus hablantes la llaman tsunitsame o tsuni; en otros pueblos, otetsame u ote.",
   "lang_code": "zoc",
   "conjugator": {
     "label": "Raíz o verbo",
@@ -42,7 +42,7 @@
   },
   "about": [
     "El zoque es una lengua de la familia mixe-zoque, pariente del mixe y del popoluca. Se habla en el noroeste de Chiapas, en municipios como Copainalá, Tecpatán, Ocotepec, Chapultenango, Francisco León y Tapalapa, y también en los Chimalapas de Oaxaca.",
-    "Sus hablantes la llaman otetsame u ote, y en Copainalá y Tecpatán tsunitsame o tsuni. La erupción del volcán Chichonal, en 1982, desplazó a muchas comunidades zoques y dispersó a sus hablantes.",
+    "En Copainalá y Tecpatán sus hablantes la llaman tsunitsame o tsuni; en otros pueblos, otetsame u ote. La erupción del volcán Chichonal, en 1982, desplazó a muchas comunidades zoques y dispersó a sus hablantes.",
     "El verbo zoque marca a la persona dos veces: con prefijos que cambian la primera consonante de la raíz (tsäjk → tsyäjku «lo hizo») y con pronombres pegados al final (poyu'äj «corrí»). Distingue «nosotros» con y sin quien escucha."
   ],
   "orthography": {

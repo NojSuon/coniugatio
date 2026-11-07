@@ -1,4 +1,4 @@
-//! Conjugation for Zoque (otetsame / tsunitsame) of Copainalá, Chiapas
+//! Conjugation for Zoque (tsunitsame) of Copainalá, Chiapas
 //! (zoque del centro), written with the INALI *Norma de escritura de la
 //! lengua otetzame* (2014), with ts for the affricate as the community
 //! prefers: a e i o u ä; j k l m n nh p r s t ts w y '.
