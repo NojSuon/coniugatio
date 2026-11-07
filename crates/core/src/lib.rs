@@ -12,6 +12,7 @@ pub mod otomi;
 pub mod purhepecha;
 pub mod spanish;
 pub mod yucatec;
+pub mod zoque;
 
 use serde::{Deserialize, Serialize};
 
@@ -34,6 +35,9 @@ pub enum Engine {
     /// Like Yucatec, with set A joined to the verb and uch for activity
     /// verbs. See `mopan`.
     Mopan(mopan::Conjugation),
+    /// Person prefixes and enclitics, -tam- / -yaj- plurals, -pa / -u. See
+    /// `zoque`.
+    Zoque(zoque::Conjugation),
 }
 
 impl Engine {
@@ -54,6 +58,7 @@ impl Engine {
             Engine::Purhepecha(c) => c.conjugate_with(verb, opts),
             Engine::Yucatec(c) => c.conjugate_with(verb, opts),
             Engine::Mopan(c) => c.conjugate_with(verb, opts),
+            Engine::Zoque(c) => c.conjugate_with(verb, opts),
         }
     }
 
@@ -66,6 +71,7 @@ impl Engine {
             Engine::Purhepecha(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Yucatec(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Mopan(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Zoque(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
     }
 }
