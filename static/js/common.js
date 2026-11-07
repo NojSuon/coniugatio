@@ -38,13 +38,20 @@ export function escapeHtml(text) {
 // Fredoka has no glyph for the line-below mark (U+0331, as in u̱), so the
 // line is drawn with CSS under the letter and the real mark is kept in a
 // visually hidden span: the word looks consistent and still copies as "u̱".
+// ISO 639-3 code of the language on this page (ote, itz…), for lang="".
+let langCode = "";
+export function setLangCode(code) {
+  langCode = code || "";
+}
+
 export function langWord(text, tag = "span", extra = "") {
   const html = escapeHtml(String(text).normalize("NFC")).replace(
     /(\p{L})̱/gu,
     '<span class="lb">$1<span class="lb-mark">̱</span></span>'
   );
   const cls = `lang${extra ? " " + extra : ""}`;
-  return `<${tag} class="${cls}" lang="ote">${html}</${tag}>`;
+  const code = langCode ? ` lang="${langCode}"` : "";
+  return `<${tag} class="${cls}"${code}>${html}</${tag}>`;
 }
 
 export function renderHeader(current) {

@@ -8,6 +8,19 @@
   "order": 1,
   "series": "mar",
   "summary": "Conjuga verbos con proclíticos de persona y tiempo, y descubre cómo cambia la raíz.",
+  "lang_code": "ote",
+  "conjugator": {
+    "label": "Raíz del verbo",
+    "hint": "Escribe la raíz de un verbo, como la encuentras en el diccionario.",
+    "placeholder": "pädi",
+    "keyboard": [
+      "'",
+      "ä",
+      "e̱",
+      "o̱",
+      "u̱"
+    ]
+  },
   "source": {
     "short": "Diccionario del hñähñu (otomí) del Valle del Mezquital, ILV, 2010",
     "full": "Luis Hernández Cruz, Moisés Victoria Torquemada y Donaldo Sinclair Crawford. Diccionario del hñähñu (otomí) del Valle del Mezquital, estado de Hidalgo. 2.ª ed. electrónica. Instituto Lingüístico de Verano, 2010. Notas gramaticales de Doris Bartholomew.",
@@ -262,60 +275,66 @@
         "meaning": "llorar"
       }
     ],
-    "vowels": {
-      "oral": [
-        {
-          "letter": "i",
-          "ipa": "i"
-        },
-        {
-          "letter": "u̱",
-          "ipa": "ɨ"
-        },
-        {
-          "letter": "u",
-          "ipa": "u"
-        },
-        {
-          "letter": "e",
-          "ipa": "e"
-        },
-        {
-          "letter": "o̱",
-          "ipa": "ʌ"
-        },
-        {
-          "letter": "o",
-          "ipa": "o"
-        },
-        {
-          "letter": "e̱",
-          "ipa": "æ"
-        },
-        {
-          "letter": "a",
-          "ipa": "a"
-        }
-      ],
-      "nasal": [
-        {
-          "letter": "ä",
-          "ipa": "ã"
-        },
-        {
-          "letter": "ë",
-          "ipa": "ẽ"
-        },
-        {
-          "letter": "ï",
-          "ipa": "ĩ"
-        },
-        {
-          "letter": "ü",
-          "ipa": "ũ"
-        }
-      ]
-    },
+    "vowels": [
+      {
+        "title": "Vocales orales",
+        "items": [
+          {
+            "letter": "i",
+            "ipa": "i"
+          },
+          {
+            "letter": "u̱",
+            "ipa": "ɨ"
+          },
+          {
+            "letter": "u",
+            "ipa": "u"
+          },
+          {
+            "letter": "e",
+            "ipa": "e"
+          },
+          {
+            "letter": "o̱",
+            "ipa": "ʌ"
+          },
+          {
+            "letter": "o",
+            "ipa": "o"
+          },
+          {
+            "letter": "e̱",
+            "ipa": "æ"
+          },
+          {
+            "letter": "a",
+            "ipa": "a"
+          }
+        ]
+      },
+      {
+        "title": "Vocales nasales",
+        "items": [
+          {
+            "letter": "ä",
+            "ipa": "ã"
+          },
+          {
+            "letter": "ë",
+            "ipa": "ẽ"
+          },
+          {
+            "letter": "ï",
+            "ipa": "ĩ"
+          },
+          {
+            "letter": "ü",
+            "ipa": "ũ"
+          }
+        ]
+      }
+    ],
     "notes": [
       "De las vocales nasales, solo la ä se escribe. La ë, la ï y la ü existen en la lengua, pero normalmente no se marcan.",
       "El saltillo va después de ch, k, t y ts (k'eñä), y antes de b, m, n, ñ, r, u e y ('ba, 'ñu).",
@@ -325,207 +344,239 @@
   },
   "grammar": {
     "intro": "Para conjugar un verbo en hñähñu, pon un proclítico antes de la raíz. El proclítico dice quién hace la acción y cuándo.",
-    "formula": [
+    "blocks": [
       {
-        "slot": "Proclítico",
-        "description": "Persona y tiempo. Con hin- delante, la frase es negativa.",
-        "example": "bi"
+        "type": "formula",
+        "items": [
+          {
+            "slot": "Proclítico",
+            "description": "Persona y tiempo. Con hin- delante, la frase es negativa.",
+            "example": "bi"
+          },
+          {
+            "slot": "Raíz",
+            "description": "El verbo. En el pretérito y el futuro puede cambiar su primera letra.",
+            "example": "bädi"
+          },
+          {
+            "slot": "Plural",
+            "description": "Sufijo -hu̱ para «nosotros» y «ustedes».",
+            "example": "-hu̱"
+          }
+        ]
       },
       {
-        "slot": "Raíz",
-        "description": "El verbo. En el pretérito y el futuro puede cambiar su primera letra.",
-        "example": "bädi"
+        "type": "pairs",
+        "title": "El tono del proclítico cambia el significado",
+        "description": "Fíjate en la tilde: marca un tono alto.",
+        "items": [
+          {
+            "text": "dí xipi",
+            "translation": "yo le digo"
+          },
+          {
+            "text": "di xipi",
+            "translation": "él le dice"
+          },
+          {
+            "text": "dá xipi",
+            "translation": "yo le dije"
+          },
+          {
+            "text": "da xipi",
+            "translation": "él le dirá"
+          },
+          {
+            "text": "gá xipi",
+            "translation": "tú le dijiste"
+          },
+          {
+            "text": "ga xipi",
+            "translation": "yo le diré"
+          }
+        ]
       },
       {
-        "slot": "Plural",
-        "description": "Sufijo -hu̱ para «nosotros» y «ustedes».",
-        "example": "-hu̱"
-      }
-    ],
-    "tone_pairs": [
-      {
-        "text": "dí xipi",
-        "translation": "yo le digo"
+        "type": "cards",
+        "title": "La raíz también cambia",
+        "description": "En el pretérito y el futuro, muchas raíces cambian su primera consonante. Así se forman las formas secundarias de la raíz.",
+        "items": [
+          {
+            "tag": "3.ª persona",
+            "name": "Forma B",
+            "description": "La consonante se vuelve sonora: p → b, t → d, th → d, ts → z, k → g, j → g, f → m.",
+            "examples": [
+              {
+                "from": "pädi",
+                "to": "bi bädi",
+                "meaning": "lo supo"
+              },
+              {
+                "from": "tai",
+                "to": "bi dai",
+                "meaning": "lo compró"
+              },
+              {
+                "from": "ku̱ni",
+                "to": "bi gu̱ni",
+                "meaning": "lo molió"
+              }
+            ]
+          },
+          {
+            "tag": "2.ª y 3.ª persona",
+            "name": "Forma Y",
+            "description": "Si la raíz empieza con vocal o con h + vocal, se agrega y (o ñ si la vocal es nasal).",
+            "examples": [
+              {
+                "from": "honi",
+                "to": "bi hyoni",
+                "meaning": "lo buscó"
+              },
+              {
+                "from": "'o̱de",
+                "to": "bi 'yo̱de",
+                "meaning": "lo oyó"
+              },
+              {
+                "from": "'ähä",
+                "to": "bi 'ñähä",
+                "meaning": "durmió"
+              }
+            ]
+          },
+          {
+            "tag": "todas las personas",
+            "name": "Forma N",
+            "description": "Algunos verbos no cambian su consonante, pero suman n- (o m-). El diccionario lo indica con la 1.ª persona del pretérito.",
+            "examples": [
+              {
+                "from": "sagi",
+                "to": "dá nsagi",
+                "meaning": "brinqué"
+              },
+              {
+                "from": "thede",
+                "to": "bi nthede",
+                "meaning": "se rio"
+              },
+              {
+                "from": "tsithe",
+                "to": "dá ntsithe",
+                "meaning": "tomé agua"
+              }
+            ]
+          }
+        ]
       },
       {
-        "text": "di xipi",
-        "translation": "él le dice"
-      },
-      {
-        "text": "dá xipi",
-        "translation": "yo le dije"
-      },
-      {
-        "text": "da xipi",
-        "translation": "él le dirá"
-      },
-      {
-        "text": "gá xipi",
-        "translation": "tú le dijiste"
-      },
-      {
-        "text": "ga xipi",
-        "translation": "yo le diré"
-      }
-    ],
-    "root_changes": {
-      "intro": "En el pretérito y el futuro, muchas raíces cambian su primera consonante. Así se forman las formas secundarias de la raíz.",
-      "rules": [
-        {
-          "name": "Forma B",
-          "where": "3.ª persona",
-          "description": "La consonante se vuelve sonora: p → b, t → d, th → d, ts → z, k → g, j → g, f → m.",
-          "examples": [
-            {
-              "from": "pädi",
-              "to": "bi bädi",
-              "meaning": "lo supo"
-            },
-            {
-              "from": "tai",
-              "to": "bi dai",
-              "meaning": "lo compró"
-            },
-            {
-              "from": "ku̱ni",
-              "to": "bi gu̱ni",
-              "meaning": "lo molió"
+        "type": "grid",
+        "blocks": [
+          {
+            "type": "changes",
+            "title": "El plural con -hu̱",
+            "description": "En el habla de todos los días, el sufijo -hu̱ cambia el final de la raíz:",
+            "examples": [
+              {
+                "from": "tsi",
+                "to": "tsihu̱",
+                "meaning": "beber"
+              },
+              {
+                "from": "pe̱fi",
+                "to": "pe̱hu̱",
+                "meaning": "trabajar"
+              },
+              {
+                "from": "handi",
+                "to": "hanthu̱",
+                "meaning": "mirar"
+              },
+              {
+                "from": "beni",
+                "to": "beñhu̱",
+                "meaning": "pensar"
+              },
+              {
+                "from": "tai",
+                "to": "tañhu̱",
+                "meaning": "comprar"
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "title": "Ser algo: proclítico + ra",
+            "description": "Para decir «soy», «eres» o «es» con un sustantivo, el proclítico se une al artículo ra.",
+            "columns": [
+              "Tiempo",
+              "1.ª",
+              "2.ª",
+              "3.ª"
+            ],
+            "rows": [
+              {
+                "label": "Presente",
+                "cells": [
+                  "drá",
+                  "grá",
+                  "ra"
+                ]
+              },
+              {
+                "label": "Copretérito",
+                "cells": [
+                  "ndrá",
+                  "ngrá",
+                  "mrá"
+                ]
+              },
+              {
+                "label": "Futuro",
+                "cells": [
+                  "gra",
+                  "gra",
+                  "dra"
+                ]
+              }
+            ],
+            "example": {
+              "text": "Drá hñähñu.",
+              "translation": "Soy hñähñu."
             }
-          ]
-        },
-        {
-          "name": "Forma Y",
-          "where": "2.ª y 3.ª persona",
-          "description": "Si la raíz empieza con vocal o con h + vocal, se agrega y (o ñ si la vocal es nasal).",
-          "examples": [
-            {
-              "from": "honi",
-              "to": "bi hyoni",
-              "meaning": "lo buscó"
-            },
-            {
-              "from": "'o̱de",
-              "to": "bi 'yo̱de",
-              "meaning": "lo oyó"
-            },
-            {
-              "from": "'ähä",
-              "to": "bi 'ñähä",
-              "meaning": "durmió"
-            }
-          ]
-        },
-        {
-          "name": "Forma N",
-          "where": "todas las personas",
-          "description": "Algunos verbos no cambian su consonante, pero suman n- (o m-). El diccionario lo indica con la 1.ª persona del pretérito.",
-          "examples": [
-            {
-              "from": "sagi",
-              "to": "dá nsagi",
-              "meaning": "brinqué"
-            },
-            {
-              "from": "thede",
-              "to": "bi nthede",
-              "meaning": "se rio"
-            },
-            {
-              "from": "tsithe",
-              "to": "dá ntsithe",
-              "meaning": "tomé agua"
-            }
-          ]
-        }
-      ]
-    },
-    "plural": {
-      "description": "En el habla de todos los días, el sufijo -hu̱ cambia el final de la raíz:",
-      "examples": [
-        {
-          "from": "tsi",
-          "to": "tsihu̱",
-          "meaning": "beber"
-        },
-        {
-          "from": "pe̱fi",
-          "to": "pe̱hu̱",
-          "meaning": "trabajar"
-        },
-        {
-          "from": "handi",
-          "to": "hanthu̱",
-          "meaning": "mirar"
-        },
-        {
-          "from": "beni",
-          "to": "beñhu̱",
-          "meaning": "pensar"
-        },
-        {
-          "from": "tai",
-          "to": "tañhu̱",
-          "meaning": "comprar"
-        }
-      ]
-    },
-    "predicate": {
-      "description": "Para decir «soy», «eres» o «es» con un sustantivo, el proclítico se une al artículo ra.",
-      "tenses": [
-        {
-          "name": "Presente",
-          "forms": [
-            "drá",
-            "grá",
-            "ra"
-          ]
-        },
-        {
-          "name": "Copretérito",
-          "forms": [
-            "ndrá",
-            "ngrá",
-            "mrá"
-          ]
-        },
-        {
-          "name": "Futuro",
-          "forms": [
-            "gra",
-            "gra",
-            "dra"
-          ]
-        }
-      ],
-      "example": {
-        "text": "Drá hñähñu.",
-        "translation": "Soy hñähñu."
-      }
-    },
-    "examples": [
-      {
-        "text": "Drí nxadi ra hñämfo̱.",
-        "translation": "Estoy estudiando español."
+          }
+        ]
       },
       {
-        "text": "Dí ähä 'nihi.",
-        "translation": "Me duermo temprano."
-      },
-      {
-        "text": "Pe hingi nei.",
-        "translation": "Pero no baila."
-      },
-      {
-        "text": "Nuga hindá handi.",
-        "translation": "Yo no lo vi."
-      },
-      {
-        "text": "Xá mädi.",
-        "translation": "Está caro."
+        "type": "pairs",
+        "title": "Frases de ejemplo",
+        "items": [
+          {
+            "text": "Drí nxadi ra hñämfo̱.",
+            "translation": "Estoy estudiando español."
+          },
+          {
+            "text": "Dí ähä 'nihi.",
+            "translation": "Me duermo temprano."
+          },
+          {
+            "text": "Pe hingi nei.",
+            "translation": "Pero no baila."
+          },
+          {
+            "text": "Nuga hindá handi.",
+            "translation": "Yo no lo vi."
+          },
+          {
+            "text": "Xá mädi.",
+            "translation": "Está caro."
+          }
+        ]
       }
     ]
   },
   "conjugation": {
+    "engine": "otomi",
     "persons": [
       {
         "id": "1",

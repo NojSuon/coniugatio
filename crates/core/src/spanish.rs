@@ -15,12 +15,15 @@ pub enum Tense {
     Future,
     Imperfect,
     Progressive,
+    /// he visto, has dormido…
+    Perfect,
 }
 
 /// yo, tú, él/ella, nosotros, ustedes, ellos/ellas
 pub const PRONOUNS: [&str; 6] = ["yo", "tú", "él/ella", "nosotros", "ustedes", "ellos/ellas"];
 const REFLEXIVE: [&str; 6] = ["me", "te", "se", "nos", "se", "se"];
 const ESTAR: [&str; 6] = ["estoy", "estás", "está", "estamos", "están", "están"];
+const HABER: [&str; 6] = ["he", "has", "ha", "hemos", "han", "han"];
 
 type Six = [&'static str; 6];
 
@@ -31,9 +34,11 @@ struct Irregular {
     imperfect: Option<Six>,
     future_stem: Option<&'static str>,
     gerund: Option<&'static str>,
+    participle: Option<&'static str>,
 }
 
-const NONE: Irregular = Irregular { present: None, preterite: None, imperfect: None, future_stem: None, gerund: None };
+const NONE: Irregular =
+    Irregular { present: None, preterite: None, imperfect: None, future_stem: None, gerund: None, participle: None };
 
 fn irregular(inf: &str) -> Irregular {
     match inf {
@@ -47,6 +52,7 @@ fn irregular(inf: &str) -> Irregular {
             present: Some(["veo", "ves", "ve", "vemos", "ven", "ven"]),
             preterite: Some(["vi", "viste", "vio", "vimos", "vieron", "vieron"]),
             imperfect: Some(["veía", "veías", "veía", "veíamos", "veían", "veían"]),
+            participle: Some("visto"),
             ..NONE
         },
         "dormir" => Irregular {
@@ -61,6 +67,7 @@ fn irregular(inf: &str) -> Irregular {
             imperfect: Some(["oía", "oías", "oía", "oíamos", "oían", "oían"]),
             future_stem: Some("oir"),
             gerund: Some("oyendo"),
+            participle: Some("oído"),
         },
         "moler" => Irregular {
             present: Some(["muelo", "mueles", "muele", "molemos", "muelen", "muelen"]),
@@ -72,6 +79,40 @@ fn irregular(inf: &str) -> Irregular {
             imperfect: Some(["reía", "reías", "reía", "reíamos", "reían", "reían"]),
             future_stem: Some("reir"),
             gerund: Some("riendo"),
+            participle: Some("reído"),
+        },
+        "ir" => Irregular {
+            present: Some(["voy", "vas", "va", "vamos", "van", "van"]),
+            preterite: Some(["fui", "fuiste", "fue", "fuimos", "fueron", "fueron"]),
+            imperfect: Some(["iba", "ibas", "iba", "íbamos", "iban", "iban"]),
+            gerund: Some("yendo"),
+            ..NONE
+        },
+        "venir" => Irregular {
+            present: Some(["vengo", "vienes", "viene", "venimos", "vienen", "vienen"]),
+            preterite: Some(["vine", "viniste", "vino", "vinimos", "vinieron", "vinieron"]),
+            future_stem: Some("vendr"),
+            gerund: Some("viniendo"),
+            ..NONE
+        },
+        "salir" => Irregular {
+            present: Some(["salgo", "sales", "sale", "salimos", "salen", "salen"]),
+            future_stem: Some("saldr"),
+            ..NONE
+        },
+        "morir" => Irregular {
+            present: Some(["muero", "mueres", "muere", "morimos", "mueren", "mueren"]),
+            preterite: Some(["morí", "moriste", "murió", "morimos", "murieron", "murieron"]),
+            gerund: Some("muriendo"),
+            participle: Some("muerto"),
+            ..NONE
+        },
+        "caer" => Irregular {
+            present: Some(["caigo", "caes", "cae", "caemos", "caen", "caen"]),
+            preterite: Some(["caí", "caíste", "cayó", "caímos", "cayeron", "cayeron"]),
+            gerund: Some("cayendo"),
+            participle: Some("caído"),
+            ..NONE
         },
         _ => NONE,
     }
@@ -88,7 +129,7 @@ fn regular(inf: &str, tense: Tense, p: usize) -> String {
         (Tense::Imperfect, "ar") => ["aba", "abas", "aba", "ábamos", "aban", "aban"],
         (Tense::Imperfect, _) => ["ía", "ías", "ía", "íamos", "ían", "ían"],
         (Tense::Future, _) => return format!("{inf}{}", ["é", "ás", "á", "emos", "án", "án"][p]),
-        (Tense::Progressive, _) => unreachable!(),
+        (Tense::Progressive | Tense::Perfect, _) => unreachable!(),
     };
     // Spelling changes before -é: buscar → busqué, pagar → pagué, cazar → cacé.
     if tense == Tense::Preterite && p == 0 && class == "ar" {
@@ -99,6 +140,14 @@ fn regular(inf: &str, tense: Tense, p: usize) -> String {
         }
     }
     format!("{stem}{}", endings[p])
+}
+
+fn participle(inf: &str, irr: &Irregular) -> String {
+    if let Some(p) = irr.participle {
+        return p.to_string();
+    }
+    let (stem, class) = inf.split_at(inf.len() - 2);
+    format!("{stem}{}", if class == "ar" { "ado" } else { "ido" })
 }
 
 fn gerund(inf: &str, irr: &Irregular) -> String {
@@ -135,6 +184,7 @@ pub fn conjugate(meaning: &str, tense: Tense, person: usize, negative: bool) -> 
             .future_stem
             .map(|s| format!("{s}{}", ["é", "ás", "á", "emos", "án", "án"][person])),
         Tense::Progressive => Some(format!("{} {}", ESTAR[person], gerund(&inf_plain, &irr))),
+        Tense::Perfect => Some(format!("{} {}", HABER[person], participle(&inf_plain, &irr))),
     }
     .unwrap_or_else(|| regular(&inf_plain, tense, person));
 
@@ -195,6 +245,22 @@ mod tests {
         assert_eq!(c("beber agua", Tense::Present, 3), "nosotros bebemos agua");
         assert_eq!(conjugate("saber", Tense::Present, 0, true).unwrap(), "yo no sé");
         assert_eq!(conjugate("reírse", Tense::Present, 1, true).unwrap(), "tú no te ríes");
+    }
+
+    #[test]
+    fn perfect_and_new_irregulars() {
+        assert_eq!(c("ver", Tense::Perfect, 0), "yo he visto");
+        assert_eq!(c("dormir", Tense::Perfect, 3), "nosotros hemos dormido");
+        assert_eq!(c("morir", Tense::Perfect, 2), "él/ella ha muerto");
+        assert_eq!(c("ir", Tense::Preterite, 0), "yo fui");
+        assert_eq!(c("ir", Tense::Progressive, 1), "tú estás yendo");
+        assert_eq!(c("ir", Tense::Future, 0), "yo iré");
+        assert_eq!(c("venir", Tense::Present, 0), "yo vengo");
+        assert_eq!(c("venir", Tense::Future, 2), "él/ella vendrá");
+        assert_eq!(c("salir", Tense::Present, 0), "yo salgo");
+        assert_eq!(c("caer", Tense::Preterite, 2), "él/ella cayó");
+        assert_eq!(c("llegar", Tense::Preterite, 0), "yo llegué");
+        assert_eq!(conjugate("ver", Tense::Perfect, 0, true).unwrap(), "yo no he visto");
     }
 
     #[test]

@@ -1,4 +1,4 @@
-import { renderHeader, renderFooter, langWord as w, escapeHtml as e } from "./common.js";
+import { renderHeader, renderFooter, langWord as w, escapeHtml as e, setLangCode } from "./common.js";
 
 renderHeader("lenguas");
 renderFooter();
@@ -15,6 +15,7 @@ const lang = await res.json();
 
 document.title = `${lang.endonym} · Mati Mati`;
 document.body.dataset.serie = lang.series;
+setLangCode(lang.lang_code);
 
 // ---------- Sections ----------
 
@@ -72,8 +73,7 @@ function orthography() {
           .join("")}
       </ul>
       <div class="grid-2" style="margin-top:24px">
-        <div class="card"><h3>Vocales orales</h3>${vowelList(o.vowels.oral)}</div>
-        <div class="card"><h3>Vocales nasales</h3>${vowelList(o.vowels.nasal)}</div>
+        ${o.vowels.map((g) => `<div class="card"><h3>${e(g.title)}</h3>${vowelList(g.items)}</div>`).join("")}
       </div>
       <div class="card card--blanca stack" style="margin-top:24px">
         ${o.notes.map((n) => `<p>${e(n)}</p>`).join("")}
@@ -82,92 +82,96 @@ function orthography() {
   </section>`;
 }
 
+// The grammar section is a list of blocks, so each language can describe
+// its own system (see "grammar.blocks" in data/languages/*.json).
+const change = (x) =>
+  `<li>${w(x.from)}<span class="arrow">→</span>${w(x.to)}<span class="caption">«${e(x.meaning)}»</span></li>`;
+
+const heading = (b) =>
+  `${b.title ? `<h3 class="block-title">${e(b.title)}</h3>` : ""}${
+    b.description ? `<p class="block-desc">${e(b.description)}</p>` : ""
+  }`;
+
+const BLOCKS = {
+  formula: (b) => `${heading(b)}<ol class="formula">
+      ${b.items.map((f) => `<li><span class="slot">${e(f.slot)}</span>${w(f.example)}<p>${e(f.description)}</p></li>`).join("")}
+    </ol>`,
+
+  pairs: (b) => `${heading(b)}<ul class="pairs">
+      ${b.items.map((p) => `<li>${w(p.text)}<span>«${e(p.translation)}»</span></li>`).join("")}
+    </ul>`,
+
+  cards: (b) => `${heading(b)}<div class="grid-3">
+      ${b.items
+        .map(
+          (r) => `<div class="card">
+            ${r.tag ? `<span class="tag tag--suave">${e(r.tag)}</span>` : ""}
+            <h3 style="margin-top:10px">${e(r.name)}</h3>
+            <p style="font-size:16px;margin-top:6px">${e(r.description)}</p>
+            ${r.examples ? `<ul class="change-list">${r.examples.map(change).join("")}</ul>` : ""}
+          </div>`
+        )
+        .join("")}
+    </div>`,
+
+  changes: (b) => `<div class="card card--blanca">${heading(b)}
+      <ul class="change-list">${b.examples.map(change).join("")}</ul></div>`,
+
+  table: (b) => `<div class="card card--blanca">${heading(b)}
+      <div class="table-scroll"><table class="data">
+        <thead><tr>${b.columns.map((c) => `<th scope="col">${e(c)}</th>`).join("")}</tr></thead>
+        <tbody>${b.rows
+          .map((r) => `<tr><th scope="row">${e(r.label)}</th>${r.cells.map((c) => `<td>${w(c)}</td>`).join("")}</tr>`)
+          .join("")}</tbody>
+      </table></div>
+      ${b.note ? `<p class="caption" style="margin-top:12px">${e(b.note)}</p>` : ""}
+      ${b.example ? `<p style="margin-top:12px">${w(b.example.text)} «${e(b.example.translation)}»</p>` : ""}
+    </div>`,
+
+  grid: (b) => `<div class="grid-2">${b.blocks.map(block).join("")}</div>`,
+};
+
+function block(b) {
+  const render = BLOCKS[b.type];
+  return render ? `<div class="block">${render(b)}</div>` : "";
+}
+
 function grammar() {
   const g = lang.grammar;
-  const change = (x) =>
-    `<li>${w(x.from)}<span class="arrow">→</span>${w(x.to)}<span class="caption">«${e(x.meaning)}»</span></li>`;
   return `
   <section class="section" id="gramatica" aria-labelledby="gram-t">
     <div class="wrap">
       <h2 id="gram-t">Cómo se conjuga</h2>
       <p class="lead">${e(g.intro)}</p>
-      <ol class="formula">
-        ${g.formula
-          .map((f) => `<li><span class="slot">${e(f.slot)}</span>${w(f.example)}<p>${e(f.description)}</p></li>`)
-          .join("")}
-      </ol>
-
-      <h3 style="margin:36px 0 8px">El tono del proclítico cambia el significado</h3>
-      <p style="margin-bottom:14px">Fíjate en la tilde: marca un tono alto.</p>
-      <ul class="pairs">
-        ${g.tone_pairs.map((p) => `<li>${w(p.text)}<span>«${e(p.translation)}»</span></li>`).join("")}
-      </ul>
-
-      <h3 style="margin:36px 0 8px">La raíz también cambia</h3>
-      <p style="margin-bottom:14px">${e(g.root_changes.intro)}</p>
-      <div class="grid-3">
-        ${g.root_changes.rules
-          .map(
-            (r) => `<div class="card">
-              <span class="tag tag--suave">${e(r.where)}</span>
-              <h3 style="margin-top:10px">${e(r.name)}</h3>
-              <p style="font-size:16px;margin-top:6px">${e(r.description)}</p>
-              <ul class="change-list">${r.examples.map(change).join("")}</ul>
-            </div>`
-          )
-          .join("")}
-      </div>
-
-      <div class="grid-2" style="margin-top:24px">
-        <div class="card card--blanca">
-          <h3>El plural con -hu̱</h3>
-          <p style="font-size:16px;margin-top:6px">${e(g.plural.description)}</p>
-          <ul class="change-list">${g.plural.examples.map(change).join("")}</ul>
-        </div>
-        <div class="card card--blanca">
-          <h3>Ser algo: proclítico + ra</h3>
-          <p style="font-size:16px;margin:6px 0 12px">${e(g.predicate.description)}</p>
-          <div class="table-scroll"><table class="data">
-            <thead><tr><th scope="col">Tiempo</th><th scope="col">1.ª</th><th scope="col">2.ª</th><th scope="col">3.ª</th></tr></thead>
-            <tbody>${g.predicate.tenses
-              .map((t) => `<tr><th scope="row">${e(t.name)}</th>${t.forms.map((f) => `<td>${w(f)}</td>`).join("")}</tr>`)
-              .join("")}</tbody>
-          </table></div>
-          <p style="margin-top:12px">${w(g.predicate.example.text)} «${e(g.predicate.example.translation)}»</p>
-        </div>
-      </div>
-
-      <h3 style="margin:36px 0 12px">Frases de ejemplo</h3>
-      <ul class="pairs">
-        ${g.examples.map((x) => `<li>${w(x.text)}<span>«${e(x.translation)}»</span></li>`).join("")}
-      </ul>
+      ${g.blocks.map(block).join("")}
     </div>
   </section>`;
 }
 
-const SPECIAL = ["'", "ä", "e̱", "o̱", "u̱"];
 
 function conjugator() {
+  const ui = lang.conjugator || {};
   const samples = lang.conjugation.lexicon;
+  const word = (s) => s.entry ?? s.root;
   return `
   <section class="section" id="conjugador" aria-labelledby="conj-t">
     <div class="wrap">
       <h2 id="conj-t">Conjugador</h2>
-      <p class="lead">Escribe la raíz de un verbo, como la encuentras en el diccionario.</p>
+      <p class="lead">${e(ui.hint || "Escribe la raíz de un verbo, como la encuentras en el diccionario.")}</p>
       <form class="conjugator-form" data-form>
         <div class="field">
-          <label for="verb">Raíz del verbo</label>
+          <label for="verb">${e(ui.label || "Raíz del verbo")}</label>
           <input id="verb" name="verb" autocomplete="off" autocapitalize="off" spellcheck="false"
-                 placeholder="pädi" required lang="ote">
+                 placeholder="${e(ui.placeholder || "")}" required lang="${e(lang.lang_code || "")}">
           <div class="charpad" aria-label="Letras especiales">
-            ${SPECIAL.map((c) => `<button type="button" data-char="${c}" aria-label="Agregar ${c}">${c}</button>`).join("")}
+            ${(ui.keyboard || []).map((c) => `<button type="button" data-char="${c}" aria-label="Agregar ${c}">${c}</button>`).join("")}
           </div>
         </div>
         <button class="button" type="submit">Conjugar</button>
       </form>
       <ul class="samples" aria-label="Verbos de ejemplo">
         ${samples
-          .map((s) => `<li><button type="button" data-sample="${e(s.root)}">${w(s.root)} · ${e(s.meaning)}</button></li>`)
+          .map((s) => `<li><button type="button" data-sample="${e(word(s))}">${w(word(s))} · ${e(s.meaning)}</button></li>`)
           .join("")}
       </ul>
       <p class="error" data-error hidden></p>

@@ -1,11 +1,680 @@
 {
   "slug": "itza",
-  "name": "maya itzá",
-  "endonym": "itsa' / mayat'an",
-  "variant": "maya itzá",
-  "region": "Petén, Guatemala",
-  "status": "soon",
+  "name": "maya itza'",
+  "endonym": "itza'",
+  "variant": "maya itza'",
+  "region": "San José, Petén, Guatemala",
+  "status": "available",
   "order": 2,
   "series": "milpa",
-  "summary": "Aspectos, modos y voces con pronombres de tipo A y B."
+  "summary": "Conjuga verbos con aspectos y marcadores de persona, y descubre cómo cambian en el pasado.",
+  "lang_code": "itz",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo como en el diccionario: wenel «dormir» (intransitivo) o ilik «ver» (transitivo).",
+    "placeholder": "wenel",
+    "keyboard": [
+      "'",
+      "ä"
+    ]
+  },
+  "source": {
+    "short": "Hofling, Itzaj Maya Grammar, 2000",
+    "full": "Charles Andrew Hofling con Fernando Tesucún. Itzaj Maya Grammar. University of Utah Press, 2000. Ejemplos también de Jiilt'an Maya Itza: Vocabulario Itza' (Academia de Lenguas Mayas de Guatemala, 2001).",
+    "url": "https://uofupress.com"
+  },
+  "about": [
+    "El itza' es una lengua maya de la familia yucateca, pariente del maya yucateco, el mopán y el lacandón. Se habla en San José, Petén, a la orilla del lago Petén Itzá, en Guatemala.",
+    "Los itza' gobernaron el último reino maya independiente: su capital, Noj Petén, resistió a los españoles hasta 1697.",
+    "Hoy la lengua está en grave peligro: a finales de los años noventa la hablaban como lengua materna unas pocas decenas de personas mayores. La comunidad de San José y la Academia de Lenguas Mayas de Guatemala trabajan para revitalizarla."
+  ],
+  "orthography": {
+    "intro": "Esta es la escritura de la Academia de Lenguas Mayas de Guatemala, con ts y ts' para las africadas. El apóstrofo (') marca una consonante glotalizada (k', t') o un saltillo, un corte breve de la voz.",
+    "letters": [
+      {
+        "letter": "a",
+        "ipa": "a",
+        "word": "ak'ä'",
+        "meaning": "noche"
+      },
+      {
+        "letter": "ä",
+        "ipa": "ə",
+        "word": "b'äk'",
+        "meaning": "carne"
+      },
+      {
+        "letter": "b'",
+        "ipa": "ɓ",
+        "word": "b'alum",
+        "meaning": "jaguar"
+      },
+      {
+        "letter": "ch",
+        "ipa": "tʃ",
+        "word": "chuy",
+        "meaning": "coser"
+      },
+      {
+        "letter": "ch'",
+        "ipa": "tʃʼ",
+        "word": "ch'iich'",
+        "meaning": "pájaro"
+      },
+      {
+        "letter": "e",
+        "ipa": "e",
+        "word": "ek'",
+        "meaning": "estrella"
+      },
+      {
+        "letter": "i",
+        "ipa": "i",
+        "word": "ich",
+        "meaning": "ojo"
+      },
+      {
+        "letter": "j",
+        "ipa": "h",
+        "word": "ja'",
+        "meaning": "agua"
+      },
+      {
+        "letter": "k",
+        "ipa": "k",
+        "word": "kab'",
+        "meaning": "miel"
+      },
+      {
+        "letter": "k'",
+        "ipa": "kʼ",
+        "word": "k'ab'",
+        "meaning": "brazo, mano"
+      },
+      {
+        "letter": "l",
+        "ipa": "l",
+        "word": "lu'um",
+        "meaning": "tierra"
+      },
+      {
+        "letter": "m",
+        "ipa": "m",
+        "word": "maak",
+        "meaning": "persona"
+      },
+      {
+        "letter": "n",
+        "ipa": "n",
+        "word": "naj",
+        "meaning": "casa"
+      },
+      {
+        "letter": "o",
+        "ipa": "o",
+        "word": "kol",
+        "meaning": "milpa"
+      },
+      {
+        "letter": "p",
+        "ipa": "p",
+        "word": "pol",
+        "meaning": "cabeza"
+      },
+      {
+        "letter": "p'",
+        "ipa": "pʼ",
+        "word": "p'ak",
+        "meaning": "tomate"
+      },
+      {
+        "letter": "r",
+        "ipa": "ɾ",
+        "word": "'arux",
+        "meaning": "duende"
+      },
+      {
+        "letter": "s",
+        "ipa": "s",
+        "word": "siis",
+        "meaning": "frío"
+      },
+      {
+        "letter": "t",
+        "ipa": "t",
+        "word": "taan",
+        "meaning": "frente"
+      },
+      {
+        "letter": "t'",
+        "ipa": "tʼ",
+        "word": "t'an",
+        "meaning": "lengua, palabra"
+      },
+      {
+        "letter": "ts",
+        "ipa": "ts",
+        "word": "tsimin",
+        "meaning": "caballo"
+      },
+      {
+        "letter": "ts'",
+        "ipa": "tsʼ",
+        "word": "ts'ik",
+        "meaning": "dar"
+      },
+      {
+        "letter": "u",
+        "ipa": "u",
+        "word": "uk'",
+        "meaning": "beber"
+      },
+      {
+        "letter": "w",
+        "ipa": "w",
+        "word": "waj",
+        "meaning": "tortilla"
+      },
+      {
+        "letter": "x",
+        "ipa": "ʃ",
+        "word": "xux",
+        "meaning": "avispa"
+      },
+      {
+        "letter": "y",
+        "ipa": "j",
+        "word": "yux",
+        "meaning": "cangrejo"
+      },
+      {
+        "letter": "'",
+        "ipa": "ʔ",
+        "word": "ka'an",
+        "meaning": "cielo"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales cortas",
+        "items": [
+          {
+            "letter": "a",
+            "ipa": "a"
+          },
+          {
+            "letter": "ä",
+            "ipa": "ə"
+          },
+          {
+            "letter": "e",
+            "ipa": "e"
+          },
+          {
+            "letter": "i",
+            "ipa": "i"
+          },
+          {
+            "letter": "o",
+            "ipa": "o"
+          },
+          {
+            "letter": "u",
+            "ipa": "u"
+          }
+        ]
+      },
+      {
+        "title": "Vocales largas",
+        "items": [
+          {
+            "letter": "aa",
+            "ipa": "aː"
+          },
+          {
+            "letter": "ee",
+            "ipa": "eː"
+          },
+          {
+            "letter": "ii",
+            "ipa": "iː"
+          },
+          {
+            "letter": "oo",
+            "ipa": "oː"
+          },
+          {
+            "letter": "uu",
+            "ipa": "uː"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "La vocal larga se escribe doble y cambia el significado: k'ax «nudo», k'aax «monte».",
+      "Una vocal también puede llevar saltillo en medio: kan «serpiente», ka'an «cielo». La ä siempre es corta.",
+      "La r aparece sobre todo en palabras que vienen del español, como riiyoj «río».",
+      "La pronunciación aparece entre corchetes con el Alfabeto Fonético Internacional (AFI)."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo itza' se arma con piezas: un marcador de aspecto, un prefijo de persona, el verbo y un sufijo de estatus. Para buscar un verbo, escríbelo como en el diccionario: wenel «dormir», ilik «ver».",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          {
+            "slot": "Aspecto",
+            "description": "Cuándo o cómo pasa la acción: k- costumbre, tan ahora.",
+            "example": "k-"
+          },
+          {
+            "slot": "Persona (juego A)",
+            "description": "Quién hace la acción.",
+            "example": "in-"
+          },
+          {
+            "slot": "Verbo",
+            "description": "La raíz.",
+            "example": "wen"
+          },
+          {
+            "slot": "Estatus",
+            "description": "Sufijo que cambia con el aspecto: -el, -ik, -aj…",
+            "example": "-el"
+          },
+          {
+            "slot": "Plural",
+            "description": "-e'ex para «ustedes», -oo' para «ellos».",
+            "example": "-oo'"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Dos juegos de marcadores de persona",
+        "description": "El juego A va antes del verbo; el juego B, después. Ante vocal, el juego A agrega w o y: in-w-il, u-y-il.",
+        "columns": [
+          "Persona",
+          "Juego A",
+          "Juego B"
+        ],
+        "rows": [
+          {
+            "label": "yo",
+            "cells": [
+              "in(w)-",
+              "-en"
+            ]
+          },
+          {
+            "label": "tú",
+            "cells": [
+              "a(w)-",
+              "-ech"
+            ]
+          },
+          {
+            "label": "él, ella",
+            "cells": [
+              "u(y)-",
+              "-ij, -Ø"
+            ]
+          },
+          {
+            "label": "nosotros",
+            "cells": [
+              "ki(w)-",
+              "-o'on"
+            ]
+          },
+          {
+            "label": "ustedes",
+            "cells": [
+              "a(w)- … -e'ex",
+              "-e'ex"
+            ]
+          },
+          {
+            "label": "ellos, ellas",
+            "cells": [
+              "u(y)- … -oo'",
+              "-oo'"
+            ]
+          }
+        ],
+        "note": "«Nosotros» con -e'ex al final incluye a quien escucha: kiwenele'ex «todos dormimos»."
+      },
+      {
+        "type": "pairs",
+        "title": "En el pasado, la persona cambia de lugar",
+        "description": "En el presente, el juego A marca a quien hace la acción en todos los verbos. En el pasado, los verbos intransitivos usan el juego B al final.",
+        "items": [
+          {
+            "text": "kinwenel",
+            "translation": "duermo"
+          },
+          {
+            "text": "weneen",
+            "translation": "dormí"
+          },
+          {
+            "text": "kinwilik",
+            "translation": "lo veo"
+          },
+          {
+            "text": "tinwilaj",
+            "translation": "lo vi"
+          }
+        ]
+      },
+      {
+        "type": "cards",
+        "title": "Tres tipos de verbo",
+        "items": [
+          {
+            "tag": "-Vl",
+            "name": "Intransitivo",
+            "description": "No lleva objeto. Su sufijo repite la vocal de la raíz: wen-el, jok'-ol, nak'-äl.",
+            "examples": [
+              {
+                "from": "wenel",
+                "to": "weneen",
+                "meaning": "dormí"
+              },
+              {
+                "from": "k'ochol",
+                "to": "k'ocheen",
+                "meaning": "llegué"
+              }
+            ]
+          },
+          {
+            "tag": "-ik",
+            "name": "Transitivo de raíz",
+            "description": "Lleva objeto. En el pasado toma t- y -aj.",
+            "examples": [
+              {
+                "from": "ilik",
+                "to": "tinwilaj",
+                "meaning": "lo vi"
+              },
+              {
+                "from": "uk'ik",
+                "to": "tinwuk'aj",
+                "meaning": "lo bebí"
+              }
+            ]
+          },
+          {
+            "tag": "-tik",
+            "name": "Transitivo con -t",
+            "description": "La -t- forma verbos transitivos. En el perfecto la -t- cambia por -m-.",
+            "examples": [
+              {
+                "from": "jantik",
+                "to": "tinjantaj",
+                "meaning": "lo comí"
+              },
+              {
+                "from": "jantik",
+                "to": "injanmaj",
+                "meaning": "lo he comido"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "La negación: ma'",
+        "description": "Para negar el presente se usa tan, el marcador de lo que está pasando.",
+        "items": [
+          {
+            "text": "ma' tan inwenel",
+            "translation": "no duermo"
+          },
+          {
+            "text": "ma' wenij",
+            "translation": "no durmió"
+          },
+          {
+            "text": "ma' tinwilaj",
+            "translation": "no lo vi"
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases de ejemplo",
+        "items": [
+          {
+            "text": "K'ocheen b'iyeernes.",
+            "translation": "Llegué el viernes."
+          },
+          {
+            "text": "Tan uyok'ol a' misoo'ej.",
+            "translation": "Los gatos están maullando."
+          },
+          {
+            "text": "Tuyilajoo' juntuul ajchab'.",
+            "translation": "Miraron un oso hormiguero."
+          },
+          {
+            "text": "Wi'ijen.",
+            "translation": "Tengo hambre."
+          },
+          {
+            "text": "Je' imb'elej!",
+            "translation": "¡Sí voy!"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "itza",
+    "persons": [
+      {
+        "id": "1",
+        "label": "1.ª persona",
+        "es": 0
+      },
+      {
+        "id": "2",
+        "label": "2.ª persona",
+        "es": 1
+      },
+      {
+        "id": "3",
+        "label": "3.ª persona",
+        "es": 2
+      }
+    ],
+    "tenses": [
+      {
+        "id": "incompletive",
+        "group": "Afirmativo",
+        "name": "Presente habitual",
+        "description": "Lo que pasa siempre o de costumbre (k-).",
+        "aspect": "incompletive",
+        "es": "present"
+      },
+      {
+        "id": "durative",
+        "group": "Afirmativo",
+        "name": "Presente progresivo",
+        "description": "Lo que está pasando ahora (tan).",
+        "aspect": "durative",
+        "es": "progressive"
+      },
+      {
+        "id": "completive",
+        "group": "Afirmativo",
+        "name": "Pretérito",
+        "description": "Lo que ya pasó.",
+        "aspect": "completive",
+        "es": "preterite"
+      },
+      {
+        "id": "perfect",
+        "group": "Afirmativo",
+        "name": "Perfecto",
+        "description": "Lo que ya ha pasado.",
+        "aspect": "perfect",
+        "es": "perfect"
+      },
+      {
+        "id": "assurative",
+        "group": "Afirmativo",
+        "name": "Futuro seguro",
+        "description": "Lo que seguro va a pasar (je' … -ej).",
+        "aspect": "assurative",
+        "es": "future"
+      },
+      {
+        "id": "neg-incompletive",
+        "group": "Negativo",
+        "name": "Presente",
+        "description": "ma' + tan.",
+        "aspect": "incompletive",
+        "negative": true,
+        "es": "present"
+      },
+      {
+        "id": "neg-completive",
+        "group": "Negativo",
+        "name": "Pretérito",
+        "description": "ma' + pretérito.",
+        "aspect": "completive",
+        "negative": true,
+        "es": "preterite"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "wenel",
+        "class": "I",
+        "meaning": "dormir",
+        "es": "dormir"
+      },
+      {
+        "entry": "jok'ol",
+        "class": "I",
+        "meaning": "salir",
+        "es": "salir"
+      },
+      {
+        "entry": "k'ochol",
+        "class": "I",
+        "meaning": "llegar",
+        "es": "llegar"
+      },
+      {
+        "entry": "okol",
+        "class": "I",
+        "meaning": "entrar",
+        "es": "entrar"
+      },
+      {
+        "entry": "lub'ul",
+        "class": "I",
+        "meaning": "caer",
+        "es": "caer"
+      },
+      {
+        "entry": "kimil",
+        "class": "I",
+        "meaning": "morir",
+        "es": "morir"
+      },
+      {
+        "entry": "nak'äl",
+        "class": "I",
+        "meaning": "subir",
+        "es": "subir"
+      },
+      {
+        "entry": "emel",
+        "class": "I",
+        "meaning": "bajar",
+        "es": "bajar"
+      },
+      {
+        "entry": "ok'ol",
+        "class": "I",
+        "meaning": "llorar",
+        "es": "llorar"
+      },
+      {
+        "entry": "talel",
+        "class": "I",
+        "meaning": "venir",
+        "es": "venir",
+        "note": "Toma -el aunque su vocal es a"
+      },
+      {
+        "entry": "b'el",
+        "class": "I",
+        "meaning": "ir",
+        "es": "ir",
+        "completive": "b'in",
+        "note": "Irregular: b'el, pasado b'in"
+      },
+      {
+        "entry": "ilik",
+        "class": "T",
+        "meaning": "ver",
+        "es": "ver"
+      },
+      {
+        "entry": "uk'ik",
+        "class": "T",
+        "meaning": "beber",
+        "es": "beber"
+      },
+      {
+        "entry": "chäkik",
+        "class": "T",
+        "meaning": "cocinar",
+        "es": "cocinar"
+      },
+      {
+        "entry": "ch'äkik",
+        "class": "T",
+        "meaning": "cortar",
+        "es": "cortar"
+      },
+      {
+        "entry": "mächik",
+        "class": "T",
+        "meaning": "agarrar",
+        "es": "agarrar"
+      },
+      {
+        "entry": "mänik",
+        "class": "T",
+        "meaning": "comprar",
+        "es": "comprar"
+      },
+      {
+        "entry": "ts'onik",
+        "class": "T",
+        "meaning": "disparar",
+        "es": "disparar"
+      },
+      {
+        "entry": "jantik",
+        "class": "Tt",
+        "meaning": "comer",
+        "es": "comer"
+      },
+      {
+        "entry": "cha'antik",
+        "class": "Tt",
+        "meaning": "mirar",
+        "es": "mirar"
+      }
+    ]
+  }
 }

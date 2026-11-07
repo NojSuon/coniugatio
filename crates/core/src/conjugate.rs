@@ -115,6 +115,8 @@ pub struct Result {
 pub enum Error {
     EmptyVerb,
     InvalidVerb,
+    /// The verb's class can't be told from the word (Itza).
+    UnknownClass,
 }
 
 impl std::fmt::Display for Error {
@@ -122,6 +124,10 @@ impl std::fmt::Display for Error {
         match self {
             Error::EmptyVerb => write!(f, "Escribe la raíz de un verbo."),
             Error::InvalidVerb => write!(f, "La raíz solo puede llevar letras y apóstrofos."),
+            Error::UnknownClass => write!(
+                f,
+                "Escribe el verbo como aparece en el diccionario: con -Vl si es intransitivo (wenel, «dormir») o con -ik si es transitivo (ilik, «ver»)."
+            ),
         }
     }
 }

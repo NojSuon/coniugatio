@@ -25,7 +25,7 @@ use std::{
     process::Command,
 };
 
-use coniugatio_core::{conjugate::Conjugation, Summary};
+use coniugatio_core::{Engine, Summary};
 use serde_json::Value;
 
 struct Options {
@@ -94,9 +94,9 @@ fn load_languages(dir: &Path) -> Result<Vec<Language>, String> {
 
         // Catch data mistakes at build time rather than in the browser.
         if let Some(c) = raw.get("conjugation") {
-            let conj: Conjugation = serde_json::from_value(c.clone()).map_err(|e| ctx(&e))?;
-            for verb in &conj.lexicon {
-                conj.conjugate(&verb.root).map_err(|e| ctx(&format!("lexicon verb {:?}: {e}", verb.root)))?;
+            let conj: Engine = serde_json::from_value(c.clone()).map_err(|e| ctx(&e))?;
+            for word in conj.lexicon_words() {
+                conj.conjugate(&word).map_err(|e| ctx(&format!("lexicon verb {word:?}: {e}")))?;
             }
         } else if summary.status == "available" {
             return Err(ctx(&"status is \"available\" but there is no \"conjugation\" block"));
