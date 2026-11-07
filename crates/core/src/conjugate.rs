@@ -100,7 +100,10 @@ impl Options {
     }
 
     pub fn kind(&self) -> Option<&str> {
-        self.kind.as_deref().map(str::trim).filter(|s| !s.is_empty())
+        self.kind
+            .as_deref()
+            .map(str::trim)
+            .filter(|s| !s.is_empty())
     }
 }
 
@@ -188,10 +191,17 @@ impl Conjugation {
         let root = normalize_root(verb)?;
         let entry = self.lexicon.iter().find(|e| e.root == root);
         // A meaning typed by the user wins over the lexicon's.
-        let es_meaning = opts.es().map(str::to_string).or_else(|| entry.and_then(|e| e.es.clone()));
+        let es_meaning = opts
+            .es()
+            .map(str::to_string)
+            .or_else(|| entry.and_then(|e| e.es.clone()));
 
-        let b = entry.and_then(|e| e.b.clone()).unwrap_or_else(|| otomi::form_b(&root));
-        let y = entry.and_then(|e| e.y.clone()).or_else(|| otomi::form_y(&root));
+        let b = entry
+            .and_then(|e| e.b.clone())
+            .unwrap_or_else(|| otomi::form_b(&root));
+        let y = entry
+            .and_then(|e| e.y.clone())
+            .or_else(|| otomi::form_y(&root));
         let takes_n = entry.is_some_and(|e| e.n) || opts.kind() == Some("n");
 
         let stem_for = |p: &Paradigm, person: &str| -> String {
@@ -222,7 +232,12 @@ impl Conjugation {
                         let stem = stem_for(p, &person.id);
                         let es = |offset: usize| -> Option<String> {
                             let meaning = es_meaning.as_deref()?;
-                            spanish::render(meaning, p.es.as_ref()?, person.es? + offset, p.negative)
+                            spanish::render(
+                                meaning,
+                                p.es.as_ref()?,
+                                person.es? + offset,
+                                p.negative,
+                            )
                         };
                         Some(Row {
                             es_singular: es(0),
@@ -241,7 +256,9 @@ impl Conjugation {
 
         Ok(Result {
             known: entry.is_some(),
-            meaning: entry.map(|e| e.meaning.clone()).or_else(|| opts.es().map(str::to_string)),
+            meaning: entry
+                .map(|e| e.meaning.clone())
+                .or_else(|| opts.es().map(str::to_string)),
             note: entry.and_then(|e| e.note.clone()),
             root,
             tables,
@@ -260,7 +277,9 @@ mod tests {
     }
 
     fn form(res: &Result, table: &str, person: usize) -> String {
-        res.tables.iter().find(|t| t.id == table).unwrap().rows[person].singular.clone()
+        res.tables.iter().find(|t| t.id == table).unwrap().rows[person]
+            .singular
+            .clone()
     }
 
     #[test]
@@ -330,7 +349,10 @@ mod tests {
 
     #[test]
     fn options_for_your_own_verb() {
-        let opts = Options { es: Some("cantar".into()), kind: None };
+        let opts = Options {
+            es: Some("cantar".into()),
+            kind: None,
+        };
         let r = otomi().conjugate_with("tuhu", &opts).unwrap();
         assert!(!r.known);
         assert_eq!(r.meaning.as_deref(), Some("cantar"));
@@ -338,7 +360,10 @@ mod tests {
         let t = r.tables.iter().find(|t| t.id == "preterite").unwrap();
         assert_eq!(t.rows[0].es_singular.as_deref(), Some("yo canté"));
         // The N type adds n- in the secondary tenses.
-        let n = Options { es: None, kind: Some("n".into()) };
+        let n = Options {
+            es: None,
+            kind: Some("n".into()),
+        };
         let r = otomi().conjugate_with("tsaya", &n).unwrap();
         assert_eq!(form(&r, "preterite", 0), "dá ntsaya");
     }

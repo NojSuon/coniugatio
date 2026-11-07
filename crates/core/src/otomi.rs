@@ -51,10 +51,17 @@ pub fn form_y(root: &str) -> Option<String> {
         return None;
     }
     // "hu" + vowel is the semivowel [w], not a vowel-initial root.
-    if lead == "h" && rest.starts_with('u') && rest.chars().nth(1).is_some_and(|c| "aäeio".contains(c)) {
+    if lead == "h"
+        && rest.starts_with('u')
+        && rest.chars().nth(1).is_some_and(|c| "aäeio".contains(c))
+    {
         return None;
     }
-    let glide = if rest.starts_with(['ä', 'ë', 'ï', 'ü']) { "ñ" } else { "y" };
+    let glide = if rest.starts_with(['ä', 'ë', 'ï', 'ü']) {
+        "ñ"
+    } else {
+        "y"
+    };
     Some(format!("{lead}{glide}{rest}"))
 }
 
