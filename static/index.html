@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mati Mati · Conjugador</title>
+  <meta name="description" content="Conjuga verbos en lenguas indígenas de México con Mati Mati.">
+  <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;700;800&family=Noto+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/static/css/mati.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <header class="site-header" data-site-header></header>
+
+  <main id="contenido">
+    <!-- Header / Banner -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="pattern-p01 pattern-strip" aria-hidden="true"></div>
+      <div class="wrap">
+        <div>
+          <span class="tag">Conjugador de lenguas indígenas</span>
+          <h1 id="hero-title">Conjuga verbos en lenguas indígenas de México</h1>
+          <p>Elige una lengua, escribe un verbo y mira cómo cambia con cada persona y cada tiempo.</p>
+          <p style="margin-top:28px"><a class="button" href="#lenguas" style="background:var(--mati-blanco);color:var(--mati-cacao-rojo)">Elige una lengua →</a></p>
+        </div>
+        <img class="hero-logo" src="/static/img/mati-logo-textil.png" width="300" height="300"
+             alt="Logotipo de Mati Mati: las letras MA y TI sobre cuatro patrones textiles.">
+      </div>
+    </section>
+
+    <!-- Intro text area -->
+    <section class="intro" id="mati" aria-labelledby="intro-title">
+      <div class="wrap">
+        <div class="intro-card">
+          <div>
+            <h2 id="intro-title">¿Qué es Mati Mati?</h2>
+            <p>Mati Mati es una comunidad y plataforma web para enseñar, preservar y difundir lenguas indígenas y minoritarias. Hoy trabajamos con lenguas de México, y queremos sumar cada vez más regiones y comunidades.</p>
+            <p>Aprender una lengua es entrar a una forma distinta de ver el mundo, y hacerlo en comunidad.</p>
+          </div>
+          <ul class="pillars">
+            <li><strong>Conoce la lengua</strong>Quién la habla, dónde y cuál es su nombre propio.</li>
+            <li><strong>Aprende su escritura</strong>Cada letra con una palabra de ejemplo.</li>
+            <li><strong>Conjuga verbos</strong>Escribe una raíz y mira todas sus formas.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boxes -->
+    <section class="languages" id="lenguas" aria-labelledby="lenguas-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="lenguas-title">Elige una lengua</h2>
+          <p class="caption">Más lenguas en camino.</p>
+        </div>
+        <div class="language-grid" data-language-grid>
+          <p class="caption">Cargando lenguas…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="cta-card">
+          <div>
+            <h2 id="cta-title">¡Cuéntanos!</h2>
+            <p>¿Qué lengua te gustaría conjugar en Mati Mati?</p>
+          </div>
+          <a class="button" href="https://www.instagram.com/matidemati" rel="noopener">Escríbenos en Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" data-site-footer></footer>
+
+  <script type="module" src="/static/js/home.js"></script>
+</body>
+</html>
