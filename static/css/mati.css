@@ -378,6 +378,14 @@ table.data td .lang { font-size: 20px; }
   padding: 12px 18px; border-radius: 18px; border: 2px solid transparent; background: var(--mati-blanco);
 }
 .conjugator-form input:focus { outline: none; border-color: var(--serie-solido); }
+.conjugator-form select {
+  width: 100%; font: 600 18px var(--font-cuerpo); color: var(--mati-tinta);
+  padding: 15px 16px; border-radius: 18px; border: 2px solid transparent; background: var(--mati-blanco);
+}
+.conjugator-form select:focus { outline: none; border-color: var(--serie-solido); }
+.conjugator-form #own-es { font-weight: 400; }
+.field-help { margin-top: 6px; }
+.own-form { background: var(--mati-pastel-papel-amate); }
 .samples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; list-style: none; padding: 0; }
 .samples button {
   font: 600 15px var(--font-cuerpo); border: 1px solid var(--mati-pastel-papel-amate);

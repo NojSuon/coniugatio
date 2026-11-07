@@ -19,7 +19,7 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::conjugate::{Error, Person, Result as Conjugated, Row, Table};
+use crate::conjugate::{Error, Options, Person, Result as Conjugated, Row, Table};
 use crate::spanish;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
@@ -107,10 +107,65 @@ struct Verb {
     incompletive: String,
 }
 
+impl Class {
+    fn from_kind(kind: &str) -> Option<Class> {
+        match kind {
+            "I" => Some(Class::I),
+            "T" => Some(Class::T),
+            "Tt" => Some(Class::Tt),
+            _ => None,
+        }
+    }
+}
+
+/// First vowel of the root, which the intransitive suffix repeats: wen-el.
+fn harmonic_vowel(root: &str) -> char {
+    root.chars().find(|c| is_vowel(*c)).unwrap_or('e')
+}
+
+/// Builds a verb once its class is known, from a bare root (wen → wenel,
+/// il → ilik, jan → jantik) or from its dictionary form.
+fn from_class(word: &str, class: Class) -> std::result::Result<Verb, Error> {
+    if !has_vowel(word) {
+        return Err(Error::InvalidVerb);
+    }
+    let verb = match class {
+        Class::I => {
+            let parsed = parse_as(word, None, Class::I)?;
+            if parsed.root != word {
+                return Ok(parsed);
+            }
+            let incompletive = format!("{word}{}l", harmonic_vowel(word));
+            Verb { class, root: word.into(), completive_root: word.into(), incompletive }
+        }
+        Class::T => {
+            let root = word.strip_suffix("ik").filter(|r| has_vowel(r)).unwrap_or(word);
+            Verb { class, root: root.into(), completive_root: root.into(), incompletive: format!("{root}ik") }
+        }
+        Class::Tt => {
+            let root = word
+                .strip_suffix("tik")
+                .or_else(|| word.strip_suffix('t'))
+                .filter(|r| has_vowel(r))
+                .unwrap_or(word);
+            Verb { class, root: root.into(), completive_root: root.into(), incompletive: format!("{root}tik") }
+        }
+    };
+    Ok(verb)
+}
+
 fn parse(word: &str, entry: Option<&Entry>) -> std::result::Result<Verb, Error> {
     let class = match entry {
         Some(e) => e.class,
-        None if word.ends_with("ik") && has_vowel(&word[..word.len() - 2]) => {
+        None => detect(word)?,
+    };
+    parse_as(word, entry, class)
+}
+
+/// Tells the class from the dictionary form's ending: -ik, -tik or -Vl.
+fn detect(word: &str) -> std::result::Result<Class, Error> {
+    Ok(match word {
+        _ if word.ends_with("ik") && has_vowel(&word[..word.len() - 2]) => {
             // jan-t-ik, meyaj-t-ik: a consonant before -t marks a derived
             // transitive; root transitives end in vowel + t (sut-ik).
             let stem = &word[..word.len() - 2];
@@ -121,7 +176,7 @@ fn parse(word: &str, entry: Option<&Entry>) -> std::result::Result<Verb, Error> 
                 Class::T
             }
         }
-        None if word.ends_with('l') && word.chars().count() > 3 => {
+        _ if word.ends_with('l') && word.chars().count() > 3 => {
             let without_l = &word[..word.len() - 1];
             let last = without_l.chars().last().unwrap();
             let root = &without_l[..without_l.len() - last.len_utf8()];
@@ -131,9 +186,11 @@ fn parse(word: &str, entry: Option<&Entry>) -> std::result::Result<Verb, Error> 
                 return Err(Error::UnknownClass);
             }
         }
-        None => return Err(Error::UnknownClass),
-    };
+        _ => return Err(Error::UnknownClass),
+    })
+}
 
+fn parse_as(word: &str, entry: Option<&Entry>, class: Class) -> std::result::Result<Verb, Error> {
     let root = match class {
         Class::T => word.strip_suffix("ik").unwrap_or(word).to_string(),
         Class::Tt => word.strip_suffix("tik").unwrap_or(word).to_string(),
@@ -247,12 +304,28 @@ fn normalize(verb: &str) -> std::result::Result<String, Error> {
 
 impl Conjugation {
     pub fn conjugate(&self, input: &str) -> std::result::Result<Conjugated, Error> {
+        self.conjugate_with(input, &Options::default())
+    }
+
+    pub fn conjugate_with(&self, input: &str, opts: &Options) -> std::result::Result<Conjugated, Error> {
         let word = normalize(input)?;
-        let entry = self.lexicon.iter().find(|e| e.entry == word);
-        let verb = parse(&word, entry)?;
+        let forced = opts.kind().and_then(Class::from_kind);
+        // Look the verb up by its dictionary form, or by its bare root
+        // (nak' → nak'äl), so lexicon exceptions win over the rules.
+        let entry = self.lexicon.iter().find(|e| {
+            forced.is_none_or(|c| c == e.class)
+                && (e.entry == word || parse_as(&e.entry, Some(e), e.class).is_ok_and(|v| v.root == word))
+        });
+        let verb = match (entry, forced) {
+            (Some(e), _) => parse(&e.entry, Some(e))?,
+            (None, Some(class)) => from_class(&word, class)?,
+            (None, None) => parse(&word, None)?,
+        };
+        // A meaning typed by the user wins over the lexicon's.
+        let es_meaning = opts.es().map(str::to_string).or_else(|| entry.and_then(|e| e.es.clone()));
 
         let es = |tense: &Tense, person: &Person, plural: bool| -> Option<String> {
-            let meaning = entry?.es.as_deref()?;
+            let meaning = es_meaning.as_deref()?;
             spanish::conjugate(meaning, tense.es?, person.es? + if plural { 3 } else { 0 }, tense.negative)
         };
 
@@ -294,7 +367,7 @@ impl Conjugation {
         Ok(Conjugated {
             root: word,
             known: entry.is_some(),
-            meaning: entry.map(|e| e.meaning.clone()),
+            meaning: entry.map(|e| e.meaning.clone()).or_else(|| opts.es().map(str::to_string)),
             note: entry.and_then(|e| e.note.clone()),
             tables,
         })
@@ -398,7 +471,35 @@ mod tests {
     }
 
     #[test]
+    fn your_own_verb_with_type_and_meaning() {
+        let opts = |kind: &str, es: &str| Options { es: Some(es.into()), kind: Some(kind.into()) };
+        let c = itza();
+        // Bare roots work once the type is chosen.
+        let r = c.conjugate_with("wen", &opts("I", "dormir")).unwrap();
+        assert_eq!(r.tables[0].rows[0].singular, "kinwenel");
+        assert_eq!(r.tables[0].rows[0].es_singular.as_deref(), Some("yo duermo"));
+        let r = c.conjugate_with("nak'", &opts("I", "subir")).unwrap();
+        assert_eq!(r.tables[0].rows[0].singular, "kinnak'äl");
+        let r = c.conjugate_with("meyaj", &opts("Tt", "trabajar")).unwrap();
+        assert_eq!(r.tables[0].rows[0].singular, "kimmeyajtik");
+        let com = r.tables.iter().find(|t| t.id == "completive").unwrap();
+        assert_eq!(com.rows[2].singular, "tumeyajtaj");
+        assert_eq!(com.rows[2].es_singular.as_deref(), Some("él/ella trabajó"));
+        // The dictionary form still works with a type.
+        let r = c.conjugate_with("sutik", &opts("T", "voltear")).unwrap();
+        assert_eq!(r.tables[0].rows[2].singular, "kusutik");
+        assert_eq!(r.tables[0].rows[2].es_singular.as_deref(), Some("él/ella voltea"));
+        // Meaning only: the class is still detected from the ending.
+        let r = c.conjugate_with("tuchik", &Options { es: Some("señalar".into()), kind: None }).unwrap();
+        assert_eq!(r.tables[0].rows[0].es_singular.as_deref(), Some("yo señalo"));
+        assert!(!r.known);
+    }
+
+    #[test]
     fn unknown_class_is_an_error() {
-        assert_eq!(itza().conjugate("wen").unwrap_err(), Error::UnknownClass);
+        // A bare root that isn't in the lexicon needs its type.
+        assert_eq!(itza().conjugate("jop'").unwrap_err(), Error::UnknownClass);
+        // A bare root from the lexicon is found by its root.
+        assert_eq!(itza().conjugate("wen").unwrap().tables[0].rows[0].singular, "kinwenel");
     }
 }

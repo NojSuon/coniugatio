@@ -22,9 +22,18 @@ pub enum Engine {
 
 impl Engine {
     pub fn conjugate(&self, verb: &str) -> Result<conjugate::Result, conjugate::Error> {
+        self.conjugate_with(verb, &conjugate::Options::default())
+    }
+
+    /// Conjugates with extra information typed by the user (meaning, type).
+    pub fn conjugate_with(
+        &self,
+        verb: &str,
+        opts: &conjugate::Options,
+    ) -> Result<conjugate::Result, conjugate::Error> {
         match self {
-            Engine::Otomi(c) => c.conjugate(verb),
-            Engine::Itza(c) => c.conjugate(verb),
+            Engine::Otomi(c) => c.conjugate_with(verb, opts),
+            Engine::Itza(c) => c.conjugate_with(verb, opts),
         }
     }
 

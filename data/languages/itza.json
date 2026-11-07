@@ -16,6 +16,31 @@
     "keyboard": [
       "'",
       "ä"
+    ],
+    "own": {
+      "hint": "Escribe cualquier verbo y su significado en español. Si eliges el tipo, puedes escribir solo la raíz (wen, il, meyaj).",
+      "label": "Verbo o raíz",
+      "placeholder": "meyaj",
+      "es_placeholder": "trabajar",
+      "types_help": "Si escribes la forma del diccionario (wenel, ilik, jantik), lo detectamos solos."
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "Detectar solo"
+      },
+      {
+        "id": "I",
+        "label": "Intransitivo: wen → wenel"
+      },
+      {
+        "id": "T",
+        "label": "Transitivo: il → ilik"
+      },
+      {
+        "id": "Tt",
+        "label": "Con -t: meyaj → meyajtik"
+      }
     ]
   },
   "source": {

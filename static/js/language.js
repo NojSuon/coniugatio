@@ -32,6 +32,7 @@ function hero() {
 function subnav() {
   const items = [
     ["conjugador", "Conjugador"],
+    ["tu-verbo", "Conjuga tu verbo"],
     ["lengua", "Conoce la lengua"],
     ["ortografia", "Ortografía"],
     ["gramatica", "Cómo se conjuga"],
@@ -163,9 +164,7 @@ function conjugator() {
           <label for="verb">${e(ui.label || "Raíz del verbo")}</label>
           <input id="verb" name="verb" autocomplete="off" autocapitalize="off" spellcheck="false"
                  placeholder="${e(ui.placeholder || "")}" required lang="${e(lang.lang_code || "")}">
-          <div class="charpad" aria-label="Letras especiales">
-            ${(ui.keyboard || []).map((c) => `<button type="button" data-char="${c}" aria-label="Agregar ${c}">${c}</button>`).join("")}
-          </div>
+          ${charpad("verb")}
         </div>
         <button class="button" type="submit">Conjugar</button>
       </form>
@@ -176,12 +175,58 @@ function conjugator() {
       </ul>
       <p class="error" data-error hidden></p>
       <div data-result aria-live="polite"></div>
+    </div>
+  </section>`;
+}
+
+function charpad(target) {
+  const keys = (lang.conjugator || {}).keyboard || [];
+  if (!keys.length) return "";
+  return `<div class="charpad" aria-label="Letras especiales">
+    ${keys.map((k) => `<button type="button" data-char="${e(k)}" data-target="${target}" aria-label="Agregar ${e(k)}">${e(k)}</button>`).join("")}
+  </div>`;
+}
+
+// "Conjuga tu verbo": any verb, with its Spanish meaning and (optionally)
+// its type, conjugated with the language's rules.
+function ownVerb() {
+  const ui = lang.conjugator || {};
+  const own = ui.own || {};
+  const types = ui.types || [];
+  return `
+  <section class="section" id="tu-verbo" aria-labelledby="own-t">
+    <div class="wrap">
+      <h2 id="own-t">Conjuga tu verbo</h2>
+      <p class="lead">${e(own.hint || "Escribe cualquier verbo y su significado en español. Lo conjugamos con las reglas de la lengua.")}</p>
+      <form class="conjugator-form own-form" data-own-form>
+        <div class="field">
+          <label for="own-verb">${e(own.label || ui.label || "Verbo")}</label>
+          <input id="own-verb" name="verb" autocomplete="off" autocapitalize="off" spellcheck="false"
+                 placeholder="${e(own.placeholder || "")}" required lang="${e(lang.lang_code || "")}">
+          ${charpad("own-verb")}
+        </div>
+        <div class="field">
+          <label for="own-es">Significado en español</label>
+          <input id="own-es" name="es" autocomplete="off" placeholder="${e(own.es_placeholder || "trabajar")}" lang="es">
+          <p class="caption field-help">En infinitivo: termina en -ar, -er o -ir.</p>
+        </div>
+        ${types.length ? `<div class="field">
+          <label for="own-kind">Tipo de verbo</label>
+          <select id="own-kind" name="kind">
+            ${types.map((t) => `<option value="${e(t.id)}">${e(t.label)}</option>`).join("")}
+          </select>
+          ${own.types_help ? `<p class="caption field-help">${e(own.types_help)}</p>` : ""}
+        </div>` : ""}
+        <button class="button" type="submit">Conjugar mi verbo</button>
+      </form>
+      <p class="error" data-own-error hidden></p>
+      <div data-own-result aria-live="polite"></div>
       <div class="card card--blanca learn-more">
         <h3>¿Quieres saber más?</h3>
         <ul>
           <li><a href="#lengua">Conoce la lengua</a>: quién la habla y dónde.</li>
           <li><a href="#ortografia">Ortografía</a>: cada letra con una palabra de ejemplo.</li>
-          <li><a href="#gramatica">Cómo se conjuga</a>: los proclíticos y por qué cambia la raíz.</li>
+          <li><a href="#gramatica">Cómo se conjuga</a>: las piezas de cada verbo y sus reglas.</li>
         </ul>
       </div>
     </div>
@@ -204,15 +249,22 @@ function comingSoon() {
 if (lang.status !== "available") {
   root.innerHTML = hero() + comingSoon();
 } else {
-  root.innerHTML = hero() + subnav() + conjugator() + about() + orthography() + grammar() + source();
+  root.innerHTML = hero() + subnav() + conjugator() + ownVerb() + about() + orthography() + grammar() + source();
   setupConjugator();
 }
 
 // ---------- Conjugator behaviour ----------
 
-function renderResult(data) {
+function renderResult(data, own = false) {
   const groups = [...new Set(data.tables.map((t) => t.group))];
-  const status = data.known
+  const hasSpanish = data.tables.some((t) => t.rows.some((r) => r.es_singular));
+  const status = own && !data.known
+    ? `<p class="notice result-note">Conjugamos tu verbo con las reglas generales. Algunos verbos tienen formas propias: revisa el diccionario.${
+        data.meaning && !hasSpanish
+          ? ` No pudimos conjugar «${e(data.meaning)}» en español: escríbelo en infinitivo, como «trabajar».`
+          : ""
+      }</p>`
+    : data.known
     ? `<p class="notice notice--ok result-note">${w(data.root)} «${e(data.meaning)}» está en el diccionario${
         data.note ? ` (${e(data.note)}).` : "."
       }</p>`
@@ -264,23 +316,44 @@ function setupConjugator() {
   });
   const conjugationJson = JSON.stringify(lang.conjugation);
 
-  async function run(verb) {
-    err.hidden = true;
+  // Runs the engine and shows the tables (or the error) in a section.
+  async function show(call, target, errorBox, own) {
+    errorBox.hidden = true;
     try {
-      const { conjugate } = await engine;
+      const m = await engine;
       let data;
       try {
-        data = JSON.parse(conjugate(conjugationJson, verb));
+        data = JSON.parse(call(m));
       } catch (message) {
         throw new Error(String(message)); // wasm-bindgen throws the Rust error string
       }
-      out.innerHTML = renderResult(data);
-      history.replaceState(null, "", `${location.pathname}?verbo=${encodeURIComponent(data.root)}#conjugador`);
+      target.innerHTML = renderResult(data, own);
+      return data;
     } catch (x) {
-      err.textContent = x.message;
-      err.hidden = false;
+      errorBox.textContent = x.message;
+      errorBox.hidden = false;
+      return null;
     }
   }
+
+  async function run(verb) {
+    const data = await show((m) => m.conjugate(conjugationJson, verb), out, err, false);
+    if (data) history.replaceState(null, "", `${location.pathname}?verbo=${encodeURIComponent(data.root)}#conjugador`);
+  }
+
+  const ownForm = document.querySelector("[data-own-form]");
+  ownForm.addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const verb = ownForm.querySelector("#own-verb").value;
+    const es = ownForm.querySelector("#own-es").value;
+    const kind = ownForm.querySelector("#own-kind")?.value ?? "";
+    show(
+      (m) => m.conjugate_with(conjugationJson, verb, es, kind),
+      document.querySelector("[data-own-result]"),
+      document.querySelector("[data-own-error]"),
+      true
+    );
+  });
 
   form.addEventListener("submit", (ev) => {
     ev.preventDefault();
@@ -296,11 +369,12 @@ function setupConjugator() {
 
   document.querySelectorAll("[data-char]").forEach((b) =>
     b.addEventListener("click", () => {
-      const { selectionStart: s = input.value.length, selectionEnd: end = input.value.length } = input;
-      input.value = input.value.slice(0, s) + b.dataset.char + input.value.slice(end);
-      input.focus();
+      const field = document.getElementById(b.dataset.target);
+      const { selectionStart: s = field.value.length, selectionEnd: end = field.value.length } = field;
+      field.value = field.value.slice(0, s) + b.dataset.char + field.value.slice(end);
+      field.focus();
       const pos = s + b.dataset.char.length;
-      input.setSelectionRange(pos, pos);
+      field.setSelectionRange(pos, pos);
     })
   );
 
