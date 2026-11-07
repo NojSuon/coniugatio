@@ -1,0 +1,11 @@
+[package]
+name = "coniugatio-site"
+description = "Builds the static site into dist/ (and serves it locally with --serve)"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+coniugatio-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tiny_http = "0.12"

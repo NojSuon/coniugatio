@@ -4,9 +4,9 @@ renderHeader("lenguas");
 renderFooter();
 
 const root = document.querySelector("[data-language-root]");
-const slug = location.pathname.split("/").filter(Boolean)[0];
+const slug = root.dataset.slug;
 
-const res = await fetch(`/api/languages/${encodeURIComponent(slug)}`);
+const res = await fetch(`data/${encodeURIComponent(slug)}.json`);
 if (!res.ok) {
   root.innerHTML = `<div class="section"><div class="wrap"><p class="error">No encontramos esta lengua.</p></div></div>`;
   throw new Error("language not found");
@@ -241,15 +241,25 @@ function setupConjugator() {
   const out = document.querySelector("[data-result]");
   const err = document.querySelector("[data-error]");
 
+  // The conjugator is Rust compiled to WebAssembly (crates/wasm).
+  const engine = import("../../pkg/coniugatio_wasm.js").then(async (m) => {
+    await m.default();
+    return m;
+  });
+  const conjugationJson = JSON.stringify(lang.conjugation);
+
   async function run(verb) {
     err.hidden = true;
-    const url = `/api/languages/${slug}/conjugate?verb=${encodeURIComponent(verb)}`;
     try {
-      const r = await fetch(url);
-      const data = await r.json();
-      if (!r.ok) throw new Error(data.error || "Error");
+      const { conjugate } = await engine;
+      let data;
+      try {
+        data = JSON.parse(conjugate(conjugationJson, verb));
+      } catch (message) {
+        throw new Error(String(message)); // wasm-bindgen throws the Rust error string
+      }
       out.innerHTML = renderResult(data);
-      history.replaceState(null, "", `?verbo=${encodeURIComponent(data.root)}#conjugador`);
+      history.replaceState(null, "", `${location.pathname}?verbo=${encodeURIComponent(data.root)}#conjugador`);
     } catch (x) {
       err.textContent = x.message;
       err.hidden = false;

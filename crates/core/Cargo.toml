@@ -1,0 +1,9 @@
+[package]
+name = "coniugatio-core"
+description = "Conjugation engine for Mati Mati (shared by the WebAssembly module and the site builder)"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
