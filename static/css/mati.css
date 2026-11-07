@@ -366,25 +366,37 @@ table.data td .lang { font-size: 20px; }
 .table-scroll { overflow-x: auto; }
 
 /* Conjugator */
+/* Fields share three rows (label, box, help/letters) through subgrid, so
+   labels and boxes line up even when the text below them differs. The
+   button sits on the row of the boxes. */
 .conjugator-form {
-  display: flex; flex-wrap: wrap; gap: 12px; align-items: end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)) auto;
+  grid-template-rows: auto auto auto;
+  column-gap: 16px; row-gap: 8px; align-items: start;
   background: var(--serie-fondo); border-radius: var(--r-card-lg);
   padding: clamp(20px, 4vw, 36px);
 }
-.conjugator-form label { display: block; font-family: var(--font-titulo); font-weight: 600; margin-bottom: 6px; }
-.conjugator-form .field { flex: 1 1 260px; }
-.conjugator-form input {
-  width: 100%; font: 700 24px var(--font-cuerpo); color: var(--mati-tinta);
-  padding: 12px 18px; border-radius: 18px; border: 2px solid transparent; background: var(--mati-blanco);
-}
-.conjugator-form input:focus { outline: none; border-color: var(--serie-solido); }
+.conjugator-form .field { display: grid; grid-row: 1 / span 3; grid-template-rows: subgrid; min-width: 0; }
+.conjugator-form .button { grid-row: 2; align-self: center; justify-self: start; }
+.conjugator-form label { display: block; font-family: var(--font-titulo); font-weight: 600; align-self: end; }
+.conjugator-form input,
 .conjugator-form select {
-  width: 100%; font: 600 18px var(--font-cuerpo); color: var(--mati-tinta);
-  padding: 15px 16px; border-radius: 18px; border: 2px solid transparent; background: var(--mati-blanco);
+  width: 100%; height: 58px; color: var(--mati-tinta);
+  border-radius: 18px; border: 2px solid transparent; background: var(--mati-blanco);
 }
+.conjugator-form input { font: 700 24px var(--font-cuerpo); padding: 0 18px; }
+.conjugator-form select { font: 600 18px var(--font-cuerpo); padding: 0 16px; }
+.conjugator-form input:focus,
 .conjugator-form select:focus { outline: none; border-color: var(--serie-solido); }
 .conjugator-form #own-es { font-weight: 400; }
-.field-help { margin-top: 6px; }
+.conjugator-form .charpad { margin-top: 0; }
+.field-help { margin: 0; }
+@media (max-width: 760px) {
+  .conjugator-form { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 18px; }
+  .conjugator-form .field { grid-row: auto; grid-template-rows: auto; row-gap: 8px; }
+  .conjugator-form .button { grid-row: auto; }
+}
 .own-form { background: var(--mati-pastel-papel-amate); }
 .samples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; list-style: none; padding: 0; }
 .samples button {
