@@ -6,6 +6,7 @@
 pub mod conjugate;
 pub mod english;
 pub mod itza;
+pub mod mopan;
 pub mod nahuatl;
 pub mod otomi;
 pub mod purhepecha;
@@ -30,6 +31,9 @@ pub enum Engine {
     /// Aspect + set A/B + status, with three intransitive completives
     /// (j-, -naj-, -laj-). See `yucatec`.
     Yucatec(yucatec::Conjugation),
+    /// Like Yucatec, with set A joined to the verb and uch for activity
+    /// verbs. See `mopan`.
+    Mopan(mopan::Conjugation),
 }
 
 impl Engine {
@@ -49,6 +53,7 @@ impl Engine {
             Engine::Nahuatl(c) => c.conjugate_with(verb, opts),
             Engine::Purhepecha(c) => c.conjugate_with(verb, opts),
             Engine::Yucatec(c) => c.conjugate_with(verb, opts),
+            Engine::Mopan(c) => c.conjugate_with(verb, opts),
         }
     }
 
@@ -60,6 +65,7 @@ impl Engine {
             Engine::Nahuatl(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Purhepecha(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Yucatec(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Mopan(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
     }
 }

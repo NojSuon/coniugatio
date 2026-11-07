@@ -1,0 +1,202 @@
+{
+  "slug": "mopan",
+  "name": "mopán",
+  "endonym": "mopan",
+  "variant": "maya mopán",
+  "region": "Petén (Guatemala) y Toledo (Belice)",
+  "status": "available",
+  "order": 6,
+  "series": "ocre",
+  "summary": "Lengua maya de la rama yucateca, hermana del itza' y el maya yucateco, que se habla en San Luis, Petén, y en el sur de Belice. También se escribe mopán o maya mopán.",
+  "lang_code": "mop",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo como en el diccionario: emel «bajar», janal «comer», jittal «acostarse», ilik «verlo».",
+    "placeholder": "emel",
+    "keyboard": ["ä", "'"],
+    "own": {
+      "hint": "Escribe cualquier verbo y su significado en español. Si no lo detectamos bien, elige su tipo.",
+      "label": "Verbo",
+      "placeholder": "okol",
+      "es_placeholder": "entrar",
+      "types_help": "Los transitivos terminan en -ik (käxtik «buscarlo»); escribe su significado con «lo». Los posicionales terminan en -tal. Los de raíz terminan en vocal + l repitiendo la vocal (emel, okol); los de actividad (janal, meyaj, tz'iib') forman su pasado con uch."
+    },
+    "types": [
+      { "id": "", "label": "Detectar solo" },
+      { "id": "I", "label": "Intransitivo de raíz: emel → emeen" },
+      { "id": "A", "label": "De actividad: janal → uchi injanal" },
+      { "id": "P", "label": "Posicional: jittal → jitlajeen" },
+      { "id": "T", "label": "Transitivo: ilik → inwilaj" }
+    ]
+  },
+  "source": {
+    "short": "Hofling, Mopan Maya–Spanish–English Dictionary (2011); ALMG, Muuch' t'an mopan (2003)",
+    "full": "Charles Andrew Hofling con Narcizo Asij, Ofelia Asis Cajbon y otros, Mopan Maya–Spanish–English Dictionary / Diccionario maya mopán–español–inglés (University of Utah Press, 2011); Academia de Lenguas Mayas de Guatemala, Muuch' t'an mopan: vocabulario mopan (2003). Consulta: Diccionario bilingüe maya mopán y español."
+  },
+  "about": [
+    "El mopán es una lengua maya de la rama yucateca, junto con el maya yucateco, el itza' y el lacandón. Se habla en San Luis y otras comunidades del sur de Petén, en Guatemala, y en el distrito de Toledo, en Belice.",
+    "La Academia de Lenguas Mayas de Guatemala lo reconoce como una de las 21 comunidades lingüísticas mayas del país. En Belice convive con el q'eqchi', el inglés y el kriol.",
+    "A diferencia del maya yucateco, el mopán no tiene tonos. Tiene una sexta vocal, la ä, y escribe la persona pegada al verbo: inwilaj «lo vi», tan intal «estoy viniendo»."
+  ],
+  "orthography": {
+    "intro": "Usamos el alfabeto de la Academia de Lenguas Mayas de Guatemala: 6 vocales, que pueden ser cortas o largas, y consonantes simples o glotalizadas. El apóstrofo (') marca una consonante glotalizada (k', t') o un saltillo, un corte breve de la voz.",
+    "letters": [
+      { "letter": "'", "ipa": "ʔ", "word": "'uj", "meaning": "luna, mes" },
+      { "letter": "a", "ipa": "a", "word": "ab'äl", "meaning": "jocote" },
+      { "letter": "ä", "ipa": "ɨ", "word": "ätan", "meaning": "esposa" },
+      { "letter": "b'", "ipa": "ɓ", "word": "b'aj", "meaning": "taltuza" },
+      { "letter": "ch", "ipa": "tʃ", "word": "chäk", "meaning": "rojo" },
+      { "letter": "ch'", "ipa": "tʃʼ", "word": "ch'iich'", "meaning": "pájaro" },
+      { "letter": "d'", "ipa": "ɗ", "word": "ad'o'o", "meaning": "ese, aquel" },
+      { "letter": "e", "ipa": "e", "word": "emel", "meaning": "bajar" },
+      { "letter": "i", "ipa": "i", "word": "ilik", "meaning": "verlo" },
+      { "letter": "j", "ipa": "h", "word": "ja'", "meaning": "agua, lluvia" },
+      { "letter": "k", "ipa": "k", "word": "kab'", "meaning": "abeja, miel" },
+      { "letter": "k'", "ipa": "kʼ", "word": "k'in", "meaning": "día, sol" },
+      { "letter": "l", "ipa": "l", "word": "lu'um", "meaning": "tierra" },
+      { "letter": "m", "ipa": "m", "word": "mis", "meaning": "gato" },
+      { "letter": "n", "ipa": "n", "word": "naj", "meaning": "casa" },
+      { "letter": "o", "ipa": "o", "word": "otoch", "meaning": "hogar" },
+      { "letter": "p", "ipa": "p", "word": "paatal", "meaning": "poder" },
+      { "letter": "p'", "ipa": "pʼ", "word": "p'uul", "meaning": "cántaro" },
+      { "letter": "r", "ipa": "ɾ", "word": "rop", "meaning": "lazo grueso" },
+      { "letter": "s", "ipa": "s", "word": "saak", "meaning": "miedoso" },
+      { "letter": "t", "ipa": "t", "word": "tal", "meaning": "venir" },
+      { "letter": "t'", "ipa": "tʼ", "word": "t'an", "meaning": "palabra, lengua" },
+      { "letter": "tz", "ipa": "ts", "word": "tzo'otz", "meaning": "pelo" },
+      { "letter": "tz'", "ipa": "tsʼ", "word": "tz'ub'", "meaning": "niño" },
+      { "letter": "u", "ipa": "u", "word": "uk'ul", "meaning": "beber" },
+      { "letter": "w", "ipa": "w", "word": "winik", "meaning": "hombre" },
+      { "letter": "x", "ipa": "ʃ", "word": "xan", "meaning": "también" },
+      { "letter": "y", "ipa": "j", "word": "yuum", "meaning": "mecer" }
+    ],
+    "vowels": [
+      { "title": "Vocales cortas", "items": [{ "letter": "a", "ipa": "a" }, { "letter": "ä", "ipa": "ɨ" }, { "letter": "e", "ipa": "e" }, { "letter": "i", "ipa": "i" }, { "letter": "o", "ipa": "o" }, { "letter": "u", "ipa": "u" }] },
+      { "title": "Vocales largas", "items": [{ "letter": "aa", "ipa": "aː" }, { "letter": "ää", "ipa": "ɨː" }, { "letter": "ee", "ipa": "eː" }, { "letter": "ii", "ipa": "iː" }, { "letter": "oo", "ipa": "oː" }, { "letter": "uu", "ipa": "uː" }] }
+    ],
+    "notes": [
+      "La longitud de la vocal cambia el sentido: kok «grava», kook «sordo»; mis «gato», miis «escoba».",
+      "La b' y la d' son implosivas: el aire entra al pronunciarlas. Las demás glotalizadas (ch', k', p', t', tz') lo expulsan.",
+      "La r y la f, la g y la d' casi solo aparecen en préstamos y en unas pocas palabras.",
+      "La pronunciación aparece entre corchetes con el Alfabeto Fonético Internacional (AFI)."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo mopán se arma con un marcador de aspecto, el pronombre pegado al verbo y, en los transitivos, un sufijo de estatus: -ik mientras pasa, -aj cuando ya pasó.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          { "slot": "Aspecto", "description": "walak costumbre, tan en curso, yan tiene que, ka' «que…».", "example": "tan" },
+          { "slot": "Juego A", "description": "in-, a-, u-, ti- pegado al verbo; ante vocal inw-, aw-, uy-, tiw-.", "example": "inw-" },
+          { "slot": "Verbo", "description": "La raíz.", "example": "il" },
+          { "slot": "Estatus", "description": "-ik, -aj, -V' en los transitivos.", "example": "-ik" },
+          { "slot": "Plural", "description": "-e'ex ustedes, -oo' ellos.", "example": "-oo'" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Dos juegos de pronombres",
+        "description": "El juego A va pegado antes del verbo: quién hace la acción. El juego B va al final: el objeto, y el sujeto de los intransitivos en el pasado y el subjuntivo.",
+        "columns": ["Persona", "Juego A", "Ante vocal", "Juego B"],
+        "rows": [
+          { "label": "yo", "cells": ["in-", "inw-", "-een / -en"] },
+          { "label": "tú", "cells": ["a-", "aw-", "-eech / -ech"] },
+          { "label": "él, ella", "cells": ["u-", "uy-", "-i / —"] },
+          { "label": "nosotros", "cells": ["ti-", "tiw-", "-o'on"] },
+          { "label": "ustedes", "cells": ["a- … -e'ex", "aw- … -e'ex", "-e'ex"] },
+          { "label": "ellos, ellas", "cells": ["u- … -oo'", "uy- … -oo'", "-oo'"] }
+        ],
+        "note": "«Nosotros» con -e'ex al final incluye a quien escucha: tiwemele'ex «bajamos todos»."
+      },
+      {
+        "type": "cards",
+        "title": "Tres maneras de decir «ya pasó»",
+        "description": "En el completivo, cada tipo de verbo intransitivo marca a la persona de otra manera.",
+        "items": [
+          { "tag": "-een", "name": "De raíz", "description": "Verbos en vocal + l que repite la vocal, y tal, b'eel: la raíz y el juego B.", "examples": [{ "from": "emel", "to": "emeen", "meaning": "bajé" }, { "from": "b'eel", "to": "b'ini", "meaning": "se fue" }] },
+          { "tag": "uch", "name": "De actividad", "description": "Verbos como janal, meyaj, tz'iib': uchi «pasó» + el verbo con su pronombre.", "examples": [{ "from": "janal", "to": "uchi injanal", "meaning": "comí" }] },
+          { "tag": "-laj", "name": "Posicionales", "description": "Verbos en -tal que dicen cómo queda el cuerpo.", "examples": [{ "from": "jittal", "to": "jitlajeen", "meaning": "me acosté" }] }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Los transitivos",
+        "description": "El completivo transitivo no lleva prefijo de aspecto. En el subjuntivo y el imperativo, los de raíz terminan con una vocal que repite la de la raíz; los de -t-, con -e.",
+        "items": [
+          { "text": "tan inwilik", "translation": "lo estoy viendo" },
+          { "text": "inwilaj", "translation": "lo vi" },
+          { "text": "walak injantik", "translation": "lo como (de costumbre)" },
+          { "text": "ka' ujante", "translation": "que lo coma" },
+          { "text": "jante", "translation": "¡cómelo!" }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Negación y órdenes",
+        "description": "Ma' niega; con el aspecto en curso se vuelve ma' t-. Para prohibir se usa ma' con el pronombre de la segunda persona.",
+        "items": [
+          { "text": "ma' tub'eel", "translation": "no va" },
+          { "text": "ma' ab'eel", "translation": "¡no vayas!" },
+          { "text": "xen", "translation": "¡vete!" },
+          { "text": "emen", "translation": "¡baja!" }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases de ejemplo",
+        "items": [
+          { "text": "Yan wa a meyaja?", "translation": "¿Hay trabajo?" },
+          { "text": "Wäyneen ti ak'ä'.", "translation": "Dormí en la noche." },
+          { "text": "Tan utal inwätan.", "translation": "Ahí viene mi esposa." },
+          { "text": "Aji a tz'ub'u.", "translation": "El niño se despertó." }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "mopan",
+    "persons": [
+      { "id": "1", "label": "1.ª persona", "es": 0 },
+      { "id": "2", "label": "2.ª persona", "es": 1 },
+      { "id": "3", "label": "3.ª persona", "es": 2 }
+    ],
+    "tenses": [
+      { "id": "habitual", "group": "Aspectos", "name": "Habitual", "description": "Lo que se hace de costumbre (walak).", "form": "habitual", "es": "present" },
+      { "id": "durative", "group": "Aspectos", "name": "Durativo", "description": "Lo que está pasando (tan).", "form": "durative", "es": "progressive" },
+      { "id": "completive", "group": "Pasado", "name": "Completivo", "description": "Lo que ya pasó: juego B en los intransitivos de raíz, uch en los de actividad, -aj en los transitivos.", "form": "completive", "es": "preterite" },
+      { "id": "obligative", "group": "Auxiliares", "name": "Obligatorio", "description": "«Tengo que…» (yan).", "form": "obligative", "es": { "tense": "present", "aux": "tener", "link": "que" } },
+      { "id": "abilitative", "group": "Auxiliares", "name": "Habilidad", "description": "«Puedo…» (paatal).", "form": "abilitative", "es": { "tense": "present", "aux": "poder" } },
+      { "id": "subjunctive", "group": "Modos", "name": "Subjuntivo", "description": "«Que…»: lo que aún no es real (ka' + estatus dependiente).", "form": "subjunctive", "es": { "tense": "subjunctive", "before": "que" } },
+      { "id": "imperative", "group": "Modos", "name": "Imperativo", "description": "Órdenes: -en en los intransitivos.", "form": "imperative", "es": "imperative" },
+      { "id": "prohibitive", "group": "Modos", "name": "Prohibitivo", "description": "«¡No lo hagas!»: ma' a…", "form": "prohibitive", "es": { "tense": "imperative", "negative": true } },
+      { "id": "negative", "group": "Negativo", "name": "Presente", "description": "ma' t- + pronombre + verbo.", "form": "durative", "negative": true, "es": "present" }
+    ],
+    "lexicon": [
+      { "entry": "emel", "class": "I", "meaning": "bajar", "es": "bajar" },
+      { "entry": "okol", "class": "I", "meaning": "entrar", "es": "entrar" },
+      { "entry": "jok'ol", "class": "I", "meaning": "salir", "es": "salir" },
+      { "entry": "k'ochol", "class": "I", "meaning": "llegar", "es": "llegar" },
+      { "entry": "tal", "class": "I", "meaning": "venir", "es": "venir" },
+      { "entry": "b'eel", "class": "I", "completive": "b'in", "dependent": "xi'", "imperative": "xen", "meaning": "ir", "es": "ir", "note": "Irregular: pasado b'ini, subjuntivo xi'ik, imperativo xen" },
+      { "entry": "wäyäl", "class": "I", "completive": "wäyn", "dependent": "wäyn", "imperative": "wäynen", "meaning": "dormir", "es": "dormir", "note": "Pasado wäyneen, imperativo wäynen" },
+      { "entry": "uk'ul", "class": "I", "meaning": "beber", "es": "beber" },
+      { "entry": "janal", "class": "A", "meaning": "comer", "es": "comer" },
+      { "entry": "meyaj", "class": "A", "meaning": "trabajar", "es": "trabajar" },
+      { "entry": "tz'iib'", "class": "A", "meaning": "escribir", "es": "escribir" },
+      { "entry": "ok'ol", "class": "A", "meaning": "llorar", "es": "llorar" },
+      { "entry": "alka'", "class": "A", "meaning": "correr", "es": "correr" },
+      { "entry": "ichkil", "class": "A", "meaning": "bañarse", "es": "bañarse" },
+      { "entry": "noytal", "class": "P", "meaning": "sentarse", "es": "sentarse" },
+      { "entry": "wa'tal", "class": "P", "meaning": "pararse", "es": "pararse" },
+      { "entry": "jittal", "class": "P", "meaning": "acostarse", "es": "acostarse" },
+      { "entry": "ilik", "class": "T", "dependent": "ila'", "imperative": "ila", "meaning": "verlo", "es": "verlo" },
+      { "entry": "b'etik", "class": "T", "dependent": "b'ete'", "meaning": "hacerlo", "es": "hacerlo" },
+      { "entry": "jantik", "class": "T", "meaning": "comerlo", "es": "comerlo" },
+      { "entry": "käxtik", "class": "T", "meaning": "buscarlo", "es": "buscarlo" },
+      { "entry": "u'yik", "class": "T", "meaning": "oírlo", "es": "oírlo" },
+      { "entry": "eeltik", "class": "T", "meaning": "saberlo", "es": "saberlo" },
+      { "entry": "cha'antik", "class": "T", "meaning": "mirarlo", "es": "mirarlo" }
+    ]
+  }
+}
