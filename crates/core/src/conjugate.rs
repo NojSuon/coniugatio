@@ -10,7 +10,7 @@ use std::collections::BTreeMap;
 
 use serde::{Deserialize, Serialize};
 
-use crate::otomi;
+use crate::{otomi, spanish};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Person {
@@ -19,6 +19,10 @@ pub struct Person {
     /// Whether this person takes the plural suffix.
     #[serde(default = "yes")]
     pub has_plural: bool,
+    /// Spanish person for the translation: 0 = yo, 1 = tú, 2 = él/ella.
+    /// The plural uses the matching plural person (nosotros, ustedes, ellos).
+    #[serde(default)]
+    pub es: Option<usize>,
 }
 
 fn yes() -> bool {
@@ -39,12 +43,22 @@ pub struct Paradigm {
     /// Secondary tenses take the n- form for N-verbs.
     #[serde(default)]
     pub secondary: bool,
+    /// Spanish tense used for the translation.
+    #[serde(default)]
+    pub es: Option<spanish::Tense>,
+    /// Translate with "no".
+    #[serde(default)]
+    pub negative: bool,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct LexiconEntry {
     pub root: String,
     pub meaning: String,
+    /// Spanish infinitive to conjugate for the translation ("comer",
+    /// "reírse", "beber agua").
+    #[serde(default)]
+    pub es: Option<String>,
     /// Secondary form B, when the rule would get it wrong.
     #[serde(default)]
     pub b: Option<String>,
@@ -73,6 +87,9 @@ pub struct Row {
     pub clitic: String,
     pub singular: String,
     pub plural: Option<String>,
+    /// Spanish equivalents, when the verb's meaning is known.
+    pub es_singular: Option<String>,
+    pub es_plural: Option<String>,
 }
 
 #[derive(Debug, Serialize)]
@@ -168,7 +185,13 @@ impl Conjugation {
                     .filter_map(|person| {
                         let clitic = p.forms.get(&person.id)?;
                         let stem = stem_for(p, &person.id);
+                        let es = |offset: usize| -> Option<String> {
+                            let meaning = entry?.es.as_deref()?;
+                            spanish::conjugate(meaning, p.es?, person.es? + offset, p.negative)
+                        };
                         Some(Row {
+                            es_singular: es(0),
+                            es_plural: es(3),
                             person: person.label.clone(),
                             clitic: clitic.clone(),
                             singular: format!("{clitic} {stem}"),
@@ -254,6 +277,20 @@ mod tests {
         let r = otomi().conjugate(" ʼÄhä ").unwrap();
         assert_eq!(r.root, "'ähä");
         assert_eq!(form(&r, "preterite", 2), "bi 'ñähä");
+    }
+
+    #[test]
+    fn spanish_translation() {
+        let r = otomi().conjugate("pädi").unwrap();
+        let t = r.tables.iter().find(|t| t.id == "preterite").unwrap();
+        assert_eq!(t.rows[0].es_singular.as_deref(), Some("yo supe"));
+        assert_eq!(t.rows[0].es_plural.as_deref(), Some("nosotros supimos"));
+        assert_eq!(t.rows[2].es_plural.as_deref(), Some("ellos/ellas supieron"));
+        let n = r.tables.iter().find(|t| t.id == "neg-present").unwrap();
+        assert_eq!(n.rows[1].es_singular.as_deref(), Some("tú no sabes"));
+        // Unknown verbs have no translation.
+        let u = otomi().conjugate("zoni").unwrap();
+        assert_eq!(u.tables[0].rows[0].es_singular, None);
     }
 
     #[test]

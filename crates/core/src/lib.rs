@@ -5,6 +5,7 @@
 
 pub mod conjugate;
 pub mod otomi;
+pub mod spanish;
 
 use serde::{Deserialize, Serialize};
 
