@@ -19,6 +19,11 @@ export const t = (es, en) => (EN ? en : es);
 // Home page of the current language, relative to <base href>.
 export const HOME = EN ? "en/" : "./";
 
+// Donations, on Ko-fi.
+export const DONATE_URL = "https://ko-fi.com/suondilut";
+const donateLink = (cls) =>
+  `<a class="${cls}" href="${DONATE_URL}" target="_blank" rel="noopener">${t("Dónanos", "Donate")}<span class="visually-hidden"> ${t("(en Ko-fi, se abre en otra pestaña)", "(on Ko-fi, opens in a new tab)")}</span></a>`;
+
 // The same page in the other language: /otomi/ ⇄ /en/otomi/.
 function otherLanguageHref() {
   const base = new URL(document.baseURI).pathname;
@@ -86,6 +91,7 @@ export function renderHeader(current) {
             ${link(`${HOME}#mati`, "Mati Mati", "mati")}
           </ul>
         </nav>
+        ${donateLink("donate")}
         ${EN
           ? `<a class="lang-switch" href="${otherLanguageHref()}" hreflang="es" lang="es" aria-label="Ver esta página en español">ES</a>`
           : `<a class="lang-switch" href="${otherLanguageHref()}" hreflang="en" lang="en" aria-label="Read this page in English">EN</a>`}
@@ -101,6 +107,7 @@ export function renderFooter() {
       <a class="brand" href="${HOME}">${LOGO_SVG}<span>Mati Mati</span></a>
       <p>${t("Aprende, preserva y comparte lenguas indígenas.", "Learn, preserve and share Indigenous languages.")}<br>
         ${t("Síguenos en", "Follow us at")} <a href="https://www.instagram.com/matidemati" rel="noopener">@matidemati</a>.</p>
+      ${donateLink("donate donate--footer")}
     </div>`;
 }
 
