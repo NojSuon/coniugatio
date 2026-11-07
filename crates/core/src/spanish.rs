@@ -18,6 +18,9 @@ pub enum Tense {
     Imperfect,
     /// estoy durmiendo
     Progressive,
+    /// estaba durmiendo
+    #[serde(rename = "past_progressive")]
+    PastProgressive,
     /// he visto, has dormido…
     Perfect,
     /// (que) yo duerma
@@ -68,6 +71,9 @@ pub struct Spec {
     /// Always negative in Spanish ("que no…"), even if the table isn't.
     #[serde(default)]
     pub negative: bool,
+    /// Said as a question: ¿él canta?
+    #[serde(default)]
+    pub question: bool,
 }
 
 fn yes() -> bool {
@@ -85,6 +91,7 @@ impl Es {
                 adverb: None,
                 pronoun: true,
                 negative: false,
+                question: false,
             },
             Es::Spec(s) => s.clone(),
         }
@@ -95,6 +102,14 @@ impl Es {
 pub const PRONOUNS: [&str; 6] = ["yo", "tú", "él/ella", "nosotros", "ustedes", "ellos/ellas"];
 const REFLEXIVE: [&str; 6] = ["me", "te", "se", "nos", "se", "se"];
 const ESTAR: [&str; 6] = ["estoy", "estás", "está", "estamos", "están", "están"];
+const ESTABA: [&str; 6] = [
+    "estaba",
+    "estabas",
+    "estaba",
+    "estábamos",
+    "estaban",
+    "estaban",
+];
 const HABER: [&str; 6] = ["he", "has", "ha", "hemos", "han", "han"];
 
 type Six = [&'static str; 6];
@@ -166,6 +181,17 @@ fn irregular(inf: &str) -> Irregular {
             participle: Some("oído"),
             ..NONE
         },
+        "jugar" => Irregular {
+            present: Some(["juego", "juegas", "juega", "jugamos", "juegan", "juegan"]),
+            subjunctive: Some([
+                "juegue", "juegues", "juegue", "juguemos", "jueguen", "jueguen",
+            ]),
+            ..NONE
+        },
+        "escribir" => Irregular {
+            participle: Some("escrito"),
+            ..NONE
+        },
         "moler" => Irregular {
             present: Some(["muelo", "mueles", "muele", "molemos", "muelen", "muelen"]),
             ..NONE
@@ -178,6 +204,20 @@ fn irregular(inf: &str) -> Irregular {
             future_stem: Some("reir"),
             gerund: Some("riendo"),
             participle: Some("reído"),
+            ..NONE
+        },
+        "estar" => Irregular {
+            present: Some(["estoy", "estás", "está", "estamos", "están", "están"]),
+            preterite: Some([
+                "estuve",
+                "estuviste",
+                "estuvo",
+                "estuvimos",
+                "estuvieron",
+                "estuvieron",
+            ]),
+            subjunctive: Some(["esté", "estés", "esté", "estemos", "estén", "estén"]),
+            imperative: Some("está"),
             ..NONE
         },
         "ir" => Irregular {
@@ -415,6 +455,7 @@ fn finite(inf: &str, tense: Tense, p: usize, negative: bool) -> String {
             .map(|s| format!("{s}{}", CONDITIONAL[p]))
             .unwrap_or_else(|| regular(&plain, tense, p)),
         Tense::Progressive => format!("{} {}", ESTAR[p], gerund(&plain, &irr)),
+        Tense::PastProgressive => format!("{} {}", ESTABA[p], gerund(&plain, &irr)),
         Tense::Perfect => format!("{} {}", HABER[p], participle(&plain, &irr)),
         Tense::Subjunctive => subjunctive(&plain, &irr, p),
         // "tú": ¡duerme! / ¡no duermas!; "ustedes": ¡duerman! / ¡no duerman!
@@ -595,6 +636,8 @@ pub fn render(meaning: &str, es: &Es, person: usize, negative: bool) -> Option<S
     let text = parts.join(" ");
     Some(if imperative {
         format!("¡{text}!")
+    } else if spec.question {
+        format!("¿{text}?")
     } else {
         text
     })
@@ -645,6 +688,9 @@ mod tests {
         assert_eq!(c("oír", Tense::Present, 0), "yo oigo");
         assert_eq!(c("oír", Tense::Future, 3), "nosotros oiremos");
         assert_eq!(c("moler", Tense::Present, 2), "él/ella muele");
+        assert_eq!(c("jugar", Tense::Present, 0), "yo juego");
+        assert_eq!(c("jugar", Tense::Imperative, 1), "¡juega!");
+        assert_eq!(c("escribir", Tense::Perfect, 0), "yo he escrito");
     }
 
     #[test]

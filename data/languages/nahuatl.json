@@ -179,8 +179,8 @@
       { "id": "conditional", "group": "Modos", "name": "Condicional", "description": "Lo que pasaría (-skia).", "form": "conditional", "es": "conditional" },
       { "id": "optative", "group": "Modos", "name": "Optativo", "description": "Órdenes y deseos: xi- para tú y ustedes, ma para los demás.", "form": "optative", "es": "optative" },
       { "id": "admonitive", "group": "Modos", "name": "Admonitivo", "description": "Advertencia: «que no…», «¡cuidado!» (ma + pasado).", "form": "admonitive", "es": { "tense": "optative", "negative": true } },
-      { "id": "going", "group": "Ir a hacer algo", "name": "Ir a", "description": "Ir con el propósito de hacerlo (-tiu).", "form": "going", "es": { "tense": "present", "aux": "ir", "link": "a" } },
-      { "id": "went", "group": "Ir a hacer algo", "name": "Fue a", "description": "Fue con el propósito de hacerlo (o- … -to).", "form": "went", "es": { "tense": "preterite", "aux": "ir", "link": "a" } },
+      { "id": "going", "group": "Ir a hacer algo", "name": "Ir a", "description": "Ir con el propósito de hacerlo (-tiu; plural -tin).", "form": "going", "es": { "tense": "present", "aux": "ir", "link": "a" } },
+      { "id": "went", "group": "Ir a hacer algo", "name": "Fue a", "description": "Fue con el propósito de hacerlo (o- … -to; plural -ton).", "form": "went", "es": { "tense": "preterite", "aux": "ir", "link": "a" } },
       { "id": "neg-present", "group": "Negativo", "name": "Presente", "description": "amo + presente.", "form": "present", "negative": true, "es": "present" },
       { "id": "neg-preterite", "group": "Negativo", "name": "Pretérito", "description": "amo + pretérito.", "form": "preterite", "negative": true, "es": "preterite" },
       { "id": "neg-optative", "group": "Negativo", "name": "Optativo", "description": "amo + optativo: «¡no lo hagas!».", "form": "optative", "negative": true, "es": "optative" }
