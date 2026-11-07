@@ -1,0 +1,216 @@
+{
+  "slug": "nahuatl",
+  "name": "náhuatl",
+  "endonym": "maseuallâjtolli",
+  "variant": "náhuatl del centro (Acotepec)",
+  "region": "Acotepec, Ciudad de México",
+  "status": "available",
+  "order": 3,
+  "series": "anil",
+  "summary": "Conjuga verbos con prefijos de sujeto y objeto, y mira cómo se funden las vocales.",
+  "lang_code": "nhn",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo como en el diccionario, con su objeto: kichiua «hacerlo», tlâjtoa «hablar», kochi «dormir». El circunflejo es opcional.",
+    "placeholder": "kichiua",
+    "keyboard": ["â", "ê", "î", "ô"],
+    "own": {
+      "hint": "Escribe la raíz de cualquier verbo, su significado en español y si lleva objeto. Lo conjugamos con las reglas del náhuatl del centro.",
+      "label": "Raíz del verbo",
+      "placeholder": "tekiti",
+      "es_placeholder": "trabajar",
+      "types_help": "Si lleva ki-, escribe el significado con «lo»: «hacerlo». La clase del pasado se calcula con la forma de la raíz."
+    },
+    "types": [
+      { "id": "none", "label": "Sin objeto: kochi, tekiti" },
+      { "id": "ki", "label": "Con ki- «lo»: kichiua" },
+      { "id": "tla", "label": "Con tla- «algo»: tlakua" },
+      { "id": "te", "label": "Con te- «a alguien»: temachtia" },
+      { "id": "mo", "label": "Reflexivo mo-: mopaktia" }
+    ]
+  },
+  "source": {
+    "short": "Sullivan, Compendio de la gramática náhuatl; Wright Carr, Lectura del náhuatl (2016)",
+    "full": "Thelma D. Sullivan, Compendio de la gramática náhuatl (UNAM, Instituto de Investigaciones Históricas); David Charles Wright Carr, Lectura del náhuatl, versión revisada y aumentada (INALI, 2016). Ortografía: Tlâjkuilolpamitl (SEP), según el curso de náhuatl de Sun."
+  },
+  "about": [
+    "El náhuatl es una lengua yuto-nahua que hablan cerca de un millón y medio de personas en México. El náhuatl del centro (NHN) se habla en partes de Milpa Alta, Tláhuac y Texcoco, en la cuenca de México.",
+    "Maseuallâjtolli significa «la lengua de la gente del pueblo»: maseualli «persona del pueblo» y tlajtolli «palabra, lengua».",
+    "El náhuatl «clásico», el de los textos de los siglos XVI a XVIII, no es otra lengua: es la etapa documentada más antigua de las variantes del centro. Por eso este conjugador sigue las gramáticas del náhuatl clásico y las escribe con la ortografía actual."
+  ],
+  "orthography": {
+    "intro": "Usamos el Tlâjkuilolpamitl, la escritura de la SEP: 4 vocales y 14 consonantes. La j es el saltillo, la u suena como w y el circunflejo (â, ê, î, ô) marca una vocal que absorbió a otra al juntarse dos palabras.",
+    "letters": [
+      { "letter": "a", "ipa": "a", "word": "atl", "meaning": "agua" },
+      { "letter": "ch", "ipa": "tʃ", "word": "chichi", "meaning": "perro" },
+      { "letter": "e", "ipa": "e", "word": "epatl", "meaning": "zorrillo" },
+      { "letter": "i", "ipa": "i", "word": "ichkatl", "meaning": "algodón" },
+      { "letter": "j", "ipa": "h", "word": "tlajtolli", "meaning": "palabra" },
+      { "letter": "k", "ipa": "k", "word": "kalli", "meaning": "casa" },
+      { "letter": "l", "ipa": "l", "word": "tonalli", "meaning": "día, sol" },
+      { "letter": "m", "ipa": "m", "word": "michin", "meaning": "pez" },
+      { "letter": "n", "ipa": "n", "word": "nochtli", "meaning": "tuna" },
+      { "letter": "o", "ipa": "o", "word": "okichtli", "meaning": "hombre" },
+      { "letter": "p", "ipa": "p", "word": "papalotl", "meaning": "mariposa" },
+      { "letter": "s", "ipa": "s", "word": "siuatl", "meaning": "mujer" },
+      { "letter": "t", "ipa": "t", "word": "tochin", "meaning": "conejo" },
+      { "letter": "tl", "ipa": "tɬ", "word": "tlakatl", "meaning": "persona" },
+      { "letter": "ts", "ipa": "ts", "word": "tsontli", "meaning": "cabello" },
+      { "letter": "u", "ipa": "w", "word": "uakax", "meaning": "vaca" },
+      { "letter": "x", "ipa": "ʃ", "word": "xochitl", "meaning": "flor" },
+      { "letter": "y", "ipa": "j", "word": "youalli", "meaning": "noche" }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales",
+        "items": [
+          { "letter": "a", "ipa": "a" },
+          { "letter": "e", "ipa": "e" },
+          { "letter": "i", "ipa": "i" },
+          { "letter": "o", "ipa": "o" }
+        ]
+      },
+      {
+        "title": "Vocales fundidas",
+        "items": [
+          { "letter": "â", "ipa": "a" },
+          { "letter": "ê", "ipa": "e" },
+          { "letter": "î", "ipa": "i" },
+          { "letter": "ô", "ipa": "o" }
+        ]
+      }
+    ],
+    "notes": [
+      "El circunflejo no cambia el sonido: indica que esa vocal absorbió a otra al formarse la palabra. No + iknitl → nôkniu «mi hermano»; tla + ijtoa → tlâjtoa «hablar».",
+      "La u es siempre consonante, como la w: uakax, siuatl. Ku se lee [kʷ]: kualli «bueno».",
+      "Las vocales largas no se escriben.",
+      "La pronunciación aparece entre corchetes con el Alfabeto Fonético Internacional (AFI)."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo náhuatl se arma con prefijos y sufijos alrededor de la raíz: quién lo hace, a quién, cuándo y cuántos.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          { "slot": "Pasado", "description": "o- marca el pretérito.", "example": "o-" },
+          { "slot": "Sujeto", "description": "ni- yo, ti- tú o nosotros, an- ustedes.", "example": "ni-" },
+          { "slot": "Objeto", "description": "ki- «lo», tla- «algo», te- «a alguien», mo- reflexivo.", "example": "k-" },
+          { "slot": "Verbo", "description": "La raíz.", "example": "chiua" },
+          { "slot": "Tiempo y plural", "description": "-s futuro, -ya copretérito, -j / -kej plural.", "example": "-s" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Prefijos de sujeto y de objeto",
+        "description": "La 3.ª persona no lleva prefijo de sujeto. Ti- es «tú» o «nosotros»: el plural lleva -j al final.",
+        "columns": ["Persona", "Sujeto", "Objeto", "Reflexivo"],
+        "rows": [
+          { "label": "yo", "cells": ["ni-", "nech-", "no-"] },
+          { "label": "tú", "cells": ["ti-", "mits-", "mo-"] },
+          { "label": "él, ella", "cells": ["—", "ki-", "mo-"] },
+          { "label": "nosotros", "cells": ["ti- … -j", "tech-", "to-"] },
+          { "label": "ustedes", "cells": ["an- … -j", "amech-", "mo-"] },
+          { "label": "ellos, ellas", "cells": ["— … -j", "kin-", "mo-"] }
+        ],
+        "note": "Ki- se vuelve k- después de una vocal: ni + ki + chiua → nikchiua."
+      },
+      {
+        "type": "cards",
+        "title": "Cuatro clases de verbos en el pasado",
+        "description": "Cada verbo forma su pasado de una de cuatro maneras. Todos llevan o- al principio.",
+        "items": [
+          { "tag": "Clase 1", "name": "Suma -k", "description": "Verbos que terminan en dos consonantes + vocal, y algunos otros.", "examples": [{ "from": "pano", "to": "opanok", "meaning": "pasó" }, { "from": "tsajtsi", "to": "otsajtsik", "meaning": "gritó" }] },
+          { "tag": "Clase 2", "name": "Pierde la vocal final", "description": "La clase más común. La m final se vuelve n.", "examples": [{ "from": "kichiua", "to": "okichiu", "meaning": "lo hizo" }, { "from": "nemi", "to": "onen", "meaning": "vivió" }] },
+          { "tag": "Clase 3", "name": "-ia, -oa → -j", "description": "Pierden la a final y suman -j.", "examples": [{ "from": "tlâjtoa", "to": "otlâjtoj", "meaning": "habló" }] },
+          { "tag": "Clase 4", "name": "Suma -j", "description": "Pocos verbos, como kua «comer».", "examples": [{ "from": "tlakua", "to": "otlakuaj", "meaning": "comió" }] }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Las vocales que se funden",
+        "description": "Cuando un prefijo con vocal se junta con un verbo que empieza con i, la i desaparece y la otra vocal lleva circunflejo.",
+        "items": [
+          { "text": "tla + ijtoa → tlâjtoa", "translation": "hablar" },
+          { "text": "tla + ijkuiloa → tlâjkuiloa", "translation": "escribir" },
+          { "text": "to + itta → tôtta", "translation": "nos vemos" },
+          { "text": "no + iknitl → nôkniu", "translation": "mi hermano" }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Los modos",
+        "description": "Con ma se piden cosas; con xi- se da una orden a «tú» o «ustedes»; amo niega.",
+        "items": [
+          { "text": "xikchiua", "translation": "¡hazlo!" },
+          { "text": "xikchiuakan", "translation": "¡háganlo!" },
+          { "text": "ma nikchiua", "translation": "que yo lo haga" },
+          { "text": "amo xikchiua", "translation": "¡no lo hagas!" },
+          { "text": "ma tiuets", "translation": "¡cuidado, no te caigas!" }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases de ejemplo",
+        "items": [
+          { "text": "Ken tinemi?", "translation": "¿Cómo estás?" },
+          { "text": "Tlen tikchiua?", "translation": "¿Qué haces?" },
+          { "text": "Tlen opanok?", "translation": "¿Qué pasó?" },
+          { "text": "Nipaki nimitsixmatis.", "translation": "Me alegra conocerte." },
+          { "text": "Tôttaskej.", "translation": "Nos vemos." }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "nahuatl",
+    "persons": [
+      { "id": "1", "label": "1.ª persona", "es": 0 },
+      { "id": "2", "label": "2.ª persona", "es": 1 },
+      { "id": "3", "label": "3.ª persona", "es": 2 }
+    ],
+    "tenses": [
+      { "id": "present", "group": "Indicativo", "name": "Presente", "description": "Lo que pasa ahora o siempre.", "form": "present", "es": "present" },
+      { "id": "progressive", "group": "Indicativo", "name": "Presente progresivo", "description": "Lo que está pasando ahora (-tika).", "form": "progressive", "es": "progressive" },
+      { "id": "habitual", "group": "Indicativo", "name": "Habitual", "description": "Lo que se hace de costumbre (-ni).", "form": "habitual", "es": { "tense": "present", "aux": "soler" } },
+      { "id": "imperfect", "group": "Indicativo", "name": "Copretérito", "description": "Lo que pasaba en el pasado (-ya).", "form": "imperfect", "es": "imperfect" },
+      { "id": "preterite", "group": "Indicativo", "name": "Pretérito", "description": "Lo que ya pasó (o-).", "form": "preterite", "es": "preterite" },
+      { "id": "future", "group": "Indicativo", "name": "Futuro", "description": "Lo que va a pasar (-s, -skej).", "form": "future", "es": "future" },
+      { "id": "conditional", "group": "Modos", "name": "Condicional", "description": "Lo que pasaría (-skia).", "form": "conditional", "es": "conditional" },
+      { "id": "optative", "group": "Modos", "name": "Optativo", "description": "Órdenes y deseos: xi- para tú y ustedes, ma para los demás.", "form": "optative", "es": "optative" },
+      { "id": "admonitive", "group": "Modos", "name": "Admonitivo", "description": "Advertencia: «que no…», «¡cuidado!» (ma + pasado).", "form": "admonitive", "es": { "tense": "optative", "negative": true } },
+      { "id": "going", "group": "Ir a hacer algo", "name": "Ir a", "description": "Ir con el propósito de hacerlo (-tiu).", "form": "going", "es": { "tense": "present", "aux": "ir", "link": "a" } },
+      { "id": "went", "group": "Ir a hacer algo", "name": "Fue a", "description": "Fue con el propósito de hacerlo (o- … -to).", "form": "went", "es": { "tense": "preterite", "aux": "ir", "link": "a" } },
+      { "id": "neg-present", "group": "Negativo", "name": "Presente", "description": "amo + presente.", "form": "present", "negative": true, "es": "present" },
+      { "id": "neg-preterite", "group": "Negativo", "name": "Pretérito", "description": "amo + pretérito.", "form": "preterite", "negative": true, "es": "preterite" },
+      { "id": "neg-optative", "group": "Negativo", "name": "Optativo", "description": "amo + optativo: «¡no lo hagas!».", "form": "optative", "negative": true, "es": "optative" }
+    ],
+    "lexicon": [
+      { "entry": "kichiua", "root": "chiua", "object": "ki", "meaning": "hacer", "es": "hacerlo" },
+      { "entry": "kitta", "root": "itta", "object": "ki", "weak": true, "meaning": "ver", "es": "verlo" },
+      { "entry": "kijtoa", "root": "ijtoa", "object": "ki", "weak": true, "meaning": "decir", "es": "decirlo" },
+      { "entry": "tlâjtoa", "root": "ijtoa", "object": "tla", "weak": true, "meaning": "hablar", "es": "hablar" },
+      { "entry": "tlâjkuiloa", "root": "ijkuiloa", "object": "tla", "weak": true, "meaning": "escribir", "es": "escribir" },
+      { "entry": "tlakua", "root": "kua", "object": "tla", "class": 4, "meaning": "comer", "es": "comer" },
+      { "entry": "tlapoua", "root": "poua", "object": "tla", "meaning": "leer, contar", "es": "leer" },
+      { "entry": "kimati", "root": "mati", "object": "ki", "meaning": "saber", "es": "saberlo" },
+      { "entry": "kixmati", "root": "ixmati", "object": "ki", "meaning": "conocer", "es": "conocerlo" },
+      { "entry": "kikaki", "root": "kaki", "object": "ki", "meaning": "oír, escuchar", "es": "oírlo" },
+      { "entry": "kimaka", "root": "maka", "object": "ki", "meaning": "dar", "es": "darlo" },
+      { "entry": "kinotsa", "root": "notsa", "object": "ki", "meaning": "llamar", "es": "llamarlo" },
+      { "entry": "kineki", "root": "neki", "object": "ki", "meaning": "querer", "es": "quererlo" },
+      { "entry": "kochi", "root": "kochi", "meaning": "dormir", "es": "dormir" },
+      { "entry": "nemi", "root": "nemi", "meaning": "vivir, andar", "es": "vivir", "note": "Pasado onen: la m se vuelve n" },
+      { "entry": "paki", "root": "paki", "meaning": "alegrarse", "es": "alegrarse" },
+      { "entry": "choka", "root": "choka", "class": 1, "meaning": "llorar", "es": "llorar", "note": "Clase 1: pasado ochokak" },
+      { "entry": "pano", "root": "pano", "class": 1, "meaning": "pasar", "es": "pasar", "note": "Clase 1: pasado opanok" },
+      { "entry": "uetska", "root": "uetska", "meaning": "reír", "es": "reír" },
+      { "entry": "tsajtsi", "root": "tsajtsi", "meaning": "gritar", "es": "gritar" },
+      { "entry": "uetsi", "root": "uetsi", "meaning": "caer", "es": "caer" },
+      { "entry": "miki", "root": "miki", "meaning": "morir", "es": "morir" },
+      { "entry": "kalaki", "root": "kalaki", "meaning": "entrar", "es": "entrar" },
+      { "entry": "kisa", "root": "kisa", "meaning": "salir", "es": "salir" },
+      { "entry": "tekiti", "root": "tekiti", "meaning": "trabajar", "es": "trabajar" }
+    ]
+  }
+}
