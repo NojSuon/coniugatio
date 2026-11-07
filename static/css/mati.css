@@ -308,7 +308,11 @@ a.language-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgb
   background: var(--mati-blanco); border: 1px solid var(--mati-pastel-papel-amate);
   border-radius: var(--r-card); padding: 14px 18px;
 }
+.letters .letter-head { display: flex; align-items: baseline; gap: 8px; }
 .letters .letter { font-size: 34px; line-height: 1.1; display: block; }
+/* IPA symbols (ʃ, θ, ɲ, ʔ…) are not in Fredoka or Nunito Sans. */
+.ipa { font-family: "Noto Sans", sans-serif; }
+.letters .ipa { font-size: 16px; color: var(--mati-cafe-tierra); }
 .letters .word { font-weight: 700; display: block; margin-top: 6px; }
 .letters .meaning { font-size: 14px; color: var(--mati-cafe-tierra); }
 
@@ -398,6 +402,7 @@ table.data td .lang { font-size: 20px; }
 .tense table.data td { padding: 10px 14px; }
 .tense .person { font-size: 14px; color: var(--mati-cafe-tierra); }
 .tense .lang { font-size: 19px; white-space: nowrap; }
+.tense .es { display: block; font-size: 14px; line-height: 1.35; color: var(--mati-cafe-tierra); margin-top: 2px; }
 .tense .clitic { color: var(--serie-acento); }
 
 .learn-more { margin-top: 32px; }

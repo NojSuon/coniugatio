@@ -65,7 +65,9 @@ function orthography() {
       <ul class="letters">
         ${o.letters
           .map(
-            (l) => `<li>${w(l.letter, "span", "letter")}
+            (l) => `<li><span class="letter-head">${w(l.letter, "span", "letter")}${
+              l.ipa ? `<span class="ipa" title="Pronunciación (AFI)">[${e(l.ipa)}]</span>` : ""
+            }</span>
               ${w(l.word, "span", "word")}
               <span class="meaning">${e(l.meaning)}</span></li>`
           )
@@ -214,6 +216,8 @@ function renderResult(data) {
       }</p>`
     : `<p class="notice result-note">Este verbo no está en nuestra lista, así que aplicamos las reglas generales. Revisa sus formas en el diccionario: algunos verbos cambian de manera distinta.</p>`;
 
+  const es = (text) => (text ? `<span class="es" lang="es">${e(text)}</span>` : "");
+
   const table = (t) => `
     <div class="tense">
       <h4>${e(t.name)}</h4>
@@ -224,8 +228,10 @@ function renderResult(data) {
           .map(
             (r) => `<tr>
               <th scope="row" class="person">${e(r.person)}</th>
-              <td>${w(r.singular)}</td>
-              <td>${r.plural ? w(r.plural) : `<span class="caption">igual, con ${w("ya")} en el sustantivo</span>`}</td>
+              <td>${w(r.singular)}${es(r.es_singular)}</td>
+              <td>${
+                r.plural ? w(r.plural) : `<span class="caption">igual, con ${w("ya")} en el sustantivo</span>`
+              }${es(r.es_plural)}</td>
             </tr>`
           )
           .join("")}</tbody>
