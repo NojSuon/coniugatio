@@ -58,8 +58,9 @@ Every page also exists in English under `/en/` (`/coniugatio/en/otomi/`…), wit
 - Náhuatl (maseuallâjtolli): Thelma D. Sullivan, *Compendio de la gramática náhuatl* (UNAM); David Charles Wright Carr, *Lectura del náhuatl* (INALI, 2016); spelling: Tlâjkuilolpamitl (SEP).
 - P'urhépecha: Ma. Guadalupe Hernández Dimas, Roberto Fabián Luis y Sereno Coló, *Curso de lengua p'urhépecha* (apuntes de la clase de Fernando Nava, IIA-UNAM, 1998–1999); Alberto Medina Pérez, *Guía lingüística p'urhépecha* (UMSNH, 2006); Paul P. de Wolf, *Curso básico del tarasco hablado* (El Colegio de Michoacán).
 - Maya yucateco (maayat'aan): Fidencio Briceño Chel, *Los verbos del maya yucateco actual* (INALI, 2021); INALI, *Normas de escritura para la lengua maya* (2014); also the *Diccionario maya de uso cotidiano* (Quintana Roo) and Bolles, *A Grammar of the Yucatecan Mayan Language*.
+- Mopan: Charles Andrew Hofling, *Mopan Maya–Spanish–English Dictionary* (University of Utah Press, 2011); Academia de Lenguas Mayas de Guatemala, *Muuch' t'an mopan* (2003); *Diccionario bilingüe maya mopán y español*.
 - Maya itza': Charles Andrew Hofling con Fernando Tesucún, *Itzaj Maya Grammar*, University of Utah Press, 2000; *Jiilt'an Maya Itza: Vocabulario Itza'*, Academia de Lenguas Mayas de Guatemala, 2001.
 
 All text in an indigenous language should be checked with speakers before publishing.
 
-Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha` or `yucatec`), which selects the rules in `crates/core`.
+Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha`, `yucatec` or `mopan`), which selects the rules in `crates/core`.

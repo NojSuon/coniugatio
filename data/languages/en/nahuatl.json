@@ -2,7 +2,7 @@
   "name": "Nahuatl",
   "variant": "Central Nahuatl (Acotepec)",
   "region": "Acotepec, Mexico City",
-  "summary": "Conjugate verbs with subject and object prefixes, and watch the vowels merge.",
+  "summary": "A Uto-Aztecan language of central Mexico, heir to Classical Nahuatl. Its speakers call it maseuallâjtolli; it is also known as Mexicano or Central Nahuatl.",
   "conjugator": {
     "label": "Verb",
     "hint": "Type the verb as in the dictionary, with its object: tlachiua «make, do», tlâjtoa «speak», kochi «sleep». If you type ki- (kichiua), it is conjugated with «it». The circumflex is optional.",

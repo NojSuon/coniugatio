@@ -2,7 +2,7 @@
   "name": "Purépecha",
   "variant": "P'urhépecha of the Meseta and the Lake",
   "region": "Michoacán, Mexico",
-  "summary": "Aspect, tense and person suffixes added to the root, one after another.",
+  "summary": "A language isolate of Michoacán, with no known relatives. Its speakers call it P'urhépecha or P'urhé; it is also known as Purépecha or Tarascan.",
   "conjugator": {
     "label": "Verb",
     "hint": "Type the verb in the infinitive (with -ni) or just the root: uandani «speak», t'ireni «eat», ch'anani «play». Accents are optional; if you type them, they are kept.",

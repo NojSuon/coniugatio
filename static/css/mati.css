@@ -71,6 +71,12 @@
   --serie-acento: var(--mati-mostaza);
   --serie-texto: var(--mati-ciruela);
 }
+[data-serie="ocre"] {
+  --serie-fondo: var(--mati-pastel-papel-amate);
+  --serie-solido: var(--mati-cafe-tierra);
+  --serie-acento: var(--mati-cempasuchil);
+  --serie-texto: var(--mati-cafe-tierra);
+}
 [data-serie="jacaranda"] {
   --serie-fondo: var(--mati-pastel-lila-suave);
   --serie-solido: var(--mati-berenjena);

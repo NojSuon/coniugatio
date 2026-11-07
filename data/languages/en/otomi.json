@@ -2,7 +2,7 @@
   "name": "Otomi",
   "variant": "Otomi of the Mezquital Valley",
   "region": "Mezquital Valley, Hidalgo, Mexico",
-  "summary": "Conjugate verbs with person and tense proclitics, and see how the root changes.",
+  "summary": "A tonal Oto-Manguean language of the Mezquital Valley, in Hidalgo. Its speakers call it Hñähñu; it is also known as Otomi or Ñähñu.",
   "conjugator": {
     "label": "Verb root",
     "hint": "Type the root of a verb, as you find it in the dictionary.",
