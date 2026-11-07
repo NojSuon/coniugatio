@@ -21,12 +21,9 @@ document.body.dataset.serie = lang.series;
 function hero() {
   return `
   <section class="lang-hero">
-    <div class="pattern-p02 pattern-strip" aria-hidden="true"></div>
     <div class="wrap">
-      <span class="tag">${lang.status === "available" ? "Conjugador" : "Próximamente"}</span>
       ${w(lang.endonym)}
-      <h1>${e(lang.variant)}</h1>
-      <p>${e(lang.region)}</p>
+      <h1>${e(lang.variant)}${lang.status === "available" ? "" : " · próximamente"}</h1>
     </div>
   </section>`;
 }
@@ -48,6 +45,7 @@ function about() {
   <section class="section" id="lengua" aria-labelledby="lengua-t">
     <div class="wrap stack">
       <h2 id="lengua-t">Conoce la lengua</h2>
+      <p><span class="tag">${e(lang.region)}</span></p>
       ${lang.about.map((p) => `<p>${e(p)}</p>`).join("")}
     </div>
   </section>`;
