@@ -341,7 +341,9 @@ a.language-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgb
 .pairs { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); list-style: none; padding: 0; margin: 0; }
 .pairs li { background: var(--mati-blanco); border-radius: var(--r-card); padding: 14px 18px; }
 .pairs .lang { font-size: 24px; display: block; }
-.pairs span:last-child { font-size: 15px; color: var(--mati-cafe-tierra); }
+/* Only the translation itself (a direct child of the item): a looser
+   selector also caught the underlined letter inside words like hñämfo̱. */
+.pairs li > span:last-child { font-size: 15px; color: var(--mati-cafe-tierra); }
 
 .block + .block { margin-top: 36px; }
 .grid-2 > .block + .block { margin-top: 0; }
