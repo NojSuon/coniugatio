@@ -19,6 +19,23 @@
       "e̱",
       "o̱",
       "u̱"
+    ],
+    "own": {
+      "hint": "Escribe la raíz de cualquier verbo y su significado en español. Lo conjugamos con las reglas del hñähñu: el proclítico y el cambio de la primera consonante.",
+      "label": "Raíz del verbo",
+      "placeholder": "tuhu",
+      "es_placeholder": "cantar",
+      "types_help": "Algunos verbos suman n- en el pasado y el futuro. El diccionario lo indica con «Pret. dá n…»."
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "Normal"
+      },
+      {
+        "id": "n",
+        "label": "Con n- en pasado y futuro"
+      }
     ]
   },
   "source": {

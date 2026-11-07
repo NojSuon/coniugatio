@@ -81,6 +81,29 @@ pub struct Conjugation {
     pub lexicon: Vec<LexiconEntry>,
 }
 
+/// Extra information for a verb that isn't in the lexicon ("Conjuga tu
+/// verbo"): its Spanish meaning and, optionally, its type.
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+pub struct Options {
+    /// Spanish infinitive used for the translation ("trabajar").
+    #[serde(default)]
+    pub es: Option<String>,
+    /// Verb type, as listed in the language's `conjugator.types`
+    /// (otomí: "n"; itza: "I", "T", "Tt"). Empty means "detect".
+    #[serde(default)]
+    pub kind: Option<String>,
+}
+
+impl Options {
+    pub fn es(&self) -> Option<&str> {
+        self.es.as_deref().map(str::trim).filter(|s| !s.is_empty())
+    }
+
+    pub fn kind(&self) -> Option<&str> {
+        self.kind.as_deref().map(str::trim).filter(|s| !s.is_empty())
+    }
+}
+
 #[derive(Debug, Serialize, PartialEq)]
 pub struct Row {
     pub person: String,
@@ -126,7 +149,7 @@ impl std::fmt::Display for Error {
             Error::InvalidVerb => write!(f, "La raíz solo puede llevar letras y apóstrofos."),
             Error::UnknownClass => write!(
                 f,
-                "Escribe el verbo como aparece en el diccionario: con -Vl si es intransitivo (wenel, «dormir») o con -ik si es transitivo (ilik, «ver»)."
+                "No sabemos qué tipo de verbo es. Escríbelo como en el diccionario, con -Vl si es intransitivo (wenel, «dormir») o con -ik si es transitivo (ilik, «ver»), o elige su tipo en «Conjuga tu verbo»."
             ),
         }
     }
@@ -158,12 +181,18 @@ fn normalize_root(verb: &str) -> std::result::Result<String, Error> {
 
 impl Conjugation {
     pub fn conjugate(&self, verb: &str) -> std::result::Result<Result, Error> {
+        self.conjugate_with(verb, &Options::default())
+    }
+
+    pub fn conjugate_with(&self, verb: &str, opts: &Options) -> std::result::Result<Result, Error> {
         let root = normalize_root(verb)?;
         let entry = self.lexicon.iter().find(|e| e.root == root);
+        // A meaning typed by the user wins over the lexicon's.
+        let es_meaning = opts.es().map(str::to_string).or_else(|| entry.and_then(|e| e.es.clone()));
 
         let b = entry.and_then(|e| e.b.clone()).unwrap_or_else(|| otomi::form_b(&root));
         let y = entry.and_then(|e| e.y.clone()).or_else(|| otomi::form_y(&root));
-        let takes_n = entry.is_some_and(|e| e.n);
+        let takes_n = entry.is_some_and(|e| e.n) || opts.kind() == Some("n");
 
         let stem_for = |p: &Paradigm, person: &str| -> String {
             if p.secondary && takes_n {
@@ -192,7 +221,7 @@ impl Conjugation {
                         let clitic = p.forms.get(&person.id)?;
                         let stem = stem_for(p, &person.id);
                         let es = |offset: usize| -> Option<String> {
-                            let meaning = entry?.es.as_deref()?;
+                            let meaning = es_meaning.as_deref()?;
                             spanish::conjugate(meaning, p.es?, person.es? + offset, p.negative)
                         };
                         Some(Row {
@@ -212,7 +241,7 @@ impl Conjugation {
 
         Ok(Result {
             known: entry.is_some(),
-            meaning: entry.map(|e| e.meaning.clone()),
+            meaning: entry.map(|e| e.meaning.clone()).or_else(|| opts.es().map(str::to_string)),
             note: entry.and_then(|e| e.note.clone()),
             root,
             tables,
@@ -297,6 +326,21 @@ mod tests {
         // Unknown verbs have no translation.
         let u = otomi().conjugate("zoni").unwrap();
         assert_eq!(u.tables[0].rows[0].es_singular, None);
+    }
+
+    #[test]
+    fn options_for_your_own_verb() {
+        let opts = Options { es: Some("cantar".into()), kind: None };
+        let r = otomi().conjugate_with("tuhu", &opts).unwrap();
+        assert!(!r.known);
+        assert_eq!(r.meaning.as_deref(), Some("cantar"));
+        assert_eq!(form(&r, "preterite", 2), "bi duhu");
+        let t = r.tables.iter().find(|t| t.id == "preterite").unwrap();
+        assert_eq!(t.rows[0].es_singular.as_deref(), Some("yo canté"));
+        // The N type adds n- in the secondary tenses.
+        let n = Options { es: None, kind: Some("n".into()) };
+        let r = otomi().conjugate_with("tsaya", &n).unwrap();
+        assert_eq!(form(&r, "preterite", 0), "dá ntsaya");
     }
 
     #[test]
