@@ -166,17 +166,30 @@ fn harmonic_vowel(root: &str) -> char {
 impl Verb {
     fn new(class: Class, root: String, incompletive: String, entry: Option<&Entry>) -> Verb {
         let v = harmonic_vowel(&root);
-        let completive_root = entry.and_then(|e| e.completive.clone()).unwrap_or_else(|| root.clone());
-        let dependent = entry.and_then(|e| e.dependent.clone()).unwrap_or_else(|| match class {
-            Class::I => format!("{root}{v}k"),
-            Class::T => format!("{root}{v}'"),
-            Class::Tt => format!("{root}tej"),
-        });
-        let imperative = entry.and_then(|e| e.imperative.clone()).unwrap_or_else(|| match class {
-            Class::I => format!("{root}en"),
-            _ => dependent.clone(),
-        });
-        Verb { class, root, completive_root, incompletive, dependent, imperative }
+        let completive_root = entry
+            .and_then(|e| e.completive.clone())
+            .unwrap_or_else(|| root.clone());
+        let dependent = entry
+            .and_then(|e| e.dependent.clone())
+            .unwrap_or_else(|| match class {
+                Class::I => format!("{root}{v}k"),
+                Class::T => format!("{root}{v}'"),
+                Class::Tt => format!("{root}tej"),
+            });
+        let imperative = entry
+            .and_then(|e| e.imperative.clone())
+            .unwrap_or_else(|| match class {
+                Class::I => format!("{root}en"),
+                _ => dependent.clone(),
+            });
+        Verb {
+            class,
+            root,
+            completive_root,
+            incompletive,
+            dependent,
+            imperative,
+        }
     }
 }
 
@@ -196,7 +209,10 @@ fn from_class(word: &str, class: Class) -> std::result::Result<Verb, Error> {
             Ok(Verb::new(class, word.into(), incompletive, None))
         }
         Class::T => {
-            let root = word.strip_suffix("ik").filter(|r| has_vowel(r)).unwrap_or(word);
+            let root = word
+                .strip_suffix("ik")
+                .filter(|r| has_vowel(r))
+                .unwrap_or(word);
             Ok(Verb::new(class, root.into(), format!("{root}ik"), None))
         }
         Class::Tt => {
@@ -255,7 +271,11 @@ fn parse_as(word: &str, entry: Option<&Entry>, class: Class) -> std::result::Res
             // without it, like b'el, keep the whole word.
             let w = word.strip_suffix('l').unwrap_or(word);
             match w.chars().last() {
-                Some(v) if is_vowel(v) && w.len() > v.len_utf8() && has_vowel(&w[..w.len() - v.len_utf8()]) => {
+                Some(v)
+                    if is_vowel(v)
+                        && w.len() > v.len_utf8()
+                        && has_vowel(&w[..w.len() - v.len_utf8()]) =>
+                {
                     w[..w.len() - v.len_utf8()].to_string()
                 }
                 _ => word.to_string(),
@@ -314,11 +334,21 @@ fn form(verb: &Verb, tense: &Tense, person: usize, plural: bool) -> Option<Strin
     let t = if verb.class == Class::Tt { "t" } else { "" };
     let word = tense.word.as_deref().unwrap_or("");
     // Set A + incompletive stem + plural: inwenel, kuyiliko'.
-    let a_verb = || format!("{}{}", set_a(person, plural, &verb.incompletive), plural_suffix(person, plural));
+    let a_verb = || {
+        format!(
+            "{}{}",
+            set_a(person, plural, &verb.incompletive),
+            plural_suffix(person, plural)
+        )
+    };
     // Dependent status: wenek-en (Set B) / inw-il-a' (Set A).
     let dependent = || {
         if transitive {
-            format!("{}{}", set_a(person, plural, &verb.dependent), plural_suffix(person, plural))
+            format!(
+                "{}{}",
+                set_a(person, plural, &verb.dependent),
+                plural_suffix(person, plural)
+            )
         } else {
             format!("{}{}", verb.dependent, set_b(person, plural, ""))
         }
@@ -334,7 +364,10 @@ fn form(verb: &Verb, tense: &Tense, person: usize, plural: bool) -> Option<Strin
             // Unrealized perfect: ma' + dependent status (§19.1.6).
             Aspect::Perfect => Some(format!("ma' {}", dependent())),
             _ => {
-                let plain = Tense { negative: false, ..tense.clone() };
+                let plain = Tense {
+                    negative: false,
+                    ..tense.clone()
+                };
                 form(verb, &plain, person, plural).map(|f| format!("ma' {f}"))
             }
         };
@@ -388,7 +421,9 @@ fn form(verb: &Verb, tense: &Tense, person: usize, plural: bool) -> Option<Strin
         ),
         Aspect::Subjunctive => format!("ka' {}", dependent()),
         // b'ikij contracts to b'ik before ki- (§15.4.2.2, note 7).
-        Aspect::Admonitive if transitive && person == 0 && plural => format!("b'ik {}", dependent()),
+        Aspect::Admonitive if transitive && person == 0 && plural => {
+            format!("b'ik {}", dependent())
+        }
         Aspect::Admonitive => format!("b'ikij {}", dependent()),
         Aspect::Imperative if !second => return None,
         Aspect::Imperative => {
@@ -419,7 +454,13 @@ fn normalize(verb: &str) -> std::result::Result<String, Error> {
         .trim()
         .to_lowercase()
         .chars()
-        .map(|c| if c == 'ʼ' || c == '’' || c == '‘' { '\'' } else { c })
+        .map(|c| {
+            if c == 'ʼ' || c == '’' || c == '‘' {
+                '\''
+            } else {
+                c
+            }
+        })
         .collect();
     if w.is_empty() {
         return Err(Error::EmptyVerb);
@@ -435,14 +476,19 @@ impl Conjugation {
         self.conjugate_with(input, &Options::default())
     }
 
-    pub fn conjugate_with(&self, input: &str, opts: &Options) -> std::result::Result<Conjugated, Error> {
+    pub fn conjugate_with(
+        &self,
+        input: &str,
+        opts: &Options,
+    ) -> std::result::Result<Conjugated, Error> {
         let word = normalize(input)?;
         let forced = opts.kind().and_then(Class::from_kind);
         // Look the verb up by its dictionary form, or by its bare root
         // (nak' → nak'äl), so lexicon exceptions win over the rules.
         let entry = self.lexicon.iter().find(|e| {
             forced.is_none_or(|c| c == e.class)
-                && (e.entry == word || parse_as(&e.entry, Some(e), e.class).is_ok_and(|v| v.root == word))
+                && (e.entry == word
+                    || parse_as(&e.entry, Some(e), e.class).is_ok_and(|v| v.root == word))
         });
         let verb = match (entry, forced) {
             (Some(e), _) => parse(&e.entry, Some(e))?,
@@ -450,7 +496,10 @@ impl Conjugation {
             (None, None) => parse(&word, None)?,
         };
         // A meaning typed by the user wins over the lexicon's.
-        let es_meaning = opts.es().map(str::to_string).or_else(|| entry.and_then(|e| e.es.clone()));
+        let es_meaning = opts
+            .es()
+            .map(str::to_string)
+            .or_else(|| entry.and_then(|e| e.es.clone()));
 
         let es = |tense: &Tense, person: &Person, plural: bool| -> Option<String> {
             let meaning = es_meaning.as_deref()?;
@@ -492,7 +541,9 @@ impl Conjugation {
         Ok(Conjugated {
             root: word,
             known: entry.is_some(),
-            meaning: entry.map(|e| e.meaning.clone()).or_else(|| opts.es().map(str::to_string)),
+            meaning: entry
+                .map(|e| e.meaning.clone())
+                .or_else(|| opts.es().map(str::to_string)),
             note: entry.and_then(|e| e.note.clone()),
             tables,
         })
@@ -531,15 +582,29 @@ mod tests {
     }
 
     fn all(word: &str, aspect: Aspect) -> Vec<String> {
-        (0..3).flat_map(|p| [f(word, aspect, p, false), f(word, aspect, p, true)]).collect()
+        (0..3)
+            .flat_map(|p| [f(word, aspect, p, false), f(word, aspect, p, true)])
+            .collect()
     }
 
     /// Singular and plural of one table for one person, from the real data.
     fn row(verb: &str, id: &str, person: usize) -> (String, Option<String>, Option<String>) {
         let r = itza().conjugate(verb).unwrap();
-        let t = r.tables.iter().find(|t| t.id == id).unwrap_or_else(|| panic!("no table {id}"));
-        let row = t.rows.iter().find(|r| r.person.starts_with(&format!("{}.", person + 1))).unwrap();
-        (row.singular.clone(), row.plural.clone(), row.es_singular.clone())
+        let t = r
+            .tables
+            .iter()
+            .find(|t| t.id == id)
+            .unwrap_or_else(|| panic!("no table {id}"));
+        let row = t
+            .rows
+            .iter()
+            .find(|r| r.person.starts_with(&format!("{}.", person + 1)))
+            .unwrap();
+        (
+            row.singular.clone(),
+            row.plural.clone(),
+            row.es_singular.clone(),
+        )
     }
 
     #[test]
@@ -559,23 +624,55 @@ mod tests {
     // Hofling 2000, §2.1.1 (2) and (4)
     #[test]
     fn incompletive() {
-        assert_eq!(all("ilik", Aspect::Incompletive), [
-            "kinwilik", "kiwilik", "kawilik", "kawilike'ex", "kuyilik", "kuyiliko'"
-        ]);
-        assert_eq!(all("talel", Aspect::Incompletive), [
-            "kintalel", "kitalel", "katalel", "katalele'ex", "kutalel", "kutalelo'"
-        ]);
+        assert_eq!(
+            all("ilik", Aspect::Incompletive),
+            [
+                "kinwilik",
+                "kiwilik",
+                "kawilik",
+                "kawilike'ex",
+                "kuyilik",
+                "kuyiliko'"
+            ]
+        );
+        assert_eq!(
+            all("talel", Aspect::Incompletive),
+            [
+                "kintalel",
+                "kitalel",
+                "katalel",
+                "katalele'ex",
+                "kutalel",
+                "kutalelo'"
+            ]
+        );
     }
 
     // §2.1.1 (3), §3.2.2.2 (long -een written short)
     #[test]
     fn completive() {
-        assert_eq!(all("ilik", Aspect::Completive), [
-            "tinwilaj", "tikiwilaj", "tawilaj", "tawilaje'ex", "tuyilaj", "tuyilajo'"
-        ]);
-        assert_eq!(all("k'ochol", Aspect::Completive), [
-            "k'ochen", "k'ocho'on", "k'ochech", "k'oche'ex", "k'ochij", "k'ocho'"
-        ]);
+        assert_eq!(
+            all("ilik", Aspect::Completive),
+            [
+                "tinwilaj",
+                "tikiwilaj",
+                "tawilaj",
+                "tawilaje'ex",
+                "tuyilaj",
+                "tuyilajo'"
+            ]
+        );
+        assert_eq!(
+            all("k'ochol", Aspect::Completive),
+            [
+                "k'ochen",
+                "k'ocho'on",
+                "k'ochech",
+                "k'oche'ex",
+                "k'ochij",
+                "k'ocho'"
+            ]
+        );
         assert_eq!(f("jantik", Aspect::Completive, 0, false), "tinjantaj");
     }
 
@@ -602,11 +699,17 @@ mod tests {
     fn auxiliaries() {
         assert_eq!(row("wenel", "kabet", 0).0, "k'ab'et inwenel");
         assert_eq!(row("wenel", "patal", 2).0, "patal uwenel");
-        assert_eq!(row("wenel", "patal", 2).2.as_deref(), Some("él/ella puede dormir"));
+        assert_eq!(
+            row("wenel", "patal", 2).2.as_deref(),
+            Some("él/ella puede dormir")
+        );
         assert_eq!(row("wenel", "yan", 2).1.as_deref(), Some("yan uwenelo'"));
         assert_eq!(row("wenel", "olak", 0).2.as_deref(), Some("yo casi dormí"));
         assert_eq!(row("wenel", "kaj", 0).0, "kajij inwenel");
-        assert_eq!(row("wenel", "kaj", 0).2.as_deref(), Some("yo empecé a dormir"));
+        assert_eq!(
+            row("wenel", "kaj", 0).2.as_deref(),
+            Some("yo empecé a dormir")
+        );
         assert_eq!(row("wenel", "tsok", 2).0, "ts'o'kij uwenel");
     }
 
@@ -614,7 +717,10 @@ mod tests {
     #[test]
     fn go_future() {
         assert_eq!(row("wenel", "go", 2).0, "uka'aj ti wenel");
-        assert_eq!(row("wenel", "go", 2).1.as_deref(), Some("uka'ajo' ti wenel"));
+        assert_eq!(
+            row("wenel", "go", 2).1.as_deref(),
+            Some("uka'ajo' ti wenel")
+        );
         assert_eq!(row("wenel", "go", 0).2.as_deref(), Some("yo voy a dormir"));
         assert_eq!(row("jantik", "go", 2).0, "uka'aj ujantej");
         assert_eq!(row("ilik", "go", 0).0, "inka'aj inwila'");
@@ -629,7 +735,10 @@ mod tests {
         assert_eq!(row("uk'ik", "subjunctive", 2).0, "ka' uyuk'u'");
         assert_eq!(row("ilik", "subjunctive", 0).0, "ka' inwila'");
         assert_eq!(row("jantik", "subjunctive", 2).0, "ka' ujantej");
-        assert_eq!(row("wenel", "subjunctive", 0).2.as_deref(), Some("que yo duerma"));
+        assert_eq!(
+            row("wenel", "subjunctive", 0).2.as_deref(),
+            Some("que yo duerma")
+        );
         // b'el is irregular: xi'ik (§3.2.2.1, note 10)
         assert_eq!(row("b'el", "subjunctive", 1).0, "ka' xi'ikech");
     }
@@ -638,12 +747,18 @@ mod tests {
     #[test]
     fn imperative() {
         let (sg, pl, es) = row("wenel", "imperative", 1);
-        assert_eq!((sg.as_str(), pl.as_deref(), es.as_deref()), ("wenen!", Some("wenene'ex!"), Some("¡duerme!")));
+        assert_eq!(
+            (sg.as_str(), pl.as_deref(), es.as_deref()),
+            ("wenen!", Some("wenene'ex!"), Some("¡duerme!"))
+        );
         assert_eq!(row("ilik", "imperative", 1).0, "ila'!");
         assert_eq!(row("jantik", "imperative", 1).0, "jantej!");
         assert_eq!(row("b'el", "imperative", 1).0, "xen!");
         assert_eq!(row("wenel", "neg-imperative", 1).0, "ma' awenel");
-        assert_eq!(row("wenel", "neg-imperative", 1).2.as_deref(), Some("¡no duermas!"));
+        assert_eq!(
+            row("wenel", "neg-imperative", 1).2.as_deref(),
+            Some("¡no duermas!")
+        );
         // Only the 2nd person has an imperative.
         let r = itza().conjugate("wenel").unwrap();
         let t = r.tables.iter().find(|t| t.id == "imperative").unwrap();
@@ -654,7 +769,10 @@ mod tests {
     #[test]
     fn admonitive() {
         assert_eq!(row("lub'ul", "admonitive", 1).0, "b'ikij lub'ukech");
-        assert_eq!(row("ilik", "admonitive", 0).1.as_deref(), Some("b'ik kiwila'"));
+        assert_eq!(
+            row("ilik", "admonitive", 0).1.as_deref(),
+            Some("b'ik kiwila'")
+        );
     }
 
     // §15.4.2.3: Ko'ox ti p'at-äl; ko'ox kiw-il-a'; ko'on-e'ex ti jan-al
@@ -662,20 +780,32 @@ mod tests {
     fn hortative_and_come() {
         let (sg, pl, _) = row("wenel", "hortative", 0);
         assert_eq!((sg.as_str(), pl.as_deref()), ("", Some("ko'ox ti wenel")));
-        assert_eq!(row("ilik", "hortative", 0).1.as_deref(), Some("ko'ox kiwila'"));
+        assert_eq!(
+            row("ilik", "hortative", 0).1.as_deref(),
+            Some("ko'ox kiwila'")
+        );
         assert_eq!(row("wenel", "come", 1).0, "ko'on ti wenel");
-        assert_eq!(row("wenel", "come", 1).1.as_deref(), Some("ko'one'ex ti wenel"));
+        assert_eq!(
+            row("wenel", "come", 1).1.as_deref(),
+            Some("ko'one'ex ti wenel")
+        );
         assert_eq!(row("wenel", "come", 1).2.as_deref(), Some("¡ven a dormir!"));
     }
 
     #[test]
     fn negatives() {
         assert_eq!(row("wenel", "neg-incompletive", 0).0, "ma' tan inwenel");
-        assert_eq!(row("wenel", "neg-incompletive", 0).2.as_deref(), Some("yo no duermo"));
+        assert_eq!(
+            row("wenel", "neg-incompletive", 0).2.as_deref(),
+            Some("yo no duermo")
+        );
         assert_eq!(row("wenel", "neg-completive", 2).0, "ma' wenij");
         // Unrealized perfect: Ma' jan-ak-en "I haven't eaten" (§19.1.6)
         assert_eq!(row("wenel", "neg-perfect", 0).0, "ma' weneken");
-        assert_eq!(row("wenel", "neg-perfect", 0).2.as_deref(), Some("yo no he dormido"));
+        assert_eq!(
+            row("wenel", "neg-perfect", 0).2.as_deref(),
+            Some("yo no he dormido")
+        );
     }
 
     #[test]
@@ -686,12 +816,18 @@ mod tests {
 
     #[test]
     fn your_own_verb_with_type_and_meaning() {
-        let opts = |kind: &str, es: &str| Options { es: Some(es.into()), kind: Some(kind.into()) };
+        let opts = |kind: &str, es: &str| Options {
+            es: Some(es.into()),
+            kind: Some(kind.into()),
+        };
         let c = itza();
         // Bare roots work once the type is chosen.
         let r = c.conjugate_with("wen", &opts("I", "dormir")).unwrap();
         assert_eq!(r.tables[0].rows[0].singular, "kinwenel");
-        assert_eq!(r.tables[0].rows[0].es_singular.as_deref(), Some("yo duermo"));
+        assert_eq!(
+            r.tables[0].rows[0].es_singular.as_deref(),
+            Some("yo duermo")
+        );
         let r = c.conjugate_with("nak'", &opts("I", "subir")).unwrap();
         assert_eq!(r.tables[0].rows[0].singular, "kinnak'äl");
         let r = c.conjugate_with("meyaj", &opts("Tt", "trabajar")).unwrap();
@@ -702,10 +838,24 @@ mod tests {
         // The dictionary form still works with a type.
         let r = c.conjugate_with("sutik", &opts("T", "voltear")).unwrap();
         assert_eq!(r.tables[0].rows[2].singular, "kusutik");
-        assert_eq!(r.tables[0].rows[2].es_singular.as_deref(), Some("él/ella voltea"));
+        assert_eq!(
+            r.tables[0].rows[2].es_singular.as_deref(),
+            Some("él/ella voltea")
+        );
         // Meaning only: the class is still detected from the ending.
-        let r = c.conjugate_with("tuchik", &Options { es: Some("señalar".into()), kind: None }).unwrap();
-        assert_eq!(r.tables[0].rows[0].es_singular.as_deref(), Some("yo señalo"));
+        let r = c
+            .conjugate_with(
+                "tuchik",
+                &Options {
+                    es: Some("señalar".into()),
+                    kind: None,
+                },
+            )
+            .unwrap();
+        assert_eq!(
+            r.tables[0].rows[0].es_singular.as_deref(),
+            Some("yo señalo")
+        );
         assert!(!r.known);
     }
 
@@ -714,6 +864,9 @@ mod tests {
         // A bare root that isn't in the lexicon needs its type.
         assert_eq!(itza().conjugate("jop'").unwrap_err(), Error::UnknownClass);
         // A bare root from the lexicon is found by its root.
-        assert_eq!(itza().conjugate("wen").unwrap().tables[0].rows[0].singular, "kinwenel");
+        assert_eq!(
+            itza().conjugate("wen").unwrap().tables[0].rows[0].singular,
+            "kinwenel"
+        );
     }
 }

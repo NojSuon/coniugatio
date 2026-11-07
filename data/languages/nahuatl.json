@@ -11,8 +11,8 @@
   "lang_code": "nhn",
   "conjugator": {
     "label": "Verbo",
-    "hint": "Escribe el verbo como en el diccionario, con su objeto: kichiua «hacerlo», tlâjtoa «hablar», kochi «dormir». El circunflejo es opcional.",
-    "placeholder": "kichiua",
+    "hint": "Escribe el verbo como en el diccionario, con su objeto: tlachiua «hacer», tlâjtoa «hablar», kochi «dormir». Si escribes ki- (kichiua), se conjuga con «lo». El circunflejo es opcional.",
+    "placeholder": "tlachiua",
     "keyboard": ["â", "ê", "î", "ô"],
     "own": {
       "hint": "Escribe la raíz de cualquier verbo, su significado en español y si lleva objeto. Lo conjugamos con las reglas del náhuatl del centro.",
@@ -121,7 +121,7 @@
         "description": "Cada verbo forma su pasado de una de cuatro maneras. Todos llevan o- al principio.",
         "items": [
           { "tag": "Clase 1", "name": "Suma -k", "description": "Verbos que terminan en dos consonantes + vocal, y algunos otros.", "examples": [{ "from": "pano", "to": "opanok", "meaning": "pasó" }, { "from": "tsajtsi", "to": "otsajtsik", "meaning": "gritó" }] },
-          { "tag": "Clase 2", "name": "Pierde la vocal final", "description": "La clase más común. La m final se vuelve n.", "examples": [{ "from": "kichiua", "to": "okichiu", "meaning": "lo hizo" }, { "from": "nemi", "to": "onen", "meaning": "vivió" }] },
+          { "tag": "Clase 2", "name": "Pierde la vocal final", "description": "La clase más común. La m final se vuelve n.", "examples": [{ "from": "tlachiua", "to": "otlachiu", "meaning": "hizo" }, { "from": "nemi", "to": "onen", "meaning": "vivió" }] },
           { "tag": "Clase 3", "name": "-ia, -oa → -j", "description": "Pierden la a final y suman -j.", "examples": [{ "from": "tlâjtoa", "to": "otlâjtoj", "meaning": "habló" }] },
           { "tag": "Clase 4", "name": "Suma -j", "description": "Pocos verbos, como kua «comer».", "examples": [{ "from": "tlakua", "to": "otlakuaj", "meaning": "comió" }] }
         ]
@@ -186,19 +186,18 @@
       { "id": "neg-optative", "group": "Negativo", "name": "Optativo", "description": "amo + optativo: «¡no lo hagas!».", "form": "optative", "negative": true, "es": "optative" }
     ],
     "lexicon": [
-      { "entry": "kichiua", "root": "chiua", "object": "ki", "meaning": "hacer", "es": "hacerlo" },
-      { "entry": "kitta", "root": "itta", "object": "ki", "weak": true, "meaning": "ver", "es": "verlo" },
-      { "entry": "kijtoa", "root": "ijtoa", "object": "ki", "weak": true, "meaning": "decir", "es": "decirlo" },
-      { "entry": "tlâjtoa", "root": "ijtoa", "object": "tla", "weak": true, "meaning": "hablar", "es": "hablar" },
+      { "entry": "tlachiua", "root": "chiua", "object": "tla", "meaning": "hacer", "es": "hacer" },
+      { "entry": "tlâtta", "root": "itta", "object": "tla", "weak": true, "meaning": "ver, mirar", "es": "ver" },
+      { "entry": "tlâjtoa", "root": "ijtoa", "object": "tla", "weak": true, "meaning": "hablar, decir", "es": "hablar" },
       { "entry": "tlâjkuiloa", "root": "ijkuiloa", "object": "tla", "weak": true, "meaning": "escribir", "es": "escribir" },
       { "entry": "tlakua", "root": "kua", "object": "tla", "class": 4, "meaning": "comer", "es": "comer" },
       { "entry": "tlapoua", "root": "poua", "object": "tla", "meaning": "leer, contar", "es": "leer" },
-      { "entry": "kimati", "root": "mati", "object": "ki", "meaning": "saber", "es": "saberlo" },
-      { "entry": "kixmati", "root": "ixmati", "object": "ki", "meaning": "conocer", "es": "conocerlo" },
-      { "entry": "kikaki", "root": "kaki", "object": "ki", "meaning": "oír, escuchar", "es": "oírlo" },
-      { "entry": "kimaka", "root": "maka", "object": "ki", "meaning": "dar", "es": "darlo" },
-      { "entry": "kinotsa", "root": "notsa", "object": "ki", "meaning": "llamar", "es": "llamarlo" },
-      { "entry": "kineki", "root": "neki", "object": "ki", "meaning": "querer", "es": "quererlo" },
+      { "entry": "tlamati", "root": "mati", "object": "tla", "meaning": "saber", "es": "saber" },
+      { "entry": "tlâxmati", "root": "ixmati", "object": "tla", "weak": true, "meaning": "conocer", "es": "conocer" },
+      { "entry": "tlakaki", "root": "kaki", "object": "tla", "meaning": "oír, escuchar", "es": "escuchar" },
+      { "entry": "tlamaka", "root": "maka", "object": "tla", "meaning": "dar", "es": "dar" },
+      { "entry": "tlanotsa", "root": "notsa", "object": "tla", "meaning": "llamar", "es": "llamar" },
+      { "entry": "tlaneki", "root": "neki", "object": "tla", "meaning": "querer", "es": "querer" },
       { "entry": "kochi", "root": "kochi", "meaning": "dormir", "es": "dormir" },
       { "entry": "nemi", "root": "nemi", "meaning": "vivir, andar", "es": "vivir", "note": "Pasado onen: la m se vuelve n" },
       { "entry": "paki", "root": "paki", "meaning": "alegrarse", "es": "alegrarse" },
