@@ -26,6 +26,9 @@ pub enum Tense {
     Imperative,
     /// yo podría
     Conditional,
+    /// ¡hazlo! (tú, ustedes) / que yo lo haga (other persons): the Nahuatl
+    /// optative mood.
+    Optative,
 }
 
 /// How a tense is said in Spanish. Either just a tense ("present"), or a
@@ -62,6 +65,9 @@ pub struct Spec {
     /// Show the subject pronoun (yo, tú…). Default: yes.
     #[serde(default = "yes")]
     pub pronoun: bool,
+    /// Always negative in Spanish ("que no…"), even if the table isn't.
+    #[serde(default)]
+    pub negative: bool,
 }
 
 fn yes() -> bool {
@@ -72,7 +78,7 @@ impl Es {
     fn spec(&self) -> Spec {
         match self {
             Es::Simple(tense) => {
-                Spec { tense: *tense, aux: None, link: None, before: None, adverb: None, pronoun: true }
+                Spec { tense: *tense, aux: None, link: None, before: None, adverb: None, pronoun: true, negative: false }
             }
             Es::Spec(s) => s.clone(),
         }
@@ -193,6 +199,39 @@ fn irregular(inf: &str) -> Irregular {
             preterite: Some(["caí", "caíste", "cayó", "caímos", "cayeron", "cayeron"]),
             gerund: Some("cayendo"),
             participle: Some("caído"),
+            ..NONE
+        },
+        "hacer" => Irregular {
+            present: Some(["hago", "haces", "hace", "hacemos", "hacen", "hacen"]),
+            preterite: Some(["hice", "hiciste", "hizo", "hicimos", "hicieron", "hicieron"]),
+            future_stem: Some("har"),
+            participle: Some("hecho"),
+            imperative: Some("haz"),
+            ..NONE
+        },
+        "decir" => Irregular {
+            present: Some(["digo", "dices", "dice", "decimos", "dicen", "dicen"]),
+            preterite: Some(["dije", "dijiste", "dijo", "dijimos", "dijeron", "dijeron"]),
+            future_stem: Some("dir"),
+            gerund: Some("diciendo"),
+            participle: Some("dicho"),
+            imperative: Some("di"),
+            ..NONE
+        },
+        "dar" => Irregular {
+            present: Some(["doy", "das", "da", "damos", "dan", "dan"]),
+            preterite: Some(["di", "diste", "dio", "dimos", "dieron", "dieron"]),
+            subjunctive: Some(["dé", "des", "dé", "demos", "den", "den"]),
+            ..NONE
+        },
+        "conocer" => Irregular {
+            present: Some(["conozco", "conoces", "conoce", "conocemos", "conocen", "conocen"]),
+            ..NONE
+        },
+        "leer" => Irregular {
+            preterite: Some(["leí", "leíste", "leyó", "leímos", "leyeron", "leyeron"]),
+            gerund: Some("leyendo"),
+            participle: Some("leído"),
             ..NONE
         },
         // Auxiliaries used in periphrases.
@@ -329,35 +368,116 @@ fn finite(inf: &str, tense: Tense, p: usize, negative: bool) -> String {
             // The "tú" imperative is the él/ella present: duerme, come.
             .unwrap_or_else(|| irr.present.map(|f| f[2].to_string()).unwrap_or_else(|| regular(&plain, Tense::Present, 2))),
         Tense::Imperative => subjunctive(&plain, &irr, if p == 1 { 1 } else { 4 }),
+        // Resolved to imperative or subjunctive in `render`.
+        Tense::Optative => subjunctive(&plain, &irr, p),
     }
 }
 
-/// Splits "reírse" / "beber agua" into (infinitive, reflexive, rest).
-fn split(meaning: &str) -> Option<(String, bool, Vec<String>)> {
+/// A meaning split into its parts: "reírse" → reflexive, "hacerlo" →
+/// object pronoun "lo", "beber agua" → rest "agua".
+struct Meaning {
+    inf: String,
+    reflexive: bool,
+    object: Option<&'static str>,
+    rest: Vec<String>,
+}
+
+fn is_infinitive(w: &str) -> bool {
+    w.ends_with("ar") || w.ends_with("er") || w.ends_with("ir") || w.ends_with("ír")
+}
+
+fn split(meaning: &str) -> Option<Meaning> {
     let mut words = meaning.split_whitespace();
     let first = words.next()?;
     let rest = words.map(str::to_string).collect();
-    let (inf, reflexive) = match first.strip_suffix("se") {
-        Some(base) if base.ends_with('r') => (base, true),
-        _ => (first, false),
+    let mut inf = first;
+    let mut object = None;
+    for clitic in ["los", "las", "lo", "la"] {
+        if let Some(base) = inf.strip_suffix(clitic).filter(|b| is_infinitive(b)) {
+            inf = base;
+            object = Some(clitic);
+            break;
+        }
+    }
+    let reflexive = match inf.strip_suffix("se") {
+        Some(base) if base.ends_with('r') => {
+            inf = base;
+            true
+        }
+        _ => false,
     };
-    if !(inf.ends_with("ar") || inf.ends_with("er") || inf.ends_with("ir") || inf.ends_with("ír")) {
+    if !is_infinitive(inf) {
         return None;
     }
-    Some((inf.to_string(), reflexive, rest))
+    Some(Meaning { inf: inf.to_string(), reflexive, object, rest })
 }
 
-/// Says a meaning ("dormir", "reírse", "beber agua") in Spanish for one
-/// person (0..6, in the order of [`PRONOUNS`]). Returns `None` when the
-/// meaning doesn't start with an infinitive, or the form doesn't exist
+/// Puts a written accent on the stressed syllable before adding an
+/// enclitic: mira + lo → míralo, hagan + lo → háganlo, haz + lo → hazlo.
+fn with_enclitic(form: &str, clitic: &str) -> String {
+    let chars: Vec<char> = form.chars().collect();
+    if chars.iter().any(|c| "áéíóú".contains(*c)) {
+        return format!("{form}{clitic}");
+    }
+    let strong = |c: char| "aeo".contains(c);
+    let vowel = |c: char| "aeiouü".contains(c);
+    // Syllable nuclei: runs of vowels, split between two strong vowels (le-e).
+    let mut nuclei: Vec<Vec<usize>> = Vec::new();
+    for (i, &c) in chars.iter().enumerate() {
+        if !vowel(c) {
+            continue;
+        }
+        let joins = i > 0
+            && vowel(chars[i - 1])
+            && !(strong(chars[i - 1]) && strong(c))
+            && !nuclei.is_empty();
+        if joins {
+            nuclei.last_mut().unwrap().push(i);
+        } else {
+            nuclei.push(vec![i]);
+        }
+    }
+    if nuclei.len() < 2 {
+        return format!("{form}{clitic}");
+    }
+    let nucleus = &nuclei[nuclei.len() - 2];
+    let at = nucleus.iter().rev().find(|&&i| strong(chars[i])).or(nucleus.last()).copied().unwrap();
+    let accented = match chars[at] {
+        'a' => 'á',
+        'e' => 'é',
+        'i' => 'í',
+        'o' => 'ó',
+        'u' => 'ú',
+        c => c,
+    };
+    let mut out: String = chars.iter().enumerate().map(|(i, &c)| if i == at { accented } else { c }).collect();
+    out.push_str(clitic);
+    out
+}
+
+/// Says a meaning ("dormir", "reírse", "hacerlo", "beber agua") in Spanish
+/// for one person (0..6, in the order of [`PRONOUNS`]). Returns `None` when
+/// the meaning doesn't start with an infinitive, or the form doesn't exist
 /// (an imperative for "yo").
 pub fn render(meaning: &str, es: &Es, person: usize, negative: bool) -> Option<String> {
-    let spec = es.spec();
-    let (inf, reflexive, rest) = split(meaning)?;
+    let mut spec = es.spec();
+    let negative = negative || spec.negative;
+    let m = split(meaning)?;
+    // Optative: an order for tú / ustedes, "que …" for the other persons.
+    if spec.tense == Tense::Optative {
+        if person == 1 || person == 4 {
+            spec.tense = Tense::Imperative;
+        } else {
+            spec.tense = Tense::Subjunctive;
+            spec.before.get_or_insert_with(|| "que".to_string());
+        }
+    }
     let imperative = spec.tense == Tense::Imperative;
     if imperative && person != 1 && person != 4 {
         return None;
     }
+    // Pronouns that go with the verb: me/te/se… and lo/la.
+    let clitics: Vec<&str> = [m.reflexive.then_some(REFLEXIVE[person]), m.object].into_iter().flatten().collect();
 
     let mut parts: Vec<String> = Vec::new();
     if let Some(b) = &spec.before {
@@ -374,24 +494,23 @@ pub fn render(meaning: &str, es: &Es, person: usize, negative: bool) -> Option<S
     }
     match &spec.aux {
         Some(aux) => {
-            // tengo que dormir, acabo de reírme
+            // tengo que dormir, acabo de reírme, voy a hacerlo
             parts.push(finite(aux, spec.tense, person, negative));
             if let Some(l) = &spec.link {
                 parts.push(l.clone());
             }
-            parts.push(if reflexive { format!("{inf}{}", REFLEXIVE[person]) } else { inf.clone() });
+            parts.push(format!("{}{}", m.inf, clitics.concat()));
+        }
+        // ¡hazlo!, ¡alégrate!: affirmative orders take the pronouns after.
+        None if imperative && !negative && !clitics.is_empty() => {
+            parts.push(with_enclitic(&finite(&m.inf, spec.tense, person, false), &clitics.concat()));
         }
         None => {
-            if imperative && reflexive {
-                return None; // ¡ríete! needs an enclitic; not supported
-            }
-            if reflexive {
-                parts.push(REFLEXIVE[person].into());
-            }
-            parts.push(finite(&inf, spec.tense, person, negative));
+            parts.extend(clitics.iter().map(|c| c.to_string()));
+            parts.push(finite(&m.inf, spec.tense, person, negative));
         }
     }
-    parts.extend(rest);
+    parts.extend(m.rest);
     let text = parts.join(" ");
     Some(if imperative { format!("¡{text}!") } else { text })
 }
@@ -515,6 +634,30 @@ mod tests {
             render("reírse", &spec(r#"{"tense":"present","aux":"acabar","link":"de"}"#), 0, false).unwrap(),
             "yo acabo de reírme"
         );
+    }
+
+    #[test]
+    fn object_pronouns_and_optative() {
+        assert_eq!(c("hacerlo", Tense::Present, 0), "yo lo hago");
+        assert_eq!(c("verlo", Tense::Perfect, 1), "tú lo has visto");
+        assert_eq!(c("decirlo", Tense::Progressive, 2), "él/ella lo está diciendo");
+        let r = |m: &str, json: &str, p: usize, neg: bool| render(m, &spec(json), p, neg).unwrap();
+        assert_eq!(r("hacerlo", r#"{"tense":"present","aux":"ir","link":"a"}"#, 0, false), "yo voy a hacerlo");
+        let opt = r#""optative""#;
+        assert_eq!(r("hacerlo", opt, 1, false), "¡hazlo!");
+        assert_eq!(r("hacerlo", opt, 4, false), "¡háganlo!");
+        assert_eq!(r("hacerlo", opt, 0, false), "que yo lo haga");
+        assert_eq!(r("hacerlo", opt, 1, true), "¡no lo hagas!");
+        assert_eq!(r("verlo", opt, 1, false), "¡velo!");
+        assert_eq!(r("leerlo", opt, 1, false), "¡léelo!");
+        assert_eq!(r("escucharlo", opt, 1, false), "¡escúchalo!");
+        assert_eq!(r("alegrarse", opt, 1, false), "¡alégrate!");
+        assert_eq!(r("alegrarse", opt, 4, false), "¡alégrense!");
+        assert_eq!(r("dormir", opt, 2, false), "que él/ella duerma");
+        assert_eq!(r("decirlo", opt, 1, false), "¡dilo!");
+        assert_eq!(r("darlo", opt, 0, false), "que yo lo dé");
+        assert_eq!(r("conocerlo", r#"{"tense":"optative","negative":true}"#, 0, false), "que yo no lo conozca");
+        assert_eq!(c("leer", Tense::Preterite, 2), "él/ella leyó");
     }
 
     #[test]

@@ -18,6 +18,8 @@
   --mati-piedra: #7A6B62;
   --mati-pino: #2F5D4E;
   --mati-berenjena: #4A2F5B;
+  --mati-anil: #2E4A7D;
+  --mati-miel: #C98A2E;
   --mati-cempasuchil: #DE7D2A;
   --mati-guayaba: #E08C8C;
 
@@ -26,6 +28,7 @@
   --mati-pastel-espuma: #CDDFDD;
   --mati-pastel-brote: #D8E6D0;
   --mati-pastel-lila-suave: #E8E4F1;
+  --mati-pastel-escarcha: #CBD5E1;
   --mati-pastel-papel-amate: #EBE3DE;
 
   --font-titulo: "Fredoka", "Noto Sans", system-ui, sans-serif;
@@ -55,6 +58,12 @@
   --serie-solido: var(--mati-pino);
   --serie-acento: var(--mati-cempasuchil);
   --serie-texto: var(--mati-pino);
+}
+[data-serie="anil"] {
+  --serie-fondo: var(--mati-pastel-escarcha);
+  --serie-solido: var(--mati-anil);
+  --serie-acento: var(--mati-miel);
+  --serie-texto: var(--mati-anil);
 }
 [data-serie="jacaranda"] {
   --serie-fondo: var(--mati-pastel-lila-suave);
