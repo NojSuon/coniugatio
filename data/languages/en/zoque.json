@@ -1,0 +1,676 @@
+{
+  "name": "Zoque",
+  "variant": "Central Zoque (Copainalá)",
+  "region": "Copainalá, Chiapas",
+  "summary": "A Mixe-Zoquean language of northwestern Chiapas. Its speakers call it otetsame or ote; in Copainalá and Tecpatán, tsunitsame.",
+  "conjugator": {
+    "label": "Root or verb",
+    "hint": "Type the root of the verb (poy «run», tsäjk «do it») or its past form, as in the dictionary (poyu, tsyäjku).",
+    "own": {
+      "hint": "Type the root of any verb, its meaning in English and whether it takes an object. We conjugate it with the rules of Copainalá Zoque.",
+      "label": "Verb root",
+      "es_placeholder": "sing",
+      "types_help": "Transitive verbs take a person prefix in every form (ntsäkpa'äs «I do it»); write their meaning with «it»: «do it»."
+    },
+    "types": [
+      {
+        "id": "I",
+        "label": "Intransitive: poy → popya'äj"
+      },
+      {
+        "id": "T",
+        "label": "Transitive: tsäjk → ntsäkpa'äs"
+      }
+    ]
+  },
+  "source": {
+    "full": "Ralph Engel and Mary Engel, Diccionario zoque de Copainalá, with a grammar (Summer Institute of Linguistics, 1981); Instituto Nacional de Lenguas Indígenas, Otejaye'is 'yanhki'mkuy / Norma de escritura de la lengua otetzame (zoque), written here with ts instead of tz. See also: Engel, Diccionario zoque de Francisco León (SIL, 1987)."
+  },
+  "about": [
+    "Zoque is a language of the Mixe-Zoquean family, related to Mixe and Popoluca. It is spoken in northwestern Chiapas, in towns such as Copainalá, Tecpatán, Ocotepec, Chapultenango, Francisco León and Tapalapa, and also in the Chimalapas of Oaxaca.",
+    "Its speakers call it otetsame or ote, and in Copainalá and Tecpatán tsunitsame or tsuni. The eruption of the Chichonal volcano in 1982 displaced many Zoque communities and scattered their speakers.",
+    "The Zoque verb marks the person twice: with prefixes that change the first consonant of the root (tsäjk → tsyäjku «he/she did it») and with pronouns attached at the end (poyu'äj «I ran»). It tells apart «we» with and without the listener."
+  ],
+  "orthography": {
+    "intro": "We use the alphabet of INALI's writing norm (the Nenhejaye), with ts instead of tz: 6 vowels and 14 consonants. The apostrophe (') is the glottal stop, a short break in the voice, and nh sounds like the ng in «sing».",
+    "letters": [
+      {
+        "meaning": "tortilla"
+      },
+      {
+        "meaning": "crab"
+      },
+      {
+        "meaning": "place"
+      },
+      {
+        "meaning": "bird"
+      },
+      {
+        "meaning": "head"
+      },
+      {
+        "meaning": "nail"
+      },
+      {
+        "meaning": "star"
+      },
+      {
+        "meaning": "earth, land"
+      },
+      {
+        "meaning": "child"
+      },
+      {
+        "meaning": "avocado"
+      },
+      {
+        "meaning": "squash"
+      },
+      {
+        "meaning": "town hall"
+      },
+      {
+        "meaning": "wind"
+      },
+      {
+        "meaning": "house"
+      },
+      {
+        "meaning": "monkey"
+      },
+      {
+        "meaning": "lizard"
+      },
+      {
+        "meaning": "music, song"
+      },
+      {
+        "meaning": "pig"
+      },
+      {
+        "meaning": "corn"
+      },
+      {
+        "meaning": "his/her son"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "Vowels"
+      }
+    ],
+    "notes": [
+      "The glottal stop changes the meaning: ju'ki «vulture», juki «cigarette». It isn't written at the start of a word that begins with a vowel: ane, not 'ane.",
+      "After m, n and nh, the consonants p, t, ts and k sound voiced (mpama sounds like «mbama»), but they are written voiceless.",
+      "The y of the 3rd person slips in after the first consonant: tsat → tsyat; ty, tsy, sy and ny sound like a single palatal consonant.",
+      "Pronunciation is shown in brackets with the International Phonetic Alphabet (IPA)."
+    ]
+  },
+  "grammar": {
+    "intro": "A Zoque verb is built with a person prefix, the root, a plural suffix, a tense suffix and a pronoun attached at the end. Many tenses are made with an auxiliary verb in front.",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "Prefix",
+            "description": "N- 1st person, Ny- 2nd, y- 3rd; they change the first consonant of the root."
+          },
+          {
+            "slot": "Root",
+            "description": "The verb."
+          },
+          {
+            "slot": "Plural",
+            "description": "-tam- you all and inclusive we, -yaj- they."
+          },
+          {
+            "slot": "Tense",
+            "description": "-pa unfinished, -u finished; -A order, -I negation."
+          },
+          {
+            "slot": "Person",
+            "description": "-'äj / -'äs I, -mij / -mis you and you all, -täj / -täs we, -tä we including the listener."
+          }
+        ]
+      },
+      {
+        "title": "The persons",
+        "description": "Intransitive verbs use -'äj and -mij; transitive ones, -'äs and -mis. The prefixes depend on the type of verb.",
+        "columns": [
+          "Person",
+          "Intransitive",
+          "Transitive",
+          "Example"
+        ],
+        "rows": [
+          {
+            "label": "I"
+          },
+          {
+            "label": "you"
+          },
+          {
+            "label": "he, she"
+          },
+          {
+            "label": "we"
+          },
+          {
+            "label": "we (with you)"
+          },
+          {
+            "label": "you all"
+          },
+          {
+            "label": "they"
+          }
+        ],
+        "note": "N- assimilates to the next consonant: m before p (mpoyu), n before t and ts, nh before k (nhkyenu)."
+      },
+      {
+        "title": "Sound changes",
+        "description": "When the pieces join, the sounds adjust.",
+        "items": [
+          {
+            "tag": "y moves",
+            "name": "Metathesis",
+            "description": "A root ending in y moves it after the next consonant.",
+            "examples": [
+              {
+                "meaning": "he/she runs"
+              },
+              {
+                "meaning": "he/she buys it"
+              }
+            ]
+          },
+          {
+            "tag": "j is lost",
+            "name": "Reduction",
+            "description": "jC + another consonant loses the j.",
+            "examples": [
+              {
+                "meaning": "he/she does"
+              },
+              {
+                "meaning": "you all sweep"
+              }
+            ]
+          },
+          {
+            "tag": "-A / -I",
+            "name": "Vowel harmony",
+            "description": "The vowel of the order and of the negation copies the root's.",
+            "examples": [
+              {
+                "meaning": "do it!"
+              },
+              {
+                "meaning": "he/she doesn't run"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Auxiliaries",
+        "description": "The auxiliary takes the pronoun; the main verb, the person prefix and -u.",
+        "items": [
+          {
+            "translation": "I am running"
+          },
+          {
+            "translation": "I am going to run"
+          },
+          {
+            "translation": "I want to do it"
+          },
+          {
+            "translation": "I used to run"
+          },
+          {
+            "translation": "I don't run"
+          }
+        ]
+      },
+      {
+        "title": "Example sentences",
+        "items": [
+          {
+            "translation": "What are you doing?"
+          },
+          {
+            "translation": "Who came?"
+          },
+          {
+            "translation": "The girl helps her mother."
+          },
+          {
+            "translation": "The man comes tomorrow."
+          }
+        ]
+      },
+      {
+        "title": "Every affix of the verb",
+        "description": "Every piece a verb can take: prefixes, suffixes, attached pronouns and auxiliaries.",
+        "items": [
+          {
+            "kind": "prefix",
+            "meaning": "1st person (and 2nd of transitive verbs); assimilates: m, n, nh",
+            "translation": "I do it"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "2nd person of intransitive verbs: N- + y",
+            "translation": "you run"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "3rd person of transitive verbs; slips in after the first consonant",
+            "translation": "he/she did it"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Past negation (with -A)",
+            "translation": "I didn't run"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Reciprocal: «each other» (with -atäj-)",
+            "translation": "we welcomed each other"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Action for someone else or on their property",
+            "translation": "he/she worked on someone else's land"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Action together with someone",
+            "translation": "he/she went up with someone"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Action with another person or thing",
+            "translation": "he/she took it"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Causative: makes the action happen",
+            "translation": "he/she killed him"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Perception and other meanings",
+            "translation": "I felt it"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Plural: you all and we including the listener",
+            "translation": "we run (with you)"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Plural: they",
+            "translation": "they run"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Unfinished action: present, habit",
+            "translation": "he/she runs"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Finished action; also the verb after an auxiliary",
+            "translation": "he/she ran"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Order, subjunctive and past negative; copies the root's vowel",
+            "translation": "run!"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Present negative; copies the root's vowel",
+            "translation": "he/she doesn't run"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Order to «us»",
+            "translation": "let's run!"
+          },
+          {
+            "kind": "enclitic",
+            "meaning": "I (intransitive, transitive)",
+            "translation": "I ran"
+          },
+          {
+            "kind": "enclitic",
+            "meaning": "You, you all",
+            "translation": "you ran"
+          },
+          {
+            "kind": "enclitic",
+            "meaning": "We (without the listener)",
+            "translation": "we ran"
+          },
+          {
+            "kind": "enclitic",
+            "meaning": "We (with the listener)",
+            "translation": "we ran (with you)"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Ongoing action",
+            "translation": "I am running"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Past of an unfinished action",
+            "translation": "I used to run"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Future: «going to»",
+            "translation": "I'm going to run"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Come to do it; go and come back",
+            "translation": "I come to sweep"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Want, can",
+            "translation": "I want to do it"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Negation in the present and future",
+            "translation": "I don't run"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Negative order: «don't…»",
+            "translation": "don't run!"
+          },
+          {
+            "kind": "particle",
+            "meaning": "«Even if»: subjunctive",
+            "translation": "even if I run"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "«So that», «so that not»",
+            "translation": "so that he/she does it"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "For someone else",
+            "translation": "he/she made it for him/her"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Have it done; reciprocal action",
+            "translation": "he/she had it planted"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Wish to do something",
+            "translation": "he/she wanted to do it"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Action begun",
+            "translation": "he/she began to eat"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Do it again, do it too",
+            "translation": "he/she came again"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "«Already»",
+            "translation": "he/she already came"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "«Just», indefinite time",
+            "translation": "he/she has come"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "1st person"
+      },
+      {
+        "id": "2",
+        "label": "2nd person"
+      },
+      {
+        "id": "3",
+        "label": "3rd person"
+      },
+      {
+        "id": "4",
+        "label": "1st person inclusive (with you)"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present",
+        "group": "Indicative",
+        "name": "Present",
+        "description": "Unfinished, habitual or present action (-pa)."
+      },
+      {
+        "id": "imperfect",
+        "group": "Indicative",
+        "name": "Imperfect",
+        "description": "What used to happen (-pa … inäk)."
+      },
+      {
+        "id": "past",
+        "group": "Indicative",
+        "name": "Preterite",
+        "description": "Finished action (-u)."
+      },
+      {
+        "id": "progressive",
+        "group": "Indicative",
+        "name": "Present progressive",
+        "description": "What is happening now (nä + verb)."
+      },
+      {
+        "id": "past-progressive",
+        "group": "Indicative",
+        "name": "Past progressive",
+        "description": "What was happening (nä … inäk + verb)."
+      },
+      {
+        "id": "future",
+        "group": "Indicative",
+        "name": "Future",
+        "description": "What is going to be done (manhpa + verb).",
+        "es": {
+          "tense": "progressive",
+          "aux": "go",
+          "link": "to"
+        }
+      },
+      {
+        "id": "come",
+        "group": "Auxiliaries",
+        "name": "Come to",
+        "description": "minpa + verb.",
+        "es": {
+          "tense": "present",
+          "aux": "come",
+          "link": "to"
+        }
+      },
+      {
+        "id": "want",
+        "group": "Auxiliaries",
+        "name": "Want",
+        "description": "sunpa + verb.",
+        "es": {
+          "tense": "present",
+          "aux": "want",
+          "link": "to"
+        }
+      },
+      {
+        "id": "can",
+        "group": "Auxiliaries",
+        "name": "Can",
+        "description": "muspa + verb.",
+        "es": {
+          "tense": "present",
+          "aux": "can"
+        }
+      },
+      {
+        "id": "subjunctive",
+        "group": "Moods",
+        "name": "Subjunctive",
+        "description": "«Even if…»: nyempe + verb with -A.",
+        "es": {
+          "tense": "present",
+          "before": "even if"
+        }
+      },
+      {
+        "id": "imperative",
+        "group": "Moods",
+        "name": "Imperative",
+        "description": "The root + -A; «let's do it!» with -tam-'i-tä(y)."
+      },
+      {
+        "id": "neg-imperative",
+        "group": "Moods",
+        "name": "Negative imperative",
+        "description": "uy + the root with -I."
+      },
+      {
+        "id": "neg-present",
+        "group": "Negative",
+        "name": "Present",
+        "description": "ja'n + verb with -I."
+      },
+      {
+        "id": "neg-future",
+        "group": "Negative",
+        "name": "Future",
+        "description": "ja'n + manhu + verb.",
+        "es": {
+          "tense": "progressive",
+          "aux": "go",
+          "link": "to",
+          "negative": true
+        }
+      },
+      {
+        "id": "neg-past",
+        "group": "Negative",
+        "name": "Preterite",
+        "description": "jay- + verb with -A."
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "poyu",
+        "meaning": "run",
+        "es": "run"
+      },
+      {
+        "entry": "pejtu",
+        "meaning": "sweep",
+        "es": "sweep"
+      },
+      {
+        "entry": "pujtu",
+        "meaning": "go out",
+        "es": "go out"
+      },
+      {
+        "entry": "wanu",
+        "meaning": "sing",
+        "es": "sing"
+      },
+      {
+        "entry": "tse'oyu",
+        "meaning": "wash (clothes)",
+        "es": "wash"
+      },
+      {
+        "entry": "minu",
+        "meaning": "come",
+        "es": "come"
+      },
+      {
+        "entry": "manhu",
+        "meaning": "go",
+        "es": "go",
+        "note": "Imperative mawä, negative ja'n myawe"
+      },
+      {
+        "entry": "yojsu",
+        "meaning": "work",
+        "es": "work"
+      },
+      {
+        "entry": "änhu",
+        "meaning": "sleep",
+        "es": "sleep"
+      },
+      {
+        "entry": "ki'mu",
+        "meaning": "go up",
+        "es": "go up"
+      },
+      {
+        "entry": "wijtu",
+        "meaning": "walk around",
+        "es": "walk around"
+      },
+      {
+        "entry": "tsyäjku",
+        "meaning": "do it, make it",
+        "es": "do it"
+      },
+      {
+        "entry": "pya'tu",
+        "meaning": "find it",
+        "es": "find it"
+      },
+      {
+        "entry": "kyenu",
+        "meaning": "see it",
+        "es": "see it"
+      },
+      {
+        "entry": "kyu'tu",
+        "meaning": "eat it",
+        "es": "eat it"
+      },
+      {
+        "entry": "jyuyu",
+        "meaning": "buy it",
+        "es": "buy it"
+      },
+      {
+        "entry": "tsyamu",
+        "meaning": "say it",
+        "es": "say it"
+      }
+    ]
+  }
+}

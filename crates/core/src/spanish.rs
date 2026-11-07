@@ -239,6 +239,28 @@ fn irregular(inf: &str) -> Irregular {
             participle: Some("traído"),
             ..NONE
         },
+        "andar" => Irregular {
+            preterite: Some([
+                "anduve",
+                "anduviste",
+                "anduvo",
+                "anduvimos",
+                "anduvieron",
+                "anduvieron",
+            ]),
+            ..NONE
+        },
+        "encontrar" => Irregular {
+            present: Some([
+                "encuentro",
+                "encuentras",
+                "encuentra",
+                "encontramos",
+                "encuentran",
+                "encuentran",
+            ]),
+            ..NONE
+        },
         "jugar" => Irregular {
             present: Some(["juego", "juegas", "juega", "jugamos", "juegan", "juegan"]),
             subjunctive: Some([
@@ -796,6 +818,8 @@ mod tests {
         assert_eq!(c("moler", Tense::Present, 2), "él/ella muele");
         assert_eq!(c("jugar", Tense::Present, 0), "yo juego");
         assert_eq!(c("nacer", Tense::Present, 0), "yo nazco");
+        assert_eq!(c("andar", Tense::Preterite, 0), "yo anduve");
+        assert_eq!(c("encontrar", Tense::Subjunctive, 0), "yo encuentre");
         assert_eq!(c("cantar", Tense::PastSubjunctive, 0), "yo cantara");
         assert_eq!(c("hacer", Tense::Pluperfect, 3), "nosotros habíamos hecho");
         assert_eq!(
