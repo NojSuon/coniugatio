@@ -65,6 +65,12 @@
   --serie-acento: var(--mati-miel);
   --serie-texto: var(--mati-anil);
 }
+[data-serie="ciruela"] {
+  --serie-fondo: var(--mati-pastel-barro-claro);
+  --serie-solido: var(--mati-ciruela);
+  --serie-acento: var(--mati-mostaza);
+  --serie-texto: var(--mati-ciruela);
+}
 [data-serie="jacaranda"] {
   --serie-fondo: var(--mati-pastel-lila-suave);
   --serie-solido: var(--mati-berenjena);
