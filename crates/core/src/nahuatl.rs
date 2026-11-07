@@ -439,7 +439,11 @@ impl Conjugation {
             .or_else(|| match (entry, with_ki) {
                 (Some(e), _) => e.es.clone(),
                 (None, Some(e)) => e.es.as_ref().map(|m| {
-                    if opts.english() { format!("{m} it") } else { format!("{m}lo") }
+                    if opts.english() {
+                        format!("{m} it")
+                    } else {
+                        format!("{m}lo")
+                    }
                 }),
                 _ => None,
             });

@@ -181,6 +181,54 @@ fn irregular(inf: &str) -> Irregular {
             participle: Some("oído"),
             ..NONE
         },
+        "nacer" => Irregular {
+            present: Some(["nazco", "naces", "nace", "nacemos", "nacen", "nacen"]),
+            ..NONE
+        },
+        "despertar" => Irregular {
+            present: Some([
+                "despierto",
+                "despiertas",
+                "despierta",
+                "despertamos",
+                "despiertan",
+                "despiertan",
+            ]),
+            ..NONE
+        },
+        "volver" => Irregular {
+            present: Some([
+                "vuelvo", "vuelves", "vuelve", "volvemos", "vuelven", "vuelven",
+            ]),
+            participle: Some("vuelto"),
+            ..NONE
+        },
+        "sentar" => Irregular {
+            present: Some([
+                "siento", "sientas", "sienta", "sentamos", "sientan", "sientan",
+            ]),
+            ..NONE
+        },
+        "acostar" => Irregular {
+            present: Some([
+                "acuesto",
+                "acuestas",
+                "acuesta",
+                "acostamos",
+                "acuestan",
+                "acuestan",
+            ]),
+            ..NONE
+        },
+        "traer" => Irregular {
+            present: Some(["traigo", "traes", "trae", "traemos", "traen", "traen"]),
+            preterite: Some([
+                "traje", "trajiste", "trajo", "trajimos", "trajeron", "trajeron",
+            ]),
+            gerund: Some("trayendo"),
+            participle: Some("traído"),
+            ..NONE
+        },
         "jugar" => Irregular {
             present: Some(["juego", "juegas", "juega", "jugamos", "juegan", "juegan"]),
             subjunctive: Some([
@@ -689,6 +737,12 @@ mod tests {
         assert_eq!(c("oír", Tense::Future, 3), "nosotros oiremos");
         assert_eq!(c("moler", Tense::Present, 2), "él/ella muele");
         assert_eq!(c("jugar", Tense::Present, 0), "yo juego");
+        assert_eq!(c("nacer", Tense::Present, 0), "yo nazco");
+        assert_eq!(c("despertar", Tense::Imperative, 1), "¡despierta!");
+        assert_eq!(c("volver", Tense::Perfect, 0), "yo he vuelto");
+        assert_eq!(c("sentarse", Tense::Present, 0), "yo me siento");
+        assert_eq!(c("acostarse", Tense::Subjunctive, 1), "tú te acuestes");
+        assert_eq!(c("traer", Tense::Progressive, 0), "yo estoy trayendo");
         assert_eq!(c("jugar", Tense::Imperative, 1), "¡juega!");
         assert_eq!(c("escribir", Tense::Perfect, 0), "yo he escrito");
     }

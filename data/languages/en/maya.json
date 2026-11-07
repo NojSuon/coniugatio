@@ -1,0 +1,214 @@
+{
+  "name": "Yucatec Maya",
+  "variant": "Yucatec Maya",
+  "region": "Yucatán Peninsula, Mexico",
+  "summary": "Aspects, person markers and three ways of saying «it happened».",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb as in the dictionary: wenel «sleep», janal «eat», kultal «sit down», xokik «read it». Tones (á) are part of the word.",
+    "own": {
+      "hint": "Type any verb and its meaning in English. If we don't detect it right, choose its type.",
+      "label": "Verb",
+      "es_placeholder": "work",
+      "types_help": "Transitive verbs end in -ik (kaxtik «look for it»); write their meaning with «it». Positionals end in -tal. Root verbs end in a vowel + l that repeats the vowel (wenel, okol); activity verbs (janal, meyaj, báaxal) make their past with -naj-."
+    },
+    "types": [
+      { "id": "", "label": "Detect it" },
+      { "id": "I", "label": "Root intransitive: wenel → jweenen" },
+      { "id": "A", "label": "Activity: janal → janalnajen" },
+      { "id": "P", "label": "Positional: kultal → kullajen" },
+      { "id": "T", "label": "Transitive: xokik → tin xokaj" }
+    ]
+  },
+  "source": {
+    "full": "Fidencio Briceño Chel, Los verbos del maya yucateco actual: clasificación y conjugación, 2nd ed. (INALI, 2021); INALI, U nu'ukbesajil u ts'íibta'al maayat'aan / Normas de escritura para la lengua maya (2014). See also: Diccionario maya de uso cotidiano (Quintana Roo); David and Alejandra Bolles, A Grammar of the Yucatecan Mayan Language."
+  },
+  "about": [
+    "Maayat'aan, or Yucatec Maya, is spoken on the Yucatán Peninsula: in Yucatán, Quintana Roo and Campeche, and in parts of Belize. With about 800,000 speakers, it is the second most spoken Indigenous language of Mexico.",
+    "It belongs to the Yucatecan branch of the Mayan family, together with Itza', Mopan and Lacandon. It is the language of the ancient Maya of Chichén Itzá, Uxmal and Mayapán, and of a literature written without a break since the 16th century.",
+    "It is a tonal language: a long vowel can have a high tone (áa) or a low tone (aa), and that tells words apart. Its verbs don't mark tense but aspect: whether the action is a habit, is going on, is finished or has to happen."
+  ],
+  "orthography": {
+    "intro": "We use INALI's Normas de escritura para la lengua maya: 5 vowels, which can be short, long, high-toned or with a glottal stop, and 20 consonants. The apostrophe (') is the glottal stop or a glottalized consonant (k', t'), pronounced with a catch in the throat.",
+    "letters": [
+      { "meaning": "water" },
+      { "meaning": "night" },
+      { "meaning": "jaguar" },
+      { "meaning": "red" },
+      { "meaning": "bird" },
+      { "meaning": "star" },
+      { "meaning": "eye" },
+      { "meaning": "hole, door" },
+      { "meaning": "bee, honey" },
+      { "meaning": "sun, day" },
+      { "meaning": "earth, land" },
+      { "meaning": "person" },
+      { "meaning": "house" },
+      { "meaning": "spirit, heart" },
+      { "meaning": "dog" },
+      { "meaning": "tomato" },
+      { "meaning": "white" },
+      { "meaning": "stone" },
+      { "meaning": "word, language" },
+      { "meaning": "horse" },
+      { "meaning": "writing" },
+      { "meaning": "moon" },
+      { "meaning": "man, person" },
+      { "meaning": "herb, grass" },
+      { "meaning": "lord, father" }
+    ],
+    "vowels": [
+      { "title": "Short vowels" },
+      { "title": "Long, low tone" },
+      { "title": "Long, high tone" },
+      { "title": "Rearticulated" }
+    ],
+    "notes": [
+      "High tone is only marked on long vowels, with an accent on the first one: áak «turtle», aak «green, fresh».",
+      "A rearticulated vowel is said twice with a glottal stop in between: lu'um «earth», ba'al «thing».",
+      "Maya b is implosive: it is pronounced inwards. B, ch, k, p, t and ts sound soft at the end of a word.",
+      "Pronunciation is shown in brackets with the International Phonetic Alphabet (IPA)."
+    ]
+  },
+  "grammar": {
+    "intro": "A Maya verb is built with an aspect marker, a pronoun and the verb. Transitive verbs also take a status suffix: -ik while it happens, -aj once it happened, -ej for what isn't real yet.",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "Aspect", "description": "k- habit, táan going on, ts'o'ok already, yaan has to…" },
+          { "slot": "Pronoun (set A)", "description": "Who does it: in, a, u, k." },
+          { "slot": "Verb", "description": "The verb; if it starts with a vowel it takes w- or y-: in w-il-ik." },
+          { "slot": "Status", "description": "-ik, -aj, -ej in transitive verbs." },
+          { "slot": "Plural", "description": "-e'ex you all, -o'ob they." }
+        ]
+      },
+      {
+        "title": "Two sets of pronouns",
+        "description": "Set A goes before the verb and marks who does the action. Set B goes at the end: it marks the object, and the subject in the intransitive completive and the bíin future.",
+        "columns": ["Person", "Set A", "Before a vowel", "Set B"],
+        "rows": [{ "label": "I" }, { "label": "you" }, { "label": "he, she" }, { "label": "we" }, { "label": "you all" }, { "label": "they" }],
+        "note": "The aspect k- (habit) joins the pronoun: k + in → kin, k + a → ka, k + u → ku."
+      },
+      {
+        "title": "Three ways of saying «it happened»",
+        "description": "In the completive, intransitive verbs use set B, and the form depends on the type of verb.",
+        "items": [
+          { "name": "Root verbs", "description": "Verbs in vowel + l repeating the root's vowel, and verbs of motion. A short vowel becomes long.", "examples": [{ "meaning": "I slept" }, { "meaning": "I left" }] },
+          { "name": "Activity verbs", "description": "Verbs like janal, meyaj, báaxal.", "examples": [{ "meaning": "I ate" }, { "meaning": "you worked" }] },
+          { "name": "Positionals", "description": "Verbs in -tal that say how the body ends up.", "examples": [{ "meaning": "I sat down" }] }
+        ]
+      },
+      {
+        "title": "Transitive verbs: -ik, -aj, -ej",
+        "description": "The transitive completive takes t- joined to the pronoun. The bíin future takes -ej, which is only written in the singular and at the end of the sentence.",
+        "items": [
+          { "translation": "I read it" },
+          { "translation": "I read it (past)" },
+          { "translation": "someday I will read it" },
+          { "translation": "he/she already read it" },
+          { "translation": "read it!" }
+        ]
+      },
+      {
+        "title": "Auxiliaries",
+        "description": "Words that go before the pronoun and add a meaning.",
+        "items": [
+          { "translation": "I want to eat" },
+          { "translation": "I need to eat" },
+          { "translation": "I have to eat" },
+          { "translation": "I usually eat" },
+          { "translation": "I started to eat" },
+          { "translation": "I have just eaten" }
+        ]
+      },
+      {
+        "title": "Orders and negation",
+        "description": "The intransitive imperative ends in -en or -nen; the transitive one, in -ej. Ma' negates, and the sentence often closes with -i'.",
+        "items": [
+          { "translation": "study!" },
+          { "translation": "go away!" },
+          { "translation": "come!" },
+          { "translation": "don't sleep!" },
+          { "translation": "I don't know it" }
+        ]
+      },
+      {
+        "title": "Example sentences",
+        "items": [
+          { "translation": "How are you?" },
+          { "translation": "Fine, and you?" },
+          { "translation": "Thank you very much." },
+          { "translation": "What's your name?" },
+          { "translation": "I am learning Maya." }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "1st person" },
+      { "id": "2", "label": "2nd person" },
+      { "id": "3", "label": "3rd person" }
+    ],
+    "tenses": [
+      { "id": "habitual", "group": "Aspects", "name": "Habitual", "description": "What one does by habit (k-)." },
+      { "id": "durative", "group": "Aspects", "name": "Durative", "description": "What is happening now (táan)." },
+      { "id": "terminative", "group": "Aspects", "name": "Terminative", "description": "What has already been done (ts'o'ok).", "es": { "tense": "preterite", "adverb": "already" } },
+      { "id": "recent", "group": "Aspects", "name": "Immediate perfect", "description": "What has just been done (táant … -e').", "es": { "tense": "perfect", "adverb": "just" } },
+      { "id": "completive", "group": "Past", "name": "Completive", "description": "What happened and finished: j- / -naj- / -laj- in intransitives, t- … -aj in transitives." },
+      { "id": "earlier", "group": "Past", "name": "Recent past", "description": "A while ago, the same day (sáam).", "es": { "tense": "preterite", "before": "a while ago" } },
+      { "id": "remote", "group": "Past", "name": "Remote past", "description": "Long ago, for telling stories (úuch).", "es": { "tense": "preterite", "before": "long ago" } },
+      { "id": "assurative", "group": "Future", "name": "Assurative", "description": "What will surely happen (je'el … -e').", "es": { "tense": "future", "adverb": "surely" } },
+      { "id": "compulsive", "group": "Future", "name": "Obligative", "description": "What has to happen (yaan).", "es": { "tense": "present", "aux": "have", "link": "to" } },
+      { "id": "future", "group": "Future", "name": "Indefinite future", "description": "Someday, without certainty (bíin).", "es": { "tense": "future", "before": "someday" } },
+      { "id": "desiderative", "group": "Auxiliaries", "name": "Wish", "description": "«I want to…» (taak).", "es": { "tense": "present", "aux": "want", "link": "to" } },
+      { "id": "necessity", "group": "Auxiliaries", "name": "Need", "description": "«I need to…» (k'a'abet).", "es": { "tense": "present", "aux": "need", "link": "to" } },
+      { "id": "custom", "group": "Auxiliaries", "name": "Habit", "description": "«I usually…» (suuk).", "es": { "tense": "present", "adverb": "usually" } },
+      { "id": "incipient", "group": "Auxiliaries", "name": "Incipient", "description": "«I started to…» (jo'op').", "es": { "tense": "preterite", "aux": "start", "link": "to" } },
+      { "id": "imperative", "group": "Moods", "name": "Imperative", "description": "Orders: -en / -nen, -ej in transitives." },
+      { "id": "prohibitive", "group": "Moods", "name": "Prohibitive", "description": "«Don't do it!»: ma' a…" },
+      { "id": "neg-habitual", "group": "Negative", "name": "Habitual", "description": "ma' t-… -i'." },
+      { "id": "neg-durative", "group": "Negative", "name": "Durative", "description": "ma' táan … -i'." },
+      { "id": "neg-completive", "group": "Negative", "name": "Completive", "description": "ma' + completive + -i'." }
+    ],
+    "lexicon": [
+      { "entry": "wenel", "meaning": "sleep", "es": "sleep" },
+      { "entry": "okol", "meaning": "go in", "es": "go in" },
+      { "entry": "jóok'ol", "meaning": "go out", "es": "go out" },
+      { "entry": "k'uchul", "meaning": "arrive", "es": "arrive" },
+      { "entry": "na'akal", "meaning": "go up", "es": "go up" },
+      { "entry": "éemel", "meaning": "go down", "es": "go down" },
+      { "entry": "lúubul", "meaning": "fall", "es": "fall" },
+      { "entry": "kíimil", "meaning": "die", "es": "die" },
+      { "entry": "síijil", "meaning": "be born", "es": "be born" },
+      { "entry": "ajal", "meaning": "wake up", "es": "wake up" },
+      { "entry": "bin", "meaning": "go", "es": "go", "note": "Irregular: future bíin xi'iken, imperative xeen" },
+      { "entry": "taal", "meaning": "come", "es": "come", "note": "Future bíin talaken, imperative kóoten" },
+      { "entry": "u'ul", "meaning": "come back, return", "es": "come back" },
+      { "entry": "máan", "meaning": "pass", "es": "pass" },
+      { "entry": "janal", "meaning": "eat", "es": "eat" },
+      { "entry": "meyaj", "meaning": "work", "es": "work" },
+      { "entry": "báaxal", "meaning": "play", "es": "play" },
+      { "entry": "xook", "meaning": "study, read", "es": "study" },
+      { "entry": "ts'íib", "meaning": "write", "es": "write" },
+      { "entry": "áalkab", "meaning": "run", "es": "run" },
+      { "entry": "ichkíil", "meaning": "bathe", "es": "bathe" },
+      { "entry": "koonol", "meaning": "sell", "es": "sell" },
+      { "entry": "kultal", "meaning": "sit down", "es": "sit down" },
+      { "entry": "wa'altal", "meaning": "stand up", "es": "stand up" },
+      { "entry": "chiltal", "meaning": "lie down", "es": "lie down" },
+      { "entry": "ilik", "meaning": "see it", "es": "see it" },
+      { "entry": "xokik", "meaning": "read it", "es": "read it" },
+      { "entry": "beetik", "meaning": "do it, make it", "es": "do it" },
+      { "entry": "a'alik", "meaning": "say it", "es": "say it" },
+      { "entry": "uk'ik", "meaning": "drink it", "es": "drink it" },
+      { "entry": "jaantik", "meaning": "eat it", "es": "eat it" },
+      { "entry": "kaxtik", "meaning": "look for it", "es": "look for it" },
+      { "entry": "ojéeltik", "meaning": "know it", "es": "know it" },
+      { "entry": "kanik", "meaning": "learn it", "es": "learn it" },
+      { "entry": "bisik", "meaning": "take it", "es": "take it" },
+      { "entry": "taasik", "meaning": "bring it", "es": "bring it" },
+      { "entry": "u'uyik", "meaning": "hear it", "es": "hear it" }
+    ]
+  }
+}
