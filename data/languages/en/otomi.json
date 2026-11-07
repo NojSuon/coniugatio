@@ -1,0 +1,174 @@
+{
+  "name": "Otomi",
+  "variant": "Otomi of the Mezquital Valley",
+  "region": "Mezquital Valley, Hidalgo, Mexico",
+  "summary": "Conjugate verbs with person and tense proclitics, and see how the root changes.",
+  "conjugator": {
+    "label": "Verb root",
+    "hint": "Type the root of a verb, as you find it in the dictionary.",
+    "own": {
+      "hint": "Type the root of any verb and its meaning in English. We conjugate it with the rules of Hñähñu: the proclitic and the change of the first consonant.",
+      "label": "Verb root",
+      "es_placeholder": "sing",
+      "types_help": "Some verbs add n- in the past and the future. The dictionary shows it with «Pret. dá n…»."
+    },
+    "types": [
+      { "id": "", "label": "Regular" },
+      { "id": "n", "label": "With n- in the past and future" }
+    ],
+    "no_plural": "same, with ya on the noun"
+  },
+  "source": {
+    "full": "Luis Hernández Cruz, Moisés Victoria Torquemada and Donaldo Sinclair Crawford. Diccionario del hñähñu (otomí) del Valle del Mezquital, estado de Hidalgo. 2nd electronic ed. Summer Institute of Linguistics, 2010. Grammar notes by Doris Bartholomew."
+  },
+  "about": [
+    "Hñähñu, or Otomi of the Mezquital Valley, is spoken in the state of Hidalgo, in central Mexico.",
+    "It is a tonal language: the tone of the first syllable of a root can change the meaning of the word. There are three tones: high, low and rising.",
+    "Its verbs are conjugated with proclitics, short words that come before the verb and show the person and the tense. In some tenses the first consonant of the root also changes."
+  ],
+  "orthography": {
+    "intro": "This is the spelling used by the dictionary, adapted to the orthography of the Academia de la Cultura Hñähñu. The apostrophe (') is the glottal stop, a short break in the voice.",
+    "letters": [
+      { "meaning": "bury" },
+      { "meaning": "sleep" },
+      { "meaning": "thief" },
+      { "meaning": "milk" },
+      { "meaning": "corn earworm" },
+      { "meaning": "a place name" },
+      { "meaning": "water" },
+      { "meaning": "comb (hair)" },
+      { "meaning": "throw away" },
+      { "meaning": "horse" },
+      { "meaning": "bricklayer" },
+      { "meaning": "earth, land" },
+      { "meaning": "peach" },
+      { "meaning": "blood" },
+      { "meaning": "prickly pear" },
+      { "meaning": "snake" },
+      { "meaning": "small" },
+      { "meaning": "stone mortar" },
+      { "meaning": "gourd for sucking agave sap" },
+      { "meaning": "mouth" },
+      { "meaning": "one" },
+      { "meaning": "head" },
+      { "meaning": "road" },
+      { "meaning": "write" },
+      { "meaning": "hear" },
+      { "meaning": "count" },
+      { "meaning": "the" },
+      { "meaning": "bridge" },
+      { "meaning": "comb" },
+      { "meaning": "run" },
+      { "meaning": "atole (corn drink)" },
+      { "meaning": "ear of corn" },
+      { "meaning": "cold" },
+      { "meaning": "tooth" },
+      { "meaning": "give" },
+      { "meaning": "hurt" },
+      { "meaning": "leaf" },
+      { "meaning": "candle" },
+      { "meaning": "rain" },
+      { "meaning": "cry" }
+    ],
+    "vowels": [{ "title": "Oral vowels" }, { "title": "Nasal vowels" }],
+    "notes": [
+      "Of the nasal vowels, only ä is written. Ë, ï and ü exist in the language, but they are usually not marked.",
+      "The glottal stop comes after ch, k, t and ts (k'eñä), and before b, m, n, ñ, r, u and y ('ba, 'ñu).",
+      "Tones are not written in words. In the verb proclitics, the high tone is marked with an accent because it changes the meaning: dí xipi «I tell him», di xipi «he tells him».",
+      "Pronunciation is shown in brackets with the International Phonetic Alphabet (IPA). U sounds [w] before another vowel: ua «foot». X sounds like «sh» [ʃ], and j like the Spanish j [x]."
+    ]
+  },
+  "grammar": {
+    "intro": "To conjugate a verb in Hñähñu, put a proclitic before the root. The proclitic says who does the action and when.",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "Proclitic", "description": "Person and tense. With hin- in front, the sentence is negative." },
+          { "slot": "Root", "description": "The verb. In the preterite and the future its first letter can change." },
+          { "slot": "Plural", "description": "Suffix -hu̱ for «we» and «you all»." }
+        ]
+      },
+      {
+        "title": "The tone of the proclitic changes the meaning",
+        "description": "Look at the accent: it marks a high tone.",
+        "items": [
+          { "translation": "I tell him/her" },
+          { "translation": "he/she tells him/her" },
+          { "translation": "I told him/her" },
+          { "translation": "he/she will tell him/her" },
+          { "translation": "you told him/her" },
+          { "translation": "I will tell him/her" }
+        ]
+      },
+      {
+        "title": "The root changes too",
+        "description": "In the preterite and the future, many roots change their first consonant. That is how the secondary forms of the root are made.",
+        "items": [
+          { "name": "Form B", "description": "The consonant becomes voiced: p → b, t → d, th → d, ts → z, k → g, j → g, f → m.", "examples": [{ "meaning": "he/she knew it" }, { "meaning": "he/she bought it" }, { "meaning": "he/she ground it" }] },
+          { "name": "Form Y", "description": "If the root starts with a vowel or with h + vowel, y is added (or ñ if the vowel is nasal).", "examples": [{ "meaning": "he/she looked for it" }, { "meaning": "he/she heard it" }, { "meaning": "he/she slept" }] },
+          { "name": "Form N", "description": "Some verbs keep their consonant but add n- (or m-). The dictionary shows it with the 1st person of the preterite.", "examples": [{ "meaning": "I jumped" }, { "meaning": "he/she laughed" }, { "meaning": "I drank water" }] }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "title": "The plural with -hu̱",
+            "description": "In everyday speech, the suffix -hu̱ changes the end of the root:",
+            "examples": [{ "meaning": "drink" }, { "meaning": "work" }, { "meaning": "look" }, { "meaning": "think" }, { "meaning": "buy" }]
+          },
+          {
+            "title": "Being something: proclitic + ra",
+            "description": "To say «I am», «you are» or «he/she is» with a noun, the proclitic joins the article ra.",
+            "columns": ["Tense", "1st", "2nd", "3rd"],
+            "rows": [{ "label": "Present" }, { "label": "Imperfect" }, { "label": "Future" }]
+          }
+        ]
+      },
+      {
+        "title": "Example sentences",
+        "items": [
+          { "translation": "I am studying Spanish." },
+          { "translation": "I go to sleep early." },
+          { "translation": "But he/she doesn't dance." },
+          { "translation": "I didn't see it." },
+          { "translation": "It's expensive." }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "1st person" },
+      { "id": "2", "label": "2nd person" },
+      { "id": "3", "label": "3rd person" }
+    ],
+    "paradigms": [
+      { "id": "present", "group": "Affirmative", "name": "Present", "description": "What happens now or always." },
+      { "id": "preterite", "group": "Affirmative", "name": "Preterite", "description": "What already happened." },
+      { "id": "future", "group": "Affirmative", "name": "Future", "description": "What is going to happen." },
+      { "id": "imperfect", "group": "Affirmative", "name": "Imperfect", "description": "What used to happen in the past." },
+      { "id": "progressive", "group": "Affirmative", "name": "Present progressive", "description": "What is happening right now." },
+      { "id": "neg-present", "group": "Negative", "name": "Present", "description": "hin- + the present proclitic." },
+      { "id": "neg-preterite", "group": "Negative", "name": "Preterite", "description": "hin- + the preterite proclitic." }
+    ],
+    "lexicon": [
+      { "meaning": "eat, drink", "es": "eat" },
+      { "meaning": "know", "es": "know", "note": "Pret. bi bädi" },
+      { "meaning": "buy", "es": "buy", "note": "Pret. bi dai" },
+      { "meaning": "wash", "es": "wash", "note": "Pret. bi meni" },
+      { "meaning": "look for", "es": "look for", "note": "Pret. bi hyoni" },
+      { "meaning": "see, look", "es": "see", "note": "Pret. bi hyandi" },
+      { "meaning": "sleep", "es": "sleep", "note": "Pret. bi 'ñähä" },
+      { "meaning": "hear", "es": "hear", "note": "Pret. bi 'yo̱de" },
+      { "meaning": "grind", "es": "grind", "note": "Pret. bi gu̱ni" },
+      { "meaning": "take out", "es": "take out", "note": "Pret. bi gu̱ki" },
+      { "meaning": "split", "es": "split", "note": "Pret. bi hyeke" },
+      { "meaning": "dance", "es": "dance" },
+      { "meaning": "harvest", "es": "harvest" },
+      { "meaning": "jump", "es": "jump", "note": "Pret. dá nsagi" },
+      { "meaning": "laugh", "es": "laugh", "note": "Pret. bi nthede" },
+      { "meaning": "rest", "es": "rest", "note": "Pret. bi ntsaya" },
+      { "meaning": "drink water", "es": "drink water", "note": "Pret. dá ntsithe" }
+    ]
+  }
+}

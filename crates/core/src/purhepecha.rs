@@ -299,7 +299,7 @@ impl Conjugation {
         let es = |tense: &Tense, person: &Person, plural: bool| -> Option<String> {
             let meaning = es_meaning.as_deref()?;
             let p = person.es? + if plural { 3 } else { 0 };
-            spanish::render(meaning, tense.es.as_ref()?, p, tense.negative)
+            crate::gloss(opts, meaning, tense.es.as_ref()?, p, tense.negative)
         };
 
         let tables = self

@@ -484,3 +484,27 @@ html { scroll-behavior: smooth; }
   display: inline-grid; place-items: center; background: var(--serie-fondo); color: var(--serie-texto);
 }
 .group-tabs button[aria-selected="true"] .count { background: var(--mati-blanco); }
+
+/* ---------- Language switch (ES ⇄ EN), top right ---------- */
+.header-end { display: flex; align-items: center; gap: 12px; }
+.lang-switch {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 44px; min-height: 36px; padding: 0 12px;
+  border: 2px solid var(--mati-cacao-rojo); border-radius: 999px;
+  font-family: var(--font-titulo); font-weight: 600; font-size: 15px; letter-spacing: .04em;
+  color: var(--mati-cacao-rojo); text-decoration: none;
+}
+.lang-switch:hover, .lang-switch:focus-visible { background: var(--mati-cacao-rojo); color: var(--mati-blanco); }
+@media (max-width: 520px) {
+  .header-end { gap: 6px; }
+  .lang-switch { min-width: 40px; padding: 0 8px; font-size: 14px; }
+}
+/* On phones the switch stays top right, next to the logo, and the menu
+   moves to its own row underneath. */
+@media (max-width: 560px) {
+  .site-header .wrap { flex-wrap: wrap; row-gap: 4px; padding-top: 10px; padding-bottom: 8px; }
+  .header-end { display: contents; }
+  .lang-switch { order: 2; }
+  .site-nav { order: 3; flex-basis: 100%; }
+  .site-nav ul { justify-content: space-between; }
+}

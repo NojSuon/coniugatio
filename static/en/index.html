@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="{{base}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mati Mati · Conjugator</title>
+  <meta name="description" content="Conjugate verbs in Indigenous languages of Mexico with Mati Mati.">
+  <link rel="icon" href="static/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;700;800&family=Noto+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="static/css/mati.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+  <header class="site-header" data-site-header></header>
+
+  <main id="contenido">
+    <!-- Header / Banner -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="pattern-p01 pattern-strip" aria-hidden="true"></div>
+      <div class="wrap">
+        <div>
+          <span class="tag">Indigenous language conjugator</span>
+          <h1 id="hero-title">Conjugate verbs in Indigenous languages of Mexico</h1>
+          <p>Choose a language, type a verb and see how it changes with every person and every tense.</p>
+          <p style="margin-top:28px"><a class="button" href="#lenguas" style="background:var(--mati-blanco);color:var(--mati-cacao-rojo)">Choose a language →</a></p>
+        </div>
+        <img class="hero-logo" src="static/img/mati-logo-textil.png" width="300" height="300"
+             alt="Mati Mati logo: the letters MA and TI over four textile patterns.">
+      </div>
+    </section>
+
+    <!-- Intro text area -->
+    <section class="intro" id="mati" aria-labelledby="intro-title">
+      <div class="wrap">
+        <div class="intro-card">
+          <div>
+            <h2 id="intro-title">What is Mati Mati?</h2>
+            <p>Mati Mati is a community and web platform to teach, preserve and share Indigenous and minority languages. Today we work with languages of Mexico, and we want to add more and more regions and communities.</p>
+            <p>Learning a language means stepping into a different way of seeing the world, and doing it as a community.</p>
+          </div>
+          <ul class="pillars">
+            <li><strong>Meet the language</strong>Who speaks it, where, and what it calls itself.</li>
+            <li><strong>Learn its alphabet</strong>Every letter with an example word.</li>
+            <li><strong>Conjugate verbs</strong>Type a root and see all its forms.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boxes -->
+    <section class="languages" id="lenguas" aria-labelledby="lenguas-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="lenguas-title">Choose a language</h2>
+          <p class="caption">More languages on the way.</p>
+        </div>
+        <div class="language-grid" data-language-grid>
+          <p class="caption">Loading languages…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="cta-card">
+          <div>
+            <h2 id="cta-title">Tell us!</h2>
+            <p>Which language would you like to conjugate on Mati Mati?</p>
+          </div>
+          <a class="button" href="https://www.instagram.com/matidemati" rel="noopener">Write to us on Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" data-site-footer></footer>
+
+  <script type="module" src="static/js/home.js"></script>
+</body>
+</html>
