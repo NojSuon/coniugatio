@@ -197,7 +197,7 @@ mod tests {
 
     fn otomi() -> Conjugation {
         let raw: serde_json::Value =
-            serde_json::from_str(include_str!("../data/languages/otomi.json")).unwrap();
+            serde_json::from_str(include_str!("../../../data/languages/otomi.json")).unwrap();
         serde_json::from_value(raw["conjugation"].clone()).unwrap()
     }
 

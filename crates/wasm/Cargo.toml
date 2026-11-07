@@ -1,0 +1,14 @@
+[package]
+name = "coniugatio-wasm"
+description = "WebAssembly bindings so the conjugator runs in the browser"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+coniugatio-core.workspace = true
+serde_json.workspace = true
+# Keep in sync with the wasm-bindgen-cli version in .github/workflows/pages.yml
+wasm-bindgen = "=0.2.100"

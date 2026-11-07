@@ -15,12 +15,12 @@ function card(lang) {
     <p class="summary">${escapeHtml(lang.summary)}</p>
     ${available ? `<span class="go">Conjugar →</span>` : ""}`;
   return available
-    ? `<a class="language-card" data-serie="${lang.series}" href="/${lang.slug}">${body}</a>`
+    ? `<a class="language-card" data-serie="${lang.series}" href="${lang.slug}/">${body}</a>`
     : `<div class="language-card" data-serie="${lang.series}" aria-disabled="true">${body}</div>`;
 }
 
 try {
-  const res = await fetch("/api/languages");
+  const res = await fetch("data/languages.json");
   if (!res.ok) throw new Error(res.statusText);
   const languages = await res.json();
   grid.innerHTML = languages.map(card).join("");

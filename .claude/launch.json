@@ -4,7 +4,7 @@
     {
       "name": "coniugatio",
       "runtimeExecutable": "cargo",
-      "runtimeArgs": ["run"],
+      "runtimeArgs": ["run", "-p", "coniugatio-site", "--", "--serve"],
       "port": 3000
     }
   ]

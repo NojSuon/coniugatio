@@ -11,6 +11,21 @@ export const LOGO_SVG = `
   <path d="M54 54h46v11H82.5v24H100v11H54V89h17.5V65H54z"/>
 </svg>`;
 
+// Pages use <base href> so the site works under /coniugatio/ on GitHub Pages.
+// With a base, "#section" links would point at the home page, so in-page
+// links are handled here instead.
+document.addEventListener("click", (ev) => {
+  const a = ev.target.closest?.("a[href^='#']");
+  if (!a) return;
+  const target = document.getElementById(a.getAttribute("href").slice(1));
+  if (!target) return;
+  ev.preventDefault();
+  history.pushState(null, "", location.pathname + location.search + a.getAttribute("href"));
+  target.scrollIntoView();
+  if (target.tabIndex < 0 && !target.matches("a, button, input")) target.setAttribute("tabindex", "-1");
+  target.focus({ preventScroll: true });
+});
+
 export function escapeHtml(text) {
   return String(text)
     .replaceAll("&", "&amp;")
@@ -34,12 +49,12 @@ export function renderHeader(current) {
     `<li><a href="${href}"${current === key ? ' aria-current="page"' : ""}>${label}</a></li>`;
   el.innerHTML = `
     <div class="wrap">
-      <a class="brand" href="/">${LOGO_SVG}<span>Mati Mati</span></a>
+      <a class="brand" href="./">${LOGO_SVG}<span>Mati Mati</span></a>
       <nav class="site-nav" aria-label="Principal">
         <ul>
-          ${link("/", "Inicio", "home")}
-          ${link("/#lenguas", "Lenguas", "lenguas")}
-          ${link("/#mati", "Mati Mati", "mati")}
+          ${link("./", "Inicio", "home")}
+          ${link("./#lenguas", "Lenguas", "lenguas")}
+          ${link("./#mati", "Mati Mati", "mati")}
         </ul>
       </nav>
     </div>`;
@@ -50,7 +65,7 @@ export function renderFooter() {
   if (!el) return;
   el.innerHTML = `
     <div class="wrap">
-      <a class="brand" href="/">${LOGO_SVG}<span>Mati Mati</span></a>
+      <a class="brand" href="./">${LOGO_SVG}<span>Mati Mati</span></a>
       <p>Aprende, preserva y comparte lenguas indígenas.<br>
         Síguenos en <a href="https://www.instagram.com/matidemati" rel="noopener">@matidemati</a>.</p>
     </div>`;
