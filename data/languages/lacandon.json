@@ -1,0 +1,1179 @@
+{
+  "slug": "lacandon",
+  "name": "lacandón",
+  "endonym": "hach t'aan",
+  "variant": "maya lacandón del sur",
+  "region": "Lacanjá Chansayab, Selva Lacandona (Chiapas)",
+  "status": "available",
+  "order": 9,
+  "series": "selva",
+  "summary": "Lengua maya de la rama yucateca que hablan los hach winik de la Selva Lacandona, en Chiapas. Sus hablantes la llaman hach t'aan, «la lengua verdadera»; también se le dice lacandón o maya lacandón.",
+  "lang_code": "lac",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo como en el diccionario: b'in «ir», weenan «dormir», kurtaar «sentarse», 'irik «verlo».",
+    "placeholder": "weenan",
+    "keyboard": [
+      "ä",
+      "'",
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "own": {
+      "hint": "Escribe cualquier verbo y su significado en español. Si no lo detectamos bien, elige su tipo.",
+      "label": "Verbo",
+      "placeholder": "'ookar",
+      "es_placeholder": "entrar",
+      "types_help": "Los transitivos terminan en -ik ('irik «verlo»); escribe su significado con «lo». Los posicionales terminan en -taar. Los intransitivos de raíz terminan en vocal + r o n ('ookar, weenan); los de actividad (ts'íib, b'eeyaj) no llevan terminación."
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "Detectar solo"
+      },
+      {
+        "id": "I",
+        "label": "Intransitivo de raíz: weenan → weenen"
+      },
+      {
+        "id": "A",
+        "label": "De actividad: ts'íib → ts'íibnäj"
+      },
+      {
+        "id": "P",
+        "label": "Posicional: kurtaar → kurräj"
+      },
+      {
+        "id": "T",
+        "label": "Transitivo: 'irik → tinwiraj"
+      }
+    ]
+  },
+  "source": {
+    "short": "Hofling, Lacandon Maya–Spanish–English Dictionary (2014)",
+    "full": "Charles Andrew Hofling con Florinda Chanaj Kin, Lacandon Maya–Spanish–English Dictionary / Diccionario maya lacandón–español–inglés (University of Utah Press, 2014), a partir de los datos de Una Canger y Henrik Bergqvist. Variante del sur, de Lacanjá Chansayab."
+  },
+  "about": [
+    "El lacandón es una lengua maya de la rama yucateca, junto con el maya yucateco, el itza' y el mopán. Lo hablan unas mil personas en la Selva Lacandona de Chiapas: los del norte en Najá y Metzabok, y los del sur en Lacanjá Chansayab.",
+    "Sus hablantes se llaman a sí mismos hach winik, «hombres verdaderos», y a su lengua hach t'aan, «la lengua verdadera». Lacandón viene del nombre de un antiguo pueblo chol, Lakam Tun, «piedra grande».",
+    "Esta página sigue la variante del sur que registra Hofling. Como en mopán, la persona va pegada al verbo (kinb'in «voy») y hay una sexta vocal, la ä. La antigua l se pronuncia r: kurtaar «sentarse», 'ookar «entrar»."
+  ],
+  "orthography": {
+    "intro": "Usamos el alfabeto maya que sigue Hofling, con ts en lugar de tz: 6 vocales, que pueden ser cortas, largas o largas con tono alto (áa), y consonantes simples o glotalizadas. El apóstrofo (') marca una consonante glotalizada (k', t') o un saltillo; toda palabra que empieza con vocal lleva saltillo: 'irik.",
+    "letters": [
+      {
+        "letter": "'",
+        "ipa": "ʔ",
+        "word": "'uk'ik",
+        "meaning": "tomarlo"
+      },
+      {
+        "letter": "a",
+        "ipa": "a",
+        "word": "'ajär",
+        "meaning": "despertarse"
+      },
+      {
+        "letter": "ä",
+        "ipa": "ɨ",
+        "word": "ch'äkik",
+        "meaning": "tumbarlo"
+      },
+      {
+        "letter": "b'",
+        "ipa": "ɓ",
+        "word": "b'in",
+        "meaning": "ir"
+      },
+      {
+        "letter": "ch",
+        "ipa": "tʃ",
+        "word": "chukik",
+        "meaning": "agarrarlo"
+      },
+      {
+        "letter": "ch'",
+        "ipa": "tʃʼ",
+        "word": "ch'a'ik",
+        "meaning": "traerlo"
+      },
+      {
+        "letter": "e",
+        "ipa": "e",
+        "word": "'eertik",
+        "meaning": "saberlo"
+      },
+      {
+        "letter": "i",
+        "ipa": "i",
+        "word": "'irik",
+        "meaning": "verlo"
+      },
+      {
+        "letter": "j",
+        "ipa": "h",
+        "word": "jaanän",
+        "meaning": "comer"
+      },
+      {
+        "letter": "k",
+        "ipa": "k",
+        "word": "kanik",
+        "meaning": "venderlo"
+      },
+      {
+        "letter": "k'",
+        "ipa": "kʼ",
+        "word": "k'uchur",
+        "meaning": "llegar"
+      },
+      {
+        "letter": "m",
+        "ipa": "m",
+        "word": "mänik",
+        "meaning": "comprarlo"
+      },
+      {
+        "letter": "n",
+        "ipa": "n",
+        "word": "naj",
+        "meaning": "casa"
+      },
+      {
+        "letter": "o",
+        "ipa": "o",
+        "word": "'ookar",
+        "meaning": "entrar"
+      },
+      {
+        "letter": "p",
+        "ipa": "p",
+        "word": "päch'taar",
+        "meaning": "acostarse"
+      },
+      {
+        "letter": "p'",
+        "ipa": "pʼ",
+        "word": "p'o'ik",
+        "meaning": "lavarlo"
+      },
+      {
+        "letter": "r",
+        "ipa": "ɾ",
+        "word": "ríik'ir",
+        "meaning": "volar"
+      },
+      {
+        "letter": "s",
+        "ipa": "s",
+        "word": "se'm",
+        "meaning": "toser"
+      },
+      {
+        "letter": "t",
+        "ipa": "t",
+        "word": "túutuy",
+        "meaning": "silbar"
+      },
+      {
+        "letter": "t'",
+        "ipa": "tʼ",
+        "word": "t'aan",
+        "meaning": "palabra, lengua"
+      },
+      {
+        "letter": "ts",
+        "ipa": "ts",
+        "word": "tsimin",
+        "meaning": "caballo"
+      },
+      {
+        "letter": "ts'",
+        "ipa": "tsʼ",
+        "word": "ts'ik",
+        "meaning": "darlo"
+      },
+      {
+        "letter": "u",
+        "ipa": "u",
+        "word": "'u'yik",
+        "meaning": "oírlo"
+      },
+      {
+        "letter": "w",
+        "ipa": "w",
+        "word": "wa'taar",
+        "meaning": "pararse"
+      },
+      {
+        "letter": "x",
+        "ipa": "ʃ",
+        "word": "xiik'",
+        "meaning": "volar"
+      },
+      {
+        "letter": "y",
+        "ipa": "j",
+        "word": "yaan",
+        "meaning": "hay, tiene que"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales cortas",
+        "items": [
+          {
+            "letter": "a",
+            "ipa": "a"
+          },
+          {
+            "letter": "ä",
+            "ipa": "ɨ"
+          },
+          {
+            "letter": "e",
+            "ipa": "e"
+          },
+          {
+            "letter": "i",
+            "ipa": "i"
+          },
+          {
+            "letter": "o",
+            "ipa": "o"
+          },
+          {
+            "letter": "u",
+            "ipa": "u"
+          }
+        ]
+      },
+      {
+        "title": "Vocales largas",
+        "items": [
+          {
+            "letter": "aa",
+            "ipa": "aː"
+          },
+          {
+            "letter": "ää",
+            "ipa": "ɨː"
+          },
+          {
+            "letter": "ee",
+            "ipa": "eː"
+          },
+          {
+            "letter": "ii",
+            "ipa": "iː"
+          },
+          {
+            "letter": "oo",
+            "ipa": "oː"
+          },
+          {
+            "letter": "uu",
+            "ipa": "uː"
+          }
+        ]
+      },
+      {
+        "title": "Largas con tono alto",
+        "items": [
+          {
+            "letter": "áa",
+            "ipa": "áː"
+          },
+          {
+            "letter": "ée",
+            "ipa": "éː"
+          },
+          {
+            "letter": "íi",
+            "ipa": "íː"
+          },
+          {
+            "letter": "óo",
+            "ipa": "óː"
+          },
+          {
+            "letter": "úu",
+            "ipa": "úː"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "La longitud y el tono cambian el sentido: las vocales largas pueden llevar tono alto (kíinsik «matarlo»).",
+      "La antigua l del maya se volvió r: el yucateco k'uchul es aquí k'uchur «llegar».",
+      "La ts se está confundiendo con la s en el habla de los jóvenes.",
+      "La b' es implosiva: el aire entra al pronunciarla. La d' y la g solo aparecen en unas pocas palabras."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo lacandón se arma con un marcador de aspecto, el pronombre pegado al verbo y un sufijo de estatus que dice si la acción es incompleta, completa o dependiente.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          {
+            "slot": "Aspecto",
+            "description": "k- incompletivo, t- completivo transitivo; o una palabra aparte: táan, suuk, yaan…",
+            "example": "k-"
+          },
+          {
+            "slot": "Juego A",
+            "description": "in-, a-, u-, ik- pegado al verbo; ante vocal inw-, aw-, uy-.",
+            "example": "inw-"
+          },
+          {
+            "slot": "Verbo",
+            "description": "La raíz.",
+            "example": "aj"
+          },
+          {
+            "slot": "Estatus",
+            "description": "-Vr, -ik, -aj, -ej, -Vk…",
+            "example": "-är"
+          },
+          {
+            "slot": "Plural",
+            "description": "-e'x, -eche'x, -o'b'.",
+            "example": "-o'b'"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Dos juegos de pronombres",
+        "description": "El juego A va pegado antes del verbo: quién hace la acción. El juego B va al final: el objeto, y el sujeto de los intransitivos en el pasado y el subjuntivo.",
+        "columns": [
+          "Persona",
+          "Juego A",
+          "Ante vocal",
+          "Juego B"
+        ],
+        "rows": [
+          {
+            "label": "yo",
+            "cells": [
+              "in-",
+              "inw-",
+              "-en"
+            ]
+          },
+          {
+            "label": "tú",
+            "cells": [
+              "a-",
+              "aw-",
+              "-ech"
+            ]
+          },
+          {
+            "label": "él, ella",
+            "cells": [
+              "u-",
+              "uy-",
+              "-ij / —"
+            ]
+          },
+          {
+            "label": "nosotros",
+            "cells": [
+              "ik-",
+              "ik'-",
+              "-o'n"
+            ]
+          },
+          {
+            "label": "ustedes",
+            "cells": [
+              "a- … -eche'x",
+              "aw- … -eche'x",
+              "-eche'x"
+            ]
+          },
+          {
+            "label": "ellos, ellas",
+            "cells": [
+              "u- … -o'b'",
+              "uy- … -o'b'",
+              "-o'b'"
+            ]
+          }
+        ],
+        "note": "«Nosotros» con -e'x al final te incluye: kikb'ine'x «vamos (tú y yo)»."
+      },
+      {
+        "type": "cards",
+        "title": "Cuatro tipos de verbo",
+        "description": "Cada tipo forma su pasado, su subjuntivo y su imperativo de otra manera.",
+        "items": [
+          {
+            "tag": "-Vr",
+            "name": "De raíz",
+            "description": "Intransitivos que terminan en vocal + r (o n tras nasal); la vocal sigue a la de la raíz.",
+            "examples": [
+              {
+                "from": "weenan",
+                "to": "weenech",
+                "meaning": "dormiste"
+              },
+              {
+                "from": "b'in",
+                "to": "b'inij",
+                "meaning": "se fue"
+              }
+            ]
+          },
+          {
+            "tag": "-n-",
+            "name": "De actividad",
+            "description": "Verbos como ts'íib, b'eeyaj: -näj en el pasado, -näk en el subjuntivo.",
+            "examples": [
+              {
+                "from": "ts'íib",
+                "to": "ts'íibnäj",
+                "meaning": "escribió"
+              }
+            ]
+          },
+          {
+            "tag": "-taar",
+            "name": "Posicionales",
+            "description": "Cómo queda el cuerpo: -taar mientras pasa, -räj cuando ya pasó.",
+            "examples": [
+              {
+                "from": "kurtaar",
+                "to": "kurräj",
+                "meaning": "se sentó"
+              }
+            ]
+          },
+          {
+            "tag": "-ik",
+            "name": "Transitivos",
+            "description": "-ik mientras pasa, t- … -aj cuando ya pasó, -ej en el subjuntivo y las órdenes.",
+            "examples": [
+              {
+                "from": "ch'äkik",
+                "to": "tach'äkaj",
+                "meaning": "lo tumbaste"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Aspecto, negación y órdenes",
+        "description": "Ma' niega; con el incompletivo se vuelve ma' t-. Táan, suuk y los demás marcadores van aparte, y el verbo empieza con saltillo.",
+        "items": [
+          {
+            "text": "kinb'in",
+            "translation": "voy"
+          },
+          {
+            "text": "táan 'uyajär",
+            "translation": "se está despertando"
+          },
+          {
+            "text": "ma' tinkíinsaj",
+            "translation": "no lo maté"
+          },
+          {
+            "text": "ka' xi'ikech",
+            "translation": "que te vayas"
+          },
+          {
+            "text": "xeen",
+            "translation": "¡vete!"
+          },
+          {
+            "text": "ch'äkej",
+            "translation": "¡túmbalo!"
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Todos los afijos del verbo",
+        "description": "Cada pieza que un verbo puede llevar: aspecto, pronombres, estatus, plurales, derivaciones y las palabras que marcan el tiempo.",
+        "items": [
+          {
+            "affix": "k-",
+            "kind": "aspecto",
+            "meaning": "Incompletivo: lo que pasa o suele pasar",
+            "example": "kinb'in",
+            "translation": "voy"
+          },
+          {
+            "affix": "t-",
+            "kind": "aspecto",
+            "meaning": "Completivo de los transitivos",
+            "example": "tinwiraj",
+            "translation": "lo vi"
+          },
+          {
+            "affix": "ma'",
+            "kind": "partícula",
+            "meaning": "Negación; con el incompletivo lleva t-",
+            "example": "ma' tub'in",
+            "translation": "no va"
+          },
+          {
+            "affix": "táan",
+            "kind": "partícula",
+            "meaning": "Durativo: está pasando",
+            "example": "táan 'uyajär",
+            "translation": "se está despertando"
+          },
+          {
+            "affix": "taant",
+            "kind": "partícula",
+            "meaning": "Pasado inmediato: «acaba de…»",
+            "example": "taant 'ub'in",
+            "translation": "acaba de irse"
+          },
+          {
+            "affix": "taab'ar",
+            "kind": "partícula",
+            "meaning": "Futuro inmediato: «va a…»"
+          },
+          {
+            "affix": "je'r … -e",
+            "kind": "partícula",
+            "meaning": "Asertivo: «sí, de seguro…»",
+            "example": "je'r 'inb'ine",
+            "translation": "sí iré"
+          },
+          {
+            "affix": "suuk",
+            "kind": "partícula",
+            "meaning": "Costumbre",
+            "example": "suuk 'ub'eetik",
+            "translation": "acostumbra hacerlo"
+          },
+          {
+            "affix": "taak",
+            "kind": "partícula",
+            "meaning": "Desiderativo: «quiere…»"
+          },
+          {
+            "affix": "yaan",
+            "kind": "partícula",
+            "meaning": "Obligativo: «tiene que…»"
+          },
+          {
+            "affix": "séeb'",
+            "kind": "partícula",
+            "meaning": "Celeritivo: «rápido»"
+          },
+          {
+            "affix": "chich",
+            "kind": "partícula",
+            "meaning": "«Fuerte, duro»"
+          },
+          {
+            "affix": "chúunur",
+            "kind": "auxiliar",
+            "meaning": "Incoativo: «empieza a…»"
+          },
+          {
+            "affix": "ts'o'kar",
+            "kind": "auxiliar",
+            "meaning": "Terminativo: «ya terminó de…»",
+            "example": "ts'o'kar 'inche'ej",
+            "translation": "ya me reí"
+          },
+          {
+            "affix": "ka'",
+            "kind": "partícula",
+            "meaning": "Subordinante: «que…», con estatus dependiente",
+            "example": "ka' weenakech",
+            "translation": "que duermas"
+          },
+          {
+            "affix": "in(w)-, a(w)-, u(y)-",
+            "kind": "pronombre",
+            "meaning": "Juego A: yo, tú, él/ella (w, y ante vocal)",
+            "example": "kinwajär",
+            "translation": "me despierto"
+          },
+          {
+            "affix": "ik-",
+            "kind": "pronombre",
+            "meaning": "Juego A: nosotros",
+            "example": "kikb'in",
+            "translation": "vamos"
+          },
+          {
+            "affix": "-en, -ech, -ij / —",
+            "kind": "pronombre",
+            "meaning": "Juego B: yo, tú, él/ella",
+            "example": "weenech",
+            "translation": "dormiste"
+          },
+          {
+            "affix": "-o'n",
+            "kind": "pronombre",
+            "meaning": "Juego B: nosotros",
+            "example": "b'ino'n",
+            "translation": "nos fuimos"
+          },
+          {
+            "affix": "-e'x",
+            "kind": "plural",
+            "meaning": "Plural de la 2.ª persona; con nosotros, te incluye",
+            "example": "kikb'ine'x",
+            "translation": "vamos (tú y yo)"
+          },
+          {
+            "affix": "-eche'x",
+            "kind": "plural",
+            "meaning": "Ustedes",
+            "example": "kab'ineche'x",
+            "translation": "van ustedes"
+          },
+          {
+            "affix": "-o'b'",
+            "kind": "plural",
+            "meaning": "Ellos, ellas",
+            "example": "kub'ino'b'",
+            "translation": "van"
+          },
+          {
+            "affix": "-ik",
+            "kind": "estatus",
+            "meaning": "Transitivo incompletivo",
+            "example": "kuch'äkik",
+            "translation": "lo tumba"
+          },
+          {
+            "affix": "-aj",
+            "kind": "estatus",
+            "meaning": "Transitivo completivo",
+            "example": "tach'äkaj",
+            "translation": "lo tumbaste"
+          },
+          {
+            "affix": "-ej",
+            "kind": "estatus",
+            "meaning": "Transitivo dependiente e imperativo",
+            "example": "ch'äkej",
+            "translation": "¡túmbalo!"
+          },
+          {
+            "affix": "-Vr, -Vn",
+            "kind": "estatus",
+            "meaning": "Intransitivo incompletivo (la vocal sigue a la raíz; -Vn tras nasal)",
+            "example": "'ookar · weenan",
+            "translation": "entrar · dormir"
+          },
+          {
+            "affix": "-Vk",
+            "kind": "estatus",
+            "meaning": "Intransitivo dependiente",
+            "example": "ka' weenakech",
+            "translation": "que duermas"
+          },
+          {
+            "affix": "-ij",
+            "kind": "estatus",
+            "meaning": "Intransitivo completivo (3.ª persona)",
+            "example": "b'inij",
+            "translation": "se fue"
+          },
+          {
+            "affix": "-en",
+            "kind": "estatus",
+            "meaning": "Imperativo intransitivo",
+            "example": "weenen",
+            "translation": "¡duerme!"
+          },
+          {
+            "affix": "-n-",
+            "kind": "derivación",
+            "meaning": "Activo: pasado y dependiente de los verbos de actividad",
+            "example": "ts'íibnäj",
+            "translation": "escribió"
+          },
+          {
+            "affix": "-taar, -r-",
+            "kind": "derivación",
+            "meaning": "Posicional: incompletivo; completivo y dependiente",
+            "example": "kukurtaar · kurräj",
+            "translation": "se sienta · se sentó"
+          },
+          {
+            "affix": "-t-",
+            "kind": "derivación",
+            "meaning": "Transitivo derivado",
+            "example": "b'eetik",
+            "translation": "hacerlo"
+          },
+          {
+            "affix": "-s-",
+            "kind": "derivación",
+            "meaning": "Causativo",
+            "example": "kíinsik",
+            "translation": "matarlo"
+          },
+          {
+            "affix": "-kin-t-",
+            "kind": "derivación",
+            "meaning": "Causativo de posicionales",
+            "example": "wa'kintik",
+            "translation": "pararlo"
+          },
+          {
+            "affix": "-' (glotal)",
+            "kind": "derivación",
+            "meaning": "Pasivo de los verbos de raíz: saltillo en la raíz",
+            "example": "kucha'kär",
+            "translation": "es tumbado"
+          },
+          {
+            "affix": "-a'r, -a'b'",
+            "kind": "derivación",
+            "meaning": "Pasivo de los verbos derivados"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "lacandon",
+    "persons": [
+      {
+        "id": "1",
+        "label": "1.ª persona",
+        "es": 0
+      },
+      {
+        "id": "2",
+        "label": "2.ª persona",
+        "es": 1
+      },
+      {
+        "id": "3",
+        "label": "3.ª persona",
+        "es": 2
+      },
+      {
+        "id": "4",
+        "label": "1.ª inclusiva (contigo)",
+        "es": 0
+      }
+    ],
+    "tenses": [
+      {
+        "id": "habitual",
+        "group": "Aspectos",
+        "name": "Incompletivo",
+        "description": "Lo que pasa o se hace de costumbre (k-).",
+        "form": "habitual",
+        "es": "present"
+      },
+      {
+        "id": "durative",
+        "group": "Aspectos",
+        "name": "Durativo",
+        "description": "Lo que está pasando (táan).",
+        "form": "durative",
+        "es": "progressive"
+      },
+      {
+        "id": "completive",
+        "group": "Pasado",
+        "name": "Completivo",
+        "description": "Lo que ya pasó: juego B en los intransitivos, t- … -aj en los transitivos.",
+        "form": "completive",
+        "es": "preterite"
+      },
+      {
+        "id": "recent",
+        "group": "Pasado",
+        "name": "Pasado inmediato",
+        "description": "«Acabo de…» (taant).",
+        "form": "recent",
+        "es": {
+          "tense": "present",
+          "aux": "acabar",
+          "link": "de"
+        }
+      },
+      {
+        "id": "terminative",
+        "group": "Pasado",
+        "name": "Terminativo",
+        "description": "«Ya terminé de…» (ts'o'kar).",
+        "form": "terminative",
+        "es": {
+          "tense": "preterite",
+          "adverb": "ya"
+        }
+      },
+      {
+        "id": "immediate",
+        "group": "Futuro",
+        "name": "Futuro inmediato",
+        "description": "«Voy a…» (taab'ar).",
+        "form": "immediate",
+        "es": {
+          "tense": "present",
+          "aux": "ir",
+          "link": "a"
+        }
+      },
+      {
+        "id": "assurative",
+        "group": "Futuro",
+        "name": "Asertivo",
+        "description": "«Sí, de seguro…» (je'r … -e).",
+        "form": "assurative",
+        "es": {
+          "tense": "future",
+          "adverb": "sí"
+        }
+      },
+      {
+        "id": "obligative",
+        "group": "Auxiliares",
+        "name": "Obligativo",
+        "description": "«Tengo que…» (yaan).",
+        "form": "obligative",
+        "es": {
+          "tense": "present",
+          "aux": "tener",
+          "link": "que"
+        }
+      },
+      {
+        "id": "desiderative",
+        "group": "Auxiliares",
+        "name": "Desiderativo",
+        "description": "«Quiero…» (taak).",
+        "form": "desiderative",
+        "es": {
+          "tense": "present",
+          "aux": "querer"
+        }
+      },
+      {
+        "id": "customary",
+        "group": "Auxiliares",
+        "name": "Costumbre",
+        "description": "«Acostumbro…» (suuk).",
+        "form": "customary",
+        "es": {
+          "tense": "present",
+          "aux": "soler"
+        }
+      },
+      {
+        "id": "inceptive",
+        "group": "Auxiliares",
+        "name": "Incoativo",
+        "description": "«Empiezo a…» (chúunur).",
+        "form": "inceptive",
+        "es": {
+          "tense": "present",
+          "aux": "empezar",
+          "link": "a"
+        }
+      },
+      {
+        "id": "subjunctive",
+        "group": "Modos",
+        "name": "Subjuntivo",
+        "description": "«Que…»: ka' + estatus dependiente.",
+        "form": "subjunctive",
+        "es": {
+          "tense": "subjunctive",
+          "before": "que"
+        }
+      },
+      {
+        "id": "imperative",
+        "group": "Modos",
+        "name": "Imperativo",
+        "description": "Órdenes: -en en los intransitivos, -ej en los transitivos; -e'x para ustedes.",
+        "form": "imperative",
+        "es": "imperative"
+      },
+      {
+        "id": "neg-habitual",
+        "group": "Negativo",
+        "name": "Incompletivo",
+        "description": "ma' t- + juego A + verbo.",
+        "form": "neg_habitual",
+        "negative": true,
+        "es": "present"
+      },
+      {
+        "id": "neg-completive",
+        "group": "Negativo",
+        "name": "Completivo",
+        "description": "ma' + completivo.",
+        "form": "neg_completive",
+        "negative": true,
+        "es": "preterite"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "b'in",
+        "root": "b'in",
+        "class": "I",
+        "dependent": "xi'",
+        "imperative": "xeen",
+        "meaning": "ir",
+        "es": "ir",
+        "note": "Irregular: subjuntivo xi'ik, imperativo xeen"
+      },
+      {
+        "entry": "weenan",
+        "root": "ween",
+        "class": "I",
+        "meaning": "dormir",
+        "es": "dormir"
+      },
+      {
+        "entry": "'ajär",
+        "root": "'aj",
+        "class": "I",
+        "meaning": "despertarse",
+        "es": "despertarse"
+      },
+      {
+        "entry": "'ookar",
+        "root": "'ook",
+        "class": "I",
+        "meaning": "entrar",
+        "es": "entrar"
+      },
+      {
+        "entry": "k'uchur",
+        "root": "k'uch",
+        "class": "I",
+        "meaning": "llegar",
+        "es": "llegar"
+      },
+      {
+        "entry": "kíimin",
+        "root": "kíim",
+        "class": "I",
+        "meaning": "morir",
+        "es": "morir"
+      },
+      {
+        "entry": "b'éesar",
+        "root": "b'ées",
+        "class": "I",
+        "meaning": "caerse",
+        "es": "caerse"
+      },
+      {
+        "entry": "ríik'ir",
+        "root": "ríik'",
+        "class": "I",
+        "meaning": "volar",
+        "es": "volar"
+      },
+      {
+        "entry": "jaanän",
+        "root": "jaan",
+        "class": "I",
+        "meaning": "comer",
+        "es": "comer"
+      },
+      {
+        "entry": "b'eeyaj",
+        "root": "b'eeyaj",
+        "class": "A",
+        "meaning": "trabajar",
+        "es": "trabajar"
+      },
+      {
+        "entry": "ts'íib",
+        "root": "ts'íib",
+        "class": "A",
+        "meaning": "escribir",
+        "es": "escribir"
+      },
+      {
+        "entry": "'äräk'",
+        "root": "'äräk'",
+        "class": "A",
+        "meaning": "jugar",
+        "es": "jugar"
+      },
+      {
+        "entry": "'óok'at",
+        "root": "'óok'at",
+        "class": "A",
+        "meaning": "bailar",
+        "es": "bailar"
+      },
+      {
+        "entry": "'áakab'",
+        "root": "'áakab'",
+        "class": "A",
+        "meaning": "correr",
+        "es": "correr"
+      },
+      {
+        "entry": "se'm",
+        "root": "se'm",
+        "class": "A",
+        "meaning": "toser",
+        "es": "toser"
+      },
+      {
+        "entry": "túutuy",
+        "root": "túutuy",
+        "class": "A",
+        "meaning": "silbar",
+        "es": "silbar"
+      },
+      {
+        "entry": "xiik'",
+        "root": "xiik'",
+        "class": "A",
+        "meaning": "volar",
+        "es": "volar"
+      },
+      {
+        "entry": "kurtaar",
+        "root": "kur",
+        "class": "P",
+        "meaning": "sentarse",
+        "es": "sentarse"
+      },
+      {
+        "entry": "wa'taar",
+        "root": "wa'",
+        "class": "P",
+        "meaning": "pararse",
+        "es": "pararse"
+      },
+      {
+        "entry": "päch'taar",
+        "root": "päch'",
+        "class": "P",
+        "meaning": "acostarse",
+        "es": "acostarse"
+      },
+      {
+        "entry": "'irik",
+        "root": "'ir",
+        "class": "T",
+        "meaning": "verlo",
+        "es": "verlo"
+      },
+      {
+        "entry": "'u'yik",
+        "root": "'u'y",
+        "class": "T",
+        "meaning": "oírlo",
+        "es": "oírlo"
+      },
+      {
+        "entry": "b'eetik",
+        "root": "b'eet",
+        "class": "T",
+        "meaning": "hacerlo",
+        "es": "hacerlo"
+      },
+      {
+        "entry": "jaantik",
+        "root": "jaant",
+        "class": "T",
+        "meaning": "comerlo",
+        "es": "comerlo"
+      },
+      {
+        "entry": "kíinsik",
+        "root": "kíins",
+        "class": "T",
+        "meaning": "matarlo",
+        "es": "matarlo"
+      },
+      {
+        "entry": "käxtik",
+        "root": "käxt",
+        "class": "T",
+        "meaning": "buscarlo",
+        "es": "buscarlo"
+      },
+      {
+        "entry": "'eertik",
+        "root": "'eert",
+        "class": "T",
+        "meaning": "saberlo",
+        "es": "saberlo"
+      },
+      {
+        "entry": "ch'äkik",
+        "root": "ch'äk",
+        "class": "T",
+        "meaning": "tumbarlo",
+        "es": "tumbarlo"
+      },
+      {
+        "entry": "'uk'ik",
+        "root": "'uk'",
+        "class": "T",
+        "meaning": "tomarlo",
+        "es": "tomarlo"
+      },
+      {
+        "entry": "mänik",
+        "root": "män",
+        "class": "T",
+        "meaning": "comprarlo",
+        "es": "comprarlo"
+      },
+      {
+        "entry": "kanik",
+        "root": "kan",
+        "class": "T",
+        "meaning": "venderlo",
+        "es": "venderlo"
+      },
+      {
+        "entry": "ts'ik",
+        "root": "ts'",
+        "class": "T",
+        "meaning": "darlo",
+        "es": "darlo"
+      },
+      {
+        "entry": "ch'a'ik",
+        "root": "ch'a'",
+        "class": "T",
+        "meaning": "traerlo",
+        "es": "traerlo"
+      },
+      {
+        "entry": "'a'rik",
+        "root": "'a'r",
+        "class": "T",
+        "meaning": "decirlo",
+        "es": "decirlo"
+      },
+      {
+        "entry": "p'o'ik",
+        "root": "p'o'",
+        "class": "T",
+        "meaning": "lavarlo",
+        "es": "lavarlo"
+      }
+    ]
+  }
+}

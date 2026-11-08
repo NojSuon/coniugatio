@@ -1,0 +1,785 @@
+{
+  "name": "Lacandon",
+  "variant": "Southern Lacandon Maya",
+  "region": "Lacanjá Chansayab, Lacandon Jungle (Chiapas)",
+  "summary": "A Mayan language of the Yucatecan branch spoken by the hach winik of the Lacandon Jungle, in Chiapas. Its speakers call it hach t'aan, «the true language»; it is also called Lacandon or Lacandon Maya.",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb as in the dictionary: b'in «go», weenan «sleep», kurtaar «sit down», 'irik «see it».",
+    "own": {
+      "hint": "Type any verb and its meaning in English. If we don't detect it right, choose its type.",
+      "label": "Verb",
+      "es_placeholder": "go in",
+      "types_help": "Transitive verbs end in -ik ('irik «see it»); write their meaning with «it». Positionals end in -taar. Root intransitives end in a vowel + r or n ('ookar, weenan); activity verbs (ts'íib, b'eeyaj) have no ending."
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "Detect it"
+      },
+      {
+        "id": "I",
+        "label": "Root intransitive: weenan → weenen"
+      },
+      {
+        "id": "A",
+        "label": "Activity: ts'íib → ts'íibnäj"
+      },
+      {
+        "id": "P",
+        "label": "Positional: kurtaar → kurräj"
+      },
+      {
+        "id": "T",
+        "label": "Transitive: 'irik → tinwiraj"
+      }
+    ]
+  },
+  "source": {
+    "short": "Hofling, Lacandon Maya–Spanish–English Dictionary (2014)",
+    "full": "Charles Andrew Hofling with Florinda Chanaj Kin, Lacandon Maya–Spanish–English Dictionary / Diccionario maya lacandón–español–inglés (University of Utah Press, 2014), based on data by Una Canger and Henrik Bergqvist. Southern variety, from Lacanjá Chansayab."
+  },
+  "about": [
+    "Lacandon is a Mayan language of the Yucatecan branch, together with Yucatec Maya, Itza' and Mopan. About a thousand people speak it in the Lacandon Jungle of Chiapas: the northern Lacandon in Najá and Metzabok, the southern Lacandon in Lacanjá Chansayab.",
+    "Its speakers call themselves hach winik, «true people», and their language hach t'aan, «the true language». The name Lacandon comes from an old Ch'ol town, Lakam Tun, «big stone».",
+    "This page follows the southern variety recorded by Hofling. As in Mopan, the person is joined to the verb (kinb'in «I go») and there is a sixth vowel, ä. The old l is pronounced r: kurtaar «sit down», 'ookar «go in»."
+  ],
+  "orthography": {
+    "intro": "We use the Mayan alphabet Hofling follows, with ts instead of tz: 6 vowels, which can be short, long or long with high tone (áa), and plain or glottalized consonants. The apostrophe (') marks a glottalized consonant (k', t') or a glottal stop; every word that starts with a vowel has a glottal stop: 'irik.",
+    "letters": [
+      {
+        "meaning": "drink it"
+      },
+      {
+        "meaning": "wake up"
+      },
+      {
+        "meaning": "chop it down"
+      },
+      {
+        "meaning": "go"
+      },
+      {
+        "meaning": "catch it"
+      },
+      {
+        "meaning": "bring it"
+      },
+      {
+        "meaning": "know it"
+      },
+      {
+        "meaning": "see it"
+      },
+      {
+        "meaning": "eat"
+      },
+      {
+        "meaning": "sell it"
+      },
+      {
+        "meaning": "arrive"
+      },
+      {
+        "meaning": "buy it"
+      },
+      {
+        "meaning": "house"
+      },
+      {
+        "meaning": "go in"
+      },
+      {
+        "meaning": "lie down"
+      },
+      {
+        "meaning": "wash it"
+      },
+      {
+        "meaning": "fly"
+      },
+      {
+        "meaning": "cough"
+      },
+      {
+        "meaning": "whistle"
+      },
+      {
+        "meaning": "word, language"
+      },
+      {
+        "meaning": "horse"
+      },
+      {
+        "meaning": "give it"
+      },
+      {
+        "meaning": "hear it"
+      },
+      {
+        "meaning": "stand up"
+      },
+      {
+        "meaning": "fly"
+      },
+      {
+        "meaning": "there is, has to"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "Short vowels"
+      },
+      {
+        "title": "Long vowels"
+      },
+      {
+        "title": "Long with high tone"
+      }
+    ],
+    "notes": [
+      "Length and tone change the meaning: long vowels can have high tone (kíinsik «kill it»).",
+      "The old Mayan l became r: Yucatec k'uchul is k'uchur «arrive» here.",
+      "ts is merging with s in the speech of young people.",
+      "b' is implosive: air goes in as you say it. d' and g appear only in a few words."
+    ]
+  },
+  "grammar": {
+    "intro": "A Lacandon verb is built from an aspect marker, the pronoun joined to the verb and a status suffix that says whether the action is incomplete, complete or dependent.",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "Aspect",
+            "description": "k- incompletive, t- transitive completive; or a separate word: táan, suuk, yaan…"
+          },
+          {
+            "slot": "Set A",
+            "description": "in-, a-, u-, ik- joined to the verb; before a vowel inw-, aw-, uy-."
+          },
+          {
+            "slot": "Verb",
+            "description": "The root."
+          },
+          {
+            "slot": "Status",
+            "description": "-Vr, -ik, -aj, -ej, -Vk…"
+          },
+          {
+            "slot": "Plural",
+            "description": "-e'x, -eche'x, -o'b'."
+          }
+        ]
+      },
+      {
+        "title": "Two sets of pronouns",
+        "description": "Set A goes before the verb: who does the action. Set B goes at the end: the object, and the subject of intransitive verbs in the past and the subjunctive.",
+        "columns": [
+          "Person",
+          "Set A",
+          "Before a vowel",
+          "Set B"
+        ],
+        "rows": [
+          {
+            "label": "I"
+          },
+          {
+            "label": "you"
+          },
+          {
+            "label": "he, she"
+          },
+          {
+            "label": "we"
+          },
+          {
+            "label": "you all"
+          },
+          {
+            "label": "they"
+          }
+        ],
+        "note": "«We» with -e'x at the end includes you: kikb'ine'x «we go (you and I)»."
+      },
+      {
+        "title": "Four kinds of verb",
+        "description": "Each kind makes its past, subjunctive and imperative in its own way.",
+        "items": [
+          {
+            "name": "Root",
+            "description": "Intransitives ending in a vowel + r (or n after a nasal); the vowel follows the root's.",
+            "examples": [
+              {
+                "meaning": "you slept"
+              },
+              {
+                "meaning": "s/he went"
+              }
+            ]
+          },
+          {
+            "name": "Activity",
+            "description": "Verbs like ts'íib, b'eeyaj: -näj in the past, -näk in the subjunctive.",
+            "examples": [
+              {
+                "meaning": "s/he wrote"
+              }
+            ]
+          },
+          {
+            "name": "Positionals",
+            "description": "How the body ends up: -taar while it happens, -räj once it happened.",
+            "examples": [
+              {
+                "meaning": "s/he sat down"
+              }
+            ]
+          },
+          {
+            "name": "Transitive",
+            "description": "-ik while it happens, t- … -aj once it happened, -ej in the subjunctive and orders.",
+            "examples": [
+              {
+                "meaning": "you chopped it down"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Aspect, negation and orders",
+        "description": "Ma' negates; with the incompletive it becomes ma' t-. Táan, suuk and the other markers go apart, and the verb starts with a glottal stop.",
+        "items": [
+          {
+            "translation": "I go"
+          },
+          {
+            "translation": "s/he is waking up"
+          },
+          {
+            "translation": "I didn't kill it"
+          },
+          {
+            "translation": "that you go"
+          },
+          {
+            "translation": "go away!"
+          },
+          {
+            "translation": "chop it down!"
+          }
+        ]
+      },
+      {
+        "title": "Every affix of the verb",
+        "description": "Every piece a verb can take: aspect, pronouns, status, plurals, derivations and the words that mark time.",
+        "items": [
+          {
+            "kind": "aspect",
+            "meaning": "Incompletive: what happens or usually happens",
+            "translation": "I go"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Completive of transitive verbs",
+            "translation": "I saw it"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Negation; with the incompletive it takes t-",
+            "translation": "s/he doesn't go"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Durative: it is happening",
+            "translation": "s/he is waking up"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Immediate past: «has just…»",
+            "translation": "s/he has just left"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Immediate future: «is going to…»"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Assurative: «surely…»",
+            "translation": "I will surely go"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Custom",
+            "translation": "s/he usually does it"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Desiderative: «wants to…»"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Obligative: «has to…»"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Celeritive: «quickly»"
+          },
+          {
+            "kind": "particle",
+            "meaning": "«Hard»"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Inceptive: «starts to…»"
+          },
+          {
+            "kind": "auxiliary",
+            "meaning": "Terminative: «has finished…»",
+            "translation": "I have already laughed"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Subordinator: «that…», with dependent status",
+            "translation": "that you sleep"
+          },
+          {
+            "kind": "pronoun",
+            "meaning": "Set A: I, you, he/she (w, y before a vowel)",
+            "translation": "I wake up"
+          },
+          {
+            "kind": "pronoun",
+            "meaning": "Set A: we",
+            "translation": "we go"
+          },
+          {
+            "kind": "pronoun",
+            "meaning": "Set B: I, you, he/she",
+            "translation": "you slept"
+          },
+          {
+            "kind": "pronoun",
+            "meaning": "Set B: we",
+            "translation": "we went"
+          },
+          {
+            "kind": "plural",
+            "meaning": "Plural of the 2nd person; with «we», includes you",
+            "translation": "we go (you and I)"
+          },
+          {
+            "kind": "plural",
+            "meaning": "You all",
+            "translation": "you all go"
+          },
+          {
+            "kind": "plural",
+            "meaning": "They",
+            "translation": "they go"
+          },
+          {
+            "kind": "status",
+            "meaning": "Transitive incompletive",
+            "translation": "s/he chops it"
+          },
+          {
+            "kind": "status",
+            "meaning": "Transitive completive",
+            "translation": "you chopped it"
+          },
+          {
+            "kind": "status",
+            "meaning": "Transitive dependent and imperative",
+            "translation": "chop it!"
+          },
+          {
+            "kind": "status",
+            "meaning": "Intransitive incompletive (the vowel follows the root; -Vn after a nasal)",
+            "translation": "go in · sleep"
+          },
+          {
+            "kind": "status",
+            "meaning": "Intransitive dependent",
+            "translation": "that you sleep"
+          },
+          {
+            "kind": "status",
+            "meaning": "Intransitive completive (3rd person)",
+            "translation": "s/he went"
+          },
+          {
+            "kind": "status",
+            "meaning": "Intransitive imperative",
+            "translation": "sleep!"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Active: past and dependent of activity verbs",
+            "translation": "s/he wrote"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Positional: incompletive; completive and dependent",
+            "translation": "s/he sits · s/he sat"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Derived transitive",
+            "translation": "do it"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Causative",
+            "translation": "kill it"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Causative of positionals",
+            "translation": "stand it up"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Passive of root verbs: glottal stop in the root",
+            "translation": "it is chopped down"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Passive of derived verbs"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "1st person"
+      },
+      {
+        "id": "2",
+        "label": "2nd person"
+      },
+      {
+        "id": "3",
+        "label": "3rd person"
+      },
+      {
+        "id": "4",
+        "label": "1st person inclusive (with you)"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "habitual",
+        "group": "Aspects",
+        "name": "Incompletive",
+        "description": "What happens or is done by habit (k-)."
+      },
+      {
+        "id": "durative",
+        "group": "Aspects",
+        "name": "Durative",
+        "description": "What is happening (táan)."
+      },
+      {
+        "id": "completive",
+        "group": "Past",
+        "name": "Completive",
+        "description": "What already happened: set B in intransitive verbs, t- … -aj in transitive verbs."
+      },
+      {
+        "id": "recent",
+        "group": "Past",
+        "name": "Immediate past",
+        "description": "«I have just…» (taant).",
+        "es": {
+          "tense": "perfect",
+          "adverb": "just"
+        }
+      },
+      {
+        "id": "terminative",
+        "group": "Past",
+        "name": "Terminative",
+        "description": "«I'm done…» (ts'o'kar).",
+        "es": {
+          "tense": "preterite",
+          "adverb": "already"
+        }
+      },
+      {
+        "id": "immediate",
+        "group": "Future",
+        "name": "Immediate future",
+        "description": "«I'm going to…» (taab'ar).",
+        "es": {
+          "tense": "present",
+          "aux": "be",
+          "link": "going to"
+        }
+      },
+      {
+        "id": "assurative",
+        "group": "Future",
+        "name": "Assurative",
+        "description": "«Surely…» (je'r … -e).",
+        "es": {
+          "tense": "future",
+          "adverb": "surely"
+        }
+      },
+      {
+        "id": "obligative",
+        "group": "Auxiliaries",
+        "name": "Obligative",
+        "description": "«I have to…» (yaan).",
+        "es": {
+          "tense": "present",
+          "aux": "have",
+          "link": "to"
+        }
+      },
+      {
+        "id": "desiderative",
+        "group": "Auxiliaries",
+        "name": "Desiderative",
+        "description": "«I want to…» (taak).",
+        "es": {
+          "tense": "present",
+          "aux": "want",
+          "link": "to"
+        }
+      },
+      {
+        "id": "customary",
+        "group": "Auxiliaries",
+        "name": "Custom",
+        "description": "«I usually…» (suuk).",
+        "es": {
+          "tense": "present",
+          "adverb": "usually"
+        }
+      },
+      {
+        "id": "inceptive",
+        "group": "Auxiliaries",
+        "name": "Inceptive",
+        "description": "«I start to…» (chúunur).",
+        "es": {
+          "tense": "present",
+          "aux": "start",
+          "link": "to"
+        }
+      },
+      {
+        "id": "subjunctive",
+        "group": "Moods",
+        "name": "Subjunctive",
+        "description": "«That…»: ka' + dependent status.",
+        "es": {
+          "tense": "subjunctive",
+          "before": "that"
+        }
+      },
+      {
+        "id": "imperative",
+        "group": "Moods",
+        "name": "Imperative",
+        "description": "Orders: -en in intransitive verbs, -ej in transitive verbs; -e'x for you all."
+      },
+      {
+        "id": "neg-habitual",
+        "group": "Negative",
+        "name": "Incompletive",
+        "description": "ma' t- + set A + verb."
+      },
+      {
+        "id": "neg-completive",
+        "group": "Negative",
+        "name": "Completive",
+        "description": "ma' + completive."
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "b'in",
+        "meaning": "go",
+        "es": "go",
+        "note": "Irregular: subjunctive xi'ik, imperative xeen"
+      },
+      {
+        "entry": "weenan",
+        "meaning": "sleep",
+        "es": "sleep"
+      },
+      {
+        "entry": "'ajär",
+        "meaning": "wake up",
+        "es": "wake up"
+      },
+      {
+        "entry": "'ookar",
+        "meaning": "go in",
+        "es": "go in"
+      },
+      {
+        "entry": "k'uchur",
+        "meaning": "arrive",
+        "es": "arrive"
+      },
+      {
+        "entry": "kíimin",
+        "meaning": "die",
+        "es": "die"
+      },
+      {
+        "entry": "b'éesar",
+        "meaning": "fall",
+        "es": "fall"
+      },
+      {
+        "entry": "ríik'ir",
+        "meaning": "fly",
+        "es": "fly"
+      },
+      {
+        "entry": "jaanän",
+        "meaning": "eat",
+        "es": "eat"
+      },
+      {
+        "entry": "b'eeyaj",
+        "meaning": "work",
+        "es": "work"
+      },
+      {
+        "entry": "ts'íib",
+        "meaning": "write",
+        "es": "write"
+      },
+      {
+        "entry": "'äräk'",
+        "meaning": "play",
+        "es": "play"
+      },
+      {
+        "entry": "'óok'at",
+        "meaning": "dance",
+        "es": "dance"
+      },
+      {
+        "entry": "'áakab'",
+        "meaning": "run",
+        "es": "run"
+      },
+      {
+        "entry": "se'm",
+        "meaning": "cough",
+        "es": "cough"
+      },
+      {
+        "entry": "túutuy",
+        "meaning": "whistle",
+        "es": "whistle"
+      },
+      {
+        "entry": "xiik'",
+        "meaning": "fly",
+        "es": "fly"
+      },
+      {
+        "entry": "kurtaar",
+        "meaning": "sit down",
+        "es": "sit down"
+      },
+      {
+        "entry": "wa'taar",
+        "meaning": "stand up",
+        "es": "stand up"
+      },
+      {
+        "entry": "päch'taar",
+        "meaning": "lie down",
+        "es": "lie down"
+      },
+      {
+        "entry": "'irik",
+        "meaning": "see it",
+        "es": "see it"
+      },
+      {
+        "entry": "'u'yik",
+        "meaning": "hear it",
+        "es": "hear it"
+      },
+      {
+        "entry": "b'eetik",
+        "meaning": "do it",
+        "es": "do it"
+      },
+      {
+        "entry": "jaantik",
+        "meaning": "eat it",
+        "es": "eat it"
+      },
+      {
+        "entry": "kíinsik",
+        "meaning": "kill it",
+        "es": "kill it"
+      },
+      {
+        "entry": "käxtik",
+        "meaning": "look for it",
+        "es": "look for it"
+      },
+      {
+        "entry": "'eertik",
+        "meaning": "know it",
+        "es": "know it"
+      },
+      {
+        "entry": "ch'äkik",
+        "meaning": "chop it down",
+        "es": "chop it down"
+      },
+      {
+        "entry": "'uk'ik",
+        "meaning": "drink it",
+        "es": "drink it"
+      },
+      {
+        "entry": "mänik",
+        "meaning": "buy it",
+        "es": "buy it"
+      },
+      {
+        "entry": "kanik",
+        "meaning": "sell it",
+        "es": "sell it"
+      },
+      {
+        "entry": "ts'ik",
+        "meaning": "give it",
+        "es": "give it"
+      },
+      {
+        "entry": "ch'a'ik",
+        "meaning": "bring it",
+        "es": "bring it"
+      },
+      {
+        "entry": "'a'rik",
+        "meaning": "say it",
+        "es": "say it"
+      },
+      {
+        "entry": "p'o'ik",
+        "meaning": "wash it",
+        "es": "wash it"
+      }
+    ]
+  }
+}
