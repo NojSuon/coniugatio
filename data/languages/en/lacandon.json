@@ -2,15 +2,15 @@
   "name": "Lacandon",
   "variant": "Southern Lacandon Maya",
   "region": "Lacanjá Chansayab, Lacandon Jungle (Chiapas)",
-  "summary": "A Mayan language of the Yucatecan branch spoken by the hach winik of the Lacandon Jungle, in Chiapas. Its speakers call it hach t'aan, «the true language»; it is also called Lacandon or Lacandon Maya.",
+  "summary": "A Mayan language of the Yucatecan branch spoken by the jach winik of the Lacandon Jungle, in Chiapas. Its speakers call it jach t'aan, «the true language»; it is also called Lacandon or Lacandon Maya.",
   "conjugator": {
     "label": "Verb",
-    "hint": "Type the verb as in the dictionary: b'in «go», weenan «sleep», kurtaar «sit down», 'irik «see it».",
+    "hint": "Type the verb as in the dictionary: bin «go», weenan «sleep», kurtaar «sit down», 'irik «see it».",
     "own": {
       "hint": "Type any verb and its meaning in English. If we don't detect it right, choose its type.",
       "label": "Verb",
       "es_placeholder": "go in",
-      "types_help": "Transitive verbs end in -ik ('irik «see it»); write their meaning with «it». Positionals end in -taar. Root intransitives end in a vowel + r or n ('ookar, weenan); activity verbs (ts'íib, b'eeyaj) have no ending."
+      "types_help": "Transitive verbs end in -ik ('irik «see it»); write their meaning with «it». Positionals end in -taar. Root intransitives end in a vowel + r or n ('ookar, weenan); activity verbs (ts'íib, beeyaj) have no ending."
     },
     "types": [
       {
@@ -41,8 +41,8 @@
   },
   "about": [
     "Lacandon is a Mayan language of the Yucatecan branch, together with Yucatec Maya, Itza' and Mopan. About a thousand people speak it in the Lacandon Jungle of Chiapas: the northern Lacandon in Najá and Metzabok, the southern Lacandon in Lacanjá Chansayab.",
-    "Its speakers call themselves hach winik, «true people», and their language hach t'aan, «the true language». The name Lacandon comes from an old Ch'ol town, Lakam Tun, «big stone».",
-    "This page follows the southern variety recorded by Hofling. As in Mopan, the person is joined to the verb (kinb'in «I go») and there is a sixth vowel, ä. The old l is pronounced r: kurtaar «sit down», 'ookar «go in»."
+    "Its speakers call themselves jach winik, «true people», and their language jach t'aan, «the true language». The name Lacandon comes from an old Ch'ol town, Lakam Tun, «big stone».",
+    "This page follows the southern variety recorded by Hofling. As in Mopan, the person is joined to the verb (kinbin «I go») and there is a sixth vowel, ä. The old l is pronounced r: kurtaar «sit down», 'ookar «go in»."
   ],
   "orthography": {
     "intro": "We use the Mayan alphabet Hofling follows, with ts instead of tz: 6 vowels, which can be short, long or long with high tone (áa), and plain or glottalized consonants. The apostrophe (') marks a glottalized consonant (k', t') or a glottal stop; every word that starts with a vowel has a glottal stop: 'irik.",
@@ -141,7 +141,7 @@
       "Length and tone change the meaning: long vowels can have high tone (kíinsik «kill it»).",
       "The old Mayan l became r: Yucatec k'uchul is k'uchur «arrive» here.",
       "ts is merging with s in the speech of young people.",
-      "b' is implosive: air goes in as you say it. d' and g appear only in a few words."
+      "b is implosive: air goes in as you say it. d' and g appear only in a few words."
     ]
   },
   "grammar": {
@@ -167,7 +167,7 @@
           },
           {
             "slot": "Plural",
-            "description": "-e'x, -eche'x, -o'b'."
+            "description": "-e'x, -eche'x, -o'b."
           }
         ]
       },
@@ -200,7 +200,7 @@
             "label": "they"
           }
         ],
-        "note": "«We» with -e'x at the end includes you: kikb'ine'x «we go (you and I)»."
+        "note": "«We» with -e'x at the end includes you: kikbine'x «we go (you and I)»."
       },
       {
         "title": "Four kinds of verb",
@@ -220,7 +220,7 @@
           },
           {
             "name": "Activity",
-            "description": "Verbs like ts'íib, b'eeyaj: -näj in the past, -näk in the subjunctive.",
+            "description": "Verbs like ts'íib, beeyaj: -näj in the past, -näk in the subjunctive.",
             "examples": [
               {
                 "meaning": "s/he wrote"
@@ -514,7 +514,7 @@
         "id": "immediate",
         "group": "Future",
         "name": "Immediate future",
-        "description": "«I'm going to…» (taab'ar).",
+        "description": "«I'm going to…» (taabar).",
         "es": {
           "tense": "present",
           "aux": "be",
@@ -605,7 +605,7 @@
     ],
     "lexicon": [
       {
-        "entry": "b'in",
+        "entry": "bin",
         "meaning": "go",
         "es": "go",
         "note": "Irregular: subjunctive xi'ik, imperative xeen"
@@ -636,7 +636,7 @@
         "es": "die"
       },
       {
-        "entry": "b'éesar",
+        "entry": "béesar",
         "meaning": "fall",
         "es": "fall"
       },
@@ -651,7 +651,7 @@
         "es": "eat"
       },
       {
-        "entry": "b'eeyaj",
+        "entry": "beeyaj",
         "meaning": "work",
         "es": "work"
       },
@@ -671,7 +671,7 @@
         "es": "dance"
       },
       {
-        "entry": "'áakab'",
+        "entry": "'áakab",
         "meaning": "run",
         "es": "run"
       },
@@ -716,7 +716,7 @@
         "es": "hear it"
       },
       {
-        "entry": "b'eetik",
+        "entry": "beetik",
         "meaning": "do it",
         "es": "do it"
       },

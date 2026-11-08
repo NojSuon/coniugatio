@@ -143,7 +143,7 @@
         "items": [
           {
             "slot": "Auxiliary",
-            "description": "Optional word that adds a meaning: k'ab'et «need», tak «want»."
+            "description": "Optional word that adds a meaning: k'abet «need», tak «want»."
           },
           {
             "slot": "Aspect",
@@ -606,7 +606,7 @@
         "id": "kabet",
         "group": "Auxiliaries",
         "name": "Need",
-        "description": "«I need to…» (k'ab'et).",
+        "description": "«I need to…» (k'abet).",
         "es": {
           "tense": "present",
           "aux": "need",
@@ -728,7 +728,7 @@
         "id": "admonitive",
         "group": "Moods",
         "name": "Warning",
-        "description": "«Careful!», something that could happen (b'ikij).",
+        "description": "«Careful!», something that could happen (bikij).",
         "es": {
           "tense": "present",
           "aux": "might",
@@ -804,7 +804,7 @@
         "es": "enter"
       },
       {
-        "entry": "lub'ul",
+        "entry": "lubul",
         "meaning": "fall",
         "es": "fall"
       },
@@ -835,10 +835,10 @@
         "note": "Takes -el; subjunctive tak, imperative ko'ten"
       },
       {
-        "entry": "b'el",
+        "entry": "bel",
         "meaning": "go",
         "es": "go",
-        "note": "Irregular: b'el, past b'in, subjunctive xi'ik, imperative xen"
+        "note": "Irregular: bel, past bin, subjunctive xi'ik, imperative xen"
       },
       {
         "entry": "ilik",

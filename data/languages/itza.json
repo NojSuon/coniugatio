@@ -65,13 +65,13 @@
       {
         "letter": "ä",
         "ipa": "ə",
-        "word": "b'äk'",
+        "word": "bäk'",
         "meaning": "carne"
       },
       {
-        "letter": "b'",
+        "letter": "b",
         "ipa": "ɓ",
-        "word": "b'alum",
+        "word": "balum",
         "meaning": "jaguar"
       },
       {
@@ -107,13 +107,13 @@
       {
         "letter": "k",
         "ipa": "k",
-        "word": "kab'",
+        "word": "kab",
         "meaning": "miel"
       },
       {
         "letter": "k'",
         "ipa": "kʼ",
-        "word": "k'ab'",
+        "word": "k'ab",
         "meaning": "brazo, mano"
       },
       {
@@ -265,8 +265,8 @@
         "items": [
           {
             "slot": "Auxiliar",
-            "description": "Palabra opcional que agrega un sentido: k'ab'et «necesitar», tak «querer».",
-            "example": "k'ab'et"
+            "description": "Palabra opcional que agrega un sentido: k'abet «necesitar», tak «querer».",
+            "example": "k'abet"
           },
           {
             "slot": "Aspecto",
@@ -436,7 +436,7 @@
         "description": "Van antes del verbo, que conserva su prefijo de persona y su sufijo -Vl o -ik, sin k-.",
         "items": [
           {
-            "text": "k'ab'et inwenel",
+            "text": "k'abet inwenel",
             "translation": "necesito dormir"
           },
           {
@@ -509,13 +509,13 @@
             ]
           },
           {
-            "tag": "b'ikij",
+            "tag": "bikij",
             "name": "Advertencia",
             "description": "Avisa de algo que podría pasar.",
             "examples": [
               {
-                "from": "lub'ul",
-                "to": "b'ikij lub'ukech",
+                "from": "lubul",
+                "to": "bikij lubukech",
                 "meaning": "¡cuidado, te puedes caer!"
               }
             ]
@@ -563,7 +563,7 @@
         "title": "Frases de ejemplo",
         "items": [
           {
-            "text": "K'ochen b'iyernes.",
+            "text": "K'ochen biyernes.",
             "translation": "Llegué el viernes."
           },
           {
@@ -571,7 +571,7 @@
             "translation": "Los gatos están maullando."
           },
           {
-            "text": "Tuyilajo' juntul ajchab'.",
+            "text": "Tuyilajo' juntul ajchab.",
             "translation": "Miraron un oso hormiguero."
           },
           {
@@ -579,7 +579,7 @@
             "translation": "Tengo hambre."
           },
           {
-            "text": "Je' imb'elej!",
+            "text": "Je' imbelej!",
             "translation": "¡Sí voy!"
           }
         ]
@@ -639,10 +639,10 @@
             "translation": "voy a dormir"
           },
           {
-            "affix": "k'ab'et, tak, yan, patal, suk",
+            "affix": "k'abet, tak, yan, patal, suk",
             "kind": "auxiliar",
             "meaning": "Necesidad, deseo, obligación, habilidad, costumbre",
-            "example": "k'ab'et inwenel",
+            "example": "k'abet inwenel",
             "translation": "necesito dormir"
           },
           {
@@ -667,10 +667,10 @@
             "translation": "que duerma"
           },
           {
-            "affix": "b'ikij",
+            "affix": "bikij",
             "kind": "partícula",
             "meaning": "Advertencia: «¡cuidado!»",
-            "example": "b'ikij weneken",
+            "example": "bikij weneken",
             "translation": "¡cuidado!, podría dormir"
           },
           {
@@ -895,9 +895,9 @@
         "id": "kabet",
         "group": "Auxiliares",
         "name": "Necesidad",
-        "description": "«Necesito…» (k'ab'et).",
+        "description": "«Necesito…» (k'abet).",
         "aspect": "auxiliary",
-        "word": "k'ab'et",
+        "word": "k'abet",
         "es": {
           "tense": "present",
           "aux": "necesitar"
@@ -1038,7 +1038,7 @@
         "id": "admonitive",
         "group": "Modos",
         "name": "Advertencia",
-        "description": "«¡Cuidado!», algo que podría pasar (b'ikij).",
+        "description": "«¡Cuidado!», algo que podría pasar (bikij).",
         "aspect": "admonitive",
         "es": {
           "tense": "conditional",
@@ -1134,7 +1134,7 @@
         "es": "entrar"
       },
       {
-        "entry": "lub'ul",
+        "entry": "lubul",
         "class": "I",
         "meaning": "caer",
         "es": "caer"
@@ -1173,12 +1173,12 @@
         "imperative": "ko'ten"
       },
       {
-        "entry": "b'el",
+        "entry": "bel",
         "class": "I",
         "meaning": "ir",
         "es": "ir",
-        "completive": "b'in",
-        "note": "Irregular: b'el, pasado b'in, subjuntivo xi'ik, imperativo xen",
+        "completive": "bin",
+        "note": "Irregular: bel, pasado bin, subjuntivo xi'ik, imperativo xen",
         "dependent": "xi'ik",
         "imperative": "xen"
       },

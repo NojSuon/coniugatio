@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <base href="{{base}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mati Mati · 动词变位器</title>
+  <meta name="description" content="用 Mati Mati 为墨西哥原住民语言的动词变位。">
+  <link rel="icon" href="static/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;700;800&family=Noto+Sans:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap">
+  <link rel="stylesheet" href="static/css/mati.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">跳到正文</a>
+  <header class="site-header" data-site-header></header>
+
+  <main id="contenido">
+    <!-- Header / Banner -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="pattern-p01 pattern-strip" aria-hidden="true"></div>
+      <div class="wrap">
+        <div>
+          <span class="tag">原住民语言动词变位器</span>
+          <h1 id="hero-title">为墨西哥原住民语言的动词变位</h1>
+          <p>选择一种语言，输入一个动词，看看它如何随人称和时态变化。</p>
+          <p style="margin-top:28px"><a class="button" href="#lenguas" style="background:var(--mati-blanco);color:var(--mati-cacao-rojo)">选择语言 →</a></p>
+        </div>
+        <img class="hero-logo" src="static/img/mati-logo-textil.png" width="300" height="300"
+             alt="Mati Mati 标志：四种织物图案上的字母 MA 和 TI。">
+      </div>
+    </section>
+
+    <!-- Intro text area -->
+    <section class="intro" id="mati" aria-labelledby="intro-title">
+      <div class="wrap">
+        <div class="intro-card">
+          <div>
+            <h2 id="intro-title">Mati Mati 是什么？</h2>
+            <p>Mati Mati 是一个社区和网络平台，用来教授、保护和分享原住民语言和少数民族语言。目前我们与墨西哥的语言合作，并希望加入越来越多的地区和社区。</p>
+            <p>学习一门语言，就是走进另一种看世界的方式，并且和社区一起去做。</p>
+          </div>
+          <ul class="pillars">
+            <li><strong>认识这种语言</strong>谁在说、在哪里说、它怎样称呼自己。</li>
+            <li><strong>学习字母</strong>每个字母和一个例词。</li>
+            <li><strong>动词变位</strong>输入词根，查看它的所有形式。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boxes -->
+    <section class="languages" id="lenguas" aria-labelledby="lenguas-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="lenguas-title">选择语言</h2>
+          <p class="caption">更多语言即将推出。</p>
+        </div>
+        <div class="language-grid" data-language-grid>
+          <p class="caption">正在加载语言…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="cta-card">
+          <div>
+            <h2 id="cta-title">告诉我们！</h2>
+            <p>你希望在 Mati Mati 上为哪种语言变位？</p>
+          </div>
+          <a class="button" href="https://www.instagram.com/matidemati" rel="noopener">在 Instagram 上联系我们</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" data-site-footer></footer>
+
+  <script type="module" src="static/js/home.js"></script>
+</body>
+</html>

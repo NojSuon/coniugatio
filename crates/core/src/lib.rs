@@ -4,6 +4,7 @@
 //! and to WebAssembly (runs in the visitor's browser).
 
 pub mod conjugate;
+pub mod chinese;
 pub mod english;
 pub mod itza;
 pub mod lacandon;
@@ -90,7 +91,8 @@ impl Engine {
 
 /// The equivalent of a form in the page's language: Spanish, or English
 /// when `opts.lang` is "en" (the English pages give `es` specs and
-/// meanings in English, see `data/languages/en/`).
+/// meanings in English, see `data/languages/en/`), or Chinese when it is
+/// "zh" (the Spanish specs with Chinese meanings, see `chinese`).
 pub fn gloss(
     opts: &conjugate::Options,
     meaning: &str,
@@ -100,6 +102,8 @@ pub fn gloss(
 ) -> Option<String> {
     if opts.english() {
         english::render(meaning, es, person, negative)
+    } else if opts.chinese() {
+        chinese::render(meaning, es, person, negative)
     } else {
         spanish::render(meaning, es, person, negative)
     }

@@ -10,7 +10,7 @@
       "hint": "Type any verb and its meaning in English. If we don't detect it right, choose its type.",
       "label": "Verb",
       "es_placeholder": "go in",
-      "types_help": "Transitive verbs end in -ik (käxtik «look for it»); write their meaning with «it». Positionals end in -tal. Root verbs end in a vowel + l repeating the vowel (emel, okol); activity verbs (janal, meyaj, ts'iib') make their past with uch."
+      "types_help": "Transitive verbs end in -ik (käxtik «look for it»); write their meaning with «it». Positionals end in -tal. Root verbs end in a vowel + l repeating the vowel (emel, okol); activity verbs (janal, meyaj, ts'iib) make their past with uch."
     },
     "types": [
       {
@@ -141,7 +141,7 @@
     ],
     "notes": [
       "Vowel length changes the meaning: kok «gravel», kook «deaf»; mis «cat», miis «broom».",
-      "B' and d' are implosive: air flows in as you say them. The other glottalized consonants (ch', k', p', t', ts') push it out.",
+      "B and d' are implosive: air flows in as you say them. The other glottalized consonants (ch', k', p', t', ts') push it out.",
       "R, f, g and d' appear almost only in loanwords and a few words.",
       "Pronunciation is shown in brackets with the International Phonetic Alphabet (IPA)."
     ]
@@ -210,7 +210,7 @@
         "items": [
           {
             "name": "Root verbs",
-            "description": "Verbs in vowel + l repeating the vowel, and tal, b'eel: the root and set B.",
+            "description": "Verbs in vowel + l repeating the vowel, and tal, beel: the root and set B.",
             "examples": [
               {
                 "meaning": "I went down"
@@ -222,7 +222,7 @@
           },
           {
             "name": "Activity verbs",
-            "description": "Verbs like janal, meyaj, ts'iib': uchi «it happened» + the verb with its pronoun.",
+            "description": "Verbs like janal, meyaj, ts'iib: uchi «it happened» + the verb with its pronoun.",
             "examples": [
               {
                 "meaning": "I ate"
@@ -625,10 +625,10 @@
         "es": "come"
       },
       {
-        "entry": "b'eel",
+        "entry": "beel",
         "meaning": "go",
         "es": "go",
-        "note": "Irregular: past b'ini, subjunctive xi'ik, imperative xen"
+        "note": "Irregular: past bini, subjunctive xi'ik, imperative xen"
       },
       {
         "entry": "wäyäl",
@@ -652,7 +652,7 @@
         "es": "work"
       },
       {
-        "entry": "ts'iib'",
+        "entry": "ts'iib",
         "meaning": "write",
         "es": "write"
       },
@@ -692,7 +692,7 @@
         "es": "see it"
       },
       {
-        "entry": "b'etik",
+        "entry": "betik",
         "meaning": "do it, make it",
         "es": "do it"
       },

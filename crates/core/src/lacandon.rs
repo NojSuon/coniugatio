@@ -1,17 +1,17 @@
 //! Conjugation for Lacandon Maya (Southern Lacandon of Lacanjá Chansayab),
 //! written with the ALMG alphabet as Hofling records it (initial glottal
 //! stops, high tone on long vowels), with ts for tz: a ä e i o u (long aa,
-//! high tone áa); b' ch ch' j k k' m n p p' r s t t' ts ts' w x y '.
+//! high tone áa); b ch ch' j k k' m n p p' r s t t' ts ts' w x y '.
 //!
 //! The morphology follows Charles Andrew Hofling, *Lacandon Maya–Spanish–
 //! English Dictionary* (University of Utah Press, 2014), §4.1–4.2:
 //!
 //! ```text
 //! aspect  set A + verb + status       plural
-//! k-      in-b'in                                kinb'in       «voy»
+//! k-      in-bin                                kinbin       «voy»
 //! táan    'uy-aj-är                              táan 'uyajär  «se despierta»
 //! t-      in-kíins-aj                            tinkíinsaj    «lo maté»
-//! —       ween (set B)                -o'b'      weeno'b'      «durmieron»
+//! —       ween (set B)                -o'b      weeno'b      «durmieron»
 //! ```
 //!
 //! Set A goes joined to the verb; the intransitive status is -Vr (-Vn
@@ -26,34 +26,34 @@ use crate::spanish;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 pub enum Class {
-    /// Root intransitive: weenan, 'ookar, b'in.
+    /// Root intransitive: weenan, 'ookar, bin.
     I,
     /// Activity verb (actv): ts'íib, k'aay, che'ej.
     A,
     /// Positional: kurtaar.
     P,
-    /// Transitive: 'irik, b'eetik, jaantik.
+    /// Transitive: 'irik, beetik, jaantik.
     T,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum Form {
-    /// k-: kinb'in «voy».
+    /// k-: kinbin «voy».
     Habitual,
-    /// táan: táan 'inb'in «estoy yendo».
+    /// táan: táan 'inbin «estoy yendo».
     Durative,
-    /// t- … -aj (transitive), set B (intransitive): b'inen, tinwiraj.
+    /// t- … -aj (transitive), set B (intransitive): binen, tinwiraj.
     Completive,
     /// taant: «acabo de…».
     Recent,
     /// ts'o'kar: «terminé de…».
     Terminative,
-    /// taab'ar: «voy a…» (futuro inmediato).
+    /// taabar: «voy a…» (futuro inmediato).
     Immediate,
     /// chúunur: «empiezo a…».
     Inceptive,
-    /// je'r … -e: je'r 'inb'ine «sí iré».
+    /// je'r … -e: je'r 'inbine «sí iré».
     Assurative,
     /// yaan: «tengo que…».
     Obligative,
@@ -65,7 +65,7 @@ pub enum Form {
     Subjunctive,
     /// -en, -ej: weenen «¡duerme!», 'irej «¡míralo!».
     Imperative,
-    /// ma' t-: ma' tinb'in «no voy».
+    /// ma' t-: ma' tinbin «no voy».
     NegHabitual,
     /// ma' + completive: ma' tinkíinsaj «no lo maté».
     NegCompletive,
@@ -87,15 +87,15 @@ pub struct Tense {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Entry {
-    /// Citation form (incompletive): "weenan", "b'in", "ts'íib", "'irik".
+    /// Citation form (incompletive): "weenan", "bin", "ts'íib", "'irik".
     pub entry: String,
-    /// Root: "ween", "b'in", "ts'íib", "'ir".
+    /// Root: "ween", "bin", "ts'íib", "'ir".
     pub root: String,
     pub class: Class,
-    /// Dependent stem when irregular: b'in → xi' (xi'ik).
+    /// Dependent stem when irregular: bin → xi' (xi'ik).
     #[serde(default)]
     pub dependent: Option<String>,
-    /// Imperative when irregular: b'in → xeen.
+    /// Imperative when irregular: bin → xeen.
     #[serde(default)]
     pub imperative: Option<String>,
     pub meaning: String,
@@ -153,7 +153,7 @@ impl Slot {
         })
     }
 
-    /// Set B: -en, -ech, -ij / Ø; -o'n, -o'ne'x (incl.), -eche'x, -o'b'.
+    /// Set B: -en, -ech, -ij / Ø; -o'n, -o'ne'x (incl.), -eche'x, -o'b.
     fn set_b(self, completive: bool) -> &'static str {
         match self {
             Slot::S1 => "en",
@@ -163,14 +163,14 @@ impl Slot {
             Slot::P1x => "o'n",
             Slot::P1i => "o'ne'x",
             Slot::P2 => "eche'x",
-            Slot::P3 => "o'b'",
+            Slot::P3 => "o'b",
         }
     }
 }
 
-/// Set A joined to the verb, with its plural ending: inb'in, inwajär
+/// Set A joined to the verb, with its plural ending: inbin, inwajär
 /// (before a vowel the glottal stop drops and w / y appears), ik'ajär,
-/// ab'ineche'x, ub'ino'b'.
+/// abineche'x, ubino'b.
 fn set_a(slot: Slot, stem: &str) -> String {
     let vowel = stem.starts_with('\'') && stem.chars().nth(1).is_some_and(is_vowel);
     let bare = stem.trim_start_matches('\'');
@@ -188,7 +188,7 @@ fn set_a(slot: Slot, stem: &str) -> String {
     let ending = match slot {
         Slot::P1i => "e'x",
         Slot::P2 => "eche'x",
-        Slot::P3 => "o'b'",
+        Slot::P3 => "o'b",
         _ => "",
     };
     format!("{prefix}{body}{ending}")
@@ -253,7 +253,7 @@ fn build(v: &Verb, form: Form, slot: Slot) -> Option<String> {
         Form::Completive => v.completive(slot),
         Form::Recent => word("taant"),
         Form::Terminative => word("ts'o'kar"),
-        Form::Immediate => word("taab'ar"),
+        Form::Immediate => word("taabar"),
         Form::Inceptive => word("chúunur"),
         Form::Assurative => format!("{}e", word("je'r")),
         Form::Obligative => word("yaan"),
@@ -280,7 +280,8 @@ fn normalize(verb: &str) -> std::result::Result<String, Error> {
             c => c,
         })
         .collect::<String>()
-        .replace("tz", "ts");
+        .replace("tz", "ts")
+        .replace("b'", "b");
     if w.is_empty() {
         return Err(Error::EmptyVerb);
     }
@@ -414,27 +415,27 @@ mod tests {
     // Hofling (2014) §4.1–4.2, written as words.
     #[test]
     fn paradigms() {
-        // §4.1.1.1: k-in-b'in … k-ik-b'in-e'x, k-u-b'in-o'b'.
+        // §4.1.1.1: k-in-bin … k-ik-bin-e'x, k-u-bin-o'b.
         assert_eq!(
-            seven("b'in", Form::Habitual),
-            ["kinb'in", "kab'in", "kub'in", "kikb'in", "kikb'ine'x", "kab'ineche'x", "kub'ino'b'"]
+            seven("bin", Form::Habitual),
+            ["kinbin", "kabin", "kubin", "kikbin", "kikbine'x", "kabineche'x", "kubino'b"]
         );
-        // k-inw-aj-är, k-ik-'aj-är, k-uy-aj-är-o'b'.
+        // k-inw-aj-är, k-ik-'aj-är, k-uy-aj-är-o'b.
         let w = seven("'ajär", Form::Habitual);
-        assert_eq!((w[0].as_str(), w[3].as_str(), w[6].as_str()), ("kinwajär", "kik'ajär", "kuyajäro'b'"));
+        assert_eq!((w[0].as_str(), w[3].as_str(), w[6].as_str()), ("kinwajär", "kik'ajär", "kuyajäro'b"));
         // táan 'uy-aj-är «se despierta».
         assert_eq!(seven("'ajär", Form::Durative)[2], "táan 'uyajär");
-        // §4.1.1.2: b'in-(e)en, b'in(-ij), b'in-o'b'.
-        let c = seven("b'in", Form::Completive);
-        assert_eq!((c[0].as_str(), c[2].as_str(), c[6].as_str()), ("b'inen", "b'inij", "b'ino'b'"));
+        // §4.1.1.2: bin-(e)en, bin(-ij), bin-o'b.
+        let c = seven("bin", Form::Completive);
+        assert_eq!((c[0].as_str(), c[2].as_str(), c[6].as_str()), ("binen", "binij", "bino'b"));
         // §4.2.2.2: k-a-ween-an, ween-(e)ech, ka' ween-ak-(e)ech, ween-en!
         assert_eq!(seven("weenan", Form::Habitual)[1], "kaweenan");
         assert_eq!(seven("weenan", Form::Completive)[1], "weenech");
         assert_eq!(seven("weenan", Form::Subjunctive)[1], "ka' weenakech");
         assert_eq!(seven("weenan", Form::Imperative)[1], "weenen");
         // xi'ik-ech «que te vayas»; xeen! «¡vete!».
-        assert_eq!(seven("b'in", Form::Subjunctive)[1], "ka' xi'ikech");
-        assert_eq!(seven("b'in", Form::Imperative)[1], "xeen");
+        assert_eq!(seven("bin", Form::Subjunctive)[1], "ka' xi'ikech");
+        assert_eq!(seven("bin", Form::Imperative)[1], "xeen");
         // §4.2.2.1 (ch'äk-): k-a-ch'äk-ik, t-a-ch'äk-aj, ka' 'a-ch'äk-ej, ch'äk-ej!
         assert_eq!(seven("ch'äkik", Form::Habitual)[1], "kach'äkik");
         assert_eq!(seven("ch'äkik", Form::Completive)[1], "tach'äkaj");
@@ -452,10 +453,10 @@ mod tests {
         assert_eq!(seven("kurtaar", Form::Habitual)[2], "kukurtaar");
         assert_eq!(seven("kurtaar", Form::Completive)[2], "kurräj");
         assert_eq!(seven("kurtaar", Form::Imperative)[1], "kurren");
-        // suuk 'u-b'eet-ik «tiene costumbre de hacerlo».
-        assert_eq!(seven("b'eetik", Form::Customary)[2], "suuk 'ub'eetik");
+        // suuk 'u-beet-ik «tiene costumbre de hacerlo».
+        assert_eq!(seven("beetik", Form::Customary)[2], "suuk 'ubeetik");
         // ma' t-u-… (negative incompletive).
-        assert_eq!(seven("b'in", Form::NegHabitual)[2], "ma' tub'in");
+        assert_eq!(seven("bin", Form::NegHabitual)[2], "ma' tubin");
     }
 
     #[test]

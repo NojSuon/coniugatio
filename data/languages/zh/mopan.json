@@ -1,0 +1,704 @@
+{
+  "name": "莫潘语",
+  "variant": "莫潘玛雅语",
+  "region": "佩滕（危地马拉）和托莱多（伯利兹）",
+  "summary": "玛雅语系尤卡坦语支的一种语言，与伊察语和尤卡坦玛雅语是姐妹语言，通行于佩滕省圣路易斯和伯利兹南部。也写作 Mopán 或莫潘玛雅语。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "按词典的写法输入动词：emel「下去」，janal「吃饭」，jittal「躺下」，ilik「看它」。",
+    "own": {
+      "hint": "输入任意动词和它的中文意思。如果我们判断错了，请选择它的类型。",
+      "label": "动词",
+      "es_placeholder": "进去",
+      "types_help": "及物动词以 -ik 结尾（käxtik「找它」）；意思要写上「它」。位置动词以 -tal 结尾。词根动词以元音 + l 结尾并重复这个元音（emel、okol）；活动动词（janal、meyaj、ts'iib）用 uch 构成过去时。"
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "自动判断"
+      },
+      {
+        "id": "I",
+        "label": "词根不及物：emel → emeen"
+      },
+      {
+        "id": "A",
+        "label": "活动动词：janal → uchi injanal"
+      },
+      {
+        "id": "P",
+        "label": "位置动词：jittal → jitlajeen"
+      },
+      {
+        "id": "T",
+        "label": "及物：ilik → inwilaj"
+      }
+    ]
+  },
+  "source": {
+    "full": "Charles Andrew Hofling 与 Narcizo Asij、Ofelia Asis Cajbon 等，《Mopan Maya–Spanish–English Dictionary》（犹他大学出版社，2011 年）；危地马拉玛雅语言学院，《Muuch' t'an mopan: vocabulario mopan》（2003 年）。另见：《Diccionario bilingüe maya mopán y español》。"
+  },
+  "about": [
+    "莫潘语是玛雅语系尤卡坦语支的一种语言，与尤卡坦玛雅语、伊察语和拉坎冬语同属一支。它通行于危地马拉佩滕省南部的圣路易斯等社区，以及伯利兹的托莱多区。",
+    "危地马拉玛雅语言学院承认它是该国 21 个玛雅语言社区之一。在伯利兹，它与凯克奇语、英语和克里奥尔语共存。",
+    "与尤卡坦玛雅语不同，莫潘语没有声调。它有第六个元音 ä，并把人称和动词连写：inwilaj「我看见了它」，tan intal「我正在来」。"
+  ],
+  "orthography": {
+    "intro": "我们使用危地马拉玛雅语言学院的字母：6 个元音，可以是短元音或长元音，以及普通辅音或喉化辅音。撇号（'）表示喉化辅音（k'、t'）或喉塞音，也就是声音的短暂停顿。",
+    "letters": [
+      {
+        "meaning": "月亮，月"
+      },
+      {
+        "meaning": "猪李"
+      },
+      {
+        "meaning": "妻子"
+      },
+      {
+        "meaning": "囊地鼠"
+      },
+      {
+        "meaning": "红色"
+      },
+      {
+        "meaning": "鸟"
+      },
+      {
+        "meaning": "那个"
+      },
+      {
+        "meaning": "下去"
+      },
+      {
+        "meaning": "看它"
+      },
+      {
+        "meaning": "水，雨"
+      },
+      {
+        "meaning": "蜜蜂，蜂蜜"
+      },
+      {
+        "meaning": "日，太阳"
+      },
+      {
+        "meaning": "土地"
+      },
+      {
+        "meaning": "猫"
+      },
+      {
+        "meaning": "房子"
+      },
+      {
+        "meaning": "家"
+      },
+      {
+        "meaning": "能够"
+      },
+      {
+        "meaning": "陶罐"
+      },
+      {
+        "meaning": "粗绳"
+      },
+      {
+        "meaning": "害怕的"
+      },
+      {
+        "meaning": "来"
+      },
+      {
+        "meaning": "话语，语言"
+      },
+      {
+        "meaning": "头发"
+      },
+      {
+        "meaning": "孩子"
+      },
+      {
+        "meaning": "喝"
+      },
+      {
+        "meaning": "男人"
+      },
+      {
+        "meaning": "也"
+      },
+      {
+        "meaning": "摇（吊床）"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "短元音"
+      },
+      {
+        "title": "长元音"
+      }
+    ],
+    "notes": [
+      "元音的长短会改变意思：kok「碎石」，kook「聋的」；mis「猫」，miis「扫帚」。",
+      "b 和 d' 是内爆音：发音时吸气。其他喉化辅音（ch'、k'、p'、t'、ts'）则是把气推出去。",
+      "r、f、g 和 d' 几乎只出现在借词和少数词里。",
+      "方括号中是国际音标（IPA）标注的发音。"
+    ]
+  },
+  "grammar": {
+    "intro": "莫潘语的动词由体标记、和动词连写的代词，以及及物动词的状态后缀构成：正在发生时用 -ik，已经发生用 -aj。",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "体",
+            "description": "walak 习惯，tan 正在，yan 必须，ka'「让……」。"
+          },
+          {
+            "slot": "A 组",
+            "description": "in-、a-、u-、ti- 和动词连写；元音前为 inw-、aw-、uy-、tiw-。"
+          },
+          {
+            "slot": "动词",
+            "description": "词根。"
+          },
+          {
+            "slot": "状态",
+            "description": "及物动词中的 -ik、-aj、-V'。"
+          },
+          {
+            "slot": "复数",
+            "description": "-e'ex 你们，-oo' 他们。"
+          }
+        ]
+      },
+      {
+        "title": "两组代词",
+        "description": "A 组连写在动词前面：谁做这个动作。B 组放在末尾：宾语，以及过去时和虚拟式中不及物动词的主语。",
+        "columns": [
+          "人称",
+          "A 组",
+          "元音前",
+          "B 组"
+        ],
+        "rows": [
+          {
+            "label": "我"
+          },
+          {
+            "label": "你"
+          },
+          {
+            "label": "他，她"
+          },
+          {
+            "label": "我们"
+          },
+          {
+            "label": "你们"
+          },
+          {
+            "label": "他们"
+          }
+        ],
+        "note": "「我们」后面加上 -e'ex 就包括听话的人：tiwemele'ex「我们大家下去」。"
+      },
+      {
+        "title": "表示「发生了」的三种方式",
+        "description": "在完成体中，每种不及物动词用各自的方式标示人称。",
+        "items": [
+          {
+            "name": "词根动词",
+            "description": "以元音 + l 结尾并重复元音的动词，以及 tal、beel：词根加 B 组。",
+            "examples": [
+              {
+                "meaning": "我下去了"
+              },
+              {
+                "meaning": "他/她走了"
+              }
+            ]
+          },
+          {
+            "name": "活动动词",
+            "description": "像 janal、meyaj、ts'iib 这样的动词：uchi「发生了」+ 带代词的动词。",
+            "examples": [
+              {
+                "meaning": "我吃了"
+              }
+            ]
+          },
+          {
+            "name": "位置动词",
+            "description": "以 -tal 结尾、表示身体最终姿势的动词。",
+            "examples": [
+              {
+                "meaning": "我躺下了"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "及物动词",
+        "description": "及物完成体不带体前缀。在虚拟式和命令式中，词根动词以重复词根元音的元音结尾；带 -t- 的动词以 -e 结尾。",
+        "items": [
+          {
+            "translation": "我正在看它"
+          },
+          {
+            "translation": "我看了它"
+          },
+          {
+            "translation": "我（平常）吃它"
+          },
+          {
+            "translation": "让他/她吃它"
+          },
+          {
+            "translation": "吃它！"
+          }
+        ]
+      },
+      {
+        "title": "否定和命令",
+        "description": "ma' 表示否定；与进行体连用时变成 ma' t-。表示禁止时，ma' 与第二人称代词连用。",
+        "items": [
+          {
+            "translation": "他/她不去"
+          },
+          {
+            "translation": "别去！"
+          },
+          {
+            "translation": "走开！"
+          },
+          {
+            "translation": "下去！"
+          }
+        ]
+      },
+      {
+        "title": "例句",
+        "items": [
+          {
+            "translation": "有工作吗？"
+          },
+          {
+            "translation": "我夜里睡了。"
+          },
+          {
+            "translation": "我妻子来了。"
+          },
+          {
+            "translation": "孩子醒了。"
+          }
+        ]
+      },
+      {
+        "title": "动词的所有词缀",
+        "description": "动词可以带的每个部分：前缀、后缀、小品词和词根变化。",
+        "items": [
+          {
+            "kind": "体",
+            "meaning": "习惯式",
+            "translation": "我下去"
+          },
+          {
+            "kind": "体",
+            "meaning": "持续体",
+            "translation": "我正在下去"
+          },
+          {
+            "kind": "体",
+            "meaning": "完成体：不加标记",
+            "translation": "我看了它"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "「发生」：活动动词的完成体和虚拟式",
+            "translation": "我吃了"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "虚拟式：「让……」",
+            "translation": "让你下去"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "义务体：必须",
+            "translation": "他/她得去"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "能力：能",
+            "translation": "我能做它"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "习惯，用 B 组",
+            "translation": "我常常吃它"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "起始体：开始，用 B 组",
+            "translation": "我开始去了"
+          },
+          {
+            "kind": "体",
+            "meaning": "断言体",
+            "translation": "他/她将能做它"
+          },
+          {
+            "kind": "体",
+            "meaning": "刚过去时；仍然"
+          },
+          {
+            "kind": "体",
+            "meaning": "快速体：很快地"
+          },
+          {
+            "kind": "体",
+            "meaning": "必要体"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "终结体：结束",
+            "translation": "工作做完了"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "否定；与未完成体连用为 ma' t-",
+            "translation": "他/她不去"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "「从不」"
+          },
+          {
+            "kind": "前缀（A 组）",
+            "meaning": "主语：我、你、他/她、我们；元音前加 w 或 y",
+            "translation": "我正在看它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "A 组复数：你们、他们；ti- … -e'ex 是包括听话人的「我们」",
+            "translation": "我们大家下去"
+          },
+          {
+            "kind": "后缀（B 组）",
+            "meaning": "完成体中不及物动词的主语",
+            "translation": "我下去了"
+          },
+          {
+            "kind": "后缀（B 组）",
+            "meaning": "依附状态中的主语；宾语",
+            "translation": "让我下去"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "及物未完成体",
+            "translation": "我正在看它"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "及物完成体",
+            "translation": "我看了它"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "及物依附体：词根动词、带 -t- 的、使役",
+            "translation": "让他/她吃它"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "不及物依附体",
+            "translation": "让你来"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "不及物命令式",
+            "translation": "下去！"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "及物命令式",
+            "translation": "看它！"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "位置动词：完成体、依附体、命令式",
+            "translation": "我躺下了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "起始动词（由形容词构成）的完成体",
+            "translation": "它变白了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "位置动词和起始动词的未完成体",
+            "translation": "他/她躺着"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "派生及物动词",
+            "translation": "吃它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "使役",
+            "translation": "他/她正在把它放下"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "形容词和位置动词的使役",
+            "translation": "他/她正在把它弄白"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "逆被动（少数动词）",
+            "translation": "我睡了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "被动",
+            "translation": "它正被弄弯"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "无施事被动",
+            "translation": "它正被（某人）弄弯"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "分词",
+            "translation": "淹没的"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "被动分词",
+            "translation": "买来的"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "位置分词"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "第一人称"
+      },
+      {
+        "id": "2",
+        "label": "第二人称"
+      },
+      {
+        "id": "3",
+        "label": "第三人称"
+      },
+      {
+        "id": "4",
+        "label": "第一人称包括式（包括你）"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "habitual",
+        "group": "体",
+        "name": "习惯式",
+        "description": "习惯做的事（walak）。"
+      },
+      {
+        "id": "durative",
+        "group": "体",
+        "name": "持续体",
+        "description": "正在发生的事（tan）。"
+      },
+      {
+        "id": "completive",
+        "group": "过去",
+        "name": "完成体",
+        "description": "已经发生的事：词根动词用 B 组，活动动词用 uch，及物动词用 -aj。"
+      },
+      {
+        "id": "obligative",
+        "group": "助词",
+        "name": "义务体",
+        "description": "「我得……」（yan）。"
+      },
+      {
+        "id": "abilitative",
+        "group": "助词",
+        "name": "能力",
+        "description": "「我能……」（paatal）。"
+      },
+      {
+        "id": "subjunctive",
+        "group": "语气",
+        "name": "虚拟式",
+        "description": "「让……」：还不是现实的事（ka' + 依附状态）。"
+      },
+      {
+        "id": "imperative",
+        "group": "语气",
+        "name": "命令式",
+        "description": "命令：不及物动词用 -en。"
+      },
+      {
+        "id": "prohibitive",
+        "group": "语气",
+        "name": "禁止式",
+        "description": "「别做！」：ma' a……"
+      },
+      {
+        "id": "negative",
+        "group": "否定",
+        "name": "现在时",
+        "description": "ma' t- + 代词 + 动词。"
+      },
+      {
+        "id": "customary",
+        "group": "助词",
+        "name": "习惯",
+        "description": "「我常常……」（suk）。"
+      },
+      {
+        "id": "inceptive",
+        "group": "助词",
+        "name": "起始体",
+        "description": "「我开始……」（kajal）。"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "emel",
+        "meaning": "下去",
+        "es": "下去"
+      },
+      {
+        "entry": "okol",
+        "meaning": "进去",
+        "es": "进去"
+      },
+      {
+        "entry": "jok'ol",
+        "meaning": "出去",
+        "es": "出去"
+      },
+      {
+        "entry": "k'ochol",
+        "meaning": "到达",
+        "es": "到达"
+      },
+      {
+        "entry": "tal",
+        "meaning": "来",
+        "es": "来"
+      },
+      {
+        "entry": "beel",
+        "meaning": "去",
+        "es": "去",
+        "note": "不规则：过去时 bini，虚拟式 xi'ik，命令式 xen"
+      },
+      {
+        "entry": "wäyäl",
+        "meaning": "睡觉",
+        "es": "睡觉",
+        "note": "过去时 wäyneen，命令式 wäynen"
+      },
+      {
+        "entry": "uk'ul",
+        "meaning": "喝",
+        "es": "喝"
+      },
+      {
+        "entry": "janal",
+        "meaning": "吃",
+        "es": "吃"
+      },
+      {
+        "entry": "meyaj",
+        "meaning": "工作",
+        "es": "工作"
+      },
+      {
+        "entry": "ts'iib",
+        "meaning": "写",
+        "es": "写"
+      },
+      {
+        "entry": "ok'ol",
+        "meaning": "哭",
+        "es": "哭"
+      },
+      {
+        "entry": "alka'",
+        "meaning": "跑",
+        "es": "跑"
+      },
+      {
+        "entry": "ichkil",
+        "meaning": "洗澡",
+        "es": "洗澡"
+      },
+      {
+        "entry": "noytal",
+        "meaning": "坐下",
+        "es": "坐下"
+      },
+      {
+        "entry": "wa'tal",
+        "meaning": "站起来",
+        "es": "站起来"
+      },
+      {
+        "entry": "jittal",
+        "meaning": "躺下",
+        "es": "躺下"
+      },
+      {
+        "entry": "ilik",
+        "meaning": "看它",
+        "es": "看它"
+      },
+      {
+        "entry": "betik",
+        "meaning": "做它，制作它",
+        "es": "做它"
+      },
+      {
+        "entry": "jantik",
+        "meaning": "吃它",
+        "es": "吃它"
+      },
+      {
+        "entry": "käxtik",
+        "meaning": "找它",
+        "es": "找它"
+      },
+      {
+        "entry": "u'yik",
+        "meaning": "听它",
+        "es": "听它"
+      },
+      {
+        "entry": "eeltik",
+        "meaning": "知道它",
+        "es": "知道它"
+      },
+      {
+        "entry": "cha'antik",
+        "meaning": "看着它",
+        "es": "看着它"
+      }
+    ]
+  }
+}

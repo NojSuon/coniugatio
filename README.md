@@ -61,7 +61,9 @@ Every page also exists in English under `/en/` (`/coniugatio/en/otomi/`…), wit
 - Mopan: Charles Andrew Hofling, *Mopan Maya–Spanish–English Dictionary* (University of Utah Press, 2011); Academia de Lenguas Mayas de Guatemala, *Muuch' t'an mopan* (2003); *Diccionario bilingüe maya mopán y español*.
 - Zoque (tsunitsame), Copainalá: Ralph y Mary Engel, *Diccionario zoque de Copainalá* (ILV, 1981), con su gramática; INALI, *Norma de escritura de la lengua otetzame (zoque)*, escrita con ts en lugar de tz; also Engel, *Diccionario zoque de Francisco León* (ILV, 1987).
 - Wixárika (huichol): Stefanie Ramos Bierge, *Clause Types and Transitivity in Wixárika (Huichol)* (Universidad de Colorado, 2016); José Luis Iturrioz Leza, Paula Gómez López y Xitakame Ramírez de la Cruz, «La morfología verbal», en *Lenguas y literaturas indígenas de Jalisco*; also Grimes et al., *El huichol: apuntes sobre el léxico* (1981).
-- Lacandón (hach t'aan, del sur): Charles Andrew Hofling con Florinda Chanaj Kin, *Lacandon Maya–Spanish–English Dictionary* (University of Utah Press, 2014), §4 for the verb; written with ts for tz.
+- Lacandón (jach t'aan, del sur): Charles Andrew Hofling con Florinda Chanaj Kin, *Lacandon Maya–Spanish–English Dictionary* (University of Utah Press, 2014), §4 for the verb; written with ts for tz.
+
+In the Mayan languages (Itza', Yucatec, Mopan, Lacandon) the implosive b is written without an apostrophe (b, not b').
 - Maya itza': Charles Andrew Hofling con Fernando Tesucún, *Itzaj Maya Grammar*, University of Utah Press, 2000; *Jiilt'an Maya Itza: Vocabulario Itza'*, Academia de Lenguas Mayas de Guatemala, 2001.
 
 All text in an indigenous language should be checked with speakers before publishing.

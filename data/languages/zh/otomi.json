@@ -1,0 +1,733 @@
+{
+  "name": "奥托米语",
+  "variant": "梅斯基塔尔谷地的奥托米语",
+  "region": "墨西哥伊达尔戈州梅斯基塔尔谷地",
+  "summary": "一种有声调的奥托-曼格语，分布在伊达尔戈州的梅斯基塔尔谷地。说这种语言的人称它为 Hñähñu；它也被称为奥托米语或 Ñähñu。",
+  "conjugator": {
+    "label": "动词词根",
+    "hint": "输入一个动词的词根，按词典中的写法。",
+    "own": {
+      "hint": "输入任意动词的词根和它的中文意思。我们会用 Hñähñu 的规则为它变位：前附词和首辅音的变化。",
+      "label": "动词词根",
+      "es_placeholder": "唱歌",
+      "types_help": "有些动词在过去时和将来时加上 n-。词典用「Pret. dá n…」标出。"
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "规则动词"
+      },
+      {
+        "id": "n",
+        "label": "过去时和将来时带 n-"
+      }
+    ],
+    "no_plural": "同上，名词前加 ya"
+  },
+  "source": {
+    "full": "Luis Hernández Cruz、Moisés Victoria Torquemada 和 Donaldo Sinclair Crawford，《Diccionario del hñähñu (otomí) del Valle del Mezquital, estado de Hidalgo》，第 2 版电子版，暑期语言学院（SIL），2010 年。语法说明由 Doris Bartholomew 撰写。"
+  },
+  "about": [
+    "Hñähñu，即梅斯基塔尔谷地的奥托米语，通行于墨西哥中部的伊达尔戈州。",
+    "这是一种有声调的语言：词根第一个音节的声调可以改变词义。它有三个声调：高调、低调和升调。",
+    "它的动词用前附词变位。前附词是放在动词前面的短词，表示人称和时态。在某些时态中，词根的首辅音也会变化。"
+  ],
+  "orthography": {
+    "intro": "这是词典所用的拼写，按 Hñähñu 文化学院（Academia de la Cultura Hñähñu）的正字法做了调整。撇号（'）表示喉塞音，也就是声音的短暂停顿。",
+    "letters": [
+      {
+        "meaning": "埋葬"
+      },
+      {
+        "meaning": "睡觉"
+      },
+      {
+        "meaning": "小偷"
+      },
+      {
+        "meaning": "牛奶"
+      },
+      {
+        "meaning": "玉米穗虫"
+      },
+      {
+        "meaning": "一个地名"
+      },
+      {
+        "meaning": "水"
+      },
+      {
+        "meaning": "梳（头发）"
+      },
+      {
+        "meaning": "扔掉"
+      },
+      {
+        "meaning": "马"
+      },
+      {
+        "meaning": "泥瓦匠"
+      },
+      {
+        "meaning": "土地"
+      },
+      {
+        "meaning": "桃子"
+      },
+      {
+        "meaning": "血"
+      },
+      {
+        "meaning": "仙人掌果"
+      },
+      {
+        "meaning": "蛇"
+      },
+      {
+        "meaning": "小的"
+      },
+      {
+        "meaning": "石臼"
+      },
+      {
+        "meaning": "吸龙舌兰汁用的葫芦"
+      },
+      {
+        "meaning": "嘴"
+      },
+      {
+        "meaning": "一"
+      },
+      {
+        "meaning": "头"
+      },
+      {
+        "meaning": "路"
+      },
+      {
+        "meaning": "写"
+      },
+      {
+        "meaning": "听"
+      },
+      {
+        "meaning": "数"
+      },
+      {
+        "meaning": "（冠词）"
+      },
+      {
+        "meaning": "桥"
+      },
+      {
+        "meaning": "梳子"
+      },
+      {
+        "meaning": "跑"
+      },
+      {
+        "meaning": "阿托莱（玉米饮料）"
+      },
+      {
+        "meaning": "玉米穗"
+      },
+      {
+        "meaning": "冷"
+      },
+      {
+        "meaning": "牙齿"
+      },
+      {
+        "meaning": "给"
+      },
+      {
+        "meaning": "疼"
+      },
+      {
+        "meaning": "叶子"
+      },
+      {
+        "meaning": "蜡烛"
+      },
+      {
+        "meaning": "雨"
+      },
+      {
+        "meaning": "哭"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "口元音"
+      },
+      {
+        "title": "鼻元音"
+      }
+    ],
+    "notes": [
+      "鼻元音中只写出 ä。Ë、ï 和 ü 在语言中存在，但通常不标出。",
+      "喉塞音出现在 ch、k、t 和 ts 之后（k'eñä），以及 b、m、n、ñ、r、u 和 y 之前（'ba、'ñu）。",
+      "词中不写声调。在动词前附词中，高调用重音符号标出，因为它会改变意思：dí xipi「我告诉他」，di xipi「他告诉他」。",
+      "方括号中是国际音标（IPA）标注的发音。u 在另一个元音前读作 [w]：ua「脚」。x 读作 [ʃ]（像英语的 sh），j 读作西班牙语的 j [x]。"
+    ]
+  },
+  "grammar": {
+    "intro": "要为 Hñähñu 的动词变位，就在词根前加一个前附词。前附词表示谁做这个动作，以及什么时候做。",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "前附词",
+            "description": "人称和时态。前面加上 hin-，句子就变成否定。"
+          },
+          {
+            "slot": "词根",
+            "description": "动词本身。在过去时和将来时中，它的第一个字母可能会变。"
+          },
+          {
+            "slot": "复数",
+            "description": "后缀 -hu̱ 表示「我们」和「你们」。"
+          }
+        ]
+      },
+      {
+        "title": "前附词的声调会改变意思",
+        "description": "注意重音符号：它表示高调。",
+        "items": [
+          {
+            "translation": "我告诉他/她"
+          },
+          {
+            "translation": "他/她告诉他/她"
+          },
+          {
+            "translation": "我告诉了他/她"
+          },
+          {
+            "translation": "他/她会告诉他/她"
+          },
+          {
+            "translation": "你告诉了他/她"
+          },
+          {
+            "translation": "我会告诉他/她"
+          }
+        ]
+      },
+      {
+        "title": "词根也会变化",
+        "description": "在过去时和将来时中，许多词根会改变首辅音。词根的次要形式就是这样构成的。",
+        "items": [
+          {
+            "name": "B 形式",
+            "description": "辅音变成浊音：p → b，t → d，th → d，ts → z，k → g，j → g，f → m。",
+            "examples": [
+              {
+                "meaning": "他/她知道了"
+              },
+              {
+                "meaning": "他/她买了它"
+              },
+              {
+                "meaning": "他/她磨了它"
+              }
+            ]
+          },
+          {
+            "name": "Y 形式",
+            "description": "如果词根以元音或 h + 元音开头，就加上 y（如果元音是鼻元音，就加 ñ）。",
+            "examples": [
+              {
+                "meaning": "他/她找了它"
+              },
+              {
+                "meaning": "他/她听到了"
+              },
+              {
+                "meaning": "他/她睡了"
+              }
+            ]
+          },
+          {
+            "name": "N 形式",
+            "description": "有些动词保留辅音，但加上 n-（或 m-）。词典用过去时的第一人称标出。",
+            "examples": [
+              {
+                "meaning": "我跳了"
+              },
+              {
+                "meaning": "他/她笑了"
+              },
+              {
+                "meaning": "我喝了水"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "title": "带 -hu̱ 的复数",
+            "description": "在日常口语中，后缀 -hu̱ 会改变词根的结尾：",
+            "examples": [
+              {
+                "meaning": "喝"
+              },
+              {
+                "meaning": "工作"
+              },
+              {
+                "meaning": "看"
+              },
+              {
+                "meaning": "想"
+              },
+              {
+                "meaning": "买"
+              }
+            ]
+          },
+          {
+            "title": "表示「是」：前附词 + ra",
+            "description": "要用名词说「我是」「你是」「他/她是」，前附词要和冠词 ra 连在一起。",
+            "columns": [
+              "时态",
+              "第一人称",
+              "第二人称",
+              "第三人称"
+            ],
+            "rows": [
+              {
+                "label": "现在时"
+              },
+              {
+                "label": "未完成过去时"
+              },
+              {
+                "label": "将来时"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "例句",
+        "items": [
+          {
+            "translation": "我在学西班牙语。"
+          },
+          {
+            "translation": "我早早去睡觉。"
+          },
+          {
+            "translation": "但他/她不跳舞。"
+          },
+          {
+            "translation": "我没看见它。"
+          },
+          {
+            "translation": "它很贵。"
+          }
+        ]
+      },
+      {
+        "title": "动词的所有词缀",
+        "description": "动词可以带的每个部分：前缀、后缀、小品词和词根变化。",
+        "items": [
+          {
+            "kind": "前附词",
+            "meaning": "现在时：我、你、他/她",
+            "translation": "我吃"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "过去时",
+            "translation": "他/她吃了"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "将来时",
+            "translation": "他/她会吃"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "未完成过去时",
+            "translation": "我以前常吃"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "现在进行时",
+            "translation": "我正在吃"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "过去进行时",
+            "translation": "我那时正在吃"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "现在完成时：刚才不久",
+            "translation": "他/她已经吃了"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "近将来时",
+            "translation": "他/她要吃了"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "状语过去时：「当……的时候」",
+            "translation": "我吃的时候"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "在别处的动作：现在时 · 过去时",
+            "translation": "他/她在那边吃了"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "在别处的命令式",
+            "translation": "在那边吃！"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "边走边做：现在时",
+            "translation": "他/她边走边吃"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "边走边做：未完成过去时",
+            "translation": "他/她那时边走边吃"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "边走边做：将来时 · 现在虚拟式",
+            "translation": "让他/她吃"
+          },
+          {
+            "kind": "前附词",
+            "meaning": "过去虚拟式（与事实相反）",
+            "translation": "如果他/她吃"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "否定，放在前附词之前",
+            "translation": "我不吃"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "禁止，用于第二和第三人称",
+            "translation": "别去"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "「要去做」：近将来时，与将来时前附词连用",
+            "translation": "我要去"
+          },
+          {
+            "kind": "词根变化",
+            "meaning": "第三人称过去时和将来时：辅音变成浊音（p → b，t → d，ts → z，k → g）",
+            "translation": "他/她知道了"
+          },
+          {
+            "kind": "词根变化",
+            "meaning": "以元音或 h 开头的词根：加 y，如果元音是鼻元音则加 ñ",
+            "translation": "他/她看见了它"
+          },
+          {
+            "kind": "词根变化",
+            "meaning": "不确定的施事者（「有人做了」）：f、th、ts、j、s、t'",
+            "translation": "有人知道了"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "保留辅音或带有并入宾语的动词的次要时态",
+            "translation": "我跳了"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "反身和相互，用于所有时态",
+            "translation": "他/她累了"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "被动分词（用不确定施事者的词根）",
+            "translation": "被听到的"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "由名词构成的动词",
+            "translation": "（天气）冷"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "第一和第二人称的复数",
+            "translation": "我们吃"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "第一人称宾语：「我」",
+            "translation": "他/她照顾我"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "第二人称宾语：「你」",
+            "translation": "它咬你"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "第三人称间接宾语：「给他/她」",
+            "translation": "他/她把它卖给他/她"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "指示词作直接宾语：单数、复数"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "不定宾语：「人们、某人」",
+            "translation": "吓（人）"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "相互：「彼此」",
+            "translation": "互相辱骂"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "施用式：为某人或朝某人做",
+            "translation": "带来某人"
+          },
+          {
+            "kind": "词干后缀",
+            "meaning": "构成动词词干；复合的（-ti、-ki、-'tsi……）增加及物性",
+            "translation": "开始 · 开始做某事"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "第一人称"
+      },
+      {
+        "id": "2",
+        "label": "第二人称"
+      },
+      {
+        "id": "3",
+        "label": "第三人称"
+      }
+    ],
+    "paradigms": [
+      {
+        "id": "present",
+        "group": "肯定",
+        "name": "现在时",
+        "description": "现在或总是发生的事。"
+      },
+      {
+        "id": "preterite",
+        "group": "肯定",
+        "name": "过去时",
+        "description": "已经发生的事。"
+      },
+      {
+        "id": "future",
+        "group": "肯定",
+        "name": "将来时",
+        "description": "将要发生的事。"
+      },
+      {
+        "id": "imperfect",
+        "group": "肯定",
+        "name": "未完成过去时",
+        "description": "过去常常发生的事。"
+      },
+      {
+        "id": "progressive",
+        "group": "肯定",
+        "name": "现在进行时",
+        "description": "此刻正在发生的事。"
+      },
+      {
+        "id": "neg-present",
+        "group": "否定",
+        "name": "现在时",
+        "description": "hin- + 现在时前附词。"
+      },
+      {
+        "id": "neg-preterite",
+        "group": "否定",
+        "name": "过去时",
+        "description": "hin- + 过去时前附词。"
+      },
+      {
+        "id": "near-perfect",
+        "group": "近时态",
+        "name": "现在完成时",
+        "description": "刚刚发生、不久之前的事（stá、xká、xa）。"
+      },
+      {
+        "id": "near-future",
+        "group": "近时态",
+        "name": "近将来时",
+        "description": "即将发生的事（xka、xki、sta）。"
+      },
+      {
+        "id": "adverbial-past",
+        "group": "过去",
+        "name": "状语过去时",
+        "description": "另一件事发生时的过去动作：「我工作的时候……」（ndá、ngá、mí）。"
+      },
+      {
+        "id": "past-progressive",
+        "group": "过去",
+        "name": "过去进行时",
+        "description": "那时正在发生的事（ndrí、ngrí、mrí）。"
+      },
+      {
+        "id": "elsewhere-present",
+        "group": "在别处",
+        "name": "在别处的现在时",
+        "description": "动作在别的地方发生（gí、bí）。"
+      },
+      {
+        "id": "elsewhere-preterite",
+        "group": "在别处",
+        "name": "在别处的过去时",
+        "description": "事情在别的地方发生了（duá、guá、bá）。"
+      },
+      {
+        "id": "elsewhere-imperative",
+        "group": "在别处",
+        "name": "在别处的命令式",
+        "description": "要人在别处做某事的命令（bá）。"
+      },
+      {
+        "id": "away-present",
+        "group": "边走边做",
+        "name": "边走边做的现在时",
+        "description": "主语一边离开一边做（drá、grí、dra）。"
+      },
+      {
+        "id": "away-imperfect",
+        "group": "边走边做",
+        "name": "边走边做的未完成过去时",
+        "description": "那时一边离开一边做（ndrá、ngrá、ndra）。"
+      },
+      {
+        "id": "away-future",
+        "group": "边走边做",
+        "name": "边走边做的将来时",
+        "description": "将会一边离开一边做（grá、grí、drá）。"
+      },
+      {
+        "id": "subjunctive",
+        "group": "虚拟式",
+        "name": "现在和将来",
+        "description": "希望或期待的事：「让……」（grá、grí、drá）。"
+      },
+      {
+        "id": "past-subjunctive",
+        "group": "虚拟式",
+        "name": "过去（与事实相反）",
+        "description": "本来会发生的事：「如果……」（gra、gri、dri）。"
+      },
+      {
+        "id": "neg-future",
+        "group": "否定",
+        "name": "将来时",
+        "description": "hin- + 将来时前附词。"
+      }
+    ],
+    "lexicon": [
+      {
+        "meaning": "吃，喝",
+        "es": "吃"
+      },
+      {
+        "meaning": "知道",
+        "es": "知道",
+        "note": "过去时 bi bädi"
+      },
+      {
+        "meaning": "买",
+        "es": "买",
+        "note": "过去时 bi dai"
+      },
+      {
+        "meaning": "洗",
+        "es": "洗",
+        "note": "过去时 bi meni"
+      },
+      {
+        "meaning": "找",
+        "es": "找",
+        "note": "过去时 bi hyoni"
+      },
+      {
+        "meaning": "看，看见",
+        "es": "看",
+        "note": "过去时 bi hyandi"
+      },
+      {
+        "meaning": "睡觉",
+        "es": "睡觉",
+        "note": "过去时 bi 'ñähä"
+      },
+      {
+        "meaning": "听",
+        "es": "听",
+        "note": "过去时 bi 'yo̱de"
+      },
+      {
+        "meaning": "磨",
+        "es": "磨",
+        "note": "过去时 bi gu̱ni"
+      },
+      {
+        "meaning": "拿出",
+        "es": "拿出",
+        "note": "过去时 bi gu̱ki"
+      },
+      {
+        "meaning": "劈开",
+        "es": "劈开",
+        "note": "过去时 bi hyeke"
+      },
+      {
+        "meaning": "跳舞",
+        "es": "跳舞"
+      },
+      {
+        "meaning": "收割",
+        "es": "收割"
+      },
+      {
+        "meaning": "跳",
+        "es": "跳",
+        "note": "过去时 dá nsagi"
+      },
+      {
+        "meaning": "笑",
+        "es": "笑",
+        "note": "过去时 bi nthede"
+      },
+      {
+        "meaning": "休息",
+        "es": "休息",
+        "note": "过去时 bi ntsaya"
+      },
+      {
+        "meaning": "喝水",
+        "es": "喝水",
+        "note": "过去时 dá ntsithe"
+      }
+    ]
+  }
+}

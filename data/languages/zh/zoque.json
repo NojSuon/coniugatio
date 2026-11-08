@@ -1,0 +1,647 @@
+{
+  "name": "索克语",
+  "variant": "中部索克语（科派纳拉）",
+  "region": "恰帕斯州科派纳拉",
+  "summary": "恰帕斯州西北部的一种米塞-索克语。在科派纳拉和特克帕坦，说这种语言的人称它为 tsunitsame 或 tsuni；在其他村镇称为 otetsame 或 ote。",
+  "conjugator": {
+    "label": "词根或动词",
+    "hint": "输入动词的词根（poy「跑」，tsäjk「做它」）或它的过去形式，按词典的写法（poyu、tsyäjku）。",
+    "own": {
+      "hint": "输入任意动词的词根、它的中文意思，以及它是否带宾语。我们会用科派纳拉索克语的规则为它变位。",
+      "label": "动词词根",
+      "es_placeholder": "唱歌",
+      "types_help": "及物动词在每种形式中都带人称前缀（ntsäkpa'äs「我做它」）；意思要写上「它」：「做它」。"
+    },
+    "types": [
+      {
+        "id": "I",
+        "label": "不及物：poy → popya'äj"
+      },
+      {
+        "id": "T",
+        "label": "及物：tsäjk → ntsäkpa'äs"
+      }
+    ]
+  },
+  "source": {
+    "full": "Ralph Engel 与 Mary Engel，《Diccionario zoque de Copainalá》，附语法（暑期语言学院，1981 年）；国家原住民语言研究所（INALI），《Otejaye'is 'yanhki'mkuy / Norma de escritura de la lengua otetzame (zoque)》，此处用 ts 代替 tz。另见：Engel，《Diccionario zoque de Francisco León》（SIL，1987 年）。"
+  },
+  "about": [
+    "索克语属于米塞-索克语系，与米塞语和波波卢卡语是亲属语言。它通行于恰帕斯州西北部的科派纳拉、特克帕坦、奥科特佩克、查普尔特南戈、弗朗西斯科莱昂和塔帕拉帕等村镇，以及瓦哈卡州的奇马拉帕斯。",
+    "在科派纳拉和特克帕坦，说这种语言的人称它为 tsunitsame 或 tsuni；在其他村镇称为 otetsame 或 ote。1982 年奇琼纳尔火山喷发，使许多索克社区流离失所，说这种语言的人也因此分散各地。",
+    "索克语的动词两次标示人称：用改变词根首辅音的前缀（tsäjk → tsyäjku「他/她做了它」），以及附在末尾的代词（poyu'äj「我跑了」）。它区分包括听话人和不包括听话人的「我们」。"
+  ],
+  "orthography": {
+    "intro": "我们使用 INALI 书写规范（Nenhejaye）的字母，用 ts 代替 tz：6 个元音和 14 个辅音。撇号（'）是喉塞音，也就是声音的短暂停顿；nh 读作英语 sing 中的 ng。",
+    "letters": [
+      {
+        "meaning": "玉米饼"
+      },
+      {
+        "meaning": "螃蟹"
+      },
+      {
+        "meaning": "地方"
+      },
+      {
+        "meaning": "鸟"
+      },
+      {
+        "meaning": "头"
+      },
+      {
+        "meaning": "指甲"
+      },
+      {
+        "meaning": "星星"
+      },
+      {
+        "meaning": "土地"
+      },
+      {
+        "meaning": "孩子"
+      },
+      {
+        "meaning": "鳄梨"
+      },
+      {
+        "meaning": "南瓜"
+      },
+      {
+        "meaning": "镇政府"
+      },
+      {
+        "meaning": "风"
+      },
+      {
+        "meaning": "房子"
+      },
+      {
+        "meaning": "猴子"
+      },
+      {
+        "meaning": "蜥蜴"
+      },
+      {
+        "meaning": "音乐，歌"
+      },
+      {
+        "meaning": "猪"
+      },
+      {
+        "meaning": "玉米"
+      },
+      {
+        "meaning": "他/她的儿子"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "元音"
+      }
+    ],
+    "notes": [
+      "喉塞音会改变意思：ju'ki「秃鹫」，juki「香烟」。以元音开头的词，词首不写喉塞音：写 ane，不写 'ane。",
+      "在 m、n 和 nh 之后，辅音 p、t、ts 和 k 读成浊音（mpama 听起来像「mbama」），但仍写成清音。",
+      "第三人称的 y 插在第一个辅音之后：tsat → tsyat；ty、tsy、sy 和 ny 读起来像一个腭化辅音。",
+      "方括号中是国际音标（IPA）标注的发音。"
+    ]
+  },
+  "grammar": {
+    "intro": "索克语的动词由人称前缀、词根、复数后缀、时态后缀和附在末尾的代词构成。许多时态是在前面加一个助动词构成的。",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "前缀",
+            "description": "N- 第一人称，Ny- 第二人称，y- 第三人称；它们会改变词根的首辅音。"
+          },
+          {
+            "slot": "词根",
+            "description": "动词。"
+          },
+          {
+            "slot": "复数",
+            "description": "-tam- 你们和包括式的我们，-yaj- 他们。"
+          },
+          {
+            "slot": "时态",
+            "description": "-pa 未完成，-u 已完成；-A 命令，-I 否定。"
+          },
+          {
+            "slot": "人称",
+            "description": "-'äj / -'äs 我，-mij / -mis 你和你们，-täj / -täs 我们，-tä 包括听话人的我们。"
+          }
+        ]
+      },
+      {
+        "title": "人称",
+        "description": "不及物动词用 -'äj 和 -mij；及物动词用 -'äs 和 -mis。前缀取决于动词的类型。",
+        "columns": [
+          "人称",
+          "不及物",
+          "及物",
+          "例子"
+        ],
+        "rows": [
+          {
+            "label": "我"
+          },
+          {
+            "label": "你"
+          },
+          {
+            "label": "他，她"
+          },
+          {
+            "label": "我们"
+          },
+          {
+            "label": "我们（包括你）"
+          },
+          {
+            "label": "你们"
+          },
+          {
+            "label": "他们"
+          }
+        ],
+        "note": "N- 会同化于后面的辅音：在 p 前为 m（mpoyu），在 t 和 ts 前为 n，在 k 前为 nh（nhkyenu）。"
+      },
+      {
+        "title": "音变",
+        "description": "各部分结合时，读音会相应调整。",
+        "items": [
+          {
+            "tag": "y 移位",
+            "name": "换位",
+            "description": "以 y 结尾的词根把 y 移到下一个辅音之后。",
+            "examples": [
+              {
+                "meaning": "他/她跑"
+              },
+              {
+                "meaning": "他/她买它"
+              }
+            ]
+          },
+          {
+            "tag": "j 脱落",
+            "name": "简化",
+            "description": "jC 后面再接一个辅音时，j 脱落。",
+            "examples": [
+              {
+                "meaning": "他/她做"
+              },
+              {
+                "meaning": "你们扫地"
+              }
+            ]
+          },
+          {
+            "tag": "-A / -I",
+            "name": "元音和谐",
+            "description": "命令和否定的元音模仿词根的元音。",
+            "examples": [
+              {
+                "meaning": "做吧！"
+              },
+              {
+                "meaning": "他/她不跑"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "助词",
+        "description": "助动词带代词；主要动词带人称前缀和 -u。",
+        "items": [
+          {
+            "translation": "我正在跑"
+          },
+          {
+            "translation": "我要跑"
+          },
+          {
+            "translation": "我想做它"
+          },
+          {
+            "translation": "我以前常跑"
+          },
+          {
+            "translation": "我不跑"
+          }
+        ]
+      },
+      {
+        "title": "例句",
+        "items": [
+          {
+            "translation": "你在做什么？"
+          },
+          {
+            "translation": "谁来了？"
+          },
+          {
+            "translation": "女孩帮她妈妈。"
+          },
+          {
+            "translation": "那个男人明天来。"
+          }
+        ]
+      },
+      {
+        "title": "动词的所有词缀",
+        "description": "动词可以带的每个部分：前缀、后缀、附着代词和助动词。",
+        "items": [
+          {
+            "kind": "前缀",
+            "meaning": "第一人称（以及及物动词的第二人称）；会同化：m、n、nh",
+            "translation": "我做它"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "不及物动词的第二人称：N- + y",
+            "translation": "你跑"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "及物动词的第三人称；插在第一个辅音之后",
+            "translation": "他/她做了它"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "过去时否定（与 -A 连用）",
+            "translation": "我没跑"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "相互：「彼此」（与 -atäj- 连用）",
+            "translation": "我们互相欢迎"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "为别人做，或在别人的财产上做",
+            "translation": "他/她在别人的地里干活"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "和某人一起做",
+            "translation": "他/她和某人一起上去了"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "和另一个人或物一起做",
+            "translation": "他/她把它带走了"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "使役：使动作发生",
+            "translation": "他/她杀了他"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "感知和其他意思",
+            "translation": "我感觉到了它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "复数：你们和包括听话人的我们",
+            "translation": "我们跑（包括你）"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "复数：他们",
+            "translation": "他们跑"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "未完成的动作：现在、习惯",
+            "translation": "他/她跑"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "已完成的动作；也用于助动词后面的动词",
+            "translation": "他/她跑了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "命令、虚拟式和过去否定；模仿词根的元音",
+            "translation": "跑！"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "现在时否定；模仿词根的元音",
+            "translation": "他/她不跑"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "对「我们」的命令",
+            "translation": "我们跑吧！"
+          },
+          {
+            "kind": "附着词",
+            "meaning": "我（不及物、及物）",
+            "translation": "我跑了"
+          },
+          {
+            "kind": "附着词",
+            "meaning": "你，你们",
+            "translation": "你跑了"
+          },
+          {
+            "kind": "附着词",
+            "meaning": "我们（不包括听话人）",
+            "translation": "我们跑了"
+          },
+          {
+            "kind": "附着词",
+            "meaning": "我们（包括听话人）",
+            "translation": "我们跑了（包括你）"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "正在进行的动作",
+            "translation": "我正在跑"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "未完成动作的过去",
+            "translation": "我以前常跑"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "将来：「要去做」",
+            "translation": "我要跑"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "来做；去了又回来",
+            "translation": "我来扫地"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "想，能",
+            "translation": "我想做它"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "现在时和将来时的否定",
+            "translation": "我不跑"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "否定命令：「别……」",
+            "translation": "别跑！"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "「即使」：虚拟式",
+            "translation": "即使我跑"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "「为了」，「为了不」",
+            "translation": "为了让他/她做它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "为别人",
+            "translation": "他/她为他/她做了它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "让人做；相互动作",
+            "translation": "他/她让人种了它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "想做某事",
+            "translation": "他/她想做它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "开始的动作",
+            "translation": "他/她开始吃了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "再做一次，也做",
+            "translation": "他/她又来了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "「已经」",
+            "translation": "他/她已经来了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "「刚」，不定时间",
+            "translation": "他/她来了"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "第一人称"
+      },
+      {
+        "id": "2",
+        "label": "第二人称"
+      },
+      {
+        "id": "3",
+        "label": "第三人称"
+      },
+      {
+        "id": "4",
+        "label": "第一人称包括式（包括你）"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present",
+        "group": "直陈式",
+        "name": "现在时",
+        "description": "未完成、习惯或现在的动作（-pa）。"
+      },
+      {
+        "id": "imperfect",
+        "group": "直陈式",
+        "name": "未完成过去时",
+        "description": "以前常发生的事（-pa … inäk）。"
+      },
+      {
+        "id": "past",
+        "group": "直陈式",
+        "name": "过去时",
+        "description": "已完成的动作（-u）。"
+      },
+      {
+        "id": "progressive",
+        "group": "直陈式",
+        "name": "现在进行时",
+        "description": "现在正在发生的事（nä + 动词）。"
+      },
+      {
+        "id": "past-progressive",
+        "group": "直陈式",
+        "name": "过去进行时",
+        "description": "那时正在发生的事（nä … inäk + 动词）。"
+      },
+      {
+        "id": "future",
+        "group": "直陈式",
+        "name": "将来时",
+        "description": "将要做的事（manhpa + 动词）。"
+      },
+      {
+        "id": "come",
+        "group": "助词",
+        "name": "来做",
+        "description": "minpa + 动词。"
+      },
+      {
+        "id": "want",
+        "group": "助词",
+        "name": "想",
+        "description": "sunpa + 动词。"
+      },
+      {
+        "id": "can",
+        "group": "助词",
+        "name": "能",
+        "description": "muspa + 动词。"
+      },
+      {
+        "id": "subjunctive",
+        "group": "语气",
+        "name": "虚拟式",
+        "description": "「即使……」：nyempe + 带 -A 的动词。"
+      },
+      {
+        "id": "imperative",
+        "group": "语气",
+        "name": "命令式",
+        "description": "词根 + -A；「我们做吧！」用 -tam-'i-tä(y)。"
+      },
+      {
+        "id": "neg-imperative",
+        "group": "语气",
+        "name": "否定命令式",
+        "description": "uy + 带 -I 的词根。"
+      },
+      {
+        "id": "neg-present",
+        "group": "否定",
+        "name": "现在时",
+        "description": "ja'n + 带 -I 的动词。"
+      },
+      {
+        "id": "neg-future",
+        "group": "否定",
+        "name": "将来时",
+        "description": "ja'n + manhu + 动词。"
+      },
+      {
+        "id": "neg-past",
+        "group": "否定",
+        "name": "过去时",
+        "description": "jay- + 带 -A 的动词。"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "poyu",
+        "meaning": "跑",
+        "es": "跑"
+      },
+      {
+        "entry": "pejtu",
+        "meaning": "扫地",
+        "es": "扫地"
+      },
+      {
+        "entry": "pujtu",
+        "meaning": "出去",
+        "es": "出去"
+      },
+      {
+        "entry": "wanu",
+        "meaning": "唱歌",
+        "es": "唱歌"
+      },
+      {
+        "entry": "tse'oyu",
+        "meaning": "洗（衣服）",
+        "es": "洗"
+      },
+      {
+        "entry": "minu",
+        "meaning": "来",
+        "es": "来"
+      },
+      {
+        "entry": "manhu",
+        "meaning": "去",
+        "es": "去",
+        "note": "命令式 mawä，否定 ja'n myawe"
+      },
+      {
+        "entry": "yojsu",
+        "meaning": "工作",
+        "es": "工作"
+      },
+      {
+        "entry": "änhu",
+        "meaning": "睡觉",
+        "es": "睡觉"
+      },
+      {
+        "entry": "ki'mu",
+        "meaning": "上去",
+        "es": "上去"
+      },
+      {
+        "entry": "wijtu",
+        "meaning": "四处走",
+        "es": "四处走"
+      },
+      {
+        "entry": "tsyäjku",
+        "meaning": "做它，制作它",
+        "es": "做它"
+      },
+      {
+        "entry": "pya'tu",
+        "meaning": "找到它",
+        "es": "找到它"
+      },
+      {
+        "entry": "kyenu",
+        "meaning": "看它",
+        "es": "看它"
+      },
+      {
+        "entry": "kyu'tu",
+        "meaning": "吃它",
+        "es": "吃它"
+      },
+      {
+        "entry": "jyuyu",
+        "meaning": "买它",
+        "es": "买它"
+      },
+      {
+        "entry": "tsyamu",
+        "meaning": "说它",
+        "es": "说它"
+      }
+    ]
+  }
+}

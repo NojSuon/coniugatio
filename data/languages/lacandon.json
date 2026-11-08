@@ -1,17 +1,17 @@
 {
   "slug": "lacandon",
   "name": "lacandón",
-  "endonym": "hach t'aan",
+  "endonym": "jach t'aan",
   "variant": "maya lacandón del sur",
   "region": "Lacanjá Chansayab, Selva Lacandona (Chiapas)",
   "status": "available",
   "order": 9,
   "series": "selva",
-  "summary": "Lengua maya de la rama yucateca que hablan los hach winik de la Selva Lacandona, en Chiapas. Sus hablantes la llaman hach t'aan, «la lengua verdadera»; también se le dice lacandón o maya lacandón.",
+  "summary": "Lengua maya de la rama yucateca que hablan los jach winik de la Selva Lacandona, en Chiapas. Sus hablantes la llaman jach t'aan, «la lengua verdadera»; también se le dice lacandón o maya lacandón.",
   "lang_code": "lac",
   "conjugator": {
     "label": "Verbo",
-    "hint": "Escribe el verbo como en el diccionario: b'in «ir», weenan «dormir», kurtaar «sentarse», 'irik «verlo».",
+    "hint": "Escribe el verbo como en el diccionario: bin «ir», weenan «dormir», kurtaar «sentarse», 'irik «verlo».",
     "placeholder": "weenan",
     "keyboard": [
       "ä",
@@ -27,7 +27,7 @@
       "label": "Verbo",
       "placeholder": "'ookar",
       "es_placeholder": "entrar",
-      "types_help": "Los transitivos terminan en -ik ('irik «verlo»); escribe su significado con «lo». Los posicionales terminan en -taar. Los intransitivos de raíz terminan en vocal + r o n ('ookar, weenan); los de actividad (ts'íib, b'eeyaj) no llevan terminación."
+      "types_help": "Los transitivos terminan en -ik ('irik «verlo»); escribe su significado con «lo». Los posicionales terminan en -taar. Los intransitivos de raíz terminan en vocal + r o n ('ookar, weenan); los de actividad (ts'íib, beeyaj) no llevan terminación."
     },
     "types": [
       {
@@ -58,8 +58,8 @@
   },
   "about": [
     "El lacandón es una lengua maya de la rama yucateca, junto con el maya yucateco, el itza' y el mopán. Lo hablan unas mil personas en la Selva Lacandona de Chiapas: los del norte en Najá y Metzabok, y los del sur en Lacanjá Chansayab.",
-    "Sus hablantes se llaman a sí mismos hach winik, «hombres verdaderos», y a su lengua hach t'aan, «la lengua verdadera». Lacandón viene del nombre de un antiguo pueblo chol, Lakam Tun, «piedra grande».",
-    "Esta página sigue la variante del sur que registra Hofling. Como en mopán, la persona va pegada al verbo (kinb'in «voy») y hay una sexta vocal, la ä. La antigua l se pronuncia r: kurtaar «sentarse», 'ookar «entrar»."
+    "Sus hablantes se llaman a sí mismos jach winik, «hombres verdaderos», y a su lengua jach t'aan, «la lengua verdadera». Lacandón viene del nombre de un antiguo pueblo chol, Lakam Tun, «piedra grande».",
+    "Esta página sigue la variante del sur que registra Hofling. Como en mopán, la persona va pegada al verbo (kinbin «voy») y hay una sexta vocal, la ä. La antigua l se pronuncia r: kurtaar «sentarse», 'ookar «entrar»."
   ],
   "orthography": {
     "intro": "Usamos el alfabeto maya que sigue Hofling, con ts en lugar de tz: 6 vocales, que pueden ser cortas, largas o largas con tono alto (áa), y consonantes simples o glotalizadas. El apóstrofo (') marca una consonante glotalizada (k', t') o un saltillo; toda palabra que empieza con vocal lleva saltillo: 'irik.",
@@ -83,9 +83,9 @@
         "meaning": "tumbarlo"
       },
       {
-        "letter": "b'",
+        "letter": "b",
         "ipa": "ɓ",
-        "word": "b'in",
+        "word": "bin",
         "meaning": "ir"
       },
       {
@@ -310,7 +310,7 @@
       "La longitud y el tono cambian el sentido: las vocales largas pueden llevar tono alto (kíinsik «matarlo»).",
       "La antigua l del maya se volvió r: el yucateco k'uchul es aquí k'uchur «llegar».",
       "La ts se está confundiendo con la s en el habla de los jóvenes.",
-      "La b' es implosiva: el aire entra al pronunciarla. La d' y la g solo aparecen en unas pocas palabras."
+      "La b es implosiva: el aire entra al pronunciarla. La d' y la g solo aparecen en unas pocas palabras."
     ]
   },
   "grammar": {
@@ -341,8 +341,8 @@
           },
           {
             "slot": "Plural",
-            "description": "-e'x, -eche'x, -o'b'.",
-            "example": "-o'b'"
+            "description": "-e'x, -eche'x, -o'b.",
+            "example": "-o'b"
           }
         ]
       },
@@ -400,13 +400,13 @@
           {
             "label": "ellos, ellas",
             "cells": [
-              "u- … -o'b'",
-              "uy- … -o'b'",
-              "-o'b'"
+              "u- … -o'b",
+              "uy- … -o'b",
+              "-o'b"
             ]
           }
         ],
-        "note": "«Nosotros» con -e'x al final te incluye: kikb'ine'x «vamos (tú y yo)»."
+        "note": "«Nosotros» con -e'x al final te incluye: kikbine'x «vamos (tú y yo)»."
       },
       {
         "type": "cards",
@@ -424,8 +424,8 @@
                 "meaning": "dormiste"
               },
               {
-                "from": "b'in",
-                "to": "b'inij",
+                "from": "bin",
+                "to": "binij",
                 "meaning": "se fue"
               }
             ]
@@ -433,7 +433,7 @@
           {
             "tag": "-n-",
             "name": "De actividad",
-            "description": "Verbos como ts'íib, b'eeyaj: -näj en el pasado, -näk en el subjuntivo.",
+            "description": "Verbos como ts'íib, beeyaj: -näj en el pasado, -näk en el subjuntivo.",
             "examples": [
               {
                 "from": "ts'íib",
@@ -474,7 +474,7 @@
         "description": "Ma' niega; con el incompletivo se vuelve ma' t-. Táan, suuk y los demás marcadores van aparte, y el verbo empieza con saltillo.",
         "items": [
           {
-            "text": "kinb'in",
+            "text": "kinbin",
             "translation": "voy"
           },
           {
@@ -508,7 +508,7 @@
             "affix": "k-",
             "kind": "aspecto",
             "meaning": "Incompletivo: lo que pasa o suele pasar",
-            "example": "kinb'in",
+            "example": "kinbin",
             "translation": "voy"
           },
           {
@@ -522,7 +522,7 @@
             "affix": "ma'",
             "kind": "partícula",
             "meaning": "Negación; con el incompletivo lleva t-",
-            "example": "ma' tub'in",
+            "example": "ma' tubin",
             "translation": "no va"
           },
           {
@@ -536,11 +536,11 @@
             "affix": "taant",
             "kind": "partícula",
             "meaning": "Pasado inmediato: «acaba de…»",
-            "example": "taant 'ub'in",
+            "example": "taant 'ubin",
             "translation": "acaba de irse"
           },
           {
-            "affix": "taab'ar",
+            "affix": "taabar",
             "kind": "partícula",
             "meaning": "Futuro inmediato: «va a…»"
           },
@@ -548,14 +548,14 @@
             "affix": "je'r … -e",
             "kind": "partícula",
             "meaning": "Asertivo: «sí, de seguro…»",
-            "example": "je'r 'inb'ine",
+            "example": "je'r 'inbine",
             "translation": "sí iré"
           },
           {
             "affix": "suuk",
             "kind": "partícula",
             "meaning": "Costumbre",
-            "example": "suuk 'ub'eetik",
+            "example": "suuk 'ubeetik",
             "translation": "acostumbra hacerlo"
           },
           {
@@ -569,7 +569,7 @@
             "meaning": "Obligativo: «tiene que…»"
           },
           {
-            "affix": "séeb'",
+            "affix": "séeb",
             "kind": "partícula",
             "meaning": "Celeritivo: «rápido»"
           },
@@ -608,7 +608,7 @@
             "affix": "ik-",
             "kind": "pronombre",
             "meaning": "Juego A: nosotros",
-            "example": "kikb'in",
+            "example": "kikbin",
             "translation": "vamos"
           },
           {
@@ -622,28 +622,28 @@
             "affix": "-o'n",
             "kind": "pronombre",
             "meaning": "Juego B: nosotros",
-            "example": "b'ino'n",
+            "example": "bino'n",
             "translation": "nos fuimos"
           },
           {
             "affix": "-e'x",
             "kind": "plural",
             "meaning": "Plural de la 2.ª persona; con nosotros, te incluye",
-            "example": "kikb'ine'x",
+            "example": "kikbine'x",
             "translation": "vamos (tú y yo)"
           },
           {
             "affix": "-eche'x",
             "kind": "plural",
             "meaning": "Ustedes",
-            "example": "kab'ineche'x",
+            "example": "kabineche'x",
             "translation": "van ustedes"
           },
           {
-            "affix": "-o'b'",
+            "affix": "-o'b",
             "kind": "plural",
             "meaning": "Ellos, ellas",
-            "example": "kub'ino'b'",
+            "example": "kubino'b",
             "translation": "van"
           },
           {
@@ -685,7 +685,7 @@
             "affix": "-ij",
             "kind": "estatus",
             "meaning": "Intransitivo completivo (3.ª persona)",
-            "example": "b'inij",
+            "example": "binij",
             "translation": "se fue"
           },
           {
@@ -713,7 +713,7 @@
             "affix": "-t-",
             "kind": "derivación",
             "meaning": "Transitivo derivado",
-            "example": "b'eetik",
+            "example": "beetik",
             "translation": "hacerlo"
           },
           {
@@ -738,7 +738,7 @@
             "translation": "es tumbado"
           },
           {
-            "affix": "-a'r, -a'b'",
+            "affix": "-a'r, -a'b",
             "kind": "derivación",
             "meaning": "Pasivo de los verbos derivados"
           }
@@ -822,7 +822,7 @@
         "id": "immediate",
         "group": "Futuro",
         "name": "Futuro inmediato",
-        "description": "«Voy a…» (taab'ar).",
+        "description": "«Voy a…» (taabar).",
         "form": "immediate",
         "es": {
           "tense": "present",
@@ -927,8 +927,8 @@
     ],
     "lexicon": [
       {
-        "entry": "b'in",
-        "root": "b'in",
+        "entry": "bin",
+        "root": "bin",
         "class": "I",
         "dependent": "xi'",
         "imperative": "xeen",
@@ -972,8 +972,8 @@
         "es": "morir"
       },
       {
-        "entry": "b'éesar",
-        "root": "b'ées",
+        "entry": "béesar",
+        "root": "bées",
         "class": "I",
         "meaning": "caerse",
         "es": "caerse"
@@ -993,8 +993,8 @@
         "es": "comer"
       },
       {
-        "entry": "b'eeyaj",
-        "root": "b'eeyaj",
+        "entry": "beeyaj",
+        "root": "beeyaj",
         "class": "A",
         "meaning": "trabajar",
         "es": "trabajar"
@@ -1021,8 +1021,8 @@
         "es": "bailar"
       },
       {
-        "entry": "'áakab'",
-        "root": "'áakab'",
+        "entry": "'áakab",
+        "root": "'áakab",
         "class": "A",
         "meaning": "correr",
         "es": "correr"
@@ -1084,8 +1084,8 @@
         "es": "oírlo"
       },
       {
-        "entry": "b'eetik",
-        "root": "b'eet",
+        "entry": "beetik",
+        "root": "beet",
         "class": "T",
         "meaning": "hacerlo",
         "es": "hacerlo"

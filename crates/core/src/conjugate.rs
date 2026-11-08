@@ -92,8 +92,8 @@ pub struct Options {
     /// (otomí: "n"; itza: "I", "T", "Tt"). Empty means "detect".
     #[serde(default)]
     pub kind: Option<String>,
-    /// Language of the page: "en" gives English equivalents and messages;
-    /// anything else, Spanish.
+    /// Language of the page: "en" gives English equivalents and messages,
+    /// "zh" Chinese ones; anything else, Spanish.
     #[serde(default)]
     pub lang: Option<String>,
 }
@@ -105,6 +105,10 @@ impl Options {
 
     pub fn english(&self) -> bool {
         self.lang.as_deref() == Some("en")
+    }
+
+    pub fn chinese(&self) -> bool {
+        self.lang.as_deref() == Some("zh")
     }
 
     pub fn kind(&self) -> Option<&str> {
@@ -163,10 +167,21 @@ impl Error {
         }
     }
 
+    /// The message in Chinese, for the Chinese pages.
+    pub fn chinese(&self) -> &'static str {
+        match self {
+            Error::EmptyVerb => "请输入一个动词的词根。",
+            Error::InvalidVerb => "词根只能包含字母和撇号。",
+            Error::UnknownClass => "我们无法判断这是哪种动词。请按词典的写法输入：不及物动词以 -Vl 结尾（wenel，「睡觉」），及物动词以 -ik 结尾（ilik，「看」），或在「变位你的动词」中选择它的类型。",
+        }
+    }
+
     /// The message in the page's language.
     pub fn message(&self, opts: &Options) -> String {
         if opts.english() {
             self.english().to_string()
+        } else if opts.chinese() {
+            self.chinese().to_string()
         } else {
             self.to_string()
         }

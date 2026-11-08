@@ -1,5 +1,5 @@
 //! A small Spanish conjugator, used to show the Spanish equivalent next to
-//! each conjugated form ("dá pädi" → "yo supe", "k'ab'et inwenel" →
+//! each conjugated form ("dá pädi" → "yo supe", "k'abet inwenel" →
 //! "yo necesito dormir").
 //!
 //! Regular -ar/-er/-ir verbs follow the rules; irregular verbs used in the
