@@ -83,6 +83,12 @@
   --serie-acento: var(--mati-guayaba);
   --serie-texto: var(--mati-jade);
 }
+[data-serie="cempasuchil"] {
+  --serie-fondo: var(--mati-pastel-rosa-crema);
+  --serie-solido: var(--mati-ocre);
+  --serie-acento: var(--mati-cempasuchil);
+  --serie-texto: var(--mati-ocre);
+}
 [data-serie="jacaranda"] {
   --serie-fondo: var(--mati-pastel-lila-suave);
   --serie-solido: var(--mati-berenjena);
