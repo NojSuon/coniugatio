@@ -89,6 +89,12 @@
   --serie-acento: var(--mati-cempasuchil);
   --serie-texto: var(--mati-ocre);
 }
+[data-serie="selva"] {
+  --serie-fondo: var(--mati-pastel-brote);
+  --serie-solido: var(--mati-petroleo);
+  --serie-acento: var(--mati-magenta-tinta);
+  --serie-texto: var(--mati-pino);
+}
 [data-serie="jacaranda"] {
   --serie-fondo: var(--mati-pastel-lila-suave);
   --serie-solido: var(--mati-berenjena);

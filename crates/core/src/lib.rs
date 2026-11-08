@@ -6,6 +6,7 @@
 pub mod conjugate;
 pub mod english;
 pub mod itza;
+pub mod lacandon;
 pub mod mopan;
 pub mod nahuatl;
 pub mod otomi;
@@ -36,6 +37,9 @@ pub enum Engine {
     /// Like Yucatec, with set A joined to the verb and uch for activity
     /// verbs. See `mopan`.
     Mopan(mopan::Conjugation),
+    /// Southern Lacandon: set A joined after k- / t-, set B, -Vr / -Vk
+    /// harmony. See `lacandon`.
+    Lacandon(lacandon::Conjugation),
     /// Person prefixes and enclitics, -tam- / -yaj- plurals, -pa / -u. See
     /// `zoque`.
     Zoque(zoque::Conjugation),
@@ -62,6 +66,7 @@ impl Engine {
             Engine::Purhepecha(c) => c.conjugate_with(verb, opts),
             Engine::Yucatec(c) => c.conjugate_with(verb, opts),
             Engine::Mopan(c) => c.conjugate_with(verb, opts),
+            Engine::Lacandon(c) => c.conjugate_with(verb, opts),
             Engine::Zoque(c) => c.conjugate_with(verb, opts),
             Engine::Wixarika(c) => c.conjugate_with(verb, opts),
         }
@@ -76,6 +81,7 @@ impl Engine {
             Engine::Purhepecha(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Yucatec(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Mopan(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Lacandon(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Zoque(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Wixarika(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
