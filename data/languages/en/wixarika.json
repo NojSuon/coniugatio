@@ -1,0 +1,610 @@
+{
+  "name": "Wixárika",
+  "variant": "Wixárika (Huichol)",
+  "region": "Jalisco, Nayarit and Durango, Mexico",
+  "summary": "A Uto-Aztecan language of the Sierra Madre Occidental. Its speakers call it wixárika or wixaritari niukiyari; in Spanish it is called huichol.",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb as it appears in the list: 'uximaya «work», kwika «sing», mie «go». You can also type ɨ as +.",
+    "own": {
+      "hint": "Type the root of any verb and its meaning in English. Choose the prefixes it takes: many verbs use ta- (once, singular) or ti- (several times, plural).",
+      "label": "Verb root",
+      "es_placeholder": "play",
+      "types_help": "The spatial and number prefixes are part of the verb and change from one verb to another; the dictionary gives them."
+    },
+    "types": [
+      {
+        "id": "ti",
+        "label": "With ti- (plural, several times)"
+      },
+      {
+        "id": "ta",
+        "label": "With ta- (singular, once)"
+      },
+      {
+        "id": "u",
+        "label": "With u- (visible, here)"
+      },
+      {
+        "id": "e",
+        "label": "With e- (far, out of sight)"
+      },
+      {
+        "id": "",
+        "label": "No prefix"
+      }
+    ]
+  },
+  "source": {
+    "full": "Stefanie Ramos Bierge, Clause Types and Transitivity in Wixárika (Huichol): A Uto-Aztecan Language (PhD dissertation, University of Colorado, 2016); José Luis Iturrioz Leza, Paula Gómez López and Xitakame Ramírez de la Cruz, «La morfología verbal», in Lenguas y literaturas indígenas de Jalisco (Secretaría de Cultura de Jalisco). Spelling of Iturrioz et al. (1999). See also: Joseph E. Grimes et al., El huichol: apuntes sobre el léxico (Cornell University, 1981)."
+  },
+  "about": [
+    "Wixárika, or Huichol, is a language of the Uto-Aztecan family, closely related to Náyeri (Cora). It is spoken in the Sierra Madre Occidental, in northern Jalisco and parts of Nayarit, Durango and Zacatecas, by about 60,000 people.",
+    "Its speakers call themselves wixaritari (singular wixárika) and their language wixárika or wixaritari niukiyari. The main communities are San Andrés Cohamiata (Tateikie), Santa Catarina (Tuapuritari) and San Sebastián (Wautia). Every year they make a pilgrimage to Wirikuta, in San Luis Potosí.",
+    "It is a highly polysynthetic language: a single verb can gather more than twenty pieces, saying who does it, to whom, where, how, how many times and with what certainty. Many verbs change root with the number of the subject or when the action is finished: mie «goes», hu «they go», tɨa «went», kɨ «they went»."
+  ],
+  "orthography": {
+    "intro": "We use the spelling of Iturrioz and colleagues (1999): 5 vowels, which can be long (written double), and 13 consonants. Ɨ is a vowel between i and u; x sounds like a retroflex r, and the apostrophe (') is the glottal stop.",
+    "letters": [
+      {
+        "meaning": "river"
+      },
+      {
+        "meaning": "wind"
+      },
+      {
+        "meaning": "corn"
+      },
+      {
+        "meaning": "arrow"
+      },
+      {
+        "meaning": "woman"
+      },
+      {
+        "meaning": "water"
+      },
+      {
+        "meaning": "house"
+      },
+      {
+        "meaning": "earth, land"
+      },
+      {
+        "meaning": "deer"
+      },
+      {
+        "meaning": "knife"
+      },
+      {
+        "meaning": "tortilla"
+      },
+      {
+        "meaning": "day"
+      },
+      {
+        "meaning": "person"
+      },
+      {
+        "meaning": "dog"
+      },
+      {
+        "meaning": "hen"
+      },
+      {
+        "meaning": "pot"
+      },
+      {
+        "meaning": "coyote"
+      },
+      {
+        "meaning": "man"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "Short vowels"
+      },
+      {
+        "title": "Long vowels"
+      }
+    ],
+    "notes": [
+      "Length changes the meaning: haari «crocodile», hari «gourd»; tuutú «flower», tutu «ancestor».",
+      "Stress also tells words apart: táame «we», taamé «tooth». It is only written when it doesn't fall on the second-to-last syllable: 'ukí «man», maxa «deer».",
+      "There is no o in Wixárika: u can sound like o (teyupani sounds like «teyopani»).",
+      "Pronunciation is shown in brackets with the International Phonetic Alphabet (IPA)."
+    ]
+  },
+  "grammar": {
+    "intro": "A Wixárika verb puts almost everything before the root: who does it, the speaker's certainty, to whom, where and how many times. After the root come tense and aspect.",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "Subject",
+            "description": "ne- I, pe- you, — he/she; te- we, xe- you all, me- they."
+          },
+          {
+            "slot": "Assertion",
+            "description": "pɨ- what is stated here and now; mɨ- what is narrated; ka- negates."
+          },
+          {
+            "slot": "Prefixes",
+            "description": "ta- / ti- singular or plural, u- visible, e- far, ka- down, ti- up…"
+          },
+          {
+            "slot": "Root",
+            "description": "In some verbs it changes with number or aspect."
+          },
+          {
+            "slot": "Tense",
+            "description": "-kai imperfective, -xɨ perfective, -ni future, -ne / -tɨwe progressive."
+          }
+        ]
+      },
+      {
+        "title": "The pronouns",
+        "description": "Subject and object are marked on the verb with prefixes; independent pronouns only add emphasis.",
+        "columns": [
+          "Person",
+          "Independent",
+          "Subject",
+          "Object"
+        ],
+        "rows": [
+          {
+            "label": "I"
+          },
+          {
+            "label": "you"
+          },
+          {
+            "label": "he, she"
+          },
+          {
+            "label": "we"
+          },
+          {
+            "label": "you all"
+          },
+          {
+            "label": "they"
+          }
+        ],
+        "note": "me- and wa- are only used for animate beings."
+      },
+      {
+        "title": "Roots that change",
+        "description": "Some verbs use another root for the plural or for a finished action.",
+        "items": [
+          {
+            "tag": "go",
+            "name": "mie · hu · tɨa · kɨ",
+            "description": "Imperfective singular and plural, perfective singular and plural.",
+            "examples": [
+              {
+                "meaning": "I go · he/she went"
+              }
+            ]
+          },
+          {
+            "tag": "arrive",
+            "name": "nua · 'axɨa",
+            "description": "Singular and plural of the perfective.",
+            "examples": [
+              {
+                "meaning": "I arrived · we arrived"
+              }
+            ]
+          },
+          {
+            "tag": "eat",
+            "name": "kwa · kwai",
+            "description": "Imperfective and perfective.",
+            "examples": [
+              {
+                "meaning": "he/she eats · he/she ate"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Singular and plural of the action",
+        "description": "With many activity verbs, ta- marks a single action or actor and ti- several.",
+        "items": [
+          {
+            "translation": "he/she sings"
+          },
+          {
+            "translation": "they sing"
+          },
+          {
+            "translation": "he/she cries"
+          },
+          {
+            "translation": "they cry"
+          }
+        ]
+      },
+      {
+        "title": "Example sentences",
+        "items": [
+          {
+            "translation": "The boy ate a banana."
+          },
+          {
+            "translation": "The water is hot."
+          },
+          {
+            "translation": "A black cat is sleeping there."
+          },
+          {
+            "translation": "We offer them tamales."
+          }
+        ]
+      },
+      {
+        "title": "Every affix of the verb",
+        "description": "Every piece a verb can take: person, modal, spatial and number prefixes, and tense, aspect and linking suffixes.",
+        "items": [
+          {
+            "kind": "subject prefix",
+            "meaning": "Subject: I, you, he/she",
+            "translation": "I work"
+          },
+          {
+            "kind": "subject prefix",
+            "meaning": "Subject: we, you all, they (me- animate only)",
+            "translation": "they sing"
+          },
+          {
+            "kind": "object prefix",
+            "meaning": "Object: me, you, him/her/it",
+            "translation": "I'll see you"
+          },
+          {
+            "kind": "object prefix",
+            "meaning": "Object: us, you all, them (animate)",
+            "translation": "we were visiting them"
+          },
+          {
+            "kind": "modal prefix",
+            "meaning": "Assertion of the immediate, here and now",
+            "translation": "he/she sings"
+          },
+          {
+            "kind": "modal prefix",
+            "meaning": "Assertion of what is narrated or out of the immediate scope"
+          },
+          {
+            "kind": "modal prefix",
+            "meaning": "Formal register: important or generally valid information",
+            "translation": "it is hot (careful)"
+          },
+          {
+            "kind": "modal prefix",
+            "meaning": "Narrative",
+            "translation": "he/she started to run"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Negation",
+            "translation": "I don't work"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Question, «how»",
+            "translation": "how did it run?"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Conditional: «if»",
+            "translation": "if you come"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Distributive: plural animate subject",
+            "translation": "we work"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Singular or plural effect: one or several actions or actors",
+            "translation": "he/she sings · they sing"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Generalizer: unspecified object",
+            "translation": "he/she ate"
+          },
+          {
+            "kind": "prefix",
+            "meaning": "Reflexive and middle"
+          },
+          {
+            "kind": "spatial prefix",
+            "meaning": "Visible, here",
+            "translation": "he/she arrived"
+          },
+          {
+            "kind": "spatial prefix",
+            "meaning": "Far, out of sight",
+            "translation": "he/she went away"
+          },
+          {
+            "kind": "spatial prefix",
+            "meaning": "Figure, towards here (cislocative)",
+            "translation": "he/she fell"
+          },
+          {
+            "kind": "spatial prefix",
+            "meaning": "Global: all, everywhere",
+            "translation": "I will sleep"
+          },
+          {
+            "kind": "spatial prefix",
+            "meaning": "Down",
+            "translation": "they were sleeping"
+          },
+          {
+            "kind": "spatial prefix",
+            "meaning": "Up",
+            "translation": "they go (up)"
+          },
+          {
+            "kind": "spatial prefix",
+            "meaning": "Inside, flat area",
+            "translation": "we went"
+          },
+          {
+            "kind": "spatial prefix",
+            "meaning": "Circular, round trip"
+          },
+          {
+            "kind": "spatial prefix",
+            "meaning": "Straight, upriver, edge",
+            "translation": "we arrived"
+          },
+          {
+            "kind": "spatial prefix",
+            "meaning": "This side, lengthwise, towards, over there"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Past imperfective",
+            "translation": "he/she was playing"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Perfective",
+            "translation": "they bathed"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Future (also narrative)",
+            "translation": "I will sleep"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Durative past"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Progressive: singular, plural",
+            "translation": "we are dancing"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Habitual",
+            "translation": "they sing (in the ceremony)"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Potential"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Desiderative: want",
+            "translation": "he/she wants to ask"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Causative",
+            "translation": "we offer them"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Applicative; passive; ingressive (-ri)",
+            "translation": "I give it to you"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Transitive; passive",
+            "translation": "they were eaten"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Same subject, different subject (in linked clauses)",
+            "translation": "he/she arrived crying"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "Anteriority: same subject, different subject",
+            "translation": "when I arrived, he/she left"
+          },
+          {
+            "kind": "suffix",
+            "meaning": "«Because, for»; «when»",
+            "translation": "because I breathe"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "1st person"
+      },
+      {
+        "id": "2",
+        "label": "2nd person"
+      },
+      {
+        "id": "3",
+        "label": "3rd person"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present",
+        "group": "Indicative",
+        "name": "Present",
+        "description": "pɨ- + imperfective root."
+      },
+      {
+        "id": "imperfect",
+        "group": "Indicative",
+        "name": "Imperfective past",
+        "description": "What used to happen (-kai)."
+      },
+      {
+        "id": "perfective",
+        "group": "Indicative",
+        "name": "Perfective",
+        "description": "What happened and finished: perfective root or -xɨ."
+      },
+      {
+        "id": "future",
+        "group": "Indicative",
+        "name": "Future",
+        "description": "-ni."
+      },
+      {
+        "id": "progressive",
+        "group": "Progressive",
+        "name": "Present progressive",
+        "description": "-ne in the singular, -tɨwe in the plural."
+      },
+      {
+        "id": "past-progressive",
+        "group": "Progressive",
+        "name": "Past progressive",
+        "description": "-ne / -tɨwe + -kai."
+      },
+      {
+        "id": "neg-present",
+        "group": "Negative",
+        "name": "Present",
+        "description": "ka- instead of pɨ-."
+      },
+      {
+        "id": "neg-perfective",
+        "group": "Negative",
+        "name": "Perfective",
+        "description": "ka- + perfective root."
+      },
+      {
+        "id": "neg-future",
+        "group": "Negative",
+        "name": "Future",
+        "description": "ka- … -ni."
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "'uximaya",
+        "meaning": "work",
+        "es": "work"
+      },
+      {
+        "entry": "kwika",
+        "meaning": "sing",
+        "es": "sing",
+        "note": "ta- once or one singer, ti- several"
+      },
+      {
+        "entry": "nei",
+        "meaning": "dance",
+        "es": "dance"
+      },
+      {
+        "entry": "waika",
+        "meaning": "play",
+        "es": "play"
+      },
+      {
+        "entry": "'ɨwa",
+        "meaning": "bathe",
+        "es": "bathe"
+      },
+      {
+        "entry": "tsua",
+        "meaning": "cry",
+        "es": "cry"
+      },
+      {
+        "entry": "nawe",
+        "meaning": "laugh",
+        "es": "laugh"
+      },
+      {
+        "entry": "ku",
+        "meaning": "sleep",
+        "es": "sleep",
+        "note": "Plural kukutsu"
+      },
+      {
+        "entry": "tsuna",
+        "meaning": "jump",
+        "es": "jump"
+      },
+      {
+        "entry": "kwa",
+        "meaning": "eat",
+        "es": "eat",
+        "note": "Perfective kwai"
+      },
+      {
+        "entry": "'enie",
+        "meaning": "hear, listen",
+        "es": "hear"
+      },
+      {
+        "entry": "we",
+        "meaning": "fall",
+        "es": "fall"
+      },
+      {
+        "entry": "ke",
+        "meaning": "get up",
+        "es": "get up",
+        "note": "Plural 'ui"
+      },
+      {
+        "entry": "nautsa",
+        "meaning": "run",
+        "es": "run"
+      },
+      {
+        "entry": "wi",
+        "meaning": "fly",
+        "es": "fly"
+      },
+      {
+        "entry": "mie",
+        "meaning": "go",
+        "es": "go",
+        "note": "Roots mie, hu (goes, they go), tɨa, kɨ (went, they went)"
+      },
+      {
+        "entry": "nua",
+        "meaning": "arrive, come",
+        "es": "arrive",
+        "note": "Present 'axe, perfective nua / 'axɨa"
+      }
+    ]
+  }
+}

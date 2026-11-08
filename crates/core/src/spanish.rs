@@ -261,6 +261,10 @@ fn irregular(inf: &str) -> Irregular {
             ]),
             ..NONE
         },
+        "volar" => Irregular {
+            present: Some(["vuelo", "vuelas", "vuela", "volamos", "vuelan", "vuelan"]),
+            ..NONE
+        },
         "jugar" => Irregular {
             present: Some(["juego", "juegas", "juega", "jugamos", "juegan", "juegan"]),
             subjunctive: Some([
