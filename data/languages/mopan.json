@@ -22,7 +22,7 @@
       "label": "Verbo",
       "placeholder": "okol",
       "es_placeholder": "entrar",
-      "types_help": "Los transitivos terminan en -ik (käxtik «buscarlo»); escribe su significado con «lo». Los posicionales terminan en -tal. Los de raíz terminan en vocal + l repitiendo la vocal (emel, okol); los de actividad (janal, meyaj, ts'iib') forman su pasado con uch."
+      "types_help": "Los transitivos terminan en -ik (käxtik «buscarlo»); escribe su significado con «lo». Los posicionales terminan en -tal. Los de raíz terminan en vocal + l repitiendo la vocal (emel, okol); los de actividad (janal, meyaj, ts'iib) forman su pasado con uch."
     },
     "types": [
       {
@@ -68,7 +68,7 @@
       {
         "letter": "a",
         "ipa": "a",
-        "word": "ab'äl",
+        "word": "abäl",
         "meaning": "jocote"
       },
       {
@@ -78,9 +78,9 @@
         "meaning": "esposa"
       },
       {
-        "letter": "b'",
+        "letter": "b",
         "ipa": "ɓ",
-        "word": "b'aj",
+        "word": "baj",
         "meaning": "taltuza"
       },
       {
@@ -122,7 +122,7 @@
       {
         "letter": "k",
         "ipa": "k",
-        "word": "kab'",
+        "word": "kab",
         "meaning": "abeja, miel"
       },
       {
@@ -200,7 +200,7 @@
       {
         "letter": "ts'",
         "ipa": "tsʼ",
-        "word": "ts'ub'",
+        "word": "ts'ub",
         "meaning": "niño"
       },
       {
@@ -290,7 +290,7 @@
     ],
     "notes": [
       "La longitud de la vocal cambia el sentido: kok «grava», kook «sordo»; mis «gato», miis «escoba».",
-      "La b' y la d' son implosivas: el aire entra al pronunciarlas. Las demás glotalizadas (ch', k', p', t', ts') lo expulsan.",
+      "La b y la d' son implosivas: el aire entra al pronunciarlas. Las demás glotalizadas (ch', k', p', t', ts') lo expulsan.",
       "La r y la f, la g y la d' casi solo aparecen en préstamos y en unas pocas palabras.",
       "La pronunciación aparece entre corchetes con el Alfabeto Fonético Internacional (AFI)."
     ]
@@ -398,7 +398,7 @@
           {
             "tag": "-een",
             "name": "De raíz",
-            "description": "Verbos en vocal + l que repite la vocal, y tal, b'eel: la raíz y el juego B.",
+            "description": "Verbos en vocal + l que repite la vocal, y tal, beel: la raíz y el juego B.",
             "examples": [
               {
                 "from": "emel",
@@ -406,8 +406,8 @@
                 "meaning": "bajé"
               },
               {
-                "from": "b'eel",
-                "to": "b'ini",
+                "from": "beel",
+                "to": "bini",
                 "meaning": "se fue"
               }
             ]
@@ -415,7 +415,7 @@
           {
             "tag": "uch",
             "name": "De actividad",
-            "description": "Verbos como janal, meyaj, ts'iib': uchi «pasó» + el verbo con su pronombre.",
+            "description": "Verbos como janal, meyaj, ts'iib: uchi «pasó» + el verbo con su pronombre.",
             "examples": [
               {
                 "from": "janal",
@@ -471,11 +471,11 @@
         "description": "Ma' niega; con el aspecto en curso se vuelve ma' t-. Para prohibir se usa ma' con el pronombre de la segunda persona.",
         "items": [
           {
-            "text": "ma' tub'eel",
+            "text": "ma' tubeel",
             "translation": "no va"
           },
           {
-            "text": "ma' ab'eel",
+            "text": "ma' abeel",
             "translation": "¡no vayas!"
           },
           {
@@ -505,7 +505,7 @@
             "translation": "Ahí viene mi esposa."
           },
           {
-            "text": "Aji a ts'ub'u.",
+            "text": "Aji a ts'ubu.",
             "translation": "El niño se despertó."
           }
         ]
@@ -554,14 +554,14 @@
             "affix": "yan",
             "kind": "auxiliar",
             "meaning": "Obligatorio: tener que",
-            "example": "yan ub'eel",
+            "example": "yan ubeel",
             "translation": "tiene que ir"
           },
           {
             "affix": "paatal, patal",
             "kind": "auxiliar",
             "meaning": "Habilidad: poder",
-            "example": "paatal inb'etik",
+            "example": "paatal inbetik",
             "translation": "puedo hacerlo"
           },
           {
@@ -575,14 +575,14 @@
             "affix": "kaj-",
             "kind": "auxiliar",
             "meaning": "Incoativo: empezar, con el juego B",
-            "example": "kajeen ti b'eel",
+            "example": "kajeen ti beel",
             "translation": "empecé a ir"
           },
           {
             "affix": "je'd'e'ek … -V",
             "kind": "aspecto",
             "meaning": "Asegurativo",
-            "example": "je'd'e'ek upaatal ub'ete'",
+            "example": "je'd'e'ek upaatal ubete'",
             "translation": "sí podrá hacerlo"
           },
           {
@@ -591,7 +591,7 @@
             "meaning": "Pasado inmediato; todavía"
           },
           {
-            "affix": "seeb'",
+            "affix": "seeb",
             "kind": "aspecto",
             "meaning": "Celeritivo: pronto, rápido"
           },
@@ -601,17 +601,17 @@
             "meaning": "Necesitativo"
           },
           {
-            "affix": "job'ol",
+            "affix": "jobol",
             "kind": "auxiliar",
             "meaning": "Terminativo: acabarse",
-            "example": "job'i a meyaja",
+            "example": "jobi a meyaja",
             "translation": "el trabajo está terminado"
           },
           {
             "affix": "ma'",
             "kind": "partícula",
             "meaning": "Negación; ma' t- con el incompletivo",
-            "example": "ma' tub'eel",
+            "example": "ma' tubeel",
             "translation": "no va"
           },
           {
@@ -739,31 +739,31 @@
             "translation": "dormí"
           },
           {
-            "affix": "-b'-",
+            "affix": "-b-",
             "kind": "sufijo",
             "meaning": "Pasivo",
-            "example": "tan ulochb'ol",
+            "example": "tan ulochbol",
             "translation": "se está doblando"
           },
           {
-            "affix": "-b'-aan-",
+            "affix": "-b-aan-",
             "kind": "sufijo",
             "meaning": "Pasivo sin agente",
-            "example": "tan ulochb'aanäl",
+            "example": "tan ulochbaanäl",
             "translation": "lo están doblando"
           },
           {
             "affix": "-a'an",
             "kind": "sufijo",
             "meaning": "Participio",
-            "example": "b'ula'an",
+            "example": "bula'an",
             "translation": "sumergido"
           },
           {
-            "affix": "-b'il",
+            "affix": "-bil",
             "kind": "sufijo",
             "meaning": "Participio pasivo",
-            "example": "k'exb'il",
+            "example": "k'exbil",
             "translation": "comprado"
           },
           {
@@ -942,14 +942,14 @@
         "es": "venir"
       },
       {
-        "entry": "b'eel",
+        "entry": "beel",
         "class": "I",
-        "completive": "b'in",
+        "completive": "bin",
         "dependent": "xi'",
         "imperative": "xen",
         "meaning": "ir",
         "es": "ir",
-        "note": "Irregular: pasado b'ini, subjuntivo xi'ik, imperativo xen"
+        "note": "Irregular: pasado bini, subjuntivo xi'ik, imperativo xen"
       },
       {
         "entry": "wäyäl",
@@ -980,7 +980,7 @@
         "es": "trabajar"
       },
       {
-        "entry": "ts'iib'",
+        "entry": "ts'iib",
         "class": "A",
         "meaning": "escribir",
         "es": "escribir"
@@ -1030,9 +1030,9 @@
         "es": "verlo"
       },
       {
-        "entry": "b'etik",
+        "entry": "betik",
         "class": "T",
-        "dependent": "b'ete'",
+        "dependent": "bete'",
         "meaning": "hacerlo",
         "es": "hacerlo"
       },

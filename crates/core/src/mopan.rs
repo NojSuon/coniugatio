@@ -1,6 +1,6 @@
 //! Conjugation for Mopan Maya, written with the alphabet of the Academia
 //! de Lenguas Mayas de Guatemala (ALMG): a ä e i o u, long vowels doubled,
-//! b' d' ch ch' j k k' p' t' ts ts' x and the glottal stop ('). No tone.
+//! b d' ch ch' j k k' p' t' ts ts' x and the glottal stop ('). No tone.
 //!
 //! The morphology follows Charles Andrew Hofling, *Mopan Maya–Spanish–
 //! English Dictionary* (University of Utah Press, 2011), §4.1–4.2:
@@ -14,7 +14,7 @@
 //! ```
 //!
 //! Set A is written joined to the verb. The intransitive completive marks
-//! the subject with set B (emeen, taleen, b'ini); activity verbs make it
+//! the subject with set B (emeen, taleen, bini); activity verbs make it
 //! with the auxiliary uch «happen» (uchi injanal «comí»); positionals
 //! with -l-aj (jitlajeen «me acosté»).
 
@@ -27,7 +27,7 @@ use crate::spanish;
 pub enum Class {
     /// Root intransitive (riv): emel, okol, tal. Completive with set B.
     I,
-    /// Activity verb (actv): janal, meyaj, ts'iib'. Completive with uch.
+    /// Activity verb (actv): janal, meyaj, ts'iib. Completive with uch.
     A,
     /// Positional (pv) in -tal: jittal, noytal. Completive -l-aj.
     P,
@@ -58,17 +58,17 @@ pub enum Form {
     Completive,
     /// ka' + dependent status: ka' emekech «que bajes».
     Subjunctive,
-    /// yan: yan inb'eel «tengo que ir».
+    /// yan: yan inbeel «tengo que ir».
     Obligative,
-    /// paatal: paatal inb'etik «puedo hacerlo».
+    /// paatal: paatal inbetik «puedo hacerlo».
     Abilitative,
-    /// suk: suken injante «acostumbro comerlo», suk ti b'eel «suele ir».
+    /// suk: suken injante «acostumbro comerlo», suk ti beel «suele ir».
     Customary,
-    /// kajal: kajeen ti b'eel «empecé a ir», kaji ujante «empezó a comerlo».
+    /// kajal: kajeen ti beel «empecé a ir», kaji ujante «empezó a comerlo».
     Inceptive,
     /// emen «¡baja!», ila «¡míralo!» (2nd person only).
     Imperative,
-    /// ma' ab'eel «¡no vayas!» (2nd person only).
+    /// ma' abeel «¡no vayas!» (2nd person only).
     Prohibitive,
 }
 
@@ -80,7 +80,7 @@ pub struct Tense {
     #[serde(default)]
     pub description: String,
     pub form: Form,
-    /// ma' t-: ma' tub'eel «no va».
+    /// ma' t-: ma' tubeel «no va».
     #[serde(default)]
     pub negative: bool,
     #[serde(default)]
@@ -92,14 +92,14 @@ pub struct Entry {
     /// Citation form (incompletive): "emel", "janal", "jittal", "ilik".
     pub entry: String,
     pub class: Class,
-    /// Completive stem when it isn't the root: b'eel → b'in.
+    /// Completive stem when it isn't the root: beel → bin.
     #[serde(default)]
     pub completive: Option<String>,
-    /// Dependent stem when it isn't the root: b'eel → xi' (xi'ik).
+    /// Dependent stem when it isn't the root: beel → xi' (xi'ik).
     /// For transitive verbs, the whole dependent form: ilik → ila'.
     #[serde(default)]
     pub dependent: Option<String>,
-    /// Imperative when it isn't the rule: b'eel → xen, ilik → ila.
+    /// Imperative when it isn't the rule: beel → xen, ilik → ila.
     #[serde(default)]
     pub imperative: Option<String>,
     pub meaning: String,
@@ -379,7 +379,7 @@ fn build_one(verb: &Verb, tense: &Tense, person: usize, plural: bool) -> Option<
             if person != 1 {
                 return None;
             }
-            // ma' ab'eel «¡no vayas!»; transitive in the dependent: ma' ajante.
+            // ma' abeel «¡no vayas!»; transitive in the dependent: ma' ajante.
             let v = if t {
                 verb.transitive_dependent_pl(plural, person)
             } else {
@@ -401,6 +401,8 @@ fn normalize(verb: &str) -> std::result::Result<String, Error> {
             c => c,
         })
         .collect();
+    // The implosive b is written without an apostrophe; b' still works.
+    let w = w.replace("b'", "b");
     if w.is_empty() {
         return Err(Error::EmptyVerb);
     }
@@ -529,13 +531,13 @@ mod tests {
 
     #[test]
     fn completive_by_class() {
-        // §4.1.1.2: taleen … tali, taloo'; em-eech; b'ini; wäyneen.
+        // §4.1.1.2: taleen … tali, taloo'; em-eech; bini; wäyneen.
         assert_eq!(
             six("tal", "completive"),
             ["taleen", "taleech", "tali", "talo'on", "tale'ex", "taloo'"]
         );
         assert_eq!(six("emel", "completive")[1], "emeech");
-        assert_eq!(six("b'eel", "completive")[2], "b'ini");
+        assert_eq!(six("beel", "completive")[2], "bini");
         assert_eq!(six("wäyäl", "completive")[0], "wäyneen");
         assert_eq!(six("jittal", "completive")[2], "jitlaji");
         assert_eq!(six("janal", "completive")[0], "uchi injanal");
@@ -549,7 +551,7 @@ mod tests {
         // §4.2.2: ka' em-ek-ech, em-en; ka' tal-ak-ech; xi'ik, xen; ila.
         assert_eq!(six("emel", "subjunctive")[1], "ka' emekech");
         assert_eq!(six("tal", "subjunctive")[1], "ka' talakech");
-        assert_eq!(six("b'eel", "subjunctive")[2], "ka' xi'ik");
+        assert_eq!(six("beel", "subjunctive")[2], "ka' xi'ik");
         assert_eq!(six("wäyäl", "subjunctive")[2], "ka' wäynäk");
         assert_eq!(six("jittal", "subjunctive")[2], "ka' jitlak");
         assert_eq!(six("jantik", "subjunctive")[2], "ka' ujante");
@@ -557,7 +559,7 @@ mod tests {
         assert_eq!(six("emel", "imperative")[1], "emen");
         assert_eq!(six("wäyäl", "imperative")[1], "wäynen");
         assert_eq!(six("jittal", "imperative")[1], "jitlen");
-        assert_eq!(six("b'eel", "imperative")[4], "xene'ex");
+        assert_eq!(six("beel", "imperative")[4], "xene'ex");
         assert_eq!(six("ilik", "imperative")[1], "ila");
         assert_eq!(six("jantik", "imperative")[1], "jante");
         assert_eq!(six("emel", "imperative")[0], "");
@@ -565,12 +567,12 @@ mod tests {
 
     #[test]
     fn negation_and_auxiliaries() {
-        // ma' t-u-b'eel; ma' a-b'eel; paatal im-b'et-ik; yan u-b'eel.
-        assert_eq!(six("b'eel", "negative")[2], "ma' tub'eel");
-        assert_eq!(six("b'eel", "prohibitive")[1], "ma' ab'eel");
+        // ma' t-u-beel; ma' a-beel; paatal im-bet-ik; yan u-beel.
+        assert_eq!(six("beel", "negative")[2], "ma' tubeel");
+        assert_eq!(six("beel", "prohibitive")[1], "ma' abeel");
         assert_eq!(six("jantik", "prohibitive")[1], "ma' ajante");
-        assert_eq!(six("b'etik", "abilitative")[0], "paatal inb'etik");
-        assert_eq!(six("b'eel", "obligative")[2], "yan ub'eel");
+        assert_eq!(six("betik", "abilitative")[0], "paatal inbetik");
+        assert_eq!(six("beel", "obligative")[2], "yan ubeel");
         assert_eq!(six("emel", "negative")[3], "ma' tiwemel");
         assert_eq!(six("jantik", "subjunctive")[5], "ka' ujantejoo'");
     }
@@ -586,8 +588,8 @@ mod tests {
         assert_eq!(t.rows[3].plural.as_deref(), Some("talo'one'ex"));
         // Hofling: suk(-en) in-jan-t-e; kaj-i ti …; kaj-oo' u-t'ul-u'.
         assert_eq!(six("jantik", "customary")[0], "suken injante");
-        assert_eq!(six("b'eel", "customary")[2], "suk ti b'eel");
-        assert_eq!(six("b'eel", "inceptive")[0], "kajeen ti b'eel");
+        assert_eq!(six("beel", "customary")[2], "suk ti beel");
+        assert_eq!(six("beel", "inceptive")[0], "kajeen ti beel");
         assert_eq!(six("jantik", "inceptive")[5], "kajoo' ujante");
     }
 

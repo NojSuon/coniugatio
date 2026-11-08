@@ -1,0 +1,610 @@
+{
+  "name": "维沙里卡语",
+  "variant": "维沙里卡语（惠乔尔语）",
+  "region": "墨西哥哈利斯科州、纳亚里特州和杜兰戈州",
+  "summary": "西马德雷山脉的一种犹他-阿兹特克语。说这种语言的人称它为 wixárika 或 wixaritari niukiyari；西班牙语称为惠乔尔语（huichol）。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "按列表中的写法输入动词：'uximaya「工作」，kwika「唱歌」，mie「去」。ɨ 也可以输入为 +。",
+    "own": {
+      "hint": "输入任意动词的词根和它的中文意思。选择它带的前缀：许多动词用 ta-（一次，单数）或 ti-（多次，复数）。",
+      "label": "动词词根",
+      "es_placeholder": "玩",
+      "types_help": "空间前缀和数前缀是动词的一部分，每个动词各不相同；词典会给出它们。"
+    },
+    "types": [
+      {
+        "id": "ti",
+        "label": "带 ti-（复数，多次）"
+      },
+      {
+        "id": "ta",
+        "label": "带 ta-（单数，一次）"
+      },
+      {
+        "id": "u",
+        "label": "带 u-（看得见的，这里）"
+      },
+      {
+        "id": "e",
+        "label": "带 e-（远处，看不见）"
+      },
+      {
+        "id": "",
+        "label": "无前缀"
+      }
+    ]
+  },
+  "source": {
+    "full": "Stefanie Ramos Bierge，《Clause Types and Transitivity in Wixárika (Huichol): A Uto-Aztecan Language》（博士论文，科罗拉多大学，2016 年）；José Luis Iturrioz Leza、Paula Gómez López 和 Xitakame Ramírez de la Cruz，〈La morfología verbal〉，载《Lenguas y literaturas indígenas de Jalisco》（哈利斯科州文化厅）。拼写依 Iturrioz 等（1999 年）。另见：Joseph E. Grimes 等，《El huichol: apuntes sobre el léxico》（康奈尔大学，1981 年）。"
+  },
+  "about": [
+    "维沙里卡语，即惠乔尔语，属于犹他-阿兹特克语系，与纳耶里语（科拉语）关系密切。它通行于西马德雷山脉，在哈利斯科州北部以及纳亚里特州、杜兰戈州和萨卡特卡斯州的部分地区，约有 6 万人使用。",
+    "说这种语言的人自称 wixaritari（单数 wixárika），称自己的语言为 wixárika 或 wixaritari niukiyari。主要社区有圣安德烈斯科阿米亚塔（Tateikie）、圣卡塔琳娜（Tuapuritari）和圣塞瓦斯蒂安（Wautia）。他们每年都会前往圣路易斯波托西州的维里库塔朝圣。",
+    "这是一种高度多式综合的语言：一个动词可以聚集二十多个部分，表示谁做、对谁做、在哪里、怎样做、做几次，以及有多确定。许多动词会随主语的数或动作是否完成而换用词根：mie「去」，hu「他们去」，tɨa「去了」，kɨ「他们去了」。"
+  ],
+  "orthography": {
+    "intro": "我们使用 Iturrioz 等人（1999 年）的拼写法：5 个元音，可以是长元音（写两次），以及 13 个辅音。ɨ 是介于 i 和 u 之间的元音；x 读作卷舌的 r，撇号（'）是喉塞音。",
+    "letters": [
+      {
+        "meaning": "河"
+      },
+      {
+        "meaning": "风"
+      },
+      {
+        "meaning": "玉米"
+      },
+      {
+        "meaning": "箭"
+      },
+      {
+        "meaning": "女人"
+      },
+      {
+        "meaning": "水"
+      },
+      {
+        "meaning": "房子"
+      },
+      {
+        "meaning": "土地"
+      },
+      {
+        "meaning": "鹿"
+      },
+      {
+        "meaning": "刀"
+      },
+      {
+        "meaning": "玉米饼"
+      },
+      {
+        "meaning": "日"
+      },
+      {
+        "meaning": "人"
+      },
+      {
+        "meaning": "狗"
+      },
+      {
+        "meaning": "母鸡"
+      },
+      {
+        "meaning": "锅"
+      },
+      {
+        "meaning": "郊狼"
+      },
+      {
+        "meaning": "男人"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "短元音"
+      },
+      {
+        "title": "长元音"
+      }
+    ],
+    "notes": [
+      "元音的长短会改变意思：haari「鳄鱼」，hari「葫芦」；tuutú「花」，tutu「祖先」。",
+      "重音也能区分词义：táame「我们」，taamé「牙齿」。只有重音不在倒数第二个音节时才写出：'ukí「男人」，maxa「鹿」。",
+      "维沙里卡语没有 o：u 可以读得像 o（teyupani 听起来像「teyopani」）。",
+      "方括号中是国际音标（IPA）标注的发音。"
+    ]
+  },
+  "grammar": {
+    "intro": "维沙里卡语的动词几乎把一切都放在词根前面：谁做、说话人有多确定、对谁做、在哪里、做几次。词根后面是时态和体。",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "主语",
+            "description": "ne- 我，pe- 你，— 他/她；te- 我们，xe- 你们，me- 他们。"
+          },
+          {
+            "slot": "断言",
+            "description": "pɨ- 此时此地断言的事；mɨ- 叙述的事；ka- 表示否定。"
+          },
+          {
+            "slot": "前缀",
+            "description": "ta- / ti- 单数或复数，u- 看得见的，e- 远处，ka- 向下，ti- 向上……"
+          },
+          {
+            "slot": "词根",
+            "description": "在某些动词中，它随数或体而变。"
+          },
+          {
+            "slot": "时态",
+            "description": "-kai 未完成体，-xɨ 完成体，-ni 将来时，-ne / -tɨwe 进行体。"
+          }
+        ]
+      },
+      {
+        "title": "代词",
+        "description": "主语和宾语用前缀标在动词上；独立代词只起强调作用。",
+        "columns": [
+          "人称",
+          "独立代词",
+          "主语",
+          "宾语"
+        ],
+        "rows": [
+          {
+            "label": "我"
+          },
+          {
+            "label": "你"
+          },
+          {
+            "label": "他，她"
+          },
+          {
+            "label": "我们"
+          },
+          {
+            "label": "你们"
+          },
+          {
+            "label": "他们"
+          }
+        ],
+        "note": "me- 和 wa- 只用于有生命的事物。"
+      },
+      {
+        "title": "会变化的词根",
+        "description": "有些动词在复数或动作完成时换用另一个词根。",
+        "items": [
+          {
+            "tag": "去",
+            "name": "mie · hu · tɨa · kɨ",
+            "description": "未完成体单数和复数，完成体单数和复数。",
+            "examples": [
+              {
+                "meaning": "我去 · 他/她去了"
+              }
+            ]
+          },
+          {
+            "tag": "到达",
+            "name": "nua · 'axɨa",
+            "description": "完成体的单数和复数。",
+            "examples": [
+              {
+                "meaning": "我到了 · 我们到了"
+              }
+            ]
+          },
+          {
+            "tag": "吃",
+            "name": "kwa · kwai",
+            "description": "未完成体和完成体。",
+            "examples": [
+              {
+                "meaning": "他/她吃 · 他/她吃了"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "动作的单数和复数",
+        "description": "在许多活动动词中，ta- 表示单个动作或单个施事者，ti- 表示多个。",
+        "items": [
+          {
+            "translation": "他/她唱"
+          },
+          {
+            "translation": "他们唱歌"
+          },
+          {
+            "translation": "他/她哭"
+          },
+          {
+            "translation": "他们哭"
+          }
+        ]
+      },
+      {
+        "title": "例句",
+        "items": [
+          {
+            "translation": "男孩吃了一根香蕉。"
+          },
+          {
+            "translation": "水是热的。"
+          },
+          {
+            "translation": "一只黑猫在那里睡觉。"
+          },
+          {
+            "translation": "我们给他们献上玉米粽。"
+          }
+        ]
+      },
+      {
+        "title": "动词的所有词缀",
+        "description": "动词可以带的每个部分：人称、情态、空间和数前缀，以及时态、体和连接后缀。",
+        "items": [
+          {
+            "kind": "主语前缀",
+            "meaning": "主语：我、你、他/她",
+            "translation": "我工作"
+          },
+          {
+            "kind": "主语前缀",
+            "meaning": "主语：我们、你们、他们（me- 只用于有生命的）",
+            "translation": "他们唱歌"
+          },
+          {
+            "kind": "宾语前缀",
+            "meaning": "宾语：我、你、他/她/它",
+            "translation": "我会去看你"
+          },
+          {
+            "kind": "宾语前缀",
+            "meaning": "宾语：我们、你们、他们（有生命的）",
+            "translation": "我们那时在拜访他们"
+          },
+          {
+            "kind": "情态前缀",
+            "meaning": "对眼前之事的断言，此时此地",
+            "translation": "他/她唱"
+          },
+          {
+            "kind": "情态前缀",
+            "meaning": "对叙述之事或不在眼前之事的断言"
+          },
+          {
+            "kind": "情态前缀",
+            "meaning": "正式语体：重要的或普遍有效的信息",
+            "translation": "它是热的（小心）"
+          },
+          {
+            "kind": "情态前缀",
+            "meaning": "叙述",
+            "translation": "他/她开始跑了"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "否定",
+            "translation": "我不工作"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "疑问，「怎样」",
+            "translation": "它是怎么跑的？"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "条件：「如果」",
+            "translation": "如果你来"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "分配：有生命的复数主语",
+            "translation": "我们工作"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "单数或复数效果：一个或多个动作或施事者",
+            "translation": "他/她唱歌 · 他们唱歌"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "泛指：未指明的宾语",
+            "translation": "他/她吃了"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "反身和中动"
+          },
+          {
+            "kind": "空间前缀",
+            "meaning": "看得见的，这里",
+            "translation": "他/她到了"
+          },
+          {
+            "kind": "空间前缀",
+            "meaning": "远处，看不见",
+            "translation": "他/她走了"
+          },
+          {
+            "kind": "空间前缀",
+            "meaning": "图形，朝这边（向心）",
+            "translation": "他/她摔倒了"
+          },
+          {
+            "kind": "空间前缀",
+            "meaning": "整体：全部，到处",
+            "translation": "我会睡觉"
+          },
+          {
+            "kind": "空间前缀",
+            "meaning": "向下",
+            "translation": "他们那时在睡觉"
+          },
+          {
+            "kind": "空间前缀",
+            "meaning": "向上",
+            "translation": "他们（往上）去"
+          },
+          {
+            "kind": "空间前缀",
+            "meaning": "里面，平坦的地方",
+            "translation": "我们去了"
+          },
+          {
+            "kind": "空间前缀",
+            "meaning": "环形，往返"
+          },
+          {
+            "kind": "空间前缀",
+            "meaning": "笔直，逆流而上，边缘",
+            "translation": "我们到了"
+          },
+          {
+            "kind": "空间前缀",
+            "meaning": "这一边，纵向，朝向，那边"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "过去未完成体",
+            "translation": "他/她那时在玩"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "完成体",
+            "translation": "他们洗了澡"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "将来时（也用于叙述）",
+            "translation": "我会睡觉"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "持续过去时"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "进行体：单数，复数",
+            "translation": "我们正在跳舞"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "习惯式",
+            "translation": "他们（在仪式上）唱歌"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "可能体"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "愿望体：想",
+            "translation": "他/她想问"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "使役",
+            "translation": "我们给他们献上"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "施用式；被动；起始（-ri）",
+            "translation": "我把它给你"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "及物；被动",
+            "translation": "它们被吃掉了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "同一主语，不同主语（在连接的小句中）",
+            "translation": "他/她哭着到了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "先时：同一主语，不同主语",
+            "translation": "我到的时候，他/她走了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "「因为，为了」；「当……时」",
+            "translation": "因为我呼吸"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "第一人称"
+      },
+      {
+        "id": "2",
+        "label": "第二人称"
+      },
+      {
+        "id": "3",
+        "label": "第三人称"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present",
+        "group": "直陈式",
+        "name": "现在时",
+        "description": "pɨ- + 未完成体词根。"
+      },
+      {
+        "id": "imperfect",
+        "group": "直陈式",
+        "name": "未完成过去时",
+        "description": "以前常发生的事（-kai）。"
+      },
+      {
+        "id": "perfective",
+        "group": "直陈式",
+        "name": "完成体",
+        "description": "发生并结束了的事：完成体词根或 -xɨ。"
+      },
+      {
+        "id": "future",
+        "group": "直陈式",
+        "name": "将来时",
+        "description": "-ni。"
+      },
+      {
+        "id": "progressive",
+        "group": "进行体",
+        "name": "现在进行时",
+        "description": "单数用 -ne，复数用 -tɨwe。"
+      },
+      {
+        "id": "past-progressive",
+        "group": "进行体",
+        "name": "过去进行时",
+        "description": "-ne / -tɨwe + -kai。"
+      },
+      {
+        "id": "neg-present",
+        "group": "否定",
+        "name": "现在时",
+        "description": "用 ka- 代替 pɨ-。"
+      },
+      {
+        "id": "neg-perfective",
+        "group": "否定",
+        "name": "完成体",
+        "description": "ka- + 完成体词根。"
+      },
+      {
+        "id": "neg-future",
+        "group": "否定",
+        "name": "将来时",
+        "description": "ka- … -ni。"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "'uximaya",
+        "meaning": "工作",
+        "es": "工作"
+      },
+      {
+        "entry": "kwika",
+        "meaning": "唱歌",
+        "es": "唱歌",
+        "note": "ta- 一次或一个人唱，ti- 多次"
+      },
+      {
+        "entry": "nei",
+        "meaning": "跳舞",
+        "es": "跳舞"
+      },
+      {
+        "entry": "waika",
+        "meaning": "玩",
+        "es": "玩"
+      },
+      {
+        "entry": "'ɨwa",
+        "meaning": "洗澡",
+        "es": "洗澡"
+      },
+      {
+        "entry": "tsua",
+        "meaning": "哭",
+        "es": "哭"
+      },
+      {
+        "entry": "nawe",
+        "meaning": "笑",
+        "es": "笑"
+      },
+      {
+        "entry": "ku",
+        "meaning": "睡觉",
+        "es": "睡觉",
+        "note": "复数 kukutsu"
+      },
+      {
+        "entry": "tsuna",
+        "meaning": "跳",
+        "es": "跳"
+      },
+      {
+        "entry": "kwa",
+        "meaning": "吃",
+        "es": "吃",
+        "note": "完成体 kwai"
+      },
+      {
+        "entry": "'enie",
+        "meaning": "听见，听",
+        "es": "听"
+      },
+      {
+        "entry": "we",
+        "meaning": "掉下",
+        "es": "掉下"
+      },
+      {
+        "entry": "ke",
+        "meaning": "起床",
+        "es": "起床",
+        "note": "复数 'ui"
+      },
+      {
+        "entry": "nautsa",
+        "meaning": "跑",
+        "es": "跑"
+      },
+      {
+        "entry": "wi",
+        "meaning": "飞",
+        "es": "飞"
+      },
+      {
+        "entry": "mie",
+        "meaning": "去",
+        "es": "去",
+        "note": "词根 mie、hu（去，他们去），tɨa、kɨ（去了，他们去了）"
+      },
+      {
+        "entry": "nua",
+        "meaning": "到达，来",
+        "es": "到达",
+        "note": "现在时 'axe，完成体 nua / 'axɨa"
+      }
+    ]
+  }
+}

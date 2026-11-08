@@ -14,7 +14,7 @@ fn run(conjugation_json: &str, verb: &str, opts: &Options) -> Result<String, Str
 }
 
 /// Conjugates `verb` with a language's `conjugation` block (as JSON).
-/// `lang` is the page's language ("es" or "en"): it picks the language of
+/// `lang` is the page's language ("es", "en" or "zh"): it picks the language of
 /// the equivalents and of the error messages. Returns the result as JSON,
 /// or a readable error message.
 #[wasm_bindgen]

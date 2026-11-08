@@ -1,0 +1,793 @@
+{
+  "name": "普雷佩查语",
+  "variant": "高原和湖区的普雷佩查语",
+  "region": "墨西哥米却肯州",
+  "summary": "米却肯州的一种孤立语言，没有已知的亲属语言。说这种语言的人称它为 P'urhépecha 或 P'urhé；它也被称为普雷佩查语或塔拉斯科语。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "输入动词的不定式（带 -ni）或只输入词根：uandani「说话」，t'ireni「吃」，ch'anani「玩」。重音符号可写可不写；如果写了，会保留下来。",
+    "own": {
+      "hint": "输入任意动词的不定式和它的中文意思。我们会在词根后加上后缀来为它变位。",
+      "label": "动词不定式",
+      "es_placeholder": "犁地",
+      "types_help": "宾语是复数时，在词根后加 -a-：exe-a-xati「他/她正在看他们」。意思要写上「他们」：「看他们」。"
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "无宾语或单数宾语"
+      },
+      {
+        "id": "pl",
+        "label": "复数宾语（-a-）：exeaxati"
+      }
+    ]
+  },
+  "source": {
+    "full": "Ma. Guadalupe Hernández Dimas、Roberto Fabián Luis 和 Sereno Coló，《Curso de lengua p'urhépecha (para no hablantes)》，Fernando Nava 课堂笔记，墨西哥国立自治大学人类学研究所，1998–1999 年；Alberto Medina Pérez，《Guía lingüística p'urhépecha》，圣尼古拉斯·德·伊达尔戈米却肯大学，2006 年。另见：Paul P. de Wolf，《Curso básico del tarasco hablado》，米却肯学院。"
+  },
+  "about": [
+    "普雷佩查语（P'urhépecha，也叫塔拉斯科语）通行于米却肯州：在高原、帕茨夸罗湖周边、十一村峡谷和萨卡普湿地。使用者超过 14 万人。",
+    "它是一种孤立语言：在墨西哥和美洲其他地方都没有已知的亲属语言。它曾是中美洲一个强大国家的语言，那个国家的首都是钦增灿。",
+    "它是一种黏着语，几乎不用前缀：动词在词根后一个接一个地加上后缀。一个动词可以有十几个音节。"
+  ],
+  "orthography": {
+    "intro": "我们使用今天的普雷佩查语字母：6 个元音和 21 个辅音。撇号表示送气辅音（带一股气流），ï 是央元音，介于 i 和 u 之间。",
+    "letters": [
+      {
+        "meaning": "打"
+      },
+      {
+        "meaning": "十"
+      },
+      {
+        "meaning": "独木舟"
+      },
+      {
+        "meaning": "玩"
+      },
+      {
+        "meaning": "妈妈"
+      },
+      {
+        "meaning": "看，看见"
+      },
+      {
+        "meaning": "和"
+      },
+      {
+        "meaning": "柴火"
+      },
+      {
+        "meaning": "蜘蛛"
+      },
+      {
+        "meaning": "雨"
+      },
+      {
+        "meaning": "阿托莱（玉米饮料）"
+      },
+      {
+        "meaning": "辣椒"
+      },
+      {
+        "meaning": "心"
+      },
+      {
+        "meaning": "去"
+      },
+      {
+        "meaning": "树"
+      },
+      {
+        "meaning": "岛"
+      },
+      {
+        "meaning": "歌"
+      },
+      {
+        "meaning": "芦苇"
+      },
+      {
+        "meaning": "蝴蝶"
+      },
+      {
+        "meaning": "犁地"
+      },
+      {
+        "meaning": "偷"
+      },
+      {
+        "meaning": "四"
+      },
+      {
+        "meaning": "吃"
+      },
+      {
+        "meaning": "母鸡"
+      },
+      {
+        "meaning": "蚯蚓"
+      },
+      {
+        "meaning": "说话"
+      },
+      {
+        "meaning": "责骂"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "元音"
+      }
+    ],
+    "notes": [
+      "除了西班牙语借词以外，普雷佩查语的词不以 b、d、g、ï、nh、r 或 rh 开头。b、d 和 g 出现在 m 或 n 之后：témbeni，náandi，pirésïnga。",
+      "每个词都以元音结尾。如果最后一个元音不重读，就读得很弱，或几乎不读：uandani 听起来几乎像「uandan」。",
+      "书面重音符号标出重读音节，并且可以改变意思：karáni「写」，kárani「飞」。书中大多把它写在动词词根上（piré-、uandá-）。",
+      "方括号中是国际音标（IPA）标注的发音。"
+    ]
+  },
+  "grammar": {
+    "intro": "普雷佩查语的动词从左往右构成：先是词根，然后依次是表示动作如何展开、什么时候、是陈述还是疑问、多少人做的后缀。",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "词根",
+            "description": "不带 -ni 的不定式。"
+          },
+          {
+            "slot": "体",
+            "description": "-xa 正在，-sïn 习惯，-s 已做，-xam 即将。"
+          },
+          {
+            "slot": "时态",
+            "description": "-p- 过去时，-a 将来时，-pirin 条件式；现在时什么都不加。"
+          },
+          {
+            "slot": "语气",
+            "description": "-ka 第一和第二人称，-ti 第三人称；疑问句中用 -ki / -pi。"
+          },
+          {
+            "slot": "复数",
+            "description": "-ksï 我们和他们，-jtsï 你们。"
+          }
+        ]
+      },
+      {
+        "title": "动词词尾",
+        "description": "加在词根后面。在 m 或 n 之后，ka 和 ti 变成 ga 和 di：sïn + ka → sïnga。",
+        "columns": [
+          "时态",
+          "第一和第二人称",
+          "第三人称",
+          "疑问"
+        ],
+        "rows": [
+          {
+            "label": "现在实际体"
+          },
+          {
+            "label": "现在习惯体"
+          },
+          {
+            "label": "现在完成时"
+          },
+          {
+            "label": "现在起始体"
+          },
+          {
+            "label": "过去实际体"
+          },
+          {
+            "label": "过去习惯体"
+          },
+          {
+            "label": "过去完成体"
+          },
+          {
+            "label": "过去起始体"
+          },
+          {
+            "label": "将来时"
+          },
+          {
+            "label": "条件式"
+          }
+        ],
+        "note": "疑问形式适用于所有人称：¿uandaxaki?「他/她在说话吗？」，¿uandaxakiksï?「他们在说话吗？」。"
+      },
+      {
+        "title": "人称",
+        "description": "代词很少用：动词本身已经表明是谁。要强调主语时，用代词或附在动词上的附着词。",
+        "columns": [
+          "人称",
+          "代词",
+          "附着词",
+          "例子"
+        ],
+        "rows": [
+          {
+            "label": "我"
+          },
+          {
+            "label": "你"
+          },
+          {
+            "label": "他，她"
+          },
+          {
+            "label": "我们"
+          },
+          {
+            "label": "你们"
+          },
+          {
+            "label": "他们"
+          }
+        ],
+        "note": "在变位器中，单数附着词（-ni、-re）不写出，复数的写出。"
+      },
+      {
+        "title": "四种体",
+        "description": "在时态之前，普雷佩查语先说明动作如何展开。每种体都有现在和过去。",
+        "items": [
+          {
+            "name": "实际体",
+            "description": "此刻正在发生的事。",
+            "examples": [
+              {
+                "meaning": "我正在吃 · 我那时正在吃"
+              }
+            ]
+          },
+          {
+            "name": "习惯式",
+            "description": "习惯做的事，或会做的事。",
+            "examples": [
+              {
+                "meaning": "我跳舞 · 我以前常跳舞"
+              }
+            ]
+          },
+          {
+            "name": "完成时",
+            "description": "已经做了的事。",
+            "examples": [
+              {
+                "meaning": "我已经唱了 · 我唱了"
+              }
+            ]
+          },
+          {
+            "name": "起始体",
+            "description": "即将发生的事。",
+            "examples": [
+              {
+                "meaning": "我快要唱了 · 我那时快要唱了"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "命令",
+        "description": "命令式就是光杆词根；复数加 -e。表示禁止时，前面加 ásï，从不用「不」。ia 增加「现在、已经」的意思。",
+        "items": [
+          {
+            "translation": "说吧！"
+          },
+          {
+            "translation": "说吧！（你们）"
+          },
+          {
+            "translation": "别说！"
+          },
+          {
+            "translation": "别吃！（你们）"
+          },
+          {
+            "translation": "现在就写！"
+          }
+        ]
+      },
+      {
+        "title": "将来时不规则的动词",
+        "description": "jarhani、jurhani、nirani 和少数其他动词在将来时把 rha 或 ra 变成 u，在条件式中只保留第一个音节。",
+        "items": [
+          {
+            "name": "在",
+            "description": "将来时 jaua-，条件式 ja-。",
+            "examples": [
+              {
+                "meaning": "我会在 · 我就会在"
+              }
+            ]
+          },
+          {
+            "name": "去",
+            "description": "将来时 niua-，条件式 ni-。",
+            "examples": [
+              {
+                "meaning": "我会去 · 我就会去"
+              }
+            ]
+          },
+          {
+            "name": "来",
+            "description": "将来时 jua-，条件式 ju-。",
+            "examples": [
+              {
+                "meaning": "我会来 · 我就会来"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "复数宾语",
+        "description": "接受动作的是复数时，动词在词根后加 -a-，名词加 -ni。",
+        "items": [
+          {
+            "translation": "这些母鸡在吃蚯蚓。"
+          },
+          {
+            "translation": "我会去看望那几位先生。"
+          },
+          {
+            "translation": "看那些舞者！（你们）"
+          }
+        ]
+      },
+      {
+        "title": "例句",
+        "items": [
+          {
+            "translation": "你醒得怎么样？（早上好）"
+          },
+          {
+            "translation": "很好，你呢？"
+          },
+          {
+            "translation": "谢谢。"
+          },
+          {
+            "translation": "卡拉用普雷佩查语说话。"
+          },
+          {
+            "translation": "我想唱歌。"
+          }
+        ]
+      },
+      {
+        "title": "动词的所有词缀",
+        "description": "动词可以带的每个部分：前缀、后缀、小品词和词根变化。",
+        "items": [
+          {
+            "kind": "体后缀",
+            "meaning": "实际体：现在正在发生的事",
+            "translation": "我正在唱"
+          },
+          {
+            "kind": "体后缀",
+            "meaning": "习惯式",
+            "translation": "我唱"
+          },
+          {
+            "kind": "体后缀",
+            "meaning": "完成体",
+            "translation": "我已经唱了"
+          },
+          {
+            "kind": "体后缀",
+            "meaning": "起始体：即将",
+            "translation": "我快要唱了"
+          },
+          {
+            "kind": "体后缀",
+            "meaning": "过去的习惯",
+            "translation": "我以前常唱"
+          },
+          {
+            "kind": "体后缀",
+            "meaning": "过去的起始体",
+            "translation": "我那时快要唱了"
+          },
+          {
+            "kind": "时态后缀",
+            "meaning": "过去",
+            "translation": "我唱了"
+          },
+          {
+            "kind": "时态后缀",
+            "meaning": "将来时",
+            "translation": "我会唱"
+          },
+          {
+            "kind": "时态后缀",
+            "meaning": "条件式",
+            "translation": "我就会唱"
+          },
+          {
+            "kind": "语气后缀",
+            "meaning": "直陈式，第一和第二人称（鼻音后为 -ga）",
+            "translation": "我唱"
+          },
+          {
+            "kind": "语气后缀",
+            "meaning": "直陈式，第三人称（鼻音后为 -di）",
+            "translation": "他/她唱"
+          },
+          {
+            "kind": "语气后缀",
+            "meaning": "疑问式，适用于所有人称",
+            "translation": "他/她在唱吗？"
+          },
+          {
+            "kind": "人称后缀",
+            "meaning": "复数：我们、他们",
+            "translation": "我们已经唱了"
+          },
+          {
+            "kind": "人称后缀",
+            "meaning": "复数：你们",
+            "translation": "你们已经唱了"
+          },
+          {
+            "kind": "附着词",
+            "meaning": "可选的主语：我、你",
+            "translation": "我正在唱"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "复数宾语，放在词根后；将来时为 -aua-",
+            "translation": "他/她正在看他们"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "复数命令式",
+            "translation": "说吧！（你们）"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "禁止式：禁止",
+            "translation": "别说！"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "「现在」，用于命令",
+            "translation": "现在就写！"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "否定",
+            "translation": "我不唱"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "不定式",
+            "translation": "唱"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "动作或事物的名词",
+            "translation": "歌"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "做事的人（施事）",
+            "translation": "歌手"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "第一人称"
+      },
+      {
+        "id": "2",
+        "label": "第二人称"
+      },
+      {
+        "id": "3",
+        "label": "第三人称"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "actual",
+        "group": "现在时",
+        "name": "现在实际体",
+        "description": "现在正在发生的事（-xa）。"
+      },
+      {
+        "id": "habitual",
+        "group": "现在时",
+        "name": "现在习惯体",
+        "description": "习惯做的事，或会做的事（-sïn）。"
+      },
+      {
+        "id": "perfective",
+        "group": "现在时",
+        "name": "现在完成时",
+        "description": "刚做完的事（-s）。"
+      },
+      {
+        "id": "inceptive",
+        "group": "现在时",
+        "name": "现在起始体",
+        "description": "即将发生的事（-xam）。"
+      },
+      {
+        "id": "past-actual",
+        "group": "过去",
+        "name": "过去实际体",
+        "description": "某事打断时正在发生的事（-xap）。"
+      },
+      {
+        "id": "past-habitual",
+        "group": "过去",
+        "name": "过去习惯体",
+        "description": "以前常做、现在不再做的事（-sïamp）。"
+      },
+      {
+        "id": "past-perfective",
+        "group": "过去",
+        "name": "过去完成体",
+        "description": "做过并且完成了的事（-sp）。"
+      },
+      {
+        "id": "past-inceptive",
+        "group": "过去",
+        "name": "过去起始体",
+        "description": "那时即将发生的事（-xanamp）。"
+      },
+      {
+        "id": "future",
+        "group": "将来时和条件式",
+        "name": "将来时",
+        "description": "将要发生的事（-a）。"
+      },
+      {
+        "id": "conditional",
+        "group": "将来时和条件式",
+        "name": "条件式",
+        "description": "本来会发生的事（-pirin）。"
+      },
+      {
+        "id": "imperative",
+        "group": "命令",
+        "name": "命令式",
+        "description": "光杆词根；复数加 -e。"
+      },
+      {
+        "id": "vetative",
+        "group": "命令",
+        "name": "禁止式",
+        "description": "表示禁止：ásï + 词根。"
+      },
+      {
+        "id": "q-actual",
+        "group": "疑问",
+        "name": "现在实际体",
+        "description": "-xaki，适用于所有人称。"
+      },
+      {
+        "id": "q-habitual",
+        "group": "疑问",
+        "name": "现在习惯体",
+        "description": "-sïni。"
+      },
+      {
+        "id": "q-perfective",
+        "group": "疑问",
+        "name": "现在完成时",
+        "description": "-ski。"
+      },
+      {
+        "id": "q-past-actual",
+        "group": "疑问",
+        "name": "过去实际体",
+        "description": "-xepi。"
+      },
+      {
+        "id": "q-past-habitual",
+        "group": "疑问",
+        "name": "过去习惯体",
+        "description": "-sïambi。"
+      },
+      {
+        "id": "q-past-perfective",
+        "group": "疑问",
+        "name": "过去完成体",
+        "description": "-spi。"
+      },
+      {
+        "id": "q-future",
+        "group": "疑问",
+        "name": "将来时",
+        "description": "-a。"
+      },
+      {
+        "id": "q-conditional",
+        "group": "疑问",
+        "name": "条件式",
+        "description": "-pirini。"
+      },
+      {
+        "id": "neg-actual",
+        "group": "否定",
+        "name": "现在实际体",
+        "description": "no + 动词。"
+      },
+      {
+        "id": "neg-habitual",
+        "group": "否定",
+        "name": "现在习惯体",
+        "description": "no + 动词。"
+      },
+      {
+        "id": "neg-past-perfective",
+        "group": "否定",
+        "name": "过去完成体",
+        "description": "no + 动词。"
+      },
+      {
+        "id": "neg-future",
+        "group": "否定",
+        "name": "将来时",
+        "description": "no + 动词。"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "uandani",
+        "meaning": "说话",
+        "es": "说话"
+      },
+      {
+        "entry": "pireni",
+        "meaning": "唱歌",
+        "es": "唱歌"
+      },
+      {
+        "entry": "t'ireni",
+        "meaning": "吃",
+        "es": "吃"
+      },
+      {
+        "entry": "exeni",
+        "meaning": "看，看见",
+        "es": "看"
+      },
+      {
+        "entry": "xukani",
+        "meaning": "责骂",
+        "es": "责骂"
+      },
+      {
+        "entry": "ch'anani",
+        "meaning": "玩",
+        "es": "玩"
+      },
+      {
+        "entry": "karani",
+        "meaning": "写",
+        "es": "写"
+      },
+      {
+        "entry": "arhintani",
+        "meaning": "读",
+        "es": "读"
+      },
+      {
+        "entry": "uarhani",
+        "meaning": "跳舞",
+        "es": "跳舞"
+      },
+      {
+        "entry": "piani",
+        "meaning": "买",
+        "es": "买"
+      },
+      {
+        "entry": "sïpani",
+        "meaning": "偷",
+        "es": "偷"
+      },
+      {
+        "entry": "atani",
+        "meaning": "打；打猎",
+        "es": "打"
+      },
+      {
+        "entry": "jupani",
+        "meaning": "洗",
+        "es": "洗"
+      },
+      {
+        "entry": "uarhoni",
+        "meaning": "鱼",
+        "es": "鱼"
+      },
+      {
+        "entry": "urhuni",
+        "meaning": "磨",
+        "es": "磨"
+      },
+      {
+        "entry": "tepeni",
+        "meaning": "织",
+        "es": "织"
+      },
+      {
+        "entry": "uiriani",
+        "meaning": "跑",
+        "es": "跑"
+      },
+      {
+        "entry": "tarheni",
+        "meaning": "犁地",
+        "es": "犁地"
+      },
+      {
+        "entry": "jatani",
+        "meaning": "骑",
+        "es": "骑"
+      },
+      {
+        "entry": "k'uini",
+        "meaning": "睡觉",
+        "es": "睡觉"
+      },
+      {
+        "entry": "anchikurhini",
+        "meaning": "工作",
+        "es": "工作"
+      },
+      {
+        "entry": "jorhengurhini",
+        "meaning": "学",
+        "es": "学"
+      },
+      {
+        "entry": "mitini",
+        "meaning": "知道",
+        "es": "知道"
+      },
+      {
+        "entry": "uekani",
+        "meaning": "想要",
+        "es": "想要"
+      },
+      {
+        "entry": "uni",
+        "meaning": "能；做",
+        "es": "能够"
+      },
+      {
+        "entry": "jarhani",
+        "meaning": "在（某处），有",
+        "es": "在",
+        "note": "不规则将来时 jauaka；条件式 japiringa。"
+      },
+      {
+        "entry": "nirani",
+        "meaning": "去",
+        "es": "去",
+        "note": "不规则将来时 niuaka；条件式 nipiringa。"
+      },
+      {
+        "entry": "jurhani",
+        "meaning": "来",
+        "es": "来",
+        "note": "不规则将来时 juaka；条件式 jupiringa。"
+      }
+    ]
+  }
+}

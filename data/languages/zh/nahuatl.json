@@ -1,0 +1,661 @@
+{
+  "name": "纳瓦特尔语",
+  "variant": "中部纳瓦特尔语（阿科特佩克）",
+  "region": "墨西哥城阿科特佩克",
+  "summary": "墨西哥中部的一种犹他-阿兹特克语，是古典纳瓦特尔语的继承者。说这种语言的人称它为 maseuallâjtolli；它也被称为墨西卡诺语或中部纳瓦特尔语。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "按词典的写法输入动词，连同它的宾语：tlachiua「做」，tlâjtoa「说话」，kochi「睡觉」。如果输入 ki-（kichiua），就会带上「它」来变位。抑扬符可写可不写。",
+    "own": {
+      "hint": "输入任意动词的词根、它的中文意思，以及它是否带宾语。我们会用中部纳瓦特尔语的规则为它变位。",
+      "label": "动词词根",
+      "es_placeholder": "工作",
+      "types_help": "如果它带 ki-，意思要写上「它」：「做它」。过去时的类别根据词根的形状推断。"
+    },
+    "types": [
+      {
+        "id": "none",
+        "label": "无宾语：kochi，tekiti"
+      },
+      {
+        "id": "ki",
+        "label": "带 ki-「它」：kichiua"
+      },
+      {
+        "id": "tla",
+        "label": "带 tla-「某物」：tlakua"
+      },
+      {
+        "id": "te",
+        "label": "带 te-「某人」：temachtia"
+      },
+      {
+        "id": "mo",
+        "label": "反身 mo-：mopaktia"
+      }
+    ]
+  },
+  "source": {
+    "full": "Thelma D. Sullivan，《Compendio de la gramática náhuatl》（墨西哥国立自治大学历史研究所）；David Charles Wright Carr，《Lectura del náhuatl》，修订增补版（INALI，2016 年）。拼写：Tlâjkuilolpamitl 修订版（墨西哥公共教育部）。"
+  },
+  "about": [
+    "纳瓦特尔语是一种犹他-阿兹特克语，在墨西哥约有一百五十万人使用。中部纳瓦特尔语（NHN）通行于墨西哥谷地的米尔帕阿尔塔、特拉瓦克和特斯科科的部分地区。",
+    "Maseuallâjtolli 的意思是「普通百姓的语言」：maseualli「村里的人」加 tlajtolli「话语、语言」。",
+    "「古典」纳瓦特尔语，也就是 16 至 18 世纪文献中的语言，并不是另一种语言：它是中部方言有记录的最早阶段。所以这个变位器依照古典纳瓦特尔语的语法，并用今天的拼写法书写。"
+  ],
+  "orthography": {
+    "intro": "我们使用墨西哥公共教育部的拼写法 Tlâjkuilolpamitl：4 个元音和 14 个辅音。j 是喉塞音，u 读作 w，抑扬符（â、ê、î、ô）表示两个词结合时吸收了另一个元音的元音。",
+    "letters": [
+      {
+        "meaning": "水"
+      },
+      {
+        "meaning": "狗"
+      },
+      {
+        "meaning": "臭鼬"
+      },
+      {
+        "meaning": "棉花"
+      },
+      {
+        "meaning": "话语"
+      },
+      {
+        "meaning": "房子"
+      },
+      {
+        "meaning": "日，太阳"
+      },
+      {
+        "meaning": "鱼"
+      },
+      {
+        "meaning": "仙人掌果"
+      },
+      {
+        "meaning": "男人"
+      },
+      {
+        "meaning": "蝴蝶"
+      },
+      {
+        "meaning": "女人"
+      },
+      {
+        "meaning": "兔子"
+      },
+      {
+        "meaning": "人"
+      },
+      {
+        "meaning": "头发"
+      },
+      {
+        "meaning": "母牛"
+      },
+      {
+        "meaning": "花"
+      },
+      {
+        "meaning": "夜晚"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "元音"
+      },
+      {
+        "title": "合并的元音"
+      }
+    ],
+    "notes": [
+      "抑扬符不改变读音：它表示构词时这个元音吸收了另一个元音。No + iknitl → nôkniu「我的兄弟」；tla + ijtoa → tlâjtoa「说话」。",
+      "u 总是辅音，读作 w：uakax，siuatl。ku 读作 [kʷ]：kualli「好」。",
+      "长元音不写出来。",
+      "方括号中是国际音标（IPA）标注的发音。"
+    ]
+  },
+  "grammar": {
+    "intro": "纳瓦特尔语的动词由词根前后的前缀和后缀构成：谁做、对谁做、什么时候、多少人。",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "过去",
+            "description": "o- 表示过去时。"
+          },
+          {
+            "slot": "主语",
+            "description": "ni- 我，ti- 你或我们，an- 你们。"
+          },
+          {
+            "slot": "宾语",
+            "description": "ki-「它」，tla-「某物」，te-「某人」，mo- 反身。"
+          },
+          {
+            "slot": "动词",
+            "description": "词根。"
+          },
+          {
+            "slot": "时态和复数",
+            "description": "-s 将来时，-ya 未完成过去时，-j / -kej 复数。"
+          }
+        ]
+      },
+      {
+        "title": "主语和宾语前缀",
+        "description": "第三人称没有主语前缀。ti- 是「你」或「我们」：复数在末尾加 -j。",
+        "columns": [
+          "人称",
+          "主语",
+          "宾语",
+          "反身"
+        ],
+        "rows": [
+          {
+            "label": "我"
+          },
+          {
+            "label": "你"
+          },
+          {
+            "label": "他，她"
+          },
+          {
+            "label": "我们"
+          },
+          {
+            "label": "你们"
+          },
+          {
+            "label": "他们"
+          }
+        ],
+        "note": "ki- 在元音后变成 k-：ni + ki + chiua → nikchiua。"
+      },
+      {
+        "title": "过去时的四类动词",
+        "description": "每个动词用四种方式之一构成过去时。它们都以 o- 开头。",
+        "items": [
+          {
+            "name": "加 -k",
+            "description": "以两个辅音 + 元音结尾的动词，以及少数其他动词。",
+            "examples": [
+              {
+                "meaning": "它过去了"
+              },
+              {
+                "meaning": "他/她喊了"
+              }
+            ]
+          },
+          {
+            "name": "去掉最后一个元音",
+            "description": "最常见的一类。末尾的 m 变成 n。",
+            "examples": [
+              {
+                "meaning": "他/她做了"
+              },
+              {
+                "meaning": "他/她住过"
+              }
+            ]
+          },
+          {
+            "name": "-ia、-oa → -j",
+            "description": "去掉末尾的 a，加上 -j。",
+            "examples": [
+              {
+                "meaning": "他/她说了"
+              }
+            ]
+          },
+          {
+            "name": "加 -j",
+            "description": "少数动词，比如 kua「吃」。",
+            "examples": [
+              {
+                "meaning": "他/她吃了"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "合并的元音",
+        "description": "以元音结尾的前缀遇到以 i 开头的动词时，i 消失，另一个元音加上抑扬符。",
+        "items": [
+          {
+            "translation": "说话"
+          },
+          {
+            "translation": "写"
+          },
+          {
+            "translation": "再见"
+          },
+          {
+            "translation": "我的兄弟"
+          }
+        ]
+      },
+      {
+        "title": "语气",
+        "description": "用 ma 请求；用 xi- 对「你」或「你们」下命令；amo 表示否定。",
+        "items": [
+          {
+            "translation": "做吧！"
+          },
+          {
+            "translation": "做吧！（你们）"
+          },
+          {
+            "translation": "让我做吧"
+          },
+          {
+            "translation": "别做！"
+          },
+          {
+            "translation": "小心，别摔倒！"
+          }
+        ]
+      },
+      {
+        "title": "例句",
+        "items": [
+          {
+            "translation": "你好吗？"
+          },
+          {
+            "translation": "你在做什么？"
+          },
+          {
+            "translation": "发生了什么？"
+          },
+          {
+            "translation": "很高兴认识你。"
+          },
+          {
+            "translation": "再见。"
+          }
+        ]
+      },
+      {
+        "title": "动词的所有词缀",
+        "description": "动词可以带的每个部分：前缀、后缀、小品词和词根变化。",
+        "items": [
+          {
+            "kind": "前缀",
+            "meaning": "过去：过去时、过去完成时、「去做了」",
+            "translation": "我做了"
+          },
+          {
+            "kind": "主语前缀",
+            "meaning": "主语：我、你、他/她",
+            "translation": "我睡觉"
+          },
+          {
+            "kind": "主语前缀",
+            "meaning": "主语：我们、你们、他们",
+            "translation": "我们睡觉"
+          },
+          {
+            "kind": "前缀",
+            "meaning": "对你或你们的命令（祈愿式）",
+            "translation": "做吧！"
+          },
+          {
+            "kind": "宾语前缀",
+            "meaning": "宾语：我、你、他/她/它、我们、你们、他们",
+            "translation": "我做它"
+          },
+          {
+            "kind": "宾语前缀",
+            "meaning": "不定宾语：「某物」",
+            "translation": "我吃（东西）"
+          },
+          {
+            "kind": "宾语前缀",
+            "meaning": "不定宾语：「某人」",
+            "translation": "我教（人）"
+          },
+          {
+            "kind": "反身前缀",
+            "meaning": "反身：我自己、你自己/他自己、我们自己",
+            "translation": "我很高兴"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "愿望或命令（祈愿式）；警告",
+            "translation": "让我睡吧"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "否定",
+            "translation": "我不睡觉"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "现在时和若干时态的复数",
+            "translation": "我们睡觉"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "未完成过去时",
+            "translation": "我以前常睡"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "过去时，按动词类别",
+            "translation": "它过去了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "过去完成时：「之前已经……」",
+            "translation": "我之前已经睡了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "将来时",
+            "translation": "我会睡觉"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "条件式",
+            "translation": "我就会睡"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "习惯式",
+            "translation": "我常常睡觉"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "现在进行时",
+            "translation": "我正在睡觉"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "祈愿式的复数",
+            "translation": "让我们睡吧"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "警告式和「要去做」的复数",
+            "translation": "我们要去睡了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "「要去」做某事",
+            "translation": "我要睡觉"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "「去做了」某事",
+            "translation": "我去睡了"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "被动",
+            "translation": "它被做"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "无人称：「人们……」",
+            "translation": "人们睡觉"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "使役：让某人做",
+            "translation": "他/她哄他/她睡觉"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "施用式：为某人做",
+            "translation": "他/她为他/她做它"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "第一人称"
+      },
+      {
+        "id": "2",
+        "label": "第二人称"
+      },
+      {
+        "id": "3",
+        "label": "第三人称"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present",
+        "group": "直陈式",
+        "name": "现在时",
+        "description": "现在或总是发生的事。"
+      },
+      {
+        "id": "progressive",
+        "group": "直陈式",
+        "name": "现在进行时",
+        "description": "现在正在发生的事（-tika）。"
+      },
+      {
+        "id": "habitual",
+        "group": "直陈式",
+        "name": "习惯式",
+        "description": "平常做的事（-ni）。"
+      },
+      {
+        "id": "imperfect",
+        "group": "直陈式",
+        "name": "未完成过去时",
+        "description": "以前常发生的事（-ya）。"
+      },
+      {
+        "id": "preterite",
+        "group": "直陈式",
+        "name": "过去时",
+        "description": "已经发生的事（o-）。"
+      },
+      {
+        "id": "future",
+        "group": "直陈式",
+        "name": "将来时",
+        "description": "将要发生的事（-s、-skej）。"
+      },
+      {
+        "id": "conditional",
+        "group": "语气",
+        "name": "条件式",
+        "description": "本来会发生的事（-skia）。"
+      },
+      {
+        "id": "optative",
+        "group": "语气",
+        "name": "祈愿式",
+        "description": "命令和愿望：对你和你们用 xi-，对其他人用 ma。"
+      },
+      {
+        "id": "admonitive",
+        "group": "语气",
+        "name": "警告式",
+        "description": "警告：「别……」「小心！」（ma + 过去时）。"
+      },
+      {
+        "id": "going",
+        "group": "要去做某事",
+        "name": "要去",
+        "description": "带着做某事的目的而去（-tiu；复数 -tin）。"
+      },
+      {
+        "id": "went",
+        "group": "要去做某事",
+        "name": "去做了",
+        "description": "带着做某事的目的去了（o- … -to；复数 -ton）。"
+      },
+      {
+        "id": "neg-present",
+        "group": "否定",
+        "name": "现在时",
+        "description": "amo + 现在时。"
+      },
+      {
+        "id": "neg-preterite",
+        "group": "否定",
+        "name": "过去时",
+        "description": "amo + 过去时。"
+      },
+      {
+        "id": "neg-optative",
+        "group": "否定",
+        "name": "祈愿式",
+        "description": "amo + 祈愿式：「别做！」。"
+      },
+      {
+        "id": "pluperfect",
+        "group": "直陈式",
+        "name": "过去完成时",
+        "description": "之前已经发生的事（o- … -ka）。"
+      },
+      {
+        "id": "neg-future",
+        "group": "否定",
+        "name": "将来时",
+        "description": "amo + 将来时。"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "tlachiua",
+        "meaning": "做，制作",
+        "es": "做"
+      },
+      {
+        "entry": "tlâtta",
+        "meaning": "看，看见",
+        "es": "看"
+      },
+      {
+        "entry": "tlâjtoa",
+        "meaning": "说话，说",
+        "es": "说话"
+      },
+      {
+        "entry": "tlâjkuiloa",
+        "meaning": "写",
+        "es": "写"
+      },
+      {
+        "entry": "tlakua",
+        "meaning": "吃",
+        "es": "吃"
+      },
+      {
+        "entry": "tlapoua",
+        "meaning": "读，数",
+        "es": "读"
+      },
+      {
+        "entry": "tlamati",
+        "meaning": "知道",
+        "es": "知道"
+      },
+      {
+        "entry": "tlâxmati",
+        "meaning": "认识（某人）",
+        "es": "知道"
+      },
+      {
+        "entry": "tlakaki",
+        "meaning": "听见，听",
+        "es": "听"
+      },
+      {
+        "entry": "tlamaka",
+        "meaning": "给",
+        "es": "给"
+      },
+      {
+        "entry": "tlanotsa",
+        "meaning": "叫",
+        "es": "叫"
+      },
+      {
+        "entry": "tlaneki",
+        "meaning": "想要",
+        "es": "想要"
+      },
+      {
+        "entry": "kochi",
+        "meaning": "睡觉",
+        "es": "睡觉"
+      },
+      {
+        "entry": "nemi",
+        "meaning": "生活，走动",
+        "es": "生活",
+        "note": "过去时 onen：m 变成 n"
+      },
+      {
+        "entry": "paki",
+        "meaning": "高兴",
+        "es": "高兴"
+      },
+      {
+        "entry": "choka",
+        "meaning": "哭",
+        "es": "哭",
+        "note": "第 1 类：过去时 ochokak"
+      },
+      {
+        "entry": "pano",
+        "meaning": "经过",
+        "es": "经过",
+        "note": "第 1 类：过去时 opanok"
+      },
+      {
+        "entry": "uetska",
+        "meaning": "笑",
+        "es": "笑"
+      },
+      {
+        "entry": "tsajtsi",
+        "meaning": "喊",
+        "es": "喊"
+      },
+      {
+        "entry": "uetsi",
+        "meaning": "掉下",
+        "es": "掉下"
+      },
+      {
+        "entry": "miki",
+        "meaning": "死",
+        "es": "死"
+      },
+      {
+        "entry": "kalaki",
+        "meaning": "进去",
+        "es": "进去"
+      },
+      {
+        "entry": "kisa",
+        "meaning": "出去",
+        "es": "出去"
+      },
+      {
+        "entry": "tekiti",
+        "meaning": "工作",
+        "es": "工作"
+      }
+    ]
+  }
+}

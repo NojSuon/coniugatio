@@ -1,0 +1,745 @@
+{
+  "name": "拉坎冬语",
+  "variant": "南部拉坎冬玛雅语",
+  "region": "恰帕斯州拉坎冬丛林，拉坎哈·昌萨亚布",
+  "summary": "玛雅语系尤卡坦语支的一种语言，由恰帕斯州拉坎冬丛林的 jach winik 使用。说这种语言的人称它为 jach t'aan，「真正的语言」；它也被称为拉坎冬语或拉坎冬玛雅语。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "按词典的写法输入动词：bin「去」，weenan「睡觉」，kurtaar「坐下」，'irik「看它」。",
+    "own": {
+      "hint": "输入任意动词和它的中文意思。如果我们判断错了，请选择它的类型。",
+      "label": "动词",
+      "es_placeholder": "进去",
+      "types_help": "及物动词以 -ik 结尾（'irik「看它」）；意思要写上「它」。位置动词以 -taar 结尾。词根不及物动词以元音 + r 或 n 结尾（'ookar、weenan）；活动动词（ts'íib、beeyaj）没有词尾。"
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "自动判断"
+      },
+      {
+        "id": "I",
+        "label": "词根不及物：weenan → weenen"
+      },
+      {
+        "id": "A",
+        "label": "活动动词：ts'íib → ts'íibnäj"
+      },
+      {
+        "id": "P",
+        "label": "位置动词：kurtaar → kurräj"
+      },
+      {
+        "id": "T",
+        "label": "及物：'irik → tinwiraj"
+      }
+    ]
+  },
+  "source": {
+    "short": "Hofling，《Lacandon Maya–Spanish–English Dictionary》（2014 年）",
+    "full": "Charles Andrew Hofling 与 Florinda Chanaj Kin，《Lacandon Maya–Spanish–English Dictionary / Diccionario maya lacandón–español–inglés》（犹他大学出版社，2014 年），依据 Una Canger 和 Henrik Bergqvist 的资料。南部变体，拉坎哈·昌萨亚布。"
+  },
+  "about": [
+    "拉坎冬语是玛雅语系尤卡坦语支的一种语言，与尤卡坦玛雅语、伊察语和莫潘语同属一支。在恰帕斯州的拉坎冬丛林约有一千人使用：北部拉坎冬人住在纳哈和梅察博克，南部拉坎冬人住在拉坎哈·昌萨亚布。",
+    "说这种语言的人自称 jach winik，「真正的人」，称自己的语言为 jach t'aan，「真正的语言」。拉坎冬这个名字来自一个古老的乔尔人村镇 Lakam Tun，「大石头」。",
+    "本页依照 Hofling 记录的南部变体。和莫潘语一样，人称和动词连写（kinbin「我去」），并且有第六个元音 ä。古老的 l 读作 r：kurtaar「坐下」，'ookar「进去」。"
+  ],
+  "orthography": {
+    "intro": "我们使用 Hofling 所用的玛雅字母，用 ts 代替 tz：6 个元音，可以是短元音、长元音或带高调的长元音（áa），以及普通辅音或喉化辅音。撇号（'）表示喉化辅音（k'、t'）或喉塞音；每个以元音开头的词都带喉塞音：'irik。",
+    "letters": [
+      {
+        "meaning": "喝它"
+      },
+      {
+        "meaning": "醒来"
+      },
+      {
+        "meaning": "砍倒它"
+      },
+      {
+        "meaning": "去"
+      },
+      {
+        "meaning": "抓住它"
+      },
+      {
+        "meaning": "带来它"
+      },
+      {
+        "meaning": "知道它"
+      },
+      {
+        "meaning": "看它"
+      },
+      {
+        "meaning": "吃"
+      },
+      {
+        "meaning": "卖它"
+      },
+      {
+        "meaning": "到达"
+      },
+      {
+        "meaning": "买它"
+      },
+      {
+        "meaning": "房子"
+      },
+      {
+        "meaning": "进去"
+      },
+      {
+        "meaning": "躺下"
+      },
+      {
+        "meaning": "洗它"
+      },
+      {
+        "meaning": "飞"
+      },
+      {
+        "meaning": "咳嗽"
+      },
+      {
+        "meaning": "吹口哨"
+      },
+      {
+        "meaning": "话语，语言"
+      },
+      {
+        "meaning": "马"
+      },
+      {
+        "meaning": "给它"
+      },
+      {
+        "meaning": "听它"
+      },
+      {
+        "meaning": "站起来"
+      },
+      {
+        "meaning": "飞"
+      },
+      {
+        "meaning": "有，必须"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "短元音"
+      },
+      {
+        "title": "长元音"
+      },
+      {
+        "title": "带高调的长元音"
+      }
+    ],
+    "notes": [
+      "长短和声调会改变意思：长元音可以带高调（kíinsik「杀它」）。",
+      "古老的玛雅语 l 变成了 r：尤卡坦语的 k'uchul 在这里是 k'uchur「到达」。",
+      "在年轻人的口语中，ts 正在和 s 合并。",
+      "b 是内爆音：发音时吸气。d' 和 g 只出现在少数词里。"
+    ]
+  },
+  "grammar": {
+    "intro": "拉坎冬语的动词由体标记、和动词连写的代词，以及表示动作未完成、已完成或依附的状态后缀构成。",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "体",
+            "description": "k- 未完成体，t- 及物完成体；或者一个独立的词：táan、suuk、yaan……"
+          },
+          {
+            "slot": "A 组",
+            "description": "in-、a-、u-、ik- 和动词连写；元音前为 inw-、aw-、uy-。"
+          },
+          {
+            "slot": "动词",
+            "description": "词根。"
+          },
+          {
+            "slot": "状态",
+            "description": "-Vr、-ik、-aj、-ej、-Vk……"
+          },
+          {
+            "slot": "复数",
+            "description": "-e'x、-eche'x、-o'b。"
+          }
+        ]
+      },
+      {
+        "title": "两组代词",
+        "description": "A 组放在动词前面：谁做这个动作。B 组放在末尾：宾语，以及过去时和虚拟式中不及物动词的主语。",
+        "columns": [
+          "人称",
+          "A 组",
+          "元音前",
+          "B 组"
+        ],
+        "rows": [
+          {
+            "label": "我"
+          },
+          {
+            "label": "你"
+          },
+          {
+            "label": "他，她"
+          },
+          {
+            "label": "我们"
+          },
+          {
+            "label": "你们"
+          },
+          {
+            "label": "他们"
+          }
+        ],
+        "note": "「我们」后面加上 -e'x 就包括你：kikbine'x「我们去（你和我）」。"
+      },
+      {
+        "title": "四种动词",
+        "description": "每种动词用各自的方式构成过去时、虚拟式和命令式。",
+        "items": [
+          {
+            "name": "词根",
+            "description": "以元音 + r 结尾的不及物动词（鼻音后为 n）；这个元音跟随词根的元音。",
+            "examples": [
+              {
+                "meaning": "你睡了"
+              },
+              {
+                "meaning": "他/她去了"
+              }
+            ]
+          },
+          {
+            "name": "活动动词",
+            "description": "像 ts'íib、beeyaj 这样的动词：过去时用 -näj，虚拟式用 -näk。",
+            "examples": [
+              {
+                "meaning": "他/她写了"
+              }
+            ]
+          },
+          {
+            "name": "位置动词",
+            "description": "身体最终的姿势：正在发生时用 -taar，已经发生用 -räj。",
+            "examples": [
+              {
+                "meaning": "他/她坐下了"
+              }
+            ]
+          },
+          {
+            "name": "及物",
+            "description": "正在发生时用 -ik，已经发生用 t- … -aj，虚拟式和命令用 -ej。",
+            "examples": [
+              {
+                "meaning": "你砍倒了它"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "体、否定和命令",
+        "description": "ma' 表示否定；与未完成体连用时变成 ma' t-。táan、suuk 等标记单独成词，动词以喉塞音开头。",
+        "items": [
+          {
+            "translation": "我去"
+          },
+          {
+            "translation": "他/她正在醒来"
+          },
+          {
+            "translation": "我没杀它"
+          },
+          {
+            "translation": "让你去"
+          },
+          {
+            "translation": "走开！"
+          },
+          {
+            "translation": "砍倒它！"
+          }
+        ]
+      },
+      {
+        "title": "动词的所有词缀",
+        "description": "动词可以带的每个部分：体、代词、状态、复数、派生，以及表示时间的词。",
+        "items": [
+          {
+            "kind": "体",
+            "meaning": "未完成体：发生的或常常发生的事",
+            "translation": "我去"
+          },
+          {
+            "kind": "体",
+            "meaning": "及物动词的完成体",
+            "translation": "我看了它"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "否定；与未完成体连用时带 t-",
+            "translation": "他/她不去"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "持续体：正在发生",
+            "translation": "他/她正在醒来"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "刚过去时：「刚……」",
+            "translation": "他/她刚走"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "近将来时：「要……」"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "断言体：「一定……」",
+            "translation": "我一定会去"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "习惯",
+            "translation": "他/她常常做它"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "愿望体：「想……」"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "义务体：「必须……」"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "快速体：「很快地」"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "「用力」"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "起始体：「开始……」"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "终结体：「已经做完……」",
+            "translation": "我已经笑过了"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "从属标记：「让……」，带依附状态",
+            "translation": "让你睡觉"
+          },
+          {
+            "kind": "代词",
+            "meaning": "A 组：我、你、他/她（元音前为 w、y）",
+            "translation": "我醒来"
+          },
+          {
+            "kind": "代词",
+            "meaning": "A 组：我们",
+            "translation": "我们去"
+          },
+          {
+            "kind": "代词",
+            "meaning": "B 组：我、你、他/她",
+            "translation": "你睡了"
+          },
+          {
+            "kind": "代词",
+            "meaning": "B 组：我们",
+            "translation": "我们去了"
+          },
+          {
+            "kind": "复数",
+            "meaning": "第二人称的复数；与「我们」连用时包括你",
+            "translation": "我们去（你和我）"
+          },
+          {
+            "kind": "复数",
+            "meaning": "你们",
+            "translation": "你们去"
+          },
+          {
+            "kind": "复数",
+            "meaning": "他们",
+            "translation": "他们去"
+          },
+          {
+            "kind": "状态",
+            "meaning": "及物未完成体",
+            "translation": "他/她砍它"
+          },
+          {
+            "kind": "状态",
+            "meaning": "及物完成体",
+            "translation": "你砍了它"
+          },
+          {
+            "kind": "状态",
+            "meaning": "及物依附体和命令式",
+            "translation": "砍它！"
+          },
+          {
+            "kind": "状态",
+            "meaning": "不及物未完成体（元音跟随词根；鼻音后为 -Vn）",
+            "translation": "进去 · 睡觉"
+          },
+          {
+            "kind": "状态",
+            "meaning": "不及物依附体",
+            "translation": "让你睡觉"
+          },
+          {
+            "kind": "状态",
+            "meaning": "不及物完成体（第三人称）",
+            "translation": "他/她去了"
+          },
+          {
+            "kind": "状态",
+            "meaning": "不及物命令式",
+            "translation": "睡吧！"
+          },
+          {
+            "kind": "派生",
+            "meaning": "活动：活动动词的过去时和依附体",
+            "translation": "他/她写了"
+          },
+          {
+            "kind": "派生",
+            "meaning": "位置：未完成体；完成体和依附体",
+            "translation": "他/她坐着 · 他/她坐下了"
+          },
+          {
+            "kind": "派生",
+            "meaning": "派生及物动词",
+            "translation": "做它"
+          },
+          {
+            "kind": "派生",
+            "meaning": "使役",
+            "translation": "杀它"
+          },
+          {
+            "kind": "派生",
+            "meaning": "位置动词的使役",
+            "translation": "把它立起来"
+          },
+          {
+            "kind": "派生",
+            "meaning": "词根动词的被动：词根中加喉塞音",
+            "translation": "它被砍倒"
+          },
+          {
+            "kind": "派生",
+            "meaning": "派生动词的被动"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "第一人称"
+      },
+      {
+        "id": "2",
+        "label": "第二人称"
+      },
+      {
+        "id": "3",
+        "label": "第三人称"
+      },
+      {
+        "id": "4",
+        "label": "第一人称包括式（包括你）"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "habitual",
+        "group": "体",
+        "name": "未完成体",
+        "description": "发生的或习惯做的事（k-）。"
+      },
+      {
+        "id": "durative",
+        "group": "体",
+        "name": "持续体",
+        "description": "正在发生的事（táan）。"
+      },
+      {
+        "id": "completive",
+        "group": "过去",
+        "name": "完成体",
+        "description": "已经发生的事：不及物动词用 B 组，及物动词用 t- … -aj。"
+      },
+      {
+        "id": "recent",
+        "group": "过去",
+        "name": "刚过去时",
+        "description": "「我刚……」（taant）。"
+      },
+      {
+        "id": "terminative",
+        "group": "过去",
+        "name": "终结体",
+        "description": "「我已经做完……」（ts'o'kar）。"
+      },
+      {
+        "id": "immediate",
+        "group": "将来时",
+        "name": "近将来时",
+        "description": "「我要……」（taabar）。"
+      },
+      {
+        "id": "assurative",
+        "group": "将来时",
+        "name": "断言体",
+        "description": "「一定……」（je'r … -e）。"
+      },
+      {
+        "id": "obligative",
+        "group": "助词",
+        "name": "义务体",
+        "description": "「我得……」（yaan）。"
+      },
+      {
+        "id": "desiderative",
+        "group": "助词",
+        "name": "愿望体",
+        "description": "「我想……」（taak）。"
+      },
+      {
+        "id": "customary",
+        "group": "助词",
+        "name": "习惯",
+        "description": "「我常常……」（suuk）。"
+      },
+      {
+        "id": "inceptive",
+        "group": "助词",
+        "name": "起始体",
+        "description": "「我开始……」（chúunur）。"
+      },
+      {
+        "id": "subjunctive",
+        "group": "语气",
+        "name": "虚拟式",
+        "description": "「让……」：ka' + 依附状态。"
+      },
+      {
+        "id": "imperative",
+        "group": "语气",
+        "name": "命令式",
+        "description": "命令：不及物动词用 -en，及物动词用 -ej；对你们用 -e'x。"
+      },
+      {
+        "id": "neg-habitual",
+        "group": "否定",
+        "name": "未完成体",
+        "description": "ma' t- + A 组 + 动词。"
+      },
+      {
+        "id": "neg-completive",
+        "group": "否定",
+        "name": "完成体",
+        "description": "ma' + 完成体。"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "bin",
+        "meaning": "去",
+        "es": "去",
+        "note": "不规则：虚拟式 xi'ik，命令式 xeen"
+      },
+      {
+        "entry": "weenan",
+        "meaning": "睡觉",
+        "es": "睡觉"
+      },
+      {
+        "entry": "'ajär",
+        "meaning": "醒来",
+        "es": "醒来"
+      },
+      {
+        "entry": "'ookar",
+        "meaning": "进去",
+        "es": "进去"
+      },
+      {
+        "entry": "k'uchur",
+        "meaning": "到达",
+        "es": "到达"
+      },
+      {
+        "entry": "kíimin",
+        "meaning": "死",
+        "es": "死"
+      },
+      {
+        "entry": "béesar",
+        "meaning": "掉下",
+        "es": "掉下"
+      },
+      {
+        "entry": "ríik'ir",
+        "meaning": "飞",
+        "es": "飞"
+      },
+      {
+        "entry": "jaanän",
+        "meaning": "吃",
+        "es": "吃"
+      },
+      {
+        "entry": "beeyaj",
+        "meaning": "工作",
+        "es": "工作"
+      },
+      {
+        "entry": "ts'íib",
+        "meaning": "写",
+        "es": "写"
+      },
+      {
+        "entry": "'äräk'",
+        "meaning": "玩",
+        "es": "玩"
+      },
+      {
+        "entry": "'óok'at",
+        "meaning": "跳舞",
+        "es": "跳舞"
+      },
+      {
+        "entry": "'áakab",
+        "meaning": "跑",
+        "es": "跑"
+      },
+      {
+        "entry": "se'm",
+        "meaning": "咳嗽",
+        "es": "咳嗽"
+      },
+      {
+        "entry": "túutuy",
+        "meaning": "吹口哨",
+        "es": "吹口哨"
+      },
+      {
+        "entry": "xiik'",
+        "meaning": "飞",
+        "es": "飞"
+      },
+      {
+        "entry": "kurtaar",
+        "meaning": "坐下",
+        "es": "坐下"
+      },
+      {
+        "entry": "wa'taar",
+        "meaning": "站起来",
+        "es": "站起来"
+      },
+      {
+        "entry": "päch'taar",
+        "meaning": "躺下",
+        "es": "躺下"
+      },
+      {
+        "entry": "'irik",
+        "meaning": "看它",
+        "es": "看它"
+      },
+      {
+        "entry": "'u'yik",
+        "meaning": "听它",
+        "es": "听它"
+      },
+      {
+        "entry": "beetik",
+        "meaning": "做它",
+        "es": "做它"
+      },
+      {
+        "entry": "jaantik",
+        "meaning": "吃它",
+        "es": "吃它"
+      },
+      {
+        "entry": "kíinsik",
+        "meaning": "杀它",
+        "es": "杀它"
+      },
+      {
+        "entry": "käxtik",
+        "meaning": "找它",
+        "es": "找它"
+      },
+      {
+        "entry": "'eertik",
+        "meaning": "知道它",
+        "es": "知道它"
+      },
+      {
+        "entry": "ch'äkik",
+        "meaning": "砍倒它",
+        "es": "砍倒它"
+      },
+      {
+        "entry": "'uk'ik",
+        "meaning": "喝它",
+        "es": "喝它"
+      },
+      {
+        "entry": "mänik",
+        "meaning": "买它",
+        "es": "买它"
+      },
+      {
+        "entry": "kanik",
+        "meaning": "卖它",
+        "es": "卖它"
+      },
+      {
+        "entry": "ts'ik",
+        "meaning": "给它",
+        "es": "给它"
+      },
+      {
+        "entry": "ch'a'ik",
+        "meaning": "带来它",
+        "es": "带来它"
+      },
+      {
+        "entry": "'a'rik",
+        "meaning": "说它",
+        "es": "说它"
+      },
+      {
+        "entry": "p'o'ik",
+        "meaning": "洗它",
+        "es": "洗它"
+      }
+    ]
+  }
+}

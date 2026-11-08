@@ -9,7 +9,7 @@
 //! A verb is entered the way Hofling's dictionary lists it, in the
 //! incompletive status: `wenel` (intransitive, harmonic -Vl), `ilik` (root
 //! transitive, -ik) or `jantik` (transitive derived with -t). Every
-//! construction is built from the verb's stems:
+//! construction is built from the verbs stems:
 //!
 //! ```text
 //!                 intransitive (wenel)   transitive (ilik)
@@ -18,7 +18,7 @@
 //! perfect         wen-a'an-en            in-w-il-m-aj
 //! dependent       (ka') wen-ek-en        (ka') in-w-il-a'
 //! imperative      wen-en!                il-a'!
-//! auxiliaries     k'ab'et in-wen-el      k'ab'et in-w-il-ik
+//! auxiliaries     k'abet in-wen-el      k'abet in-w-il-ik
 //! ```
 
 use serde::{Deserialize, Serialize};
@@ -50,7 +50,7 @@ pub enum Aspect {
     Punctual,
     /// tantoj … : just happened (§3.1.1.1)
     Immediate,
-    /// <word> + Set A verb: k'ab'et, olak, patal, suk, tak, yan (§3.1.1.2.1)
+    /// <word> + Set A verb: k'abet, olak, patal, suk, tak, yan (§3.1.1.2.1)
     Auxiliary,
     /// <word>-ij + Set A verb: kajij, jop'ij, jo'mij, ts'o'kij (§3.1.1.2.2)
     Phasal,
@@ -64,7 +64,7 @@ pub enum Aspect {
     Subjunctive,
     /// -en (intransitive) / -V', -ej (transitive), 2nd person (§15.4.1)
     Imperative,
-    /// b'ikij + dependent: warning, "you could …" (§15.4.2.2)
+    /// bikij + dependent: warning, "you could …" (§15.4.2.2)
     Admonitive,
     /// ko'ox: "let's …", 1st person plural (§15.4.2.3)
     Hortative,
@@ -97,14 +97,14 @@ pub struct Entry {
     pub meaning: String,
     #[serde(default)]
     pub es: Option<String>,
-    /// Irregular root for the completive and perfect (b'el → b'in).
+    /// Irregular root for the completive and perfect (bel → bin).
     #[serde(default)]
     pub completive: Option<String>,
-    /// Irregular dependent stem: intransitive before Set B (b'el → xi'ik,
+    /// Irregular dependent stem: intransitive before Set B (bel → xi'ik,
     /// tal → tak); transitive after Set A (il → ila').
     #[serde(default)]
     pub dependent: Option<String>,
-    /// Irregular singular imperative (b'el → xen).
+    /// Irregular singular imperative (bel → xen).
     #[serde(default)]
     pub imperative: Option<String>,
     #[serde(default)]
@@ -137,7 +137,7 @@ struct Verb {
     /// Root used in the completive and perfect (usually the same).
     completive_root: String,
     /// Stem used after the Set A prefix in non-completive aspects:
-    /// "wenel", "ilik", "jantik", "b'el".
+    /// "wenel", "ilik", "jantik", "bel".
     incompletive: String,
     /// Dependent stem: "wenek", "xi'ik" (intransitive, before Set B) or
     /// "uk'u'", "ila'", "jantej" (transitive, after Set A).
@@ -268,7 +268,7 @@ fn parse_as(word: &str, entry: Option<&Entry>, class: Class) -> std::result::Res
         Class::Tt => word.strip_suffix("tik").unwrap_or(word).to_string(),
         Class::I => {
             // Drop the harmonic -Vl (wenel → wen, nak'äl → nak'). Entries
-            // without it, like b'el, keep the whole word.
+            // without it, like bel, keep the whole word.
             let w = word.strip_suffix('l').unwrap_or(word);
             match w.chars().last() {
                 Some(v)
@@ -291,7 +291,7 @@ fn set_a(person: usize, plural: bool, stem: &str) -> String {
     let first = stem.chars().next().unwrap_or('x');
     let prefix = match (person, plural) {
         (0, false) if is_vowel(first) => "inw",
-        (0, false) if "b'pm".contains(first) && !stem.starts_with('\'') => "im",
+        (0, false) if "bpm".contains(first) && !stem.starts_with('\'') => "im",
         (0, false) => "in",
         (0, true) if is_vowel(first) => "kiw",
         (0, true) => "ki",
@@ -410,7 +410,7 @@ fn form(verb: &Verb, tense: &Tense, person: usize, plural: bool) -> Option<Strin
             plural_suffix(person, plural)
         ),
         Aspect::Perfect => format!("{}a'an{}", verb.completive_root, set_b(person, plural, "")),
-        // Intransitives: (b'el) inka'aj ti wenel; transitives take the
+        // Intransitives: (bel) inka'aj ti wenel; transitives take the
         // dependent status: inka'aj inwila'.
         Aspect::Go if transitive => format!("{} {}", set_a(person, plural, "ka'aj"), dependent()),
         Aspect::Go => format!(
@@ -420,11 +420,11 @@ fn form(verb: &Verb, tense: &Tense, person: usize, plural: bool) -> Option<Strin
             verb.incompletive
         ),
         Aspect::Subjunctive => format!("ka' {}", dependent()),
-        // b'ikij contracts to b'ik before ki- (§15.4.2.2, note 7).
+        // bikij contracts to bik before ki- (§15.4.2.2, note 7).
         Aspect::Admonitive if transitive && person == 0 && plural => {
-            format!("b'ik {}", dependent())
+            format!("bik {}", dependent())
         }
-        Aspect::Admonitive => format!("b'ikij {}", dependent()),
+        Aspect::Admonitive => format!("bikij {}", dependent()),
         Aspect::Imperative if !second => return None,
         Aspect::Imperative => {
             if plural {
@@ -462,6 +462,8 @@ fn normalize(verb: &str) -> std::result::Result<String, Error> {
             }
         })
         .collect();
+    // The implosive b is written without an apostrophe; b' still works.
+    let w = w.replace("b'", "b");
     if w.is_empty() {
         return Err(Error::EmptyVerb);
     }
@@ -694,10 +696,10 @@ mod tests {
         assert_eq!(f("wenel", Aspect::Immediate, 2, false), "tantoj uwenel");
     }
 
-    // §3.1.1.2: k'ab'eet im-b'et-ik, pat-al u-wen-el, kaj-ij im-meyaj-t-ik
+    // §3.1.1.2: k'abeet im-bet-ik, pat-al u-wen-el, kaj-ij im-meyaj-t-ik
     #[test]
     fn auxiliaries() {
-        assert_eq!(row("wenel", "kabet", 0).0, "k'ab'et inwenel");
+        assert_eq!(row("wenel", "kabet", 0).0, "k'abet inwenel");
         assert_eq!(row("wenel", "patal", 2).0, "patal uwenel");
         assert_eq!(
             row("wenel", "patal", 2).2.as_deref(),
@@ -713,7 +715,7 @@ mod tests {
         assert_eq!(row("wenel", "tsok", 2).0, "ts'o'kij uwenel");
     }
 
-    // §15.4.2.1: (b'el) u-ka'aj ti wen-el; u-ka'aj u-jan-t-ej
+    // §15.4.2.1: (bel) u-ka'aj ti wen-el; u-ka'aj u-jan-t-ej
     #[test]
     fn go_future() {
         assert_eq!(row("wenel", "go", 2).0, "uka'aj ti wenel");
@@ -739,8 +741,8 @@ mod tests {
             row("wenel", "subjunctive", 0).2.as_deref(),
             Some("que yo duerma")
         );
-        // b'el is irregular: xi'ik (§3.2.2.1, note 10)
-        assert_eq!(row("b'el", "subjunctive", 1).0, "ka' xi'ikech");
+        // bel is irregular: xi'ik (§3.2.2.1, note 10)
+        assert_eq!(row("bel", "subjunctive", 1).0, "ka' xi'ikech");
     }
 
     // §15.4.1: wen-en!, il-a'!, jan-t-ej!, xen!; ma' a-wen-el!
@@ -753,7 +755,7 @@ mod tests {
         );
         assert_eq!(row("ilik", "imperative", 1).0, "ila'!");
         assert_eq!(row("jantik", "imperative", 1).0, "jantej!");
-        assert_eq!(row("b'el", "imperative", 1).0, "xen!");
+        assert_eq!(row("bel", "imperative", 1).0, "xen!");
         assert_eq!(row("wenel", "neg-imperative", 1).0, "ma' awenel");
         assert_eq!(
             row("wenel", "neg-imperative", 1).2.as_deref(),
@@ -765,13 +767,13 @@ mod tests {
         assert_eq!(t.rows.len(), 1);
     }
 
-    // §15.4.2.2: B'ikij lub'-uk-ech!; b'iik ki-kim-es
+    // §15.4.2.2: Bikij lub-uk-ech!; biik ki-kim-es
     #[test]
     fn admonitive() {
-        assert_eq!(row("lub'ul", "admonitive", 1).0, "b'ikij lub'ukech");
+        assert_eq!(row("lubul", "admonitive", 1).0, "bikij lubukech");
         assert_eq!(
             row("ilik", "admonitive", 0).1.as_deref(),
-            Some("b'ik kiwila'")
+            Some("bik kiwila'")
         );
     }
 
@@ -810,8 +812,8 @@ mod tests {
 
     #[test]
     fn labial_assimilation_and_irregular_b_el() {
-        assert_eq!(row("b'el", "incompletive", 0).0, "kimb'el");
-        assert_eq!(row("b'el", "completive", 2).0, "b'inij");
+        assert_eq!(row("bel", "incompletive", 0).0, "kimbel");
+        assert_eq!(row("bel", "completive", 2).0, "binij");
     }
 
     #[test]

@@ -1,0 +1,828 @@
+{
+  "name": "尤卡坦玛雅语",
+  "variant": "尤卡坦玛雅语",
+  "region": "墨西哥尤卡坦半岛",
+  "summary": "尤卡坦半岛的一种玛雅语，是墨西哥使用人数第二多的原住民语言。说这种语言的人称它为 maayat'aan；它也被称为玛雅语或尤卡坦玛雅语。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "按词典的写法输入动词：wenel「睡觉」，janal「吃饭」，kultal「坐下」，xokik「读它」。声调（á）是词的一部分。",
+    "own": {
+      "hint": "输入任意动词和它的中文意思。如果我们判断错了，请选择它的类型。",
+      "label": "动词",
+      "es_placeholder": "工作",
+      "types_help": "及物动词以 -ik 结尾（kaxtik「找它」）；意思要写上「它」。位置动词以 -tal 结尾。词根动词以元音 + l 结尾，并重复这个元音（wenel、okol）；活动动词（janal、meyaj、báaxal）用 -naj- 构成过去时。"
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "自动判断"
+      },
+      {
+        "id": "I",
+        "label": "词根不及物：wenel → jweenen"
+      },
+      {
+        "id": "A",
+        "label": "活动动词：janal → janalnajen"
+      },
+      {
+        "id": "P",
+        "label": "位置动词：kultal → kullajen"
+      },
+      {
+        "id": "T",
+        "label": "及物：xokik → tin xokaj"
+      }
+    ]
+  },
+  "source": {
+    "full": "Fidencio Briceño Chel，《Los verbos del maya yucateco actual: clasificación y conjugación》，第 2 版（INALI，2021 年）；INALI，《U nu'ukbesajil u ts'íibta'al maayat'aan / Normas de escritura para la lengua maya》（2014 年）。另见：《Diccionario maya de uso cotidiano》（金塔纳罗奥州）；David 与 Alejandra Bolles，《A Grammar of the Yucatecan Mayan Language》。"
+  },
+  "about": [
+    "Maayat'aan，即尤卡坦玛雅语，通行于尤卡坦半岛：尤卡坦州、金塔纳罗奥州和坎佩切州，以及伯利兹的部分地区。它约有 80 万使用者，是墨西哥使用人数第二多的原住民语言。",
+    "它属于玛雅语系的尤卡坦语支，与伊察语、莫潘语和拉坎冬语同属一支。它是奇琴伊察、乌斯马尔和玛雅潘古代玛雅人的语言，也是一种自 16 世纪以来从未中断书写的文学的语言。",
+    "这是一种有声调的语言：长元音可以是高调（áa）或低调（aa），以此区分词义。它的动词不标时态，而标体：动作是习惯、正在进行、已经完成，还是必须发生。"
+  ],
+  "orthography": {
+    "intro": "我们使用 INALI 的《玛雅语书写规范》：5 个元音，可以是短元音、长元音、高调元音或带喉塞音的元音，以及 20 个辅音。撇号（'）表示喉塞音或喉化辅音（k'、t'），发音时喉咙会顿一下。",
+    "letters": [
+      {
+        "meaning": "水"
+      },
+      {
+        "meaning": "夜晚"
+      },
+      {
+        "meaning": "美洲豹"
+      },
+      {
+        "meaning": "红色"
+      },
+      {
+        "meaning": "鸟"
+      },
+      {
+        "meaning": "星星"
+      },
+      {
+        "meaning": "眼睛"
+      },
+      {
+        "meaning": "洞，门"
+      },
+      {
+        "meaning": "蜜蜂，蜂蜜"
+      },
+      {
+        "meaning": "太阳，日"
+      },
+      {
+        "meaning": "土地"
+      },
+      {
+        "meaning": "人"
+      },
+      {
+        "meaning": "房子"
+      },
+      {
+        "meaning": "灵魂，心"
+      },
+      {
+        "meaning": "狗"
+      },
+      {
+        "meaning": "番茄"
+      },
+      {
+        "meaning": "白色"
+      },
+      {
+        "meaning": "石头"
+      },
+      {
+        "meaning": "话语，语言"
+      },
+      {
+        "meaning": "马"
+      },
+      {
+        "meaning": "文字"
+      },
+      {
+        "meaning": "月亮"
+      },
+      {
+        "meaning": "男人，人"
+      },
+      {
+        "meaning": "草"
+      },
+      {
+        "meaning": "主人，父亲"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "短元音"
+      },
+      {
+        "title": "长元音，低调"
+      },
+      {
+        "title": "长元音，高调"
+      },
+      {
+        "title": "重复元音"
+      }
+    ],
+    "notes": [
+      "高调只在长元音上标出，重音符号写在第一个元音上：áak「乌龟」，aak「绿的，新鲜的」。",
+      "重复元音中间隔一个喉塞音，读两次：lu'um「土地」，ba'al「东西」。",
+      "玛雅语的 b 是内爆音：吸气发音。b、ch、k、p、t 和 ts 在词尾读得很轻。",
+      "方括号中是国际音标（IPA）标注的发音。"
+    ]
+  },
+  "grammar": {
+    "intro": "玛雅语的动词由体标记、代词和动词构成。及物动词还带一个状态后缀：正在发生时用 -ik，已经发生用 -aj，还不是现实的事用 -ej。",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "体",
+            "description": "k- 习惯，táan 正在，ts'o'ok 已经，yaan 必须……"
+          },
+          {
+            "slot": "代词（A 组）",
+            "description": "谁做：in、a、u、k。"
+          },
+          {
+            "slot": "动词",
+            "description": "动词；如果以元音开头就加 w- 或 y-：in w-il-ik。"
+          },
+          {
+            "slot": "状态",
+            "description": "及物动词中的 -ik、-aj、-ej。"
+          },
+          {
+            "slot": "复数",
+            "description": "-e'ex 你们，-o'ob 他们。"
+          }
+        ]
+      },
+      {
+        "title": "两组代词",
+        "description": "A 组放在动词前面，表示谁做这个动作。B 组放在末尾：表示宾语，以及不及物完成体和 bíin 将来时的主语。",
+        "columns": [
+          "人称",
+          "A 组",
+          "元音前",
+          "B 组"
+        ],
+        "rows": [
+          {
+            "label": "我"
+          },
+          {
+            "label": "你"
+          },
+          {
+            "label": "他，她"
+          },
+          {
+            "label": "我们"
+          },
+          {
+            "label": "你们"
+          },
+          {
+            "label": "他们"
+          }
+        ],
+        "note": "体标记 k-（习惯）和代词连写：k + in → kin，k + a → ka，k + u → ku。"
+      },
+      {
+        "title": "表示「发生了」的三种方式",
+        "description": "在完成体中，不及物动词用 B 组，形式取决于动词的类型。",
+        "items": [
+          {
+            "name": "词根动词",
+            "description": "以元音 + l 结尾并重复词根元音的动词，以及移动动词。短元音变成长元音。",
+            "examples": [
+              {
+                "meaning": "我睡了"
+              },
+              {
+                "meaning": "我离开了"
+              }
+            ]
+          },
+          {
+            "name": "活动动词",
+            "description": "像 janal、meyaj、báaxal 这样的动词。",
+            "examples": [
+              {
+                "meaning": "我吃了"
+              },
+              {
+                "meaning": "你工作了"
+              }
+            ]
+          },
+          {
+            "name": "位置动词",
+            "description": "以 -tal 结尾、表示身体最终姿势的动词。",
+            "examples": [
+              {
+                "meaning": "我坐下了"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "及物动词：-ik、-aj、-ej",
+        "description": "及物完成体在代词上连写 t-。bíin 将来时带 -ej，它只在单数和句末写出。",
+        "items": [
+          {
+            "translation": "我读它"
+          },
+          {
+            "translation": "我读了它"
+          },
+          {
+            "translation": "有一天我会读它"
+          },
+          {
+            "translation": "他/她已经读了它"
+          },
+          {
+            "translation": "读它！"
+          }
+        ]
+      },
+      {
+        "title": "助词",
+        "description": "放在代词前面、增加一层意思的词。",
+        "items": [
+          {
+            "translation": "我想吃饭"
+          },
+          {
+            "translation": "我需要吃饭"
+          },
+          {
+            "translation": "我得吃饭"
+          },
+          {
+            "translation": "我常常吃饭"
+          },
+          {
+            "translation": "我开始吃饭了"
+          },
+          {
+            "translation": "我刚吃了饭"
+          }
+        ]
+      },
+      {
+        "title": "命令和否定",
+        "description": "不及物命令式以 -en 或 -nen 结尾；及物的以 -ej 结尾。ma' 表示否定，句子常以 -i' 结束。",
+        "items": [
+          {
+            "translation": "学习吧！"
+          },
+          {
+            "translation": "走开！"
+          },
+          {
+            "translation": "过来！"
+          },
+          {
+            "translation": "别睡！"
+          },
+          {
+            "translation": "我不知道"
+          }
+        ]
+      },
+      {
+        "title": "例句",
+        "items": [
+          {
+            "translation": "你好吗？"
+          },
+          {
+            "translation": "很好，你呢？"
+          },
+          {
+            "translation": "非常感谢。"
+          },
+          {
+            "translation": "你叫什么名字？"
+          },
+          {
+            "translation": "我在学玛雅语。"
+          }
+        ]
+      },
+      {
+        "title": "动词的所有词缀",
+        "description": "动词可以带的每个部分：前缀、后缀、小品词和词根变化。",
+        "items": [
+          {
+            "kind": "体",
+            "meaning": "习惯体；和代词连写：kin、ka、ku",
+            "translation": "我睡觉"
+          },
+          {
+            "kind": "体",
+            "meaning": "持续体",
+            "translation": "我正在睡觉"
+          },
+          {
+            "kind": "体",
+            "meaning": "终结体：已经",
+            "translation": "我已经睡了"
+          },
+          {
+            "kind": "体",
+            "meaning": "刚完成体",
+            "translation": "我刚睡了"
+          },
+          {
+            "kind": "体",
+            "meaning": "及物完成体；和代词连写：tin、ta、tu",
+            "translation": "我读它"
+          },
+          {
+            "kind": "体",
+            "meaning": "词根动词和移动动词的完成体",
+            "translation": "我睡了"
+          },
+          {
+            "kind": "体后缀",
+            "meaning": "活动动词的完成体",
+            "translation": "我吃了"
+          },
+          {
+            "kind": "体后缀",
+            "meaning": "位置动词的完成体",
+            "translation": "我坐下了"
+          },
+          {
+            "kind": "体后缀",
+            "meaning": "动词化形容词的完成体",
+            "translation": "我去了很远的地方"
+          },
+          {
+            "kind": "体",
+            "meaning": "不定将来时",
+            "translation": "有一天我会睡觉"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "bíin、úuch 和 sáam 之后的虚拟式，按动词类型",
+            "translation": "有一天我会吃饭"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "远过去时，近过去时",
+            "translation": "很久以前我睡了"
+          },
+          {
+            "kind": "体",
+            "meaning": "断言体",
+            "translation": "我一定会睡觉"
+          },
+          {
+            "kind": "体",
+            "meaning": "义务体：必须",
+            "translation": "我得睡觉"
+          },
+          {
+            "kind": "体",
+            "meaning": "确定体：「要做的是我」",
+            "translation": "要吃的是我"
+          },
+          {
+            "kind": "体",
+            "meaning": "即刻体：「我要……」",
+            "translation": "我要吃饭"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "愿望、需要、习惯",
+            "translation": "我想睡觉"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "起始体：开始",
+            "translation": "我开始睡觉了"
+          },
+          {
+            "kind": "前缀（A 组）",
+            "meaning": "主语：我、你、他/她、我们",
+            "translation": "我正在睡觉"
+          },
+          {
+            "kind": "前缀（A 组）",
+            "meaning": "元音前的 A 组",
+            "translation": "我看它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "A 组复数：你们、他们",
+            "translation": "你们睡觉"
+          },
+          {
+            "kind": "后缀（B 组）",
+            "meaning": "宾语；不及物完成体和 bíin 将来时的主语",
+            "translation": "你睡了"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "及物未完成体",
+            "translation": "我读它"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "及物完成体",
+            "translation": "我读了它"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "及物虚拟式；只在单数和句末写出",
+            "translation": "有一天我会读它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "及物化后缀",
+            "translation": "吃它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "使役",
+            "translation": "把它拿出来"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "位置动词和动词化形容词（不及物）",
+            "translation": "坐下"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "位置动词和形容词的使役",
+            "translation": "把它弄红"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "周期动词：定期发生的事",
+            "translation": "开花"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "不及物命令式",
+            "translation": "学习吧！"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "及物命令式 · 它的复数",
+            "translation": "读它！"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "否定",
+            "translation": "我不睡觉"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "话题标记：用于结束 táant 和 je'el",
+            "translation": "我一定会睡觉"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "第一人称"
+      },
+      {
+        "id": "2",
+        "label": "第二人称"
+      },
+      {
+        "id": "3",
+        "label": "第三人称"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "habitual",
+        "group": "体",
+        "name": "习惯式",
+        "description": "习惯做的事（k-）。"
+      },
+      {
+        "id": "durative",
+        "group": "体",
+        "name": "持续体",
+        "description": "现在正在发生的事（táan）。"
+      },
+      {
+        "id": "terminative",
+        "group": "体",
+        "name": "终结体",
+        "description": "已经做完的事（ts'o'ok）。"
+      },
+      {
+        "id": "recent",
+        "group": "体",
+        "name": "刚完成体",
+        "description": "刚做完的事（táant … -e'）。"
+      },
+      {
+        "id": "completive",
+        "group": "过去",
+        "name": "完成体",
+        "description": "发生并结束了的事：不及物用 j- / -naj- / -laj-，及物用 t- … -aj。"
+      },
+      {
+        "id": "earlier",
+        "group": "过去",
+        "name": "近过去时",
+        "description": "不久前，当天（sáam）。"
+      },
+      {
+        "id": "remote",
+        "group": "过去",
+        "name": "远过去时",
+        "description": "很久以前，用来讲故事（úuch）。"
+      },
+      {
+        "id": "assurative",
+        "group": "将来时",
+        "name": "断言体",
+        "description": "一定会发生的事（je'el … -e'）。"
+      },
+      {
+        "id": "compulsive",
+        "group": "将来时",
+        "name": "义务体",
+        "description": "必须发生的事（yaan）。"
+      },
+      {
+        "id": "future",
+        "group": "将来时",
+        "name": "不定将来时",
+        "description": "有一天，但不确定（bíin）。"
+      },
+      {
+        "id": "desiderative",
+        "group": "助词",
+        "name": "愿望",
+        "description": "「我想……」（taak）。"
+      },
+      {
+        "id": "necessity",
+        "group": "助词",
+        "name": "需要",
+        "description": "「我需要……」（k'a'abet）。"
+      },
+      {
+        "id": "custom",
+        "group": "助词",
+        "name": "习惯",
+        "description": "「我常常……」（suuk）。"
+      },
+      {
+        "id": "incipient",
+        "group": "助词",
+        "name": "起始体",
+        "description": "「我开始……」（jo'op'）。"
+      },
+      {
+        "id": "imperative",
+        "group": "语气",
+        "name": "命令式",
+        "description": "命令：-en / -nen，及物用 -ej。"
+      },
+      {
+        "id": "prohibitive",
+        "group": "语气",
+        "name": "禁止式",
+        "description": "「别做！」：ma' a……"
+      },
+      {
+        "id": "neg-habitual",
+        "group": "否定",
+        "name": "习惯式",
+        "description": "ma' t-… -i'。"
+      },
+      {
+        "id": "neg-durative",
+        "group": "否定",
+        "name": "持续体",
+        "description": "ma' táan … -i'。"
+      },
+      {
+        "id": "neg-completive",
+        "group": "否定",
+        "name": "完成体",
+        "description": "ma' + 完成体 + -i'。"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "wenel",
+        "meaning": "睡觉",
+        "es": "睡觉"
+      },
+      {
+        "entry": "okol",
+        "meaning": "进去",
+        "es": "进去"
+      },
+      {
+        "entry": "jóok'ol",
+        "meaning": "出去",
+        "es": "出去"
+      },
+      {
+        "entry": "k'uchul",
+        "meaning": "到达",
+        "es": "到达"
+      },
+      {
+        "entry": "na'akal",
+        "meaning": "上去",
+        "es": "上去"
+      },
+      {
+        "entry": "éemel",
+        "meaning": "下去",
+        "es": "下去"
+      },
+      {
+        "entry": "lúubul",
+        "meaning": "掉下",
+        "es": "掉下"
+      },
+      {
+        "entry": "kíimil",
+        "meaning": "死",
+        "es": "死"
+      },
+      {
+        "entry": "síijil",
+        "meaning": "出生",
+        "es": "出生"
+      },
+      {
+        "entry": "ajal",
+        "meaning": "醒来",
+        "es": "醒来"
+      },
+      {
+        "entry": "bin",
+        "meaning": "去",
+        "es": "去",
+        "note": "不规则：将来时 bíin xi'iken，命令式 xeen"
+      },
+      {
+        "entry": "taal",
+        "meaning": "来",
+        "es": "来",
+        "note": "将来时 bíin talaken，命令式 kóoten"
+      },
+      {
+        "entry": "u'ul",
+        "meaning": "回来，返回",
+        "es": "回来"
+      },
+      {
+        "entry": "máan",
+        "meaning": "经过",
+        "es": "经过"
+      },
+      {
+        "entry": "janal",
+        "meaning": "吃",
+        "es": "吃"
+      },
+      {
+        "entry": "meyaj",
+        "meaning": "工作",
+        "es": "工作"
+      },
+      {
+        "entry": "báaxal",
+        "meaning": "玩",
+        "es": "玩"
+      },
+      {
+        "entry": "xook",
+        "meaning": "学习，阅读",
+        "es": "学习"
+      },
+      {
+        "entry": "ts'íib",
+        "meaning": "写",
+        "es": "写"
+      },
+      {
+        "entry": "áalkab",
+        "meaning": "跑",
+        "es": "跑"
+      },
+      {
+        "entry": "ichkíil",
+        "meaning": "洗澡",
+        "es": "洗澡"
+      },
+      {
+        "entry": "koonol",
+        "meaning": "卖",
+        "es": "卖"
+      },
+      {
+        "entry": "kultal",
+        "meaning": "坐下",
+        "es": "坐下"
+      },
+      {
+        "entry": "wa'altal",
+        "meaning": "站起来",
+        "es": "站起来"
+      },
+      {
+        "entry": "chiltal",
+        "meaning": "躺下",
+        "es": "躺下"
+      },
+      {
+        "entry": "ilik",
+        "meaning": "看它",
+        "es": "看它"
+      },
+      {
+        "entry": "xokik",
+        "meaning": "读它",
+        "es": "读它"
+      },
+      {
+        "entry": "beetik",
+        "meaning": "做它，制作它",
+        "es": "做它"
+      },
+      {
+        "entry": "a'alik",
+        "meaning": "说它",
+        "es": "说它"
+      },
+      {
+        "entry": "uk'ik",
+        "meaning": "喝它",
+        "es": "喝它"
+      },
+      {
+        "entry": "jaantik",
+        "meaning": "吃它",
+        "es": "吃它"
+      },
+      {
+        "entry": "kaxtik",
+        "meaning": "找它",
+        "es": "找它"
+      },
+      {
+        "entry": "ojéeltik",
+        "meaning": "知道它",
+        "es": "知道它"
+      },
+      {
+        "entry": "kanik",
+        "meaning": "学它",
+        "es": "学它"
+      },
+      {
+        "entry": "bisik",
+        "meaning": "拿它",
+        "es": "拿它"
+      },
+      {
+        "entry": "taasik",
+        "meaning": "带来它",
+        "es": "带来它"
+      },
+      {
+        "entry": "u'uyik",
+        "meaning": "听它",
+        "es": "听它"
+      }
+    ]
+  }
+}

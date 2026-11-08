@@ -1,0 +1,813 @@
+{
+  "name": "伊察玛雅语",
+  "variant": "伊察玛雅语",
+  "region": "危地马拉佩滕省圣何塞",
+  "summary": "玛雅语系尤卡坦语支的一种语言，通行于危地马拉的佩滕伊察湖畔。也写作 Itzá、Itzaj 或伊察玛雅语。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "按词典的写法输入动词：wenel「睡觉」（不及物）或 ilik「看」（及物）。",
+    "own": {
+      "hint": "输入任意动词和它的中文意思。如果你选择了它的类型，只输入词根就可以（wen、il、meyaj）。",
+      "label": "动词或词根",
+      "es_placeholder": "工作",
+      "types_help": "如果你输入词典形式（wenel、ilik、jantik），我们会自己判断类型。"
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "自动判断"
+      },
+      {
+        "id": "I",
+        "label": "不及物：wen → wenel"
+      },
+      {
+        "id": "T",
+        "label": "及物：il → ilik"
+      },
+      {
+        "id": "Tt",
+        "label": "带 -t：meyaj → meyajtik"
+      }
+    ]
+  },
+  "source": {
+    "full": "Charles Andrew Hofling 与 Fernando Tesucún，《Itzaj Maya Grammar》，犹他大学出版社，2000 年。部分例子也出自《Jiilt'an Maya Itza: Vocabulario Itza'》（危地马拉玛雅语言学院，2001 年）。"
+  },
+  "about": [
+    "伊察语是玛雅语系尤卡坦语支的一种语言，与尤卡坦玛雅语、莫潘语和拉坎冬语是亲属语言。它通行于危地马拉佩滕省的圣何塞，位于佩滕伊察湖畔。",
+    "伊察人统治着最后一个独立的玛雅王国：它的首都 Noj Petén 一直抵抗西班牙人，直到 1697 年。",
+    "如今这种语言濒临消失：在 1990 年代末，只有几十位老人以它为第一语言。圣何塞社区和危地马拉玛雅语言学院正在努力复兴它。"
+  ],
+  "orthography": {
+    "intro": "这是危地马拉玛雅语言学院的拼写法，塞擦音写作 ts 和 ts'。撇号（'）表示喉化辅音（k'、t'）或喉塞音，也就是声音的短暂停顿。",
+    "letters": [
+      {
+        "meaning": "夜晚"
+      },
+      {
+        "meaning": "肉"
+      },
+      {
+        "meaning": "美洲豹"
+      },
+      {
+        "meaning": "缝"
+      },
+      {
+        "meaning": "鸟"
+      },
+      {
+        "meaning": "星星"
+      },
+      {
+        "meaning": "眼睛"
+      },
+      {
+        "meaning": "水"
+      },
+      {
+        "meaning": "蜂蜜"
+      },
+      {
+        "meaning": "手臂，手"
+      },
+      {
+        "meaning": "土地"
+      },
+      {
+        "meaning": "人"
+      },
+      {
+        "meaning": "房子"
+      },
+      {
+        "meaning": "玉米地"
+      },
+      {
+        "meaning": "头"
+      },
+      {
+        "meaning": "番茄"
+      },
+      {
+        "meaning": "小精灵"
+      },
+      {
+        "meaning": "冷"
+      },
+      {
+        "meaning": "额头"
+      },
+      {
+        "meaning": "语言，话"
+      },
+      {
+        "meaning": "马"
+      },
+      {
+        "meaning": "给"
+      },
+      {
+        "meaning": "喝"
+      },
+      {
+        "meaning": "玉米饼"
+      },
+      {
+        "meaning": "黄蜂"
+      },
+      {
+        "meaning": "螃蟹"
+      },
+      {
+        "meaning": "天空"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "元音"
+      }
+    ],
+    "notes": [
+      "元音中间可以有喉塞音：kan「蛇」，ka'an「天空」。ä 总是短元音。",
+      "长元音不写出来：只写一个元音。",
+      "r 大多出现在来自西班牙语的词里，比如 riyoj「河」。",
+      "方括号中是国际音标（IPA）标注的发音。"
+    ]
+  },
+  "grammar": {
+    "intro": "伊察语的动词由几个部分组成：有时有一个助词，然后是体标记、人称前缀、动词和状态后缀。查动词时，请按词典的写法输入：wenel「睡觉」，ilik「看」。",
+    "blocks": [
+      {
+        "items": [
+          {
+            "slot": "助词",
+            "description": "可选的词，增加一层意思：k'abet「需要」，tak「想」。"
+          },
+          {
+            "slot": "体",
+            "description": "动作在什么时候、以什么方式发生：k- 表示习惯，tan 表示正在。"
+          },
+          {
+            "slot": "人称（A 组）",
+            "description": "谁做这个动作。"
+          },
+          {
+            "slot": "动词",
+            "description": "词根。"
+          },
+          {
+            "slot": "状态",
+            "description": "随体而变的后缀：-el、-ik、-aj……"
+          },
+          {
+            "slot": "复数",
+            "description": "-e'ex 表示「你们」，-o' 表示「他们」。"
+          }
+        ]
+      },
+      {
+        "title": "两组人称标记",
+        "description": "A 组放在动词前面；B 组放在后面。在元音前，A 组加上 w 或 y：in-w-il，u-y-il。",
+        "columns": [
+          "人称",
+          "A 组",
+          "B 组"
+        ],
+        "rows": [
+          {
+            "label": "我"
+          },
+          {
+            "label": "你"
+          },
+          {
+            "label": "他，她"
+          },
+          {
+            "label": "我们"
+          },
+          {
+            "label": "你们"
+          },
+          {
+            "label": "他们"
+          }
+        ],
+        "note": "「我们」后面加上 -e'ex 就包括听话的人：kiwenele'ex「我们大家睡觉」。"
+      },
+      {
+        "title": "在过去时中，人称会移位",
+        "description": "在现在时中，所有动词都用 A 组表示谁做动作。在过去时中，不及物动词把 B 组放在末尾。",
+        "items": [
+          {
+            "translation": "我睡觉"
+          },
+          {
+            "translation": "我睡了"
+          },
+          {
+            "translation": "我看它"
+          },
+          {
+            "translation": "我看了它"
+          }
+        ]
+      },
+      {
+        "title": "三种动词",
+        "items": [
+          {
+            "name": "不及物",
+            "description": "没有宾语。它的后缀重复词根的元音：wen-el，jok'-ol，nak'-äl。",
+            "examples": [
+              {
+                "meaning": "我睡了"
+              },
+              {
+                "meaning": "我到了"
+              }
+            ]
+          },
+          {
+            "name": "词根及物动词",
+            "description": "带宾语。在过去时中加上 t- 和 -aj。",
+            "examples": [
+              {
+                "meaning": "我看了它"
+              },
+              {
+                "meaning": "我喝了它"
+              }
+            ]
+          },
+          {
+            "name": "带 -t 的及物动词",
+            "description": "-t- 用来构成及物动词。在完成时中 -t- 变成 -m-。",
+            "examples": [
+              {
+                "meaning": "我吃了它"
+              },
+              {
+                "meaning": "我已经吃了它"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "助词",
+        "description": "它们放在动词前面，动词保留人称前缀和 -Vl 或 -ik 后缀，但不带 k-。",
+        "items": [
+          {
+            "translation": "我需要睡觉"
+          },
+          {
+            "translation": "我想睡觉"
+          },
+          {
+            "translation": "我得睡觉"
+          },
+          {
+            "translation": "我能睡觉"
+          },
+          {
+            "translation": "我常常睡觉"
+          },
+          {
+            "translation": "我差点睡着了"
+          },
+          {
+            "translation": "我开始睡觉了"
+          },
+          {
+            "translation": "我已经睡了"
+          }
+        ]
+      },
+      {
+        "title": "语气：依附状态",
+        "description": "表示还不是现实的事（愿望、命令、警告）时，动词用依附状态：不及物动词用 -Vk，及物动词用 -V' 或 -ej。",
+        "items": [
+          {
+            "name": "虚拟式",
+            "description": "「让……」：可能发生也可能不发生的事。",
+            "examples": [
+              {
+                "meaning": "让你睡觉"
+              },
+              {
+                "meaning": "让他/她喝它"
+              }
+            ]
+          },
+          {
+            "name": "命令式",
+            "description": "命令。否定时，ma' 与现在时连用。",
+            "examples": [
+              {
+                "meaning": "睡吧！"
+              },
+              {
+                "meaning": "别睡！"
+              }
+            ]
+          },
+          {
+            "name": "警告",
+            "description": "提醒可能发生的事。",
+            "examples": [
+              {
+                "meaning": "小心，你可能会摔倒！"
+              }
+            ]
+          },
+          {
+            "name": "劝勉式",
+            "description": "「我们……吧」。用 ko'on 表示「来……」。",
+            "examples": [
+              {
+                "meaning": "我们睡吧"
+              },
+              {
+                "meaning": "我们看看它吧"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "否定：ma'",
+        "description": "否定现在时要用 tan，也就是表示正在发生的标记。",
+        "items": [
+          {
+            "translation": "我不睡觉"
+          },
+          {
+            "translation": "他/她没睡"
+          },
+          {
+            "translation": "我没看见它"
+          }
+        ]
+      },
+      {
+        "title": "例句",
+        "items": [
+          {
+            "translation": "我星期五到的。"
+          },
+          {
+            "translation": "猫在喵喵叫。"
+          },
+          {
+            "translation": "他们看着一只食蚁兽。"
+          },
+          {
+            "translation": "我饿了。"
+          },
+          {
+            "translation": "是的，我这就去！"
+          }
+        ]
+      },
+      {
+        "title": "动词的所有词缀",
+        "description": "动词可以带的每个部分：前缀、后缀、小品词和词根变化。",
+        "items": [
+          {
+            "kind": "体",
+            "meaning": "未完成体：习惯，总是发生的事",
+            "translation": "我睡觉"
+          },
+          {
+            "kind": "体",
+            "meaning": "持续体：正在发生的事",
+            "translation": "我正在睡觉"
+          },
+          {
+            "kind": "体",
+            "meaning": "瞬时体：「当……的时候」",
+            "translation": "我睡觉的时候"
+          },
+          {
+            "kind": "体",
+            "meaning": "刚过去时",
+            "translation": "我刚睡了"
+          },
+          {
+            "kind": "体",
+            "meaning": "及物动词的完成体",
+            "translation": "我看了它"
+          },
+          {
+            "kind": "体",
+            "meaning": "断言体：一定会发生的事",
+            "translation": "我会睡觉"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "「要去做」：近将来时",
+            "translation": "我要睡觉"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "需要、愿望、义务、能力、习惯",
+            "translation": "我需要睡觉"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "「差点」",
+            "translation": "我差点睡着了"
+          },
+          {
+            "kind": "助动词",
+            "meaning": "开始、着手、结束、已经",
+            "translation": "我开始睡觉了"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "虚拟式：「让……」",
+            "translation": "让我睡觉"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "警告：「小心！」",
+            "translation": "小心，我可能会睡着"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "劝勉式：「我们……吧」",
+            "translation": "我们睡吧"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "邀请：「来……」",
+            "translation": "来睡吧"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "否定",
+            "translation": "我不睡觉"
+          },
+          {
+            "kind": "前缀（A 组）",
+            "meaning": "主语：我、你、他/她；在元音前加 w 或 y",
+            "translation": "我看它"
+          },
+          {
+            "kind": "前缀（A 组）",
+            "meaning": "主语：我们",
+            "translation": "我们看它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "A 组复数：你们、他们",
+            "translation": "你们睡觉"
+          },
+          {
+            "kind": "后缀（B 组）",
+            "meaning": "宾语；完成体中不及物动词的主语：我、你、他/她",
+            "translation": "我睡了"
+          },
+          {
+            "kind": "后缀（B 组）",
+            "meaning": "我们、你们、他们",
+            "translation": "他们睡了"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "不及物未完成体：重复词根元音",
+            "translation": "睡觉"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "及物未完成体",
+            "translation": "我看它"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "及物完成体",
+            "translation": "我看了它"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "不及物依附体：虚拟式、警告",
+            "translation": "让我睡觉"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "及物依附体",
+            "translation": "让我看它"
+          },
+          {
+            "kind": "状态后缀",
+            "meaning": "不及物命令式",
+            "translation": "睡吧！"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "完成时：及物、不及物",
+            "translation": "我已经看了它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "构成及物动词（完成时中为 -m-）",
+            "translation": "吃它"
+          },
+          {
+            "kind": "后缀",
+            "meaning": "用于结束瞬时体和断言体",
+            "translation": "我会睡觉"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "第一人称"
+      },
+      {
+        "id": "2",
+        "label": "第二人称"
+      },
+      {
+        "id": "3",
+        "label": "第三人称"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "incompletive",
+        "group": "体",
+        "name": "习惯现在时",
+        "description": "总是发生或习惯发生的事（k-）。"
+      },
+      {
+        "id": "durative",
+        "group": "体",
+        "name": "现在进行时",
+        "description": "现在正在发生的事（tan）。"
+      },
+      {
+        "id": "punctual",
+        "group": "体",
+        "name": "瞬时体：「当……的时候」",
+        "description": "某事发生的时候（kil … -ej）。"
+      },
+      {
+        "id": "immediate",
+        "group": "体",
+        "name": "刚过去时",
+        "description": "刚刚发生的事（tantoj）。"
+      },
+      {
+        "id": "completive",
+        "group": "过去",
+        "name": "过去时",
+        "description": "已经发生的事（t- … -aj）。"
+      },
+      {
+        "id": "perfect",
+        "group": "过去",
+        "name": "完成时",
+        "description": "已经发生过的事（-m-aj、-a'an）。"
+      },
+      {
+        "id": "assurative",
+        "group": "将来时",
+        "name": "确定的将来时",
+        "description": "一定会发生的事（je' … -ej）。"
+      },
+      {
+        "id": "go",
+        "group": "将来时",
+        "name": "近将来时",
+        "description": "马上要去做的事（ka'aj，「去……」）。"
+      },
+      {
+        "id": "kabet",
+        "group": "助词",
+        "name": "需要",
+        "description": "「我需要……」（k'abet）。"
+      },
+      {
+        "id": "tak",
+        "group": "助词",
+        "name": "愿望",
+        "description": "「我想……」（tak）。"
+      },
+      {
+        "id": "yan",
+        "group": "助词",
+        "name": "义务",
+        "description": "「我得……」（yan）。"
+      },
+      {
+        "id": "patal",
+        "group": "助词",
+        "name": "能力",
+        "description": "「我能……」（patal）。"
+      },
+      {
+        "id": "suk",
+        "group": "助词",
+        "name": "习惯",
+        "description": "「我常常……」（suk）。"
+      },
+      {
+        "id": "olak",
+        "group": "助词",
+        "name": "差点",
+        "description": "「我差点……」（olak）。"
+      },
+      {
+        "id": "kaj",
+        "group": "开始与结束",
+        "name": "开始",
+        "description": "「我开始……」（kajij）。"
+      },
+      {
+        "id": "jop",
+        "group": "开始与结束",
+        "name": "着手",
+        "description": "「我着手……」（jop'ij）。"
+      },
+      {
+        "id": "jom",
+        "group": "开始与结束",
+        "name": "结束",
+        "description": "「我做完了……」（jo'mij）。"
+      },
+      {
+        "id": "tsok",
+        "group": "开始与结束",
+        "name": "已经",
+        "description": "「已经……」，某件事完成了（ts'o'kij）。"
+      },
+      {
+        "id": "subjunctive",
+        "group": "语气",
+        "name": "虚拟式",
+        "description": "可能发生也可能不发生的事：「让……」（ka'）。"
+      },
+      {
+        "id": "imperative",
+        "group": "语气",
+        "name": "命令式",
+        "description": "用来下命令。"
+      },
+      {
+        "id": "admonitive",
+        "group": "语气",
+        "name": "警告",
+        "description": "「小心！」，可能发生的事（bikij）。"
+      },
+      {
+        "id": "hortative",
+        "group": "语气",
+        "name": "劝勉式",
+        "description": "「我们……吧」（ko'ox）。"
+      },
+      {
+        "id": "come",
+        "group": "语气",
+        "name": "邀请",
+        "description": "「来……」（ko'on、ko'one'ex）。"
+      },
+      {
+        "id": "neg-incompletive",
+        "group": "否定",
+        "name": "现在时",
+        "description": "ma' + tan。"
+      },
+      {
+        "id": "neg-completive",
+        "group": "否定",
+        "name": "过去时",
+        "description": "ma' + 过去时。"
+      },
+      {
+        "id": "neg-perfect",
+        "group": "否定",
+        "name": "完成时",
+        "description": "还没发生的事：ma' + -Vk。"
+      },
+      {
+        "id": "neg-imperative",
+        "group": "否定",
+        "name": "命令式",
+        "description": "表示「别做」：ma' + a-。"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "wenel",
+        "meaning": "睡觉",
+        "es": "睡觉"
+      },
+      {
+        "entry": "jok'ol",
+        "meaning": "出去，离开",
+        "es": "出去"
+      },
+      {
+        "entry": "k'ochol",
+        "meaning": "到达",
+        "es": "到达"
+      },
+      {
+        "entry": "okol",
+        "meaning": "进入",
+        "es": "进入"
+      },
+      {
+        "entry": "lubul",
+        "meaning": "掉下",
+        "es": "掉下"
+      },
+      {
+        "entry": "kimil",
+        "meaning": "死",
+        "es": "死"
+      },
+      {
+        "entry": "nak'äl",
+        "meaning": "上去",
+        "es": "上去"
+      },
+      {
+        "entry": "emel",
+        "meaning": "下去",
+        "es": "下去"
+      },
+      {
+        "entry": "ok'ol",
+        "meaning": "哭",
+        "es": "哭"
+      },
+      {
+        "entry": "talel",
+        "meaning": "来",
+        "es": "来",
+        "note": "带 -el；虚拟式 tak，命令式 ko'ten"
+      },
+      {
+        "entry": "bel",
+        "meaning": "去",
+        "es": "去",
+        "note": "不规则：bel，过去时 bin，虚拟式 xi'ik，命令式 xen"
+      },
+      {
+        "entry": "ilik",
+        "meaning": "看",
+        "es": "看",
+        "note": "虚拟式和命令式 ila'（不是 il-i'）"
+      },
+      {
+        "entry": "uk'ik",
+        "meaning": "喝",
+        "es": "喝"
+      },
+      {
+        "entry": "chäkik",
+        "meaning": "煮",
+        "es": "煮"
+      },
+      {
+        "entry": "ch'äkik",
+        "meaning": "切",
+        "es": "切"
+      },
+      {
+        "entry": "mächik",
+        "meaning": "抓",
+        "es": "抓"
+      },
+      {
+        "entry": "mänik",
+        "meaning": "买",
+        "es": "买"
+      },
+      {
+        "entry": "ts'onik",
+        "meaning": "射",
+        "es": "射"
+      },
+      {
+        "entry": "jantik",
+        "meaning": "吃",
+        "es": "吃"
+      },
+      {
+        "entry": "cha'antik",
+        "meaning": "看着",
+        "es": "看着"
+      }
+    ]
+  }
+}

@@ -12,24 +12,38 @@ export const LOGO_SVG = `
 </svg>`;
 
 // ---------- Language of the page ----------
-// Spanish pages live at /coniugatio/…, English ones at /coniugatio/en/….
-export const EN = document.documentElement.lang === "en";
-// The Spanish or the English text, for the page's language.
-export const t = (es, en) => (EN ? en : es);
+// Spanish pages live at /coniugatio/…, English ones at /coniugatio/en/…,
+// Chinese ones at /coniugatio/zh/….
+const docLang = document.documentElement.lang.split("-")[0]; // zh-Hans → zh
+export const LANG = ["en", "zh"].includes(docLang) ? docLang : "es";
+export const EN = LANG === "en";
+// The Spanish, English or Chinese text, for the page's language.
+export const t = (es, en, zh) => (LANG === "zh" ? zh ?? en : EN ? en : es);
+// Folder of the page's language, relative to <base href>: "", "en/", "zh/".
+export const PREFIX = LANG === "es" ? "" : `${LANG}/`;
 // Home page of the current language, relative to <base href>.
-export const HOME = EN ? "en/" : "./";
+export const HOME = PREFIX || "./";
 
 // Donations, on Ko-fi.
 export const DONATE_URL = "https://ko-fi.com/suondilut";
 const donateLink = (cls) =>
-  `<a class="${cls}" href="${DONATE_URL}" target="_blank" rel="noopener">${t("Dónanos", "Donate")}<span class="visually-hidden"> ${t("(en Ko-fi, se abre en otra pestaña)", "(on Ko-fi, opens in a new tab)")}</span></a>`;
+  `<a class="${cls}" href="${DONATE_URL}" target="_blank" rel="noopener">${t("Dónanos", "Donate", "捐助我们")}<span class="visually-hidden"> ${t("(en Ko-fi, se abre en otra pestaña)", "(on Ko-fi, opens in a new tab)", "（在 Ko-fi 上，在新标签页打开）")}</span></a>`;
 
-// The same page in the other language: /otomi/ ⇄ /en/otomi/.
-function otherLanguageHref() {
+// The same page in another language: /otomi/ ⇄ /en/otomi/ ⇄ /zh/otomi/.
+// The verb travels too, under the other page's parameter (?verbo=, ?verb=).
+const SWITCH = [
+  { lang: "es", label: "ES", name: "Ver esta página en español" },
+  { lang: "en", label: "EN", name: "Read this page in English" },
+  { lang: "zh", label: "中文", name: "用中文阅读此页" },
+];
+function languageHref(target) {
   const base = new URL(document.baseURI).pathname;
   const here = location.pathname.startsWith(base) ? location.pathname.slice(base.length) : "";
-  const path = EN ? here.replace(/^en(\/|$)/, "") : `en/${here}`;
-  return (path || "./") + location.search + location.hash;
+  const path = (target === "es" ? "" : `${target}/`) + here.replace(/^(en|zh)(\/|$)/, "");
+  const query = new URLSearchParams(location.search);
+  const verb = query.get("verbo") ?? query.get("verb");
+  const search = verb ? `?${target === "es" ? "verbo" : "verb"}=${encodeURIComponent(verb)}` : "";
+  return (path || "./") + search + location.hash;
 }
 
 // Pages use <base href> so the site works under /coniugatio/ on GitHub Pages.
@@ -84,17 +98,20 @@ export function renderHeader(current) {
     <div class="wrap">
       <a class="brand" href="${HOME}">${LOGO_SVG}<span>Mati Mati</span></a>
       <div class="header-end">
-        <nav class="site-nav" aria-label="${t("Principal", "Main")}">
+        <nav class="site-nav" aria-label="${t("Principal", "Main", "主导航")}">
           <ul>
-            ${link(HOME, t("Inicio", "Home"), "home")}
-            ${link(`${HOME}#lenguas`, t("Lenguas", "Languages"), "lenguas")}
+            ${link(HOME, t("Inicio", "Home", "首页"), "home")}
+            ${link(`${HOME}#lenguas`, t("Lenguas", "Languages", "语言"), "lenguas")}
             ${link(`${HOME}#mati`, "Mati Mati", "mati")}
           </ul>
         </nav>
         ${donateLink("donate")}
-        ${EN
-          ? `<a class="lang-switch" href="${otherLanguageHref()}" hreflang="es" lang="es" aria-label="Ver esta página en español">ES</a>`
-          : `<a class="lang-switch" href="${otherLanguageHref()}" hreflang="en" lang="en" aria-label="Read this page in English">EN</a>`}
+        <span class="lang-switches">${SWITCH.filter((l) => l.lang !== LANG)
+          .map(
+            (l) =>
+              `<a class="lang-switch" data-lang-switch="${l.lang}" href="${languageHref(l.lang)}" hreflang="${l.lang}" lang="${l.lang}" aria-label="${l.name}">${l.label}</a>`
+          )
+          .join("")}</span>
       </div>
     </div>`;
 }
@@ -105,8 +122,8 @@ export function renderFooter() {
   el.innerHTML = `
     <div class="wrap">
       <a class="brand" href="${HOME}">${LOGO_SVG}<span>Mati Mati</span></a>
-      <p>${t("Aprende, preserva y comparte lenguas indígenas.", "Learn, preserve and share Indigenous languages.")}<br>
-        ${t("Síguenos en", "Follow us at")} <a href="https://www.instagram.com/matidemati" rel="noopener">@matidemati</a>.</p>
+      <p>${t("Aprende, preserva y comparte lenguas indígenas.", "Learn, preserve and share Indigenous languages.", "学习、保护和分享原住民语言。")}<br>
+        ${t("Síguenos en", "Follow us at", "关注我们：")} <a href="https://www.instagram.com/matidemati" rel="noopener">@matidemati</a>.</p>
       ${donateLink("donate donate--footer")}
     </div>`;
 }
@@ -114,7 +131,8 @@ export function renderFooter() {
 // Keeps the language switch pointing at the same verb and section after the
 // URL changes (?verbo=…, #conjugador).
 export function refreshLanguageSwitch() {
-  const a = document.querySelector(".lang-switch");
-  if (a) a.setAttribute("href", otherLanguageHref());
+  document
+    .querySelectorAll("[data-lang-switch]")
+    .forEach((a) => a.setAttribute("href", languageHref(a.dataset.langSwitch)));
 }
 window.addEventListener("hashchange", refreshLanguageSwitch);
