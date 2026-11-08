@@ -333,7 +333,7 @@
           {
             "kind": "助动词",
             "meaning": "能力：能",
-            "translation": "我能做它"
+            "translation": "我能做这件事"
           },
           {
             "kind": "助动词",
@@ -348,7 +348,7 @@
           {
             "kind": "体",
             "meaning": "断言体",
-            "translation": "他/她将能做它"
+            "translation": "他/她将能做这件事"
           },
           {
             "kind": "体",
@@ -671,8 +671,8 @@
       },
       {
         "entry": "betik",
-        "meaning": "做它，制作它",
-        "es": "做它"
+        "meaning": "做，制作",
+        "es": "做这件事"
       },
       {
         "entry": "jantik",

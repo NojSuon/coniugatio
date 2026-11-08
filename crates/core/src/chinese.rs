@@ -5,7 +5,7 @@
 //! keep each tense's Spanish spec (`spanish::Es`), and this module reads
 //! its auxiliaries and adverbs ("tener que", "ya") as their Chinese
 //! counterparts, so the data only has to give each verb's meaning in
-//! Chinese: "睡觉", "去", "看它" (a final 它 is the object, so 了 goes
+//! Chinese: "睡觉", "去", "看它" (a final 它 or 这件事 is the object, so 了 goes
 //! before it: 我看了它).
 
 use crate::spanish::{Es, Spec, Tense};
@@ -91,10 +91,11 @@ pub fn render(meaning: &str, es: &Es, person: usize, negative: bool) -> Option<S
     if !is_chinese(meaning) || person >= PRONOUNS.len() {
         return None;
     }
-    let (verb, object) = match meaning.strip_suffix('它') {
-        Some(v) if !v.is_empty() => (v, "它"),
-        _ => (meaning, ""),
-    };
+    // The object, so 了 goes before it: 看了它, 做了这件事.
+    let (verb, object) = ["这件事", "它"]
+        .iter()
+        .find_map(|o| meaning.strip_suffix(o).filter(|v| !v.is_empty()).map(|v| (v, *o)))
+        .unwrap_or((meaning, ""));
     let second = person == 1 || person == 4;
     let place = match spec.after.as_deref() {
         Some(a) => after(a)?,
@@ -240,6 +241,7 @@ mod tests {
         assert_eq!(render("去", &simple(Tense::Preterite), 3, false).unwrap(), "我们去了");
         assert_eq!(render("去", &simple(Tense::Preterite), 3, true).unwrap(), "我们没去");
         assert_eq!(render("看它", &simple(Tense::Preterite), 0, false).unwrap(), "我看了它");
+        assert_eq!(render("做这件事", &simple(Tense::Preterite), 0, false).unwrap(), "我做了这件事");
         assert_eq!(render("睡觉", &simple(Tense::Progressive), 1, false).unwrap(), "你正在睡觉");
         assert_eq!(render("睡觉", &simple(Tense::Future), 5, false).unwrap(), "他们/她们会睡觉");
         assert_eq!(render("睡觉", &simple(Tense::Imperative), 1, false).unwrap(), "睡觉！");
