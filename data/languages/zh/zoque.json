@@ -5,12 +5,12 @@
   "summary": "恰帕斯州西北部的一种米塞-索克语。在科派纳拉和特克帕坦，说这种语言的人称它为 tsunitsame 或 tsuni；在其他村镇称为 otetsame 或 ote。",
   "conjugator": {
     "label": "词根或动词",
-    "hint": "输入动词的词根（poy「跑」，tsäjk「做它」）或它的过去形式，按词典的写法（poyu、tsyäjku）。",
+    "hint": "输入动词的词根（poy「跑」，tsäjk「做」）或它的过去形式，按词典的写法（poyu、tsyäjku）。",
     "own": {
       "hint": "输入任意动词的词根、它的中文意思，以及它是否带宾语。我们会用科派纳拉索克语的规则为它变位。",
       "label": "动词词根",
       "es_placeholder": "唱歌",
-      "types_help": "及物动词在每种形式中都带人称前缀（ntsäkpa'äs「我做它」）；意思要写上「它」：「做它」。"
+      "types_help": "及物动词在每种形式中都带人称前缀（ntsäkpa'äs「我做这件事」）；意思里要写上宾语，比如「看它」「做这件事」。"
     },
     "types": [
       {
@@ -224,7 +224,7 @@
             "translation": "我要跑"
           },
           {
-            "translation": "我想做它"
+            "translation": "我想做这件事"
           },
           {
             "translation": "我以前常跑"
@@ -258,7 +258,7 @@
           {
             "kind": "前缀",
             "meaning": "第一人称（以及及物动词的第二人称）；会同化：m、n、nh",
-            "translation": "我做它"
+            "translation": "我做这件事"
           },
           {
             "kind": "前缀",
@@ -383,7 +383,7 @@
           {
             "kind": "助动词",
             "meaning": "想，能",
-            "translation": "我想做它"
+            "translation": "我想做这件事"
           },
           {
             "kind": "助动词",
@@ -403,7 +403,7 @@
           {
             "kind": "助动词",
             "meaning": "「为了」，「为了不」",
-            "translation": "为了让他/她做它"
+            "translation": "为了让他/她做这件事"
           },
           {
             "kind": "后缀",
@@ -418,7 +418,7 @@
           {
             "kind": "后缀",
             "meaning": "想做某事",
-            "translation": "他/她想做它"
+            "translation": "他/她想做这件事"
           },
           {
             "kind": "后缀",
@@ -614,8 +614,8 @@
       },
       {
         "entry": "tsyäjku",
-        "meaning": "做它，制作它",
-        "es": "做它"
+        "meaning": "做，制作",
+        "es": "做这件事"
       },
       {
         "entry": "pya'tu",

@@ -33,7 +33,7 @@ function subnav() {
   const items = [
     ["conjugador", t("Conjugador", "Conjugator", "变位器")],
     ["tu-verbo", t("Conjuga tu verbo", "Conjugate your verb", "变位你的动词")],
-    ["lengua", t("Conoce la lengua", "About the language", "了解这种语言")],
+    ["lengua", t("Conoce la lengua", "About the language", "认识这门语言")],
     ["ortografia", t("Ortografía", "Alphabet", "字母")],
     ["gramatica", t("Cómo se conjuga", "How verbs work", "动词如何变位")],
   ];
@@ -46,7 +46,7 @@ function about() {
   return `
   <section class="section" id="lengua" aria-labelledby="lengua-t">
     <div class="wrap stack">
-      <h2 id="lengua-t">${t("Conoce la lengua", "About the language", "了解这种语言")}</h2>
+      <h2 id="lengua-t">${t("Conoce la lengua", "About the language", "认识这门语言")}</h2>
       <p><span class="tag">${e(lang.region)}</span></p>
       ${lang.about.map((p) => `<p>${e(p)}</p>`).join("")}
     </div>
@@ -225,7 +225,7 @@ function ownVerb() {
         <div class="field">
           <label for="own-es">${t("Significado en español", "Meaning in English", "中文意思")}</label>
           <input id="own-es" name="es" autocomplete="off" placeholder="${e(own.es_placeholder || t("trabajar", "work", "工作"))}" lang="${t("es", "en", "zh")}">
-          <p class="caption field-help">${t("En infinitivo: termina en -ar, -er o -ir.", "The plain verb: «sleep», «do it», «drink water».", "写一个简单的动词：「睡觉」「做它」「喝水」。")}</p>
+          <p class="caption field-help">${t("En infinitivo: termina en -ar, -er o -ir.", "The plain verb: «sleep», «do it», «drink water».", "写一个简单的动词：「睡觉」「吃饭」「看书」。")}</p>
         </div>
         ${types.length ? `<div class="field">
           <label for="own-kind">${t("Tipo de verbo", "Verb type", "动词类型")}</label>
@@ -241,8 +241,8 @@ function ownVerb() {
       <div class="card card--blanca learn-more">
         <h3>${t("¿Quieres saber más?", "Want to know more?", "想了解更多？")}</h3>
         <ul>
-          <li><a href="#lengua">${t("Conoce la lengua", "About the language", "了解这种语言")}</a>: ${t("quién la habla y dónde.", "who speaks it and where.", "谁在说、在哪里说。")}</li>
-          <li><a href="#ortografia">${t("Ortografía", "Alphabet", "字母")}</a>: ${t("cada letra con una palabra de ejemplo.", "every letter with an example word.", "每个字母和一个例词。")}</li>
+          <li><a href="#lengua">${t("Conoce la lengua", "About the language", "认识这门语言")}</a>: ${t("quién la habla y dónde.", "who speaks it and where.", "谁在说这门语言、在哪里说。")}</li>
+          <li><a href="#ortografia">${t("Ortografía", "Alphabet", "字母")}</a>: ${t("cada letra con una palabra de ejemplo.", "every letter with an example word.", "每个字母都配有例词。")}</li>
           <li><a href="#gramatica">${t("Cómo se conjuga", "How verbs work", "动词如何变位")}</a>: ${t("las piezas de cada verbo y sus reglas.", "the pieces of each verb and their rules.", "每个动词的组成部分和规则。")}</li>
         </ul>
       </div>
