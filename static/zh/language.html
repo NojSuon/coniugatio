@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <base href="{{base}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light">
   <script>
-    // Light or dark theme before the first paint: the saved choice, else the device's.
-    try { document.documentElement.dataset.theme = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); } catch (e) {}
+    // Light or dark theme before the first paint: the saved choice, else light.
+    document.documentElement.dataset.theme = "light";
+    try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
   </script>
   <title>{{title}} · Mati Mati</title>
   <link rel="icon" href="static/img/favicon.svg" type="image/svg+xml">
