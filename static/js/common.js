@@ -90,10 +90,8 @@ export function langWord(text, tag = "span", extra = "") {
 }
 
 // ---------- Light / dark theme ----------
-// The <head> of each page sets <html data-theme> before the first paint
-// (the saved choice, else the device setting). The header button switches
-// it and remembers the choice; with no choice saved, the page follows the
-// device when its setting changes.
+// Light by default. The <head> of each page sets <html data-theme> before
+// the first paint; the header button switches it and remembers the choice.
 const MOON_SVG = `<svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>`;
 const SUN_SVG = `<svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>`;
 const isDark = () => document.documentElement.dataset.theme === "dark";
@@ -109,15 +107,7 @@ function setTheme(theme, save) {
 document.addEventListener("click", (ev) => {
   if (ev.target.closest?.("[data-theme-toggle]")) setTheme(isDark() ? "light" : "dark", true);
 });
-const darkQuery = matchMedia("(prefers-color-scheme: dark)");
-darkQuery.addEventListener?.("change", (ev) => {
-  let saved = null;
-  try {
-    saved = localStorage.getItem("theme");
-  } catch {}
-  if (!saved) setTheme(ev.matches ? "dark" : "light", false);
-});
-if (!document.documentElement.dataset.theme) setTheme(darkQuery.matches ? "dark" : "light", false);
+if (!document.documentElement.dataset.theme) setTheme("light", false);
 
 export function renderHeader(current) {
   const el = document.querySelector("[data-site-header]");
