@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <base href="{{base}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Light or dark theme before the first paint: the saved choice, else the device's.
+    try { document.documentElement.dataset.theme = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); } catch (e) {}
+  </script>
   <title>Mati Mati · Conjugador</title>
   <meta name="description" content="Conjuga verbos en lenguas indígenas de México con Mati Mati.">
   <link rel="icon" href="static/img/favicon.svg" type="image/svg+xml">
@@ -25,7 +30,7 @@
           <span class="tag">Conjugador de lenguas indígenas</span>
           <h1 id="hero-title">Conjuga verbos en lenguas indígenas de México</h1>
           <p>Elige una lengua, escribe un verbo y mira cómo cambia con cada persona y cada tiempo.</p>
-          <p style="margin-top:28px"><a class="button" href="#lenguas" style="background:var(--mati-blanco);color:var(--mati-cacao-rojo)">Elige una lengua →</a></p>
+          <p style="margin-top:28px"><a class="button" href="#lenguas" style="background:var(--surface);color:var(--mati-cacao-rojo)">Elige una lengua →</a></p>
         </div>
         <img class="hero-logo" src="static/img/mati-logo-textil.png" width="300" height="300"
              alt="Logotipo de Mati Mati: las letras MA y TI sobre cuatro patrones textiles.">
