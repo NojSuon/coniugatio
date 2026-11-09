@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <base href="{{base}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Light or dark theme before the first paint: the saved choice, else the device's.
+    try { document.documentElement.dataset.theme = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); } catch (e) {}
+  </script>
   <title>Mati Mati · Conjugator</title>
   <meta name="description" content="Conjugate verbs in Indigenous languages of Mexico with Mati Mati.">
   <link rel="icon" href="static/img/favicon.svg" type="image/svg+xml">
@@ -25,7 +30,7 @@
           <span class="tag">Indigenous language conjugator</span>
           <h1 id="hero-title">Conjugate verbs in Indigenous languages of Mexico</h1>
           <p>Choose a language, type a verb and see how it changes with every person and every tense.</p>
-          <p style="margin-top:28px"><a class="button" href="#lenguas" style="background:var(--mati-blanco);color:var(--mati-cacao-rojo)">Choose a language →</a></p>
+          <p style="margin-top:28px"><a class="button" href="#lenguas" style="background:var(--surface);color:var(--mati-cacao-rojo)">Choose a language →</a></p>
         </div>
         <img class="hero-logo" src="static/img/mati-logo-textil.png" width="300" height="300"
              alt="Mati Mati logo: the letters MA and TI over four textile patterns.">
