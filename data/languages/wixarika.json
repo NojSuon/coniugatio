@@ -467,9 +467,9 @@
             "translation": "está caliente (cuidado)"
           },
           {
-            "affix": "niu-",
+            "affix": "ni-",
             "kind": "prefijo modal",
-            "meaning": "Narrativo",
+            "meaning": "Narrativo; con u- (visible) forma niu-: ni- + u-",
             "example": "niutanautsa",
             "translation": "empezó a correr"
           },
@@ -884,12 +884,13 @@
       },
       {
         "entry": "ke",
-        "prefix": "anku",
+        "prefix": "anuku",
         "stem": "ke",
         "stem_pl": "'ui",
         "meaning": "levantarse",
         "es": "levantarse",
-        "note": "Plural 'ui"
+        "note": "Plural 'ui",
+        "prefix_pl": "anku"
       },
       {
         "entry": "nautsa",
