@@ -319,6 +319,27 @@ a.language-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px var
 .language-card .summary { font-size: 16px; margin-top: auto; }
 .language-card .go { font-family: var(--font-titulo); font-weight: 600; color: var(--serie-texto); }
 .language-card[aria-disabled="true"] .tag { background: var(--surface); color: var(--serie-texto); }
+.language-card .family { font-size: 14px; font-weight: 700; color: var(--serie-texto); }
+.language-card[hidden], .continent[hidden] { display: none; }
+
+/* Filters (family, region) above the list, and one section per continent. */
+.language-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 16px 24px; margin-bottom: 36px; }
+.language-filters .field { display: grid; gap: 6px; min-width: min(100%, 240px); }
+.language-filters .field span { font-family: var(--font-titulo); font-weight: 600; }
+.language-filters select {
+  height: 48px; padding: 0 14px; border-radius: 14px;
+  font: 600 16px var(--font-cuerpo); color: var(--mati-tinta);
+  background: var(--surface); border: 2px solid var(--mati-cafe-tierra);
+}
+.language-filters select:focus-visible { outline: 3px solid var(--mati-cacao-rojo); outline-offset: 2px; }
+.language-filters .caption { margin: 0 0 12px; font-size: 15px; }
+.continent + .continent { margin-top: 48px; }
+.continent h3 { color: var(--mati-cacao-rojo); margin-bottom: 20px; }
+.continent-soon { font-size: 16px; }
+.link-button {
+  background: none; border: 0; padding: 0; font: inherit; font-weight: 700;
+  color: var(--mati-cacao-rojo); text-decoration: underline; cursor: pointer;
+}
 
 .cta { padding-block: 24px 0; }
 .cta-card {

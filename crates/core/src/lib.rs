@@ -124,6 +124,15 @@ pub struct Summary {
     pub endonym: String,
     pub variant: String,
     pub region: String,
+    /// Language family id for the home-page filter: "maya", "aislada"…
+    #[serde(default)]
+    pub family: String,
+    /// Cultural area id: "mesoamerica", "sureste"…
+    #[serde(default)]
+    pub area: String,
+    /// "norte" (North and Central America) or "sur" (South America).
+    #[serde(default)]
+    pub continent: String,
     /// `"available"` or `"soon"`.
     pub status: String,
     pub order: u32,
