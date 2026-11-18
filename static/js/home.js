@@ -21,7 +21,7 @@ const AREAS = {
   sureste: ["Sureste de Norteamérica", "Southeastern North America", "北美东南部"],
   cascadia: ["Cascadia", "Cascadia", "卡斯卡迪亚"],
   caribe: ["Gran Caribe", "Greater Caribbean", "大加勒比地区"],
-  chaco: ["Chaco y Río de la Plata", "Chaco and Río de la Plata", "查科与拉普拉塔河流域"],
+  plata: ["Cuenca del Plata", "Río de la Plata basin", "拉普拉塔河流域"],
 };
 // Sections of the list, in order. `soon` is shown while a section is empty.
 const CONTINENTS = [
@@ -29,7 +29,7 @@ const CONTINENTS = [
   {
     id: "sur",
     name: t("Sudamérica", "South America", "南美洲"),
-    soon: t("Muy pronto: wayuunaiki y guaraní.", "Coming soon: Wayuunaiki and Guarani.", "即将推出：瓦尤语和瓜拉尼语。"),
+    soon: t("Muy pronto: wayuunaiki.", "Coming soon: Wayuunaiki.", "即将推出：瓦尤语。"),
   },
 ];
 const label = (names, id) => (names[id] ? t(...names[id]) : id);

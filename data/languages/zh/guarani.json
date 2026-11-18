@@ -1,0 +1,654 @@
+{
+  "name": "瓜拉尼语",
+  "variant": "巴拉圭瓜拉尼语",
+  "region": "巴拉圭，以及阿根廷、玻利维亚和巴西的部分地区",
+  "summary": "图皮-瓜拉尼语族的语言，与西班牙语同为巴拉圭官方语言，大多数巴拉圭人都会说。说这种语言的人称它为 avañe'ẽ，意思是“人的语言”。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "输入不带人称的动词词根：japo「做」、mba'apo「工作」、ñe'ẽ「说话」、ho「去」。aireal 类动词不带 i-（kuaa「知道」）。",
+    "own": {
+      "hint": "输入任意词根及其中文意思。选择它是 areal（a-）、aireal（ai-）还是 chendal（che-）；词根含鼻音元音或鼻音辅音时，按鼻音动词变位。",
+      "label": "词根",
+      "es_placeholder": "照顾",
+      "types_help": "词典通常会在动词前注明 (a)、(ai) 或 (che)。"
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "areal：japo → ajapo"
+      },
+      {
+        "id": "aireal",
+        "label": "aireal：kuaa → aikuaa"
+      },
+      {
+        "id": "chendal",
+        "label": "chendal：pochy → chepochy"
+      }
+    ]
+  },
+  "source": {
+    "short": "Estigarribia, A Grammar of Paraguayan Guarani (2020)",
+    "full": "Bruno Estigarribia，《A Grammar of Paraguayan Guarani》（伦敦：UCL Press，2020）；Antonio Guasch，《El idioma guaraní》及《Diccionario castellano-guaraní, guaraní-castellano》（亚松森：CEPAG）。采用巴拉圭官方拼写。"
+  },
+  "about": [
+    "瓜拉尼语主要在巴拉圭使用。自 1992 年起，它与西班牙语同为巴拉圭官方语言，城乡大多数居民都说瓜拉尼语。阿根廷东北部（在科连特斯省是官方语言）、玻利维亚和巴西也有人说这种语言。",
+    "它属于图皮-瓜拉尼语族。它是美洲少数几种不只由原住民、而是由各种背景的人共同使用的原住民语言之一。在巴拉圭，很多人把瓜拉尼语和西班牙语混着说，这种说法叫作 jopara。",
+    "说这种语言的人称它为 avañe'ẽ，意思是“人的语言”。它用官方字母表 achegety 书写，共有 33 个字母，其中包括六个鼻化元音和 puso（'），也就是喉部的短暂停顿。"
+  ],
+  "orthography": {
+    "intro": "瓜拉尼语字母表叫作 achegety，得名于它的前几个字母：a、che、ge。每个字母的读音总是一样。波浪号（~）表示鼻化元音；只有重音不在最后一个音节时才标重音符号。",
+    "letters": [
+      {
+        "meaning": "日子"
+      },
+      {
+        "meaning": "头"
+      },
+      {
+        "meaning": "奇帕（木薯面包）"
+      },
+      {
+        "meaning": "蜂蜜"
+      },
+      {
+        "meaning": "话语，语言"
+      },
+      {
+        "meaning": "鸟"
+      },
+      {
+        "meaning": "到达"
+      },
+      {
+        "meaning": "蓝色"
+      },
+      {
+        "meaning": "石头"
+      },
+      {
+        "meaning": "鼻子"
+      },
+      {
+        "meaning": "狗"
+      },
+      {
+        "meaning": "女人"
+      },
+      {
+        "meaning": "（冠词）"
+      },
+      {
+        "meaning": "孩子"
+      },
+      {
+        "meaning": "蛇"
+      },
+      {
+        "meaning": "耳朵"
+      },
+      {
+        "meaning": "你"
+      },
+      {
+        "meaning": "老鼠"
+      },
+      {
+        "meaning": "只是"
+      },
+      {
+        "meaning": "田野"
+      },
+      {
+        "meaning": "房子"
+      },
+      {
+        "meaning": "疲倦"
+      },
+      {
+        "meaning": "手"
+      },
+      {
+        "meaning": "鱼"
+      },
+      {
+        "meaning": "牛车"
+      },
+      {
+        "meaning": "肉"
+      },
+      {
+        "meaning": "犰狳"
+      },
+      {
+        "meaning": "猫头鹰"
+      },
+      {
+        "meaning": "黑色"
+      },
+      {
+        "meaning": "快乐"
+      },
+      {
+        "meaning": "水"
+      },
+      {
+        "meaning": "辣椒"
+      },
+      {
+        "meaning": "马黛茶"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "口元音"
+      },
+      {
+        "title": "鼻化元音"
+      }
+    ],
+    "notes": [
+      "y 是元音：发音时舌头在口腔中部，介于 i 和 u 之间（y「水」）。",
+      "不标重音时，重音落在最后一个音节：ajapo、karu。重音在其他音节时要标出：óga「房子」、ajapóta「我会做」。",
+      "鼻化会扩散：一个鼻化元音或鼻辅音会让整个词带上鼻音，前缀也随之改变（jajapo「我们做」，但 ñamba'apo「我们工作」）。",
+      "puso（'）是喉部的短暂停顿，就像英语的 uh-oh：ka'a「马黛茶」。",
+      "r 总是单击音，像西班牙语的 pero；rr、l 等字母只出现在来自西班牙语的词里。",
+      "很多文本用 g 代替 g̃（写成 guahẽ 而不是 g̃uahẽ）。"
+    ]
+  },
+  "grammar": {
+    "intro": "瓜拉尼语动词前面是人称，后面是时态、体和语气的标记。不加标记的形式既可表示现在，也可表示过去；将来时则必须标出。",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          {
+            "slot": "否定",
+            "description": "nd-（词根为鼻音时用 n-）。"
+          },
+          {
+            "slot": "人称",
+            "description": "a-, re-, o-, ja-, ro-, pe-；或 che-, nde-, i-…"
+          },
+          {
+            "slot": "词根",
+            "description": "不带人称的动词。"
+          },
+          {
+            "slot": "时态与语气",
+            "description": "-ta 将来，-kuri 过去，-se 想要，-ma 已经……"
+          },
+          {
+            "slot": "否定",
+            "description": "-i（i 之后用 -ri）。"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "人称",
+        "description": "每个动词都属于一类：areal（a-）、aireal（ai-）或 chendal（che-）。“我们”有两个：ñande 包括听话人，ore 不包括。",
+        "columns": [
+          "人称",
+          "areal",
+          "鼻音词根",
+          "aireal",
+          "chendal"
+        ],
+        "rows": [
+          {
+            "label": "che「我」"
+          },
+          {
+            "label": "nde「你」"
+          },
+          {
+            "label": "ha'e「他、她」"
+          },
+          {
+            "label": "ñande「我们（包括你）」"
+          },
+          {
+            "label": "ore「我们（不包括你）」"
+          },
+          {
+            "label": "peẽ「你们」"
+          },
+          {
+            "label": "ha'ekuéra「他们」"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "否定",
+        "description": "nd- … -i 包住动词。鼻音词根用 n- … -i；i 或 ĩ 之后词尾为 -ri。nd- 和人称之间加一个元音：nde-re-、nda-ja-、ndo-ro-、nda-pe-。",
+        "columns": [
+          "人称",
+          "jogua「买」",
+          "maña「看」",
+          "jopi「蜇」"
+        ],
+        "rows": [
+          {
+            "label": "che"
+          },
+          {
+            "label": "nde"
+          },
+          {
+            "label": "ha'e"
+          },
+          {
+            "label": "ñande"
+          },
+          {
+            "label": "ore"
+          },
+          {
+            "label": "peẽ"
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "句子",
+        "items": [
+          {
+            "translation": "我明天会工作。"
+          },
+          {
+            "translation": "我明天不会工作。"
+          },
+          {
+            "translation": "你得来我家。"
+          },
+          {
+            "translation": "我（很久以前）去过查科。"
+          },
+          {
+            "translation": "我们走吧！"
+          },
+          {
+            "translation": "别走。"
+          },
+          {
+            "translation": "欢迎！"
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "动词的词缀",
+        "description": "人称前缀以及最常见的时态、体和语气标记。非重读的（-ta、-kuri、-ma）让重音留在词根上：ajapóta。",
+        "items": [
+          {
+            "kind": "人称",
+            "meaning": "我（areal 类动词）",
+            "translation": "我做"
+          },
+          {
+            "kind": "人称",
+            "meaning": "你",
+            "translation": "你做"
+          },
+          {
+            "kind": "人称",
+            "meaning": "他、她、他们",
+            "translation": "他做"
+          },
+          {
+            "kind": "人称",
+            "meaning": "我们（包括你）；鼻音词根用 ña-",
+            "translation": "我们做，我们工作"
+          },
+          {
+            "kind": "人称",
+            "meaning": "我们（不包括你）",
+            "translation": "我们做"
+          },
+          {
+            "kind": "人称",
+            "meaning": "你们",
+            "translation": "你们做"
+          },
+          {
+            "kind": "人称",
+            "meaning": "aireal 类动词的同一组人称",
+            "translation": "我知道"
+          },
+          {
+            "kind": "人称",
+            "meaning": "chendal 类动词的人称：che, nde (ne), i, ñande (ñane), ore, pende (pene)",
+            "translation": "我生气"
+          },
+          {
+            "kind": "人称",
+            "meaning": "他们：表明第三人称是复数",
+            "translation": "他们去"
+          },
+          {
+            "kind": "时态",
+            "meaning": "近过去（非重读）",
+            "translation": "我刚才做了"
+          },
+          {
+            "kind": "时态",
+            "meaning": "远过去",
+            "translation": "我很久以前去了"
+          },
+          {
+            "kind": "时态",
+            "meaning": "过去的习惯",
+            "translation": "我以前常去"
+          },
+          {
+            "kind": "体",
+            "meaning": "已经（非重读）",
+            "translation": "他已经到了"
+          },
+          {
+            "kind": "体",
+            "meaning": "进行：正在发生",
+            "translation": "你正在写"
+          },
+          {
+            "kind": "时态",
+            "meaning": "将来（非重读）",
+            "translation": "我会工作"
+          },
+          {
+            "kind": "语气",
+            "meaning": "义务，必然的将来",
+            "translation": "你得来"
+          },
+          {
+            "kind": "语气",
+            "meaning": "不确定的将来：也许（非重读）",
+            "translation": "我也许会工作"
+          },
+          {
+            "kind": "语气",
+            "meaning": "想要",
+            "translation": "我想去"
+          },
+          {
+            "kind": "体",
+            "meaning": "即将",
+            "translation": "我们正要去"
+          },
+          {
+            "kind": "体",
+            "meaning": "否定将来；也表示“差点”",
+            "translation": "我差点摔倒"
+          },
+          {
+            "kind": "否定",
+            "meaning": "否定（鼻音词根用 n- … -i；i 之后用 -ri）",
+            "translation": "我不做"
+          },
+          {
+            "kind": "语气",
+            "meaning": "对“你”的命令",
+            "translation": "吃吧！"
+          },
+          {
+            "kind": "语气",
+            "meaning": "禁止",
+            "translation": "别去！"
+          },
+          {
+            "kind": "语气",
+            "meaning": "祈愿：“让……”“愿……”",
+            "translation": "欢迎！"
+          },
+          {
+            "kind": "体",
+            "meaning": "全部",
+            "translation": "我全吃完了"
+          },
+          {
+            "kind": "体",
+            "meaning": "再次",
+            "translation": "我回来"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "第一人称（ñande：包括你）"
+      },
+      {
+        "id": "1x",
+        "label": "第一人称（ore：不包括你）"
+      },
+      {
+        "id": "2",
+        "label": "第二人称"
+      },
+      {
+        "id": "3",
+        "label": "第三人称"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present",
+        "group": "陈述式",
+        "name": "现在时",
+        "description": "基本形式：既可表示现在，也可表示过去。"
+      },
+      {
+        "id": "recent_past",
+        "group": "陈述式",
+        "name": "近过去时",
+        "description": "不久前发生的事（-kuri）。"
+      },
+      {
+        "id": "remote_past",
+        "group": "陈述式",
+        "name": "远过去时",
+        "description": "很久以前发生的事（-va'ekue）。"
+      },
+      {
+        "id": "past_habitual",
+        "group": "陈述式",
+        "name": "过去习惯",
+        "description": "过去常做的事（-mi）。"
+      },
+      {
+        "id": "already",
+        "group": "陈述式",
+        "name": "已经",
+        "description": "已经发生或开始的事（-ma）。"
+      },
+      {
+        "id": "progressive",
+        "group": "陈述式",
+        "name": "进行时",
+        "description": "正在发生的事（hína）。"
+      },
+      {
+        "id": "future",
+        "group": "将来与义务",
+        "name": "将来时",
+        "description": "将要发生的事（-ta）。"
+      },
+      {
+        "id": "obligative",
+        "group": "将来与义务",
+        "name": "义务",
+        "description": "必须做的事（-va'erã）。"
+      },
+      {
+        "id": "desiderative",
+        "group": "意愿与即将",
+        "name": "意愿",
+        "description": "想做的事（-se）。"
+      },
+      {
+        "id": "imminent",
+        "group": "意愿与即将",
+        "name": "即将",
+        "description": "马上就要发生的事（-pota，鼻音词根后为 -mbota）。"
+      },
+      {
+        "id": "negative",
+        "group": "否定",
+        "name": "现在时否定",
+        "description": "nd- … -i 包住动词（鼻音词根用 n- … -i；i 之后用 -ri）。"
+      },
+      {
+        "id": "negative_future",
+        "group": "否定",
+        "name": "将来时否定",
+        "description": "在否定中用 -mo'ã 代替 -ta。"
+      },
+      {
+        "id": "imperative",
+        "group": "命令与愿望",
+        "name": "命令式",
+        "description": "对“你”用 e-，对“你们”用 pe-。"
+      },
+      {
+        "id": "prohibitive",
+        "group": "命令与愿望",
+        "name": "禁止",
+        "description": "动词前加 ani（有时词尾加 -tei）。"
+      },
+      {
+        "id": "optative",
+        "group": "命令与愿望",
+        "name": "祈愿式",
+        "description": "“让……”“愿……”：人称前加 t- 和一个元音。"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "japo",
+        "meaning": "做这件事",
+        "es": "做这件事"
+      },
+      {
+        "entry": "karu",
+        "meaning": "吃饭",
+        "es": "吃饭"
+      },
+      {
+        "entry": "guata",
+        "meaning": "走路",
+        "es": "走路"
+      },
+      {
+        "entry": "mba'apo",
+        "meaning": "工作",
+        "es": "工作"
+      },
+      {
+        "entry": "ñe'ẽ",
+        "meaning": "说话",
+        "es": "说话"
+      },
+      {
+        "entry": "ke",
+        "meaning": "睡觉",
+        "es": "睡觉"
+      },
+      {
+        "entry": "ho",
+        "meaning": "去",
+        "es": "去",
+        "note": "不规则: aha, reho, oho…"
+      },
+      {
+        "entry": "ju",
+        "meaning": "来",
+        "es": "来",
+        "note": "不规则: aju, reju, ou…"
+      },
+      {
+        "entry": "kuaa",
+        "meaning": "知道这件事",
+        "es": "知道这件事",
+        "note": "aireal 类：aikuaa, reikuaa, oikuaa…"
+      },
+      {
+        "entry": "hecha",
+        "meaning": "看它",
+        "es": "看它"
+      },
+      {
+        "entry": "hendu",
+        "meaning": "听它",
+        "es": "听它"
+      },
+      {
+        "entry": "moñe'ẽ",
+        "meaning": "读它",
+        "es": "读它"
+      },
+      {
+        "entry": "juhu",
+        "meaning": "找到它",
+        "es": "找到它"
+      },
+      {
+        "entry": "purahéi",
+        "meaning": "唱歌",
+        "es": "唱歌"
+      },
+      {
+        "entry": "jeroky",
+        "meaning": "跳舞",
+        "es": "跳舞"
+      },
+      {
+        "entry": "puka",
+        "meaning": "笑",
+        "es": "笑"
+      },
+      {
+        "entry": "jahu",
+        "meaning": "洗澡",
+        "es": "洗澡"
+      },
+      {
+        "entry": "pu'ã",
+        "meaning": "起床",
+        "es": "起床"
+      },
+      {
+        "entry": "mano",
+        "meaning": "死",
+        "es": "死"
+      },
+      {
+        "entry": "vy'a",
+        "meaning": "高兴",
+        "es": "高兴"
+      },
+      {
+        "entry": "pochy",
+        "meaning": "生气",
+        "es": "生气",
+        "note": "chendal 类：用 che-, nde-, i-…"
+      },
+      {
+        "entry": "kane'õ",
+        "meaning": "累",
+        "es": "累",
+        "note": "chendal 类：用 che-, nde-, i-…"
+      },
+      {
+        "entry": "vare'a",
+        "meaning": "饿",
+        "es": "饿",
+        "note": "chendal 类：用 che-, nde-, i-…"
+      }
+    ]
+  }
+}

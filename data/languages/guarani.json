@@ -1,0 +1,1053 @@
+{
+  "slug": "guarani",
+  "name": "guaraní",
+  "endonym": "avañe'ẽ",
+  "variant": "guaraní paraguayo",
+  "region": "Paraguay, y partes de Argentina, Bolivia y Brasil",
+  "family": "tupi",
+  "area": "plata",
+  "continent": "sur",
+  "status": "available",
+  "order": 11,
+  "series": "lapacho",
+  "summary": "Lengua tupí-guaraní, oficial en Paraguay junto al castellano y hablada por la mayoría de su gente. Sus hablantes la llaman avañe'ẽ, «la lengua de la gente».",
+  "lang_code": "gug",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe la raíz del verbo, sin persona: japo «hacer», mba'apo «trabajar», ñe'ẽ «hablar», ho «ir». Los verbos aireales van sin la i- (kuaa «saber»).",
+    "placeholder": "mba'apo",
+    "keyboard": [
+      "ã",
+      "ẽ",
+      "ĩ",
+      "õ",
+      "ũ",
+      "ỹ",
+      "g̃",
+      "'",
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "ý"
+    ],
+    "own": {
+      "hint": "Escribe cualquier raíz y su significado en español. Elige si es areal (a-), aireal (ai-) o chendal (che-); si la raíz tiene una vocal o consonante nasal, la conjugamos como nasal.",
+      "label": "Raíz",
+      "placeholder": "jesareko",
+      "es_placeholder": "cuidar",
+      "types_help": "Las palabras del diccionario suelen decir (a), (ai) o (che) antes del verbo."
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "Areal: japo → ajapo"
+      },
+      {
+        "id": "aireal",
+        "label": "Aireal: kuaa → aikuaa"
+      },
+      {
+        "id": "chendal",
+        "label": "Chendal: pochy → chepochy"
+      }
+    ]
+  },
+  "source": {
+    "short": "Estigarribia, A Grammar of Paraguayan Guarani (2020)",
+    "full": "Bruno Estigarribia, A Grammar of Paraguayan Guarani (Londres: UCL Press, 2020); Antonio Guasch, El idioma guaraní: gramática y antología de prosa y verso, y Diccionario castellano-guaraní, guaraní-castellano (Asunción: CEPAG). Ortografía oficial paraguaya."
+  },
+  "about": [
+    "El guaraní se habla en Paraguay, donde es lengua oficial junto al castellano desde 1992 y la usa la mayoría de la población, del campo y de la ciudad. También se habla en el noreste de Argentina (en Corrientes es oficial), en Bolivia y en Brasil.",
+    "Es de la familia tupí-guaraní. Es una de las pocas lenguas indígenas de América que habla gente de todo origen, no solo los pueblos indígenas; en Paraguay muchas personas mezclan guaraní y castellano en lo que se llama jopara.",
+    "Sus hablantes la llaman avañe'ẽ, «la lengua de la gente». Se escribe con el alfabeto oficial, el achegety, que tiene 33 letras, entre ellas seis vocales nasales y el puso ('), una pausa en la garganta."
+  ],
+  "orthography": {
+    "intro": "El alfabeto guaraní se llama achegety, por sus primeras letras: a, che, ge. Cada letra suena siempre igual. La tilde (~) marca las vocales nasales y el acento solo se escribe cuando no cae en la última sílaba.",
+    "letters": [
+      {
+        "letter": "a",
+        "ipa": "a",
+        "word": "ára",
+        "meaning": "día"
+      },
+      {
+        "letter": "ã",
+        "ipa": "ã",
+        "word": "akã",
+        "meaning": "cabeza"
+      },
+      {
+        "letter": "ch",
+        "ipa": "ʃ",
+        "word": "chipa",
+        "meaning": "chipa (pan de almidón)"
+      },
+      {
+        "letter": "e",
+        "ipa": "e",
+        "word": "eira",
+        "meaning": "miel"
+      },
+      {
+        "letter": "ẽ",
+        "ipa": "ẽ",
+        "word": "ñe'ẽ",
+        "meaning": "palabra, lengua"
+      },
+      {
+        "letter": "g",
+        "ipa": "ɰ",
+        "word": "guyra",
+        "meaning": "pájaro"
+      },
+      {
+        "letter": "g̃",
+        "ipa": "ŋ",
+        "word": "g̃uahẽ",
+        "meaning": "llegar"
+      },
+      {
+        "letter": "h",
+        "ipa": "h",
+        "word": "hovy",
+        "meaning": "azul"
+      },
+      {
+        "letter": "i",
+        "ipa": "i",
+        "word": "ita",
+        "meaning": "piedra"
+      },
+      {
+        "letter": "ĩ",
+        "ipa": "ĩ",
+        "word": "tĩ",
+        "meaning": "nariz"
+      },
+      {
+        "letter": "j",
+        "ipa": "ʝ ~ dʒ",
+        "word": "jagua",
+        "meaning": "perro"
+      },
+      {
+        "letter": "k",
+        "ipa": "k",
+        "word": "kuña",
+        "meaning": "mujer"
+      },
+      {
+        "letter": "l",
+        "ipa": "l",
+        "word": "la",
+        "meaning": "el, la (artículo)"
+      },
+      {
+        "letter": "m",
+        "ipa": "m",
+        "word": "mitã",
+        "meaning": "niño, niña"
+      },
+      {
+        "letter": "mb",
+        "ipa": "ᵐb",
+        "word": "mbói",
+        "meaning": "serpiente"
+      },
+      {
+        "letter": "n",
+        "ipa": "n",
+        "word": "nambi",
+        "meaning": "oreja"
+      },
+      {
+        "letter": "nd",
+        "ipa": "ⁿd",
+        "word": "nde",
+        "meaning": "tú"
+      },
+      {
+        "letter": "ng",
+        "ipa": "ᵑɡ",
+        "word": "anguja",
+        "meaning": "ratón"
+      },
+      {
+        "letter": "nt",
+        "ipa": "ⁿt",
+        "word": "mante",
+        "meaning": "solamente"
+      },
+      {
+        "letter": "ñ",
+        "ipa": "ɲ",
+        "word": "ñu",
+        "meaning": "campo"
+      },
+      {
+        "letter": "o",
+        "ipa": "o",
+        "word": "óga",
+        "meaning": "casa"
+      },
+      {
+        "letter": "õ",
+        "ipa": "õ",
+        "word": "kane'õ",
+        "meaning": "cansancio"
+      },
+      {
+        "letter": "p",
+        "ipa": "p",
+        "word": "po",
+        "meaning": "mano"
+      },
+      {
+        "letter": "r",
+        "ipa": "ɾ",
+        "word": "pira",
+        "meaning": "pez"
+      },
+      {
+        "letter": "rr",
+        "ipa": "ʐ",
+        "word": "karréta",
+        "meaning": "carreta"
+      },
+      {
+        "letter": "s",
+        "ipa": "s",
+        "word": "so'o",
+        "meaning": "carne"
+      },
+      {
+        "letter": "t",
+        "ipa": "t",
+        "word": "tatu",
+        "meaning": "armadillo"
+      },
+      {
+        "letter": "u",
+        "ipa": "u",
+        "word": "urukure'a",
+        "meaning": "lechuza"
+      },
+      {
+        "letter": "ũ",
+        "ipa": "ũ",
+        "word": "hũ",
+        "meaning": "negro"
+      },
+      {
+        "letter": "v",
+        "ipa": "ʋ",
+        "word": "vy'a",
+        "meaning": "alegría"
+      },
+      {
+        "letter": "y",
+        "ipa": "ɨ",
+        "word": "y",
+        "meaning": "agua"
+      },
+      {
+        "letter": "ỹ",
+        "ipa": "ɨ̃",
+        "word": "ky'ỹi",
+        "meaning": "ají"
+      },
+      {
+        "letter": "'",
+        "ipa": "ʔ",
+        "word": "ka'a",
+        "meaning": "yerba mate"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales orales",
+        "items": [
+          {
+            "letter": "a",
+            "ipa": "a"
+          },
+          {
+            "letter": "e",
+            "ipa": "e"
+          },
+          {
+            "letter": "i",
+            "ipa": "i"
+          },
+          {
+            "letter": "o",
+            "ipa": "o"
+          },
+          {
+            "letter": "u",
+            "ipa": "u"
+          },
+          {
+            "letter": "y",
+            "ipa": "ɨ"
+          }
+        ]
+      },
+      {
+        "title": "Vocales nasales",
+        "items": [
+          {
+            "letter": "ã",
+            "ipa": "ã"
+          },
+          {
+            "letter": "ẽ",
+            "ipa": "ẽ"
+          },
+          {
+            "letter": "ĩ",
+            "ipa": "ĩ"
+          },
+          {
+            "letter": "õ",
+            "ipa": "õ"
+          },
+          {
+            "letter": "ũ",
+            "ipa": "ũ"
+          },
+          {
+            "letter": "ỹ",
+            "ipa": "ɨ̃"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "La y es una vocal: se dice con la lengua en el centro de la boca, entre la i y la u (y «agua»).",
+      "El acento cae en la última sílaba si no se escribe: ajapo, karu. Si cae en otra sílaba, se marca: óga «casa», ajapóta «haré».",
+      "La nasalidad se extiende: una vocal o consonante nasal hace nasal toda la palabra, y los prefijos cambian (jajapo «hacemos», pero ñamba'apo «trabajamos»).",
+      "El puso (') es un corte breve en la garganta, como en «¡oh-oh!»: ka'a «yerba mate».",
+      "La r es siempre suave, como en «pero»; la rr, la l y otras letras solo aparecen en palabras del castellano.",
+      "Muchos textos escriben g en lugar de g̃ (guahẽ por g̃uahẽ)."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo guaraní lleva delante la persona y detrás las marcas de tiempo, aspecto y modo. La forma sin marcas sirve para el presente y para el pasado; el futuro sí se marca.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          {
+            "slot": "Negación",
+            "description": "nd- (n- si la raíz es nasal).",
+            "example": "nd-"
+          },
+          {
+            "slot": "Persona",
+            "description": "a-, re-, o-, ja-, ro-, pe-; o che-, nde-, i-…",
+            "example": "a-"
+          },
+          {
+            "slot": "Raíz",
+            "description": "El verbo sin persona.",
+            "example": "japo"
+          },
+          {
+            "slot": "Tiempo y modo",
+            "description": "-ta futuro, -kuri pasado, -se querer, -ma ya…",
+            "example": "-mo'ã"
+          },
+          {
+            "slot": "Negación",
+            "description": "-i (-ri tras i).",
+            "example": "-i"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Las personas",
+        "description": "Cada verbo pertenece a una clase: areal (a-), aireal (ai-) o chendal (che-). Hay dos «nosotros»: ñande incluye a quien escucha y ore no.",
+        "columns": [
+          "Persona",
+          "Areal",
+          "Con raíz nasal",
+          "Aireal",
+          "Chendal"
+        ],
+        "rows": [
+          {
+            "label": "che «yo»",
+            "cells": [
+              "ajapo",
+              "amba'apo",
+              "aikuaa",
+              "chepochy"
+            ]
+          },
+          {
+            "label": "nde «tú»",
+            "cells": [
+              "rejapo",
+              "remba'apo",
+              "reikuaa",
+              "ndepochy"
+            ]
+          },
+          {
+            "label": "ha'e «él, ella»",
+            "cells": [
+              "ojapo",
+              "omba'apo",
+              "oikuaa",
+              "ipochy"
+            ]
+          },
+          {
+            "label": "ñande «nosotros, contigo»",
+            "cells": [
+              "jajapo",
+              "ñamba'apo",
+              "jaikuaa",
+              "ñandepochy"
+            ]
+          },
+          {
+            "label": "ore «nosotros, sin ti»",
+            "cells": [
+              "rojapo",
+              "romba'apo",
+              "roikuaa",
+              "orepochy"
+            ]
+          },
+          {
+            "label": "peẽ «ustedes»",
+            "cells": [
+              "pejapo",
+              "pemba'apo",
+              "peikuaa",
+              "pendepochy"
+            ]
+          },
+          {
+            "label": "ha'ekuéra «ellos»",
+            "cells": [
+              "ojapo",
+              "omba'apo",
+              "oikuaa",
+              "ipochy"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "La negación",
+        "description": "nd- … -i rodea al verbo. Con raíz nasal es n- … -i, y tras i o ĩ el final es -ri. Entre nd- y la persona entra una vocal: nde-re-, nda-ja-, ndo-ro-, nda-pe-.",
+        "columns": [
+          "Persona",
+          "jogua «comprar»",
+          "maña «mirar»",
+          "jopi «picar»"
+        ],
+        "rows": [
+          {
+            "label": "che",
+            "cells": [
+              "ndajoguái",
+              "namañái",
+              "ndajopíri"
+            ]
+          },
+          {
+            "label": "nde",
+            "cells": [
+              "nderejoguái",
+              "neremañái",
+              "nderejopíri"
+            ]
+          },
+          {
+            "label": "ha'e",
+            "cells": [
+              "ndojoguái",
+              "nomañái",
+              "ndojopíri"
+            ]
+          },
+          {
+            "label": "ñande",
+            "cells": [
+              "ndajajoguái",
+              "nañamañái",
+              "ndajajopíri"
+            ]
+          },
+          {
+            "label": "ore",
+            "cells": [
+              "ndorojoguái",
+              "noromañái",
+              "ndorojopíri"
+            ]
+          },
+          {
+            "label": "peẽ",
+            "cells": [
+              "ndapejoguái",
+              "napemañái",
+              "ndapejopíri"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases",
+        "items": [
+          {
+            "text": "Ko'ẽro amba'apóta.",
+            "translation": "Mañana trabajaré."
+          },
+          {
+            "text": "Ko'ẽro namba'apomo'ãi.",
+            "translation": "Mañana no trabajaré."
+          },
+          {
+            "text": "Rejuva'erã cherógape.",
+            "translation": "Tienes que venir a mi casa."
+          },
+          {
+            "text": "Ahava'ekue Chákope.",
+            "translation": "Fui al Chaco (hace tiempo)."
+          },
+          {
+            "text": "Jaha!",
+            "translation": "¡Vamos!"
+          },
+          {
+            "text": "Ani reho.",
+            "translation": "No te vayas."
+          },
+          {
+            "text": "Tereguahẽ porãite!",
+            "translation": "¡Bienvenido!"
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Los afijos del verbo",
+        "description": "Prefijos de persona y las marcas más comunes de tiempo, aspecto y modo. Las átonas (-ta, -kuri, -ma) dejan el acento en la raíz: ajapóta.",
+        "items": [
+          {
+            "affix": "a-",
+            "kind": "persona",
+            "meaning": "Yo (verbos areales)",
+            "example": "ajapo",
+            "translation": "hago"
+          },
+          {
+            "affix": "re-",
+            "kind": "persona",
+            "meaning": "Tú",
+            "example": "rejapo",
+            "translation": "haces"
+          },
+          {
+            "affix": "o-",
+            "kind": "persona",
+            "meaning": "Él, ella, ellos",
+            "example": "ojapo",
+            "translation": "hace"
+          },
+          {
+            "affix": "ja- / ña-",
+            "kind": "persona",
+            "meaning": "Nosotros, contigo (inclusivo); ña- con raíz nasal",
+            "example": "jajapo, ñamba'apo",
+            "translation": "hacemos, trabajamos"
+          },
+          {
+            "affix": "ro-",
+            "kind": "persona",
+            "meaning": "Nosotros, sin ti (exclusivo)",
+            "example": "rojapo",
+            "translation": "hacemos"
+          },
+          {
+            "affix": "pe-",
+            "kind": "persona",
+            "meaning": "Ustedes",
+            "example": "pejapo",
+            "translation": "hacen"
+          },
+          {
+            "affix": "ai-, rei-, oi-…",
+            "kind": "persona",
+            "meaning": "Las mismas personas con verbos aireales",
+            "example": "aikuaa",
+            "translation": "sé"
+          },
+          {
+            "affix": "che-, nde-, i-…",
+            "kind": "persona",
+            "meaning": "Personas de los verbos chendales: che, nde (ne), i, ñande (ñane), ore, pende (pene)",
+            "example": "chepochy",
+            "translation": "me enojo"
+          },
+          {
+            "affix": "hikuái",
+            "kind": "persona",
+            "meaning": "Ellos: aclara que la 3.ª persona es plural",
+            "example": "oho hikuái",
+            "translation": "se van"
+          },
+          {
+            "affix": "-kuri",
+            "kind": "tiempo",
+            "meaning": "Pasado reciente (átono)",
+            "example": "ajapókuri",
+            "translation": "lo hice hace rato"
+          },
+          {
+            "affix": "-va'ekue",
+            "kind": "tiempo",
+            "meaning": "Pasado lejano",
+            "example": "ahava'ekue",
+            "translation": "fui hace tiempo"
+          },
+          {
+            "affix": "-mi",
+            "kind": "tiempo",
+            "meaning": "Pasado habitual",
+            "example": "ahami",
+            "translation": "solía ir"
+          },
+          {
+            "affix": "-ma",
+            "kind": "aspecto",
+            "meaning": "Ya (átono)",
+            "example": "oguahẽma",
+            "translation": "ya llegó"
+          },
+          {
+            "affix": "hína",
+            "kind": "aspecto",
+            "meaning": "Progresivo: está pasando",
+            "example": "rehai hína",
+            "translation": "estás escribiendo"
+          },
+          {
+            "affix": "-ta",
+            "kind": "tiempo",
+            "meaning": "Futuro (átono)",
+            "example": "amba'apóta",
+            "translation": "trabajaré"
+          },
+          {
+            "affix": "-va'erã",
+            "kind": "modo",
+            "meaning": "Obligación, futuro necesario",
+            "example": "rejuva'erã",
+            "translation": "tienes que venir"
+          },
+          {
+            "affix": "-ne",
+            "kind": "modo",
+            "meaning": "Futuro dudoso: tal vez (átono)",
+            "example": "amba'apóne",
+            "translation": "tal vez trabaje"
+          },
+          {
+            "affix": "-se",
+            "kind": "modo",
+            "meaning": "Querer hacer",
+            "example": "ahase",
+            "translation": "quiero ir"
+          },
+          {
+            "affix": "-pota / -mbota",
+            "kind": "aspecto",
+            "meaning": "A punto de",
+            "example": "jahapota",
+            "translation": "estamos por ir"
+          },
+          {
+            "affix": "-mo'ã",
+            "kind": "aspecto",
+            "meaning": "Futuro negativo; también «casi»",
+            "example": "ha'amo'ã",
+            "translation": "casi me caigo"
+          },
+          {
+            "affix": "nd- … -i",
+            "kind": "negación",
+            "meaning": "Negación (n- … -i con raíz nasal; -ri tras i)",
+            "example": "ndajapói",
+            "translation": "no lo hago"
+          },
+          {
+            "affix": "e-",
+            "kind": "modo",
+            "meaning": "Imperativo de tú",
+            "example": "ekaru",
+            "translation": "¡come!"
+          },
+          {
+            "affix": "ani",
+            "kind": "modo",
+            "meaning": "Prohibición",
+            "example": "ani reho",
+            "translation": "¡no vayas!"
+          },
+          {
+            "affix": "t- + vocal",
+            "kind": "modo",
+            "meaning": "Optativo: «que…», «ojalá»",
+            "example": "tereguahẽ porãite",
+            "translation": "¡bienvenido!"
+          },
+          {
+            "affix": "-pa / -mba",
+            "kind": "aspecto",
+            "meaning": "Del todo, todos",
+            "example": "akarupa",
+            "translation": "ya comí todo"
+          },
+          {
+            "affix": "-jey",
+            "kind": "aspecto",
+            "meaning": "Otra vez",
+            "example": "ajujey",
+            "translation": "vuelvo"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "guarani",
+    "persons": [
+      {
+        "id": "1",
+        "label": "1.ª persona (ñande: contigo)",
+        "es": 0
+      },
+      {
+        "id": "1x",
+        "label": "1.ª persona (ore: sin ti)",
+        "es": 0
+      },
+      {
+        "id": "2",
+        "label": "2.ª persona",
+        "es": 1
+      },
+      {
+        "id": "3",
+        "label": "3.ª persona",
+        "es": 2
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present",
+        "group": "Indicativo",
+        "name": "Presente",
+        "description": "La forma básica: sirve para el presente y también para el pasado.",
+        "form": "present",
+        "es": "present"
+      },
+      {
+        "id": "recent_past",
+        "group": "Indicativo",
+        "name": "Pasado reciente",
+        "description": "Lo que pasó hace poco (-kuri).",
+        "form": "recent_past",
+        "es": {
+          "tense": "preterite",
+          "after": "hace un rato"
+        }
+      },
+      {
+        "id": "remote_past",
+        "group": "Indicativo",
+        "name": "Pasado lejano",
+        "description": "Lo que pasó hace tiempo (-va'ekue).",
+        "form": "remote_past",
+        "es": {
+          "tense": "preterite",
+          "after": "hace mucho"
+        }
+      },
+      {
+        "id": "past_habitual",
+        "group": "Indicativo",
+        "name": "Pasado habitual",
+        "description": "Lo que se solía hacer (-mi).",
+        "form": "past_habitual",
+        "es": "imperfect"
+      },
+      {
+        "id": "already",
+        "group": "Indicativo",
+        "name": "Ya",
+        "description": "Lo que ya pasó o ya empezó (-ma).",
+        "form": "already",
+        "es": {
+          "tense": "preterite",
+          "adverb": "ya"
+        }
+      },
+      {
+        "id": "progressive",
+        "group": "Indicativo",
+        "name": "Progresivo",
+        "description": "Lo que está pasando (hína).",
+        "form": "progressive",
+        "es": "progressive"
+      },
+      {
+        "id": "future",
+        "group": "Futuro y obligación",
+        "name": "Futuro",
+        "description": "Lo que va a pasar (-ta).",
+        "form": "future",
+        "es": "future"
+      },
+      {
+        "id": "obligative",
+        "group": "Futuro y obligación",
+        "name": "Obligación",
+        "description": "Lo que se tiene que hacer (-va'erã).",
+        "form": "obligative",
+        "es": {
+          "tense": "present",
+          "aux": "tener",
+          "link": "que"
+        }
+      },
+      {
+        "id": "desiderative",
+        "group": "Deseo e inminencia",
+        "name": "Deseo",
+        "description": "Lo que uno quiere hacer (-se).",
+        "form": "desiderative",
+        "es": {
+          "tense": "present",
+          "aux": "querer"
+        }
+      },
+      {
+        "id": "imminent",
+        "group": "Deseo e inminencia",
+        "name": "A punto de",
+        "description": "Lo que está por pasar (-pota, -mbota con raíz nasal).",
+        "form": "imminent",
+        "es": {
+          "tense": "present",
+          "aux": "estar",
+          "link": "a punto de"
+        }
+      },
+      {
+        "id": "negative",
+        "group": "Negación",
+        "name": "Presente negativo",
+        "description": "nd- … -i rodea al verbo (n- … -i con raíz nasal; -ri tras i).",
+        "form": "negative",
+        "negative": true,
+        "es": "present"
+      },
+      {
+        "id": "negative_future",
+        "group": "Negación",
+        "name": "Futuro negativo",
+        "description": "-mo'ã en lugar de -ta, dentro de la negación.",
+        "form": "negative_future",
+        "negative": true,
+        "es": "future"
+      },
+      {
+        "id": "imperative",
+        "group": "Órdenes y deseos",
+        "name": "Imperativo",
+        "description": "e- para tú; pe- para ustedes.",
+        "form": "imperative",
+        "es": "imperative"
+      },
+      {
+        "id": "prohibitive",
+        "group": "Órdenes y deseos",
+        "name": "Prohibición",
+        "description": "ani delante del verbo (a veces con -tei al final).",
+        "form": "prohibitive",
+        "negative": true,
+        "es": "imperative"
+      },
+      {
+        "id": "optative",
+        "group": "Órdenes y deseos",
+        "name": "Optativo",
+        "description": "«Que…», «ojalá»: t- y una vocal antes de la persona.",
+        "form": "optative",
+        "es": {
+          "tense": "subjunctive",
+          "before": "que"
+        }
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "japo",
+        "meaning": "hacerlo",
+        "es": "hacerlo"
+      },
+      {
+        "entry": "karu",
+        "meaning": "comer",
+        "es": "comer"
+      },
+      {
+        "entry": "guata",
+        "meaning": "caminar",
+        "es": "caminar"
+      },
+      {
+        "entry": "mba'apo",
+        "meaning": "trabajar",
+        "es": "trabajar"
+      },
+      {
+        "entry": "ñe'ẽ",
+        "meaning": "hablar",
+        "es": "hablar"
+      },
+      {
+        "entry": "ke",
+        "meaning": "dormir",
+        "es": "dormir"
+      },
+      {
+        "entry": "ho",
+        "meaning": "ir",
+        "es": "ir",
+        "note": "Irregular: aha, reho, oho…",
+        "forms": [
+          "aha",
+          "reho",
+          "oho",
+          "jaha",
+          "roho",
+          "peho",
+          "oho"
+        ],
+        "imperative": "eho"
+      },
+      {
+        "entry": "ju",
+        "meaning": "venir",
+        "es": "venir",
+        "note": "Irregular: aju, reju, ou…",
+        "forms": [
+          "aju",
+          "reju",
+          "ou",
+          "jaju",
+          "roju",
+          "peju",
+          "ou"
+        ],
+        "imperative": "eju"
+      },
+      {
+        "entry": "kuaa",
+        "meaning": "saberlo",
+        "es": "saberlo",
+        "note": "Aireal: aikuaa, reikuaa, oikuaa…",
+        "class": "aireal"
+      },
+      {
+        "entry": "hecha",
+        "meaning": "verlo",
+        "es": "verlo"
+      },
+      {
+        "entry": "hendu",
+        "meaning": "escucharlo",
+        "es": "escucharlo"
+      },
+      {
+        "entry": "moñe'ẽ",
+        "meaning": "leerlo",
+        "es": "leerlo"
+      },
+      {
+        "entry": "juhu",
+        "meaning": "encontrarlo",
+        "es": "encontrarlo"
+      },
+      {
+        "entry": "purahéi",
+        "meaning": "cantar",
+        "es": "cantar"
+      },
+      {
+        "entry": "jeroky",
+        "meaning": "bailar",
+        "es": "bailar"
+      },
+      {
+        "entry": "puka",
+        "meaning": "reír",
+        "es": "reír"
+      },
+      {
+        "entry": "jahu",
+        "meaning": "bañarse",
+        "es": "bañarse"
+      },
+      {
+        "entry": "pu'ã",
+        "meaning": "levantarse",
+        "es": "levantarse"
+      },
+      {
+        "entry": "mano",
+        "meaning": "morir",
+        "es": "morir"
+      },
+      {
+        "entry": "vy'a",
+        "meaning": "alegrarse",
+        "es": "alegrarse"
+      },
+      {
+        "entry": "pochy",
+        "meaning": "enojarse",
+        "es": "enojarse",
+        "note": "Chendal: lleva che-, nde-, i-…",
+        "class": "chendal"
+      },
+      {
+        "entry": "kane'õ",
+        "meaning": "cansarse",
+        "es": "cansarse",
+        "note": "Chendal: lleva che-, nde-, i-…",
+        "class": "chendal"
+      },
+      {
+        "entry": "vare'a",
+        "meaning": "tener hambre",
+        "es": "tener hambre",
+        "note": "Chendal: lleva che-, nde-, i-…",
+        "class": "chendal"
+      }
+    ]
+  }
+}

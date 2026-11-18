@@ -60,6 +60,9 @@ fn frame(word: &str) -> Option<(&'static str, &'static str)> {
 fn after(word: &str) -> Option<&'static str> {
     Some(match word {
         "allá" => "在那边",
+        // Time words go in the same place, before the verb: 我刚才吃了.
+        "hace un rato" => "刚才",
+        "hace mucho" => "很久以前",
         _ => return None,
     })
 }
@@ -264,6 +267,7 @@ mod tests {
         assert_eq!(s(r#"{"tense":"present","question":true}"#, 1), "你吃它吗？");
         assert_eq!(s(r#"{"tense":"preterite","aux":"ir","link":"a"}"#, 0), "我去吃了它");
         assert_eq!(s(r#"{"tense":"present","after":"allá"}"#, 0), "我在那边吃它");
+        assert_eq!(s(r#"{"tense":"preterite","after":"hace un rato"}"#, 0), "我刚才吃了它");
         assert_eq!(s(r#"{"tense":"present","before":"cuando"}"#, 0), "我吃它的时候");
         assert_eq!(
             render("吃它", &spec(r#"{"tense":"present","aux":"tener","link":"que"}"#), 0, true).unwrap(),

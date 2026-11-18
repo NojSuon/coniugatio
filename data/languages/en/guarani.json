@@ -1,0 +1,690 @@
+{
+  "name": "Guarani",
+  "variant": "Paraguayan Guarani",
+  "region": "Paraguay, and parts of Argentina, Bolivia and Brazil",
+  "summary": "A Tupi-Guarani language, official in Paraguay alongside Spanish and spoken by most of its people. Its speakers call it avañe'ẽ, «the language of the people».",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb root, without a person: japo «do», mba'apo «work», ñe'ẽ «speak», ho «go». Aireal verbs go without their i- (kuaa «know»).",
+    "own": {
+      "hint": "Type any root and its meaning in English. Choose whether it is areal (a-), aireal (ai-) or chendal (che-); if the root has a nasal vowel or consonant, we conjugate it as nasal.",
+      "label": "Root",
+      "es_placeholder": "look after",
+      "types_help": "Dictionaries usually mark verbs with (a), (ai) or (che)."
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "Areal: japo → ajapo"
+      },
+      {
+        "id": "aireal",
+        "label": "Aireal: kuaa → aikuaa"
+      },
+      {
+        "id": "chendal",
+        "label": "Chendal: pochy → chepochy"
+      }
+    ]
+  },
+  "source": {
+    "short": "Estigarribia, A Grammar of Paraguayan Guarani (2020)",
+    "full": "Bruno Estigarribia, A Grammar of Paraguayan Guarani (London: UCL Press, 2020); Antonio Guasch, El idioma guaraní: gramática y antología de prosa y verso, and Diccionario castellano-guaraní, guaraní-castellano (Asunción: CEPAG). Official Paraguayan spelling."
+  },
+  "about": [
+    "Guarani is spoken in Paraguay, where it has been an official language alongside Spanish since 1992 and is used by most of the population, in the countryside and in the cities. It is also spoken in northeastern Argentina (it is official in Corrientes), in Bolivia and in Brazil.",
+    "It belongs to the Tupi-Guarani family. It is one of the few Indigenous languages of the Americas spoken by people of every background, not only by Indigenous peoples; in Paraguay many people mix Guarani and Spanish in what is called jopara.",
+    "Its speakers call it avañe'ẽ, «the language of the people». It is written with the official alphabet, the achegety, which has 33 letters, among them six nasal vowels and the puso ('), a catch in the throat."
+  ],
+  "orthography": {
+    "intro": "The Guarani alphabet is called achegety, after its first letters: a, che, ge. Each letter always sounds the same. The tilde (~) marks nasal vowels, and the stress is only written when it does not fall on the last syllable.",
+    "letters": [
+      {
+        "meaning": "day"
+      },
+      {
+        "meaning": "head"
+      },
+      {
+        "meaning": "chipa (cassava bread)"
+      },
+      {
+        "meaning": "honey"
+      },
+      {
+        "meaning": "word, language"
+      },
+      {
+        "meaning": "bird"
+      },
+      {
+        "meaning": "arrive"
+      },
+      {
+        "meaning": "blue"
+      },
+      {
+        "meaning": "stone"
+      },
+      {
+        "meaning": "nose"
+      },
+      {
+        "meaning": "dog"
+      },
+      {
+        "meaning": "woman"
+      },
+      {
+        "meaning": "the"
+      },
+      {
+        "meaning": "child"
+      },
+      {
+        "meaning": "snake"
+      },
+      {
+        "meaning": "ear"
+      },
+      {
+        "meaning": "you"
+      },
+      {
+        "meaning": "mouse"
+      },
+      {
+        "meaning": "only"
+      },
+      {
+        "meaning": "field"
+      },
+      {
+        "meaning": "house"
+      },
+      {
+        "meaning": "tiredness"
+      },
+      {
+        "meaning": "hand"
+      },
+      {
+        "meaning": "fish"
+      },
+      {
+        "meaning": "cart"
+      },
+      {
+        "meaning": "meat"
+      },
+      {
+        "meaning": "armadillo"
+      },
+      {
+        "meaning": "owl"
+      },
+      {
+        "meaning": "black"
+      },
+      {
+        "meaning": "joy"
+      },
+      {
+        "meaning": "water"
+      },
+      {
+        "meaning": "chili pepper"
+      },
+      {
+        "meaning": "yerba mate"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "Oral vowels"
+      },
+      {
+        "title": "Nasal vowels"
+      }
+    ],
+    "notes": [
+      "y is a vowel: it is said with the tongue in the middle of the mouth, between i and u (y «water»).",
+      "Stress falls on the last syllable unless it is written: ajapo, karu. If it falls elsewhere, it is marked: óga «house», ajapóta «I will do».",
+      "Nasality spreads: one nasal vowel or consonant makes the whole word nasal, and the prefixes change (jajapo «we do», but ñamba'apo «we work»).",
+      "The puso (') is a short catch in the throat, as in «uh-oh»: ka'a «yerba mate».",
+      "r is always a single tap, as in Spanish «pero»; rr, l and a few other letters only appear in words from Spanish.",
+      "Many texts write g instead of g̃ (guahẽ for g̃uahẽ)."
+    ]
+  },
+  "grammar": {
+    "intro": "A Guarani verb has the person in front and the marks of tense, aspect and mood after it. The unmarked form works for the present and the past; the future is always marked.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          {
+            "slot": "Negation",
+            "description": "nd- (n- if the root is nasal)."
+          },
+          {
+            "slot": "Person",
+            "description": "a-, re-, o-, ja-, ro-, pe-; or che-, nde-, i-…"
+          },
+          {
+            "slot": "Root",
+            "description": "The verb without a person."
+          },
+          {
+            "slot": "Tense and mood",
+            "description": "-ta future, -kuri past, -se want, -ma already…"
+          },
+          {
+            "slot": "Negation",
+            "description": "-i (-ri after i)."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "The persons",
+        "description": "Each verb belongs to a class: areal (a-), aireal (ai-) or chendal (che-). There are two «we»: ñande includes the listener and ore does not.",
+        "columns": [
+          "Person",
+          "Areal",
+          "Nasal root",
+          "Aireal",
+          "Chendal"
+        ],
+        "rows": [
+          {
+            "label": "che «I»"
+          },
+          {
+            "label": "nde «you»"
+          },
+          {
+            "label": "ha'e «he, she»"
+          },
+          {
+            "label": "ñande «we, with you»"
+          },
+          {
+            "label": "ore «we, not you»"
+          },
+          {
+            "label": "peẽ «you all»"
+          },
+          {
+            "label": "ha'ekuéra «they»"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Negation",
+        "description": "nd- … -i wraps the verb. With a nasal root it is n- … -i, and after i or ĩ the ending is -ri. A vowel goes between nd- and the person: nde-re-, nda-ja-, ndo-ro-, nda-pe-.",
+        "columns": [
+          "Person",
+          "jogua «buy»",
+          "maña «look at»",
+          "jopi «sting»"
+        ],
+        "rows": [
+          {
+            "label": "che"
+          },
+          {
+            "label": "nde"
+          },
+          {
+            "label": "ha'e"
+          },
+          {
+            "label": "ñande"
+          },
+          {
+            "label": "ore"
+          },
+          {
+            "label": "peẽ"
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Sentences",
+        "items": [
+          {
+            "translation": "I will work tomorrow."
+          },
+          {
+            "translation": "I will not work tomorrow."
+          },
+          {
+            "translation": "You must come to my house."
+          },
+          {
+            "translation": "I went to the Chaco (long ago)."
+          },
+          {
+            "translation": "Let's go!"
+          },
+          {
+            "translation": "Don't go."
+          },
+          {
+            "translation": "Welcome!"
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "The affixes of the verb",
+        "description": "Person prefixes and the most common marks of tense, aspect and mood. The unstressed ones (-ta, -kuri, -ma) leave the stress on the root: ajapóta.",
+        "items": [
+          {
+            "kind": "person",
+            "meaning": "I (areal verbs)",
+            "translation": "I do"
+          },
+          {
+            "kind": "person",
+            "meaning": "You",
+            "translation": "you do"
+          },
+          {
+            "kind": "person",
+            "meaning": "He, she, they",
+            "translation": "he/she does"
+          },
+          {
+            "kind": "person",
+            "meaning": "We, including you; ña- with a nasal root",
+            "translation": "we do, we work"
+          },
+          {
+            "kind": "person",
+            "meaning": "We, not including you",
+            "translation": "we do"
+          },
+          {
+            "kind": "person",
+            "meaning": "You all",
+            "translation": "you all do"
+          },
+          {
+            "kind": "person",
+            "meaning": "The same persons with aireal verbs",
+            "translation": "I know"
+          },
+          {
+            "kind": "person",
+            "meaning": "Persons of chendal verbs: che, nde (ne), i, ñande (ñane), ore, pende (pene)",
+            "translation": "I get angry"
+          },
+          {
+            "kind": "person",
+            "meaning": "They: makes the 3rd person plural",
+            "translation": "they go"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Recent past (unstressed)",
+            "translation": "I did it a while ago"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Remote past",
+            "translation": "I went long ago"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Past habit",
+            "translation": "I used to go"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Already (unstressed)",
+            "translation": "he/she has already arrived"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Progressive: going on",
+            "translation": "you are writing"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Future (unstressed)",
+            "translation": "I will work"
+          },
+          {
+            "kind": "mood",
+            "meaning": "Obligation, necessary future",
+            "translation": "you have to come"
+          },
+          {
+            "kind": "mood",
+            "meaning": "Doubtful future: perhaps (unstressed)",
+            "translation": "I may work"
+          },
+          {
+            "kind": "mood",
+            "meaning": "Want to",
+            "translation": "I want to go"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "About to",
+            "translation": "we are about to go"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Negative future; also «almost»",
+            "translation": "I almost fell"
+          },
+          {
+            "kind": "negation",
+            "meaning": "Negation (n- … -i with a nasal root; -ri after i)",
+            "translation": "I don't do it"
+          },
+          {
+            "kind": "mood",
+            "meaning": "Imperative for you",
+            "translation": "eat!"
+          },
+          {
+            "kind": "mood",
+            "meaning": "Prohibition",
+            "translation": "don't go!"
+          },
+          {
+            "kind": "mood",
+            "meaning": "Optative: «let…», «may…»",
+            "translation": "welcome!"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Completely, all",
+            "translation": "I ate it all"
+          },
+          {
+            "kind": "aspect",
+            "meaning": "Again",
+            "translation": "I come back"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "1st person (ñande: with you)"
+      },
+      {
+        "id": "1x",
+        "label": "1st person (ore: not you)"
+      },
+      {
+        "id": "2",
+        "label": "2nd person"
+      },
+      {
+        "id": "3",
+        "label": "3rd person"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present",
+        "group": "Indicative",
+        "name": "Present",
+        "description": "The basic form: it works for the present and also for the past.",
+        "es": "present"
+      },
+      {
+        "id": "recent_past",
+        "group": "Indicative",
+        "name": "Recent past",
+        "description": "What happened a short while ago (-kuri).",
+        "es": {
+          "tense": "preterite",
+          "after": "a while ago"
+        }
+      },
+      {
+        "id": "remote_past",
+        "group": "Indicative",
+        "name": "Remote past",
+        "description": "What happened long ago (-va'ekue).",
+        "es": {
+          "tense": "preterite",
+          "after": "long ago"
+        }
+      },
+      {
+        "id": "past_habitual",
+        "group": "Indicative",
+        "name": "Past habitual",
+        "description": "What one used to do (-mi).",
+        "es": "imperfect"
+      },
+      {
+        "id": "already",
+        "group": "Indicative",
+        "name": "Already",
+        "description": "What has already happened or begun (-ma).",
+        "es": {
+          "tense": "perfect",
+          "adverb": "already"
+        }
+      },
+      {
+        "id": "progressive",
+        "group": "Indicative",
+        "name": "Progressive",
+        "description": "What is going on (hína).",
+        "es": "progressive"
+      },
+      {
+        "id": "future",
+        "group": "Future and obligation",
+        "name": "Future",
+        "description": "What will happen (-ta).",
+        "es": "future"
+      },
+      {
+        "id": "obligative",
+        "group": "Future and obligation",
+        "name": "Obligation",
+        "description": "What one has to do (-va'erã).",
+        "es": {
+          "tense": "present",
+          "aux": "have",
+          "link": "to"
+        }
+      },
+      {
+        "id": "desiderative",
+        "group": "Wanting and about to",
+        "name": "Wanting",
+        "description": "What one wants to do (-se).",
+        "es": {
+          "tense": "present",
+          "aux": "want",
+          "link": "to"
+        }
+      },
+      {
+        "id": "imminent",
+        "group": "Wanting and about to",
+        "name": "About to",
+        "description": "What is about to happen (-pota, -mbota after a nasal root).",
+        "es": {
+          "tense": "present",
+          "aux": "be",
+          "link": "about to"
+        }
+      },
+      {
+        "id": "negative",
+        "group": "Negation",
+        "name": "Negative present",
+        "description": "nd- … -i around the verb (n- … -i with a nasal root; -ri after i).",
+        "es": "present"
+      },
+      {
+        "id": "negative_future",
+        "group": "Negation",
+        "name": "Negative future",
+        "description": "-mo'ã instead of -ta, inside the negation.",
+        "es": "future"
+      },
+      {
+        "id": "imperative",
+        "group": "Orders and wishes",
+        "name": "Imperative",
+        "description": "e- for you; pe- for you all.",
+        "es": "imperative"
+      },
+      {
+        "id": "prohibitive",
+        "group": "Orders and wishes",
+        "name": "Prohibition",
+        "description": "ani before the verb (sometimes with -tei at the end).",
+        "es": "imperative"
+      },
+      {
+        "id": "optative",
+        "group": "Orders and wishes",
+        "name": "Optative",
+        "description": "«Let…», «may…»: t- and a vowel before the person.",
+        "es": "optative"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "japo",
+        "meaning": "do it",
+        "es": "do it"
+      },
+      {
+        "entry": "karu",
+        "meaning": "eat",
+        "es": "eat"
+      },
+      {
+        "entry": "guata",
+        "meaning": "walk",
+        "es": "walk"
+      },
+      {
+        "entry": "mba'apo",
+        "meaning": "work",
+        "es": "work"
+      },
+      {
+        "entry": "ñe'ẽ",
+        "meaning": "speak",
+        "es": "speak"
+      },
+      {
+        "entry": "ke",
+        "meaning": "sleep",
+        "es": "sleep"
+      },
+      {
+        "entry": "ho",
+        "meaning": "go",
+        "es": "go",
+        "note": "Irregular: aha, reho, oho…"
+      },
+      {
+        "entry": "ju",
+        "meaning": "come",
+        "es": "come",
+        "note": "Irregular: aju, reju, ou…"
+      },
+      {
+        "entry": "kuaa",
+        "meaning": "know it",
+        "es": "know it",
+        "note": "Aireal: aikuaa, reikuaa, oikuaa…"
+      },
+      {
+        "entry": "hecha",
+        "meaning": "see it",
+        "es": "see it"
+      },
+      {
+        "entry": "hendu",
+        "meaning": "hear it",
+        "es": "hear it"
+      },
+      {
+        "entry": "moñe'ẽ",
+        "meaning": "read it",
+        "es": "read it"
+      },
+      {
+        "entry": "juhu",
+        "meaning": "find it",
+        "es": "find it"
+      },
+      {
+        "entry": "purahéi",
+        "meaning": "sing",
+        "es": "sing"
+      },
+      {
+        "entry": "jeroky",
+        "meaning": "dance",
+        "es": "dance"
+      },
+      {
+        "entry": "puka",
+        "meaning": "laugh",
+        "es": "laugh"
+      },
+      {
+        "entry": "jahu",
+        "meaning": "bathe",
+        "es": "bathe"
+      },
+      {
+        "entry": "pu'ã",
+        "meaning": "get up",
+        "es": "get up"
+      },
+      {
+        "entry": "mano",
+        "meaning": "die",
+        "es": "die"
+      },
+      {
+        "entry": "vy'a",
+        "meaning": "be happy",
+        "es": "be happy"
+      },
+      {
+        "entry": "pochy",
+        "meaning": "get angry",
+        "es": "get angry",
+        "note": "Chendal: takes che-, nde-, i-…"
+      },
+      {
+        "entry": "kane'õ",
+        "meaning": "get tired",
+        "es": "get tired",
+        "note": "Chendal: takes che-, nde-, i-…"
+      },
+      {
+        "entry": "vare'a",
+        "meaning": "be hungry",
+        "es": "be hungry",
+        "note": "Chendal: takes che-, nde-, i-…"
+      }
+    ]
+  }
+}
