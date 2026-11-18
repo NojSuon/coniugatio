@@ -1,0 +1,751 @@
+{
+  "slug": "timucua",
+  "name": "timucua",
+  "endonym": "timucua",
+  "variant": "timucua (lengua de Pareja)",
+  "region": "Norte de Florida y sur de Georgia (Estados Unidos)",
+  "status": "available",
+  "order": 10,
+  "series": "marisma",
+  "summary": "Lengua aislada del norte de Florida, sin parientes conocidos, que dejó de hablarse en el siglo XVIII. Pareja la llamó lengua timuquana; también se escribe timucuana.",
+  "lang_code": "tjm",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo en infinitivo, con -no: hubwasono «amar», hebwano «hablar», qosono «hacer». También puedes escribir solo la raíz (hubwaso).",
+    "placeholder": "hubwasono",
+    "keyboard": [
+      "ā",
+      "ē",
+      "ī",
+      "ō",
+      "ū",
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "own": {
+      "hint": "Escribe cualquier verbo en infinitivo y su significado en español. Lo conjugamos con las terminaciones del verbo modelo de Pareja.",
+      "label": "Verbo",
+      "placeholder": "elono",
+      "es_placeholder": "cantar"
+    }
+  },
+  "source": {
+    "short": "Pareja, Arte de la lengua timuquana (1614)",
+    "full": "Francisco Pareja, Arte de la lengua timuquana, compuesto en 1614, publicado conforme al ejemplar original único por Lucien Adam y Julien Vinson (París: Maisonneuve, 1886; Bibliothèque linguistique américaine, XI). Ortografía de Mati Mati."
+  },
+  "about": [
+    "El timucua se hablaba en el norte de Florida y el sur de Georgia, en los pueblos que los españoles llamaron Timucua, Potano, Mocama (la costa), Acuera, Agua Salada y Agua Fresca, entre otros. Cada pueblo tenía su variante.",
+    "Es una lengua aislada: no se le conoce ningún pariente. Las epidemias, las guerras y el abandono de Florida por los españoles en 1763 acabaron con sus últimos hablantes, que se fueron a Cuba.",
+    "La conocemos por los libros del franciscano Francisco Pareja, que vivió entre los timucuas en San Juan del Puerto: su gramática de 1614, catecismos y un confesionario bilingüe. Es de las primeras lenguas de lo que hoy son los Estados Unidos que se escribieron."
+  ],
+  "orthography": {
+    "intro": "Pareja escribió el timucua con las letras del castellano. Aquí usamos una ortografía nueva de Mati Mati: k para /k/, q para /kʷ/, w y y para las semivocales, h para el sonido que Pareja escribía h, g, x o j, macrón para la vocal larga (ō) y acento para el acento que no cae donde se espera (pwenohekó).",
+    "letters": [
+      {
+        "letter": "a",
+        "ipa": "a",
+        "word": "ano",
+        "meaning": "persona"
+      },
+      {
+        "letter": "b",
+        "ipa": "b",
+        "word": "nabosono",
+        "meaning": "venerar"
+      },
+      {
+        "letter": "ch",
+        "ipa": "tʃ",
+        "word": "chikino",
+        "meaning": "sombrero"
+      },
+      {
+        "letter": "e",
+        "ipa": "e",
+        "word": "ela",
+        "meaning": "sol, día"
+      },
+      {
+        "letter": "f",
+        "ipa": "f",
+        "word": "fasono",
+        "meaning": "echar"
+      },
+      {
+        "letter": "h",
+        "ipa": "h",
+        "word": "holata",
+        "meaning": "cacique"
+      },
+      {
+        "letter": "i",
+        "ipa": "i",
+        "word": "ikino",
+        "meaning": "subir"
+      },
+      {
+        "letter": "k",
+        "ipa": "k",
+        "word": "kepe",
+        "meaning": "tenazas"
+      },
+      {
+        "letter": "l",
+        "ipa": "l",
+        "word": "elono",
+        "meaning": "cantar"
+      },
+      {
+        "letter": "m",
+        "ipa": "m",
+        "word": "manisono",
+        "meaning": "dar"
+      },
+      {
+        "letter": "n",
+        "ipa": "n",
+        "word": "nihino",
+        "meaning": "morir"
+      },
+      {
+        "letter": "o",
+        "ipa": "o",
+        "word": "oko",
+        "meaning": "cuerpo, carne"
+      },
+      {
+        "letter": "p",
+        "ipa": "p",
+        "word": "paha",
+        "meaning": "casa"
+      },
+      {
+        "letter": "q",
+        "ipa": "kʷ",
+        "word": "qelo",
+        "meaning": "conejo"
+      },
+      {
+        "letter": "r",
+        "ipa": "ɾ",
+        "word": "tera",
+        "meaning": "bueno"
+      },
+      {
+        "letter": "s",
+        "ipa": "s",
+        "word": "saliki",
+        "meaning": "frijol"
+      },
+      {
+        "letter": "t",
+        "ipa": "t",
+        "word": "tapola",
+        "meaning": "maíz"
+      },
+      {
+        "letter": "u",
+        "ipa": "u",
+        "word": "akú",
+        "meaning": "luna"
+      },
+      {
+        "letter": "w",
+        "ipa": "w",
+        "word": "hebwano",
+        "meaning": "hablar"
+      },
+      {
+        "letter": "y",
+        "ipa": "j",
+        "word": "kuyu",
+        "meaning": "pescado"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales",
+        "items": [
+          {
+            "letter": "a",
+            "ipa": "a"
+          },
+          {
+            "letter": "e",
+            "ipa": "e"
+          },
+          {
+            "letter": "i",
+            "ipa": "i"
+          },
+          {
+            "letter": "o",
+            "ipa": "o"
+          },
+          {
+            "letter": "u",
+            "ipa": "u"
+          }
+        ]
+      },
+      {
+        "title": "Vocales largas",
+        "items": [
+          {
+            "letter": "ā",
+            "ipa": "aː"
+          },
+          {
+            "letter": "ē",
+            "ipa": "eː"
+          },
+          {
+            "letter": "ī",
+            "ipa": "iː"
+          },
+          {
+            "letter": "ō",
+            "ipa": "oː"
+          },
+          {
+            "letter": "ū",
+            "ipa": "uː"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Todas las palabras acaban en vocal; Pareja solo encontró una excepción, unan. Los únicos grupos de consonantes son nt y st.",
+      "q y k cambian el sentido: ikino «subir», iqino «matar»; hikino «soñar», hiqino «acabar».",
+      "Las palabras de hasta tres vocales llevan el acento en la primera (téra «bueno»); las más largas nunca en la última. El acento solo se escribe cuando cae al final: elakó «y el sol», pwenohekó «¿vendrá?».",
+      "Cuando una palabra acaba en vocal y la siguiente empieza con vocal, una de las dos se pierde: terati chi inela → teratichinela.",
+      "La pronunciación se reconstruye a partir de la escritura de Pareja; nadie habla timucua desde el siglo XVIII."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo timucua se arma con un prefijo de persona, la raíz, el plural y las terminaciones de tiempo y modo. Pareja da muchas terminaciones para cada tiempo; aquí mostramos la más común.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          {
+            "slot": "Persona",
+            "description": "ni- yo, chi- tú; nada para él o ella.",
+            "example": "ni-"
+          },
+          {
+            "slot": "Raíz",
+            "description": "El infinitivo sin -no.",
+            "example": "hubwaso"
+          },
+          {
+            "slot": "Plural",
+            "description": "-bo- nosotros y ustedes, -mo- ellos.",
+            "example": "-bo-"
+          },
+          {
+            "slot": "Tiempo",
+            "description": "-ta- presente, -bi- pasado, -chu- pretérito, -bile- anterior, -ha- futuro.",
+            "example": "-ha-"
+          },
+          {
+            "slot": "Cierre",
+            "description": "-la afirma, -ti- niega, -hekó pregunta.",
+            "example": "-bela"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Las personas",
+        "description": "El plural conserva el prefijo y añade -bo-; la 3.ª persona no lleva prefijo y forma el plural con -mo-.",
+        "columns": [
+          "Persona",
+          "Singular",
+          "Plural",
+          "Futuro de «amar»"
+        ],
+        "rows": [
+          {
+            "label": "1.ª",
+            "cells": [
+              "ni-",
+              "ni- … -bo-",
+              "nihubwasohabela · nihubwasobohabela"
+            ]
+          },
+          {
+            "label": "2.ª",
+            "cells": [
+              "chi-",
+              "chi- … -bo-",
+              "chihubwasohabela · chihubwasobohabela"
+            ]
+          },
+          {
+            "label": "3.ª",
+            "cells": [
+              "—",
+              "-mo-",
+              "hubwasohabela · hubwasomohabela"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "De Pareja a esta ortografía",
+        "description": "Así se pasan las palabras de los libros de Pareja a la ortografía de esta página.",
+        "columns": [
+          "Sonido",
+          "Pareja",
+          "Aquí",
+          "Ejemplo"
+        ],
+        "rows": [
+          {
+            "label": "/k/",
+            "cells": [
+              "c, q (qe, qi)",
+              "k",
+              "caqi → kaki"
+            ]
+          },
+          {
+            "label": "/kʷ/",
+            "cells": [
+              "qu, qú",
+              "q",
+              "iquino → iqino"
+            ]
+          },
+          {
+            "label": "/w/",
+            "cells": [
+              "u, bu",
+              "w, bw",
+              "hebuano → hebwano"
+            ]
+          },
+          {
+            "label": "/j/",
+            "cells": [
+              "i, y",
+              "y",
+              "cuiu → kuyu"
+            ]
+          },
+          {
+            "label": "/h/",
+            "cells": [
+              "h, g, x, j",
+              "h",
+              "nigino → nihino"
+            ]
+          },
+          {
+            "label": "/t/",
+            "cells": [
+              "t, d",
+              "t",
+              "manda → manta"
+            ]
+          },
+          {
+            "label": "vocal larga",
+            "cells": [
+              "oo",
+              "ō",
+              "tooma → tōma"
+            ]
+          },
+          {
+            "label": "acento al final",
+            "cells": [
+              "ó",
+              "ó",
+              "puenohecó → pwenohekó"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases de Pareja",
+        "items": [
+          {
+            "text": "Diosima hubwasotala.",
+            "translation": "Amo a Dios."
+          },
+          {
+            "text": "Mita.",
+            "translation": "Me voy."
+          },
+          {
+            "text": "Nahiabotela.",
+            "translation": "Él lo sabe."
+          },
+          {
+            "text": "Pwenohekó?",
+            "translation": "¿Vendrá?"
+          },
+          {
+            "text": "Kuyu ara?",
+            "translation": "¿Hay mucho pescado?"
+          },
+          {
+            "text": "Elakó, akukó.",
+            "translation": "Y el sol, y la luna."
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Todos los afijos del verbo",
+        "description": "Las piezas que Pareja describe: prefijos de persona, plurales, tiempos, modos, partículas y derivaciones.",
+        "items": [
+          {
+            "affix": "ni-",
+            "kind": "prefijo de persona",
+            "meaning": "Yo; con -bo-, nosotros",
+            "example": "nihubwasotala",
+            "translation": "amo"
+          },
+          {
+            "affix": "chi-",
+            "kind": "prefijo de persona",
+            "meaning": "Tú; con -bo-, ustedes",
+            "example": "chihubwasotala",
+            "translation": "amas"
+          },
+          {
+            "affix": "-bo-",
+            "kind": "plural",
+            "meaning": "Plural de la 1.ª y 2.ª persona",
+            "example": "nihubwasobohabela",
+            "translation": "amaremos"
+          },
+          {
+            "affix": "-mo-",
+            "kind": "plural",
+            "meaning": "Plural de la 3.ª persona; también «amemos»",
+            "example": "hubwasomohabela",
+            "translation": "amarán"
+          },
+          {
+            "affix": "-ta-",
+            "kind": "tiempo",
+            "meaning": "Presente, lo que está pasando",
+            "example": "nahiabotela",
+            "translation": "lo sabe"
+          },
+          {
+            "affix": "-la, -le",
+            "kind": "modo",
+            "meaning": "Aserción: cierra la frase",
+            "example": "nihubwasotala",
+            "translation": "amo"
+          },
+          {
+            "affix": "-bi-",
+            "kind": "tiempo",
+            "meaning": "Pasado: lo que se hacía",
+            "example": "nihubwasobila",
+            "translation": "amaba"
+          },
+          {
+            "affix": "-chunu, -chule",
+            "kind": "tiempo",
+            "meaning": "Pretérito: lo que ya pasó",
+            "example": "hubwasochunu",
+            "translation": "amó"
+          },
+          {
+            "affix": "-bile-",
+            "kind": "tiempo",
+            "meaning": "Anterioridad: pluscuamperfecto y futuro perfecto",
+            "example": "nihubwasobilebila",
+            "translation": "había amado"
+          },
+          {
+            "affix": "-ha-",
+            "kind": "tiempo",
+            "meaning": "Futuro: -habela, -hateno, -hale",
+            "example": "nihubwasohabela",
+            "translation": "amaré"
+          },
+          {
+            "affix": "-ti-",
+            "kind": "modo",
+            "meaning": "Negación",
+            "example": "nenatila",
+            "translation": "no veo"
+          },
+          {
+            "affix": "-hekó",
+            "kind": "modo",
+            "meaning": "Pregunta: «¿acaso…?»",
+            "example": "pwenohekó",
+            "translation": "¿vendrá?"
+          },
+          {
+            "affix": "unan",
+            "kind": "partícula",
+            "meaning": "Pregunta; la única palabra que acaba en consonante",
+            "example": "nihubwasote unan",
+            "translation": "¿acaso amo?"
+          },
+          {
+            "affix": "-tiaku",
+            "kind": "partícula",
+            "meaning": "«Ya», «pues»: otra forma de cerrar la frase",
+            "example": "nihubwasobohatiaku",
+            "translation": "amaremos"
+          },
+          {
+            "affix": "-chuteo",
+            "kind": "partícula",
+            "meaning": "Enfado, responder de mala gana",
+            "example": "isinchuteo",
+            "translation": "ya lo dije"
+          },
+          {
+            "affix": "-halaqa",
+            "kind": "partícula",
+            "meaning": "Gusto o deseo de hacerlo, con el futuro",
+            "example": "mihalaqa",
+            "translation": "me iré"
+          },
+          {
+            "affix": "-no, -nu",
+            "kind": "derivación",
+            "meaning": "Infinitivo y nombre de la acción",
+            "example": "hubwasono",
+            "translation": "amar, el amor"
+          },
+          {
+            "affix": "-ma",
+            "kind": "derivación",
+            "meaning": "Determinante: «el, la»",
+            "example": "hebwanoma",
+            "translation": "el habla"
+          },
+          {
+            "affix": "na-",
+            "kind": "derivación",
+            "meaning": "Instrumento o lugar de la acción",
+            "example": "nakunuma",
+            "translation": "el vaso"
+          },
+          {
+            "affix": "-kó",
+            "kind": "enclítico",
+            "meaning": "«Y», con acento al final",
+            "example": "elakó",
+            "translation": "y el sol"
+          },
+          {
+            "affix": "-qí",
+            "kind": "enclítico",
+            "meaning": "«Y», con nombres de persona",
+            "example": "holatamaqí",
+            "translation": "y el cacique"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "timucua",
+    "persons": [
+      {
+        "id": "1",
+        "label": "1.ª persona",
+        "es": 0
+      },
+      {
+        "id": "2",
+        "label": "2.ª persona",
+        "es": 1
+      },
+      {
+        "id": "3",
+        "label": "3.ª persona",
+        "es": 2
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present",
+        "group": "Indicativo",
+        "name": "Presente",
+        "description": "Lo que pasa ahora (-ta-la).",
+        "form": "present",
+        "es": "present"
+      },
+      {
+        "id": "imperfect",
+        "group": "Indicativo",
+        "name": "Pretérito imperfecto",
+        "description": "Lo que se hacía o se solía hacer (-bi-la).",
+        "form": "imperfect",
+        "es": "imperfect"
+      },
+      {
+        "id": "preterite",
+        "group": "Indicativo",
+        "name": "Pretérito perfecto",
+        "description": "Lo que ya pasó (-chunu).",
+        "form": "preterite",
+        "es": "preterite"
+      },
+      {
+        "id": "pluperfect",
+        "group": "Indicativo",
+        "name": "Pluscuamperfecto",
+        "description": "Lo que ya había pasado (-bile-bila).",
+        "form": "pluperfect",
+        "es": "pluperfect"
+      },
+      {
+        "id": "future",
+        "group": "Indicativo",
+        "name": "Futuro",
+        "description": "Lo que va a pasar (-ha-bela).",
+        "form": "future",
+        "es": "future"
+      },
+      {
+        "id": "question",
+        "group": "Preguntas y negación",
+        "name": "Presente, preguntando",
+        "description": "«¿Acaso…?» (-te-hekó, con acento al final).",
+        "form": "question",
+        "es": {
+          "tense": "present",
+          "question": true
+        }
+      },
+      {
+        "id": "negative",
+        "group": "Preguntas y negación",
+        "name": "Presente negativo",
+        "description": "La negación -ti- antes de -la.",
+        "form": "negative",
+        "negative": true,
+        "es": "present"
+      },
+      {
+        "id": "imperative",
+        "group": "Órdenes",
+        "name": "Imperativo",
+        "description": "La raíz sola; -tama para ustedes.",
+        "form": "imperative",
+        "es": "imperative"
+      },
+      {
+        "id": "hortative",
+        "group": "Órdenes",
+        "name": "Exhortativo",
+        "description": "«¡Amemos!»: la raíz con -mo.",
+        "form": "hortative",
+        "es": "optative"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "hubwasono",
+        "meaning": "amar",
+        "es": "amar",
+        "note": "Pareja: hubuasono"
+      },
+      {
+        "entry": "hebwano",
+        "meaning": "hablar",
+        "es": "hablar",
+        "note": "Pareja: hebuano"
+      },
+      {
+        "entry": "qosono",
+        "meaning": "hacer",
+        "es": "hacer",
+        "note": "Pareja: qúosono"
+      },
+      {
+        "entry": "nahiabono",
+        "meaning": "saber",
+        "es": "saber",
+        "note": "Pareja: nahiabono"
+      },
+      {
+        "entry": "koresono",
+        "meaning": "comer",
+        "es": "comer",
+        "note": "Pareja: coresono"
+      },
+      {
+        "entry": "nihino",
+        "meaning": "morir",
+        "es": "morir",
+        "note": "Pareja: nihino, nigino"
+      },
+      {
+        "entry": "polono",
+        "meaning": "tejer",
+        "es": "tejer",
+        "note": "Pareja: polono"
+      },
+      {
+        "entry": "manisono",
+        "meaning": "dar",
+        "es": "dar",
+        "note": "Pareja: manisono"
+      },
+      {
+        "entry": "mahaqano",
+        "meaning": "vender",
+        "es": "vender",
+        "note": "Pareja: mahaquano"
+      },
+      {
+        "entry": "hiqino",
+        "meaning": "acabar",
+        "es": "acabar",
+        "note": "Pareja: hiquino"
+      },
+      {
+        "entry": "kochono",
+        "meaning": "cortar",
+        "es": "cortar",
+        "note": "Pareja: cochono"
+      },
+      {
+        "entry": "fasono",
+        "meaning": "echar",
+        "es": "echar",
+        "note": "Pareja: fasono"
+      },
+      {
+        "entry": "nakosono",
+        "meaning": "honrar",
+        "es": "honrar",
+        "note": "Pareja: naqosono"
+      },
+      {
+        "entry": "nabosono",
+        "meaning": "venerar",
+        "es": "venerar",
+        "note": "Pareja: nabosono"
+      },
+      {
+        "entry": "piqino",
+        "meaning": "esconderse",
+        "es": "esconderse",
+        "note": "Pareja: piquino"
+      }
+    ]
+  }
+}

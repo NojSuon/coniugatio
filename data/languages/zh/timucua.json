@@ -1,0 +1,493 @@
+{
+  "name": "提姆夸语",
+  "variant": "提姆夸语（帕雷哈记录的语言）",
+  "region": "美国佛罗里达州北部和佐治亚州南部",
+  "summary": "佛罗里达州北部的一种孤立语言，没有已知的亲属语言，18 世纪起已无人使用。帕雷哈称它为 lengua timuquana；也写作 Timuquana。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "输入带 -no 的动词不定式：hubwasono「爱」，hebwano「说话」，qosono「做事」。也可以只输入词根（hubwaso）。",
+    "own": {
+      "hint": "输入任意动词的不定式和它的中文意思。我们会用帕雷哈范例动词的词尾为它变位。",
+      "label": "动词",
+      "es_placeholder": "唱歌"
+    }
+  },
+  "source": {
+    "short": "帕雷哈，《Arte de la lengua timuquana》（1614 年）",
+    "full": "Francisco Pareja，《Arte de la lengua timuquana》，1614 年写成，Lucien Adam 与 Julien Vinson 依据唯一原本出版（巴黎：Maisonneuve，1886 年；《Bibliothèque linguistique américaine》第 11 卷）。Mati Mati 拼写。"
+  },
+  "about": [
+    "提姆夸语曾通行于佛罗里达州北部和佐治亚州南部，在西班牙人称为 Timucua、Potano、Mocama（海岸）、Acuera、Agua Salada 和 Agua Fresca 等村镇。每个村镇都有自己的变体。",
+    "它是一种孤立语言：没有已知的亲属语言。疫病、战争以及 1763 年西班牙人撤离佛罗里达，使最后一批使用者随之前往古巴，这种语言也就此消失。",
+    "我们是通过方济各会士 Francisco Pareja 的著作认识它的。他曾在圣胡安德尔普埃尔托与提姆夸人一起生活，留下了 1614 年的语法书、教理问答和一部双语告解手册。它是今天美国境内最早被书写下来的语言之一。"
+  ],
+  "orthography": {
+    "intro": "帕雷哈用西班牙语字母书写提姆夸语。这里我们使用 Mati Mati 的新拼写：k 表示 /k/，q 表示 /kʷ/，w 和 y 表示半元音，h 表示帕雷哈写作 h、g、x 或 j 的音，长音符表示长元音（ō），锐音符表示不在常规位置的重音（pwenohekó）。",
+    "letters": [
+      {
+        "meaning": "人"
+      },
+      {
+        "meaning": "敬拜"
+      },
+      {
+        "meaning": "帽子"
+      },
+      {
+        "meaning": "太阳，日"
+      },
+      {
+        "meaning": "扔"
+      },
+      {
+        "meaning": "酋长"
+      },
+      {
+        "meaning": "上去"
+      },
+      {
+        "meaning": "钳子"
+      },
+      {
+        "meaning": "唱歌"
+      },
+      {
+        "meaning": "给"
+      },
+      {
+        "meaning": "死"
+      },
+      {
+        "meaning": "身体，肉"
+      },
+      {
+        "meaning": "房子"
+      },
+      {
+        "meaning": "兔子"
+      },
+      {
+        "meaning": "好"
+      },
+      {
+        "meaning": "豆子"
+      },
+      {
+        "meaning": "玉米"
+      },
+      {
+        "meaning": "月亮"
+      },
+      {
+        "meaning": "说话"
+      },
+      {
+        "meaning": "鱼"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "元音"
+      },
+      {
+        "title": "长元音"
+      }
+    ],
+    "notes": [
+      "所有的词都以元音结尾；帕雷哈只找到一个例外：unan。仅有的辅音组合是 nt 和 st。",
+      "q 和 k 会改变意思：ikino「上去」，iqino「杀」；hikino「做梦」，hiqino「完成」。",
+      "最多三个元音的词重音在第一个元音上（téra「好」）；更长的词重音从不在最后。只有重音落在词尾时才标出：elakó「还有太阳」，pwenohekó「他会来吗？」。",
+      "前一个词以元音结尾、后一个词以元音开头时，其中一个元音会脱落：terati chi inela → teratichinela。",
+      "发音是根据帕雷哈的拼写重建的；自 18 世纪以来已无人说提姆夸语。"
+    ]
+  },
+  "grammar": {
+    "intro": "提姆夸语的动词由人称前缀、词根、复数以及时态和语气词尾构成。帕雷哈为每个时态给出了许多词尾；这里显示最常见的一种。",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          {
+            "slot": "人称",
+            "description": "ni- 我，chi- 你；他或她不加前缀。"
+          },
+          {
+            "slot": "词根",
+            "description": "去掉 -no 的不定式。"
+          },
+          {
+            "slot": "复数",
+            "description": "-bo- 我们和你们，-mo- 他们。"
+          },
+          {
+            "slot": "时态",
+            "description": "-ta- 现在，-bi- 过去，-chu- 过去时，-bile- 先时，-ha- 将来。"
+          },
+          {
+            "slot": "词尾",
+            "description": "-la 表示肯定，-ti- 表示否定，-hekó 表示疑问。"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "人称",
+        "description": "复数保留前缀并加上 -bo-；第三人称没有前缀，复数用 -mo-。",
+        "columns": [
+          "人称",
+          "单数",
+          "复数",
+          "「爱」的将来时"
+        ],
+        "rows": [
+          {
+            "label": "第一人称"
+          },
+          {
+            "label": "第二人称"
+          },
+          {
+            "label": "第三人称"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "从帕雷哈的拼写到本页拼写",
+        "description": "帕雷哈书中的词在本页是这样书写的。",
+        "columns": [
+          "音",
+          "帕雷哈",
+          "本页",
+          "例子"
+        ],
+        "rows": [
+          {
+            "label": "/k/"
+          },
+          {
+            "label": "/kʷ/"
+          },
+          {
+            "label": "/w/"
+          },
+          {
+            "label": "/j/"
+          },
+          {
+            "label": "/h/"
+          },
+          {
+            "label": "/t/"
+          },
+          {
+            "label": "长元音"
+          },
+          {
+            "label": "末尾重音"
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "帕雷哈书中的句子",
+        "items": [
+          {
+            "translation": "我爱上帝。"
+          },
+          {
+            "translation": "我走了。"
+          },
+          {
+            "translation": "他知道。"
+          },
+          {
+            "translation": "他会来吗？"
+          },
+          {
+            "translation": "鱼多吗？"
+          },
+          {
+            "translation": "还有太阳，还有月亮。"
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "动词的所有词缀",
+        "description": "帕雷哈描述的各个部分：人称前缀、复数、时态、语气、小品词和派生。",
+        "items": [
+          {
+            "kind": "人称前缀",
+            "meaning": "我；与 -bo- 连用为我们",
+            "translation": "我爱"
+          },
+          {
+            "kind": "人称前缀",
+            "meaning": "你；与 -bo- 连用为你们",
+            "translation": "你爱"
+          },
+          {
+            "kind": "复数",
+            "meaning": "第一和第二人称的复数",
+            "translation": "我们会爱"
+          },
+          {
+            "kind": "复数",
+            "meaning": "第三人称的复数；也表示「我们……吧」",
+            "translation": "他们会爱"
+          },
+          {
+            "kind": "时态",
+            "meaning": "现在，正在发生的事",
+            "translation": "他/她知道"
+          },
+          {
+            "kind": "语气",
+            "meaning": "断言：用于结束句子",
+            "translation": "我爱"
+          },
+          {
+            "kind": "时态",
+            "meaning": "过去：以前做的事",
+            "translation": "我以前常爱"
+          },
+          {
+            "kind": "时态",
+            "meaning": "过去时：已经发生的事",
+            "translation": "他/她爱了"
+          },
+          {
+            "kind": "时态",
+            "meaning": "先时：过去完成时和将来完成时",
+            "translation": "我之前已经爱了"
+          },
+          {
+            "kind": "时态",
+            "meaning": "将来时：-habela、-hateno、-hale",
+            "translation": "我会爱"
+          },
+          {
+            "kind": "语气",
+            "meaning": "否定",
+            "translation": "我看不见"
+          },
+          {
+            "kind": "语气",
+            "meaning": "疑问：「难道……吗？」",
+            "translation": "他/她会来吗？"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "疑问；唯一以辅音结尾的词",
+            "translation": "我爱吗？"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "「已经」「那么」：另一种结束句子的方式",
+            "translation": "我们会爱"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "不耐烦，没好气地回答",
+            "translation": "我已经说过了"
+          },
+          {
+            "kind": "小品词",
+            "meaning": "乐意或想做，与将来时连用",
+            "translation": "我会走"
+          },
+          {
+            "kind": "派生",
+            "meaning": "不定式和动作名词",
+            "translation": "爱"
+          },
+          {
+            "kind": "派生",
+            "meaning": "限定词：「这个」",
+            "translation": "话语"
+          },
+          {
+            "kind": "派生",
+            "meaning": "动作的工具或地点",
+            "translation": "杯子"
+          },
+          {
+            "kind": "附着词",
+            "meaning": "「和」，重音在末尾",
+            "translation": "还有太阳"
+          },
+          {
+            "kind": "附着词",
+            "meaning": "「和」，用于人名",
+            "translation": "还有酋长"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "第一人称"
+      },
+      {
+        "id": "2",
+        "label": "第二人称"
+      },
+      {
+        "id": "3",
+        "label": "第三人称"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present",
+        "group": "直陈式",
+        "name": "现在时",
+        "description": "现在发生的事（-ta-la）。"
+      },
+      {
+        "id": "imperfect",
+        "group": "直陈式",
+        "name": "未完成过去时",
+        "description": "以前做的或常做的事（-bi-la）。"
+      },
+      {
+        "id": "preterite",
+        "group": "直陈式",
+        "name": "过去时",
+        "description": "已经发生的事（-chunu）。"
+      },
+      {
+        "id": "pluperfect",
+        "group": "直陈式",
+        "name": "过去完成时",
+        "description": "之前已经发生的事（-bile-bila）。"
+      },
+      {
+        "id": "future",
+        "group": "直陈式",
+        "name": "将来时",
+        "description": "将要发生的事（-ha-bela）。"
+      },
+      {
+        "id": "question",
+        "group": "疑问和否定",
+        "name": "现在时，疑问",
+        "description": "「难道……吗？」（-te-hekó，重音在末尾）。"
+      },
+      {
+        "id": "negative",
+        "group": "疑问和否定",
+        "name": "现在时否定",
+        "description": "否定后缀 -ti- 放在 -la 之前。"
+      },
+      {
+        "id": "imperative",
+        "group": "命令",
+        "name": "命令式",
+        "description": "光杆词根；对你们用 -tama。"
+      },
+      {
+        "id": "hortative",
+        "group": "命令",
+        "name": "劝勉式",
+        "description": "「我们爱吧！」：词根加 -mo。"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "hubwasono",
+        "meaning": "爱",
+        "es": "爱",
+        "note": "帕雷哈：hubuasono"
+      },
+      {
+        "entry": "hebwano",
+        "meaning": "说话",
+        "es": "说话",
+        "note": "帕雷哈：hebuano"
+      },
+      {
+        "entry": "qosono",
+        "meaning": "做事",
+        "es": "做事",
+        "note": "帕雷哈：qúosono"
+      },
+      {
+        "entry": "nahiabono",
+        "meaning": "知道",
+        "es": "知道",
+        "note": "帕雷哈：nahiabono"
+      },
+      {
+        "entry": "koresono",
+        "meaning": "吃",
+        "es": "吃",
+        "note": "帕雷哈：coresono"
+      },
+      {
+        "entry": "nihino",
+        "meaning": "死",
+        "es": "死",
+        "note": "帕雷哈：nihino, nigino"
+      },
+      {
+        "entry": "polono",
+        "meaning": "织",
+        "es": "织",
+        "note": "帕雷哈：polono"
+      },
+      {
+        "entry": "manisono",
+        "meaning": "给",
+        "es": "给",
+        "note": "帕雷哈：manisono"
+      },
+      {
+        "entry": "mahaqano",
+        "meaning": "卖",
+        "es": "卖",
+        "note": "帕雷哈：mahaquano"
+      },
+      {
+        "entry": "hiqino",
+        "meaning": "完成",
+        "es": "完成",
+        "note": "帕雷哈：hiquino"
+      },
+      {
+        "entry": "kochono",
+        "meaning": "切",
+        "es": "切",
+        "note": "帕雷哈：cochono"
+      },
+      {
+        "entry": "fasono",
+        "meaning": "扔",
+        "es": "扔",
+        "note": "帕雷哈：fasono"
+      },
+      {
+        "entry": "nakosono",
+        "meaning": "尊敬",
+        "es": "尊敬",
+        "note": "帕雷哈：naqosono"
+      },
+      {
+        "entry": "nabosono",
+        "meaning": "敬拜",
+        "es": "敬拜",
+        "note": "帕雷哈：nabosono"
+      },
+      {
+        "entry": "piqino",
+        "meaning": "躲藏",
+        "es": "躲藏",
+        "note": "帕雷哈：piquino"
+      }
+    ]
+  }
+}

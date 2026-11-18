@@ -62,10 +62,11 @@ Every page also exists in English under `/en/` (`/coniugatio/en/otomi/`…), wit
 - Zoque (tsunitsame), Copainalá: Ralph y Mary Engel, *Diccionario zoque de Copainalá* (ILV, 1981), con su gramática; INALI, *Norma de escritura de la lengua otetzame (zoque)*, escrita con ts en lugar de tz; also Engel, *Diccionario zoque de Francisco León* (ILV, 1987).
 - Wixárika (huichol): Stefanie Ramos Bierge, *Clause Types and Transitivity in Wixárika (Huichol)* (Universidad de Colorado, 2016); José Luis Iturrioz Leza, Paula Gómez López y Xitakame Ramírez de la Cruz, «La morfología verbal», en *Lenguas y literaturas indígenas de Jalisco*; also Grimes et al., *El huichol: apuntes sobre el léxico* (1981).
 - Lacandón (jach t'aan, del sur): Charles Andrew Hofling con Florinda Chanaj Kin, *Lacandon Maya–Spanish–English Dictionary* (University of Utah Press, 2014), §4 for the verb; written with ts for tz.
+- Timucua: Francisco Pareja, *Arte de la lengua timuquana* (1614), ed. Lucien Adam and Julien Vinson (Maisonneuve, 1886). Written in a new Mati Mati spelling: k /k/, q /kʷ/, w and y for the glides, h for Pareja's h/g/x/j, t for t/d, a macron for long vowels and an acute for unexpected (final) stress.
 
 In the Mayan languages (Itza', Yucatec, Mopan, Lacandon) the implosive b is written without an apostrophe (b, not b').
 - Maya itza': Charles Andrew Hofling con Fernando Tesucún, *Itzaj Maya Grammar*, University of Utah Press, 2000; *Jiilt'an Maya Itza: Vocabulario Itza'*, Academia de Lenguas Mayas de Guatemala, 2001.
 
 All text in an indigenous language should be checked with speakers before publishing.
 
-Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha`, `yucatec`, `mopan`, `zoque`, `wixarika` or `lacandon`), which selects the rules in `crates/core`.
+Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha`, `yucatec`, `mopan`, `zoque`, `wixarika`, `lacandon` or `timucua`), which selects the rules in `crates/core`.

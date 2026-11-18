@@ -13,6 +13,7 @@ pub mod nahuatl;
 pub mod otomi;
 pub mod purhepecha;
 pub mod spanish;
+pub mod timucua;
 pub mod wixarika;
 pub mod yucatec;
 pub mod zoque;
@@ -41,6 +42,9 @@ pub enum Engine {
     /// Southern Lacandon: set A joined after k- / t-, set B, -Vr / -Vk
     /// harmony. See `lacandon`.
     Lacandon(lacandon::Conjugation),
+    /// Person prefixes ni- / chi-, plural -bo- / -mo-, tense suffixes. See
+    /// `timucua`.
+    Timucua(timucua::Conjugation),
     /// Person prefixes and enclitics, -tam- / -yaj- plurals, -pa / -u. See
     /// `zoque`.
     Zoque(zoque::Conjugation),
@@ -68,6 +72,7 @@ impl Engine {
             Engine::Yucatec(c) => c.conjugate_with(verb, opts),
             Engine::Mopan(c) => c.conjugate_with(verb, opts),
             Engine::Lacandon(c) => c.conjugate_with(verb, opts),
+            Engine::Timucua(c) => c.conjugate_with(verb, opts),
             Engine::Zoque(c) => c.conjugate_with(verb, opts),
             Engine::Wixarika(c) => c.conjugate_with(verb, opts),
         }
@@ -83,6 +88,7 @@ impl Engine {
             Engine::Yucatec(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Mopan(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Lacandon(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Timucua(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Zoque(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Wixarika(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }

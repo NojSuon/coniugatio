@@ -1,0 +1,493 @@
+{
+  "name": "Timucua",
+  "variant": "Timucua (Pareja's language)",
+  "region": "Northern Florida and southern Georgia (United States)",
+  "summary": "A language isolate of northern Florida, with no known relatives, that stopped being spoken in the 18th century. Pareja called it lengua timuquana; it is also spelled Timuquana.",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb in the infinitive, with -no: hubwasono «love», hebwano «speak», qosono «do». You can also type just the stem (hubwaso).",
+    "own": {
+      "hint": "Type any verb in the infinitive and its meaning in English. We conjugate it with the endings of Pareja's model verb.",
+      "label": "Verb",
+      "es_placeholder": "sing"
+    }
+  },
+  "source": {
+    "short": "Pareja, Arte de la lengua timuquana (1614)",
+    "full": "Francisco Pareja, Arte de la lengua timuquana, written in 1614, published from the single original copy by Lucien Adam and Julien Vinson (Paris: Maisonneuve, 1886; Bibliothèque linguistique américaine, XI). Mati Mati spelling."
+  },
+  "about": [
+    "Timucua was spoken in northern Florida and southern Georgia, in the towns the Spanish called Timucua, Potano, Mocama (the coast), Acuera, Agua Salada and Agua Fresca, among others. Each town had its own variety.",
+    "It is a language isolate: no relatives are known. Epidemics, wars and the Spanish departure from Florida in 1763 ended its last speakers, who left for Cuba.",
+    "We know it from the books of the Franciscan Francisco Pareja, who lived among the Timucua at San Juan del Puerto: his 1614 grammar, catechisms and a bilingual confessional. It is one of the first languages of what is now the United States to be written down."
+  ],
+  "orthography": {
+    "intro": "Pareja wrote Timucua with Spanish letters. Here we use a new Mati Mati spelling: k for /k/, q for /kʷ/, w and y for the glides, h for the sound Pareja wrote h, g, x or j, a macron for a long vowel (ō) and an acute for stress that doesn't fall where expected (pwenohekó).",
+    "letters": [
+      {
+        "meaning": "person"
+      },
+      {
+        "meaning": "revere"
+      },
+      {
+        "meaning": "hat"
+      },
+      {
+        "meaning": "sun, day"
+      },
+      {
+        "meaning": "throw"
+      },
+      {
+        "meaning": "chief"
+      },
+      {
+        "meaning": "go up"
+      },
+      {
+        "meaning": "tongs"
+      },
+      {
+        "meaning": "sing"
+      },
+      {
+        "meaning": "give"
+      },
+      {
+        "meaning": "die"
+      },
+      {
+        "meaning": "body, flesh"
+      },
+      {
+        "meaning": "house"
+      },
+      {
+        "meaning": "rabbit"
+      },
+      {
+        "meaning": "good"
+      },
+      {
+        "meaning": "bean"
+      },
+      {
+        "meaning": "corn"
+      },
+      {
+        "meaning": "moon"
+      },
+      {
+        "meaning": "speak"
+      },
+      {
+        "meaning": "fish"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "Vowels"
+      },
+      {
+        "title": "Long vowels"
+      }
+    ],
+    "notes": [
+      "Every word ends in a vowel; Pareja found only one exception, unan. The only consonant clusters are nt and st.",
+      "q and k change the meaning: ikino «go up», iqino «kill»; hikino «dream», hiqino «finish».",
+      "Words of up to three vowels are stressed on the first one (téra «good»); longer ones never on the last. Stress is only written when it falls at the end: elakó «and the sun», pwenohekó «will he come?».",
+      "When one word ends in a vowel and the next begins with one, one of them is lost: terati chi inela → teratichinela.",
+      "The pronunciation is reconstructed from Pareja's spelling; nobody has spoken Timucua since the 18th century."
+    ]
+  },
+  "grammar": {
+    "intro": "A Timucua verb is built from a person prefix, the stem, the plural and the tense and mood endings. Pareja gives many endings for each tense; here we show the most common one.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          {
+            "slot": "Person",
+            "description": "ni- I, chi- you; nothing for he or she."
+          },
+          {
+            "slot": "Stem",
+            "description": "The infinitive without -no."
+          },
+          {
+            "slot": "Plural",
+            "description": "-bo- we and you all, -mo- they."
+          },
+          {
+            "slot": "Tense",
+            "description": "-ta- present, -bi- past, -chu- preterite, -bile- anterior, -ha- future."
+          },
+          {
+            "slot": "Ending",
+            "description": "-la asserts, -ti- negates, -hekó asks."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "The persons",
+        "description": "The plural keeps the prefix and adds -bo-; the 3rd person has no prefix and makes its plural with -mo-.",
+        "columns": [
+          "Person",
+          "Singular",
+          "Plural",
+          "Future of «love»"
+        ],
+        "rows": [
+          {
+            "label": "1st"
+          },
+          {
+            "label": "2nd"
+          },
+          {
+            "label": "3rd"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "From Pareja to this spelling",
+        "description": "This is how the words in Pareja's books are written on this page.",
+        "columns": [
+          "Sound",
+          "Pareja",
+          "Here",
+          "Example"
+        ],
+        "rows": [
+          {
+            "label": "/k/"
+          },
+          {
+            "label": "/kʷ/"
+          },
+          {
+            "label": "/w/"
+          },
+          {
+            "label": "/j/"
+          },
+          {
+            "label": "/h/"
+          },
+          {
+            "label": "/t/"
+          },
+          {
+            "label": "long vowel"
+          },
+          {
+            "label": "final stress"
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Sentences from Pareja",
+        "items": [
+          {
+            "translation": "I love God."
+          },
+          {
+            "translation": "I'm leaving."
+          },
+          {
+            "translation": "He knows it."
+          },
+          {
+            "translation": "Will he come?"
+          },
+          {
+            "translation": "Is there a lot of fish?"
+          },
+          {
+            "translation": "And the sun, and the moon."
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Every affix of the verb",
+        "description": "The pieces Pareja describes: person prefixes, plurals, tenses, moods, particles and derivations.",
+        "items": [
+          {
+            "kind": "person prefix",
+            "meaning": "I; with -bo-, we",
+            "translation": "I love"
+          },
+          {
+            "kind": "person prefix",
+            "meaning": "You; with -bo-, you all",
+            "translation": "you love"
+          },
+          {
+            "kind": "plural",
+            "meaning": "Plural of the 1st and 2nd person",
+            "translation": "we will love"
+          },
+          {
+            "kind": "plural",
+            "meaning": "Plural of the 3rd person; also «let's love»",
+            "translation": "they will love"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Present, what is going on",
+            "translation": "he/she knows it"
+          },
+          {
+            "kind": "mood",
+            "meaning": "Assertion: closes the sentence",
+            "translation": "I love"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Past: what used to happen",
+            "translation": "I used to love"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Preterite: what already happened",
+            "translation": "he/she loved"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Anteriority: pluperfect and future perfect",
+            "translation": "I had loved"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Future: -habela, -hateno, -hale",
+            "translation": "I will love"
+          },
+          {
+            "kind": "mood",
+            "meaning": "Negation",
+            "translation": "I don't see"
+          },
+          {
+            "kind": "mood",
+            "meaning": "Question: «is it that…?»",
+            "translation": "will he/she come?"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Question; the only word that ends in a consonant",
+            "translation": "do I love?"
+          },
+          {
+            "kind": "particle",
+            "meaning": "«Already», «well»: another way to close the sentence",
+            "translation": "we will love"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Annoyance, answering grudgingly",
+            "translation": "I already said it"
+          },
+          {
+            "kind": "particle",
+            "meaning": "Pleasure or wish to do it, with the future",
+            "translation": "I'll go"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Infinitive and action noun",
+            "translation": "to love, love"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Determiner: «the»",
+            "translation": "speech"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Instrument or place of the action",
+            "translation": "the cup"
+          },
+          {
+            "kind": "enclitic",
+            "meaning": "«And», stressed at the end",
+            "translation": "and the sun"
+          },
+          {
+            "kind": "enclitic",
+            "meaning": "«And», with personal names",
+            "translation": "and the chief"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "1",
+        "label": "1st person"
+      },
+      {
+        "id": "2",
+        "label": "2nd person"
+      },
+      {
+        "id": "3",
+        "label": "3rd person"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present",
+        "group": "Indicative",
+        "name": "Present",
+        "description": "What happens now (-ta-la)."
+      },
+      {
+        "id": "imperfect",
+        "group": "Indicative",
+        "name": "Imperfect",
+        "description": "What one did or used to do (-bi-la)."
+      },
+      {
+        "id": "preterite",
+        "group": "Indicative",
+        "name": "Preterite",
+        "description": "What already happened (-chunu)."
+      },
+      {
+        "id": "pluperfect",
+        "group": "Indicative",
+        "name": "Pluperfect",
+        "description": "What had already happened (-bile-bila)."
+      },
+      {
+        "id": "future",
+        "group": "Indicative",
+        "name": "Future",
+        "description": "What will happen (-ha-bela)."
+      },
+      {
+        "id": "question",
+        "group": "Questions and negation",
+        "name": "Present, asking",
+        "description": "«Is it that…?» (-te-hekó, stressed at the end)."
+      },
+      {
+        "id": "negative",
+        "group": "Questions and negation",
+        "name": "Negative present",
+        "description": "The negation -ti- before -la."
+      },
+      {
+        "id": "imperative",
+        "group": "Orders",
+        "name": "Imperative",
+        "description": "The bare stem; -tama for you all."
+      },
+      {
+        "id": "hortative",
+        "group": "Orders",
+        "name": "Hortative",
+        "description": "«Let's love!»: the stem with -mo."
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "hubwasono",
+        "meaning": "love",
+        "es": "love",
+        "note": "Pareja: hubuasono"
+      },
+      {
+        "entry": "hebwano",
+        "meaning": "speak",
+        "es": "speak",
+        "note": "Pareja: hebuano"
+      },
+      {
+        "entry": "qosono",
+        "meaning": "do",
+        "es": "do",
+        "note": "Pareja: qúosono"
+      },
+      {
+        "entry": "nahiabono",
+        "meaning": "know",
+        "es": "know",
+        "note": "Pareja: nahiabono"
+      },
+      {
+        "entry": "koresono",
+        "meaning": "eat",
+        "es": "eat",
+        "note": "Pareja: coresono"
+      },
+      {
+        "entry": "nihino",
+        "meaning": "die",
+        "es": "die",
+        "note": "Pareja: nihino, nigino"
+      },
+      {
+        "entry": "polono",
+        "meaning": "weave",
+        "es": "weave",
+        "note": "Pareja: polono"
+      },
+      {
+        "entry": "manisono",
+        "meaning": "give",
+        "es": "give",
+        "note": "Pareja: manisono"
+      },
+      {
+        "entry": "mahaqano",
+        "meaning": "sell",
+        "es": "sell",
+        "note": "Pareja: mahaquano"
+      },
+      {
+        "entry": "hiqino",
+        "meaning": "finish",
+        "es": "finish",
+        "note": "Pareja: hiquino"
+      },
+      {
+        "entry": "kochono",
+        "meaning": "cut",
+        "es": "cut",
+        "note": "Pareja: cochono"
+      },
+      {
+        "entry": "fasono",
+        "meaning": "throw",
+        "es": "throw",
+        "note": "Pareja: fasono"
+      },
+      {
+        "entry": "nakosono",
+        "meaning": "honor",
+        "es": "honor",
+        "note": "Pareja: naqosono"
+      },
+      {
+        "entry": "nabosono",
+        "meaning": "revere",
+        "es": "revere",
+        "note": "Pareja: nabosono"
+      },
+      {
+        "entry": "piqino",
+        "meaning": "hide",
+        "es": "hide",
+        "note": "Pareja: piquino"
+      }
+    ]
+  }
+}
