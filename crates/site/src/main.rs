@@ -258,6 +258,34 @@ fn render(template: &str, vars: &[(&str, &str)]) -> String {
     })
 }
 
+/// A short hash of the site's scripts and styles. Added to their links
+/// (mati.css?v=…) so browsers never mix a new page with an old cached script.
+fn asset_version(static_dir: &Path) -> String {
+    use std::hash::{Hash, Hasher};
+    fn walk(dir: &Path, h: &mut std::collections::hash_map::DefaultHasher) {
+        let Ok(rd) = fs::read_dir(dir) else { return };
+        let mut paths: Vec<_> = rd.filter_map(|e| e.ok().map(|e| e.path())).collect();
+        paths.sort();
+        for p in paths {
+            if p.is_dir() {
+                walk(&p, h);
+            } else if let Ok(bytes) = fs::read(&p) {
+                bytes.hash(h);
+            }
+        }
+    }
+    let mut h = std::collections::hash_map::DefaultHasher::new();
+    walk(&static_dir.join("js"), &mut h);
+    walk(&static_dir.join("css"), &mut h);
+    format!("{:08x}", h.finish() as u32)
+}
+
+/// Adds ?v=… to the page's links to static .css and .js files.
+fn version_assets(html: String, version: &str) -> String {
+    html.replace(".css\"", &format!(".css?v={version}\""))
+        .replace(".js\"", &format!(".js?v={version}\""))
+}
+
 fn build(root: &Path, opts: &Options) -> Result<(), String> {
     let out = &opts.out;
     if out.exists() {
@@ -296,6 +324,8 @@ fn build(root: &Path, opts: &Options) -> Result<(), String> {
     let read =
         |name: &str| fs::read_to_string(templates.join(name)).map_err(|e| format!("{name}: {e}"));
     let base = opts.base.as_str();
+    let version = asset_version(&templates);
+    let render = |t: &str, vars: &[(&str, &str)]| version_assets(render(t, vars), &version);
     write(
         &out.join("index.html"),
         render(&read("index.html")?, &[("base", base)]),

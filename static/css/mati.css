@@ -657,3 +657,9 @@ html { scroll-behavior: smooth; }
 [data-theme="dark"] [data-serie="selva"] { --serie-fondo: #1E3027; --serie-solido: #2F6B73; --serie-acento: #E06A9E; --serie-texto: #8FD0B0; }
 [data-theme="dark"] [data-serie="jacaranda"] { --serie-fondo: #2C2438; --serie-solido: #4A2F5B; --serie-acento: #E08C8C; --serie-texto: #C9B3EA; }
 [data-theme="dark"] [data-serie="marisma"] { --serie-fondo: #1E2A40; --serie-solido: #2F6B73; --serie-acento: #E08C8C; --serie-texto: #A9C1EE; }
+
+/* An old cached home.js puts the cards straight in the list: keep the grid. */
+.language-list:has(> .language-card) {
+  display: grid; gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
