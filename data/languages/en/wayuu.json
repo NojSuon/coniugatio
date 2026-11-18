@@ -1,0 +1,609 @@
+{
+  "name": "Wayuu",
+  "variant": "Wayuunaiki",
+  "region": "La Guajira Peninsula (Colombia and Venezuela)",
+  "summary": "An Arawakan language of the Wayuu people, on the La Guajira Peninsula, between Colombia and Venezuela. Its speakers call it wayuunaiki, «the language of the people».",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb in the infinitive: apütaa «leave», achajawaa «look for», a'yatawaa «work», talataa «be happy».",
+    "own": {
+      "hint": "Type any verb in the infinitive (it ends in a long vowel or in -waa) and its meaning in English. Those that begin with a, e, o are conjugated as active.",
+      "label": "Verb",
+      "es_placeholder": "write",
+      "types_help": "Stative verbs (makataa «stay») take no prefix; active ones begin with a-, e- or o-."
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "Detect"
+      },
+      {
+        "id": "activo",
+        "label": "Active: apütaa → apütüshi"
+      },
+      {
+        "id": "estativo",
+        "label": "Stative: makataa → makatüshi"
+      }
+    ]
+  },
+  "source": {
+    "short": "Álvarez, Compendio de la gramática de la lengua wayuu (2017)",
+    "full": "José Álvarez, Compendio de la gramática de la lengua wayuu (2017) and Manual de la lengua wayuu. Spelling of the unified Wayuu alphabet."
+  },
+  "about": [
+    "Wayuunaiki is spoken on the La Guajira Peninsula, in northern Colombia and northwestern Venezuela, and in cities such as Maracaibo and Riohacha. The Wayuu are one of the largest Indigenous peoples of both countries.",
+    "It belongs to the Arawakan family, related to languages spoken from the Caribbean to the Amazon. Its name comes from wayuu «person, people» and anüiki «word, language».",
+    "The Wayuu are organized in clans inherited through the mother, and their land is a desert of cacti and small settlements (rancherías). It is written with a 20-letter alphabet; long vowels are written double (aa) and ü is a vowel of its own."
+  ],
+  "orthography": {
+    "intro": "The Wayuu alphabet has 20 letters. Each vowel can be short or long, and the long one is written double: a and aa change the meaning of a word.",
+    "letters": [
+      {
+        "meaning": "rabbit"
+      },
+      {
+        "meaning": "be wet"
+      },
+      {
+        "meaning": "food"
+      },
+      {
+        "meaning": "escape"
+      },
+      {
+        "meaning": "hammock"
+      },
+      {
+        "meaning": "goat"
+      },
+      {
+        "meaning": "young man"
+      },
+      {
+        "meaning": "elder"
+      },
+      {
+        "meaning": "melon"
+      },
+      {
+        "meaning": "he"
+      },
+      {
+        "meaning": "bite"
+      },
+      {
+        "meaning": "house"
+      },
+      {
+        "meaning": "knife"
+      },
+      {
+        "meaning": "fire"
+      },
+      {
+        "meaning": "she"
+      },
+      {
+        "meaning": "I"
+      },
+      {
+        "meaning": "walk"
+      },
+      {
+        "meaning": "whimper"
+      },
+      {
+        "meaning": "person, the Wayuu people"
+      },
+      {
+        "meaning": "cardón cactus"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "Short vowels"
+      },
+      {
+        "title": "Long vowels"
+      }
+    ],
+    "notes": [
+      "ü is said with spread lips and the tongue in the middle of the mouth, between i and u.",
+      "j sounds like a soft h (jama'a «hammock»), and ' is a short catch in the throat (kaa'ula «goat»).",
+      "l sounds like the r of Spanish «pero», and r is a sound of its own, between an r and a y.",
+      "Verbs change by gender, not by person: apütüshi (he, or I or you if you are a man), apütüsü (she, or I or you if you are a woman), apütüshii (plural).",
+      "Things and animals are treated as feminine: tü «the, it»."
+    ]
+  },
+  "grammar": {
+    "intro": "In the most common construction, the verb ends with a mark of gender and number (masculine, feminine or plural) and the person is said with a pronoun: Ayonnajüshi taya «I dance» (said by a man), Ayonnajüsü taya (said by a woman).",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          {
+            "slot": "Prefix",
+            "description": "a- in the infinitive; ta-, pü-… with a person."
+          },
+          {
+            "slot": "Stem",
+            "description": "The root and its thematic suffix (-ta, -ja, -la, -na)."
+          },
+          {
+            "slot": "Tense",
+            "description": "-ee- future, -inja- going to, -yü- recent past…"
+          },
+          {
+            "slot": "Gender and number",
+            "description": "Masculine, feminine or plural: -shi / -sü / -shii, -chi / -rü / -na…"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "The two conjugations",
+        "description": "The first conjugation ends in a long vowel and turns the final a into ü (vowel mutation); the second ends in -waa, which is dropped by lengthening the vowel.",
+        "columns": [
+          "Form",
+          "1st: apütaa «leave»",
+          "2nd: achajawaa «look for»"
+        ],
+        "rows": [
+          {
+            "label": "Stem"
+          },
+          {
+            "label": "Masculine"
+          },
+          {
+            "label": "Feminine"
+          },
+          {
+            "label": "Plural"
+          },
+          {
+            "label": "Future"
+          },
+          {
+            "label": "Imperative"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Pronouns and prefixes",
+        "description": "The pronouns give the person in the common construction. With a specific object, the verb takes a person prefix: tachajaain «I looked for it».",
+        "columns": [
+          "Person",
+          "Pronoun",
+          "Prefix",
+          "«I looked for it»"
+        ],
+        "rows": [
+          {
+            "label": "I"
+          },
+          {
+            "label": "you"
+          },
+          {
+            "label": "he"
+          },
+          {
+            "label": "she"
+          },
+          {
+            "label": "we"
+          },
+          {
+            "label": "you all"
+          },
+          {
+            "label": "they"
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Sentences",
+        "items": [
+          {
+            "translation": "María dances."
+          },
+          {
+            "translation": "Camilo will work tomorrow."
+          },
+          {
+            "translation": "Camilo will not work tomorrow."
+          },
+          {
+            "translation": "That is fine."
+          },
+          {
+            "translation": "I am going to look for the beer."
+          },
+          {
+            "translation": "Yes. No."
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "The affixes of the verb",
+        "description": "Prefixes, tense and aspect suffixes, the sets of gender-number endings, negation and some derivations.",
+        "items": [
+          {
+            "kind": "person",
+            "meaning": "Impersonal prefix of active verbs (infinitive)",
+            "translation": "to leave"
+          },
+          {
+            "kind": "person",
+            "meaning": "Persons: I, you, he, she, we, you all, they (objective construction)",
+            "translation": "I left it"
+          },
+          {
+            "kind": "gender and number",
+            "meaning": "Masculine, feminine, plural (set A)",
+            "translation": "he leaves it"
+          },
+          {
+            "kind": "gender and number",
+            "meaning": "Set B (futures)",
+            "translation": "he will leave it"
+          },
+          {
+            "kind": "gender and number",
+            "meaning": "Set C (planned future)",
+            "translation": "she is going to leave it"
+          },
+          {
+            "kind": "gender and number",
+            "meaning": "Set E (pasts with -yü-)",
+            "translation": "she left it a while ago"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Recent past",
+            "translation": "he looked for it a while ago"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Ongoing past: still",
+            "translation": "he still leaves it"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Anterior past",
+            "translation": "he had already left it before"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Immediate past: just",
+            "translation": "he has just left it"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Distant past: long ago",
+            "translation": "he left it long ago"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Remote past",
+            "translation": "he had left it"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Frequentative: used to",
+            "translation": "used to leave it"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Imminent future: starting",
+            "translation": "he starts leaving it"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Future",
+            "translation": "he will look for it"
+          },
+          {
+            "kind": "tense",
+            "meaning": "Planned future: going to",
+            "translation": "he is going to leave it"
+          },
+          {
+            "kind": "mood",
+            "meaning": "Desiderative: want",
+            "translation": "he wants to leave"
+          },
+          {
+            "kind": "mood",
+            "meaning": "Imperative (you, you all)",
+            "translation": "look for it!"
+          },
+          {
+            "kind": "negation",
+            "meaning": "Negation: the auxiliary carries the gender and the verb takes -in",
+            "translation": "he doesn't work"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Causative: make someone",
+            "translation": "make leave"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Passive",
+            "translation": "be left"
+          },
+          {
+            "kind": "derivation",
+            "meaning": "Usually",
+            "translation": "he usually leaves it"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "m",
+        "label": "Masculine (and plural)"
+      },
+      {
+        "id": "f",
+        "label": "Feminine"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present_past",
+        "group": "Present and pasts",
+        "name": "Present-past",
+        "description": "The general tense: what happens or happened (-shi, -sü, -shii).",
+        "es": "present"
+      },
+      {
+        "id": "recent_past",
+        "group": "Present and pasts",
+        "name": "Recent past",
+        "description": "What happened a short while ago (-yü-).",
+        "es": {
+          "tense": "preterite",
+          "after": "a while ago"
+        }
+      },
+      {
+        "id": "current_past",
+        "group": "Present and pasts",
+        "name": "Ongoing past",
+        "description": "What began before and still goes on (-yü-…-ya).",
+        "es": {
+          "tense": "present",
+          "adverb": "still"
+        }
+      },
+      {
+        "id": "immediate_past",
+        "group": "Present and pasts",
+        "name": "Immediate past",
+        "description": "What has just happened (-i-…-pa).",
+        "es": {
+          "tense": "perfect",
+          "adverb": "just"
+        }
+      },
+      {
+        "id": "anterior_past",
+        "group": "Present and pasts",
+        "name": "Anterior past",
+        "description": "What had already happened before (-tüjü-…-ya).",
+        "es": "pluperfect"
+      },
+      {
+        "id": "remote_past",
+        "group": "Present and pasts",
+        "name": "Remote past",
+        "description": "What had happened (-inka).",
+        "es": "pluperfect"
+      },
+      {
+        "id": "extended_past",
+        "group": "Present and pasts",
+        "name": "Distant past",
+        "description": "What happened a long time ago (-ma'a).",
+        "es": {
+          "tense": "preterite",
+          "after": "long ago"
+        }
+      },
+      {
+        "id": "frequentative",
+        "group": "Present and pasts",
+        "name": "Frequentative past",
+        "description": "What one used to do (-muyuu); the same for everyone.",
+        "es": "imperfect"
+      },
+      {
+        "id": "imminent_future",
+        "group": "Future and wanting",
+        "name": "Imminent future",
+        "description": "What is starting already (-i-).",
+        "es": {
+          "tense": "present",
+          "aux": "start",
+          "link": "-ing"
+        }
+      },
+      {
+        "id": "future",
+        "group": "Future and wanting",
+        "name": "Future",
+        "description": "What will happen (-ee-).",
+        "es": "future"
+      },
+      {
+        "id": "determined_future",
+        "group": "Future and wanting",
+        "name": "Planned future",
+        "description": "What one is going to do, or has to go and do (-inja-).",
+        "es": {
+          "tense": "progressive",
+          "aux": "go",
+          "link": "to"
+        }
+      },
+      {
+        "id": "desiderative",
+        "group": "Future and wanting",
+        "name": "Wanting",
+        "description": "What one wants to do (-ee-, with -shi, -sü, -shii).",
+        "es": {
+          "tense": "present",
+          "aux": "want",
+          "link": "to"
+        }
+      },
+      {
+        "id": "negative",
+        "group": "Negation",
+        "name": "Negative present",
+        "description": "nnojoluu «not» carries the gender; the verb takes -in.",
+        "es": "present"
+      },
+      {
+        "id": "negative_future",
+        "group": "Negation",
+        "name": "Negative future",
+        "description": "nnojoleechi, nnojoleerü, nnojoleena and the verb with -in.",
+        "es": "future"
+      },
+      {
+        "id": "imperative",
+        "group": "Orders",
+        "name": "Imperative",
+        "description": "pü- for you, ja- for you all; stative verbs take pia or jaya.",
+        "es": "imperative"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "apütaa",
+        "meaning": "leave it",
+        "es": "leave it",
+        "note": "1st conjugation"
+      },
+      {
+        "entry": "achajawaa",
+        "meaning": "look for it",
+        "es": "look for it",
+        "note": "2nd conjugation"
+      },
+      {
+        "entry": "a'yatawaa",
+        "meaning": "work",
+        "es": "work",
+        "note": "2nd conjugation"
+      },
+      {
+        "entry": "a'lakajawaa",
+        "meaning": "cook",
+        "es": "cook",
+        "note": "2nd conjugation"
+      },
+      {
+        "entry": "ayonnajaa",
+        "meaning": "dance",
+        "es": "dance",
+        "note": "1st conjugation"
+      },
+      {
+        "entry": "ashajaa",
+        "meaning": "write",
+        "es": "write",
+        "note": "1st conjugation"
+      },
+      {
+        "entry": "aya'lajaa",
+        "meaning": "buy it",
+        "es": "buy it",
+        "note": "1st conjugation"
+      },
+      {
+        "entry": "atunkaa",
+        "meaning": "sleep",
+        "es": "sleep",
+        "note": "1st conjugation"
+      },
+      {
+        "entry": "aküjaa",
+        "meaning": "tell it",
+        "es": "tell it",
+        "note": "1st conjugation"
+      },
+      {
+        "entry": "asakaa",
+        "meaning": "greet him",
+        "es": "greet him",
+        "note": "1st conjugation"
+      },
+      {
+        "entry": "ekaa",
+        "meaning": "eat",
+        "es": "eat",
+        "note": "1st conjugation"
+      },
+      {
+        "entry": "e'raajaa",
+        "meaning": "know him",
+        "es": "know him",
+        "note": "1st conjugation"
+      },
+      {
+        "entry": "emiralaa",
+        "meaning": "swallow it",
+        "es": "swallow it",
+        "note": "1st conjugation"
+      },
+      {
+        "entry": "o'unaa",
+        "meaning": "leave",
+        "es": "leave",
+        "note": "1st conjugation"
+      },
+      {
+        "entry": "talataa",
+        "meaning": "be happy",
+        "es": "be happy",
+        "note": "Stative verb"
+      },
+      {
+        "entry": "makataa",
+        "meaning": "stay",
+        "es": "stay",
+        "note": "Stative verb"
+      },
+      {
+        "entry": "waraitaa",
+        "meaning": "walk around",
+        "es": "walk around",
+        "note": "Stative verb"
+      },
+      {
+        "entry": "jimataa",
+        "meaning": "be still",
+        "es": "be still",
+        "note": "Stative verb"
+      },
+      {
+        "entry": "anaa",
+        "meaning": "be well",
+        "es": "be well",
+        "note": "Stative verb"
+      }
+    ]
+  }
+}

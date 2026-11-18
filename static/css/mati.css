@@ -123,6 +123,12 @@ html:lang(zh) {
   --serie-acento: var(--mati-mostaza);
   --serie-texto: var(--mati-magenta-tinta);
 }
+[data-serie="guajira"] {
+  --serie-fondo: #FBE6CF;
+  --serie-solido: var(--mati-ocre);
+  --serie-acento: var(--mati-magenta-tinta);
+  --serie-texto: #8A4B12;
+}
 [data-serie="jacaranda"] {
   --serie-fondo: var(--mati-pastel-lila-suave);
   --serie-solido: var(--mati-berenjena);
@@ -664,6 +670,7 @@ html { scroll-behavior: smooth; }
 [data-theme="dark"] [data-serie="jacaranda"] { --serie-fondo: #2C2438; --serie-solido: #4A2F5B; --serie-acento: #E08C8C; --serie-texto: #C9B3EA; }
 [data-theme="dark"] [data-serie="marisma"] { --serie-fondo: #1E2A40; --serie-solido: #2F6B73; --serie-acento: #E08C8C; --serie-texto: #A9C1EE; }
 [data-theme="dark"] [data-serie="lapacho"] { --serie-fondo: #351F2C; --serie-solido: #7A2E57; --serie-acento: #D9A93F; --serie-texto: #EBA8CB; }
+[data-theme="dark"] [data-serie="guajira"] { --serie-fondo: #3A2A1A; --serie-solido: #9C5400; --serie-acento: #E06A9E; --serie-texto: #F2C38A; }
 
 /* An old cached home.js puts the cards straight in the list: keep the grid. */
 .language-list:has(> .language-card) {

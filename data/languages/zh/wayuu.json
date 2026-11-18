@@ -1,0 +1,570 @@
+{
+  "name": "瓦尤语",
+  "variant": "瓦尤语（wayuunaiki）",
+  "region": "瓜希拉半岛（哥伦比亚和委内瑞拉）",
+  "summary": "阿拉瓦克语系的语言，由瓜希拉半岛上的瓦尤人使用，地跨哥伦比亚和委内瑞拉。说这种语言的人称它为 wayuunaiki，意思是“人的语言”。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "输入动词的不定式：apütaa「留下」、achajawaa「找」、a'yatawaa「工作」、talataa「高兴」。",
+    "own": {
+      "hint": "输入任意动词不定式（以长元音或 -waa 结尾）及其中文意思。以 a、e、o 开头的按主动动词变位。",
+      "label": "动词",
+      "es_placeholder": "写字",
+      "types_help": "状态动词（makataa「留下」）不带前缀；主动动词以 a-、e- 或 o- 开头。"
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "自动判断"
+      },
+      {
+        "id": "activo",
+        "label": "主动：apütaa → apütüshi"
+      },
+      {
+        "id": "estativo",
+        "label": "状态：makataa → makatüshi"
+      }
+    ]
+  },
+  "source": {
+    "short": "Álvarez, Compendio de la gramática de la lengua wayuu (2017)",
+    "full": "José Álvarez，《Compendio de la gramática de la lengua wayuu》（2017）及《Manual de la lengua wayuu》。采用统一的瓦尤字母拼写。"
+  },
+  "about": [
+    "瓦尤语使用于哥伦比亚北部和委内瑞拉西北部的瓜希拉半岛，以及马拉开波、里奥阿查等城市。瓦尤人是这两个国家人数最多的原住民族之一。",
+    "它属于阿拉瓦克语系，与从加勒比到亚马孙一带的语言有亲缘关系。它的名字来自 wayuu「人」和 anüiki「话语，语言」。",
+    "瓦尤人按母系氏族组织生活，他们的土地是长满仙人掌、散布着小村落的荒漠。瓦尤语用 20 个字母书写；长元音写成双字母（aa），ü 是一个独立的元音。"
+  ],
+  "orthography": {
+    "intro": "瓦尤字母表有 20 个字母。每个元音都有长短之分，长元音写两遍：a 和 aa 会改变词义。",
+    "letters": [
+      {
+        "meaning": "兔子"
+      },
+      {
+        "meaning": "湿"
+      },
+      {
+        "meaning": "食物"
+      },
+      {
+        "meaning": "逃走"
+      },
+      {
+        "meaning": "吊床"
+      },
+      {
+        "meaning": "山羊"
+      },
+      {
+        "meaning": "年轻人"
+      },
+      {
+        "meaning": "老人"
+      },
+      {
+        "meaning": "甜瓜"
+      },
+      {
+        "meaning": "他"
+      },
+      {
+        "meaning": "咬"
+      },
+      {
+        "meaning": "房子"
+      },
+      {
+        "meaning": "刀"
+      },
+      {
+        "meaning": "火"
+      },
+      {
+        "meaning": "她"
+      },
+      {
+        "meaning": "我"
+      },
+      {
+        "meaning": "行走"
+      },
+      {
+        "meaning": "抽泣"
+      },
+      {
+        "meaning": "人，瓦尤人"
+      },
+      {
+        "meaning": "仙人掌"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "短元音"
+      },
+      {
+        "title": "长元音"
+      }
+    ],
+    "notes": [
+      "ü 发音时嘴唇展开，舌头位于口腔中部，介于 i 和 u 之间。",
+      "j 读作轻的 h（jama'a「吊床」），' 是喉部的短暂停顿（kaa'ula「山羊」）。",
+      "l 读作西班牙语 pero 中的 r；r 是一个独特的音，介于 r 和 y 之间。",
+      "动词不随人称变化，而随性别变化：apütüshi（他；或男性说的“我”“你”），apütüsü（她；或女性说的“我”“你”），apütüshii（复数）。",
+      "物品和动物按阴性对待：tü「这个，它」。"
+    ]
+  },
+  "grammar": {
+    "intro": "在最常见的结构中，动词词尾带有性和数的标记（阳性、阴性或复数），人称用代词表示：Ayonnajüshi taya「我跳舞」（男性说），Ayonnajüsü taya（女性说）。",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          {
+            "slot": "前缀",
+            "description": "不定式用 a-；有人称时用 ta-、pü-……"
+          },
+          {
+            "slot": "词干",
+            "description": "词根和主题后缀（-ta、-ja、-la、-na）。"
+          },
+          {
+            "slot": "时态",
+            "description": "-ee- 将来，-inja- 要，-yü- 近过去……"
+          },
+          {
+            "slot": "性和数",
+            "description": "阳性、阴性或复数：-shi / -sü / -shii，-chi / -rü / -na……"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "两种变位",
+        "description": "第一种变位以长元音结尾，词尾 a 变为 ü（元音变化）；第二种以 -waa 结尾，去掉 -waa 并把前面的元音拉长。",
+        "columns": [
+          "形式",
+          "第一种：apütaa「留下」",
+          "第二种：achajawaa「找」"
+        ],
+        "rows": [
+          {
+            "label": "词干"
+          },
+          {
+            "label": "阳性"
+          },
+          {
+            "label": "阴性"
+          },
+          {
+            "label": "复数"
+          },
+          {
+            "label": "将来"
+          },
+          {
+            "label": "命令"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "代词和前缀",
+        "description": "在常见结构中由代词表示人称。宾语明确时，动词带人称前缀：tachajaain「我找了它」。",
+        "columns": [
+          "人称",
+          "代词",
+          "前缀",
+          "「找了它」"
+        ],
+        "rows": [
+          {
+            "label": "我"
+          },
+          {
+            "label": "你"
+          },
+          {
+            "label": "他"
+          },
+          {
+            "label": "她"
+          },
+          {
+            "label": "我们"
+          },
+          {
+            "label": "你们"
+          },
+          {
+            "label": "他们"
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "句子",
+        "items": [
+          {
+            "translation": "玛丽亚跳舞。"
+          },
+          {
+            "translation": "卡米洛明天会工作。"
+          },
+          {
+            "translation": "卡米洛明天不会工作。"
+          },
+          {
+            "translation": "那很好。"
+          },
+          {
+            "translation": "我要去找那瓶啤酒。"
+          },
+          {
+            "translation": "是。不。"
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "动词的词缀",
+        "description": "前缀、时态和体后缀、各组性数词尾、否定以及一些派生形式。",
+        "items": [
+          {
+            "kind": "人称",
+            "meaning": "主动动词的无人称前缀（不定式）",
+            "translation": "留下"
+          },
+          {
+            "kind": "人称",
+            "meaning": "人称：我、你、他、她、我们、你们、他们（宾语结构）",
+            "translation": "我把它留下了"
+          },
+          {
+            "kind": "性和数",
+            "meaning": "阳性、阴性、复数（A 组）",
+            "translation": "他留下"
+          },
+          {
+            "kind": "性和数",
+            "meaning": "B 组（将来时）",
+            "translation": "他会留下"
+          },
+          {
+            "kind": "性和数",
+            "meaning": "C 组（确定将来时）",
+            "translation": "她要留下"
+          },
+          {
+            "kind": "性和数",
+            "meaning": "E 组（带 -yü- 的过去时）",
+            "translation": "她刚才留下了"
+          },
+          {
+            "kind": "时态",
+            "meaning": "近过去",
+            "translation": "他刚才找了"
+          },
+          {
+            "kind": "时态",
+            "meaning": "持续过去：仍然",
+            "translation": "他还在留下"
+          },
+          {
+            "kind": "时态",
+            "meaning": "先过去",
+            "translation": "他之前就已经留下了"
+          },
+          {
+            "kind": "时态",
+            "meaning": "刚过去：刚刚",
+            "translation": "他刚留下"
+          },
+          {
+            "kind": "时态",
+            "meaning": "久远过去：很久以前",
+            "translation": "他很久以前留下了"
+          },
+          {
+            "kind": "时态",
+            "meaning": "远过去",
+            "translation": "他之前已经留下了"
+          },
+          {
+            "kind": "时态",
+            "meaning": "过去反复：以前常",
+            "translation": "以前常留下"
+          },
+          {
+            "kind": "时态",
+            "meaning": "即将：已经开始",
+            "translation": "他开始留下"
+          },
+          {
+            "kind": "时态",
+            "meaning": "将来",
+            "translation": "他会找"
+          },
+          {
+            "kind": "时态",
+            "meaning": "确定将来：要",
+            "translation": "他要留下"
+          },
+          {
+            "kind": "语气",
+            "meaning": "愿望：想要",
+            "translation": "他想离开"
+          },
+          {
+            "kind": "语气",
+            "meaning": "命令式（你、你们）",
+            "translation": "找吧！"
+          },
+          {
+            "kind": "否定",
+            "meaning": "否定：助动词带性别，动词加 -in",
+            "translation": "他不工作"
+          },
+          {
+            "kind": "派生",
+            "meaning": "使役：让",
+            "translation": "让人留下"
+          },
+          {
+            "kind": "派生",
+            "meaning": "被动",
+            "translation": "被留下"
+          },
+          {
+            "kind": "派生",
+            "meaning": "习惯",
+            "translation": "他常常留下"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      {
+        "id": "m",
+        "label": "阳性（及复数）"
+      },
+      {
+        "id": "f",
+        "label": "阴性"
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present_past",
+        "group": "现在与过去",
+        "name": "现在-过去时",
+        "description": "一般时：正在或已经发生的事（-shi、-sü、-shii）。"
+      },
+      {
+        "id": "recent_past",
+        "group": "现在与过去",
+        "name": "近过去时",
+        "description": "不久前发生的事（-yü-）。"
+      },
+      {
+        "id": "current_past",
+        "group": "现在与过去",
+        "name": "持续过去时",
+        "description": "以前开始、现在仍在继续的事（-yü-…-ya）。"
+      },
+      {
+        "id": "immediate_past",
+        "group": "现在与过去",
+        "name": "刚过去时",
+        "description": "刚刚发生的事（-i-…-pa）。"
+      },
+      {
+        "id": "anterior_past",
+        "group": "现在与过去",
+        "name": "先过去时",
+        "description": "之前就已经发生的事（-tüjü-…-ya）。"
+      },
+      {
+        "id": "remote_past",
+        "group": "现在与过去",
+        "name": "远过去时",
+        "description": "过去已经发生的事（-inka）。"
+      },
+      {
+        "id": "extended_past",
+        "group": "现在与过去",
+        "name": "久远过去时",
+        "description": "很久以前发生的事（-ma'a）。"
+      },
+      {
+        "id": "frequentative",
+        "group": "现在与过去",
+        "name": "过去反复",
+        "description": "过去常做的事（-muyuu）；各种形式相同。"
+      },
+      {
+        "id": "imminent_future",
+        "group": "将来与意愿",
+        "name": "即将将来时",
+        "description": "已经开始的事（-i-）。"
+      },
+      {
+        "id": "future",
+        "group": "将来与意愿",
+        "name": "将来时",
+        "description": "将要发生的事（-ee-）。"
+      },
+      {
+        "id": "determined_future",
+        "group": "将来与意愿",
+        "name": "确定将来时",
+        "description": "打算做或必须去做的事（-inja-）。"
+      },
+      {
+        "id": "desiderative",
+        "group": "将来与意愿",
+        "name": "意愿",
+        "description": "想做的事（-ee-，加 -shi、-sü、-shii）。"
+      },
+      {
+        "id": "negative",
+        "group": "否定",
+        "name": "现在时否定",
+        "description": "nnojoluu「不」带性别标记；动词加 -in。"
+      },
+      {
+        "id": "negative_future",
+        "group": "否定",
+        "name": "将来时否定",
+        "description": "nnojoleechi、nnojoleerü、nnojoleena 加上带 -in 的动词。"
+      },
+      {
+        "id": "imperative",
+        "group": "命令",
+        "name": "命令式",
+        "description": "对“你”用 pü-，对“你们”用 ja-；状态动词加 pia 或 jaya。"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "apütaa",
+        "meaning": "留下它",
+        "es": "留下它",
+        "note": "第一种变位"
+      },
+      {
+        "entry": "achajawaa",
+        "meaning": "找它",
+        "es": "找它",
+        "note": "第二种变位"
+      },
+      {
+        "entry": "a'yatawaa",
+        "meaning": "工作",
+        "es": "工作",
+        "note": "第二种变位"
+      },
+      {
+        "entry": "a'lakajawaa",
+        "meaning": "做饭",
+        "es": "做饭",
+        "note": "第二种变位"
+      },
+      {
+        "entry": "ayonnajaa",
+        "meaning": "跳舞",
+        "es": "跳舞",
+        "note": "第一种变位"
+      },
+      {
+        "entry": "ashajaa",
+        "meaning": "写字",
+        "es": "写字",
+        "note": "第一种变位"
+      },
+      {
+        "entry": "aya'lajaa",
+        "meaning": "买它",
+        "es": "买它",
+        "note": "第一种变位"
+      },
+      {
+        "entry": "atunkaa",
+        "meaning": "睡觉",
+        "es": "睡觉",
+        "note": "第一种变位"
+      },
+      {
+        "entry": "aküjaa",
+        "meaning": "讲这件事",
+        "es": "讲这件事",
+        "note": "第一种变位"
+      },
+      {
+        "entry": "asakaa",
+        "meaning": "问候他",
+        "es": "问候他",
+        "note": "第一种变位"
+      },
+      {
+        "entry": "ekaa",
+        "meaning": "吃饭",
+        "es": "吃饭",
+        "note": "第一种变位"
+      },
+      {
+        "entry": "e'raajaa",
+        "meaning": "认识他",
+        "es": "认识他",
+        "note": "第一种变位"
+      },
+      {
+        "entry": "emiralaa",
+        "meaning": "吞下它",
+        "es": "吞下它",
+        "note": "第一种变位"
+      },
+      {
+        "entry": "o'unaa",
+        "meaning": "离开",
+        "es": "离开",
+        "note": "第一种变位"
+      },
+      {
+        "entry": "talataa",
+        "meaning": "高兴",
+        "es": "高兴",
+        "note": "状态动词"
+      },
+      {
+        "entry": "makataa",
+        "meaning": "留下",
+        "es": "留下",
+        "note": "状态动词"
+      },
+      {
+        "entry": "waraitaa",
+        "meaning": "散步",
+        "es": "散步",
+        "note": "状态动词"
+      },
+      {
+        "entry": "jimataa",
+        "meaning": "安静",
+        "es": "安静",
+        "note": "状态动词"
+      },
+      {
+        "entry": "anaa",
+        "meaning": "好",
+        "es": "好",
+        "note": "状态动词"
+      }
+    ]
+  }
+}

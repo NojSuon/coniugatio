@@ -1,0 +1,893 @@
+{
+  "slug": "wayuu",
+  "name": "wayuu",
+  "endonym": "wayuunaiki",
+  "variant": "wayuunaiki",
+  "region": "Península de La Guajira (Colombia y Venezuela)",
+  "family": "arawak",
+  "area": "caribe",
+  "continent": "sur",
+  "status": "available",
+  "order": 12,
+  "series": "guajira",
+  "summary": "Lengua arawak del pueblo wayuu, en la península de La Guajira, entre Colombia y Venezuela. Sus hablantes la llaman wayuunaiki, «la lengua de la gente».",
+  "lang_code": "guc",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo en infinitivo: apütaa «dejar», achajawaa «buscar», a'yatawaa «trabajar», talataa «estar contento».",
+    "placeholder": "a'yatawaa",
+    "keyboard": [
+      "ü",
+      "'",
+      "sh",
+      "ch"
+    ],
+    "own": {
+      "hint": "Escribe cualquier verbo en infinitivo (termina en vocal larga o en -waa) y su significado en español. Los que empiezan por a, e, o se conjugan como activos.",
+      "label": "Verbo",
+      "placeholder": "ashajaa",
+      "es_placeholder": "escribir",
+      "types_help": "Los verbos de estado (makataa «quedarse») no llevan prefijo; los activos empiezan por a-, e- u o-."
+    },
+    "types": [
+      {
+        "id": "",
+        "label": "Detectar solo"
+      },
+      {
+        "id": "activo",
+        "label": "Activo: apütaa → apütüshi"
+      },
+      {
+        "id": "estativo",
+        "label": "De estado: makataa → makatüshi"
+      }
+    ]
+  },
+  "source": {
+    "short": "Álvarez, Compendio de la gramática de la lengua wayuu (2017)",
+    "full": "José Álvarez, Compendio de la gramática de la lengua wayuu (2017) y Manual de la lengua wayuu. Ortografía del alfabeto wayuu unificado."
+  },
+  "about": [
+    "El wayuunaiki se habla en la península de La Guajira, en el norte de Colombia y el noroeste de Venezuela, y en ciudades como Maracaibo y Riohacha. Los wayuu son uno de los pueblos indígenas más numerosos de los dos países.",
+    "Es de la familia arawak, emparentada con lenguas que se hablan desde el Caribe hasta la Amazonía. Su nombre viene de wayuu «persona, gente» y anüiki «palabra, lengua».",
+    "Los wayuu se organizan en clanes que se heredan por la madre, y su tierra es un desierto de cardones y rancherías. Se escribe con un alfabeto de 20 letras; las vocales largas se escriben dobles (aa) y la ü es una vocal propia."
+  ],
+  "orthography": {
+    "intro": "El alfabeto wayuu tiene 20 letras. Cada vocal puede ser corta o larga, y la larga se escribe doble: a y aa cambian el sentido de la palabra.",
+    "letters": [
+      {
+        "letter": "a",
+        "ipa": "a",
+        "word": "atpanaa",
+        "meaning": "conejo"
+      },
+      {
+        "letter": "ch",
+        "ipa": "tʃ",
+        "word": "chü'luu",
+        "meaning": "estar mojado"
+      },
+      {
+        "letter": "e",
+        "ipa": "e",
+        "word": "eküülü",
+        "meaning": "comida"
+      },
+      {
+        "letter": "i",
+        "ipa": "i",
+        "word": "isaa",
+        "meaning": "escaparse"
+      },
+      {
+        "letter": "j",
+        "ipa": "h",
+        "word": "jama'a",
+        "meaning": "hamaca"
+      },
+      {
+        "letter": "k",
+        "ipa": "k",
+        "word": "kaa'ula",
+        "meaning": "chivo"
+      },
+      {
+        "letter": "'",
+        "ipa": "ʔ",
+        "word": "jima'ai",
+        "meaning": "joven"
+      },
+      {
+        "letter": "l",
+        "ipa": "ɾ",
+        "word": "laülaa",
+        "meaning": "anciano"
+      },
+      {
+        "letter": "m",
+        "ipa": "m",
+        "word": "meruuna",
+        "meaning": "melón"
+      },
+      {
+        "letter": "n",
+        "ipa": "n",
+        "word": "nia",
+        "meaning": "él"
+      },
+      {
+        "letter": "o",
+        "ipa": "o",
+        "word": "ojottaa",
+        "meaning": "morder"
+      },
+      {
+        "letter": "p",
+        "ipa": "p",
+        "word": "piichi",
+        "meaning": "casa"
+      },
+      {
+        "letter": "r",
+        "ipa": "ɹ",
+        "word": "rüi",
+        "meaning": "cuchillo"
+      },
+      {
+        "letter": "s",
+        "ipa": "s",
+        "word": "siki",
+        "meaning": "fuego"
+      },
+      {
+        "letter": "sh",
+        "ipa": "ʃ",
+        "word": "shia",
+        "meaning": "ella"
+      },
+      {
+        "letter": "t",
+        "ipa": "t",
+        "word": "taya",
+        "meaning": "yo"
+      },
+      {
+        "letter": "u",
+        "ipa": "u",
+        "word": "unataa",
+        "meaning": "andar"
+      },
+      {
+        "letter": "ü",
+        "ipa": "ɨ",
+        "word": "ürüttaa",
+        "meaning": "lloriquear"
+      },
+      {
+        "letter": "w",
+        "ipa": "w",
+        "word": "wayuu",
+        "meaning": "persona, gente wayuu"
+      },
+      {
+        "letter": "y",
+        "ipa": "j",
+        "word": "yosu",
+        "meaning": "cardón (cactus)"
+      }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales cortas",
+        "items": [
+          {
+            "letter": "a",
+            "ipa": "a"
+          },
+          {
+            "letter": "e",
+            "ipa": "e"
+          },
+          {
+            "letter": "i",
+            "ipa": "i"
+          },
+          {
+            "letter": "o",
+            "ipa": "o"
+          },
+          {
+            "letter": "u",
+            "ipa": "u"
+          },
+          {
+            "letter": "ü",
+            "ipa": "ɨ"
+          }
+        ]
+      },
+      {
+        "title": "Vocales largas",
+        "items": [
+          {
+            "letter": "aa",
+            "ipa": "aː"
+          },
+          {
+            "letter": "ee",
+            "ipa": "eː"
+          },
+          {
+            "letter": "ii",
+            "ipa": "iː"
+          },
+          {
+            "letter": "oo",
+            "ipa": "oː"
+          },
+          {
+            "letter": "uu",
+            "ipa": "uː"
+          },
+          {
+            "letter": "üü",
+            "ipa": "ɨː"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "La ü se dice con los labios estirados y la lengua en el centro de la boca, entre la i y la u.",
+      "La j suena como una h suave (jama'a «hamaca»), y el ' es un corte breve en la garganta (kaa'ula «chivo»).",
+      "La l suena como la r de «pero», y la r es un sonido propio, entre una r y una y.",
+      "Los verbos no cambian con la persona sino con el género: apütüshi (él, o yo o tú si eres hombre), apütüsü (ella, o yo o tú si eres mujer), apütüshii (plural).",
+      "Las cosas y animales se tratan como femeninos: tü «la, lo»."
+    ]
+  },
+  "grammar": {
+    "intro": "En la construcción más común, el verbo lleva al final una marca de género y número (masculino, femenino o plural) y la persona se dice con un pronombre: Ayonnajüshi taya «yo bailo» (lo dice un hombre), Ayonnajüsü taya (lo dice una mujer).",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          {
+            "slot": "Prefijo",
+            "description": "a- en el infinitivo; ta-, pü-… cuando hay persona.",
+            "example": "a-"
+          },
+          {
+            "slot": "Tema",
+            "description": "La raíz y su sufijo temático (-ta, -ja, -la, -na).",
+            "example": "pütü"
+          },
+          {
+            "slot": "Tiempo",
+            "description": "-ee- futuro, -inja- va a, -yü- pasado cercano…",
+            "example": "-inja-"
+          },
+          {
+            "slot": "Género y número",
+            "description": "Masculino, femenino o plural: -shi / -sü / -shii, -chi / -rü / -na…",
+            "example": "-chi"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Las dos conjugaciones",
+        "description": "La primera conjugación termina en vocal larga y cambia la a final por ü (mutación vocálica); la segunda termina en -waa, que se quita alargando la vocal.",
+        "columns": [
+          "Forma",
+          "1.ª: apütaa «dejar»",
+          "2.ª: achajawaa «buscar»"
+        ],
+        "rows": [
+          {
+            "label": "Tema",
+            "cells": [
+              "apüta- / apütü-",
+              "achajaa-"
+            ]
+          },
+          {
+            "label": "Masculino",
+            "cells": [
+              "apütüshi",
+              "achajaashi"
+            ]
+          },
+          {
+            "label": "Femenino",
+            "cells": [
+              "apütüsü",
+              "achajaasü"
+            ]
+          },
+          {
+            "label": "Plural",
+            "cells": [
+              "apütüshii",
+              "achajaashii"
+            ]
+          },
+          {
+            "label": "Futuro",
+            "cells": [
+              "apüteechi",
+              "achajaajeechi"
+            ]
+          },
+          {
+            "label": "Imperativo",
+            "cells": [
+              "püpüta, japüta",
+              "püchajaa, jachajaa"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Pronombres y prefijos",
+        "description": "Los pronombres dicen la persona en la construcción común. Con un objeto concreto, el verbo lleva un prefijo de persona: tachajaain «lo busqué».",
+        "columns": [
+          "Persona",
+          "Pronombre",
+          "Prefijo",
+          "«Lo busqué»"
+        ],
+        "rows": [
+          {
+            "label": "yo",
+            "cells": [
+              "taya",
+              "ta-",
+              "tachajaain"
+            ]
+          },
+          {
+            "label": "tú",
+            "cells": [
+              "pia",
+              "pü-",
+              "püchajaain"
+            ]
+          },
+          {
+            "label": "él",
+            "cells": [
+              "nia",
+              "nü-",
+              "nüchajaain"
+            ]
+          },
+          {
+            "label": "ella",
+            "cells": [
+              "shia",
+              "sü-",
+              "süchajaain"
+            ]
+          },
+          {
+            "label": "nosotros",
+            "cells": [
+              "waya",
+              "wa-",
+              "wachajaain"
+            ]
+          },
+          {
+            "label": "ustedes",
+            "cells": [
+              "jaya",
+              "ja-",
+              "jachajaain"
+            ]
+          },
+          {
+            "label": "ellos",
+            "cells": [
+              "naya",
+              "na-",
+              "nachajaain"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases",
+        "items": [
+          {
+            "text": "Ayonnajüsü Mariia.",
+            "translation": "María baila."
+          },
+          {
+            "text": "A'yataajeechi Kamiirü watta'a.",
+            "translation": "Camilo trabajará mañana."
+          },
+          {
+            "text": "Nnojoleechi a'yataain Kamiirü watta'a.",
+            "translation": "Camilo no trabajará mañana."
+          },
+          {
+            "text": "Anasü tia.",
+            "translation": "Eso está bien."
+          },
+          {
+            "text": "Tachajaainjatü tü saruweesakalü.",
+            "translation": "Voy a buscar la cerveza."
+          },
+          {
+            "text": "Aa. Nnojoo.",
+            "translation": "Sí. No."
+          }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Los afijos del verbo",
+        "description": "Prefijos, sufijos de tiempo y aspecto, las series de género y número, la negación y algunas derivaciones.",
+        "items": [
+          {
+            "affix": "a-, e-, o-",
+            "kind": "persona",
+            "meaning": "Prefijo impersonal de los verbos activos (infinitivo)",
+            "example": "apütaa",
+            "translation": "dejar"
+          },
+          {
+            "affix": "ta-, pü-, nü-, sü-, wa-, ja-, na-",
+            "kind": "persona",
+            "meaning": "Personas: yo, tú, él, ella, nosotros, ustedes, ellos (construcción objetiva)",
+            "example": "tapütüin",
+            "translation": "lo dejé"
+          },
+          {
+            "affix": "-shi, -sü, -shii",
+            "kind": "género y número",
+            "meaning": "Masculino, femenino, plural (serie A)",
+            "example": "apütüshi",
+            "translation": "él deja"
+          },
+          {
+            "affix": "-chi, -rü, -na",
+            "kind": "género y número",
+            "meaning": "Serie B (futuros)",
+            "example": "apüteechi",
+            "translation": "dejará"
+          },
+          {
+            "affix": "-chi, -tü, -na",
+            "kind": "género y número",
+            "meaning": "Serie C (futuro determinado)",
+            "example": "apütüinjatü",
+            "translation": "ella va a dejar"
+          },
+          {
+            "affix": "-i, -lü, -lii",
+            "kind": "género y número",
+            "meaning": "Serie E (pasados con -yü-)",
+            "example": "apütayülü",
+            "translation": "ella dejó hace un rato"
+          },
+          {
+            "affix": "-yü-",
+            "kind": "tiempo",
+            "meaning": "Pasado cercano",
+            "example": "achajaayüi",
+            "translation": "buscó hace un rato"
+          },
+          {
+            "affix": "-yü-…-ya",
+            "kind": "tiempo",
+            "meaning": "Pasado vigente: todavía",
+            "example": "apütayüiya",
+            "translation": "todavía deja"
+          },
+          {
+            "affix": "-tüjü-…-ya",
+            "kind": "tiempo",
+            "meaning": "Pasado anterior",
+            "example": "apütatüjüiya",
+            "translation": "ya antes había dejado"
+          },
+          {
+            "affix": "-i-…-pa",
+            "kind": "tiempo",
+            "meaning": "Pasado inmediato: acaba de",
+            "example": "apütüichipa",
+            "translation": "acaba de dejar"
+          },
+          {
+            "affix": "-ma'a",
+            "kind": "tiempo",
+            "meaning": "Pasado extenso: hace mucho",
+            "example": "apütüshima'a",
+            "translation": "dejó hace mucho"
+          },
+          {
+            "affix": "-inka",
+            "kind": "tiempo",
+            "meaning": "Pasado remoto",
+            "example": "apütüshinka",
+            "translation": "había dejado"
+          },
+          {
+            "affix": "-muyuu",
+            "kind": "tiempo",
+            "meaning": "Pasado frecuentativo: solía",
+            "example": "apütamuyuu",
+            "translation": "solía dejar"
+          },
+          {
+            "affix": "-i-",
+            "kind": "tiempo",
+            "meaning": "Futuro inminente: ya empieza",
+            "example": "apütüichi",
+            "translation": "empieza a dejar"
+          },
+          {
+            "affix": "-ee-",
+            "kind": "tiempo",
+            "meaning": "Futuro neutro",
+            "example": "achajaajeechi",
+            "translation": "buscará"
+          },
+          {
+            "affix": "-inja-",
+            "kind": "tiempo",
+            "meaning": "Futuro determinado: va a",
+            "example": "apütüinjachi",
+            "translation": "va a dejar"
+          },
+          {
+            "affix": "-ee- + -shi",
+            "kind": "modo",
+            "meaning": "Desiderativo: querer",
+            "example": "o'uneeshi",
+            "translation": "quiere irse"
+          },
+          {
+            "affix": "pü-, ja-",
+            "kind": "modo",
+            "meaning": "Imperativo (tú, ustedes)",
+            "example": "püchajaa",
+            "translation": "¡busca!"
+          },
+          {
+            "affix": "nnojoluu … -in",
+            "kind": "negación",
+            "meaning": "Negación: el auxiliar lleva el género y el verbo -in",
+            "example": "nnojoishi a'yataain",
+            "translation": "no trabaja"
+          },
+          {
+            "affix": "-ira-",
+            "kind": "derivación",
+            "meaning": "Causativo: hacer que",
+            "example": "apütiraa",
+            "translation": "hacer dejar"
+          },
+          {
+            "affix": "-na-",
+            "kind": "derivación",
+            "meaning": "Pasiva",
+            "example": "apütünaa",
+            "translation": "ser dejado"
+          },
+          {
+            "affix": "-pu'u-",
+            "kind": "derivación",
+            "meaning": "Soler",
+            "example": "apütapu'ushi",
+            "translation": "suele dejar"
+          }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "wayuu",
+    "persons": [
+      {
+        "id": "m",
+        "label": "Masculino (y plural)",
+        "es": 2
+      },
+      {
+        "id": "f",
+        "label": "Femenino",
+        "es": 2
+      }
+    ],
+    "tenses": [
+      {
+        "id": "present_past",
+        "group": "Presente y pasados",
+        "name": "Presente-pasado",
+        "description": "El tiempo general: lo que pasa o pasó (-shi, -sü, -shii).",
+        "form": "present_past",
+        "es": "present"
+      },
+      {
+        "id": "recent_past",
+        "group": "Presente y pasados",
+        "name": "Pasado cercano",
+        "description": "Lo que pasó hace un rato corto (-yü-).",
+        "form": "recent_past",
+        "es": {
+          "tense": "preterite",
+          "after": "hace un rato"
+        }
+      },
+      {
+        "id": "current_past",
+        "group": "Presente y pasados",
+        "name": "Pasado vigente",
+        "description": "Lo que empezó antes y todavía sigue (-yü-…-ya).",
+        "form": "current_past",
+        "es": {
+          "tense": "present",
+          "adverb": "todavía"
+        }
+      },
+      {
+        "id": "immediate_past",
+        "group": "Presente y pasados",
+        "name": "Pasado inmediato",
+        "description": "Lo que acaba de pasar (-i-…-pa).",
+        "form": "immediate_past",
+        "es": {
+          "tense": "present",
+          "aux": "acabar",
+          "link": "de"
+        }
+      },
+      {
+        "id": "anterior_past",
+        "group": "Presente y pasados",
+        "name": "Pasado anterior",
+        "description": "Lo que ya había pasado antes (-tüjü-…-ya).",
+        "form": "anterior_past",
+        "es": "pluperfect"
+      },
+      {
+        "id": "remote_past",
+        "group": "Presente y pasados",
+        "name": "Pasado remoto",
+        "description": "Lo que había pasado (-inka).",
+        "form": "remote_past",
+        "es": "pluperfect"
+      },
+      {
+        "id": "extended_past",
+        "group": "Presente y pasados",
+        "name": "Pasado extenso",
+        "description": "Lo que pasó hace mucho tiempo (-ma'a).",
+        "form": "extended_past",
+        "es": {
+          "tense": "preterite",
+          "after": "hace mucho"
+        }
+      },
+      {
+        "id": "frequentative",
+        "group": "Presente y pasados",
+        "name": "Pasado frecuentativo",
+        "description": "Lo que se solía hacer (-muyuu); igual para todos.",
+        "form": "frequentative",
+        "es": "imperfect"
+      },
+      {
+        "id": "imminent_future",
+        "group": "Futuro y deseo",
+        "name": "Futuro inminente",
+        "description": "Lo que ya empieza (-i-).",
+        "form": "imminent_future",
+        "es": {
+          "tense": "present",
+          "aux": "empezar",
+          "link": "a"
+        }
+      },
+      {
+        "id": "future",
+        "group": "Futuro y deseo",
+        "name": "Futuro neutro",
+        "description": "Lo que va a pasar (-ee-).",
+        "form": "future",
+        "es": "future"
+      },
+      {
+        "id": "determined_future",
+        "group": "Futuro y deseo",
+        "name": "Futuro determinado",
+        "description": "Lo que uno va a hacer o tiene que ir a hacer (-inja-).",
+        "form": "determined_future",
+        "es": {
+          "tense": "present",
+          "aux": "ir",
+          "link": "a"
+        }
+      },
+      {
+        "id": "desiderative",
+        "group": "Futuro y deseo",
+        "name": "Deseo",
+        "description": "Lo que uno quiere hacer (-ee-, con -shi, -sü, -shii).",
+        "form": "desiderative",
+        "es": {
+          "tense": "present",
+          "aux": "querer"
+        }
+      },
+      {
+        "id": "negative",
+        "group": "Negación",
+        "name": "Presente negativo",
+        "description": "nnojoluu «no» lleva el género; el verbo va con -in.",
+        "form": "negative",
+        "negative": true,
+        "es": "present"
+      },
+      {
+        "id": "negative_future",
+        "group": "Negación",
+        "name": "Futuro negativo",
+        "description": "nnojoleechi, nnojoleerü, nnojoleena y el verbo con -in.",
+        "form": "negative_future",
+        "negative": true,
+        "es": "future"
+      },
+      {
+        "id": "imperative",
+        "group": "Órdenes",
+        "name": "Imperativo",
+        "description": "pü- para tú, ja- para ustedes; los verbos de estado van con pia o jaya.",
+        "form": "imperative",
+        "es": "imperative"
+      }
+    ],
+    "lexicon": [
+      {
+        "entry": "apütaa",
+        "meaning": "dejarlo",
+        "es": "dejarlo",
+        "note": "1.ª conjugación"
+      },
+      {
+        "entry": "achajawaa",
+        "meaning": "buscarlo",
+        "es": "buscarlo",
+        "note": "2.ª conjugación"
+      },
+      {
+        "entry": "a'yatawaa",
+        "meaning": "trabajar",
+        "es": "trabajar",
+        "note": "2.ª conjugación"
+      },
+      {
+        "entry": "a'lakajawaa",
+        "meaning": "cocinar",
+        "es": "cocinar",
+        "note": "2.ª conjugación"
+      },
+      {
+        "entry": "ayonnajaa",
+        "meaning": "bailar",
+        "es": "bailar",
+        "note": "1.ª conjugación"
+      },
+      {
+        "entry": "ashajaa",
+        "meaning": "escribir",
+        "es": "escribir",
+        "note": "1.ª conjugación"
+      },
+      {
+        "entry": "aya'lajaa",
+        "meaning": "comprarlo",
+        "es": "comprarlo",
+        "note": "1.ª conjugación"
+      },
+      {
+        "entry": "atunkaa",
+        "meaning": "dormir",
+        "es": "dormir",
+        "note": "1.ª conjugación"
+      },
+      {
+        "entry": "aküjaa",
+        "meaning": "contarlo",
+        "es": "contarlo",
+        "note": "1.ª conjugación"
+      },
+      {
+        "entry": "asakaa",
+        "meaning": "saludarlo",
+        "es": "saludarlo",
+        "note": "1.ª conjugación"
+      },
+      {
+        "entry": "ekaa",
+        "meaning": "comer",
+        "es": "comer",
+        "note": "1.ª conjugación",
+        "imperative": [
+          "",
+          ""
+        ]
+      },
+      {
+        "entry": "e'raajaa",
+        "meaning": "conocerlo",
+        "es": "conocerlo",
+        "note": "1.ª conjugación",
+        "imperative": [
+          "",
+          ""
+        ]
+      },
+      {
+        "entry": "emiralaa",
+        "meaning": "tragarlo",
+        "es": "tragarlo",
+        "note": "1.ª conjugación",
+        "imperative": [
+          "",
+          ""
+        ]
+      },
+      {
+        "entry": "o'unaa",
+        "meaning": "irse",
+        "es": "irse",
+        "note": "1.ª conjugación",
+        "imperative": [
+          "",
+          ""
+        ]
+      },
+      {
+        "entry": "talataa",
+        "meaning": "estar contento",
+        "es": "estar contento",
+        "note": "Verbo de estado",
+        "stative": true
+      },
+      {
+        "entry": "makataa",
+        "meaning": "quedarse",
+        "es": "quedarse",
+        "note": "Verbo de estado",
+        "stative": true
+      },
+      {
+        "entry": "waraitaa",
+        "meaning": "pasear",
+        "es": "pasear",
+        "note": "Verbo de estado",
+        "stative": true
+      },
+      {
+        "entry": "jimataa",
+        "meaning": "estar quieto",
+        "es": "estar quieto",
+        "note": "Verbo de estado",
+        "stative": true
+      },
+      {
+        "entry": "anaa",
+        "meaning": "estar bien",
+        "es": "estar bien",
+        "note": "Verbo de estado",
+        "stative": true,
+        "mutation": false
+      }
+    ]
+  }
+}

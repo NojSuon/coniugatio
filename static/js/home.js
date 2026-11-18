@@ -29,7 +29,6 @@ const CONTINENTS = [
   {
     id: "sur",
     name: t("Sudamérica", "South America", "南美洲"),
-    soon: t("Muy pronto: wayuunaiki.", "Coming soon: Wayuunaiki.", "即将推出：瓦尤语。"),
   },
 ];
 const label = (names, id) => (names[id] ? t(...names[id]) : id);

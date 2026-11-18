@@ -38,6 +38,7 @@ fn adverb(word: &str) -> Option<&'static str> {
         "ya" => "已经",
         "casi" => "差点",
         "sí" => "一定",
+        "todavía" => "还",
         _ => return None,
     })
 }
