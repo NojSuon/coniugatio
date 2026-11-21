@@ -1,0 +1,219 @@
+{
+  "name": "库斯科克丘亚语",
+  "variant": "库斯科克丘亚语（Cuzco-Collao），采用克丘亚语高等学院拼写",
+  "region": "秘鲁的库斯科、阿普里马克东部、普诺西北部和阿雷基帕高原",
+  "summary": "库斯科的克丘亚语，库斯科是古印加帝国的都城：runasimi，意为「人的语言」。它有送气音和喷音，是整个语系中使用人数最多的变体之一。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "按词典形式输入以 -y 结尾的动词：rimay「说话」、mikhuy「吃」、riy「去」、llank'ay「工作」。也可以只输入词根（rima）。",
+    "own": {
+      "hint": "输入任意以 -y 结尾的动词及其中文意思。所有动词的词尾都相同。",
+      "label": "动词",
+      "es_placeholder": "问"
+    }
+  },
+  "source": {
+    "short": "Cusihuamán，《Gramática quechua Cuzco-Collao》（2001）；AMLQ，《Diccionario》（2005）",
+    "full": "Antonio Cusihuamán G.，《Gramática quechua Cuzco-Collao》（库斯科：Centro Bartolomé de Las Casas，第 2 版，2001），用于动词；克丘亚语高等学院（Academia Mayor de la Lengua Quechua），《Diccionario quechua–español–quechua / Qheswa–español–qheswa simi taqe》（库斯科，第 2 版，2005），用于拼写和词汇；另参考一本克丘亚语语法手册和一本克丘亚语教学手册。采用高等学院的五元音拼写。"
+  },
+  "about": [
+    "库斯科克丘亚语（又称 Cuzco-Collao）流行于库斯科大区、阿普里马克东部、普诺西北部和阿雷基帕的高原地区。它有一百多万使用者，是规模最大的克丘亚语变体之一，也是书面使用最多的一种。",
+    "它属于南部克丘亚语，与阿亚库乔、玻利维亚和阿根廷的克丘亚语同属一支，彼此能很好地沟通。它的特点是有送气辅音（ph、th、chh、kh、qh）和喷音（p'、t'、ch'、k'、q'），这是从艾马拉语吸收来的；还有在喉咙深处发音的 q。",
+    "它曾是库斯科印加宫廷的语言。如今它在秘鲁与西班牙语同为官方语言，并由克丘亚语高等学院、双语学校、电台、音乐以及悠久的诗歌和戏剧传统传承下去。"
+  ],
+  "orthography": {
+    "intro": "我们采用库斯科克丘亚语高等学院的拼写，即其词典和 Cusihuamán 语法所用的写法。每个音都有自己的字母：q 表示小舌音，辅音后加 h 表示送气，加撇号表示喷音。",
+    "letters": [
+      { "meaning": "土地" },
+      { "meaning": "田地" },
+      { "meaning": "露水" },
+      { "meaning": "星星" },
+      { "meaning": "孩子" },
+      { "meaning": "大" },
+      { "meaning": "太阳" },
+      { "meaning": "盐" },
+      { "meaning": "猪" },
+      { "meaning": "青蛙" },
+      { "meaning": "巫师" },
+      { "meaning": "村镇" },
+      { "meaning": "手" },
+      { "meaning": "耳朵" },
+      { "meaning": "路" },
+      { "meaning": "山" },
+      { "meaning": "土豆" },
+      { "meaning": "跑" },
+      { "meaning": "衣服" },
+      { "meaning": "湖" },
+      { "meaning": "看" },
+      { "meaning": "绿色" },
+      { "meaning": "石头" },
+      { "meaning": "姑娘" },
+      { "meaning": "猫" },
+      { "meaning": "鹿" },
+      { "meaning": "穿孔的" },
+      { "meaning": "面包" },
+      { "meaning": "头" },
+      { "meaning": "房子" },
+      { "meaning": "血" }
+    ],
+    "vowels": [{ "title": "元音" }],
+    "notes": [
+      "q 的发音位置比 k 更靠后，在口腔深处：qocha「湖」。在音节末尾，它听起来像较重的西班牙语 j：soqta「六」读作「sojta」。",
+      "送气音写作加 h，发音时带一股强气流：phaway「跑」，khuchi「猪」。喷音写作加撇号，发音时带一个轻微的顿挫：t'anta「面包」，k'ayra「青蛙」。它们每个词根只出现一次，从不出现在后缀中。",
+      "在 q 旁边，元音 i 和 u 会变开，写作 e 和 o：qocha、erqe、orqo。因此高等学院写五个元音；教育部的官方字母表（1985）只用三个，写作 qucha、irqi、urqu。",
+      "重音落在倒数第二个音节，不标出：rimani、rimarqanki。只有少数重音在最后一个音节的词才标出：arí「是」，alaláw「好冷！」。",
+      "来自西班牙语的借词有时保留 b、d、g 和 f：bindiy「卖」，dusi「中午」，kafiy「咖啡」。"
+    ]
+  },
+  "grammar": {
+    "intro": "克丘亚语动词由词根和一串后缀组成：先是改变意义的后缀（-chi、-ku、-pu、-mu），然后是时态、人称，最后是附着词（-mi、-si、-chu）。词根就是去掉 -y 的不定式：rimay → rima-。",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "词根", "description": "去掉 -y 的不定式。" },
+          { "slot": "派生", "description": "-chi 使别人做，-ku 对自己，-naku 互相，-pu 为别人，-mu 朝这里……" },
+          { "slot": "时态", "description": "-rqa- 过去，-sqa- 未亲见的过去，-sha- 进行……" },
+          { "slot": "人称", "description": "-ni、-nki、-n、-nchis、-yku、-nkichis、-nku。" },
+          { "slot": "附着词", "description": "-mi 亲眼所见，-si 听说，-chá 也许，-chu 疑问 / 否定。" }
+        ]
+      },
+      {
+        "title": "人称",
+        "description": "有两种「我们」：ñoqanchis 包括听话人，ñoqayku 不包括。将来时的第一和第三人称有自己的词尾。",
+        "columns": ["人称", "现在时", "过去时", "将来时"],
+        "rows": [
+          { "label": "ñoqa「我」" },
+          { "label": "qan「你」" },
+          { "label": "pay「他、她」" },
+          { "label": "ñoqanchis「我们（包括你）」" },
+          { "label": "ñoqayku「我们（不包括你）」" },
+          { "label": "qankuna「你们」" },
+          { "label": "paykuna「他们」" }
+        ]
+      },
+      {
+        "title": "两种过去时",
+        "description": "用 -rqa- 时，说话人讲述的是自己经历或看到的事。用 -sqa- 时，讲述的是听别人说的事、梦里或醉酒时发生的事，或刚刚发现的事。",
+        "columns": ["形式", "意思"],
+        "rows": [
+          { "cells": ["他去了库斯科（我看到的）。"] },
+          { "cells": ["听说他去了库斯科。"] },
+          { "cells": ["原来这咖啡是烫的！"] }
+        ]
+      },
+      {
+        "title": "句子",
+        "items": [
+          { "translation": "我说克丘亚语。" },
+          { "translation": "我来自库斯科城。" },
+          { "translation": "我不知道。" },
+          { "translation": "别哭。" },
+          { "translation": "明天见。" },
+          { "translation": "我们去干活吧！" }
+        ]
+      },
+      {
+        "title": "改变动词意义的后缀",
+        "description": "它们位于词根和时态之间，可以组合使用。",
+        "items": [
+          { "kind": "使役", "meaning": "使别人做", "translation": "教（使学会）" },
+          { "kind": "反身", "meaning": "对自己", "translation": "高兴" },
+          { "kind": "相互", "meaning": "互相", "translation": "互相认识" },
+          { "kind": "回返、受益", "meaning": "回去，为别人", "translation": "回（家）" },
+          { "kind": "移位", "meaning": "朝这里，到那边", "translation": "带来" },
+          { "kind": "协助", "meaning": "帮着做", "translation": "帮着干活" }
+        ]
+      },
+      {
+        "title": "谁对谁",
+        "description": "动词也标出动作指向谁：-wa- 指向我，-su- 由他指向你，-yki 由我指向你。",
+        "columns": ["形式", "意思"],
+        "rows": [
+          { "cells": ["你帮我"] },
+          { "cells": ["他帮我"] },
+          { "cells": ["我帮你"] },
+          { "cells": ["他帮你"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "第一人称（ñoqanchis：包括你）" },
+      { "id": "1x", "label": "第一人称（ñoqayku：不包括你）" },
+      { "id": "2", "label": "第二人称" },
+      { "id": "3", "label": "第三人称" }
+    ],
+    "tenses": [
+      { "id": "present", "group": "陈述式", "name": "现在时", "description": "现在或一贯发生的事。" },
+      { "id": "past", "group": "陈述式", "name": "过去时", "description": "发生过、且说话人亲见或亲历的事（-rqa-）。" },
+      { "id": "reportative", "group": "陈述式", "name": "-sqa 过去时", "description": "说话人未亲见的事：听说、原来（-sqa-）。" },
+      { "id": "past_habitual", "group": "陈述式", "name": "过去习惯", "description": "过去常做的事：-q 加 kay。" },
+      { "id": "progressive", "group": "进行", "name": "现在进行时", "description": "正在发生的事（-sha-）。" },
+      { "id": "past_progressive", "group": "进行", "name": "过去进行时", "description": "当时正在发生的事（-sharqa-）。" },
+      { "id": "future", "group": "将来与条件", "name": "将来时", "description": "将要发生的事。" },
+      { "id": "conditional", "group": "将来与条件", "name": "条件式", "description": "可能会发生或可以做的事（-man、-waq）。" },
+      { "id": "past_conditional", "group": "将来与条件", "name": "过去条件式", "description": "本来会发生的事（-man karqan）。" },
+      { "id": "imperative", "group": "命令", "name": "命令式", "description": "对你或你们的命令（-y、-ychis）。" },
+      { "id": "hortative", "group": "命令", "name": "我们来……吧", "description": "邀请大家一起做某事（-sunchis），常与 haku 连用。" },
+      { "id": "jussive", "group": "命令", "name": "让他做", "description": "对他或他们的命令（-chun、-chunku）。" },
+      { "id": "prohibitive", "group": "命令", "name": "禁止", "description": "ama … -ychu：别做！" },
+      { "id": "negative", "group": "否定", "name": "现在时否定", "description": "mana(n) … -chu。" },
+      { "id": "negative_past", "group": "否定", "name": "过去时否定", "description": "mana(n) … -rqa- … -chu。" }
+    ],
+    "lexicon": [
+      { "entry": "rimay", "meaning": "说话", "es": "说话" },
+      { "entry": "mikhuy", "meaning": "吃", "es": "吃饭" },
+      { "entry": "ukyay", "meaning": "喝", "es": "喝水" },
+      { "entry": "riy", "meaning": "去", "es": "去" },
+      { "entry": "hamuy", "meaning": "来", "es": "来" },
+      { "entry": "kutiy", "meaning": "回来", "es": "回来" },
+      { "entry": "puñuy", "meaning": "睡觉", "es": "睡觉" },
+      { "entry": "llank'ay", "meaning": "工作", "es": "工作" },
+      { "entry": "munay", "meaning": "想要，爱，需要", "es": "想要" },
+      { "entry": "kuyay", "meaning": "爱，怜惜", "es": "爱" },
+      { "entry": "yachay", "meaning": "知道，学习", "es": "知道" },
+      { "entry": "yachachiy", "meaning": "教", "es": "教书" },
+      { "entry": "tusuy", "meaning": "跳舞", "es": "跳舞" },
+      { "entry": "takiy", "meaning": "唱歌", "es": "唱歌" },
+      { "entry": "asiy", "meaning": "笑", "es": "笑" },
+      { "entry": "waqay", "meaning": "哭", "es": "哭" },
+      { "entry": "rikuy", "meaning": "看见", "es": "看见" },
+      { "entry": "qhaway", "meaning": "看", "es": "看" },
+      { "entry": "uyariy", "meaning": "听", "es": "听" },
+      { "entry": "qoy", "meaning": "给", "es": "给它" },
+      { "entry": "apay", "meaning": "带走", "es": "带走它" },
+      { "entry": "apamuy", "meaning": "带来", "es": "带来它" },
+      { "entry": "rantiy", "meaning": "买", "es": "买它" },
+      { "entry": "qhatuy", "meaning": "（在集市上）卖", "es": "卖它" },
+      { "entry": "tarpuy", "meaning": "播种", "es": "播种" },
+      { "entry": "maskhay", "meaning": "找", "es": "找它" },
+      { "entry": "tariy", "meaning": "找到", "es": "找到它" },
+      { "entry": "yuyay", "meaning": "记得，想", "es": "记得" },
+      { "entry": "phaway", "meaning": "跑，飞", "es": "跑步" },
+      { "entry": "puriy", "meaning": "走路", "es": "走路" },
+      { "entry": "pukllay", "meaning": "玩", "es": "玩" },
+      { "entry": "wayk'uy", "meaning": "做饭", "es": "做饭" },
+      { "entry": "qelqay", "meaning": "写", "es": "写字" },
+      { "entry": "ruway", "meaning": "做", "es": "做这件事" },
+      { "entry": "suyay", "meaning": "等", "es": "等" },
+      { "entry": "wahay", "meaning": "叫", "es": "叫他" },
+      { "entry": "pichay", "meaning": "扫地", "es": "扫地" },
+      { "entry": "churay", "meaning": "放", "es": "放它" },
+      { "entry": "tiyay", "meaning": "住，坐", "es": "住" },
+      { "entry": "kawsay", "meaning": "生活", "es": "生活" },
+      { "entry": "chayay", "meaning": "到达", "es": "到达" },
+      { "entry": "lloqsiy", "meaning": "出去", "es": "出去" },
+      { "entry": "haykuy", "meaning": "进去", "es": "进去" },
+      { "entry": "wañuy", "meaning": "死", "es": "死" },
+      { "entry": "urmay", "meaning": "摔倒", "es": "摔倒" },
+      { "entry": "tapuy", "meaning": "问", "es": "问" },
+      { "entry": "yanapay", "meaning": "帮助", "es": "帮忙" },
+      { "entry": "reqsiy", "meaning": "认识（某人）", "es": "认识他" },
+      { "entry": "away", "meaning": "织布", "es": "织布" },
+      { "entry": "t'aqsay", "meaning": "洗（衣服）", "es": "洗衣服" },
+      { "entry": "michiy", "meaning": "放牧", "es": "放牧" },
+      { "entry": "paray", "meaning": "下雨", "es": "下雨", "note": "天气动词，主要用于第三人称：paran「下雨」，parashan「正在下雨」。" }
+    ]
+  }
+}

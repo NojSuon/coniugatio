@@ -1,0 +1,219 @@
+{
+  "name": "Cusco Quechua",
+  "variant": "Quechua of Cusco (Cuzco-Collao), spelling of the Academia Mayor",
+  "region": "Cusco, eastern Apurímac, northwestern Puno and the highlands of Arequipa, in Peru",
+  "summary": "The Quechua of Cusco, the old Inca capital: runasimi, «the people's language». With its aspirated and ejective consonants, it is one of the most widely spoken varieties of the whole family.",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb as in the dictionary, ending in -y: rimay «speak», mikhuy «eat», riy «go», llank'ay «work». You can also type just the root (rima).",
+    "own": {
+      "hint": "Type any verb ending in -y and its meaning in English. The endings are the same for every verb.",
+      "label": "Verb",
+      "es_placeholder": "ask"
+    }
+  },
+  "source": {
+    "short": "Cusihuamán, Gramática quechua Cuzco-Collao (2001); AMLQ, Diccionario (2005)",
+    "full": "Antonio Cusihuamán G., Gramática quechua Cuzco-Collao (Cusco: Centro Bartolomé de Las Casas, 2nd ed., 2001), for the verb; Academia Mayor de la Lengua Quechua, Diccionario quechua–español–quechua / Qheswa–español–qheswa simi taqe (Cusco, 2nd ed., 2005), for the spelling and the vocabulary; also a Quechua grammar handbook and a Quechua teaching manual. Spelling of the Academia Mayor, with five vowels."
+  },
+  "about": [
+    "Cusco Quechua, or Cuzco-Collao, is spoken in the department of Cusco, in eastern Apurímac, in northwestern Puno and in the highlands of Arequipa. With over a million speakers, it is one of the largest Quechua varieties, and the most written.",
+    "It belongs to Southern Quechua, together with the Quechua of Ayacucho, Bolivia and Argentina, which its speakers understand well. It stands out for its aspirated (ph, th, chh, kh, qh) and ejective (p', t', ch', k', q') consonants, taken from Aymara, and for q, said at the back of the throat.",
+    "It was the language of the Inca court in Cusco. Today it is official in Peru alongside Spanish, and it is kept alive by the Academia Mayor de la Lengua Quechua, bilingual schools, radio, music and a long tradition of poetry and theatre."
+  ],
+  "orthography": {
+    "intro": "We use the spelling of the Academia Mayor de la Lengua Quechua of Cusco, the one in its dictionary and in Cusihuamán's grammar. Each sound has its letter: q for the uvular sound, h after a consonant for aspiration and an apostrophe for the ejectives.",
+    "letters": [
+      { "meaning": "earth" },
+      { "meaning": "field" },
+      { "meaning": "dew" },
+      { "meaning": "star" },
+      { "meaning": "child" },
+      { "meaning": "big" },
+      { "meaning": "sun" },
+      { "meaning": "salt" },
+      { "meaning": "pig" },
+      { "meaning": "frog" },
+      { "meaning": "sorcerer" },
+      { "meaning": "town" },
+      { "meaning": "hand" },
+      { "meaning": "ear" },
+      { "meaning": "path" },
+      { "meaning": "hill" },
+      { "meaning": "potato" },
+      { "meaning": "run" },
+      { "meaning": "clothes" },
+      { "meaning": "lake" },
+      { "meaning": "look" },
+      { "meaning": "green" },
+      { "meaning": "stone" },
+      { "meaning": "young woman" },
+      { "meaning": "cat" },
+      { "meaning": "deer" },
+      { "meaning": "pierced" },
+      { "meaning": "bread" },
+      { "meaning": "head" },
+      { "meaning": "house" },
+      { "meaning": "blood" }
+    ],
+    "vowels": [{ "title": "Vowels" }],
+    "notes": [
+      "q is said further back than k, at the back of the mouth: qocha «lake». At the end of a syllable it sounds like a strong Spanish j: soqta «six» sounds «sojta».",
+      "Aspirates are written with h and said with a strong puff of air: phaway «run», khuchi «pig». Ejectives are written with an apostrophe and said with a small catch: t'anta «bread», k'ayra «frog». They appear only once per root and never in suffixes.",
+      "Next to q the vowels i and u open up and are written e and o: qocha, erqe, orqo. That is why the Academia Mayor writes five vowels; the official alphabet of the Ministry of Education (1985) uses only three and writes qucha, irqi, urqu.",
+      "Stress falls on the second-to-last syllable and isn't written: rimani, rimarqanki. It is only marked on a few words stressed on the last syllable: arí «yes», alaláw «how cold!».",
+      "Loans from Spanish sometimes keep b, d, g and f: bindiy «sell», dusi «noon», kafiy «coffee»."
+    ]
+  },
+  "grammar": {
+    "intro": "A Quechua verb is a root and a chain of suffixes: first those that change the meaning (-chi, -ku, -pu, -mu), then tense, person and last the enclitics (-mi, -si, -chu). The root is the infinitive without -y: rimay → rima-.",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "Root", "description": "The infinitive without -y." },
+          { "slot": "Derivation", "description": "-chi make someone do, -ku for oneself, -naku each other, -pu for someone, -mu towards here…" },
+          { "slot": "Tense", "description": "-rqa- past, -sqa- unseen past, -sha- progressive…" },
+          { "slot": "Person", "description": "-ni, -nki, -n, -nchis, -yku, -nkichis, -nku." },
+          { "slot": "Enclitic", "description": "-mi I saw it, -si I was told, -chá maybe, -chu ? / not." }
+        ]
+      },
+      {
+        "title": "The persons",
+        "description": "There are two «we»: ñoqanchis includes the listener and ñoqayku doesn't. The future has endings of its own in the 1st and 3rd persons.",
+        "columns": ["Person", "Present", "Past", "Future"],
+        "rows": [
+          { "label": "ñoqa «I»" },
+          { "label": "qan «you»" },
+          { "label": "pay «he, she»" },
+          { "label": "ñoqanchis «we (with you)»" },
+          { "label": "ñoqayku «we (not you)»" },
+          { "label": "qankuna «you all»" },
+          { "label": "paykuna «they»" }
+        ]
+      },
+      {
+        "title": "Two pasts",
+        "description": "With -rqa- the speaker tells what they lived or saw. With -sqa- they tell what they were told, what happened in a dream or while drunk, or what they have just discovered.",
+        "columns": ["Form", "Meaning"],
+        "rows": [
+          { "cells": ["He went to Cusco (I saw it)."] },
+          { "cells": ["They say he went to Cusco."] },
+          { "cells": ["This coffee turned out to be hot!"] }
+        ]
+      },
+      {
+        "title": "Phrases",
+        "items": [
+          { "translation": "I speak Quechua." },
+          { "translation": "I'm from the city of Cusco." },
+          { "translation": "I don't know." },
+          { "translation": "Don't cry." },
+          { "translation": "See you tomorrow." },
+          { "translation": "Let's go to work!" }
+        ]
+      },
+      {
+        "title": "Suffixes that change the verb",
+        "description": "They go between the root and the tense, and they can be combined.",
+        "items": [
+          { "kind": "causative", "meaning": "make someone do", "translation": "teach (make learn)" },
+          { "kind": "reflexive", "meaning": "oneself", "translation": "be glad" },
+          { "kind": "reciprocal", "meaning": "each other", "translation": "get to know each other" },
+          { "kind": "regressive, benefactive", "meaning": "back, for someone", "translation": "go back (home)" },
+          { "kind": "translocative", "meaning": "towards here, over there", "translation": "bring" },
+          { "kind": "assistive", "meaning": "help to do", "translation": "help to work" }
+        ]
+      },
+      {
+        "title": "Who to whom",
+        "description": "The verb also marks who the action goes to: -wa- towards me, -su- from him to you, -yki from me to you.",
+        "columns": ["Form", "Meaning"],
+        "rows": [
+          { "cells": ["you help me"] },
+          { "cells": ["he helps me"] },
+          { "cells": ["I help you"] },
+          { "cells": ["he helps you"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "1st person (ñoqanchis: with you)" },
+      { "id": "1x", "label": "1st person (ñoqayku: not you)" },
+      { "id": "2", "label": "2nd person" },
+      { "id": "3", "label": "3rd person" }
+    ],
+    "tenses": [
+      { "id": "present", "group": "Indicative", "name": "Present", "description": "What happens now or always." },
+      { "id": "past", "group": "Indicative", "name": "Past", "description": "What happened and one saw or lived (-rqa-)." },
+      { "id": "reportative", "group": "Indicative", "name": "-sqa past", "description": "What happened without one seeing it: they say, it turns out (-sqa-)." },
+      { "id": "past_habitual", "group": "Indicative", "name": "Past habitual", "description": "What one used to do: -q and kay." },
+      { "id": "progressive", "group": "Progressive", "name": "Present progressive", "description": "What is happening (-sha-)." },
+      { "id": "past_progressive", "group": "Progressive", "name": "Past progressive", "description": "What was happening (-sharqa-)." },
+      { "id": "future", "group": "Future and conditional", "name": "Future", "description": "What will happen." },
+      { "id": "conditional", "group": "Future and conditional", "name": "Conditional", "description": "What would happen or could be done (-man, -waq)." },
+      { "id": "past_conditional", "group": "Future and conditional", "name": "Past conditional", "description": "What would have happened (-man karqan).", "es": { "tense": "pluperfect", "before": "if only" } },
+      { "id": "imperative", "group": "Orders", "name": "Imperative", "description": "Orders to you or you all (-y, -ychis)." },
+      { "id": "hortative", "group": "Orders", "name": "Let's", "description": "Inviting others to do something together (-sunchis), often with haku.", "es": { "tense": "present", "before": "let's", "pronoun": false } },
+      { "id": "jussive", "group": "Orders", "name": "Let him do it", "description": "Orders for him or them (-chun, -chunku).", "es": "optative" },
+      { "id": "prohibitive", "group": "Orders", "name": "Prohibition", "description": "ama … -ychu: don't do it!" },
+      { "id": "negative", "group": "Negation", "name": "Negative present", "description": "mana(n) … -chu." },
+      { "id": "negative_past", "group": "Negation", "name": "Negative past", "description": "mana(n) … -rqa- … -chu." }
+    ],
+    "lexicon": [
+      { "entry": "rimay", "meaning": "speak", "es": "speak" },
+      { "entry": "mikhuy", "meaning": "eat", "es": "eat" },
+      { "entry": "ukyay", "meaning": "drink", "es": "drink" },
+      { "entry": "riy", "meaning": "go", "es": "go" },
+      { "entry": "hamuy", "meaning": "come", "es": "come" },
+      { "entry": "kutiy", "meaning": "come back", "es": "come back" },
+      { "entry": "puñuy", "meaning": "sleep", "es": "sleep" },
+      { "entry": "llank'ay", "meaning": "work", "es": "work" },
+      { "entry": "munay", "meaning": "want, love, need", "es": "want it" },
+      { "entry": "kuyay", "meaning": "love, pity", "es": "love" },
+      { "entry": "yachay", "meaning": "know, learn", "es": "know it" },
+      { "entry": "yachachiy", "meaning": "teach", "es": "teach" },
+      { "entry": "tusuy", "meaning": "dance", "es": "dance" },
+      { "entry": "takiy", "meaning": "sing", "es": "sing" },
+      { "entry": "asiy", "meaning": "laugh", "es": "laugh" },
+      { "entry": "waqay", "meaning": "cry", "es": "cry" },
+      { "entry": "rikuy", "meaning": "see", "es": "see it" },
+      { "entry": "qhaway", "meaning": "look", "es": "look" },
+      { "entry": "uyariy", "meaning": "listen, hear", "es": "listen" },
+      { "entry": "qoy", "meaning": "give", "es": "give it" },
+      { "entry": "apay", "meaning": "carry, take", "es": "take it" },
+      { "entry": "apamuy", "meaning": "bring", "es": "bring it" },
+      { "entry": "rantiy", "meaning": "buy", "es": "buy it" },
+      { "entry": "qhatuy", "meaning": "sell (at the market)", "es": "sell it" },
+      { "entry": "tarpuy", "meaning": "sow", "es": "sow" },
+      { "entry": "maskhay", "meaning": "look for", "es": "look for it" },
+      { "entry": "tariy", "meaning": "find", "es": "find it" },
+      { "entry": "yuyay", "meaning": "remember, think", "es": "remember it" },
+      { "entry": "phaway", "meaning": "run, fly", "es": "run" },
+      { "entry": "puriy", "meaning": "walk", "es": "walk" },
+      { "entry": "pukllay", "meaning": "play", "es": "play" },
+      { "entry": "wayk'uy", "meaning": "cook", "es": "cook" },
+      { "entry": "qelqay", "meaning": "write", "es": "write" },
+      { "entry": "ruway", "meaning": "do, make", "es": "do it" },
+      { "entry": "suyay", "meaning": "wait", "es": "wait" },
+      { "entry": "wahay", "meaning": "call", "es": "call them" },
+      { "entry": "pichay", "meaning": "sweep", "es": "sweep" },
+      { "entry": "churay", "meaning": "put", "es": "put it" },
+      { "entry": "tiyay", "meaning": "live, sit", "es": "live" },
+      { "entry": "kawsay", "meaning": "live", "es": "live" },
+      { "entry": "chayay", "meaning": "arrive", "es": "arrive" },
+      { "entry": "lloqsiy", "meaning": "go out", "es": "go out" },
+      { "entry": "haykuy", "meaning": "go in", "es": "go in" },
+      { "entry": "wañuy", "meaning": "die", "es": "die" },
+      { "entry": "urmay", "meaning": "fall", "es": "fall" },
+      { "entry": "tapuy", "meaning": "ask", "es": "ask" },
+      { "entry": "yanapay", "meaning": "help", "es": "help" },
+      { "entry": "reqsiy", "meaning": "know (someone)", "es": "know them" },
+      { "entry": "away", "meaning": "weave", "es": "weave" },
+      { "entry": "t'aqsay", "meaning": "wash (clothes)", "es": "wash" },
+      { "entry": "michiy", "meaning": "herd", "es": "herd" },
+      { "entry": "paray", "meaning": "rain", "es": "rain", "note": "A weather verb, used mostly in the 3rd person: paran «it rains», parashan «it is raining»." }
+    ]
+  }
+}

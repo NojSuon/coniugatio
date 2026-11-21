@@ -13,6 +13,7 @@ pub mod mopan;
 pub mod nahuatl;
 pub mod otomi;
 pub mod purhepecha;
+pub mod qheswa;
 pub mod quichua;
 pub mod spanish;
 pub mod timucua;
@@ -65,6 +66,9 @@ pub enum Engine {
     /// Ecuadorian Kichwa, unified spelling: root + tense suffix + person
     /// ending, one «we». See `kichwa`.
     Kichwa(kichwa::Conjugation),
+    /// Cusco Quechua (AMLQ spelling): root + tense suffix + person ending,
+    /// two «we». See `qheswa`.
+    Qheswa(qheswa::Conjugation),
 }
 
 impl Engine {
@@ -93,6 +97,7 @@ impl Engine {
             Engine::Wixarika(c) => c.conjugate_with(verb, opts),
             Engine::Quichua(c) => c.conjugate_with(verb, opts),
             Engine::Kichwa(c) => c.conjugate_with(verb, opts),
+            Engine::Qheswa(c) => c.conjugate_with(verb, opts),
         }
     }
 
@@ -113,6 +118,7 @@ impl Engine {
             Engine::Wixarika(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Quichua(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Kichwa(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Qheswa(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
     }
 }

@@ -1,0 +1,250 @@
+{
+  "slug": "qheswa",
+  "name": "Quechua cuzqueño",
+  "endonym": "qheswa simi",
+  "variant": "Quechua del Cusco (Cuzco-Collao), grafía de la Academia Mayor",
+  "region": "Cusco, Apurímac oriental, Puno noroccidental y la sierra de Arequipa, en el Perú",
+  "family": "quechua",
+  "area": "andes",
+  "continent": "sur",
+  "status": "available",
+  "order": 15,
+  "series": "kantu",
+  "lang_code": "quz",
+  "summary": "El quechua del Cusco, la antigua capital inca: runasimi, «la lengua de la gente». Con sus aspiradas y glotalizadas, es una de las variedades más habladas de toda la familia.",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo como en el diccionario, terminado en -y: rimay «hablar», mikhuy «comer», riy «ir», llank'ay «trabajar». También puedes escribir solo la raíz (rima).",
+    "placeholder": "llank'ay",
+    "keyboard": ["'", "ñ"],
+    "own": {
+      "hint": "Escribe cualquier verbo terminado en -y y su significado en español. Las terminaciones son las mismas para todos los verbos.",
+      "label": "Verbo",
+      "placeholder": "tapuy",
+      "es_placeholder": "preguntar"
+    }
+  },
+  "source": {
+    "short": "Cusihuamán, Gramática quechua Cuzco-Collao (2001); AMLQ, Diccionario (2005)",
+    "full": "Antonio Cusihuamán G., Gramática quechua Cuzco-Collao (Cusco: Centro Bartolomé de Las Casas, 2.ª ed., 2001), para el verbo; Academia Mayor de la Lengua Quechua, Diccionario quechua–español–quechua / Qheswa–español–qheswa simi taqe (Cusco, 2.ª ed., 2005), para la grafía y el vocabulario; también un manual de gramática quechua y un Manual de quechua de enseñanza. Grafía de la Academia Mayor, con cinco vocales."
+  },
+  "about": [
+    "El quechua cuzqueño, o Cuzco-Collao, se habla en el departamento del Cusco, en el este de Apurímac, en el noroeste de Puno y en la sierra de Arequipa. Con más de un millón de hablantes, es una de las variedades quechuas más grandes, y la que más se escribe.",
+    "Pertenece al quechua sureño, junto con el de Ayacucho y los de Bolivia y Argentina, con los que se entiende bien. Lo distinguen sus consonantes aspiradas (ph, th, chh, kh, qh) y glotalizadas (p', t', ch', k', q'), que tomó del aimara, y la q, que se pronuncia en el fondo de la garganta.",
+    "Fue la lengua de la corte inca del Cusco. Hoy es oficial en el Perú junto al castellano, y la sostienen la Academia Mayor de la Lengua Quechua, las escuelas bilingües, la radio, la música y una larga tradición de poesía y teatro."
+  ],
+  "orthography": {
+    "intro": "Usamos la grafía de la Academia Mayor de la Lengua Quechua del Cusco, la de su diccionario y la de la gramática de Cusihuamán. Cada sonido tiene su letra: q para el sonido uvular, h detrás de la consonante para la aspiración y apóstrofo para la glotalización.",
+    "letters": [
+      { "letter": "a", "ipa": "a", "word": "allpa", "meaning": "tierra" },
+      { "letter": "ch", "ipa": "tʃ", "word": "chakra", "meaning": "terreno de cultivo" },
+      { "letter": "chh", "ipa": "tʃʰ", "word": "chhulla", "meaning": "rocío" },
+      { "letter": "ch'", "ipa": "tʃʼ", "word": "ch'aska", "meaning": "estrella" },
+      { "letter": "e", "ipa": "e ~ ɛ", "word": "erqe", "meaning": "niño, niña" },
+      { "letter": "h", "ipa": "h", "word": "hatun", "meaning": "grande" },
+      { "letter": "i", "ipa": "i", "word": "inti", "meaning": "sol" },
+      { "letter": "k", "ipa": "k", "word": "kachi", "meaning": "sal" },
+      { "letter": "kh", "ipa": "kʰ", "word": "khuchi", "meaning": "chancho" },
+      { "letter": "k'", "ipa": "kʼ", "word": "k'ayra", "meaning": "rana" },
+      { "letter": "l", "ipa": "l", "word": "layqa", "meaning": "brujo" },
+      { "letter": "ll", "ipa": "ʎ", "word": "llaqta", "meaning": "pueblo" },
+      { "letter": "m", "ipa": "m", "word": "maki", "meaning": "mano" },
+      { "letter": "n", "ipa": "n", "word": "ninri", "meaning": "oreja" },
+      { "letter": "ñ", "ipa": "ɲ", "word": "ñan", "meaning": "camino" },
+      { "letter": "o", "ipa": "o ~ ɔ", "word": "orqo", "meaning": "cerro" },
+      { "letter": "p", "ipa": "p", "word": "papa", "meaning": "papa" },
+      { "letter": "ph", "ipa": "pʰ", "word": "phaway", "meaning": "correr" },
+      { "letter": "p'", "ipa": "pʼ", "word": "p'acha", "meaning": "ropa" },
+      { "letter": "q", "ipa": "q", "word": "qocha", "meaning": "laguna" },
+      { "letter": "qh", "ipa": "qʰ", "word": "qhaway", "meaning": "mirar" },
+      { "letter": "q'", "ipa": "qʼ", "word": "q'omer", "meaning": "verde" },
+      { "letter": "r", "ipa": "ɾ", "word": "rumi", "meaning": "piedra" },
+      { "letter": "s", "ipa": "s", "word": "sipas", "meaning": "muchacha" },
+      { "letter": "sh", "ipa": "ʃ", "word": "mishi", "meaning": "gato" },
+      { "letter": "t", "ipa": "t", "word": "taruka", "meaning": "venado" },
+      { "letter": "th", "ipa": "tʰ", "word": "thapu", "meaning": "perforado" },
+      { "letter": "t'", "ipa": "tʼ", "word": "t'anta", "meaning": "pan" },
+      { "letter": "u", "ipa": "u", "word": "uma", "meaning": "cabeza" },
+      { "letter": "w", "ipa": "w", "word": "wasi", "meaning": "casa" },
+      { "letter": "y", "ipa": "j", "word": "yawar", "meaning": "sangre" }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales",
+        "items": [
+          { "letter": "a", "ipa": "a" },
+          { "letter": "e", "ipa": "e" },
+          { "letter": "i", "ipa": "i" },
+          { "letter": "o", "ipa": "o" },
+          { "letter": "u", "ipa": "u" }
+        ]
+      }
+    ]
+    ,
+    "notes": [
+      "La q se pronuncia más atrás que la k, en el fondo de la boca: qocha «laguna». A final de sílaba suena como una j fuerte: soqta «seis» suena «sojta».",
+      "Las aspiradas llevan h y se dicen con un soplo fuerte: phaway «correr», khuchi «chancho». Las glotalizadas llevan apóstrofo y suenan con un pequeño golpe: t'anta «pan», k'ayra «rana». Solo aparecen una vez por raíz y nunca en los sufijos.",
+      "Junto a la q las vocales i y u se abren y se escriben e y o: qocha, erqe, orqo. Por eso la Academia Mayor escribe cinco vocales; el alfabeto oficial del Ministerio de Educación (1985) usa solo tres y escribe qucha, irqi, urqu.",
+      "El acento cae en la penúltima sílaba y no se escribe: rimani, rimarqanki. Solo se marca en unas pocas palabras agudas: arí «sí», alaláw «¡qué frío!».",
+      "Los préstamos del castellano conservan a veces b, d, g y f: bindiy «vender», dusi «mediodía», kafiy «café»."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo quechua es una raíz y una cadena de sufijos: primero los que cambian el sentido (-chi, -ku, -pu, -mu), después el tiempo, la persona y al final los enclíticos (-mi, -si, -chu). La raíz es el infinitivo sin -y: rimay → rima-.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          { "slot": "Raíz", "description": "El infinitivo sin -y.", "example": "rima-" },
+          { "slot": "Derivación", "description": "-chi hacer hacer, -ku para uno mismo, -naku entre varios, -pu para otro, -mu hacia aquí…", "example": "-chi-" },
+          { "slot": "Tiempo", "description": "-rqa- pasado, -sqa- pasado no visto, -sha- progresivo…", "example": "-rqa-" },
+          { "slot": "Persona", "description": "-ni, -nki, -n, -nchis, -yku, -nkichis, -nku.", "example": "-ni" },
+          { "slot": "Enclítico", "description": "-mi lo vi, -si me dijeron, -chá quizá, -chu ¿? / no.", "example": "-mi" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Las personas",
+        "description": "Hay dos «nosotros»: ñoqanchis incluye a quien escucha y ñoqayku no. El futuro tiene terminaciones propias en la 1.ª y 3.ª persona.",
+        "columns": ["Persona", "Presente", "Pasado", "Futuro"],
+        "rows": [
+          { "label": "ñoqa «yo»", "cells": ["rimani", "rimarqani", "rimasaq"] },
+          { "label": "qan «tú»", "cells": ["rimanki", "rimarqanki", "rimanki"] },
+          { "label": "pay «él, ella»", "cells": ["riman", "rimarqan", "rimanqa"] },
+          { "label": "ñoqanchis «nosotros (contigo)»", "cells": ["rimanchis", "rimarqanchis", "rimasunchis"] },
+          { "label": "ñoqayku «nosotros (sin ti)»", "cells": ["rimayku", "rimarqayku", "rimasaqku"] },
+          { "label": "qankuna «ustedes»", "cells": ["rimankichis", "rimarqankichis", "rimankichis"] },
+          { "label": "paykuna «ellos, ellas»", "cells": ["rimanku", "rimarqanku", "rimanqaku"] }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Dos pasados",
+        "description": "Con -rqa- el hablante cuenta lo que vivió o vio. Con -sqa- cuenta lo que le contaron, lo que pasó en sueños o borracho, o lo que acaba de descubrir.",
+        "columns": ["Forma", "Significado"],
+        "rows": [
+          { "label": "Qosqota rirqan.", "cells": ["Fue al Cusco (lo vi)."] },
+          { "label": "Qosqota risqa.", "cells": ["Dice que fue al Cusco."] },
+          { "label": "Ruphan kay kafiyqa kasqa!", "cells": ["¡Este café había estado caliente!"] }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases",
+        "items": [
+          { "text": "Runasimita rimani.", "translation": "Hablo quechua." },
+          { "text": "Qosqo llaqtamanta kani.", "translation": "Soy de la ciudad del Cusco." },
+          { "text": "Manan yachanichu.", "translation": "No sé." },
+          { "text": "Ama waqaychu.", "translation": "No llores." },
+          { "text": "Paqarinkama.", "translation": "Hasta mañana." },
+          { "text": "Haku llank'asunchis!", "translation": "¡Vamos a trabajar!" }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Sufijos que cambian el verbo",
+        "description": "Van entre la raíz y el tiempo, y se pueden combinar.",
+        "items": [
+          { "affix": "-chi-", "kind": "causativo", "meaning": "hacer que otro haga", "example": "yachachiy", "translation": "enseñar (hacer aprender)" },
+          { "affix": "-ku-", "kind": "reflexivo", "meaning": "uno mismo", "example": "kusikuy", "translation": "alegrarse" },
+          { "affix": "-naku-", "kind": "recíproco", "meaning": "unos a otros", "example": "reqsinakuy", "translation": "conocerse" },
+          { "affix": "-pu-", "kind": "regresivo, benefactivo", "meaning": "de vuelta, para otro", "example": "kutipuy", "translation": "volver (a su sitio)" },
+          { "affix": "-mu-", "kind": "translocativo", "meaning": "hacia aquí, allá", "example": "apamuy", "translation": "traer" },
+          { "affix": "-ysi-", "kind": "asistivo", "meaning": "ayudar a hacer", "example": "llank'aysiy", "translation": "ayudar a trabajar" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Quién a quién",
+        "description": "El verbo marca también a quién va la acción: -wa- hacia mí, -su- de él hacia ti, -yki de mí hacia ti.",
+        "columns": ["Forma", "Significado"],
+        "rows": [
+          { "label": "yanapawanki", "cells": ["tú me ayudas"] },
+          { "label": "yanapawan", "cells": ["él me ayuda"] },
+          { "label": "yanapayki", "cells": ["yo te ayudo"] },
+          { "label": "yanapasunki", "cells": ["él te ayuda"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "qheswa",
+    "persons": [
+      { "id": "1", "label": "1.ª persona (ñoqanchis: contigo)", "es": 0 },
+      { "id": "1x", "label": "1.ª persona (ñoqayku: sin ti)", "es": 0 },
+      { "id": "2", "label": "2.ª persona", "es": 1 },
+      { "id": "3", "label": "3.ª persona", "es": 2 }
+    ],
+    "tenses": [
+      { "id": "present", "group": "Indicativo", "name": "Presente", "description": "Lo que pasa ahora o siempre.", "form": "present", "es": "present" },
+      { "id": "past", "group": "Indicativo", "name": "Pasado", "description": "Lo que pasó y uno vio o vivió (-rqa-).", "form": "past", "es": "preterite" },
+      { "id": "reportative", "group": "Indicativo", "name": "Pasado -sqa", "description": "Lo que pasó sin que uno lo viera: dicen que, había (-sqa-).", "form": "reportative", "es": "pluperfect" },
+      { "id": "past_habitual", "group": "Indicativo", "name": "Pasado habitual", "description": "Lo que se solía hacer: -q y kay.", "form": "past_habitual", "es": "imperfect" },
+      { "id": "progressive", "group": "Progresivo", "name": "Presente progresivo", "description": "Lo que está pasando (-sha-).", "form": "progressive", "es": "progressive" },
+      { "id": "past_progressive", "group": "Progresivo", "name": "Pasado progresivo", "description": "Lo que estaba pasando (-sharqa-).", "form": "past_progressive", "es": "past_progressive" },
+      { "id": "future", "group": "Futuro y condicional", "name": "Futuro", "description": "Lo que va a pasar.", "form": "future", "es": "future" },
+      { "id": "conditional", "group": "Futuro y condicional", "name": "Condicional", "description": "Lo que pasaría o se podría hacer (-man, -waq).", "form": "conditional", "es": "conditional" },
+      { "id": "past_conditional", "group": "Futuro y condicional", "name": "Condicional pasado", "description": "Lo que hubiera pasado (-man karqan).", "form": "past_conditional", "es": "past_subjunctive" },
+      { "id": "imperative", "group": "Órdenes", "name": "Imperativo", "description": "Órdenes a ti o a ustedes (-y, -ychis).", "form": "imperative", "es": "imperative" },
+      { "id": "hortative", "group": "Órdenes", "name": "Hagamos", "description": "Invitar a hacer algo juntos (-sunchis), a menudo con haku.", "form": "hortative", "es": { "tense": "subjunctive", "pronoun": false } },
+      { "id": "jussive", "group": "Órdenes", "name": "Que haga", "description": "Órdenes para él o ellos (-chun, -chunku).", "form": "jussive", "es": { "tense": "subjunctive", "before": "que" } },
+      { "id": "prohibitive", "group": "Órdenes", "name": "Prohibición", "description": "ama … -ychu: ¡no lo hagas!", "form": "prohibitive", "negative": true, "es": "imperative" },
+      { "id": "negative", "group": "Negación", "name": "Presente negativo", "description": "mana(n) … -chu.", "form": "negative", "negative": true, "es": "present" },
+      { "id": "negative_past", "group": "Negación", "name": "Pasado negativo", "description": "mana(n) … -rqa- … -chu.", "form": "negative_past", "negative": true, "es": "preterite" }
+    ],
+    "lexicon": [
+      { "entry": "rimay", "meaning": "hablar", "es": "hablar" },
+      { "entry": "mikhuy", "meaning": "comer", "es": "comer" },
+      { "entry": "ukyay", "meaning": "beber", "es": "beber" },
+      { "entry": "riy", "meaning": "ir", "es": "ir" },
+      { "entry": "hamuy", "meaning": "venir", "es": "venir" },
+      { "entry": "kutiy", "meaning": "regresar", "es": "regresar" },
+      { "entry": "puñuy", "meaning": "dormir", "es": "dormir" },
+      { "entry": "llank'ay", "meaning": "trabajar", "es": "trabajar" },
+      { "entry": "munay", "meaning": "querer, amar, necesitar", "es": "querer" },
+      { "entry": "kuyay", "meaning": "amar, compadecer", "es": "amar" },
+      { "entry": "yachay", "meaning": "saber, aprender", "es": "saber" },
+      { "entry": "yachachiy", "meaning": "enseñar", "es": "enseñar" },
+      { "entry": "tusuy", "meaning": "bailar", "es": "bailar" },
+      { "entry": "takiy", "meaning": "cantar", "es": "cantar" },
+      { "entry": "asiy", "meaning": "reír", "es": "reír" },
+      { "entry": "waqay", "meaning": "llorar", "es": "llorar" },
+      { "entry": "rikuy", "meaning": "ver", "es": "ver" },
+      { "entry": "qhaway", "meaning": "mirar", "es": "mirar" },
+      { "entry": "uyariy", "meaning": "escuchar, oír", "es": "escuchar" },
+      { "entry": "qoy", "meaning": "dar", "es": "dar" },
+      { "entry": "apay", "meaning": "llevar", "es": "llevar" },
+      { "entry": "apamuy", "meaning": "traer", "es": "traer" },
+      { "entry": "rantiy", "meaning": "comprar", "es": "comprar" },
+      { "entry": "qhatuy", "meaning": "vender (en el mercado)", "es": "vender" },
+      { "entry": "tarpuy", "meaning": "sembrar", "es": "sembrar" },
+      { "entry": "maskhay", "meaning": "buscar", "es": "buscar" },
+      { "entry": "tariy", "meaning": "encontrar", "es": "encontrar" },
+      { "entry": "yuyay", "meaning": "recordar, pensar", "es": "recordar" },
+      { "entry": "phaway", "meaning": "correr, volar", "es": "correr" },
+      { "entry": "puriy", "meaning": "andar, caminar", "es": "caminar" },
+      { "entry": "pukllay", "meaning": "jugar", "es": "jugar" },
+      { "entry": "wayk'uy", "meaning": "cocinar", "es": "cocinar" },
+      { "entry": "qelqay", "meaning": "escribir", "es": "escribir" },
+      { "entry": "ruway", "meaning": "hacer", "es": "hacer" },
+      { "entry": "suyay", "meaning": "esperar", "es": "esperar" },
+      { "entry": "wahay", "meaning": "llamar", "es": "llamar" },
+      { "entry": "pichay", "meaning": "barrer", "es": "barrer" },
+      { "entry": "churay", "meaning": "poner", "es": "poner" },
+      { "entry": "tiyay", "meaning": "vivir, estar sentado", "es": "vivir" },
+      { "entry": "kawsay", "meaning": "vivir", "es": "vivir" },
+      { "entry": "chayay", "meaning": "llegar", "es": "llegar" },
+      { "entry": "lloqsiy", "meaning": "salir", "es": "salir" },
+      { "entry": "haykuy", "meaning": "entrar", "es": "entrar" },
+      { "entry": "wañuy", "meaning": "morir", "es": "morir" },
+      { "entry": "urmay", "meaning": "caer", "es": "caerse" },
+      { "entry": "tapuy", "meaning": "preguntar", "es": "preguntar" },
+      { "entry": "yanapay", "meaning": "ayudar", "es": "ayudar" },
+      { "entry": "reqsiy", "meaning": "conocer (a alguien)", "es": "conocer" },
+      { "entry": "away", "meaning": "tejer", "es": "tejer" },
+      { "entry": "t'aqsay", "meaning": "lavar (ropa)", "es": "lavar" },
+      { "entry": "michiy", "meaning": "pastear", "es": "pastear" },
+      { "entry": "paray", "meaning": "llover", "es": "llover", "note": "Verbo del clima: se usa sobre todo en 3.ª persona, paran «llueve», parashan «está lloviendo»." }
+    ]
+  }
+}
