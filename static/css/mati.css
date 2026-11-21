@@ -247,8 +247,10 @@ p { margin: 0; max-width: 65ch; }
 .button:hover { filter: brightness(0.92); }
 
 /* ---------- Header (chinamitl top bar: translucent pill groups) ---------- */
+/* The header follows the reader down the page; common.js keeps
+   --header-h at its height so the section menu can sit right below it. */
 .site-header {
-  position: relative; z-index: 20;
+  position: sticky; top: 0; z-index: 20;
   background: var(--panel); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -415,7 +417,7 @@ a.language-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-so
 #conjugador { padding-top: 28px; }
 
 .subnav {
-  position: sticky; top: 0; z-index: 5;
+  position: sticky; top: var(--header-h, 0px); z-index: 5;
   background: var(--panel); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -427,7 +429,9 @@ a.language-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-so
 }
 .subnav a:hover, .subnav a.active { background: var(--serie-fondo); color: var(--serie-texto); }
 
-.section { padding-block: 56px 8px; scroll-margin-top: 64px; }
+.section { padding-block: 56px 8px; scroll-margin-top: calc(var(--header-h, 0px) + 64px); }
+/* Links to #lenguas, #mati… land below the sticky header. */
+[id]:not(.section) { scroll-margin-top: var(--header-h, 0px); }
 .section > .wrap > h2 { margin-bottom: 16px; }
 .section .lead { font-size: 20px; margin-bottom: 24px; }
 .stack > * + * { margin-top: 14px; }
@@ -671,9 +675,13 @@ a.lang-switch:hover, a.lang-switch:focus-visible { background: var(--mati-pastel
   .lang-switch { padding: 0 8px; min-height: 30px; font-size: 13px; }
   .links { gap: 6px; }
   .site-nav a { padding: 7px 10px; }
-}
-@media (max-width: 400px) {
-  .lang-switches { order: 4; flex-basis: auto; margin-inline: auto; }
+  /* Phones: logo and buttons on the first row, menu and ES · EN · 中文 on
+     the second, so the sticky header stays short. */
+  .site-header .wrap { row-gap: 6px; padding-block: 8px; }
+  .site-nav { flex: 1 1 190px; min-width: 0; }
+  .lang-switches { order: 4; }
+  .seg { padding: 3px; box-shadow: none; }
+  .site-nav a { padding: 6px 9px; font-size: 13px; }
 }
 
 /* ---------- Donate (Ko-fi) ---------- */

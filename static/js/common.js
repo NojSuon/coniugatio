@@ -139,6 +139,16 @@ export function renderHeader(current) {
       </div>
     </div>`;
   renderAbout();
+  trackHeaderHeight(el);
+}
+
+// The header is sticky; --header-h tells the section menu and anchors how
+// much room it takes (it changes when the header wraps on phones).
+function trackHeaderHeight(el) {
+  const set = () => document.documentElement.style.setProperty("--header-h", `${el.offsetHeight}px`);
+  set();
+  if ("ResizeObserver" in window) new ResizeObserver(set).observe(el);
+  else window.addEventListener("resize", set);
 }
 
 // "About · Contact" dialog, as in chinamitl.
