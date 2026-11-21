@@ -1,0 +1,208 @@
+{
+  "name": "圣地亚哥-德尔埃斯特罗克丘亚语",
+  "variant": "圣地亚哥-德尔埃斯特罗的克丘亚语（quichua）",
+  "region": "阿根廷圣地亚哥-德尔埃斯特罗省，以及迁居布宜诺斯艾利斯的当地人",
+  "summary": "仍在使用的最南端的克丘亚语，流传于圣地亚哥-德尔埃斯特罗的干旱林地。说这种语言的人直接称它为 «la quichua»。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "按词典形式输入以 -y 结尾的动词：munay「爱」、llamcay「工作」、micuy「吃」、'riy「去」。也可以只输入词根（muna）。",
+    "own": {
+      "hint": "输入任意以 -y 结尾的动词及其中文意思。词根以 -i 或 -u 结尾时（llojsiy、puñuy），我们按 Bravo 的说明在过去时里把它变成 -e 和 -o。",
+      "label": "动词",
+      "es_placeholder": "问"
+    }
+  },
+  "source": {
+    "short": "Bravo, ¿Quiere Ud. aprender quichua?（1990）；Yanasuspura（2018）",
+    "full": "Domingo A. Bravo，《¿Quiere Ud. aprender quichua?》（拉班达：CEBIL，第 5 版，1990），用于语法和拼写；Equipo Quichua en Buenos Aires（Del Federico、Navarro、Suárez、Torem），《Yanasuspura, entre amigos: vocabulario y acercamiento al quichua santiagueño》（布宜诺斯艾利斯：Editorial FFyL-UBA，2018，CC BY-NC-SA），用于词汇；Alero Quichua Santiagueño 的在线词典（aleroquichua.org.ar）。延伸阅读：Lelia Inés Albarracín de Alderetes，《La Quichua》第 1–3 卷（布宜诺斯艾利斯：Dunken）。采用 Bravo 的拼写。"
+  },
+  "about": [
+    "圣地亚哥-德尔埃斯特罗克丘亚语流行于阿根廷北部的圣地亚哥-德尔埃斯特罗省，主要分布在杜尔塞河与萨拉多河之间林地里的城镇和村落（Figueroa、Atamisqui、Salavina、Loreto、Avellaneda……）。许多迁居布宜诺斯艾利斯的当地家庭至今仍说这种语言。",
+    "它属于克丘亚语系，与玻利维亚、秘鲁和厄瓜多尔的克丘亚语是亲属，也是其中最靠南的一种。它几个世纪前就与其他克丘亚语分开，有自己的特点：ll 读作轻柔的「z」，古老的 q 变成了 j 或 ck，还有很多来自西班牙语的词。",
+    "说这种语言的不只是原住民：许多圣地亚哥农村家庭，不论出身，都以它为母语。说这种语言的人用阴性称它为 «la quichua»。如今，学校、电台、音乐人以及由音乐家 Sixto Palavecino 推动成立的 Alero Quichua Santiagueño 等团体都在传承这门语言。"
+  ],
+  "orthography": {
+    "intro": "我们采用 Domingo Bravo 的拼写，也就是他的书和词典以及 Yanasuspura 所用的写法。Bravo 选用西班牙语字母，让说话人不必另学一套系统就能读自己的语言：c 和 qu 表示 /k/，hu 表示 /w/，j 表示西班牙语 jota 的音。",
+    "letters": [
+      { "meaning": "土地" },
+      { "meaning": "生活" },
+      { "meaning": "到达" },
+      { "meaning": "给" },
+      { "meaning": "留下" },
+      { "meaning": "房子" },
+      { "meaning": "太阳" },
+      { "meaning": "狐狸" },
+      { "meaning": "工作" },
+      { "meaning": "吃" },
+      { "meaning": "火" },
+      { "meaning": "路" },
+      { "meaning": "给" },
+      { "meaning": "玩" },
+      { "meaning": "月亮" },
+      { "meaning": "石头" },
+      { "meaning": "美丽" },
+      { "meaning": "二" },
+      { "meaning": "跳舞" },
+      { "meaning": "喝" },
+      { "meaning": "水" }
+    ],
+    "vowels": [{ "title": "元音" }],
+    "notes": [
+      "ck 是一个较重的 k，Bravo 说它「像 kj」：ckoy「给」。j 从不出现在词首：átoj「狐狸」，munásaj「我将爱」。",
+      "在圣地亚哥，ll 读作轻柔的「z」，或像布宜诺斯艾利斯西班牙语的 ll：quilla「月亮」听起来像「quiza」。",
+      "词首的 r 读得很轻，像西班牙语 «pero» 里的 r，所以 Bravo 写作 'r：'riy「去」，'rumi「石头」。词中的 r 不加撇号。",
+      "在 e 和 i 前写作 qu，与西班牙语相同：quilla、munanqui。/w/ 音写作 hu：huasi「房子」。",
+      "重音几乎总落在倒数第二个音节，重音符号按西班牙语规则书写：múnaj、munásaj，但 munani 不标。",
+      "Bravo 的字母表里还有 h 和 v，只用于少数词。其他材料，如 Alero Quichua Santiagueño 的材料，采用以 k 和 q 为主的统一拼写（ranteq、rakuyasqa）：语言相同，只是字母不同。"
+    ]
+  },
+  "grammar": {
+    "intro": "克丘亚语动词由词根和一串后缀组成：先是改变意义的后缀（-cu、-chi、-pu），然后是时态，最后是人称。词根就是去掉 -y 的不定式：munay → muna-。",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "词根", "description": "去掉 -y 的不定式。" },
+          { "slot": "派生", "description": "-cu 对自己，-chi 使别人做，-nacu 互相，-pu 为别人……" },
+          { "slot": "时态", "description": "-ra- 过去，-shca- 正在进行，-sa cani 刚刚……" },
+          { "slot": "人称", "description": "-ni、-nqui、-n、-nchis、-ycu、-nquichis、-ncu。" },
+          { "slot": "否定", "description": "前面加 mana，后面加 -chu。" }
+        ]
+      },
+      {
+        "title": "人称",
+        "description": "有两种「我们」：nockanchis 包括听话人，nockaycu 不包括。过去时加 -ra-，将来时有自己的词尾。",
+        "columns": ["人称", "现在时", "过去时", "将来时"],
+        "rows": [
+          { "label": "nocka「我」" },
+          { "label": "ckam「你」" },
+          { "label": "pay「他、她」" },
+          { "label": "nockanchis「我们（包括你）」" },
+          { "label": "nockaycu「我们（不包括你）」" },
+          { "label": "ckamcuna「你们」" },
+          { "label": "paycuna「他们」" }
+        ]
+      },
+      {
+        "title": "以 -i 和 -u 结尾的词根",
+        "description": "词根以 -i 或 -u 结尾时，这个元音在过去时、第三人称将来时和分词里变成 e 或 o。现在时不变。",
+        "columns": ["动词", "现在时", "过去时", "将来时（pay）", "分词"],
+        "rows": [
+          { "label": "llojsiy「出去」" },
+          { "label": "púñuy「睡觉」" },
+          { "label": "'riy「去」" }
+        ]
+      },
+      {
+        "title": "句子",
+        "items": [
+          { "translation": "我工作。" },
+          { "translation": "他们走了。" },
+          { "translation": "我不能。" },
+          { "translation": "别哭。" },
+          { "translation": "我想跳舞。" },
+          { "translation": "我想吃东西。" }
+        ]
+      },
+      {
+        "title": "改变动词意义的后缀",
+        "description": "它们位于词根和时态之间，可以组合使用。",
+        "items": [
+          { "kind": "反身", "meaning": "对自己", "translation": "洗澡" },
+          { "kind": "使役", "meaning": "使别人做", "translation": "教（使知道）" },
+          { "kind": "相互", "meaning": "互相", "translation": "相爱" },
+          { "kind": "受益", "meaning": "为别人", "translation": "为别人工作" },
+          { "kind": "方向", "meaning": "朝这里", "translation": "带来" },
+          { "kind": "意愿", "meaning": "想要", "translation": "想吃东西" }
+        ]
+      },
+      {
+        "title": "人称转移：谁对谁",
+        "description": "动词也可以标出动作指向谁。用 -su- 表示动作指向你；用 -a- 表示动作指向我。",
+        "columns": ["形式", "意思"],
+        "rows": [
+          { "cells": ["我爱你"] },
+          { "cells": ["他爱你"] },
+          { "cells": ["你爱我"] },
+          { "cells": ["他爱我"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "第一人称（nockanchis：包括你）" },
+      { "id": "1x", "label": "第一人称（nockaycu：不包括你）" },
+      { "id": "2", "label": "第二人称" },
+      { "id": "3", "label": "第三人称" }
+    ],
+    "tenses": [
+      { "id": "present", "group": "陈述式", "name": "现在时", "description": "现在或一贯发生的事。" },
+      { "id": "past", "group": "陈述式", "name": "过去时", "description": "Llalliscka pacha：已经发生的事（-ra-）。" },
+      { "id": "perfect", "group": "陈述式", "name": "近过去时", "description": "刚刚发生的事（-sa cani）。" },
+      { "id": "pluperfect", "group": "陈述式", "name": "过去完成时", "description": "更早之前已发生的事（-sa carani）。" },
+      { "id": "progressive", "group": "进行与习惯", "name": "进行时", "description": "正在发生的事（-shca-）。" },
+      { "id": "past_progressive", "group": "进行与习惯", "name": "过去进行时", "description": "当时正在发生的事（-shcara-）。" },
+      { "id": "habitual", "group": "进行与习惯", "name": "习惯", "description": "常做的事：-j 分词加 cani。" },
+      { "id": "past_habitual", "group": "进行与习惯", "name": "过去习惯", "description": "过去常做的事：-j 分词加 carani。" },
+      { "id": "future", "group": "将来与条件", "name": "将来时", "description": "Ámoj pacha：将要发生的事。" },
+      { "id": "conditional", "group": "将来与条件", "name": "条件式", "description": "可能会发生的事（-yman）。" },
+      { "id": "subjunctive", "group": "虚拟式", "name": "虚拟式", "description": "让某人做某事（-nayta）。" },
+      { "id": "switch", "group": "虚拟式", "name": "当……时、如果（-pti-）", "description": "当别人做某事时，或如果别人做某事（-ptiy）。" },
+      { "id": "imperative", "group": "命令", "name": "命令式", "description": "对你或你们的命令（-y、-ychis）。" },
+      { "id": "jussive", "group": "命令", "name": "让他做", "description": "对他或他们的命令（-chun、-chuncu）。" },
+      { "id": "prohibitive", "group": "命令", "name": "禁止", "description": "ama … -ychu：别做！" },
+      { "id": "negative", "group": "否定", "name": "现在时否定", "description": "mana … -chu。" },
+      { "id": "negative_past", "group": "否定", "name": "过去时否定", "description": "mana … -ra- … -chu。" }
+    ],
+    "lexicon": [
+      { "entry": "llamcay", "meaning": "工作", "es": "工作" },
+      { "entry": "munay", "meaning": "爱，想要", "es": "爱" },
+      { "entry": "micuy", "meaning": "吃", "es": "吃饭" },
+      { "entry": "puñuy", "meaning": "睡觉", "es": "睡觉" },
+      { "entry": "llojsiy", "meaning": "出去", "es": "出去" },
+      { "entry": "'riy", "meaning": "去", "es": "去", "note": "写作 'r：词首的 r 读得很轻。过去时：'rerani。" },
+      { "entry": "amuy", "meaning": "来", "es": "来" },
+      { "entry": "'rimay", "meaning": "说话", "es": "说话" },
+      { "entry": "upiay", "meaning": "喝", "es": "喝水" },
+      { "entry": "tusuy", "meaning": "跳舞", "es": "跳舞" },
+      { "entry": "taquiy", "meaning": "唱歌", "es": "唱歌" },
+      { "entry": "asiy", "meaning": "笑", "es": "笑" },
+      { "entry": "huackay", "meaning": "哭", "es": "哭" },
+      { "entry": "sackey", "meaning": "留下（某物）", "es": "留下它" },
+      { "entry": "ckoy", "meaning": "给", "es": "给它" },
+      { "entry": "apay", "meaning": "带走", "es": "带走它" },
+      { "entry": "ckaay", "meaning": "看", "es": "看它" },
+      { "entry": "cutay", "meaning": "磨", "es": "磨它" },
+      { "entry": "yanuy", "meaning": "做饭", "es": "做饭" },
+      { "entry": "puriy", "meaning": "走路", "es": "走路" },
+      { "entry": "pujllay", "meaning": "玩", "es": "玩" },
+      { "entry": "yachay", "meaning": "知道", "es": "知道" },
+      { "entry": "yupay", "meaning": "数数", "es": "数数" },
+      { "entry": "tarpuy", "meaning": "播种", "es": "播种" },
+      { "entry": "mascay", "meaning": "找", "es": "找它" },
+      { "entry": "tariy", "meaning": "找到", "es": "找到它" },
+      { "entry": "uyariy", "meaning": "听", "es": "听" },
+      { "entry": "yuyay", "meaning": "记得", "es": "记得" },
+      { "entry": "'rejsiy", "meaning": "认识", "es": "认识他" },
+      { "entry": "'rantiy", "meaning": "买", "es": "买它" },
+      { "entry": "causay", "meaning": "生活", "es": "生活" },
+      { "entry": "chayay", "meaning": "到达", "es": "到达" },
+      { "entry": "aay", "meaning": "织布", "es": "织布" },
+      { "entry": "'ruay", "meaning": "做", "es": "做这件事" },
+      { "entry": "suyay", "meaning": "等", "es": "等" },
+      { "entry": "huajyay", "meaning": "叫", "es": "叫他" },
+      { "entry": "pichay", "meaning": "扫地", "es": "扫地" },
+      { "entry": "churay", "meaning": "放", "es": "放它" },
+      { "entry": "tiacuy", "meaning": "坐下", "es": "坐下" },
+      { "entry": "armacuy", "meaning": "洗澡", "es": "洗澡" },
+      { "entry": "mosckoy", "meaning": "做梦", "es": "做梦" },
+      { "entry": "unanchay", "meaning": "明白", "es": "明白" },
+      { "entry": "yachachiy", "meaning": "教", "es": "教书" },
+      { "entry": "tapuy", "meaning": "问", "es": "问" },
+      { "entry": "cancay", "meaning": "烤", "es": "烤它" },
+      { "entry": "huañuy", "meaning": "死", "es": "死" },
+      { "entry": "urmay", "meaning": "摔倒", "es": "摔倒" },
+      { "entry": "manchay", "meaning": "害怕", "es": "害怕" }
+    ]
+  }
+}

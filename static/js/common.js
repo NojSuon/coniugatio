@@ -1,15 +1,13 @@
 // Shared pieces for every Mati Mati page: logo, header, footer and helpers.
 
-// Simple MA/TI monogram, redrawn from the manual (§3). Uses currentColor so it
-// works as "positivo" (Tinta) and "negativo" (blanco).
-// TODO: replace with the official vector logo once available.
-export const LOGO_SVG = `
-<svg viewBox="0 0 100 100" role="img" aria-label="Mati Mati" fill="currentColor">
-  <path d="M0 46V3h12l11 15 11-15h12v43H35V22L23 36 11 22v24z"/>
-  <path fill-rule="evenodd" d="M54 46V14C54 7 59 3 66 3h22c7 0 12 4 12 11v32H89V33H65v13zm11-23h24v-8c0-1-1-2-2-2H67c-1 0-2 1-2 2z"/>
-  <path d="M0 54h46v11H28.5v35h-11V65H0z"/>
-  <path d="M54 54h46v11H82.5v24H100v11H54V89h17.5V65H54z"/>
-</svg>`;
+// The Mati Mati logo, as in chinamitl: Petróleo on light pages, white on
+// dark ones (and always white on the Berenjena footer).
+const LOGO = (size = 44, alt = "Mati Mati") => `
+  <img class="logo logo-light" src="static/img/mati-logo-petroleo.png" alt="${alt}" width="${size}" height="${size}">
+  <img class="logo logo-dark" src="static/img/mati-logo-blanco.png" alt="${alt}" width="${size}" height="${size}">`;
+const LOGO_WHITE = (size = 44) =>
+  `<img class="logo" src="static/img/mati-logo-blanco.png" alt="Mati Mati" width="${size}" height="${size}">`;
+const EMAIL = "matimati.info@gmail.com";
 
 // ---------- Language of the page ----------
 // Spanish pages live at /coniugatio/…, English ones at /coniugatio/en/…,
@@ -27,7 +25,7 @@ export const HOME = PREFIX || "./";
 // Donations, on Ko-fi.
 export const DONATE_URL = "https://ko-fi.com/suondilut";
 const donateLink = (cls) =>
-  `<a class="${cls}" href="${DONATE_URL}" target="_blank" rel="noopener">${t("Dónanos", "Donate", "捐助我们")}<span class="visually-hidden"> ${t("(en Ko-fi, se abre en otra pestaña)", "(on Ko-fi, opens in a new tab)", "（在 Ko-fi 上，在新标签页打开）")}</span></a>`;
+  `<a class="${cls}" href="${DONATE_URL}" target="_blank" rel="noopener"><span aria-hidden="true">♥</span><span class="lbl">${t("Dona", "Donate", "捐助")}</span><span class="visually-hidden"> ${t("(en Ko-fi, se abre en otra pestaña)", "(on Ko-fi, opens in a new tab)", "（在 Ko-fi 上，在新标签页打开）")}</span></a>`;
 
 // The same page in another language: /otomi/ ⇄ /en/otomi/ ⇄ /zh/otomi/.
 // The verb travels too, under the other page's parameter (?verbo=, ?verb=).
@@ -114,39 +112,101 @@ export function renderHeader(current) {
   if (!el) return;
   const link = (href, label, key) =>
     `<li><a href="${href}"${current === key ? ' aria-current="page"' : ""}>${label}</a></li>`;
+  const themeLabel = t("Modo oscuro", "Dark mode", "深色模式");
+  const aboutLabel = t("Acerca de · Contacto", "About us · Contact us", "关于我们 · 联系我们");
   el.innerHTML = `
     <div class="wrap">
-      <a class="brand" href="${HOME}">${LOGO_SVG}<span>Mati Mati</span></a>
+      <a class="brand" href="${HOME}">${LOGO()}<span class="brand-text"><strong>Mati Mati</strong><small>${t("Conjugador de lenguas indígenas", "Indigenous language conjugator", "原住民语言动词变位")}</small></span></a>
       <div class="header-end">
-        <nav class="site-nav" aria-label="${t("Principal", "Main", "主导航")}">
+        <nav class="site-nav seg" aria-label="${t("Principal", "Main", "主导航")}">
           <ul>
             ${link(HOME, t("Inicio", "Home", "首页"), "home")}
             ${link(`${HOME}#lenguas`, t("Lenguas", "Languages", "语言"), "lenguas")}
             ${link(`${HOME}#mati`, "Mati Mati", "mati")}
           </ul>
         </nav>
-        ${donateLink("donate")}
-        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="${isDark()}"
-                aria-label="${t("Modo oscuro", "Dark mode", "深色模式")}" title="${t("Modo oscuro", "Dark mode", "深色模式")}">${MOON_SVG}${SUN_SVG}</button>
-        <span class="lang-switches">${SWITCH.filter((l) => l.lang !== LANG)
-          .map(
-            (l) =>
-              `<a class="lang-switch" data-lang-switch="${l.lang}" href="${languageHref(l.lang)}" hreflang="${l.lang}" lang="${l.lang}" aria-label="${l.name}">${l.label}</a>`
-          )
-          .join("")}</span>
+        <span class="lang-switches seg" role="group" aria-label="${t("Idioma", "Language", "语言")}">${SWITCH.map((l) =>
+          l.lang === LANG
+            ? `<span class="lang-switch" aria-current="true" lang="${l.lang}">${l.label}</span>`
+            : `<a class="lang-switch" data-lang-switch="${l.lang}" href="${languageHref(l.lang)}" hreflang="${l.lang}" lang="${l.lang}" aria-label="${l.name}">${l.label}</a>`
+        ).join("")}</span>
+        <span class="links">
+          <button type="button" class="pill theme-toggle" data-theme-toggle aria-pressed="${isDark()}"
+                  aria-label="${themeLabel}" title="${themeLabel}">${MOON_SVG}${SUN_SVG}</button>
+          ${donateLink("pill donate")}
+          <button type="button" class="pill about-btn" data-about-open aria-haspopup="dialog" title="${aboutLabel}"><span aria-hidden="true">i</span><span class="lbl">${aboutLabel}</span></button>
+        </span>
       </div>
     </div>`;
+  renderAbout();
 }
+
+// "About · Contact" dialog, as in chinamitl.
+function renderAbout() {
+  if (document.getElementById("about")) return;
+  const dlg = document.createElement("dialog");
+  dlg.className = "about";
+  dlg.id = "about";
+  dlg.setAttribute("aria-labelledby", "about-title");
+  dlg.innerHTML = `
+    <button type="button" class="close" data-about-close aria-label="${t("Cerrar", "Close", "关闭")}">×</button>
+    <div class="about-logo">${LOGO(56, "")}</div>
+    <h2 id="about-title">${t("Acerca de Mati Mati", "About Mati Mati", "关于 Mati Mati")}</h2>
+    <p>${t(
+      "Mati Mati es una comunidad y plataforma para aprender, preservar y difundir lenguas indígenas y minoritarias.",
+      "Mati Mati is a community and platform for learning, preserving and sharing Indigenous and minority languages.",
+      "Mati Mati 是一个学习、保护和传播原住民语言及少数民族语言的社区与平台。"
+    )}</p>
+    <p>${t(
+      "El conjugador muestra, para cada lengua, quién la habla, cómo se escribe y cómo cambia un verbo con cada persona y cada tiempo.",
+      "The conjugator shows, for each language, who speaks it, how it is written and how a verb changes with each person and tense.",
+      "这个变位工具为每种语言介绍谁在说它、怎样书写，以及动词怎样随人称和时态变化。"
+    )}</p>
+    <h3>${t("Contáctanos", "Contact us", "联系我们")}</h3>
+    <p>${t(
+      "¿Tienes una corrección, una palabra de tu comunidad o una idea? Escríbenos:",
+      "Have a correction, a word from your community or an idea? Write to us:",
+      "有需要更正的内容、你所在社区的说法或新想法？欢迎来信："
+    )}</p>
+    <div class="email-row">
+      <a class="email" href="mailto:${EMAIL}">${EMAIL}</a>
+      <button type="button" class="copy" data-copy-email>${t("Copiar", "Copy", "复制")}</button>
+    </div>
+    <h3>${t("Apóyanos", "Support us", "支持我们")}</h3>
+    <p>${t(
+      "Si te gusta este proyecto, puedes apoyarnos con una donación para seguir creando contenido sobre nuestras lenguas.",
+      "If you enjoy this project, you can support us with a donation so we can keep creating content about our languages.",
+      "如果你喜欢这个项目，可以通过捐助支持我们继续创作有关这些语言的内容。"
+    )}</p>
+    <a class="donate-big" href="${DONATE_URL}" target="_blank" rel="noopener"><span aria-hidden="true">♥</span> ${t("Dona en Ko-fi", "Donate on Ko-fi", "在 Ko-fi 上捐助")}</a>`;
+  document.body.append(dlg);
+}
+
+document.addEventListener("click", async (ev) => {
+  const dlg = document.getElementById("about");
+  if (!dlg) return;
+  if (ev.target.closest?.("[data-about-open]")) dlg.showModal?.();
+  else if (ev.target.closest?.("[data-about-close]") || ev.target === dlg) dlg.close();
+  else if (ev.target.closest?.("[data-copy-email]")) {
+    const btn = ev.target.closest("[data-copy-email]");
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      btn.textContent = t("¡Copiado!", "Copied!", "已复制！");
+    } catch {
+      btn.textContent = EMAIL;
+    }
+  }
+});
 
 export function renderFooter() {
   const el = document.querySelector("[data-site-footer]");
   if (!el) return;
   el.innerHTML = `
     <div class="wrap">
-      <a class="brand" href="${HOME}">${LOGO_SVG}<span>Mati Mati</span></a>
+      <a class="brand" href="${HOME}">${LOGO_WHITE()}<span class="brand-text"><strong>Mati Mati</strong></span></a>
       <p>${t("Aprende, preserva y comparte lenguas indígenas.", "Learn, preserve and share Indigenous languages.", "学习、保护和分享原住民语言。")}<br>
         ${t("Síguenos en", "Follow us at", "关注我们：")} <a href="https://www.instagram.com/matidemati" rel="noopener">@matidemati</a>.</p>
-      ${donateLink("donate donate--footer")}
+      ${donateLink("pill donate donate--footer")}
     </div>`;
 }
 

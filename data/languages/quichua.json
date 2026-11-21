@@ -1,0 +1,238 @@
+{
+  "slug": "quichua",
+  "name": "Quichua santiagueño",
+  "endonym": "quichua",
+  "variant": "Quichua de Santiago del Estero",
+  "region": "Santiago del Estero, Argentina, y sus migrantes en Buenos Aires",
+  "family": "quechua",
+  "area": "chaco",
+  "continent": "sur",
+  "status": "available",
+  "order": 13,
+  "series": "algarrobo",
+  "lang_code": "qus",
+  "summary": "La lengua quechua más al sur que se sigue hablando, en el monte santiagueño. Quienes la hablan la llaman simplemente «la quichua».",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo como en el diccionario, terminado en -y: munay «querer», llamcay «trabajar», micuy «comer», 'riy «ir». También puedes escribir solo la raíz (muna).",
+    "placeholder": "llamcay",
+    "keyboard": ["'", "ñ", "á", "é", "í", "ó", "ú"],
+    "own": {
+      "hint": "Escribe cualquier verbo terminado en -y y su significado en español. Si la raíz termina en -i o -u (llojsiy, puñuy), la cambiamos a -e y -o en el pasado, como dice Bravo.",
+      "label": "Verbo",
+      "placeholder": "tapuy",
+      "es_placeholder": "preguntar"
+    }
+  },
+  "source": {
+    "short": "Bravo, ¿Quiere Ud. aprender quichua? (1990); Yanasuspura (2018)",
+    "full": "Domingo A. Bravo, ¿Quiere Ud. aprender quichua? (La Banda: CEBIL, 5.ª ed., 1990), para la gramática y la signografía; Equipo Quichua en Buenos Aires (Del Federico, Navarro, Suárez, Torem), Yanasuspura, entre amigos: vocabulario y acercamiento al quichua santiagueño (Buenos Aires: Editorial FFyL-UBA, 2018, CC BY-NC-SA), para el vocabulario; diccionario del Alero Quichua Santiagueño (aleroquichua.org.ar). Para profundizar: Lelia Inés Albarracín de Alderetes, La Quichua, vols. 1–3 (Buenos Aires: Dunken). Grafía de Bravo."
+  },
+  "about": [
+    "El quichua santiagueño se habla en la provincia de Santiago del Estero, en el norte de Argentina, sobre todo en los pueblos y parajes del monte entre los ríos Dulce y Salado (Figueroa, Atamisqui, Salavina, Loreto, Avellaneda…). Muchas familias santiagueñas que migraron lo siguen hablando en Buenos Aires.",
+    "Es una lengua quechua, pariente de las que se hablan en Bolivia, Perú y Ecuador, y es la más austral de todas. Se separó del resto hace siglos y tiene rasgos propios: la ll se dice como una «z» suave, la q antigua se volvió j o ck, y hay muchas palabras tomadas del castellano.",
+    "No la hablan solo pueblos indígenas: es la lengua de muchos campesinos santiagueños, sin importar su origen. Quienes la hablan la llaman «la quichua», en femenino. Hoy la sostienen escuelas, radios, músicos y asociaciones como el Alero Quichua Santiagueño, impulsado por el músico Sixto Palavecino."
+  ],
+  "orthography": {
+    "intro": "Usamos la signografía de Domingo Bravo, la de sus libros y diccionarios y la de Yanasuspura. Bravo eligió letras del castellano para que los hablantes leyeran su lengua sin aprender otro sistema: c y qu para /k/, hu para /w/, j para el sonido de la jota.",
+    "letters": [
+      { "letter": "a", "ipa": "a", "word": "allpa", "meaning": "tierra" },
+      { "letter": "c", "ipa": "k", "word": "causay", "meaning": "vivir" },
+      { "letter": "ch", "ipa": "tʃ", "word": "chayay", "meaning": "llegar" },
+      { "letter": "ck", "ipa": "kx", "word": "ckoy", "meaning": "dar" },
+      { "letter": "e", "ipa": "e", "word": "sackey", "meaning": "dejar" },
+      { "letter": "hu", "ipa": "w", "word": "huasi", "meaning": "casa" },
+      { "letter": "i", "ipa": "i", "word": "inti", "meaning": "sol" },
+      { "letter": "j", "ipa": "x", "word": "átoj", "meaning": "zorro" },
+      { "letter": "ll", "ipa": "ʒ", "word": "llamcay", "meaning": "trabajar" },
+      { "letter": "m", "ipa": "m", "word": "micuy", "meaning": "comer" },
+      { "letter": "n", "ipa": "n", "word": "nina", "meaning": "fuego" },
+      { "letter": "ñ", "ipa": "ɲ", "word": "ñan", "meaning": "camino" },
+      { "letter": "o", "ipa": "o", "word": "ckoy", "meaning": "dar" },
+      { "letter": "p", "ipa": "p", "word": "pujllay", "meaning": "jugar" },
+      { "letter": "qu", "ipa": "k", "word": "quilla", "meaning": "luna" },
+      { "letter": "'r", "ipa": "ɾ", "word": "'rumi", "meaning": "piedra" },
+      { "letter": "s", "ipa": "s", "word": "sumaj", "meaning": "lindo" },
+      { "letter": "sh", "ipa": "ʃ", "word": "ishcay", "meaning": "dos" },
+      { "letter": "t", "ipa": "t", "word": "tusuy", "meaning": "bailar" },
+      { "letter": "u", "ipa": "u", "word": "upiay", "meaning": "beber" },
+      { "letter": "y", "ipa": "j", "word": "yacu", "meaning": "agua" }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales",
+        "items": [
+          { "letter": "a", "ipa": "a" },
+          { "letter": "e", "ipa": "e" },
+          { "letter": "i", "ipa": "i" },
+          { "letter": "o", "ipa": "o" },
+          { "letter": "u", "ipa": "u" }
+        ]
+      }
+    ],
+    "notes": [
+      "La ck es una k fuerte, «como kj» dice Bravo: ckoy «dar». La j nunca empieza una palabra: átoj «zorro», munásaj «querré».",
+      "La ll se pronuncia en Santiago como una «z» suave o como la ll rioplatense: quilla «luna» suena «quiza».",
+      "La r al comienzo de palabra es suave, como en «pero», y por eso Bravo la escribe 'r: 'riy «ir», 'rumi «piedra». En medio de palabra va sin apóstrofo.",
+      "Delante de e e i se escribe qu, como en castellano: quilla, munanqui. El sonido /w/ se escribe hu: huasi «casa».",
+      "El acento cae casi siempre en la penúltima sílaba y se escribe según las reglas del castellano: múnaj, munásaj, pero munani.",
+      "Bravo también incluye h y v, que aparecen en pocas palabras. Otros materiales, como los del Alero Quichua Santiagueño, usan una escritura unificada con k y q (ranteq, rakuyasqa); es la misma lengua con otras letras."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo quichua es una raíz y una cadena de sufijos: primero los que cambian el sentido (-cu, -chi, -pu), después el tiempo y al final la persona. La raíz es el infinitivo sin la -y: munay → muna-.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          { "slot": "Raíz", "description": "El infinitivo sin -y.", "example": "muna-" },
+          { "slot": "Derivación", "description": "-cu para uno mismo, -chi hacer hacer, -nacu entre varios, -pu para otro…", "example": "-chi-" },
+          { "slot": "Tiempo", "description": "-ra- pasado, -shca- actualidad, -sa cani reciente…", "example": "-ra-" },
+          { "slot": "Persona", "description": "-ni, -nqui, -n, -nchis, -ycu, -nquichis, -ncu.", "example": "-ni" },
+          { "slot": "Negación", "description": "mana delante y -chu detrás.", "example": "-chu" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Las personas",
+        "description": "Hay dos «nosotros»: nockanchis incluye a quien escucha y nockaycu no. El pasado agrega -ra- y el futuro tiene terminaciones propias.",
+        "columns": ["Persona", "Presente", "Pasado", "Futuro"],
+        "rows": [
+          { "label": "nocka «yo»", "cells": ["munani", "munarani", "munásaj"] },
+          { "label": "ckam «vos»", "cells": ["munanqui", "munaranqui", "munanqui"] },
+          { "label": "pay «él, ella»", "cells": ["munan", "munara", "munancka"] },
+          { "label": "nockanchis «nosotros (con vos)»", "cells": ["munanchis", "munaranchis", "munasunchis"] },
+          { "label": "nockaycu «nosotros (sin vos)»", "cells": ["munaycu", "munaraycu", "munasajcu"] },
+          { "label": "ckamcuna «ustedes»", "cells": ["munanquichis", "munaranquichis", "munanquichis"] },
+          { "label": "paycuna «ellos, ellas»", "cells": ["munancu", "munarancu", "munanckancu"] }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Raíces en -i y -u",
+        "description": "Si la raíz termina en -i o en -u, esa vocal se vuelve e y o en el pasado, en la 3.ª persona del futuro y en el participio. El presente no cambia.",
+        "columns": ["Verbo", "Presente", "Pasado", "Futuro (pay)", "Participio"],
+        "rows": [
+          { "label": "llojsiy «salir»", "cells": ["llojsini", "llojserani", "llojsencka", "llójsej"] },
+          { "label": "púñuy «dormir»", "cells": ["puñuni", "puñorani", "puñoncka", "púñoj"] },
+          { "label": "'riy «ir»", "cells": ["'rini", "'rerani", "'rencka", "'rej"] }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases",
+        "items": [
+          { "text": "Nocka llamcani.", "translation": "Yo trabajo." },
+          { "text": "Paycuna 'rerancu.", "translation": "Ellos se fueron." },
+          { "text": "Mana atinichu.", "translation": "No puedo." },
+          { "text": "Ama huackaychu.", "translation": "No llores." },
+          { "text": "Tusuyta munani.", "translation": "Quiero bailar." },
+          { "text": "Micunaani.", "translation": "Tengo ganas de comer." }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Sufijos que cambian el verbo",
+        "description": "Van entre la raíz y el tiempo, y se pueden combinar.",
+        "items": [
+          { "affix": "-cu-", "kind": "reflexivo", "meaning": "uno mismo", "example": "armacuy", "translation": "bañarse" },
+          { "affix": "-chi-", "kind": "causativo", "meaning": "hacer que otro haga", "example": "yachachiy", "translation": "enseñar (hacer saber)" },
+          { "affix": "-nacu-", "kind": "recíproco", "meaning": "unos a otros", "example": "munanacuy", "translation": "quererse" },
+          { "affix": "-pu-", "kind": "benefactivo", "meaning": "para otro", "example": "llamcapuy", "translation": "trabajar para alguien" },
+          { "affix": "-mu-", "kind": "dirección", "meaning": "hacia aquí", "example": "apamuy", "translation": "traer" },
+          { "affix": "-naa-", "kind": "deseo", "meaning": "tener ganas de", "example": "micunaay", "translation": "tener ganas de comer" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Transiciones: quién a quién",
+        "description": "El verbo también puede marcar a quién se dirige la acción. Con -su- la acción va hacia vos; con -a- va hacia mí.",
+        "columns": ["Forma", "Significado"],
+        "rows": [
+          { "label": "munayqui", "cells": ["yo te quiero"] },
+          { "label": "munasunqui", "cells": ["él te quiere"] },
+          { "label": "munaanqui", "cells": ["vos me querés"] },
+          { "label": "munaan", "cells": ["él me quiere"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "quichua",
+    "persons": [
+      { "id": "1", "label": "1.ª persona (nockanchis: contigo)", "es": 0 },
+      { "id": "1x", "label": "1.ª persona (nockaycu: sin ti)", "es": 0 },
+      { "id": "2", "label": "2.ª persona", "es": 1 },
+      { "id": "3", "label": "3.ª persona", "es": 2 }
+    ],
+    "tenses": [
+      { "id": "present", "group": "Indicativo", "name": "Presente", "description": "Lo que pasa ahora o siempre.", "form": "present", "es": "present" },
+      { "id": "past", "group": "Indicativo", "name": "Pasado", "description": "Llalliscka pacha: lo que ya pasó (-ra-).", "form": "past", "es": "preterite" },
+      { "id": "perfect", "group": "Indicativo", "name": "Pasado inmediato", "description": "Lo que acaba de pasar (-sa cani).", "form": "perfect", "es": "perfect" },
+      { "id": "pluperfect", "group": "Indicativo", "name": "Pluscuamperfecto", "description": "Lo que había pasado antes (-sa carani).", "form": "pluperfect", "es": "pluperfect" },
+      { "id": "progressive", "group": "Actualidad y costumbre", "name": "Actualidad", "description": "Lo que está pasando (-shca-).", "form": "progressive", "es": "progressive" },
+      { "id": "past_progressive", "group": "Actualidad y costumbre", "name": "Actualidad pasada", "description": "Lo que estaba pasando (-shcara-).", "form": "past_progressive", "es": "past_progressive" },
+      { "id": "habitual", "group": "Actualidad y costumbre", "name": "Habitual", "description": "Lo que se suele hacer: participio en -j y cani.", "form": "habitual", "es": { "tense": "present", "aux": "soler" } },
+      { "id": "past_habitual", "group": "Actualidad y costumbre", "name": "Habitual pasado", "description": "Lo que se solía hacer: participio en -j y carani.", "form": "past_habitual", "es": "imperfect" },
+      { "id": "future", "group": "Futuro y condicional", "name": "Futuro", "description": "Ámoj pacha: lo que va a pasar.", "form": "future", "es": "future" },
+      { "id": "conditional", "group": "Futuro y condicional", "name": "Condicional", "description": "Lo que pasaría (-yman).", "form": "conditional", "es": "conditional" },
+      { "id": "subjunctive", "group": "Subjuntivo", "name": "Subjuntivo", "description": "Que alguien haga algo (-nayta).", "form": "subjunctive", "es": { "tense": "subjunctive", "before": "que" } },
+      { "id": "switch", "group": "Subjuntivo", "name": "Cuando, si (-pti-)", "description": "Cuando o si otra persona hace algo (-ptiy).", "form": "switch", "es": { "tense": "present", "before": "cuando" } },
+      { "id": "imperative", "group": "Órdenes", "name": "Imperativo", "description": "Órdenes a vos o a ustedes (-y, -ychis).", "form": "imperative", "es": "imperative" },
+      { "id": "jussive", "group": "Órdenes", "name": "Que haga", "description": "Órdenes para él o ellos (-chun, -chuncu).", "form": "jussive", "es": { "tense": "subjunctive", "before": "que" } },
+      { "id": "prohibitive", "group": "Órdenes", "name": "Prohibición", "description": "ama … -ychu: ¡no lo hagas!", "form": "prohibitive", "negative": true, "es": "imperative" },
+      { "id": "negative", "group": "Negación", "name": "Presente negativo", "description": "mana … -chu.", "form": "negative", "negative": true, "es": "present" },
+      { "id": "negative_past", "group": "Negación", "name": "Pasado negativo", "description": "mana … -ra- … -chu.", "form": "negative_past", "negative": true, "es": "preterite" }
+    ],
+    "lexicon": [
+      { "entry": "llamcay", "meaning": "trabajar", "es": "trabajar" },
+      { "entry": "munay", "meaning": "querer, amar", "es": "querer" },
+      { "entry": "micuy", "meaning": "comer", "es": "comer" },
+      { "entry": "puñuy", "meaning": "dormir", "es": "dormir" },
+      { "entry": "llojsiy", "meaning": "salir", "es": "salir" },
+      { "entry": "'riy", "meaning": "ir", "es": "ir", "note": "Se escribe con 'r: la r del comienzo es suave. Pasado: 'rerani." },
+      { "entry": "amuy", "meaning": "venir", "es": "venir" },
+      { "entry": "'rimay", "meaning": "hablar", "es": "hablar" },
+      { "entry": "upiay", "meaning": "beber", "es": "beber" },
+      { "entry": "tusuy", "meaning": "bailar", "es": "bailar" },
+      { "entry": "taquiy", "meaning": "cantar", "es": "cantar" },
+      { "entry": "asiy", "meaning": "reír", "es": "reír" },
+      { "entry": "huackay", "meaning": "llorar", "es": "llorar" },
+      { "entry": "sackey", "meaning": "dejar", "es": "dejar" },
+      { "entry": "ckoy", "meaning": "dar", "es": "dar" },
+      { "entry": "apay", "meaning": "llevar", "es": "llevar" },
+      { "entry": "ckaay", "meaning": "ver, mirar", "es": "ver" },
+      { "entry": "cutay", "meaning": "moler", "es": "moler" },
+      { "entry": "yanuy", "meaning": "cocinar", "es": "cocinar" },
+      { "entry": "puriy", "meaning": "andar, caminar", "es": "caminar" },
+      { "entry": "pujllay", "meaning": "jugar", "es": "jugar" },
+      { "entry": "yachay", "meaning": "saber", "es": "saber" },
+      { "entry": "yupay", "meaning": "contar (números)", "es": "contar" },
+      { "entry": "tarpuy", "meaning": "sembrar", "es": "sembrar" },
+      { "entry": "mascay", "meaning": "buscar", "es": "buscar" },
+      { "entry": "tariy", "meaning": "encontrar", "es": "encontrar" },
+      { "entry": "uyariy", "meaning": "escuchar", "es": "escuchar" },
+      { "entry": "yuyay", "meaning": "recordar", "es": "recordar" },
+      { "entry": "'rejsiy", "meaning": "conocer", "es": "conocer" },
+      { "entry": "'rantiy", "meaning": "comprar", "es": "comprar" },
+      { "entry": "causay", "meaning": "vivir", "es": "vivir" },
+      { "entry": "chayay", "meaning": "llegar", "es": "llegar" },
+      { "entry": "aay", "meaning": "tejer", "es": "tejer" },
+      { "entry": "'ruay", "meaning": "hacer", "es": "hacer" },
+      { "entry": "suyay", "meaning": "esperar", "es": "esperar" },
+      { "entry": "huajyay", "meaning": "llamar", "es": "llamar" },
+      { "entry": "pichay", "meaning": "barrer", "es": "barrer" },
+      { "entry": "churay", "meaning": "poner", "es": "poner" },
+      { "entry": "tiacuy", "meaning": "sentarse", "es": "sentarse" },
+      { "entry": "armacuy", "meaning": "bañarse", "es": "bañarse" },
+      { "entry": "mosckoy", "meaning": "soñar", "es": "soñar" },
+      { "entry": "unanchay", "meaning": "entender", "es": "entender" },
+      { "entry": "yachachiy", "meaning": "enseñar", "es": "enseñar" },
+      { "entry": "tapuy", "meaning": "preguntar", "es": "preguntar" },
+      { "entry": "cancay", "meaning": "asar", "es": "asar" },
+      { "entry": "huañuy", "meaning": "morir", "es": "morir" },
+      { "entry": "urmay", "meaning": "caer", "es": "caerse" },
+      { "entry": "manchay", "meaning": "temer, tener miedo", "es": "temer" }
+    ]
+  }
+}

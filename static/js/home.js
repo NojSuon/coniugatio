@@ -15,6 +15,7 @@ const FAMILIES = {
   aislada: ["Lengua aislada", "Language isolate", "孤立语言"],
   arawak: ["Arawak", "Arawakan", "阿拉瓦克语系"],
   tupi: ["Tupí-guaraní", "Tupi-Guarani", "图皮-瓜拉尼语族"],
+  quechua: ["Quechua", "Quechuan", "克丘亚语系"],
 };
 const AREAS = {
   mesoamerica: ["Mesoamérica", "Mesoamerica", "中部美洲"],
@@ -22,6 +23,7 @@ const AREAS = {
   cascadia: ["Cascadia", "Cascadia", "卡斯卡迪亚"],
   caribe: ["Gran Caribe", "Greater Caribbean", "大加勒比地区"],
   plata: ["Cuenca del Plata", "Río de la Plata basin", "拉普拉塔河流域"],
+  chaco: ["Gran Chaco", "Gran Chaco", "大查科地区"],
 };
 // Sections of the list, in order. `soon` is shown while a section is empty.
 const CONTINENTS = [

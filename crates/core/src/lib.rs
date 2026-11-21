@@ -12,6 +12,7 @@ pub mod mopan;
 pub mod nahuatl;
 pub mod otomi;
 pub mod purhepecha;
+pub mod quichua;
 pub mod spanish;
 pub mod timucua;
 pub mod guarani;
@@ -57,6 +58,9 @@ pub enum Engine {
     /// Subject + assertive + prefix chain + stem + tense/aspect, with
     /// suppletive stems. See `wixarika`.
     Wixarika(wixarika::Conjugation),
+    /// Root + tense suffix + person ending, with i → e / u → o in the past
+    /// and 3rd person future. See `quichua`.
+    Quichua(quichua::Conjugation),
 }
 
 impl Engine {
@@ -83,6 +87,7 @@ impl Engine {
             Engine::Wayuu(c) => c.conjugate_with(verb, opts),
             Engine::Zoque(c) => c.conjugate_with(verb, opts),
             Engine::Wixarika(c) => c.conjugate_with(verb, opts),
+            Engine::Quichua(c) => c.conjugate_with(verb, opts),
         }
     }
 
@@ -101,6 +106,7 @@ impl Engine {
             Engine::Wayuu(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Zoque(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Wixarika(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Quichua(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
     }
 }

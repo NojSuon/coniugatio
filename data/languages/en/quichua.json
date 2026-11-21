@@ -1,0 +1,208 @@
+{
+  "name": "Santiago del Estero Quichua",
+  "variant": "Quichua of Santiago del Estero",
+  "region": "Santiago del Estero, Argentina, and its migrants in Buenos Aires",
+  "summary": "The southernmost Quechua language still spoken, in the dry forest of Santiago del Estero. Its speakers simply call it «la quichua».",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb as in the dictionary, ending in -y: munay «love», llamcay «work», micuy «eat», 'riy «go». You can also type just the root (muna).",
+    "own": {
+      "hint": "Type any verb ending in -y and its meaning in English. If the root ends in -i or -u (llojsiy, puñuy), we turn it into -e and -o in the past, as Bravo describes.",
+      "label": "Verb",
+      "es_placeholder": "ask"
+    }
+  },
+  "source": {
+    "short": "Bravo, ¿Quiere Ud. aprender quichua? (1990); Yanasuspura (2018)",
+    "full": "Domingo A. Bravo, ¿Quiere Ud. aprender quichua? (La Banda: CEBIL, 5th ed., 1990), for the grammar and the spelling; Equipo Quichua en Buenos Aires (Del Federico, Navarro, Suárez, Torem), Yanasuspura, entre amigos: vocabulario y acercamiento al quichua santiagueño (Buenos Aires: Editorial FFyL-UBA, 2018, CC BY-NC-SA), for the vocabulary; the dictionary of the Alero Quichua Santiagueño (aleroquichua.org.ar). Further reading: Lelia Inés Albarracín de Alderetes, La Quichua, vols. 1–3 (Buenos Aires: Dunken). Bravo's spelling."
+  },
+  "about": [
+    "Santiago del Estero Quichua is spoken in the province of Santiago del Estero, in northern Argentina, above all in the towns and hamlets of the forest between the Dulce and Salado rivers (Figueroa, Atamisqui, Salavina, Loreto, Avellaneda…). Many Santiago families who moved away still speak it in Buenos Aires.",
+    "It is a Quechua language, related to those of Bolivia, Peru and Ecuador, and the southernmost of them all. It split from the rest centuries ago and has features of its own: ll is said like a soft «z», the old q became j or ck, and many words come from Spanish.",
+    "It is not spoken only by Indigenous peoples: it is the language of many rural families of Santiago, whatever their origin. Its speakers call it «la quichua», in the feminine. Today schools, radio programmes, musicians and associations such as the Alero Quichua Santiagueño, started by the musician Sixto Palavecino, keep it going."
+  ],
+  "orthography": {
+    "intro": "We use Domingo Bravo's spelling, the one in his books and dictionaries and in Yanasuspura. Bravo chose Spanish letters so that speakers could read their language without learning another system: c and qu for /k/, hu for /w/, j for the Spanish jota sound.",
+    "letters": [
+      { "meaning": "earth" },
+      { "meaning": "live" },
+      { "meaning": "arrive" },
+      { "meaning": "give" },
+      { "meaning": "leave" },
+      { "meaning": "house" },
+      { "meaning": "sun" },
+      { "meaning": "fox" },
+      { "meaning": "work" },
+      { "meaning": "eat" },
+      { "meaning": "fire" },
+      { "meaning": "path" },
+      { "meaning": "give" },
+      { "meaning": "play" },
+      { "meaning": "moon" },
+      { "meaning": "stone" },
+      { "meaning": "beautiful" },
+      { "meaning": "two" },
+      { "meaning": "dance" },
+      { "meaning": "drink" },
+      { "meaning": "water" }
+    ],
+    "vowels": [{ "title": "Vowels" }],
+    "notes": [
+      "ck is a strong k, «like kj» says Bravo: ckoy «give». j never begins a word: átoj «fox», munásaj «I will love».",
+      "In Santiago ll is said like a soft «z», or like the ll of Buenos Aires: quilla «moon» sounds «quiza».",
+      "An r at the start of a word is soft, as in Spanish «pero», so Bravo writes it 'r: 'riy «go», 'rumi «stone». Inside a word it has no apostrophe.",
+      "Before e and i it is written qu, as in Spanish: quilla, munanqui. The /w/ sound is written hu: huasi «house».",
+      "Stress almost always falls on the second-to-last syllable, and accents are written by Spanish rules: múnaj, munásaj, but munani.",
+      "Bravo's alphabet also has h and v, found in few words. Other materials, such as those of the Alero Quichua Santiagueño, use a unified spelling with k and q (ranteq, rakuyasqa): the same language in other letters."
+    ]
+  },
+  "grammar": {
+    "intro": "A Quichua verb is a root and a chain of suffixes: first those that change the meaning (-cu, -chi, -pu), then the tense, and last the person. The root is the infinitive without its -y: munay → muna-.",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "Root", "description": "The infinitive without -y." },
+          { "slot": "Derivation", "description": "-cu for oneself, -chi make someone do, -nacu each other, -pu for someone…" },
+          { "slot": "Tense", "description": "-ra- past, -shca- ongoing, -sa cani recent…" },
+          { "slot": "Person", "description": "-ni, -nqui, -n, -nchis, -ycu, -nquichis, -ncu." },
+          { "slot": "Negation", "description": "mana before and -chu after." }
+        ]
+      },
+      {
+        "title": "The persons",
+        "description": "There are two «we»: nockanchis includes the listener and nockaycu doesn't. The past adds -ra-, and the future has endings of its own.",
+        "columns": ["Person", "Present", "Past", "Future"],
+        "rows": [
+          { "label": "nocka «I»" },
+          { "label": "ckam «you»" },
+          { "label": "pay «he, she»" },
+          { "label": "nockanchis «we (with you)»" },
+          { "label": "nockaycu «we (not you)»" },
+          { "label": "ckamcuna «you all»" },
+          { "label": "paycuna «they»" }
+        ]
+      },
+      {
+        "title": "Roots in -i and -u",
+        "description": "If the root ends in -i or -u, that vowel becomes e or o in the past, in the 3rd person future and in the participle. The present doesn't change.",
+        "columns": ["Verb", "Present", "Past", "Future (pay)", "Participle"],
+        "rows": [
+          { "label": "llojsiy «go out»" },
+          { "label": "púñuy «sleep»" },
+          { "label": "'riy «go»" }
+        ]
+      },
+      {
+        "title": "Phrases",
+        "items": [
+          { "translation": "I work." },
+          { "translation": "They went away." },
+          { "translation": "I can't." },
+          { "translation": "Don't cry." },
+          { "translation": "I want to dance." },
+          { "translation": "I feel like eating." }
+        ]
+      },
+      {
+        "title": "Suffixes that change the verb",
+        "description": "They go between the root and the tense, and they can be combined.",
+        "items": [
+          { "kind": "reflexive", "meaning": "oneself", "translation": "bathe" },
+          { "kind": "causative", "meaning": "make someone do", "translation": "teach (make know)" },
+          { "kind": "reciprocal", "meaning": "each other", "translation": "love each other" },
+          { "kind": "benefactive", "meaning": "for someone", "translation": "work for someone" },
+          { "kind": "direction", "meaning": "towards here", "translation": "bring" },
+          { "kind": "desire", "meaning": "feel like", "translation": "feel like eating" }
+        ]
+      },
+      {
+        "title": "Transitions: who to whom",
+        "description": "The verb can also mark who the action is aimed at. With -su- it goes towards you; with -a- it goes towards me.",
+        "columns": ["Form", "Meaning"],
+        "rows": [
+          { "cells": ["I love you"] },
+          { "cells": ["he loves you"] },
+          { "cells": ["you love me"] },
+          { "cells": ["he loves me"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "1st person (nockanchis: with you)" },
+      { "id": "1x", "label": "1st person (nockaycu: not you)" },
+      { "id": "2", "label": "2nd person" },
+      { "id": "3", "label": "3rd person" }
+    ],
+    "tenses": [
+      { "id": "present", "group": "Indicative", "name": "Present", "description": "What happens now or always.", "es": "present" },
+      { "id": "past", "group": "Indicative", "name": "Past", "description": "Llalliscka pacha: what already happened (-ra-).", "es": "preterite" },
+      { "id": "perfect", "group": "Indicative", "name": "Recent past", "description": "What has just happened (-sa cani).", "es": "perfect" },
+      { "id": "pluperfect", "group": "Indicative", "name": "Pluperfect", "description": "What had happened before (-sa carani).", "es": "pluperfect" },
+      { "id": "progressive", "group": "Ongoing and habitual", "name": "Ongoing", "description": "What is happening (-shca-).", "es": "progressive" },
+      { "id": "past_progressive", "group": "Ongoing and habitual", "name": "Past ongoing", "description": "What was happening (-shcara-).", "es": "past_progressive" },
+      { "id": "habitual", "group": "Ongoing and habitual", "name": "Habitual", "description": "What one usually does: participle in -j and cani.", "es": { "tense": "present", "adverb": "usually" } },
+      { "id": "past_habitual", "group": "Ongoing and habitual", "name": "Past habitual", "description": "What one used to do: participle in -j and carani.", "es": "imperfect" },
+      { "id": "future", "group": "Future and conditional", "name": "Future", "description": "Ámoj pacha: what will happen.", "es": "future" },
+      { "id": "conditional", "group": "Future and conditional", "name": "Conditional", "description": "What would happen (-yman).", "es": "conditional" },
+      { "id": "subjunctive", "group": "Subjunctive", "name": "Subjunctive", "description": "That someone does something (-nayta).", "es": { "tense": "subjunctive", "before": "that" } },
+      { "id": "switch", "group": "Subjunctive", "name": "When, if (-pti-)", "description": "When or if someone else does something (-ptiy).", "es": { "tense": "present", "before": "when" } },
+      { "id": "imperative", "group": "Orders", "name": "Imperative", "description": "Orders to you or you all (-y, -ychis).", "es": "imperative" },
+      { "id": "jussive", "group": "Orders", "name": "Let him do it", "description": "Orders for him or them (-chun, -chuncu).", "es": "optative" },
+      { "id": "prohibitive", "group": "Orders", "name": "Prohibition", "description": "ama … -ychu: don't do it!", "es": "imperative" },
+      { "id": "negative", "group": "Negation", "name": "Negative present", "description": "mana … -chu.", "es": "present" },
+      { "id": "negative_past", "group": "Negation", "name": "Negative past", "description": "mana … -ra- … -chu.", "es": "preterite" }
+    ],
+    "lexicon": [
+      { "entry": "llamcay", "meaning": "work", "es": "work" },
+      { "entry": "munay", "meaning": "love, want", "es": "love" },
+      { "entry": "micuy", "meaning": "eat", "es": "eat" },
+      { "entry": "puñuy", "meaning": "sleep", "es": "sleep" },
+      { "entry": "llojsiy", "meaning": "go out", "es": "go out" },
+      { "entry": "'riy", "meaning": "go", "es": "go", "note": "Written with 'r: the r at the start is soft. Past: 'rerani." },
+      { "entry": "amuy", "meaning": "come", "es": "come" },
+      { "entry": "'rimay", "meaning": "speak", "es": "speak" },
+      { "entry": "upiay", "meaning": "drink", "es": "drink" },
+      { "entry": "tusuy", "meaning": "dance", "es": "dance" },
+      { "entry": "taquiy", "meaning": "sing", "es": "sing" },
+      { "entry": "asiy", "meaning": "laugh", "es": "laugh" },
+      { "entry": "huackay", "meaning": "cry", "es": "cry" },
+      { "entry": "sackey", "meaning": "leave (something)", "es": "leave it" },
+      { "entry": "ckoy", "meaning": "give", "es": "give it" },
+      { "entry": "apay", "meaning": "carry, take", "es": "take it" },
+      { "entry": "ckaay", "meaning": "see, look", "es": "see it" },
+      { "entry": "cutay", "meaning": "grind", "es": "grind it" },
+      { "entry": "yanuy", "meaning": "cook", "es": "cook" },
+      { "entry": "puriy", "meaning": "walk", "es": "walk" },
+      { "entry": "pujllay", "meaning": "play", "es": "play" },
+      { "entry": "yachay", "meaning": "know", "es": "know it" },
+      { "entry": "yupay", "meaning": "count", "es": "count" },
+      { "entry": "tarpuy", "meaning": "sow", "es": "sow" },
+      { "entry": "mascay", "meaning": "look for", "es": "look for it" },
+      { "entry": "tariy", "meaning": "find", "es": "find it" },
+      { "entry": "uyariy", "meaning": "listen", "es": "listen" },
+      { "entry": "yuyay", "meaning": "remember", "es": "remember it" },
+      { "entry": "'rejsiy", "meaning": "know (someone)", "es": "know them" },
+      { "entry": "'rantiy", "meaning": "buy", "es": "buy it" },
+      { "entry": "causay", "meaning": "live", "es": "live" },
+      { "entry": "chayay", "meaning": "arrive", "es": "arrive" },
+      { "entry": "aay", "meaning": "weave", "es": "weave" },
+      { "entry": "'ruay", "meaning": "do, make", "es": "do it" },
+      { "entry": "suyay", "meaning": "wait", "es": "wait" },
+      { "entry": "huajyay", "meaning": "call", "es": "call them" },
+      { "entry": "pichay", "meaning": "sweep", "es": "sweep" },
+      { "entry": "churay", "meaning": "put", "es": "put it" },
+      { "entry": "tiacuy", "meaning": "sit down", "es": "sit down" },
+      { "entry": "armacuy", "meaning": "bathe", "es": "bathe" },
+      { "entry": "mosckoy", "meaning": "dream", "es": "dream" },
+      { "entry": "unanchay", "meaning": "understand", "es": "understand it" },
+      { "entry": "yachachiy", "meaning": "teach", "es": "teach" },
+      { "entry": "tapuy", "meaning": "ask", "es": "ask" },
+      { "entry": "cancay", "meaning": "roast", "es": "roast it" },
+      { "entry": "huañuy", "meaning": "die", "es": "die" },
+      { "entry": "urmay", "meaning": "fall", "es": "fall" },
+      { "entry": "manchay", "meaning": "fear, be afraid", "es": "be afraid" }
+    ]
+  }
+}

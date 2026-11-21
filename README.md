@@ -65,10 +65,11 @@ Every page also exists in English under `/en/` (`/coniugatio/en/otomi/`…), wit
 - Timucua: Francisco Pareja, *Arte de la lengua timuquana* (1614), ed. Lucien Adam and Julien Vinson (Maisonneuve, 1886). Written in a new Mati Mati spelling: k /k/, q /kʷ/, w and y for the glides, h for Pareja's h/g/x/j, t for t/d, a macron for long vowels and an acute for unexpected (final) stress.
 - Guarani: Bruno Estigarribia, *A Grammar of Paraguayan Guarani* (UCL Press, 2020); Antonio Guasch, *El idioma guaraní* and *Diccionario castellano-guaraní, guaraní-castellano* (CEPAG). Official Paraguayan spelling.
 - Wayuu (wayuunaiki): José Álvarez, *Compendio de la gramática de la lengua wayuu* (2017) and *Manual de la lengua wayuu*.
+- Quichua santiagueño: Domingo A. Bravo, *¿Quiere Ud. aprender quichua?* (La Banda: CEBIL, 5th ed., 1990), for the grammar and the spelling (Bravo's signografía: ck, j, ll, sh, 'r, hu, qu); Equipo Quichua en Buenos Aires (Del Federico, Navarro, Suárez, Torem), *Yanasuspura, entre amigos: vocabulario y acercamiento al quichua santiagueño* (Editorial FFyL-UBA, 2018, CC BY-NC-SA), for the vocabulary; the online dictionary of the Alero Quichua Santiagueño (https://www.aleroquichua.org.ar/sitio/diccionario.php), which uses a unified k/q spelling. Not yet consulted, but the fullest grammar: Lelia Inés Albarracín de Alderetes, *La Quichua*, vols. 1–3 (Dunken), listed at https://www.aacademica.org/lelia.i.albarracin.
 
 In the Mayan languages (Itza', Yucatec, Mopan, Lacandon) the implosive b is written without an apostrophe (b, not b').
 - Maya itza': Charles Andrew Hofling con Fernando Tesucún, *Itzaj Maya Grammar*, University of Utah Press, 2000; *Jiilt'an Maya Itza: Vocabulario Itza'*, Academia de Lenguas Mayas de Guatemala, 2001.
 
 All text in an indigenous language should be checked with speakers before publishing.
 
-Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha`, `yucatec`, `mopan`, `zoque`, `wixarika`, `lacandon`, `timucua`, `guarani` or `wayuu`), which selects the rules in `crates/core`.
+Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha`, `yucatec`, `mopan`, `zoque`, `wixarika`, `lacandon`, `timucua`, `guarani`, `wayuu` or `quichua`), which selects the rules in `crates/core`.

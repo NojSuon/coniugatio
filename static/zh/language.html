@@ -5,13 +5,14 @@
   <base href="{{base}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#2f6b73">
   <script>
     // Light or dark theme before the first paint: the saved choice, else light.
     document.documentElement.dataset.theme = "light";
     try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
   </script>
   <title>{{title}} · Mati Mati</title>
-  <link rel="icon" href="static/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="static/img/mati-logo-petroleo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;700;800&family=Noto+Sans:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap">
