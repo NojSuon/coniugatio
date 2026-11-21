@@ -1,0 +1,245 @@
+{
+  "slug": "mapudungun",
+  "name": "Mapudungun",
+  "endonym": "mapuzugun",
+  "variant": "Mapudungun central (Cautín), alfabeto Azümchefe",
+  "region": "Wallmapu: la Araucanía, el Biobío, Los Ríos y Los Lagos en Chile, Santiago, y Neuquén, Río Negro y Chubut en la Argentina",
+  "family": "araucana",
+  "area": "wallmapu",
+  "continent": "sur",
+  "status": "available",
+  "order": 16,
+  "series": "kallfu",
+  "lang_code": "arn",
+  "summary": "La lengua del pueblo mapuche, «el habla de la tierra». Su verbo encadena sufijos y distingue tres números: uno, dos y muchos.",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo en 1.ª persona, como lo nombra la gramática: txipan «salir», küzawün «trabajar», amun «ir», zugun «hablar». También puedes escribir solo la raíz (txipa, küzaw).",
+    "placeholder": "küzawün",
+    "keyboard": ["ü", "ñ"],
+    "own": {
+      "hint": "Escribe cualquier verbo en 1.ª persona (terminado en -n o -ün) y su significado en español. Los sufijos son los mismos para todos los verbos.",
+      "label": "Verbo",
+      "placeholder": "ramtun",
+      "es_placeholder": "preguntar"
+    }
+  },
+  "source": {
+    "short": "Hernández, Ramos y Huenchulaf, Gramática básica de la lengua mapuche (2006)",
+    "full": "Arturo Hernández Sallés, Nelly Ramos Pizarro y Rosa Huenchulaf Cayuqueo, Gramática básica de la lengua mapuche, tomo 1 (Temuco: Universidad Católica de Temuco / CONADI, 2006), §7, para el verbo y el alfabeto Azümchefe; Elba Jara Trecanahuel, Gilberto Melipil Melipil y Juan Ñancupil Railaf, Cuaderno pedagógico de mapudügun (Servicio Nacional del Patrimonio Cultural, región del Maule, 2020), para el presente con -le / -küle y el vocabulario; Ineke Smeets, A Grammar of Mapuche (Mouton de Gruyter, 2008), para la 1.ª persona plural -(iy)iñ."
+  },
+  "about": [
+    "El mapudungun, o mapuzugun, es la lengua del pueblo mapuche. Se habla en el Wallmapu, el territorio mapuche a ambos lados de la cordillera: en el centro-sur de Chile, sobre todo en la Araucanía, y en la Patagonia argentina, y también en Santiago, adonde migraron muchas familias. Tiene unos cien a doscientos mil hablantes, casi todos bilingües.",
+    "Es una lengua aislada: no tiene parientes conocidos fuera de sus propias variantes, como el williche del sur o el pewenche de la cordillera. Su verbo es aglutinante: a la raíz se le suman sufijos en un orden fijo, hasta diez o más en una sola palabra, para decir quién, a quién, cuándo, dónde y cómo.",
+    "No tiene una sola escritura: conviven el Alfabeto Unificado, el Raguileo y el Azümchefe, que adoptaron la CONADI y el Ministerio de Educación de Chile. Hoy se enseña en escuelas interculturales y en talleres de las comunidades, que trabajan por revitalizarla."
+  ],
+  "orthography": {
+    "intro": "Usamos el alfabeto Azümchefe, el de la gramática de Hernández, Ramos y Huenchulaf y el que adoptó el Estado chileno; su nombre son sus primeras letras (a, z, ü, m, ch, e, f, i) y significa «el que enseña». Cada sonido tiene su letra y la h marca los sonidos con la lengua entre los dientes.",
+    "letters": [
+      { "letter": "a", "ipa": "a", "word": "pataka", "meaning": "cien" },
+      { "letter": "z", "ipa": "θ ~ ð", "word": "zomo", "meaning": "mujer" },
+      { "letter": "ü", "ipa": "ɨ ~ ə", "word": "üñüm", "meaning": "pájaro" },
+      { "letter": "m", "ipa": "m", "word": "mara", "meaning": "liebre" },
+      { "letter": "ch", "ipa": "tʃ", "word": "che", "meaning": "persona, gente" },
+      { "letter": "e", "ipa": "e", "word": "nerüm", "meaning": "pulga" },
+      { "letter": "f", "ipa": "f ~ v", "word": "filu", "meaning": "culebra" },
+      { "letter": "i", "ipa": "i", "word": "piru", "meaning": "gusano" },
+      { "letter": "k", "ipa": "k", "word": "kofke", "meaning": "pan" },
+      { "letter": "t", "ipa": "t", "word": "karukatu", "meaning": "vecino" },
+      { "letter": "nh", "ipa": "n̪", "word": "nhamunh", "meaning": "pie" },
+      { "letter": "tx", "ipa": "ʈʂ", "word": "txomü", "meaning": "nube" },
+      { "letter": "o", "ipa": "o", "word": "poñü", "meaning": "papa" },
+      { "letter": "y", "ipa": "j", "word": "payun", "meaning": "barba" },
+      { "letter": "q", "ipa": "ɣ", "word": "reqle", "meaning": "siete" },
+      { "letter": "g", "ipa": "ŋ", "word": "ge", "meaning": "ojo" },
+      { "letter": "lh", "ipa": "l̪", "word": "folho", "meaning": "boldo" },
+      { "letter": "ñ", "ipa": "ɲ", "word": "makuñ", "meaning": "manta" },
+      { "letter": "r", "ipa": "ɻ", "word": "relmu", "meaning": "arcoíris" },
+      { "letter": "s", "ipa": "s", "word": "sillo", "meaning": "perdiz" },
+      { "letter": "ll", "ipa": "ʎ", "word": "kollella", "meaning": "hormiga" },
+      { "letter": "p", "ipa": "p", "word": "epu", "meaning": "dos" },
+      { "letter": "u", "ipa": "u", "word": "furi", "meaning": "espalda" },
+      { "letter": "w", "ipa": "w", "word": "wapi", "meaning": "isla" },
+      { "letter": "l", "ipa": "l", "word": "txeqül", "meaning": "treile" },
+      { "letter": "n", "ipa": "n", "word": "narnar", "meaning": "sarpullido" }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales",
+        "items": [
+          { "letter": "a", "ipa": "a" },
+          { "letter": "e", "ipa": "e" },
+          { "letter": "i", "ipa": "i" },
+          { "letter": "o", "ipa": "o" },
+          { "letter": "u", "ipa": "u" },
+          { "letter": "ü", "ipa": "ɨ" }
+        ]
+      }
+    ],
+    "notes": [
+      "La ü es una u con los labios estirados, sin redondear: karü «verde». Sin acento suena como una e apagada.",
+      "La r se dice con la punta de la lengua doblada hacia atrás, parecida a la r del inglés: relmu «arcoíris». La tx es una tr arrastrada, como en el castellano de Chile: txomü «nube».",
+      "La g es la n de «banco» o del inglés sing, nunca la g castellana: ge «ojo». El sonido de la g castellana suave se escribe q: reqle «siete».",
+      "Nh, lh y t con la lengua entre los dientes se distinguen de n, l y t: nhamunh «pie». Además, sh y t' marcan un habla cariñosa o despectiva: ufisha «oveja», wezat'e «malvado».",
+      "Otras escrituras escriben los mismos sonidos de otro modo: el Alfabeto Unificado pone d, tr, ng y ñ (mapudungun, trewa «perro»), y el Raguileo, c, x, g y v (mapuzugun, trewa como «crewa»). Por eso la lengua aparece como mapudungun, mapuzugun o mapudüngun."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo mapuche es una raíz seguida de sufijos en un orden fijo: los que cambian el sentido, la negación, el tiempo y al final el modo, la persona y el número. El verbo se nombra por su 1.ª persona del indicativo: txipan «salí», küzawün «trabajé».",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          { "slot": "Raíz", "description": "La 1.ª persona sin -n o -ün.", "example": "txipa-" },
+          { "slot": "Aspecto", "description": "-le / -küle progresivo, -ke habitual, -pe reciente, -wye perfectivo…", "example": "-le-" },
+          { "slot": "Negación", "description": "-la en el indicativo, -no en el hipotético, -kil en el imperativo.", "example": "-la-" },
+          { "slot": "Tiempo", "description": "-a futuro, -fu pasado interrumpido, -afu condicional.", "example": "-a-" },
+          { "slot": "Modo y persona", "description": "Indicativo -n, -ymi, -y…; hipotético -li, -lmi, -le…; imperativo -chi, -ge, -pe…", "example": "-ymi" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Tres números",
+        "description": "La 1.ª y la 2.ª persona distinguen siempre singular, dual (dos personas) y plural (tres o más). En la 3.ª persona el dual y el plural (-gu, -gün) son optativos: küla zomo txipay «salieron tres mujeres».",
+        "columns": ["Persona", "Singular", "Dual", "Plural"],
+        "rows": [
+          { "label": "1.ª", "cells": ["iñche txipan", "iñchiw txipayu", "iñchiñ txipayiñ"] },
+          { "label": "2.ª", "cells": ["eymi txipaymi", "eymu txipaymu", "eymün txipaymün"] },
+          { "label": "3.ª", "cells": ["fey txipay", "feyegu txipaygu", "feyegün txipaygün"] }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Sin tiempo presente",
+        "description": "La forma básica no marca el tiempo: con verbos de acción se entiende como pasado y con verbos de estado como presente. Para hablar de lo que está pasando se usa -le, o -küle después de consonante.",
+        "columns": ["Forma", "Significado"],
+        "rows": [
+          { "label": "amun", "cells": ["fui"] },
+          { "label": "nien epu waka", "cells": ["tengo dos vacas"] },
+          { "label": "amulen", "cells": ["estoy yendo"] },
+          { "label": "kutxankülen", "cells": ["estoy enfermo"] }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases",
+        "items": [
+          { "text": "Mari mari, lamgen.", "translation": "Hola, hermana." },
+          { "text": "¿Chumleymi am?", "translation": "¿Cómo estás?" },
+          { "text": "Kümelkalen.", "translation": "Estoy bien." },
+          { "text": "Kimlan.", "translation": "No sé." },
+          { "text": "Wüle akuay.", "translation": "Llegará mañana." },
+          { "text": "Peukallal.", "translation": "Hasta pronto." }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Sufijos que cambian el verbo",
+        "description": "Van entre la raíz y la persona y se pueden combinar: amu-pa-ke-n «vengo siempre».",
+        "items": [
+          { "affix": "-pa-", "kind": "locativo", "meaning": "hacia aquí", "example": "küpalimi", "translation": "trajiste" },
+          { "affix": "-me-", "kind": "locativo", "meaning": "ir allá y volver", "example": "kintumeyiñ mamüll", "translation": "vamos a buscar leña" },
+          { "affix": "-tu-", "kind": "repetitivo", "meaning": "de nuevo, de vuelta", "example": "amutuy", "translation": "se fue (de vuelta)" },
+          { "affix": "-w-", "kind": "reflexivo, recíproco", "meaning": "a sí mismo, unos a otros", "example": "kelluwiyu", "translation": "nos ayudamos" },
+          { "affix": "-l-", "kind": "causativo", "meaning": "hacer que otro haga", "example": "txepelün", "translation": "desperté a alguien" },
+          { "affix": "-we-", "kind": "cesativo", "meaning": "ya no (con -la)", "example": "zuguwelay", "translation": "ya no habla" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Quién a quién",
+        "description": "El verbo lleva también a la otra persona. Manda la persona más alta (1.ª › 2.ª › 3.ª), sea quien haga o quien reciba: zuguen es «yo fui hablado por ti».",
+        "columns": ["Forma", "Significado"],
+        "rows": [
+          { "label": "zugueyu", "cells": ["yo te hablé"] },
+          { "label": "zuguen", "cells": ["tú me hablaste"] },
+          { "label": "zugufiñ", "cells": ["yo le hablé"] },
+          { "label": "zuguenew", "cells": ["él me habló"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "mapudungun",
+    "persons": [
+      { "id": "1", "label": "1.ª persona (iñche / iñchiñ)", "es": 0 },
+      { "id": "1d", "label": "1.ª persona dual (iñchiw: nosotros dos)", "es": 0 },
+      { "id": "2", "label": "2.ª persona (eymi / eymün)", "es": 1 },
+      { "id": "2d", "label": "2.ª persona dual (eymu: ustedes dos)", "es": 1 },
+      { "id": "3", "label": "3.ª persona (fey / feyegün)", "es": 2 },
+      { "id": "3d", "label": "3.ª persona dual (feyegu: ellos dos)", "es": 2 }
+    ],
+    "tenses": [
+      { "id": "indicative", "group": "Indicativo", "name": "Indicativo", "description": "La forma básica, sin tiempo: pasado en los verbos de acción (txipan «salí»), presente en los de estado (nien «tengo»).", "form": "indicative", "es": "preterite" },
+      { "id": "progressive", "group": "Indicativo", "name": "Progresivo", "description": "Lo que está pasando ahora: -le, o -küle después de consonante.", "form": "progressive", "es": "progressive" },
+      { "id": "habitual", "group": "Indicativo", "name": "Habitual", "description": "Lo que se hace siempre o de costumbre (-ke).", "form": "habitual", "es": { "tense": "present", "aux": "soler" } },
+      { "id": "perfective", "group": "Indicativo", "name": "Perfectivo", "description": "Lo que ya terminó antes de cierto momento (-wye, -üwye).", "form": "perfective", "es": "perfect" },
+      { "id": "past", "group": "Indicativo", "name": "Pasado -fu", "description": "Lo que fue y ya no es, o lo que se intentó sin lograrlo: amufun «había ido (pero…)», niefun «tenía».", "form": "past", "es": "pluperfect" },
+      { "id": "future", "group": "Futuro y condicional", "name": "Futuro", "description": "Lo que va a pasar (-a, -ya después de a).", "form": "future", "es": "future" },
+      { "id": "conditional", "group": "Futuro y condicional", "name": "Condicional", "description": "Lo que pasaría, lo posible y lo cortés (-afu): ¿konafuyiñ? «¿podríamos entrar?».", "form": "conditional", "es": "conditional" },
+      { "id": "hypothetical", "group": "Futuro y condicional", "name": "Hipotético", "description": "El modo de la condición o la suposición (-l, -ül): si sucede.", "form": "hypothetical", "es": { "tense": "present", "before": "si" } },
+      { "id": "imperative", "group": "Órdenes", "name": "Imperativo", "description": "Órdenes a ti, a ustedes dos o a ustedes (-ge, -mu, -mün).", "form": "imperative", "es": "imperative" },
+      { "id": "hortative", "group": "Órdenes", "name": "Hagamos", "description": "Invitar a hacer algo juntos, con las formas del indicativo (-yu, -yiñ).", "form": "hortative", "es": { "tense": "subjunctive", "pronoun": false } },
+      { "id": "jussive", "group": "Órdenes", "name": "Que haga", "description": "Déjenme hacerlo (-chi) y que él o ellos lo hagan (-pe, -pegu, -pegün).", "form": "jussive", "es": { "tense": "subjunctive", "before": "que" } },
+      { "id": "prohibitive", "group": "Órdenes", "name": "Prohibición", "description": "-kil: ¡no lo hagas!", "form": "prohibitive", "negative": true, "es": "imperative" },
+      { "id": "negative", "group": "Negación", "name": "Indicativo negativo", "description": "-la: txipalan «no salí».", "form": "negative", "negative": true, "es": "preterite" },
+      { "id": "negative_future", "group": "Negación", "name": "Futuro negativo", "description": "-la-ya: txipalayan «no saldré».", "form": "negative_future", "negative": true, "es": "future" },
+      { "id": "negative_hypothetical", "group": "Negación", "name": "Hipotético negativo", "description": "-no-l: txipanoli «si no salgo».", "form": "negative_hypothetical", "negative": true, "es": { "tense": "present", "before": "si" } }
+    ],
+    "lexicon": [
+      { "entry": "amun", "meaning": "ir", "es": "ir" },
+      { "entry": "akun", "meaning": "llegar", "es": "llegar" },
+      { "entry": "küpan", "meaning": "venir; querer (con otro verbo)", "es": "venir" },
+      { "entry": "txipan", "meaning": "salir", "es": "salir" },
+      { "entry": "konün", "meaning": "entrar", "es": "entrar" },
+      { "entry": "wiñotun", "meaning": "volver", "es": "volver" },
+      { "entry": "umawtun", "meaning": "dormir", "es": "dormir" },
+      { "entry": "in", "meaning": "comer", "es": "comer" },
+      { "entry": "pütokon", "meaning": "beber agua", "es": "beber" },
+      { "entry": "zugun", "meaning": "hablar", "es": "hablar" },
+      { "entry": "pin", "meaning": "decir", "es": "decir" },
+      { "entry": "kimün", "meaning": "saber, conocer", "es": "saber" },
+      { "entry": "kintun", "meaning": "buscar", "es": "buscar" },
+      { "entry": "pen", "meaning": "ver, encontrar", "es": "ver" },
+      { "entry": "lelin", "meaning": "mirar", "es": "mirar" },
+      { "entry": "allkütun", "meaning": "escuchar", "es": "escuchar" },
+      { "entry": "elun", "meaning": "dar", "es": "dar" },
+      { "entry": "gillan", "meaning": "comprar", "es": "comprar" },
+      { "entry": "güman", "meaning": "llorar", "es": "llorar" },
+      { "entry": "ayen", "meaning": "reír", "es": "reír" },
+      { "entry": "ülkantun", "meaning": "cantar", "es": "cantar" },
+      { "entry": "purun", "meaning": "bailar", "es": "bailar" },
+      { "entry": "txekan", "meaning": "caminar", "es": "caminar" },
+      { "entry": "lefün", "meaning": "correr", "es": "correr" },
+      { "entry": "küzawün", "meaning": "trabajar", "es": "trabajar" },
+      { "entry": "mülen", "meaning": "estar, haber", "es": "estar" },
+      { "entry": "nien", "meaning": "tener", "es": "tener" },
+      { "entry": "ramtun", "meaning": "preguntar", "es": "preguntar" },
+      { "entry": "chalin", "meaning": "saludar", "es": "saludar" },
+      { "entry": "txepen", "meaning": "despertar", "es": "despertar" },
+      { "entry": "weñen", "meaning": "robar", "es": "robar" },
+      { "entry": "zewman", "meaning": "hacer", "es": "hacer" },
+      { "entry": "kellun", "meaning": "ayudar", "es": "ayudar" },
+      { "entry": "nütxamün", "meaning": "conversar", "es": "conversar" },
+      { "entry": "magelün", "meaning": "invitar", "es": "invitar" },
+      { "entry": "lepün", "meaning": "barrer", "es": "barrer" },
+      { "entry": "katxün", "meaning": "cortar", "es": "cortar" },
+      { "entry": "lhan", "meaning": "morir", "es": "morir" },
+      { "entry": "anün", "root": "anü", "meaning": "sentarse", "es": "sentarse" },
+      { "entry": "wirin", "meaning": "escribir", "es": "escribir" },
+      { "entry": "chillkatun", "meaning": "leer, estudiar", "es": "leer" },
+      { "entry": "gillatun", "meaning": "rezar, hacer rogativa", "es": "rezar" },
+      { "entry": "azkintun", "meaning": "divisar", "es": "divisar" },
+      { "entry": "kimeltun", "meaning": "enseñar", "es": "enseñar" },
+      { "entry": "awkantun", "meaning": "jugar", "es": "jugar" },
+      { "entry": "witxalün", "meaning": "tejer en telar", "es": "tejer" },
+      { "entry": "küchatun", "meaning": "lavar (ropa)", "es": "lavar" },
+      { "entry": "rupan", "meaning": "pasar", "es": "pasar" },
+      { "entry": "püran", "meaning": "subir", "es": "subir" },
+      { "entry": "nagün", "meaning": "bajar", "es": "bajar" },
+      { "entry": "afün", "meaning": "terminar(se)", "es": "terminar" },
+      { "entry": "kewan", "meaning": "pelear", "es": "pelear" },
+      { "entry": "mawün", "root": "mawün", "meaning": "llover", "es": "llover", "note": "Verbo del clima: se usa en 3.ª persona, mawüni «llovió», mawünküley «está lloviendo»; con -ma, mawünman «me llovió»." }
+    ]
+  }
+}

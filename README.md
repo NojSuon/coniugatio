@@ -71,9 +71,11 @@ Every page also exists in English under `/en/` (`/coniugatio/en/otomi/`…), wit
 
 - Quechua cuzqueño (qheswa simi): Antonio Cusihuamán G., *Gramática quechua Cuzco-Collao* (Cusco: CBC, 2nd ed., 2001), ch. 6 for the verb; Academia Mayor de la Lengua Quechua, *Diccionario quechua–español–quechua* (Cusco, 2005), for the five-vowel spelling and the vocabulary.
 
+- Mapudungun (mapuzugun): Arturo Hernández Sallés, Nelly Ramos Pizarro y Rosa Huenchulaf Cayuqueo, *Gramática básica de la lengua mapuche*, tomo 1 (UC Temuco / CONADI, 2006), §7 for the verb, in its Azümchefe alphabet; Elba Jara Trecanahuel, Gilberto Melipil Melipil y Juan Ñancupil Railaf, *Cuaderno pedagógico de mapudügun* (Servicio Nacional del Patrimonio Cultural, Maule, 2020), for -le / -küle and vocabulary; Ineke Smeets, *A Grammar of Mapuche* (Mouton de Gruyter, 2008), for the 1st plural -(iy)iñ.
+
 In the Mayan languages (Itza', Yucatec, Mopan, Lacandon) the implosive b is written without an apostrophe (b, not b').
 - Maya itza': Charles Andrew Hofling con Fernando Tesucún, *Itzaj Maya Grammar*, University of Utah Press, 2000; *Jiilt'an Maya Itza: Vocabulario Itza'*, Academia de Lenguas Mayas de Guatemala, 2001.
 
 All text in an indigenous language should be checked with speakers before publishing.
 
-Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha`, `yucatec`, `mopan`, `zoque`, `wixarika`, `lacandon`, `timucua`, `guarani`, `wayuu`, `quichua`, `kichwa` or `qheswa`), which selects the rules in `crates/core`.
+Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha`, `yucatec`, `mopan`, `zoque`, `wixarika`, `lacandon`, `timucua`, `guarani`, `wayuu`, `quichua`, `kichwa`, `qheswa` or `mapudungun`), which selects the rules in `crates/core`.

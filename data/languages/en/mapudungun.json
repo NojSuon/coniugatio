@@ -1,0 +1,214 @@
+{
+  "name": "Mapudungun",
+  "variant": "Central Mapudungun (Cautín), Azümchefe alphabet",
+  "region": "Wallmapu: Araucanía, Biobío, Los Ríos and Los Lagos in Chile, Santiago, and Neuquén, Río Negro and Chubut in Argentina",
+  "summary": "The language of the Mapuche people, «the speech of the land». Its verb strings suffixes together and has three numbers: one, two and many.",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb in the 1st person, as the grammar names it: txipan «go out», küzawün «work», amun «go», zugun «speak». You can also type just the root (txipa, küzaw).",
+    "own": {
+      "hint": "Type any verb in the 1st person (ending in -n or -ün) and its meaning in English. The suffixes are the same for every verb.",
+      "label": "Verb",
+      "es_placeholder": "ask"
+    }
+  },
+  "source": {
+    "short": "Hernández, Ramos and Huenchulaf, Gramática básica de la lengua mapuche (2006)",
+    "full": "Arturo Hernández Sallés, Nelly Ramos Pizarro and Rosa Huenchulaf Cayuqueo, Gramática básica de la lengua mapuche, vol. 1 (Temuco: Universidad Católica de Temuco / CONADI, 2006), §7, for the verb and the Azümchefe alphabet; Elba Jara Trecanahuel, Gilberto Melipil Melipil and Juan Ñancupil Railaf, Cuaderno pedagógico de mapudügun (Servicio Nacional del Patrimonio Cultural, Maule region, 2020), for the present with -le / -küle and the vocabulary; Ineke Smeets, A Grammar of Mapuche (Mouton de Gruyter, 2008), for the 1st person plural -(iy)iñ."
+  },
+  "about": [
+    "Mapudungun, or Mapuzugun, is the language of the Mapuche people. It is spoken in Wallmapu, the Mapuche land on both sides of the Andes: in south-central Chile, above all in Araucanía, and in Argentine Patagonia, and also in Santiago, where many families moved. It has some one to two hundred thousand speakers, nearly all bilingual.",
+    "It is an isolate: it has no known relatives beyond its own varieties, such as Huilliche in the south or Pehuenche in the mountains. Its verb is agglutinative: suffixes are added to the root in a fixed order, ten or more in a single word, to say who, to whom, when, where and how.",
+    "It has no single spelling: the Unified Alphabet, Raguileo and Azümchefe, adopted by CONADI and Chile's Ministry of Education, live side by side. Today it is taught in intercultural schools and in community workshops working to revitalize it."
+  ],
+  "orthography": {
+    "intro": "We use the Azümchefe alphabet, the one in Hernández, Ramos and Huenchulaf's grammar and the one adopted by the Chilean state; its name is made of its first letters (a, z, ü, m, ch, e, f, i) and means «the one who teaches». Each sound has its letter, and h marks the sounds made with the tongue between the teeth.",
+    "letters": [
+      { "meaning": "hundred" },
+      { "meaning": "woman" },
+      { "meaning": "bird" },
+      { "meaning": "hare" },
+      { "meaning": "person, people" },
+      { "meaning": "flea" },
+      { "meaning": "snake" },
+      { "meaning": "worm" },
+      { "meaning": "bread" },
+      { "meaning": "neighbour" },
+      { "meaning": "foot" },
+      { "meaning": "cloud" },
+      { "meaning": "potato" },
+      { "meaning": "beard" },
+      { "meaning": "seven" },
+      { "meaning": "eye" },
+      { "meaning": "boldo (tree)" },
+      { "meaning": "blanket" },
+      { "meaning": "rainbow" },
+      { "meaning": "partridge" },
+      { "meaning": "ant" },
+      { "meaning": "two" },
+      { "meaning": "back" },
+      { "meaning": "island" },
+      { "meaning": "lapwing" },
+      { "meaning": "rash" }
+    ],
+    "vowels": [{ "title": "Vowels" }],
+    "notes": [
+      "ü is a u with spread, unrounded lips: karü «green». Unstressed it sounds like a dull e.",
+      "r is said with the tip of the tongue curled back, like an English r but softer: relmu «rainbow». tx is a dragged tr, as in Chilean Spanish: txomü «cloud».",
+      "g is the ng of sing, never a Spanish g: ge «eye». The soft Spanish g sound is written q: reqle «seven».",
+      "nh, lh and t with the tongue between the teeth are kept apart from n, l and t: nhamunh «foot». Also, sh and t' mark affectionate or scornful speech: ufisha «sheep», wezat'e «villain».",
+      "Other spellings write the same sounds differently: the Unified Alphabet uses d, tr, ng and ñ (mapudungun, trewa «dog»), and Raguileo uses c, x, g and v. That is why the language appears as mapudungun, mapuzugun or mapudüngun."
+    ]
+  },
+  "grammar": {
+    "intro": "A Mapuche verb is a root followed by suffixes in a fixed order: those that change the meaning, negation, tense and last mood, person and number. A verb is named by its 1st person indicative: txipan «I went out», küzawün «I worked».",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "Root", "description": "The 1st person without -n or -ün." },
+          { "slot": "Aspect", "description": "-le / -küle progressive, -ke habitual, -pe recent, -wye perfective…" },
+          { "slot": "Negation", "description": "-la in the indicative, -no in the hypothetical, -kil in the imperative." },
+          { "slot": "Tense", "description": "-a future, -fu interrupted past, -afu conditional." },
+          { "slot": "Mood and person", "description": "Indicative -n, -ymi, -y…; hypothetical -li, -lmi, -le…; imperative -chi, -ge, -pe…" }
+        ]
+      },
+      {
+        "title": "Three numbers",
+        "description": "The 1st and 2nd persons always tell singular, dual (two people) and plural (three or more) apart. In the 3rd person the dual and plural (-gu, -gün) are optional: küla zomo txipay «three women went out».",
+        "columns": ["Person", "Singular", "Dual", "Plural"],
+        "rows": [
+          { "label": "1st" },
+          { "label": "2nd" },
+          { "label": "3rd" }
+        ]
+      },
+      {
+        "title": "No present tense",
+        "description": "The basic form doesn't mark tense: with action verbs it reads as past, with state verbs as present. For what is happening now, -le is used, or -küle after a consonant.",
+        "columns": ["Form", "Meaning"],
+        "rows": [
+          { "cells": ["I went"] },
+          { "cells": ["I have two cows"] },
+          { "cells": ["I am going"] },
+          { "cells": ["I am ill"] }
+        ]
+      },
+      {
+        "title": "Phrases",
+        "items": [
+          { "translation": "Hello, sister." },
+          { "translation": "How are you?" },
+          { "translation": "I'm fine." },
+          { "translation": "I don't know." },
+          { "translation": "He will arrive tomorrow." },
+          { "translation": "See you soon." }
+        ]
+      },
+      {
+        "title": "Suffixes that change the verb",
+        "description": "They go between the root and the person and can be combined: amu-pa-ke-n «I always come».",
+        "items": [
+          { "kind": "locative", "meaning": "towards here", "translation": "you brought" },
+          { "kind": "locative", "meaning": "go there and come back", "translation": "let's go fetch firewood" },
+          { "kind": "repetitive", "meaning": "again, back", "translation": "he went (back) away" },
+          { "kind": "reflexive, reciprocal", "meaning": "oneself, each other", "translation": "we help each other" },
+          { "kind": "causative", "meaning": "make someone do", "translation": "I woke someone up" },
+          { "kind": "cessative", "meaning": "no longer (with -la)", "translation": "he no longer speaks" }
+        ]
+      },
+      {
+        "title": "Who to whom",
+        "description": "The verb also carries the other person. The higher person leads (1st › 2nd › 3rd), whether it acts or receives: zuguen is «I was spoken to by you».",
+        "columns": ["Form", "Meaning"],
+        "rows": [
+          { "cells": ["I spoke to you"] },
+          { "cells": ["you spoke to me"] },
+          { "cells": ["I spoke to him"] },
+          { "cells": ["he spoke to me"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "1st person (iñche / iñchiñ)" },
+      { "id": "1d", "label": "1st person dual (iñchiw: we two)" },
+      { "id": "2", "label": "2nd person (eymi / eymün)" },
+      { "id": "2d", "label": "2nd person dual (eymu: you two)" },
+      { "id": "3", "label": "3rd person (fey / feyegün)" },
+      { "id": "3d", "label": "3rd person dual (feyegu: they two)" }
+    ],
+    "tenses": [
+      { "id": "indicative", "group": "Indicative", "name": "Indicative", "description": "The basic form, with no tense: past for action verbs (txipan «I went out»), present for state verbs (nien «I have»)." },
+      { "id": "progressive", "group": "Indicative", "name": "Progressive", "description": "What is happening now: -le, or -küle after a consonant." },
+      { "id": "habitual", "group": "Indicative", "name": "Habitual", "description": "What one always or usually does (-ke).", "es": { "tense": "present", "adverb": "usually" } },
+      { "id": "perfective", "group": "Indicative", "name": "Perfective", "description": "What was over before a given moment (-wye, -üwye)." },
+      { "id": "past", "group": "Indicative", "name": "-fu past", "description": "What was and no longer is, or was tried in vain: amufun «I had gone (but…)», niefun «I had»." },
+      { "id": "future", "group": "Future and conditional", "name": "Future", "description": "What will happen (-a, -ya after a)." },
+      { "id": "conditional", "group": "Future and conditional", "name": "Conditional", "description": "What would happen, what is possible and what is polite (-afu): ¿konafuyiñ? «may we come in?»." },
+      { "id": "hypothetical", "group": "Future and conditional", "name": "Hypothetical", "description": "The mood of conditions and suppositions (-l, -ül): if it happens.", "es": { "tense": "present", "before": "if" } },
+      { "id": "imperative", "group": "Orders", "name": "Imperative", "description": "Orders to you, you two or you all (-ge, -mu, -mün)." },
+      { "id": "hortative", "group": "Orders", "name": "Let's", "description": "Inviting others to do something together, with the indicative forms (-yu, -yiñ).", "es": { "tense": "present", "before": "let's", "pronoun": false } },
+      { "id": "jussive", "group": "Orders", "name": "Let him do it", "description": "Let me do it (-chi) and let him or them do it (-pe, -pegu, -pegün).", "es": "optative" },
+      { "id": "prohibitive", "group": "Orders", "name": "Prohibition", "description": "-kil: don't do it!" },
+      { "id": "negative", "group": "Negation", "name": "Negative indicative", "description": "-la: txipalan «I didn't go out»." },
+      { "id": "negative_future", "group": "Negation", "name": "Negative future", "description": "-la-ya: txipalayan «I won't go out»." },
+      { "id": "negative_hypothetical", "group": "Negation", "name": "Negative hypothetical", "description": "-no-l: txipanoli «if I don't go out».", "es": { "tense": "present", "before": "if" } }
+    ],
+    "lexicon": [
+      { "entry": "amun", "meaning": "go", "es": "go" },
+      { "entry": "akun", "meaning": "arrive", "es": "arrive" },
+      { "entry": "küpan", "meaning": "come; want (with another verb)", "es": "come" },
+      { "entry": "txipan", "meaning": "go out", "es": "go out" },
+      { "entry": "konün", "meaning": "go in", "es": "go in" },
+      { "entry": "wiñotun", "meaning": "come back", "es": "come back" },
+      { "entry": "umawtun", "meaning": "sleep", "es": "sleep" },
+      { "entry": "in", "meaning": "eat", "es": "eat" },
+      { "entry": "pütokon", "meaning": "drink water", "es": "drink" },
+      { "entry": "zugun", "meaning": "speak", "es": "speak" },
+      { "entry": "pin", "meaning": "say", "es": "say it" },
+      { "entry": "kimün", "meaning": "know", "es": "know it" },
+      { "entry": "kintun", "meaning": "look for", "es": "look for it" },
+      { "entry": "pen", "meaning": "see, find", "es": "see it" },
+      { "entry": "lelin", "meaning": "look", "es": "look" },
+      { "entry": "allkütun", "meaning": "listen", "es": "listen" },
+      { "entry": "elun", "meaning": "give", "es": "give it" },
+      { "entry": "gillan", "meaning": "buy", "es": "buy it" },
+      { "entry": "güman", "meaning": "cry", "es": "cry" },
+      { "entry": "ayen", "meaning": "laugh", "es": "laugh" },
+      { "entry": "ülkantun", "meaning": "sing", "es": "sing" },
+      { "entry": "purun", "meaning": "dance", "es": "dance" },
+      { "entry": "txekan", "meaning": "walk", "es": "walk" },
+      { "entry": "lefün", "meaning": "run", "es": "run" },
+      { "entry": "küzawün", "meaning": "work", "es": "work" },
+      { "entry": "mülen", "meaning": "be (somewhere), there is", "es": "be there" },
+      { "entry": "nien", "meaning": "have", "es": "have it" },
+      { "entry": "ramtun", "meaning": "ask", "es": "ask" },
+      { "entry": "chalin", "meaning": "greet", "es": "greet them" },
+      { "entry": "txepen", "meaning": "wake up", "es": "wake up" },
+      { "entry": "weñen", "meaning": "steal", "es": "steal it" },
+      { "entry": "zewman", "meaning": "make, do", "es": "do it" },
+      { "entry": "kellun", "meaning": "help", "es": "help" },
+      { "entry": "nütxamün", "meaning": "talk, chat", "es": "talk" },
+      { "entry": "magelün", "meaning": "invite", "es": "invite them" },
+      { "entry": "lepün", "meaning": "sweep", "es": "sweep" },
+      { "entry": "katxün", "meaning": "cut", "es": "cut it" },
+      { "entry": "lhan", "meaning": "die", "es": "die" },
+      { "entry": "anün", "meaning": "sit down", "es": "sit down" },
+      { "entry": "wirin", "meaning": "write", "es": "write" },
+      { "entry": "chillkatun", "meaning": "read, study", "es": "read" },
+      { "entry": "gillatun", "meaning": "pray, hold a ngillatun", "es": "pray" },
+      { "entry": "azkintun", "meaning": "make out (in the distance)", "es": "see it from afar" },
+      { "entry": "kimeltun", "meaning": "teach", "es": "teach" },
+      { "entry": "awkantun", "meaning": "play", "es": "play" },
+      { "entry": "witxalün", "meaning": "weave on a loom", "es": "weave" },
+      { "entry": "küchatun", "meaning": "wash (clothes)", "es": "wash" },
+      { "entry": "rupan", "meaning": "pass", "es": "pass" },
+      { "entry": "püran", "meaning": "go up", "es": "go up" },
+      { "entry": "nagün", "meaning": "go down", "es": "go down" },
+      { "entry": "afün", "meaning": "end, run out", "es": "finish" },
+      { "entry": "kewan", "meaning": "fight", "es": "fight" },
+      { "entry": "mawün", "meaning": "rain", "es": "rain", "note": "A weather verb, used in the 3rd person: mawüni «it rained», mawünküley «it is raining»; with -ma, mawünman «it rained on me»." }
+    ]
+  }
+}

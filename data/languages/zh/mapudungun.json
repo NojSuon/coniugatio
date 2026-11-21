@@ -1,0 +1,214 @@
+{
+  "name": "马普切语",
+  "variant": "中部马普切语（考廷），Azümchefe 字母",
+  "region": "瓦尔马普：智利的阿劳卡尼亚、比奥比奥、洛斯里奥斯和洛斯拉戈斯以及圣地亚哥，阿根廷的内乌肯、里奥内格罗和丘布特",
+  "summary": "马普切人的语言，意为「大地的言语」。它的动词把后缀串在一起，并区分三种数：一个、两个和多个。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "按语法书的叫法输入动词的第一人称形式：txipan「出去」、küzawün「工作」、amun「去」、zugun「说话」。也可以只输入词根（txipa、küzaw）。",
+    "own": {
+      "hint": "输入任意第一人称形式的动词（以 -n 或 -ün 结尾）及其中文意思。所有动词的后缀都相同。",
+      "label": "动词",
+      "es_placeholder": "问"
+    }
+  },
+  "source": {
+    "short": "Hernández、Ramos 与 Huenchulaf，《Gramática básica de la lengua mapuche》（2006）",
+    "full": "Arturo Hernández Sallés、Nelly Ramos Pizarro 与 Rosa Huenchulaf Cayuqueo，《Gramática básica de la lengua mapuche》第 1 卷（特木科：特木科天主教大学 / CONADI，2006），第 7 节，用于动词和 Azümchefe 字母；Elba Jara Trecanahuel、Gilberto Melipil Melipil 与 Juan Ñancupil Railaf，《Cuaderno pedagógico de mapudügun》（国家文化遗产局，马乌莱大区，2020），用于 -le / -küle 现在时和词汇；Ineke Smeets，《A Grammar of Mapuche》（Mouton de Gruyter，2008），用于第一人称复数 -(iy)iñ。"
+  },
+  "about": [
+    "马普切语（mapudungun，又称 mapuzugun）是马普切人的语言。它流行于瓦尔马普，即安第斯山脉两侧的马普切土地：智利中南部，尤其是阿劳卡尼亚，以及阿根廷巴塔哥尼亚；在许多家庭迁居的圣地亚哥也有人使用。它约有十万到二十万使用者，几乎都是双语者。",
+    "它是一种孤立语言：除了它自己的变体（如南部的威利切语和山区的佩文切语）之外，没有已知的亲属语言。它的动词是黏着的：后缀按固定顺序加在词根后面，一个词里可以有十个甚至更多，用来表示谁、对谁、何时、何地、如何。",
+    "它没有统一的拼写：统一字母、拉吉莱奥字母和 Azümchefe 字母并存，后者被 CONADI 和智利教育部采用。如今它在跨文化学校和社区工作坊中教授，人们正努力振兴这门语言。"
+  ],
+  "orthography": {
+    "intro": "我们采用 Azümchefe 字母，即 Hernández、Ramos 和 Huenchulaf 语法所用、并被智利政府采用的字母；它的名字由前几个字母（a、z、ü、m、ch、e、f、i）组成，意为「教导者」。每个音都有自己的字母，h 表示舌头放在齿间发的音。",
+    "letters": [
+      { "meaning": "一百" },
+      { "meaning": "女人" },
+      { "meaning": "鸟" },
+      { "meaning": "野兔" },
+      { "meaning": "人" },
+      { "meaning": "跳蚤" },
+      { "meaning": "蛇" },
+      { "meaning": "虫子" },
+      { "meaning": "面包" },
+      { "meaning": "邻居" },
+      { "meaning": "脚" },
+      { "meaning": "云" },
+      { "meaning": "土豆" },
+      { "meaning": "胡子" },
+      { "meaning": "七" },
+      { "meaning": "眼睛" },
+      { "meaning": "波尔多树" },
+      { "meaning": "毯子" },
+      { "meaning": "彩虹" },
+      { "meaning": "山鹑" },
+      { "meaning": "蚂蚁" },
+      { "meaning": "二" },
+      { "meaning": "背" },
+      { "meaning": "岛" },
+      { "meaning": "凤头麦鸡" },
+      { "meaning": "疹子" }
+    ],
+    "vowels": [{ "title": "元音" }],
+    "notes": [
+      "ü 是嘴唇展开、不圆的 u：karü「绿色」。不重读时听起来像含糊的 e。",
+      "r 发音时舌尖向后卷，类似英语的 r 但更轻：relmu「彩虹」。tx 是拖长的 tr，像智利西班牙语：txomü「云」。",
+      "g 是英语 sing 中的 ng，从不是西班牙语的 g：ge「眼睛」。西班牙语轻 g 的音写作 q：reqle「七」。",
+      "舌头放在齿间的 nh、lh 和 t 与 n、l、t 区分开：nhamunh「脚」。另外，sh 和 t' 表示亲昵或轻蔑的说法：ufisha「羊」，wezat'e「坏人」。",
+      "其他拼写系统用不同方式写同样的音：统一字母用 d、tr、ng 和 ñ（mapudungun，trewa「狗」），拉吉莱奥字母用 c、x、g 和 v。所以这门语言的名字会写成 mapudungun、mapuzugun 或 mapudüngun。"
+    ]
+  },
+  "grammar": {
+    "intro": "马普切语动词由词根和按固定顺序排列的后缀组成：先是改变意义的后缀，然后是否定、时态，最后是语气、人称和数。动词用直陈式第一人称来称呼：txipan「我出去了」，küzawün「我工作了」。",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "词根", "description": "去掉 -n 或 -ün 的第一人称形式。" },
+          { "slot": "体", "description": "-le / -küle 进行，-ke 习惯，-pe 刚刚，-wye 完成……" },
+          { "slot": "否定", "description": "直陈式用 -la，假设式用 -no，命令式用 -kil。" },
+          { "slot": "时态", "description": "-a 将来，-fu 中断的过去，-afu 条件。" },
+          { "slot": "语气和人称", "description": "直陈式 -n、-ymi、-y……；假设式 -li、-lmi、-le……；命令式 -chi、-ge、-pe……" }
+        ]
+      },
+      {
+        "title": "三种数",
+        "description": "第一和第二人称总是区分单数、双数（两个人）和复数（三个或以上）。第三人称的双数和复数（-gu、-gün）可加可不加：küla zomo txipay「三个女人出去了」。",
+        "columns": ["人称", "单数", "双数", "复数"],
+        "rows": [
+          { "label": "第一人称" },
+          { "label": "第二人称" },
+          { "label": "第三人称" }
+        ]
+      },
+      {
+        "title": "没有现在时",
+        "description": "基本形式不标时态：动作动词理解为过去，状态动词理解为现在。表示正在发生的事用 -le，辅音后用 -küle。",
+        "columns": ["形式", "意思"],
+        "rows": [
+          { "cells": ["我去了"] },
+          { "cells": ["我有两头牛"] },
+          { "cells": ["我正在去"] },
+          { "cells": ["我病了"] }
+        ]
+      },
+      {
+        "title": "句子",
+        "items": [
+          { "translation": "你好，姐妹。" },
+          { "translation": "你好吗？" },
+          { "translation": "我很好。" },
+          { "translation": "我不知道。" },
+          { "translation": "他明天到。" },
+          { "translation": "回头见。" }
+        ]
+      },
+      {
+        "title": "改变动词意义的后缀",
+        "description": "它们位于词根和人称之间，可以组合使用：amu-pa-ke-n「我总是来」。",
+        "items": [
+          { "kind": "方位", "meaning": "朝这里", "translation": "你带来了" },
+          { "kind": "方位", "meaning": "去那里再回来", "translation": "我们去找柴火吧" },
+          { "kind": "重复", "meaning": "再次，返回", "translation": "他（回）去了" },
+          { "kind": "反身、相互", "meaning": "对自己，互相", "translation": "我们互相帮助" },
+          { "kind": "使役", "meaning": "使别人做", "translation": "我叫醒了某人" },
+          { "kind": "终止", "meaning": "不再（与 -la 连用）", "translation": "他不再说话了" }
+        ]
+      },
+      {
+        "title": "谁对谁",
+        "description": "动词也带有另一个人称。等级高的人称为主（第一 › 第二 › 第三），不论它是施事还是受事：zuguen 意为「我被你说话」。",
+        "columns": ["形式", "意思"],
+        "rows": [
+          { "cells": ["我对你说了话"] },
+          { "cells": ["你对我说了话"] },
+          { "cells": ["我对他说了话"] },
+          { "cells": ["他对我说了话"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "第一人称（iñche / iñchiñ）" },
+      { "id": "1d", "label": "第一人称双数（iñchiw：我们俩）" },
+      { "id": "2", "label": "第二人称（eymi / eymün）" },
+      { "id": "2d", "label": "第二人称双数（eymu：你们俩）" },
+      { "id": "3", "label": "第三人称（fey / feyegün）" },
+      { "id": "3d", "label": "第三人称双数（feyegu：他们俩）" }
+    ],
+    "tenses": [
+      { "id": "indicative", "group": "直陈式", "name": "直陈式", "description": "基本形式，不标时态：动作动词表示过去（txipan「我出去了」），状态动词表示现在（nien「我有」）。" },
+      { "id": "progressive", "group": "直陈式", "name": "进行体", "description": "正在发生的事：-le，辅音后用 -küle。" },
+      { "id": "habitual", "group": "直陈式", "name": "习惯体", "description": "总是或经常做的事（-ke）。" },
+      { "id": "perfective", "group": "直陈式", "name": "完成体", "description": "在某一时刻之前已经结束的事（-wye、-üwye）。" },
+      { "id": "past", "group": "直陈式", "name": "-fu 过去时", "description": "曾经如此而现在不再，或尝试了却没成功：amufun「我本来去了（可是……）」，niefun「我曾有」。" },
+      { "id": "future", "group": "将来与条件", "name": "将来时", "description": "将要发生的事（-a，a 后用 -ya）。" },
+      { "id": "conditional", "group": "将来与条件", "name": "条件式", "description": "可能会发生的事、可能性和客气的说法（-afu）：¿konafuyiñ?「我们可以进来吗？」。" },
+      { "id": "hypothetical", "group": "将来与条件", "name": "假设式", "description": "表示条件或假设的语气（-l、-ül）：如果发生。" },
+      { "id": "imperative", "group": "命令", "name": "命令式", "description": "对你、你们俩或你们的命令（-ge、-mu、-mün）。" },
+      { "id": "hortative", "group": "命令", "name": "我们来……吧", "description": "邀请大家一起做某事，用直陈式的形式（-yu、-yiñ）。" },
+      { "id": "jussive", "group": "命令", "name": "让他做", "description": "让我做（-chi），让他或他们做（-pe、-pegu、-pegün）。" },
+      { "id": "prohibitive", "group": "命令", "name": "禁止", "description": "-kil：别做！" },
+      { "id": "negative", "group": "否定", "name": "直陈式否定", "description": "-la：txipalan「我没出去」。" },
+      { "id": "negative_future", "group": "否定", "name": "将来时否定", "description": "-la-ya：txipalayan「我不会出去」。" },
+      { "id": "negative_hypothetical", "group": "否定", "name": "假设式否定", "description": "-no-l：txipanoli「如果我不出去」。" }
+    ],
+    "lexicon": [
+      { "entry": "amun", "meaning": "去", "es": "去" },
+      { "entry": "akun", "meaning": "到达", "es": "到达" },
+      { "entry": "küpan", "meaning": "来；想要（与另一个动词连用）", "es": "来" },
+      { "entry": "txipan", "meaning": "出去", "es": "出去" },
+      { "entry": "konün", "meaning": "进去", "es": "进去" },
+      { "entry": "wiñotun", "meaning": "回来", "es": "回来" },
+      { "entry": "umawtun", "meaning": "睡觉", "es": "睡觉" },
+      { "entry": "in", "meaning": "吃", "es": "吃饭" },
+      { "entry": "pütokon", "meaning": "喝水", "es": "喝水" },
+      { "entry": "zugun", "meaning": "说话", "es": "说话" },
+      { "entry": "pin", "meaning": "说", "es": "说" },
+      { "entry": "kimün", "meaning": "知道，认识", "es": "知道" },
+      { "entry": "kintun", "meaning": "找", "es": "找它" },
+      { "entry": "pen", "meaning": "看见，找到", "es": "看见" },
+      { "entry": "lelin", "meaning": "看", "es": "看" },
+      { "entry": "allkütun", "meaning": "听", "es": "听" },
+      { "entry": "elun", "meaning": "给", "es": "给它" },
+      { "entry": "gillan", "meaning": "买", "es": "买它" },
+      { "entry": "güman", "meaning": "哭", "es": "哭" },
+      { "entry": "ayen", "meaning": "笑", "es": "笑" },
+      { "entry": "ülkantun", "meaning": "唱歌", "es": "唱歌" },
+      { "entry": "purun", "meaning": "跳舞", "es": "跳舞" },
+      { "entry": "txekan", "meaning": "走路", "es": "走路" },
+      { "entry": "lefün", "meaning": "跑", "es": "跑步" },
+      { "entry": "küzawün", "meaning": "工作", "es": "工作" },
+      { "entry": "mülen", "meaning": "在，有", "es": "在" },
+      { "entry": "nien", "meaning": "有", "es": "有" },
+      { "entry": "ramtun", "meaning": "问", "es": "问" },
+      { "entry": "chalin", "meaning": "打招呼", "es": "打招呼" },
+      { "entry": "txepen", "meaning": "醒来", "es": "醒来" },
+      { "entry": "weñen", "meaning": "偷", "es": "偷它" },
+      { "entry": "zewman", "meaning": "做", "es": "做这件事" },
+      { "entry": "kellun", "meaning": "帮助", "es": "帮忙" },
+      { "entry": "nütxamün", "meaning": "聊天", "es": "聊天" },
+      { "entry": "magelün", "meaning": "邀请", "es": "邀请" },
+      { "entry": "lepün", "meaning": "扫地", "es": "扫地" },
+      { "entry": "katxün", "meaning": "切，砍", "es": "切它" },
+      { "entry": "lhan", "meaning": "死", "es": "死" },
+      { "entry": "anün", "meaning": "坐下", "es": "坐下" },
+      { "entry": "wirin", "meaning": "写", "es": "写字" },
+      { "entry": "chillkatun", "meaning": "读，学习", "es": "读书" },
+      { "entry": "gillatun", "meaning": "祈祷，举行 ngillatun 仪式", "es": "祈祷" },
+      { "entry": "azkintun", "meaning": "远远看见", "es": "远远看见" },
+      { "entry": "kimeltun", "meaning": "教", "es": "教书" },
+      { "entry": "awkantun", "meaning": "玩", "es": "玩" },
+      { "entry": "witxalün", "meaning": "用织布机织布", "es": "织布" },
+      { "entry": "küchatun", "meaning": "洗（衣服）", "es": "洗衣服" },
+      { "entry": "rupan", "meaning": "经过", "es": "经过" },
+      { "entry": "püran", "meaning": "上去", "es": "上去" },
+      { "entry": "nagün", "meaning": "下去", "es": "下去" },
+      { "entry": "afün", "meaning": "结束，用完", "es": "结束" },
+      { "entry": "kewan", "meaning": "打架", "es": "打架" },
+      { "entry": "mawün", "meaning": "下雨", "es": "下雨", "note": "天气动词，用于第三人称：mawüni「下雨了」，mawünküley「正在下雨」；加 -ma：mawünman「我被雨淋了」。" }
+    ]
+  }
+}

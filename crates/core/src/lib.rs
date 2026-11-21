@@ -9,6 +9,7 @@ pub mod english;
 pub mod itza;
 pub mod kichwa;
 pub mod lacandon;
+pub mod mapudungun;
 pub mod mopan;
 pub mod nahuatl;
 pub mod otomi;
@@ -69,6 +70,9 @@ pub enum Engine {
     /// Cusco Quechua (AMLQ spelling): root + tense suffix + person ending,
     /// two «we». See `qheswa`.
     Qheswa(qheswa::Conjugation),
+    /// Mapudungun (Azümchefe spelling): root + suffixes + mood/person
+    /// ending, with singular, dual and plural. See `mapudungun`.
+    Mapudungun(mapudungun::Conjugation),
 }
 
 impl Engine {
@@ -98,6 +102,7 @@ impl Engine {
             Engine::Quichua(c) => c.conjugate_with(verb, opts),
             Engine::Kichwa(c) => c.conjugate_with(verb, opts),
             Engine::Qheswa(c) => c.conjugate_with(verb, opts),
+            Engine::Mapudungun(c) => c.conjugate_with(verb, opts),
         }
     }
 
@@ -119,6 +124,7 @@ impl Engine {
             Engine::Quichua(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Kichwa(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Qheswa(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Mapudungun(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
     }
 }
