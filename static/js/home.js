@@ -24,6 +24,7 @@ const AREAS = {
   caribe: ["Gran Caribe", "Greater Caribbean", "大加勒比地区"],
   plata: ["Cuenca del Plata", "Río de la Plata basin", "拉普拉塔河流域"],
   chaco: ["Gran Chaco", "Gran Chaco", "大查科地区"],
+  andes: ["Andes", "Andes", "安第斯地区"],
 };
 // Sections of the list, in order. `soon` is shown while a section is empty.
 const CONTINENTS = [

@@ -7,6 +7,7 @@ pub mod conjugate;
 pub mod chinese;
 pub mod english;
 pub mod itza;
+pub mod kichwa;
 pub mod lacandon;
 pub mod mopan;
 pub mod nahuatl;
@@ -61,6 +62,9 @@ pub enum Engine {
     /// Root + tense suffix + person ending, with i → e / u → o in the past
     /// and 3rd person future. See `quichua`.
     Quichua(quichua::Conjugation),
+    /// Ecuadorian Kichwa, unified spelling: root + tense suffix + person
+    /// ending, one «we». See `kichwa`.
+    Kichwa(kichwa::Conjugation),
 }
 
 impl Engine {
@@ -88,6 +92,7 @@ impl Engine {
             Engine::Zoque(c) => c.conjugate_with(verb, opts),
             Engine::Wixarika(c) => c.conjugate_with(verb, opts),
             Engine::Quichua(c) => c.conjugate_with(verb, opts),
+            Engine::Kichwa(c) => c.conjugate_with(verb, opts),
         }
     }
 
@@ -107,6 +112,7 @@ impl Engine {
             Engine::Zoque(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Wixarika(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Quichua(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Kichwa(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
     }
 }

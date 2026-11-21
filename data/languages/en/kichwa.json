@@ -1,0 +1,208 @@
+{
+  "name": "Kichwa",
+  "variant": "Kichwa of Ecuador (Northern Quechua), unified spelling",
+  "region": "The highlands and Amazon of Ecuador: Imbabura, Pichincha, Cotopaxi, Tungurahua, Chimborazo, Bolívar, Cañar, Azuay, Loja, Napo, Pastaza, Orellana and Sucumbíos",
+  "summary": "The most widely spoken Indigenous language of Ecuador, from the páramos of the Andes to the rivers of the Amazon. An official language of intercultural relations since 2008.",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb as in the dictionary, ending in -na: mikuna «eat», rimana «speak», rina «go», munana «want». You can also type just the root (miku).",
+    "own": {
+      "hint": "Type any verb ending in -na and its meaning in English. The endings are the same for every verb.",
+      "label": "Verb",
+      "es_placeholder": "ask"
+    }
+  },
+  "source": {
+    "short": "Múgica, Aprendamos kichwa; Kichwa Yachakukkunapak Shimiyuk Kamu (2009)",
+    "full": "Mons. Alejandro Múgica, Aprendamos kichwa: gramática kichwa actualizada (Napo), for the verb; Aprenda usted mismo el quichua, for the highland forms; Ministerio de Educación del Ecuador, Kichwa Yachakukkunapak Shimiyuk Kamu (Quito, 2009), for the unified spelling and the vocabulary. As a historical reference: Juan M. Grimm, La lengua quichua (dialecto de la República del Ecuador) (Freiburg: Herder, 1896). Unified spelling (shukyachishka killkay)."
+  },
+  "about": [
+    "Kichwa is the Ecuadorian form of Quechua, the family of languages that stretches along the Andes from Colombia to Argentina. It is spoken by hundreds of thousands of people of peoples such as the Otavalo, Kayambi, Panzaleo, Salasaka, Puruhá, Kañari and Saraguro in the highlands, and by the Amazonian Kichwa of Napo, Pastaza, Orellana and Sucumbíos.",
+    "It split from southern Quechua centuries ago: it has only three written vowels, a single «we» (ñukanchik), and it lost the personal possessive suffixes. Each province has its own pronunciation, so since 1980 it has been written in a unified spelling that everyone reads the same way.",
+    "The 2008 Constitution recognises it, together with Shuar, as an official language of intercultural relations. It is taught in intercultural bilingual schools and kept alive by radio stations, musicians, writers and the Kichwa Language Academy."
+  ],
+  "orthography": {
+    "intro": "We use the unified Kichwa spelling (shukyachishka killkay), the one of the Ministry of Education and of the Kichwa Yachakukkunapak Shimiyuk Kamu dictionary (2009). Each sound has one letter: k for /k/ before any vowel, w and y for the glides, and only three vowels.",
+    "letters": [
+      { "meaning": "earth" },
+      { "meaning": "field, garden" },
+      { "meaning": "big" },
+      { "meaning": "sun" },
+      { "meaning": "live" },
+      { "meaning": "egg" },
+      { "meaning": "work" },
+      { "meaning": "eat" },
+      { "meaning": "fire" },
+      { "meaning": "path" },
+      { "meaning": "play" },
+      { "meaning": "speak" },
+      { "meaning": "flower" },
+      { "meaning": "come" },
+      { "meaning": "dance" },
+      { "meaning": "agave fibre" },
+      { "meaning": "hill" },
+      { "meaning": "house" },
+      { "meaning": "water" }
+    ],
+    "vowels": [{ "title": "Vowels" }],
+    "notes": [
+      "There are only three vowels. Next to an old q, an r or an ll, i and u sometimes sound like e and o (urku «hill» sounds «orco»), but they are always written i and u.",
+      "k is written before any vowel: killa «moon», kuyana «love». The c, qu, g, e, o and hu of the old spelling (quichua, huasi, Cayambe) are not used.",
+      "After n, m and other consonants k often sounds like g and t like d: -nki is said «-ngi», -nchik «-nchij», tanta «tanda». It is written the same everywhere.",
+      "h is a soft breath (hatun «big»), and the final -k of -nchik or mikuk often sounds like a Spanish j or drops. ll is said like the «lli» of «million» in Imbabura and like a «zh» in the central highlands.",
+      "Stress falls on the second-to-last syllable and isn't written: mikuni, rimarkanki.",
+      "The unified alphabet also has z and zh, which, like ts, are found in a few words of some provinces. Older texts, such as Grimm's grammar (1896), use c, qu, hu and e, o: «huasi», «micuna»."
+    ]
+  },
+  "grammar": {
+    "intro": "A Kichwa verb is a root and a chain of suffixes: first those that change the meaning (-chi, -ri, -pa, -naku), then the tense, and last the person. The root is the infinitive without -na: mikuna → miku-.",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "Root", "description": "The infinitive without -na." },
+          { "slot": "Derivation", "description": "-chi make someone do, -ri for oneself, -naku each other, -pa for someone, -mu towards here…" },
+          { "slot": "Tense", "description": "-rka- past, -shka- perfect, -ku- progressive…" },
+          { "slot": "Person", "description": "-ni, -nki, -n, -nchik, -nkichik, -nkuna." },
+          { "slot": "Negation", "description": "mana before and -chu after." }
+        ]
+      },
+      {
+        "title": "The persons",
+        "description": "There is a single «we», ñukanchik. The past adds -rka-, and the future has endings of its own in the 1st and 3rd persons.",
+        "columns": ["Person", "Present", "Past", "Future"],
+        "rows": [
+          { "label": "ñuka «I»" },
+          { "label": "kan «you»" },
+          { "label": "pay «he, she»" },
+          { "label": "ñukanchik «we»" },
+          { "label": "kankuna «you all»" },
+          { "label": "paykuna «they»" }
+        ]
+      },
+      {
+        "title": "Verb forms without person",
+        "description": "These forms carry no person and link clauses together.",
+        "columns": ["Suffix", "Form", "Meaning"],
+        "rows": [
+          { "cells": ["mikushpa", "eating (same subject)"] },
+          { "cells": ["mikukpi", "when someone else eats, if someone else eats"] },
+          { "cells": ["mikunkapak", "in order to eat"] },
+          { "cells": ["mikuk", "one who eats"] },
+          { "cells": ["mikushka", "eaten"] }
+        ]
+      },
+      {
+        "title": "Phrases",
+        "items": [
+          { "translation": "I speak Kichwa." },
+          { "translation": "They went to the house." },
+          { "translation": "I don't know." },
+          { "translation": "Don't cry." },
+          { "translation": "See you tomorrow." },
+          { "translation": "Let's come to eat." }
+        ]
+      },
+      {
+        "title": "Suffixes that change the verb",
+        "description": "They go between the root and the tense, and they can be combined.",
+        "items": [
+          { "kind": "causative", "meaning": "make someone do", "translation": "teach (make know)" },
+          { "kind": "reflexive", "meaning": "oneself", "translation": "bathe" },
+          { "kind": "reciprocal", "meaning": "each other", "translation": "love each other" },
+          { "kind": "benefactive", "meaning": "for someone", "translation": "work for someone" },
+          { "kind": "direction", "meaning": "towards here", "translation": "bring" },
+          { "kind": "progressive", "meaning": "be doing", "translation": "be eating" }
+        ]
+      },
+      {
+        "title": "Who to whom",
+        "description": "With -wa- the action goes towards me. Towards other people the pronoun is used with -ta.",
+        "columns": ["Form", "Meaning"],
+        "rows": [
+          { "cells": ["you love me"] },
+          { "cells": ["he loves me"] },
+          { "cells": ["they love me"] },
+          { "cells": ["I love you"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "1st person" },
+      { "id": "2", "label": "2nd person" },
+      { "id": "3", "label": "3rd person" }
+    ],
+    "tenses": [
+      { "id": "present", "group": "Indicative", "name": "Present", "description": "Kunan pacha: what happens now or always." },
+      { "id": "past", "group": "Indicative", "name": "Past", "description": "Yalli pacha: what already happened (-rka-)." },
+      { "id": "perfect", "group": "Indicative", "name": "-shka past", "description": "What has happened, or turned out to have happened (-shka-)." },
+      { "id": "pluperfect", "group": "Indicative", "name": "Pluperfect", "description": "What had happened before (-shka karkani)." },
+      { "id": "progressive", "group": "Progressive and habitual", "name": "Present progressive", "description": "What is happening (-ku-)." },
+      { "id": "past_progressive", "group": "Progressive and habitual", "name": "Past progressive", "description": "What was happening (-kurka-)." },
+      { "id": "past_habitual", "group": "Progressive and habitual", "name": "Past habitual", "description": "What one used to do: -k and karkani." },
+      { "id": "future", "group": "Future and conditional", "name": "Future", "description": "Shamuk pacha: what will happen." },
+      { "id": "conditional", "group": "Future and conditional", "name": "Conditional", "description": "What would happen (-man)." },
+      { "id": "imperative", "group": "Orders", "name": "Imperative", "description": "Orders to you or you all (-y, -ychik)." },
+      { "id": "hortative", "group": "Orders", "name": "Let's", "description": "Inviting others to do something together (-shun), like the ñukanchik future.", "es": { "tense": "present", "before": "let's", "pronoun": false } },
+      { "id": "jussive", "group": "Orders", "name": "Let him do it", "description": "Orders for him or them (-chun, -chunkuna).", "es": "optative" },
+      { "id": "prohibitive", "group": "Orders", "name": "Prohibition", "description": "ama … -ychu: don't do it!" },
+      { "id": "negative", "group": "Negation", "name": "Negative present", "description": "mana … -chu." },
+      { "id": "negative_past", "group": "Negation", "name": "Negative past", "description": "mana … -rka- … -chu." }
+    ],
+    "lexicon": [
+      { "entry": "mikuna", "meaning": "eat", "es": "eat" },
+      { "entry": "upyana", "meaning": "drink", "es": "drink" },
+      { "entry": "rimana", "meaning": "speak", "es": "speak" },
+      { "entry": "kawsana", "meaning": "live", "es": "live" },
+      { "entry": "rina", "meaning": "go", "es": "go" },
+      { "entry": "shamuna", "meaning": "come", "es": "come" },
+      { "entry": "puñuna", "meaning": "sleep", "es": "sleep" },
+      { "entry": "llankana", "meaning": "work", "es": "work" },
+      { "entry": "munana", "meaning": "want", "es": "want it" },
+      { "entry": "kuyana", "meaning": "love", "es": "love" },
+      { "entry": "yachana", "meaning": "know", "es": "know it" },
+      { "entry": "yachakuna", "meaning": "learn", "es": "learn" },
+      { "entry": "yachachina", "meaning": "teach", "es": "teach" },
+      { "entry": "tushuna", "meaning": "dance", "es": "dance" },
+      { "entry": "takina", "meaning": "sing", "es": "sing" },
+      { "entry": "asina", "meaning": "laugh", "es": "laugh" },
+      { "entry": "wakana", "meaning": "cry", "es": "cry" },
+      { "entry": "rikuna", "meaning": "see, look", "es": "see it" },
+      { "entry": "uyana", "meaning": "hear, listen", "es": "listen" },
+      { "entry": "kuna", "meaning": "give", "es": "give it" },
+      { "entry": "apana", "meaning": "carry, take", "es": "take it" },
+      { "entry": "apamuna", "meaning": "bring", "es": "bring it" },
+      { "entry": "rantina", "meaning": "buy", "es": "buy it" },
+      { "entry": "katuna", "meaning": "sell", "es": "sell it" },
+      { "entry": "tarpuna", "meaning": "sow", "es": "sow" },
+      { "entry": "maskana", "meaning": "look for", "es": "look for it" },
+      { "entry": "tarina", "meaning": "find", "es": "find it" },
+      { "entry": "yuyana", "meaning": "think, remember", "es": "think" },
+      { "entry": "kallpana", "meaning": "run", "es": "run" },
+      { "entry": "purina", "meaning": "walk", "es": "walk" },
+      { "entry": "pukllana", "meaning": "play", "es": "play" },
+      { "entry": "yanuna", "meaning": "cook", "es": "cook" },
+      { "entry": "killkana", "meaning": "write", "es": "write" },
+      { "entry": "killkakatina", "meaning": "read", "es": "read" },
+      { "entry": "rurana", "meaning": "do, make", "es": "do it" },
+      { "entry": "shuyana", "meaning": "wait", "es": "wait" },
+      { "entry": "kayana", "meaning": "call", "es": "call them" },
+      { "entry": "pichana", "meaning": "sweep", "es": "sweep" },
+      { "entry": "churana", "meaning": "put", "es": "put it" },
+      { "entry": "tiyarina", "meaning": "sit down", "es": "sit down" },
+      { "entry": "armana", "meaning": "bathe", "es": "bathe" },
+      { "entry": "muskuna", "meaning": "dream", "es": "dream" },
+      { "entry": "hamutana", "meaning": "understand", "es": "understand it" },
+      { "entry": "tapuna", "meaning": "ask", "es": "ask" },
+      { "entry": "yanapana", "meaning": "help", "es": "help" },
+      { "entry": "chayana", "meaning": "arrive", "es": "arrive" },
+      { "entry": "llukshina", "meaning": "go out", "es": "go out" },
+      { "entry": "yaykuna", "meaning": "go in", "es": "go in" },
+      { "entry": "wañuna", "meaning": "die", "es": "die" },
+      { "entry": "urmana", "meaning": "fall", "es": "fall" },
+      { "entry": "manchana", "meaning": "fear, be afraid", "es": "be afraid" },
+      { "entry": "rikchana", "meaning": "wake up", "es": "wake up" }
+    ]
+  }
+}

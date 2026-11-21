@@ -1,0 +1,208 @@
+{
+  "name": "基丘亚语（厄瓜多尔）",
+  "variant": "厄瓜多尔基丘亚语（北部克丘亚语），统一拼写",
+  "region": "厄瓜多尔的安第斯高原和亚马孙地区：Imbabura、Pichincha、Cotopaxi、Tungurahua、Chimborazo、Bolívar、Cañar、Azuay、Loja、Napo、Pastaza、Orellana 和 Sucumbíos",
+  "summary": "厄瓜多尔使用人数最多的原住民语言，从安第斯山的高原草甸一直到亚马孙的河流。自 2008 年起是跨文化交流的官方语言。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "按词典形式输入以 -na 结尾的动词：mikuna「吃」、rimana「说话」、rina「去」、munana「想要」。也可以只输入词根（miku）。",
+    "own": {
+      "hint": "输入任意以 -na 结尾的动词及其中文意思。所有动词的词尾都相同。",
+      "label": "动词",
+      "es_placeholder": "问"
+    }
+  },
+  "source": {
+    "short": "Múgica, Aprendamos kichwa；Kichwa Yachakukkunapak Shimiyuk Kamu（2009）",
+    "full": "Alejandro Múgica 主教，《Aprendamos kichwa: gramática kichwa actualizada》（Napo），用于动词语法；《Aprenda usted mismo el quichua》，用于高原地区的形式；厄瓜多尔教育部，《Kichwa Yachakukkunapak Shimiyuk Kamu》（基多，2009），用于统一拼写和词汇。历史参考：Juan M. Grimm，《La lengua quichua (dialecto de la República del Ecuador)》（弗赖堡：Herder，1896）。采用统一拼写（shukyachishka killkay）。"
+  },
+  "about": [
+    "基丘亚语是克丘亚语在厄瓜多尔的形式。克丘亚语系沿安第斯山脉从哥伦比亚一直分布到阿根廷。高原地区的 Otavalo、Kayambi、Panzaleo、Salasaka、Puruhá、Kañari、Saraguro 等民族，以及 Napo、Pastaza、Orellana 和 Sucumbíos 的亚马孙基丘亚人，共有数十万人说这种语言。",
+    "它几个世纪前就与南部克丘亚语分开：书面上只有三个元音，只有一个「我们」（ñukanchik），也失去了表示人称的领属后缀。各省发音不同，所以从 1980 年起采用统一拼写，大家都能用同样的方式阅读。",
+    "2008 年宪法承认它与舒阿尔语同为跨文化交流的官方语言。它在跨文化双语学校里教授，并由电台、音乐人、作家和基丘亚语言学院传承。"
+  ],
+  "orthography": {
+    "intro": "我们采用基丘亚语的统一拼写（shukyachishka killkay），即教育部和《Kichwa Yachakukkunapak Shimiyuk Kamu》词典（2009）所用的写法。每个音只用一个字母：任何元音前的 /k/ 都写 k，半元音写 w 和 y，元音只有三个。",
+    "letters": [
+      { "meaning": "土地" },
+      { "meaning": "田地" },
+      { "meaning": "大" },
+      { "meaning": "太阳" },
+      { "meaning": "生活" },
+      { "meaning": "蛋" },
+      { "meaning": "工作" },
+      { "meaning": "吃" },
+      { "meaning": "火" },
+      { "meaning": "路" },
+      { "meaning": "玩" },
+      { "meaning": "说话" },
+      { "meaning": "花" },
+      { "meaning": "来" },
+      { "meaning": "跳舞" },
+      { "meaning": "龙舌兰纤维" },
+      { "meaning": "山" },
+      { "meaning": "房子" },
+      { "meaning": "水" }
+    ],
+    "vowels": [{ "title": "元音" }],
+    "notes": [
+      "只有三个元音。在古老的 q、r 或 ll 旁边，i 和 u 有时听起来像 e 和 o（urku「山」听起来像「orco」），但总是写作 i 和 u。",
+      "任何元音前都写 k：killa「月亮」，kuyana「爱」。旧拼写中的 c、qu、g、e、o 和 hu（quichua、huasi、Cayambe）不再使用。",
+      "在 n、m 等辅音之后，k 常读作 g，t 读作 d：-nki 读「-ngi」，-nchik 读「-nchij」，tanta 读「tanda」。但全国写法一致。",
+      "h 是轻微的送气音（hatun「大」），-nchik 或 mikuk 末尾的 -k 常读得像西班牙语的 j，或者不发音。ll 在 Imbabura 读作「lli」，在中部高原读作「zh」。",
+      "重音落在倒数第二个音节，不标出：mikuni、rimarkanki。",
+      "统一字母表里还有 z 和 zh，与 ts 一样只出现在某些省份的少数词里。较早的文献，如 Grimm 的语法（1896），使用 c、qu、hu 和 e、o：«huasi»、«micuna»。"
+    ]
+  },
+  "grammar": {
+    "intro": "基丘亚语动词由词根和一串后缀组成：先是改变意义的后缀（-chi、-ri、-pa、-naku），然后是时态，最后是人称。词根就是去掉 -na 的不定式：mikuna → miku-。",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "词根", "description": "去掉 -na 的不定式。" },
+          { "slot": "派生", "description": "-chi 使别人做，-ri 对自己，-naku 互相，-pa 为别人，-mu 朝这里……" },
+          { "slot": "时态", "description": "-rka- 过去，-shka- 完成，-ku- 进行……" },
+          { "slot": "人称", "description": "-ni、-nki、-n、-nchik、-nkichik、-nkuna。" },
+          { "slot": "否定", "description": "前面加 mana，后面加 -chu。" }
+        ]
+      },
+      {
+        "title": "人称",
+        "description": "只有一个「我们」：ñukanchik。过去时加 -rka-，将来时的第一和第三人称有自己的词尾。",
+        "columns": ["人称", "现在时", "过去时", "将来时"],
+        "rows": [
+          { "label": "ñuka「我」" },
+          { "label": "kan「你」" },
+          { "label": "pay「他、她」" },
+          { "label": "ñukanchik「我们」" },
+          { "label": "kankuna「你们」" },
+          { "label": "paykuna「他们」" }
+        ]
+      },
+      {
+        "title": "无人称的动词形式",
+        "description": "这些形式不带人称，用来连接句子。",
+        "columns": ["后缀", "形式", "意思"],
+        "rows": [
+          { "cells": ["mikushpa", "吃着（同一主语）"] },
+          { "cells": ["mikukpi", "当别人吃时，如果别人吃"] },
+          { "cells": ["mikunkapak", "为了吃"] },
+          { "cells": ["mikuk", "吃的人"] },
+          { "cells": ["mikushka", "吃过的"] }
+        ]
+      },
+      {
+        "title": "句子",
+        "items": [
+          { "translation": "我说基丘亚语。" },
+          { "translation": "他们去了家里。" },
+          { "translation": "我不知道。" },
+          { "translation": "别哭。" },
+          { "translation": "明天见。" },
+          { "translation": "我们来吃饭吧。" }
+        ]
+      },
+      {
+        "title": "改变动词意义的后缀",
+        "description": "它们位于词根和时态之间，可以组合使用。",
+        "items": [
+          { "kind": "使役", "meaning": "使别人做", "translation": "教（使知道）" },
+          { "kind": "反身", "meaning": "对自己", "translation": "洗澡" },
+          { "kind": "相互", "meaning": "互相", "translation": "相爱" },
+          { "kind": "受益", "meaning": "为别人", "translation": "为别人工作" },
+          { "kind": "方向", "meaning": "朝这里", "translation": "带来" },
+          { "kind": "进行", "meaning": "正在做", "translation": "正在吃" }
+        ]
+      },
+      {
+        "title": "谁对谁",
+        "description": "用 -wa- 表示动作指向我。指向其他人时，用代词加 -ta。",
+        "columns": ["形式", "意思"],
+        "rows": [
+          { "cells": ["你爱我"] },
+          { "cells": ["他爱我"] },
+          { "cells": ["他们爱我"] },
+          { "cells": ["我爱你"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "第一人称" },
+      { "id": "2", "label": "第二人称" },
+      { "id": "3", "label": "第三人称" }
+    ],
+    "tenses": [
+      { "id": "present", "group": "陈述式", "name": "现在时", "description": "Kunan pacha：现在或一贯发生的事。" },
+      { "id": "past", "group": "陈述式", "name": "过去时", "description": "Yalli pacha：已经发生的事（-rka-）。" },
+      { "id": "perfect", "group": "陈述式", "name": "-shka 过去时", "description": "已经发生、或原来已经发生的事（-shka-）。" },
+      { "id": "pluperfect", "group": "陈述式", "name": "过去完成时", "description": "更早之前已发生的事（-shka karkani）。" },
+      { "id": "progressive", "group": "进行与习惯", "name": "现在进行时", "description": "正在发生的事（-ku-）。" },
+      { "id": "past_progressive", "group": "进行与习惯", "name": "过去进行时", "description": "当时正在发生的事（-kurka-）。" },
+      { "id": "past_habitual", "group": "进行与习惯", "name": "过去习惯", "description": "过去常做的事：-k 加 karkani。" },
+      { "id": "future", "group": "将来与条件", "name": "将来时", "description": "Shamuk pacha：将要发生的事。" },
+      { "id": "conditional", "group": "将来与条件", "name": "条件式", "description": "可能会发生的事（-man）。" },
+      { "id": "imperative", "group": "命令", "name": "命令式", "description": "对你或你们的命令（-y、-ychik）。" },
+      { "id": "hortative", "group": "命令", "name": "我们来……吧", "description": "邀请大家一起做某事（-shun），与 ñukanchik 的将来时相同。" },
+      { "id": "jussive", "group": "命令", "name": "让他做", "description": "对他或他们的命令（-chun、-chunkuna）。" },
+      { "id": "prohibitive", "group": "命令", "name": "禁止", "description": "ama … -ychu：别做！" },
+      { "id": "negative", "group": "否定", "name": "现在时否定", "description": "mana … -chu。" },
+      { "id": "negative_past", "group": "否定", "name": "过去时否定", "description": "mana … -rka- … -chu。" }
+    ],
+    "lexicon": [
+      { "entry": "mikuna", "meaning": "吃", "es": "吃饭" },
+      { "entry": "upyana", "meaning": "喝", "es": "喝水" },
+      { "entry": "rimana", "meaning": "说话", "es": "说话" },
+      { "entry": "kawsana", "meaning": "生活", "es": "生活" },
+      { "entry": "rina", "meaning": "去", "es": "去" },
+      { "entry": "shamuna", "meaning": "来", "es": "来" },
+      { "entry": "puñuna", "meaning": "睡觉", "es": "睡觉" },
+      { "entry": "llankana", "meaning": "工作", "es": "工作" },
+      { "entry": "munana", "meaning": "想要", "es": "想要" },
+      { "entry": "kuyana", "meaning": "爱", "es": "爱" },
+      { "entry": "yachana", "meaning": "知道", "es": "知道" },
+      { "entry": "yachakuna", "meaning": "学习", "es": "学习" },
+      { "entry": "yachachina", "meaning": "教", "es": "教书" },
+      { "entry": "tushuna", "meaning": "跳舞", "es": "跳舞" },
+      { "entry": "takina", "meaning": "唱歌", "es": "唱歌" },
+      { "entry": "asina", "meaning": "笑", "es": "笑" },
+      { "entry": "wakana", "meaning": "哭", "es": "哭" },
+      { "entry": "rikuna", "meaning": "看", "es": "看它" },
+      { "entry": "uyana", "meaning": "听", "es": "听" },
+      { "entry": "kuna", "meaning": "给", "es": "给它" },
+      { "entry": "apana", "meaning": "带走", "es": "带走它" },
+      { "entry": "apamuna", "meaning": "带来", "es": "带来它" },
+      { "entry": "rantina", "meaning": "买", "es": "买它" },
+      { "entry": "katuna", "meaning": "卖", "es": "卖它" },
+      { "entry": "tarpuna", "meaning": "播种", "es": "播种" },
+      { "entry": "maskana", "meaning": "找", "es": "找它" },
+      { "entry": "tarina", "meaning": "找到", "es": "找到它" },
+      { "entry": "yuyana", "meaning": "想，记得", "es": "想" },
+      { "entry": "kallpana", "meaning": "跑", "es": "跑步" },
+      { "entry": "purina", "meaning": "走路", "es": "走路" },
+      { "entry": "pukllana", "meaning": "玩", "es": "玩" },
+      { "entry": "yanuna", "meaning": "做饭", "es": "做饭" },
+      { "entry": "killkana", "meaning": "写", "es": "写字" },
+      { "entry": "killkakatina", "meaning": "读", "es": "读书" },
+      { "entry": "rurana", "meaning": "做", "es": "做这件事" },
+      { "entry": "shuyana", "meaning": "等", "es": "等" },
+      { "entry": "kayana", "meaning": "叫", "es": "叫他" },
+      { "entry": "pichana", "meaning": "扫地", "es": "扫地" },
+      { "entry": "churana", "meaning": "放", "es": "放它" },
+      { "entry": "tiyarina", "meaning": "坐下", "es": "坐下" },
+      { "entry": "armana", "meaning": "洗澡", "es": "洗澡" },
+      { "entry": "muskuna", "meaning": "做梦", "es": "做梦" },
+      { "entry": "hamutana", "meaning": "明白", "es": "明白" },
+      { "entry": "tapuna", "meaning": "问", "es": "问" },
+      { "entry": "yanapana", "meaning": "帮助", "es": "帮忙" },
+      { "entry": "chayana", "meaning": "到达", "es": "到达" },
+      { "entry": "llukshina", "meaning": "出去", "es": "出去" },
+      { "entry": "yaykuna", "meaning": "进去", "es": "进去" },
+      { "entry": "wañuna", "meaning": "死", "es": "死" },
+      { "entry": "urmana", "meaning": "摔倒", "es": "摔倒" },
+      { "entry": "manchana", "meaning": "害怕", "es": "害怕" },
+      { "entry": "rikchana", "meaning": "醒来", "es": "醒来" }
+    ]
+  }
+}

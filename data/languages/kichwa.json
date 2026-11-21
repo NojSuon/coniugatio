@@ -1,0 +1,236 @@
+{
+  "slug": "kichwa",
+  "name": "Kichwa",
+  "endonym": "kichwa shimi",
+  "variant": "Kichwa del Ecuador (quechua norteño), grafía unificada",
+  "region": "Sierra y Amazonía del Ecuador: Imbabura, Pichincha, Cotopaxi, Tungurahua, Chimborazo, Bolívar, Cañar, Azuay, Loja, Napo, Pastaza, Orellana y Sucumbíos",
+  "family": "quechua",
+  "area": "andes",
+  "continent": "sur",
+  "status": "available",
+  "order": 14,
+  "series": "paramo",
+  "lang_code": "qu",
+  "summary": "La lengua indígena más hablada del Ecuador, de los páramos de la Sierra a los ríos de la Amazonía. Lengua oficial de relación intercultural desde 2008.",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo como en el diccionario, terminado en -na: mikuna «comer», rimana «hablar», rina «ir», munana «querer». También puedes escribir solo la raíz (miku).",
+    "placeholder": "rimana",
+    "keyboard": ["ñ"],
+    "own": {
+      "hint": "Escribe cualquier verbo terminado en -na y su significado en español. Las terminaciones son las mismas para todos los verbos.",
+      "label": "Verbo",
+      "placeholder": "tapuna",
+      "es_placeholder": "preguntar"
+    }
+  },
+  "source": {
+    "short": "Múgica, Aprendamos kichwa; Kichwa Yachakukkunapak Shimiyuk Kamu (2009)",
+    "full": "Mons. Alejandro Múgica, Aprendamos kichwa: gramática kichwa actualizada (Napo), para la gramática del verbo; Aprenda usted mismo el quichua, para las formas de la Sierra; Ministerio de Educación del Ecuador, Kichwa Yachakukkunapak Shimiyuk Kamu (Quito, 2009), para la grafía unificada y el vocabulario. Como referencia histórica: Juan M. Grimm, La lengua quichua (dialecto de la República del Ecuador) (Friburgo: Herder, 1896). Grafía unificada (shukyachishka killkay)."
+  },
+  "about": [
+    "El kichwa es la forma ecuatoriana del quechua, la familia de lenguas que se extiende por los Andes desde Colombia hasta Argentina. Lo hablan cientos de miles de personas de pueblos como los otavalo, kayambi, panzaleo, salasaka, puruhá, kañari y saraguro en la Sierra, y los kichwa de la Amazonía en Napo, Pastaza, Orellana y Sucumbíos.",
+    "Se separó del quechua del sur hace siglos: tiene solo tres vocales escritas, un único «nosotros» (ñukanchik) y perdió los sufijos posesivos de persona. Cada provincia tiene su pronunciación, y por eso desde 1980 se escribe con una grafía unificada que todos pueden leer igual.",
+    "La Constitución de 2008 lo reconoce, junto al shuar, como idioma oficial de relación intercultural. Se enseña en las escuelas de educación intercultural bilingüe y lo sostienen radios, músicos, escritores y la Academia de la Lengua Kichwa."
+  ],
+  "orthography": {
+    "intro": "Usamos la grafía unificada del kichwa (shukyachishka killkay), la del Ministerio de Educación y del diccionario Kichwa Yachakukkunapak Shimiyuk Kamu (2009). Cada sonido tiene una sola letra: k para /k/ ante cualquier vocal, w e y para las semivocales, y solo tres vocales.",
+    "letters": [
+      { "letter": "a", "ipa": "a", "word": "allpa", "meaning": "tierra" },
+      { "letter": "ch", "ipa": "tʃ", "word": "chakra", "meaning": "huerto, sementera" },
+      { "letter": "h", "ipa": "h", "word": "hatun", "meaning": "grande" },
+      { "letter": "i", "ipa": "i", "word": "inti", "meaning": "sol" },
+      { "letter": "k", "ipa": "k", "word": "kawsana", "meaning": "vivir" },
+      { "letter": "l", "ipa": "l", "word": "lulun", "meaning": "huevo" },
+      { "letter": "ll", "ipa": "ʎ ~ ʒ", "word": "llankana", "meaning": "trabajar" },
+      { "letter": "m", "ipa": "m", "word": "mikuna", "meaning": "comer" },
+      { "letter": "n", "ipa": "n", "word": "nina", "meaning": "fuego" },
+      { "letter": "ñ", "ipa": "ɲ", "word": "ñan", "meaning": "camino" },
+      { "letter": "p", "ipa": "p", "word": "pukllana", "meaning": "jugar" },
+      { "letter": "r", "ipa": "ɾ", "word": "rimana", "meaning": "hablar" },
+      { "letter": "s", "ipa": "s", "word": "sisa", "meaning": "flor" },
+      { "letter": "sh", "ipa": "ʃ", "word": "shamuna", "meaning": "venir" },
+      { "letter": "t", "ipa": "t", "word": "tushuna", "meaning": "bailar" },
+      { "letter": "ts", "ipa": "ts", "word": "tsawar", "meaning": "cabuya, penco" },
+      { "letter": "u", "ipa": "u", "word": "urku", "meaning": "cerro" },
+      { "letter": "w", "ipa": "w", "word": "wasi", "meaning": "casa" },
+      { "letter": "y", "ipa": "j", "word": "yaku", "meaning": "agua" }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales",
+        "items": [
+          { "letter": "a", "ipa": "a" },
+          { "letter": "i", "ipa": "i ~ e" },
+          { "letter": "u", "ipa": "u ~ o" }
+        ]
+      }
+    ],
+    "notes": [
+      "Solo hay tres vocales. Cerca de una q antigua, de la r o de la ll, i y u suenan a veces como e y o (urku «cerro» suena «orco»), pero se escriben siempre i y u.",
+      "Se escribe k ante cualquier vocal: killa «luna», kuyana «amar». No se usan c, qu, g, e, o ni hu, que eran de la escritura antigua (quichua, huasi, Cayambe).",
+      "Después de n, m y otras consonantes la k suele sonar g y la t suena d: -nki se dice «-ngui», -nchik «-nchij», tanta «tanda». Se escribe siempre igual en todo el país.",
+      "La h es una aspiración suave (hatun «grande»), y la final -k de -nchik o de mikuk suena a menudo como j o se pierde. La ll se dice como «ll» en Imbabura y como una «zh» en la Sierra central.",
+      "El acento cae en la penúltima sílaba y no se escribe: mikuni, rimarkanki.",
+      "El alfabeto unificado tiene además z y zh, que como ts aparecen en pocas palabras propias de algunas provincias. Textos más antiguos, como la gramática de Grimm (1896), usan c, qu, hu y e, o: «huasi», «micuna»."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo kichwa es una raíz y una cadena de sufijos: primero los que cambian el sentido (-chi, -ri, -pa, -naku), después el tiempo y al final la persona. La raíz es el infinitivo sin -na: mikuna → miku-.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          { "slot": "Raíz", "description": "El infinitivo sin -na.", "example": "miku-" },
+          { "slot": "Derivación", "description": "-chi hacer hacer, -ri para uno mismo, -naku entre varios, -pa para otro, -mu hacia aquí…", "example": "-chi-" },
+          { "slot": "Tiempo", "description": "-rka- pasado, -shka- perfecto, -ku- progresivo…", "example": "-rka-" },
+          { "slot": "Persona", "description": "-ni, -nki, -n, -nchik, -nkichik, -nkuna.", "example": "-ni" },
+          { "slot": "Negación", "description": "mana delante y -chu detrás.", "example": "-chu" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Las personas",
+        "description": "Hay un solo «nosotros», ñukanchik. El pasado agrega -rka- y el futuro tiene terminaciones propias en la 1.ª y 3.ª persona.",
+        "columns": ["Persona", "Presente", "Pasado", "Futuro"],
+        "rows": [
+          { "label": "ñuka «yo»", "cells": ["mikuni", "mikurkani", "mikusha"] },
+          { "label": "kan «tú»", "cells": ["mikunki", "mikurkanki", "mikunki"] },
+          { "label": "pay «él, ella»", "cells": ["mikun", "mikurka", "mikunka"] },
+          { "label": "ñukanchik «nosotros»", "cells": ["mikunchik", "mikurkanchik", "mikushun"] },
+          { "label": "kankuna «ustedes»", "cells": ["mikunkichik", "mikurkankichik", "mikunkichik"] },
+          { "label": "paykuna «ellos, ellas»", "cells": ["mikunkuna", "mikurkakuna", "mikunkakuna"] }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Verbos sin forma personal",
+        "description": "Estas formas no llevan persona y unen oraciones.",
+        "columns": ["Sufijo", "Forma", "Significado"],
+        "rows": [
+          { "label": "-shpa", "cells": ["mikushpa", "comiendo (el mismo sujeto)"] },
+          { "label": "-kpi", "cells": ["mikukpi", "cuando otro come, si otro come"] },
+          { "label": "-nkapak", "cells": ["mikunkapak", "para comer"] },
+          { "label": "-k", "cells": ["mikuk", "el que come"] },
+          { "label": "-shka", "cells": ["mikushka", "comido"] }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases",
+        "items": [
+          { "text": "Ñuka kichwata rimani.", "translation": "Yo hablo kichwa." },
+          { "text": "Paykuna wasiman rirkakuna.", "translation": "Ellos fueron a la casa." },
+          { "text": "Mana yachanichu.", "translation": "No sé." },
+          { "text": "Ama wakaychu.", "translation": "No llores." },
+          { "text": "Kayakama.", "translation": "Hasta mañana." },
+          { "text": "Mikunkapak shamushun.", "translation": "Vengamos a comer." }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Sufijos que cambian el verbo",
+        "description": "Van entre la raíz y el tiempo, y se pueden combinar.",
+        "items": [
+          { "affix": "-chi-", "kind": "causativo", "meaning": "hacer que otro haga", "example": "yachachina", "translation": "enseñar (hacer saber)" },
+          { "affix": "-ri-", "kind": "reflexivo", "meaning": "uno mismo", "example": "armarina", "translation": "bañarse" },
+          { "affix": "-naku-", "kind": "recíproco", "meaning": "unos a otros", "example": "kuyanakuna", "translation": "quererse" },
+          { "affix": "-pa-", "kind": "benefactivo", "meaning": "para otro", "example": "llankapana", "translation": "trabajar para alguien" },
+          { "affix": "-mu-", "kind": "dirección", "meaning": "hacia aquí", "example": "apamuna", "translation": "traer" },
+          { "affix": "-ku-", "kind": "progresivo", "meaning": "estar haciendo", "example": "mikukuna", "translation": "estar comiendo" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Quién a quién",
+        "description": "Con -wa- la acción va hacia mí. Hacia otras personas se usa el pronombre con -ta.",
+        "columns": ["Forma", "Significado"],
+        "rows": [
+          { "label": "kuyawanki", "cells": ["tú me quieres"] },
+          { "label": "kuyawan", "cells": ["él me quiere"] },
+          { "label": "kuyawankuna", "cells": ["ellos me quieren"] },
+          { "label": "kanta kuyani", "cells": ["yo te quiero"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "kichwa",
+    "persons": [
+      { "id": "1", "label": "1.ª persona", "es": 0 },
+      { "id": "2", "label": "2.ª persona", "es": 1 },
+      { "id": "3", "label": "3.ª persona", "es": 2 }
+    ],
+    "tenses": [
+      { "id": "present", "group": "Indicativo", "name": "Presente", "description": "Kunan pacha: lo que pasa ahora o siempre.", "form": "present", "es": "present" },
+      { "id": "past", "group": "Indicativo", "name": "Pasado", "description": "Yalli pacha: lo que ya pasó (-rka-).", "form": "past", "es": "preterite" },
+      { "id": "perfect", "group": "Indicativo", "name": "Pasado -shka", "description": "Lo que ya ha pasado o resultó haber pasado (-shka-).", "form": "perfect", "es": "perfect" },
+      { "id": "pluperfect", "group": "Indicativo", "name": "Pluscuamperfecto", "description": "Lo que había pasado antes (-shka karkani).", "form": "pluperfect", "es": "pluperfect" },
+      { "id": "progressive", "group": "Progresivo y costumbre", "name": "Presente progresivo", "description": "Lo que está pasando (-ku-).", "form": "progressive", "es": "progressive" },
+      { "id": "past_progressive", "group": "Progresivo y costumbre", "name": "Pasado progresivo", "description": "Lo que estaba pasando (-kurka-).", "form": "past_progressive", "es": "past_progressive" },
+      { "id": "past_habitual", "group": "Progresivo y costumbre", "name": "Habitual pasado", "description": "Lo que se solía hacer: -k y karkani.", "form": "past_habitual", "es": "imperfect" },
+      { "id": "future", "group": "Futuro y condicional", "name": "Futuro", "description": "Shamuk pacha: lo que va a pasar.", "form": "future", "es": "future" },
+      { "id": "conditional", "group": "Futuro y condicional", "name": "Condicional", "description": "Lo que pasaría (-man).", "form": "conditional", "es": "conditional" },
+      { "id": "imperative", "group": "Órdenes", "name": "Imperativo", "description": "Órdenes a ti o a ustedes (-y, -ychik).", "form": "imperative", "es": "imperative" },
+      { "id": "hortative", "group": "Órdenes", "name": "Hagamos", "description": "Invitar a hacer algo juntos (-shun), igual que el futuro de ñukanchik.", "form": "hortative", "es": { "tense": "subjunctive", "pronoun": false } },
+      { "id": "jussive", "group": "Órdenes", "name": "Que haga", "description": "Órdenes para él o ellos (-chun, -chunkuna).", "form": "jussive", "es": { "tense": "subjunctive", "before": "que" } },
+      { "id": "prohibitive", "group": "Órdenes", "name": "Prohibición", "description": "ama … -ychu: ¡no lo hagas!", "form": "prohibitive", "negative": true, "es": "imperative" },
+      { "id": "negative", "group": "Negación", "name": "Presente negativo", "description": "mana … -chu.", "form": "negative", "negative": true, "es": "present" },
+      { "id": "negative_past", "group": "Negación", "name": "Pasado negativo", "description": "mana … -rka- … -chu.", "form": "negative_past", "negative": true, "es": "preterite" }
+    ],
+    "lexicon": [
+      { "entry": "mikuna", "meaning": "comer", "es": "comer" },
+      { "entry": "upyana", "meaning": "beber", "es": "beber" },
+      { "entry": "rimana", "meaning": "hablar", "es": "hablar" },
+      { "entry": "kawsana", "meaning": "vivir", "es": "vivir" },
+      { "entry": "rina", "meaning": "ir", "es": "ir" },
+      { "entry": "shamuna", "meaning": "venir", "es": "venir" },
+      { "entry": "puñuna", "meaning": "dormir", "es": "dormir" },
+      { "entry": "llankana", "meaning": "trabajar", "es": "trabajar" },
+      { "entry": "munana", "meaning": "querer, desear", "es": "querer" },
+      { "entry": "kuyana", "meaning": "amar, querer", "es": "amar" },
+      { "entry": "yachana", "meaning": "saber", "es": "saber" },
+      { "entry": "yachakuna", "meaning": "aprender", "es": "aprender" },
+      { "entry": "yachachina", "meaning": "enseñar", "es": "enseñar" },
+      { "entry": "tushuna", "meaning": "bailar", "es": "bailar" },
+      { "entry": "takina", "meaning": "cantar", "es": "cantar" },
+      { "entry": "asina", "meaning": "reír", "es": "reír" },
+      { "entry": "wakana", "meaning": "llorar", "es": "llorar" },
+      { "entry": "rikuna", "meaning": "ver, mirar", "es": "ver" },
+      { "entry": "uyana", "meaning": "oír, escuchar", "es": "escuchar" },
+      { "entry": "kuna", "meaning": "dar", "es": "dar" },
+      { "entry": "apana", "meaning": "llevar", "es": "llevar" },
+      { "entry": "apamuna", "meaning": "traer", "es": "traer" },
+      { "entry": "rantina", "meaning": "comprar", "es": "comprar" },
+      { "entry": "katuna", "meaning": "vender", "es": "vender" },
+      { "entry": "tarpuna", "meaning": "sembrar", "es": "sembrar" },
+      { "entry": "maskana", "meaning": "buscar", "es": "buscar" },
+      { "entry": "tarina", "meaning": "encontrar", "es": "encontrar" },
+      { "entry": "yuyana", "meaning": "pensar, recordar", "es": "pensar" },
+      { "entry": "kallpana", "meaning": "correr", "es": "correr" },
+      { "entry": "purina", "meaning": "caminar", "es": "caminar" },
+      { "entry": "pukllana", "meaning": "jugar", "es": "jugar" },
+      { "entry": "yanuna", "meaning": "cocinar", "es": "cocinar" },
+      { "entry": "killkana", "meaning": "escribir", "es": "escribir" },
+      { "entry": "killkakatina", "meaning": "leer", "es": "leer" },
+      { "entry": "rurana", "meaning": "hacer", "es": "hacer" },
+      { "entry": "shuyana", "meaning": "esperar", "es": "esperar" },
+      { "entry": "kayana", "meaning": "llamar", "es": "llamar" },
+      { "entry": "pichana", "meaning": "barrer", "es": "barrer" },
+      { "entry": "churana", "meaning": "poner", "es": "poner" },
+      { "entry": "tiyarina", "meaning": "sentarse", "es": "sentarse" },
+      { "entry": "armana", "meaning": "bañarse", "es": "bañarse" },
+      { "entry": "muskuna", "meaning": "soñar", "es": "soñar" },
+      { "entry": "hamutana", "meaning": "entender, comprender", "es": "entender" },
+      { "entry": "tapuna", "meaning": "preguntar", "es": "preguntar" },
+      { "entry": "yanapana", "meaning": "ayudar", "es": "ayudar" },
+      { "entry": "chayana", "meaning": "llegar", "es": "llegar" },
+      { "entry": "llukshina", "meaning": "salir", "es": "salir" },
+      { "entry": "yaykuna", "meaning": "entrar", "es": "entrar" },
+      { "entry": "wañuna", "meaning": "morir", "es": "morir" },
+      { "entry": "urmana", "meaning": "caer", "es": "caerse" },
+      { "entry": "manchana", "meaning": "temer, tener miedo", "es": "temer" },
+      { "entry": "rikchana", "meaning": "despertarse", "es": "despertar" }
+    ]
+  }
+}
