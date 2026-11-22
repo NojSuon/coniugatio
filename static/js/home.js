@@ -1,4 +1,4 @@
-import { renderHeader, renderFooter, langWord, escapeHtml, t, PREFIX } from "./common.js";
+import { renderHeader, renderFooter, langWord, escapeHtml, t, PREFIX, DONATE_URL } from "./common.js";
 
 renderHeader("home");
 renderFooter();
@@ -123,10 +123,104 @@ function render(languages) {
   apply();
 }
 
+// The hero carousel: the three newest languages (highest `order`) and a last
+// slide asking for support on Ko-fi. It turns every 7 s, unless the reader
+// prefers less motion, pauses it, or is pointing at or focused inside it.
+function renderCarousel(languages) {
+  const host = document.querySelector("[data-carousel]");
+  if (!host) return;
+  const newest = languages
+    .filter((l) => l.status === "available")
+    .sort((a, b) => b.order - a.order)
+    .slice(0, 3);
+  const total = newest.length + 1;
+  const slideLabel = (i) => t(`${i + 1} de ${total}`, `${i + 1} of ${total}`, `第 ${i + 1} 张，共 ${total} 张`);
+  const slides = newest.map((l, i) => `
+    <a class="carousel-slide" data-serie="${l.series}" href="${PREFIX}${l.slug}/"
+       role="group" aria-roledescription="${t("diapositiva", "slide", "幻灯片")}" aria-label="${slideLabel(i)}">
+      <span class="tag">${t("Nueva lengua", "New language", "新语言")}</span>
+      ${langWord(l.endonym, "span", "endonym")}
+      <span class="name">${escapeHtml(l.name)}</span>
+      <span class="summary">${escapeHtml(l.summary)}</span>
+      <span class="go">${t("Conjugar", "Conjugate", "变位")} →</span>
+    </a>`);
+  slides.push(`
+    <div class="carousel-slide carousel-slide--support"
+         role="group" aria-roledescription="${t("diapositiva", "slide", "幻灯片")}" aria-label="${slideLabel(newest.length)}">
+      <span class="tag">${t("Apóyanos", "Support us", "支持我们")}</span>
+      <span class="support-title">${t("Ayúdanos a sumar más lenguas", "Help us add more languages", "帮助我们加入更多语言")}</span>
+      <span class="summary">${t(
+        "Mati Mati es gratuito. Si te sirve, un aporte en Ko-fi nos ayuda a seguir trabajando con más lenguas y comunidades.",
+        "Mati Mati is free. If it helps you, a contribution on Ko-fi helps us keep working with more languages and communities.",
+        "Mati Mati 是免费的。如果它对你有帮助，在 Ko-fi 上的支持能让我们继续与更多语言和社区合作。"
+      )}</span>
+      <a class="button donate" href="${DONATE_URL}" target="_blank" rel="noopener"><span aria-hidden="true">♥</span> ${t("Dona en Ko-fi", "Donate on Ko-fi", "在 Ko-fi 上捐助")}<span class="visually-hidden"> ${t("(se abre en otra pestaña)", "(opens in a new tab)", "（在新标签页打开）")}</span></a>
+    </div>`);
+
+  host.innerHTML = `
+    <div class="carousel" aria-roledescription="${t("carrusel", "carousel", "轮播")}" aria-label="${t("Novedades", "What's new", "最新动态")}">
+      <div class="carousel-track">${slides.join("")}</div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-btn" data-prev aria-label="${t("Anterior", "Previous", "上一张")}">‹</button>
+        <div class="carousel-dots">
+          ${slides.map((_, i) => `<button type="button" class="carousel-dot" data-go="${i}" aria-label="${t("Ir a la diapositiva", "Go to slide", "转到幻灯片")} ${i + 1}"></button>`).join("")}
+        </div>
+        <button type="button" class="carousel-btn" data-next aria-label="${t("Siguiente", "Next", "下一张")}">›</button>
+        <button type="button" class="carousel-btn carousel-pause" data-pause></button>
+      </div>
+    </div>`;
+
+  const track = host.querySelector(".carousel-track");
+  const dots = [...host.querySelectorAll(".carousel-dot")];
+  const pauseBtn = host.querySelector("[data-pause]");
+  let current = 0;
+  const show = (i, smooth = true) => {
+    current = (i + total) % total;
+    track.scrollTo({ left: current * track.clientWidth, behavior: smooth ? "smooth" : "auto" });
+  };
+  const mark = () => {
+    dots.forEach((d, i) => d.setAttribute("aria-current", i === current ? "true" : "false"));
+  };
+  track.addEventListener("scroll", () => {
+    const i = Math.round(track.scrollLeft / track.clientWidth);
+    if (i !== current && i >= 0 && i < total) current = i;
+    mark();
+  }, { passive: true });
+  window.addEventListener("resize", () => show(current, false));
+
+  // Autoplay, off for readers who prefer less motion.
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let playing = !reduced;
+  let hold = false; // pointer over it or focus inside it
+  const setPauseLabel = () => {
+    pauseBtn.textContent = playing ? "❚❚" : "▶";
+    pauseBtn.setAttribute("aria-label", playing
+      ? t("Pausar el carrusel", "Pause the carousel", "暂停轮播")
+      : t("Reanudar el carrusel", "Play the carousel", "播放轮播"));
+  };
+  setInterval(() => {
+    if (playing && !hold && !document.hidden) show(current + 1);
+  }, 7000);
+  const stop = () => { playing = false; setPauseLabel(); };
+  host.addEventListener("pointerenter", () => (hold = true));
+  host.addEventListener("pointerleave", () => (hold = false));
+  host.addEventListener("focusin", () => (hold = true));
+  host.addEventListener("focusout", () => (hold = false));
+  host.querySelector("[data-prev]").addEventListener("click", () => { stop(); show(current - 1); });
+  host.querySelector("[data-next]").addEventListener("click", () => { stop(); show(current + 1); });
+  dots.forEach((d) => d.addEventListener("click", () => { stop(); show(Number(d.dataset.go)); }));
+  pauseBtn.addEventListener("click", () => { playing = !playing; setPauseLabel(); });
+  track.addEventListener("touchstart", stop, { passive: true });
+  setPauseLabel();
+  mark();
+}
+
 try {
   const res = await fetch(`data/${PREFIX}languages.json`);
   if (!res.ok) throw new Error(res.statusText);
-  render(await res.json());
+  const languages = await res.json();
+  render(languages);
+  try { renderCarousel(languages); } catch (e) { console.error(e); }
 } catch {
   list.innerHTML = `<p class="error">${t(
     "No pudimos cargar las lenguas. Recarga la página para intentarlo de nuevo.",
