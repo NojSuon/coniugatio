@@ -1,0 +1,187 @@
+{
+  "name": "Haida",
+  "variant": "Alaskan Haida (Kaigani, Northern Haida), Sealaska spelling",
+  "region": "Prince of Wales Island in Alaska (Hydaburg, Kasaan, Ketchikan), and Haida Gwaii in British Columbia (Old Massett, Skidegate)",
+  "summary": "The language of the Haida people, of the islands of Haida Gwaii and southern Alaska. Its verb doesn't change for person, but for tense and for whether one saw what happened.",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb in its basic form, as in the dictionary: gatáa «eat», k'ajúu «sing», ḵíng «see», isda «do». The underlined letters can be typed g_, k_, x_.",
+    "own": {
+      "hint": "Type any verb in its basic form and its meaning in English. Verbs ending in short -a and in -ad / -as change their stem; the others just add the ending.",
+      "label": "Verb",
+      "es_placeholder": "ask"
+    }
+  },
+  "source": {
+    "short": "Lachler, Dictionary of Alaskan Haida (2010)",
+    "full": "Jordan Lachler, Dictionary of Alaskan Haida (Juneau: Sealaska Heritage Institute, 2010), for the present, direct past and indirect past of each verb, the spelling and the vocabulary; Erma Lawrence, Alaskan Haida Phrasebook (Sealaska Heritage Institute, 2010), for the future, negation and commands; also Jordan Lachler, Haida Handbook; John Levine, The Skidegate Dialect of Haida (1977); Charles Harrison, Haida Grammar (1895); and J. H. Keen, A Grammar of the Haida Language (1906)."
+  },
+  "about": [
+    "Haida, or X̱aad Kíl, is the language of the Haida people. It was spoken in every village of Haida Gwaii, the islands off the north coast of British Columbia, and for some three centuries also in the south of Prince of Wales Island, Alaska, where the Kaigani crossed. It is an isolate, with no known relatives.",
+    "It has two dialects: the southern one, spoken in Skidegate (X̱aayda Kíl), and the northern one, in Old Massett and Alaska. The northern dialect lost some consonants in the middle of words, so its words are shorter. Here we follow Alaskan Haida, the dialect of the Sealaska dictionary.",
+    "It is one of the most endangered languages in the world: very few first-language speakers remain, all of them elders. Immersion schools, language nests and programs such as those of Sealaska Heritage Institute and the Skidegate Haida Immersion Program are training new speakers today."
+  ],
+  "orthography": {
+    "intro": "We use the spelling of the Dictionary of Alaskan Haida (2010), the one of the Sealaska language program. The underlined letters (g̱, ḵ, x̱) are sounds made at the back of the throat, the apostrophe marks glottalized consonants, and the acute accent marks the high-pitched syllable.",
+    "letters": [
+      { "meaning": "mother" },
+      { "meaning": "net" },
+      { "meaning": "boat" },
+      { "meaning": "fish" },
+      { "meaning": "brother (of a woman)" },
+      { "meaning": "digging stick" },
+      { "meaning": "child" },
+      { "meaning": "water" },
+      { "meaning": "highbush cranberry" },
+      { "meaning": "gun" },
+      { "meaning": "mouse" },
+      { "meaning": "the apple" },
+      { "meaning": "head" },
+      { "meaning": "pitch" },
+      { "meaning": "town" },
+      { "meaning": "house" },
+      { "meaning": "bread" },
+      { "meaning": "the black bear" },
+      { "meaning": "snow" },
+      { "meaning": "dance" },
+      { "meaning": "Haida" },
+      { "meaning": "Raven" }
+    ],
+    "vowels": [{ "title": "Vowels" }],
+    "notes": [
+      "Haida has tone: the accent marks the vowel where the voice rises. Xaad, with no accent, is «Haida»; x̱áad, with an accent, «a girl's father».",
+      "At the end of a syllable, b, d, g, dl and j sound halfway between p and b, t and d…: aad «net» sounds almost like «aat». They are written b, d, g because related forms have a clear voiced sound: aadáay «the net».",
+      "The underlined letters are said further back than their partners: ḵ is a k at the back of the throat, g̱ its unaspirated version and x̱ a harsh h. Tlingit and Haida share these sounds, though they are not related.",
+      "The dictionary also uses two rare letters that we don't reproduce here. Skidegate and Massett Haida are written in other spellings, such as John Enrico's."
+    ]
+  },
+  "grammar": {
+    "intro": "The Haida verb comes at the end of the sentence, after the subject and object: Chíin hal táagang «He is eating fish». It doesn't change for person: a pronoun in front says who does it. What changes is the tense ending, and sometimes the stem with it.",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "Negation", "description": "gám, at the start, together with -'ang on the verb." },
+          { "slot": "Pronoun", "description": "Hl I, dáng you, hal he/she, t'aláng we, daláng you folks, tl' they." },
+          { "slot": "Stem", "description": "The basic form, which changes in some verbs: isda → isdáa-, isd-." },
+          { "slot": "Tense", "description": "-gang present, -gan direct past, -gaan indirect past, -saang future." }
+        ]
+      },
+      {
+        "title": "Three kinds of verb",
+        "description": "Verbs in short -a lengthen the a in the present and lose it in the past. Verbs in -ad and -as change their vowel. The others just add the ending, and in the indirect past lengthen or change their last vowel.",
+        "columns": ["Verb", "Present", "Direct past", "Indirect past"],
+        "rows": [
+          { "label": "táa «eat (something)»" },
+          { "label": "isda «do, give»" },
+          { "label": "t'asgad «jump»" },
+          { "label": "k'ajúu «sing»" }
+        ]
+      },
+      {
+        "title": "Two pasts",
+        "description": "The direct past (-gan) tells what one saw or lived. The indirect past (-gaan) tells what one learned afterwards or inferred, and is the tense of old stories.",
+        "columns": ["Form", "Meaning"],
+        "rows": [
+          { "cells": ["He sang (I heard it)."] },
+          { "cells": ["He sang (I was told, it seems he sang)."] }
+        ]
+      },
+      {
+        "title": "Phrases",
+        "items": [
+          { "translation": "He is eating." },
+          { "translation": "Sing!" },
+          { "translation": "Don't eat it!" },
+          { "translation": "Do you know how to sing?" },
+          { "translation": "You will eat highbush cranberries." },
+          { "translation": "Thank you." }
+        ]
+      },
+      {
+        "title": "Active and stative verbs",
+        "description": "Action verbs take Hl, dáng, hal… as subject; state verbs take the same pronouns as objects: díi, dáng, 'láa… Here we conjugate action verbs.",
+        "columns": ["Form", "Meaning"],
+        "rows": [
+          { "cells": ["I'm looking (at something)."] },
+          { "cells": ["He's looking at me."] },
+          { "cells": ["I'm always hungry."] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "1st person (Hl / t'aláng)" },
+      { "id": "2", "label": "2nd person (dáng / daláng)" },
+      { "id": "3", "label": "3rd person (hal / tl')" }
+    ],
+    "tenses": [
+      { "id": "present", "group": "Indicative", "name": "Present", "description": "What is happening now or usually happens (-gang, -ng)." },
+      { "id": "direct_past", "group": "Indicative", "name": "Direct past", "description": "What happened and one saw or lived (-gan)." },
+      { "id": "indirect_past", "group": "Indicative", "name": "Indirect past", "description": "What happened without one seeing it: learned later, told, or a story (-gaan, -aan)." },
+      { "id": "future", "group": "Indicative", "name": "Future", "description": "What will happen (-saang)." },
+      { "id": "imperative", "group": "Commands", "name": "Imperative", "description": "hlaa after the verb; to several people, hl before it and -'uu." },
+      { "id": "prohibitive", "group": "Commands", "name": "Prohibition", "description": "gám hl … -'ang: don't do it!" },
+      { "id": "negative", "group": "Negation", "name": "Negative present", "description": "gám … -'anggang." },
+      { "id": "negative_past", "group": "Negation", "name": "Negative past", "description": "gám … -'anggan." },
+      { "id": "negative_future", "group": "Negation", "name": "Negative future", "description": "gám … -'angsaang." }
+    ],
+    "lexicon": [
+      { "entry": "gatáa", "meaning": "eat", "es": "eat" },
+      { "entry": "táa", "meaning": "eat (something)", "es": "eat it" },
+      { "entry": "táada", "meaning": "feed", "es": "feed them" },
+      { "entry": "k'ajúu", "meaning": "sing", "es": "sing" },
+      { "entry": "k'ah", "meaning": "laugh", "es": "laugh" },
+      { "entry": "ḵíng", "meaning": "see, look at (something)", "es": "see it" },
+      { "entry": "gyúuwulaang", "meaning": "listen (to someone)", "es": "listen" },
+      { "entry": "kihlgula", "meaning": "speak, talk (to someone)", "es": "speak" },
+      { "entry": "súuda", "meaning": "say, tell, mention", "es": "say it" },
+      { "entry": "kyáanang", "meaning": "ask", "es": "ask" },
+      { "entry": "gináng", "meaning": "ask for (something)", "es": "ask for it" },
+      { "entry": "gyaahlánda", "meaning": "tell the news, a story", "es": "tell a story" },
+      { "entry": "kihlgadáng", "meaning": "lie, tell a lie", "es": "lie" },
+      { "entry": "hlg̱aya", "meaning": "call, shout", "es": "call" },
+      { "entry": "sḵ'at'a", "meaning": "learn (something)", "es": "learn it" },
+      { "entry": "hlg̱ánggula", "meaning": "work", "es": "work" },
+      { "entry": "isda", "meaning": "do; give, put, take (something)", "es": "do it" },
+      { "entry": "tlaawhla", "meaning": "make, build, fix (something)", "es": "build it" },
+      { "entry": "da'a", "meaning": "have (something)", "es": "have it" },
+      { "entry": "gúuda", "meaning": "lose (something)", "es": "lose it" },
+      { "entry": "ḵuyáada", "meaning": "love (someone)", "es": "love them" },
+      { "entry": "guláa", "meaning": "like, enjoy (something)", "es": "enjoy it" },
+      { "entry": "sdahla", "meaning": "want (something)", "es": "want it" },
+      { "entry": "galaada", "meaning": "make peace, forgive", "es": "forgive" },
+      { "entry": "g̱aaláng", "meaning": "fry (something)", "es": "fry it" },
+      { "entry": "sk'alda", "meaning": "boil", "es": "boil" },
+      { "entry": "skíida", "meaning": "smoke (food)", "es": "smoke it" },
+      { "entry": "xiláada", "meaning": "dry (something)", "es": "dry it" },
+      { "entry": "ḵada", "meaning": "cut, clean (fish)", "es": "cut it" },
+      { "entry": "jat'ad", "meaning": "cut in two with scissors", "es": "cut it" },
+      { "entry": "sginanáng", "meaning": "chop to pieces", "es": "chop it" },
+      { "entry": "tl'íi", "meaning": "sew (something)", "es": "sew" },
+      { "entry": "k'udlán", "meaning": "paint (something)", "es": "paint" },
+      { "entry": "tlats'a", "meaning": "plant (something)", "es": "plant it" },
+      { "entry": "hlg̱áy", "meaning": "dig up (something)", "es": "dig" },
+      { "entry": "skáadaang", "meaning": "pick (berries)", "es": "pick berries" },
+      { "entry": "aada", "meaning": "fish with a seine net", "es": "fish" },
+      { "entry": "ḵáajuu", "meaning": "hunt on land", "es": "hunt" },
+      { "entry": "áalang", "meaning": "paddle", "es": "paddle" },
+      { "entry": "g̱áadang", "meaning": "bathe", "es": "bathe" },
+      { "entry": "ḵ'ada", "meaning": "sleep", "es": "sleep" },
+      { "entry": "g̱agánjuu", "meaning": "breathe", "es": "breathe" },
+      { "entry": "hltah", "meaning": "spit", "es": "spit" },
+      { "entry": "g̱úntl'aats'a", "meaning": "swallow (something)", "es": "swallow it" },
+      { "entry": "sdíihl", "meaning": "turn back, return", "es": "come back" },
+      { "entry": "sdíihlda", "meaning": "give back (something)", "es": "give it back" },
+      { "entry": "ḵíntl'aa", "meaning": "come and see, visit (someone)", "es": "visit them" },
+      { "entry": "stáwjuu", "meaning": "stroll, go visiting", "es": "stroll" },
+      { "entry": "g̱aayhlda", "meaning": "fight", "es": "fight" },
+      { "entry": "sg̱ál", "meaning": "hide (something)", "es": "hide it" },
+      { "entry": "k'áat'a", "meaning": "throw, toss (something)", "es": "throw it" },
+      { "entry": "dánjuu", "meaning": "pull on (a rope)", "es": "pull" },
+      { "entry": "gijgíihlda", "meaning": "catch, grab (something)", "es": "catch it" },
+      { "entry": "hlk'yáawdaal", "meaning": "sweep (a place)", "es": "sweep" },
+      { "entry": "ináasdla", "meaning": "grow, grow up", "es": "grow" }
+    ]
+  }
+}

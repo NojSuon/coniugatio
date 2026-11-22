@@ -19,6 +19,7 @@ pub mod quichua;
 pub mod spanish;
 pub mod timucua;
 pub mod guarani;
+pub mod haida;
 pub mod wayuu;
 pub mod wixarika;
 pub mod yucatec;
@@ -73,6 +74,9 @@ pub enum Engine {
     /// Mapudungun (Azümchefe spelling): root + suffixes + mood/person
     /// ending, with singular, dual and plural. See `mapudungun`.
     Mapudungun(mapudungun::Conjugation),
+    /// Alaskan Haida: pronoun + stem + tense ending, three stem patterns.
+    /// See `haida`.
+    Haida(haida::Conjugation),
 }
 
 impl Engine {
@@ -103,6 +107,7 @@ impl Engine {
             Engine::Kichwa(c) => c.conjugate_with(verb, opts),
             Engine::Qheswa(c) => c.conjugate_with(verb, opts),
             Engine::Mapudungun(c) => c.conjugate_with(verb, opts),
+            Engine::Haida(c) => c.conjugate_with(verb, opts),
         }
     }
 
@@ -125,6 +130,7 @@ impl Engine {
             Engine::Kichwa(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Qheswa(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Mapudungun(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Haida(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
     }
 }

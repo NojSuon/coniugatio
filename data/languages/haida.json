@@ -1,0 +1,219 @@
+{
+  "slug": "haida",
+  "name": "Haida",
+  "endonym": "X̱aad Kíl",
+  "variant": "Haida de Alaska (kaigani, haida del norte), grafía de Sealaska",
+  "region": "La isla Príncipe de Gales en Alaska (Hydaburg, Kasaan, Ketchikan), y Haida Gwaii en la Columbia Británica (Old Massett, Skidegate)",
+  "family": "aislada",
+  "area": "cascadia",
+  "continent": "norte",
+  "status": "available",
+  "order": 17,
+  "series": "sgaana",
+  "lang_code": "hdn",
+  "summary": "La lengua del pueblo haida, de las islas Haida Gwaii y del sur de Alaska. Su verbo no cambia según la persona, sino según el tiempo y según si uno vio lo que pasó.",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo en su forma básica, como en el diccionario: gatáa «comer», k'ajúu «cantar», ḵíng «ver», isda «hacer». Las letras subrayadas se pueden escribir g_, k_, x_.",
+    "placeholder": "k'ajúu",
+    "keyboard": ["g̱", "ḵ", "x̱", "'", "á", "í", "ú"],
+    "own": {
+      "hint": "Escribe cualquier verbo en su forma básica y su significado en español. Los verbos terminados en -a breve y en -ad / -as cambian la raíz; los demás solo añaden la terminación.",
+      "label": "Verbo",
+      "placeholder": "kyáanang",
+      "es_placeholder": "preguntar"
+    }
+  },
+  "source": {
+    "short": "Lachler, Dictionary of Alaskan Haida (2010)",
+    "full": "Jordan Lachler, Dictionary of Alaskan Haida (Juneau: Sealaska Heritage Institute, 2010), para las formas del presente, el pasado directo y el pasado indirecto de cada verbo, la grafía y el vocabulario; Erma Lawrence, Alaskan Haida Phrasebook (Sealaska Heritage Institute, 2010), para el futuro, la negación y las órdenes; también Jordan Lachler, Haida Handbook; John Levine, The Skidegate Dialect of Haida (1977); Charles Harrison, Haida Grammar (1895); y J. H. Keen, A Grammar of the Haida Language (1906)."
+  },
+  "about": [
+    "El haida, o X̱aad Kíl, es la lengua del pueblo haida. Se habló en todas las aldeas de Haida Gwaii, las islas de la costa norte de la Columbia Británica, y desde hace unos tres siglos también en el sur de la isla Príncipe de Gales, en Alaska, adonde cruzaron los kaigani. Es una lengua aislada, sin parientes conocidos.",
+    "Tiene dos dialectos: el del sur, que se habla en Skidegate (X̱aayda Kíl), y el del norte, en Old Massett y en Alaska. El del norte perdió algunas consonantes en medio de las palabras, así que sus palabras son más cortas. Aquí seguimos el haida de Alaska, el del diccionario de Sealaska.",
+    "Es una de las lenguas más amenazadas del mundo: quedan muy pocos hablantes de primera lengua, todos mayores. Escuelas de inmersión, nidos de lengua y programas como los de Sealaska Heritage Institute y el Skidegate Haida Immersion Program forman hoy a nuevos hablantes."
+  ],
+  "orthography": {
+    "intro": "Usamos la grafía del Dictionary of Alaskan Haida (2010), la del programa de lengua de Sealaska. Las letras subrayadas (g̱, ḵ, x̱) son sonidos del fondo de la garganta, el apóstrofo marca las consonantes glotalizadas y el acento agudo, la sílaba de tono alto.",
+    "letters": [
+      { "letter": "a", "ipa": "a", "word": "aw", "meaning": "madre" },
+      { "letter": "aa", "ipa": "aː", "word": "aad", "meaning": "red" },
+      { "letter": "b", "ipa": "p", "word": "búud", "meaning": "bote" },
+      { "letter": "ch", "ipa": "tʃ", "word": "chíin", "meaning": "pescado" },
+      { "letter": "d", "ipa": "t", "word": "dáa", "meaning": "hermano (de una mujer)" },
+      { "letter": "dl", "ipa": "tɬ", "word": "dlagw", "meaning": "palo para cavar" },
+      { "letter": "g", "ipa": "k", "word": "gid", "meaning": "niño" },
+      { "letter": "g̱", "ipa": "q", "word": "g̱ándl", "meaning": "agua" },
+      { "letter": "hl", "ipa": "ɬ", "word": "hláay", "meaning": "arándano rojo" },
+      { "letter": "j", "ipa": "tʃ", "word": "jagw", "meaning": "escopeta" },
+      { "letter": "k", "ipa": "kʰ", "word": "kagan", "meaning": "ratón" },
+      { "letter": "k'", "ipa": "kʼ", "word": "k'ayáay", "meaning": "la manzana" },
+      { "letter": "ḵ", "ipa": "qʰ", "word": "ḵaj", "meaning": "cabeza" },
+      { "letter": "ḵ'", "ipa": "qʼ", "word": "ḵ'áas", "meaning": "resina" },
+      { "letter": "'l", "ipa": "ˀl", "word": "'láanaa", "meaning": "pueblo" },
+      { "letter": "n", "ipa": "n", "word": "náay", "meaning": "casa" },
+      { "letter": "s", "ipa": "s", "word": "sablíi", "meaning": "pan" },
+      { "letter": "t", "ipa": "tʰ", "word": "táanaay", "meaning": "el oso negro" },
+      { "letter": "t'", "ipa": "tʼ", "word": "t'aaw", "meaning": "nieve" },
+      { "letter": "x", "ipa": "x", "word": "xyáahl", "meaning": "bailar" },
+      { "letter": "x̱", "ipa": "χ", "word": "X̱aad", "meaning": "haida" },
+      { "letter": "y", "ipa": "j", "word": "Yáahl", "meaning": "Cuervo" }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales",
+        "items": [
+          { "letter": "a", "ipa": "a" },
+          { "letter": "aa", "ipa": "aː" },
+          { "letter": "e", "ipa": "e" },
+          { "letter": "ee", "ipa": "eː" },
+          { "letter": "i", "ipa": "i" },
+          { "letter": "ii", "ipa": "iː" },
+          { "letter": "u", "ipa": "u" },
+          { "letter": "uu", "ipa": "uː" }
+        ]
+      }
+    ],
+    "notes": [
+      "El haida tiene tono: el acento marca la vocal en que la voz sube. Xaad, sin acento, es «haida»; x̱áad, con acento, «el padre de una niña».",
+      "Al final de sílaba, b, d, g, dl y j suenan a medio camino entre p y b, t y d…: aad «red» suena casi «aat». Se escriben con b, d, g porque en las formas emparentadas suenan sonoras: aadáay «la red».",
+      "Las letras subrayadas se dicen más atrás que sus pares: ḵ es una k en el fondo de la garganta, g̱ su versión sin aire y x̱ una j fuerte. Tlingit y haida comparten estos sonidos, aunque no son lenguas emparentadas.",
+      "El diccionario usa además dos letras poco frecuentes que no reproducimos aquí. El haida de Skidegate y el de Massett se escriben con otras grafías, como la de John Enrico."
+    ]
+  },
+  "grammar": {
+    "intro": "El verbo haida va al final de la oración, después del sujeto y del objeto: Chíin hal táagang «Él está comiendo pescado». No cambia según la persona: quién lo hace lo dice un pronombre delante. Lo que cambia es la terminación de tiempo, y con ella a veces la raíz.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          { "slot": "Negación", "description": "gám, al principio, junto con -'ang en el verbo.", "example": "gám" },
+          { "slot": "Pronombre", "description": "Hl yo, dáng tú, hal él/ella, t'aláng nosotros, daláng ustedes, tl' ellos.", "example": "Hl" },
+          { "slot": "Raíz", "description": "La forma básica, que cambia en algunos verbos: isda → isdáa-, isd-.", "example": "táa" },
+          { "slot": "Tiempo", "description": "-gang presente, -gan pasado directo, -gaan pasado indirecto, -saang futuro.", "example": "-gang" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Tres tipos de verbo",
+        "description": "Los verbos en -a breve alargan la a en presente y la pierden en pasado. Los verbos en -ad y -as cambian la vocal. Los demás solo añaden la terminación, y en el pasado indirecto alargan o cambian la última vocal.",
+        "columns": ["Verbo", "Presente", "Pasado directo", "Pasado indirecto"],
+        "rows": [
+          { "label": "táa «comer (algo)»", "cells": ["táagang", "táagan", "táagaan"] },
+          { "label": "isda «hacer, dar»", "cells": ["isdáang", "isdgán", "isdáayaan"] },
+          { "label": "t'asgad «saltar»", "cells": ["t'asgíidang", "t'asgíidan", "t'asgadáan"] },
+          { "label": "k'ajúu «cantar»", "cells": ["k'ajúugang", "k'ajúugan", "k'ajáawaan"] }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Dos pasados",
+        "description": "El pasado directo (-gan) cuenta lo que uno vio o vivió. El pasado indirecto (-gaan) cuenta lo que uno supo después o dedujo, y es el tiempo de los relatos antiguos.",
+        "columns": ["Forma", "Significado"],
+        "rows": [
+          { "label": "Hal k'ajúugan.", "cells": ["Cantó (lo oí)."] },
+          { "label": "Hal k'ajáawaan.", "cells": ["Cantó (me contaron, se ve que cantó)."] }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases",
+        "items": [
+          { "text": "Hal gatáagang.", "translation": "Está comiendo." },
+          { "text": "K'ajúu hlaa!", "translation": "¡Canta!" },
+          { "text": "Gám hl táa'ang!", "translation": "¡No lo comas!" },
+          { "text": "Dáa gw k'ajáaw g̱áayaa?", "translation": "¿Sabes cantar?" },
+          { "text": "Hláay dáng táasaang.", "translation": "Comerás arándanos." },
+          { "text": "Háw'aa.", "translation": "Gracias." }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Verbos activos y de estado",
+        "description": "El sujeto de los verbos de acción usa Hl, dáng, hal…; el de los verbos de estado usa los mismos pronombres que el objeto: díi, dáng, 'láa… Aquí conjugamos verbos de acción.",
+        "columns": ["Forma", "Significado"],
+        "rows": [
+          { "label": "Hl ḵínggang.", "cells": ["Estoy mirando (algo)."] },
+          { "label": "Díi hal ḵínggang.", "cells": ["Él me está mirando."] },
+          { "label": "Díi ḵ'ud sg̱wáananggang.", "cells": ["Siempre tengo hambre."] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "haida",
+    "persons": [
+      { "id": "1", "label": "1.ª persona (Hl / t'aláng)", "es": 0 },
+      { "id": "2", "label": "2.ª persona (dáng / daláng)", "es": 1 },
+      { "id": "3", "label": "3.ª persona (hal / tl')", "es": 2 }
+    ],
+    "tenses": [
+      { "id": "present", "group": "Indicativo", "name": "Presente", "description": "Lo que pasa ahora o suele pasar (-gang, -ng).", "form": "present", "es": "present" },
+      { "id": "direct_past", "group": "Indicativo", "name": "Pasado directo", "description": "Lo que pasó y uno vio o vivió (-gan).", "form": "direct_past", "es": "preterite" },
+      { "id": "indirect_past", "group": "Indicativo", "name": "Pasado indirecto", "description": "Lo que pasó sin que uno lo viera: lo supo después, se lo contaron, o es un relato (-gaan, -aan).", "form": "indirect_past", "es": "pluperfect" },
+      { "id": "future", "group": "Indicativo", "name": "Futuro", "description": "Lo que va a pasar (-saang).", "form": "future", "es": "future" },
+      { "id": "imperative", "group": "Órdenes", "name": "Imperativo", "description": "hlaa después del verbo; a varios, hl delante y -'uu.", "form": "imperative", "es": "imperative" },
+      { "id": "prohibitive", "group": "Órdenes", "name": "Prohibición", "description": "gám hl … -'ang: ¡no lo hagas!", "form": "prohibitive", "negative": true, "es": "imperative" },
+      { "id": "negative", "group": "Negación", "name": "Presente negativo", "description": "gám … -'anggang.", "form": "negative", "negative": true, "es": "present" },
+      { "id": "negative_past", "group": "Negación", "name": "Pasado negativo", "description": "gám … -'anggan.", "form": "negative_past", "negative": true, "es": "preterite" },
+      { "id": "negative_future", "group": "Negación", "name": "Futuro negativo", "description": "gám … -'angsaang.", "form": "negative_future", "negative": true, "es": "future" }
+    ],
+    "lexicon": [
+      { "entry": "gatáa", "meaning": "comer", "es": "comer" },
+      { "entry": "táa", "meaning": "comer (algo)", "es": "comer" },
+      { "entry": "táada", "meaning": "dar de comer", "es": "alimentar" },
+      { "entry": "k'ajúu", "meaning": "cantar", "es": "cantar" },
+      { "entry": "k'ah", "meaning": "reír", "es": "reír" },
+      { "entry": "ḵíng", "meaning": "ver, mirar (algo)", "es": "ver" },
+      { "entry": "gyúuwulaang", "meaning": "escuchar (a alguien)", "es": "escuchar" },
+      { "entry": "kihlgula", "meaning": "hablar (con alguien)", "es": "hablar" },
+      { "entry": "súuda", "meaning": "decir, contar, mencionar", "es": "decir" },
+      { "entry": "kyáanang", "meaning": "preguntar", "es": "preguntar" },
+      { "entry": "gináng", "meaning": "pedir (algo)", "es": "pedir" },
+      { "entry": "gyaahlánda", "meaning": "contar la noticia, un relato", "es": "contar" },
+      { "entry": "kihlgadáng", "meaning": "mentir", "es": "mentir" },
+      { "entry": "hlg̱aya", "meaning": "llamar, gritar", "es": "llamar" },
+      { "entry": "sḵ'at'a", "meaning": "aprender (algo)", "es": "aprender" },
+      { "entry": "hlg̱ánggula", "meaning": "trabajar", "es": "trabajar" },
+      { "entry": "isda", "meaning": "hacer; dar, poner, llevar (algo)", "es": "hacer" },
+      { "entry": "tlaawhla", "meaning": "hacer, construir, arreglar (algo)", "es": "construir" },
+      { "entry": "da'a", "meaning": "tener (algo)", "es": "tener" },
+      { "entry": "gúuda", "meaning": "perder (algo)", "es": "perder" },
+      { "entry": "ḵuyáada", "meaning": "amar (a alguien)", "es": "amar" },
+      { "entry": "guláa", "meaning": "gustar de, disfrutar (algo)", "es": "disfrutar" },
+      { "entry": "sdahla", "meaning": "querer (algo)", "es": "querer" },
+      { "entry": "galaada", "meaning": "hacer las paces, perdonar", "es": "perdonar" },
+      { "entry": "g̱aaláng", "meaning": "freír (algo)", "es": "freír" },
+      { "entry": "sk'alda", "meaning": "hervir", "es": "hervir" },
+      { "entry": "skíida", "meaning": "ahumar (comida)", "es": "ahumar" },
+      { "entry": "xiláada", "meaning": "secar (algo)", "es": "secar" },
+      { "entry": "ḵada", "meaning": "cortar, limpiar (pescado)", "es": "cortar" },
+      { "entry": "jat'ad", "meaning": "cortar en dos con tijeras", "es": "recortar" },
+      { "entry": "sginanáng", "meaning": "picar en pedazos", "es": "picar" },
+      { "entry": "tl'íi", "meaning": "coser (algo)", "es": "coser" },
+      { "entry": "k'udlán", "meaning": "pintar (algo)", "es": "pintar" },
+      { "entry": "tlats'a", "meaning": "plantar (algo)", "es": "plantar" },
+      { "entry": "hlg̱áy", "meaning": "desenterrar (algo)", "es": "cavar" },
+      { "entry": "skáadaang", "meaning": "recoger (bayas)", "es": "recoger" },
+      { "entry": "aada", "meaning": "pescar con red", "es": "pescar" },
+      { "entry": "ḵáajuu", "meaning": "cazar en tierra", "es": "cazar" },
+      { "entry": "áalang", "meaning": "remar", "es": "remar" },
+      { "entry": "g̱áadang", "meaning": "bañarse", "es": "bañarse" },
+      { "entry": "ḵ'ada", "meaning": "dormir", "es": "dormir" },
+      { "entry": "g̱agánjuu", "meaning": "respirar", "es": "respirar" },
+      { "entry": "hltah", "meaning": "escupir", "es": "escupir" },
+      { "entry": "g̱úntl'aats'a", "meaning": "tragar (algo)", "es": "tragar" },
+      { "entry": "sdíihl", "meaning": "volver, regresar", "es": "volver" },
+      { "entry": "sdíihlda", "meaning": "devolver (algo)", "es": "devolver" },
+      { "entry": "ḵíntl'aa", "meaning": "venir a ver, visitar (a alguien)", "es": "visitar" },
+      { "entry": "stáwjuu", "meaning": "pasear, ir de visita", "es": "pasear" },
+      { "entry": "g̱aayhlda", "meaning": "pelear", "es": "pelear" },
+      { "entry": "sg̱ál", "meaning": "esconder (algo)", "es": "esconder" },
+      { "entry": "k'áat'a", "meaning": "tirar, lanzar (algo)", "es": "tirar" },
+      { "entry": "dánjuu", "meaning": "jalar (una cuerda)", "es": "jalar" },
+      { "entry": "gijgíihlda", "meaning": "agarrar, atrapar (algo)", "es": "agarrar" },
+      { "entry": "hlk'yáawdaal", "meaning": "barrer (un lugar)", "es": "barrer" },
+      { "entry": "ináasdla", "meaning": "crecer", "es": "crecer" }
+    ]
+  }
+}

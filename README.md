@@ -73,9 +73,11 @@ Every page also exists in English under `/en/` (`/coniugatio/en/otomi/`…), wit
 
 - Mapudungun (mapuzugun): Arturo Hernández Sallés, Nelly Ramos Pizarro y Rosa Huenchulaf Cayuqueo, *Gramática básica de la lengua mapuche*, tomo 1 (UC Temuco / CONADI, 2006), §7 for the verb, in its Azümchefe alphabet; Elba Jara Trecanahuel, Gilberto Melipil Melipil y Juan Ñancupil Railaf, *Cuaderno pedagógico de mapudügun* (Servicio Nacional del Patrimonio Cultural, Maule, 2020), for -le / -küle and vocabulary; Ineke Smeets, *A Grammar of Mapuche* (Mouton de Gruyter, 2008), for the 1st plural -(iy)iñ.
 
+- Haida (X̱aad Kíl, Alaskan): Jordan Lachler, *Dictionary of Alaskan Haida* (Sealaska Heritage Institute, 2010), for each verb's present, direct and indirect past (the stem rules reproduce 901 of its ~1,300 listed verbs, and all those in our lexicon) and the spelling; Erma Lawrence, *Alaskan Haida Phrasebook* (SHI, 2010), for the future, negation and commands; background: Lachler, *Haida Handbook*; Levine, *The Skidegate Dialect of Haida* (1977); Harrison, *Haida Grammar* (1895); Keen, *A Grammar of the Haida Language* (1906).
+
 In the Mayan languages (Itza', Yucatec, Mopan, Lacandon) the implosive b is written without an apostrophe (b, not b').
 - Maya itza': Charles Andrew Hofling con Fernando Tesucún, *Itzaj Maya Grammar*, University of Utah Press, 2000; *Jiilt'an Maya Itza: Vocabulario Itza'*, Academia de Lenguas Mayas de Guatemala, 2001.
 
 All text in an indigenous language should be checked with speakers before publishing.
 
-Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha`, `yucatec`, `mopan`, `zoque`, `wixarika`, `lacandon`, `timucua`, `guarani`, `wayuu`, `quichua`, `kichwa`, `qheswa` or `mapudungun`), which selects the rules in `crates/core`.
+Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha`, `yucatec`, `mopan`, `zoque`, `wixarika`, `lacandon`, `timucua`, `guarani`, `wayuu`, `quichua`, `kichwa`, `qheswa`, `mapudungun` or `haida`), which selects the rules in `crates/core`.

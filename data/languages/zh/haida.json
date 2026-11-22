@@ -1,0 +1,187 @@
+{
+  "name": "海达语",
+  "variant": "阿拉斯加海达语（凯加尼方言，北部海达语），采用 Sealaska 拼写",
+  "region": "阿拉斯加的威尔士亲王岛（海达堡、卡桑、凯奇坎），以及不列颠哥伦比亚省的海达瓜伊（老马塞特、斯基德盖特）",
+  "summary": "海达人的语言，流行于海达瓜伊群岛和阿拉斯加南部。它的动词不随人称变化，而是随时态以及说话人是否亲眼看到而变化。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "按词典形式输入动词的基本形式：gatáa「吃」、k'ajúu「唱歌」、ḵíng「看」、isda「做」。带下划线的字母可以输入为 g_、k_、x_。",
+    "own": {
+      "hint": "输入任意动词的基本形式及其中文意思。以短 -a 和 -ad / -as 结尾的动词会改变词干，其他动词只加词尾。",
+      "label": "动词",
+      "es_placeholder": "问"
+    }
+  },
+  "source": {
+    "short": "Lachler，《Dictionary of Alaskan Haida》（2010）",
+    "full": "Jordan Lachler，《Dictionary of Alaskan Haida》（朱诺：Sealaska Heritage Institute，2010），用于每个动词的现在时、直接过去时和间接过去时、拼写和词汇；Erma Lawrence，《Alaskan Haida Phrasebook》（Sealaska Heritage Institute，2010），用于将来时、否定和命令；另参考 Jordan Lachler，《Haida Handbook》；John Levine，《The Skidegate Dialect of Haida》（1977）；Charles Harrison，《Haida Grammar》（1895）；J. H. Keen，《A Grammar of the Haida Language》（1906）。"
+  },
+  "about": [
+    "海达语（X̱aad Kíl）是海达人的语言。它曾在海达瓜伊（不列颠哥伦比亚省北部沿海的群岛）的各个村庄使用；大约三个世纪以来，凯加尼人渡海迁居到阿拉斯加威尔士亲王岛南部，也在那里使用。它是一种孤立语言，没有已知的亲属语言。",
+    "它有两个方言：南部方言在斯基德盖特使用（X̱aayda Kíl），北部方言在老马塞特和阿拉斯加使用。北部方言丢失了词中的一些辅音，所以词更短。这里采用阿拉斯加海达语，即 Sealaska 词典的方言。",
+    "它是世界上最濒危的语言之一：以海达语为母语的人已经很少，而且都是老人。浸入式学校、语言巢以及 Sealaska Heritage Institute 和斯基德盖特海达语浸入项目等正在培养新的说话者。"
+  ],
+  "orthography": {
+    "intro": "我们采用《Dictionary of Alaskan Haida》（2010）的拼写，即 Sealaska 语言项目所用的拼写。带下划线的字母（g̱、ḵ、x̱）是在喉咙深处发的音，撇号表示喉化辅音，尖音符表示高调音节。",
+    "letters": [
+      { "meaning": "母亲" },
+      { "meaning": "网" },
+      { "meaning": "船" },
+      { "meaning": "鱼" },
+      { "meaning": "（女子的）兄弟" },
+      { "meaning": "挖掘棒" },
+      { "meaning": "孩子" },
+      { "meaning": "水" },
+      { "meaning": "高丛蔓越莓" },
+      { "meaning": "枪" },
+      { "meaning": "老鼠" },
+      { "meaning": "那个苹果" },
+      { "meaning": "头" },
+      { "meaning": "树脂" },
+      { "meaning": "村镇" },
+      { "meaning": "房子" },
+      { "meaning": "面包" },
+      { "meaning": "那只黑熊" },
+      { "meaning": "雪" },
+      { "meaning": "跳舞" },
+      { "meaning": "海达" },
+      { "meaning": "渡鸦" }
+    ],
+    "vowels": [{ "title": "元音" }],
+    "notes": [
+      "海达语有声调：尖音符标出声音升高的元音。Xaad 不带重音，意为「海达」；x̱áad 带重音，意为「女孩的父亲」。",
+      "在音节末尾，b、d、g、dl 和 j 的发音介于 p 和 b、t 和 d……之间：aad「网」听起来几乎像「aat」。之所以写作 b、d、g，是因为在相关的词形中它们是清楚的浊音：aadáay「那张网」。",
+      "带下划线的字母比对应的字母发音更靠后：ḵ 是喉咙深处的 k，g̱ 是它的不送气形式，x̱ 是粗重的 h。特林吉特语和海达语都有这些音，但两者并无亲缘关系。",
+      "词典还使用两个少见的字母，这里没有列出。斯基德盖特和马塞特海达语用其他拼写系统书写，例如 John Enrico 的拼写。"
+    ]
+  },
+  "grammar": {
+    "intro": "海达语的动词位于句末，在主语和宾语之后：Chíin hal táagang「他在吃鱼」。动词不随人称变化：由前面的代词表示谁做。变化的是时态词尾，词干有时也随之变化。",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "否定", "description": "句首的 gám，加上动词上的 -'ang。" },
+          { "slot": "代词", "description": "Hl 我，dáng 你，hal 他/她，t'aláng 我们，daláng 你们，tl' 他们。" },
+          { "slot": "词干", "description": "基本形式，有些动词会变化：isda → isdáa-、isd-。" },
+          { "slot": "时态", "description": "-gang 现在时，-gan 直接过去时，-gaan 间接过去时，-saang 将来时。" }
+        ]
+      },
+      {
+        "title": "三类动词",
+        "description": "以短 -a 结尾的动词在现在时把 a 拉长，在过去时去掉 a。以 -ad 和 -as 结尾的动词改变元音。其他动词只加词尾，在间接过去时拉长或改变最后一个元音。",
+        "columns": ["动词", "现在时", "直接过去时", "间接过去时"],
+        "rows": [
+          { "label": "táa「吃（某物）」" },
+          { "label": "isda「做，给」" },
+          { "label": "t'asgad「跳」" },
+          { "label": "k'ajúu「唱歌」" }
+        ]
+      },
+      {
+        "title": "两种过去时",
+        "description": "直接过去时（-gan）讲述说话人亲眼看到或亲身经历的事。间接过去时（-gaan）讲述事后得知或推断的事，也是古老故事所用的时态。",
+        "columns": ["形式", "意思"],
+        "rows": [
+          { "cells": ["他唱了歌（我听到了）。"] },
+          { "cells": ["他唱了歌（听说的，看来他唱过）。"] }
+        ]
+      },
+      {
+        "title": "句子",
+        "items": [
+          { "translation": "他在吃饭。" },
+          { "translation": "唱吧！" },
+          { "translation": "别吃它！" },
+          { "translation": "你会唱歌吗？" },
+          { "translation": "你会吃高丛蔓越莓。" },
+          { "translation": "谢谢。" }
+        ]
+      },
+      {
+        "title": "动作动词和状态动词",
+        "description": "动作动词的主语用 Hl、dáng、hal……；状态动词的主语用与宾语相同的代词：díi、dáng、'láa……这里变位的是动作动词。",
+        "columns": ["形式", "意思"],
+        "rows": [
+          { "cells": ["我在看（某物）。"] },
+          { "cells": ["他在看我。"] },
+          { "cells": ["我总是饿。"] }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "第一人称（Hl / t'aláng）" },
+      { "id": "2", "label": "第二人称（dáng / daláng）" },
+      { "id": "3", "label": "第三人称（hal / tl'）" }
+    ],
+    "tenses": [
+      { "id": "present", "group": "直陈式", "name": "现在时", "description": "现在正在发生或经常发生的事（-gang、-ng）。" },
+      { "id": "direct_past", "group": "直陈式", "name": "直接过去时", "description": "发生过、且说话人亲见或亲历的事（-gan）。" },
+      { "id": "indirect_past", "group": "直陈式", "name": "间接过去时", "description": "说话人未亲见的事：事后得知、听人说或故事中的事（-gaan、-aan）。" },
+      { "id": "future", "group": "直陈式", "name": "将来时", "description": "将要发生的事（-saang）。" },
+      { "id": "imperative", "group": "命令", "name": "命令式", "description": "动词后加 hlaa；对几个人说时，前加 hl，后加 -'uu。" },
+      { "id": "prohibitive", "group": "命令", "name": "禁止", "description": "gám hl … -'ang：别做！" },
+      { "id": "negative", "group": "否定", "name": "现在时否定", "description": "gám … -'anggang。" },
+      { "id": "negative_past", "group": "否定", "name": "过去时否定", "description": "gám … -'anggan。" },
+      { "id": "negative_future", "group": "否定", "name": "将来时否定", "description": "gám … -'angsaang。" }
+    ],
+    "lexicon": [
+      { "entry": "gatáa", "meaning": "吃", "es": "吃饭" },
+      { "entry": "táa", "meaning": "吃（某物）", "es": "吃它" },
+      { "entry": "táada", "meaning": "喂", "es": "喂它" },
+      { "entry": "k'ajúu", "meaning": "唱歌", "es": "唱歌" },
+      { "entry": "k'ah", "meaning": "笑", "es": "笑" },
+      { "entry": "ḵíng", "meaning": "看见，看（某物）", "es": "看见" },
+      { "entry": "gyúuwulaang", "meaning": "听（某人）", "es": "听" },
+      { "entry": "kihlgula", "meaning": "说话（对某人）", "es": "说话" },
+      { "entry": "súuda", "meaning": "说，讲，提到", "es": "说" },
+      { "entry": "kyáanang", "meaning": "问", "es": "问" },
+      { "entry": "gináng", "meaning": "要（某物）", "es": "要它" },
+      { "entry": "gyaahlánda", "meaning": "讲消息，讲故事", "es": "讲故事" },
+      { "entry": "kihlgadáng", "meaning": "说谎", "es": "说谎" },
+      { "entry": "hlg̱aya", "meaning": "叫，喊", "es": "叫" },
+      { "entry": "sḵ'at'a", "meaning": "学（某物）", "es": "学习" },
+      { "entry": "hlg̱ánggula", "meaning": "工作", "es": "工作" },
+      { "entry": "isda", "meaning": "做；给，放，拿（某物）", "es": "做这件事" },
+      { "entry": "tlaawhla", "meaning": "做，建造，修理（某物）", "es": "建造" },
+      { "entry": "da'a", "meaning": "有（某物）", "es": "有" },
+      { "entry": "gúuda", "meaning": "丢失（某物）", "es": "丢它" },
+      { "entry": "ḵuyáada", "meaning": "爱（某人）", "es": "爱" },
+      { "entry": "guláa", "meaning": "喜欢，享受（某物）", "es": "喜欢" },
+      { "entry": "sdahla", "meaning": "想要（某物）", "es": "想要" },
+      { "entry": "galaada", "meaning": "和好，原谅", "es": "原谅" },
+      { "entry": "g̱aaláng", "meaning": "煎（某物）", "es": "煎它" },
+      { "entry": "sk'alda", "meaning": "煮沸", "es": "煮沸" },
+      { "entry": "skíida", "meaning": "熏（食物）", "es": "熏它" },
+      { "entry": "xiláada", "meaning": "晒干（某物）", "es": "晒干它" },
+      { "entry": "ḵada", "meaning": "切，收拾（鱼）", "es": "切它" },
+      { "entry": "jat'ad", "meaning": "用剪刀剪成两半", "es": "剪它" },
+      { "entry": "sginanáng", "meaning": "剁碎", "es": "剁它" },
+      { "entry": "tl'íi", "meaning": "缝（某物）", "es": "缝衣服" },
+      { "entry": "k'udlán", "meaning": "涂漆，画（某物）", "es": "画画" },
+      { "entry": "tlats'a", "meaning": "种（某物）", "es": "种它" },
+      { "entry": "hlg̱áy", "meaning": "挖出（某物）", "es": "挖" },
+      { "entry": "skáadaang", "meaning": "采（浆果）", "es": "采浆果" },
+      { "entry": "aada", "meaning": "用围网捕鱼", "es": "捕鱼" },
+      { "entry": "ḵáajuu", "meaning": "在陆地上打猎", "es": "打猎" },
+      { "entry": "áalang", "meaning": "划船", "es": "划船" },
+      { "entry": "g̱áadang", "meaning": "洗澡", "es": "洗澡" },
+      { "entry": "ḵ'ada", "meaning": "睡觉", "es": "睡觉" },
+      { "entry": "g̱agánjuu", "meaning": "呼吸", "es": "呼吸" },
+      { "entry": "hltah", "meaning": "吐口水", "es": "吐口水" },
+      { "entry": "g̱úntl'aats'a", "meaning": "吞下（某物）", "es": "吞下它" },
+      { "entry": "sdíihl", "meaning": "回来，返回", "es": "回来" },
+      { "entry": "sdíihlda", "meaning": "归还（某物）", "es": "还它" },
+      { "entry": "ḵíntl'aa", "meaning": "来看，拜访（某人）", "es": "拜访" },
+      { "entry": "stáwjuu", "meaning": "散步，串门", "es": "散步" },
+      { "entry": "g̱aayhlda", "meaning": "打架", "es": "打架" },
+      { "entry": "sg̱ál", "meaning": "藏（某物）", "es": "藏它" },
+      { "entry": "k'áat'a", "meaning": "扔（某物）", "es": "扔它" },
+      { "entry": "dánjuu", "meaning": "拉（绳子）", "es": "拉" },
+      { "entry": "gijgíihlda", "meaning": "抓住（某物）", "es": "抓住它" },
+      { "entry": "hlk'yáawdaal", "meaning": "扫（某处）", "es": "扫地" },
+      { "entry": "ináasdla", "meaning": "长大", "es": "长大" }
+    ]
+  }
+}

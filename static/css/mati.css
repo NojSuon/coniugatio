@@ -162,6 +162,13 @@ html:lang(zh) {
   --serie-acento: var(--mati-mostaza);
   --serie-texto: var(--mati-cacao-rojo);
 }
+/* Sg̱áana: the killer whale; Northwest Coast blue-green and red (Haida). */
+[data-serie="sgaana"] {
+  --serie-fondo: var(--mati-pastel-espuma);
+  --serie-solido: var(--mati-petroleo);
+  --serie-acento: var(--mati-cacao-rojo);
+  --serie-texto: var(--mati-petroleo);
+}
 /* Kallfü: blue, the colour of the wenu mapu, the sky (Mapudungun). */
 [data-serie="kallfu"] {
   --serie-fondo: var(--mati-pastel-escarcha);
@@ -803,6 +810,7 @@ a.lang-switch:hover, a.lang-switch:focus-visible { background: var(--mati-pastel
 [data-theme="dark"] [data-serie="lapacho"] { --serie-fondo: #351F2C; --serie-solido: #7A2E57; --serie-acento: #D9A93F; --serie-texto: #EBA8CB; }
 [data-theme="dark"] [data-serie="algarrobo"] { --serie-fondo: #3A2A20; --serie-solido: #A3402A; --serie-acento: #C98A2E; --serie-texto: #F2B48E; }
 [data-theme="dark"] [data-serie="kantu"] { --serie-fondo: #3A1F22; --serie-solido: #9A3A3A; --serie-acento: #D9A93F; --serie-texto: #F0A8A0; }
+[data-theme="dark"] [data-serie="sgaana"] { --serie-fondo: #17292C; --serie-solido: #2E6B6E; --serie-acento: #D2604A; --serie-texto: #9ED4D2; }
 [data-theme="dark"] [data-serie="kallfu"] { --serie-fondo: #1C2338; --serie-solido: #3B4F9A; --serie-acento: #D9A93F; --serie-texto: #A8B8F0; }
 [data-theme="dark"] [data-serie="paramo"] { --serie-fondo: #1F2E22; --serie-solido: #3E6B4A; --serie-acento: #D9A93F; --serie-texto: #A8D8B0; }
 [data-theme="dark"] [data-serie="guajira"] { --serie-fondo: #3A2A1A; --serie-solido: #9C5400; --serie-acento: #E06A9E; --serie-texto: #F2C38A; }
