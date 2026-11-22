@@ -1,0 +1,175 @@
+{
+  "name": "Ch'ol",
+  "variant": "Ch'ol of Tila and Tumbalá, INALI writing standard",
+  "region": "Northern Chiapas (Tila, Tumbalá, Salto de Agua, Palenque, Sabanilla) and parts of Tabasco and Campeche, in Mexico",
+  "summary": "The Mayan language of the Ch'ol people of northern Chiapas, neighbours of Palenque. Its verb marks who something happens to in two ways, depending on whether the action is finished or not.",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type an intransitive verb with -el (majlel «go», wäyel «sleep») or the root of a transitive one (k'ux «eat something», mek' «hug»). You can also type just the root (majl).",
+    "own": {
+      "hint": "Type a verb ending in -el (intransitive) or a transitive root, and its meaning in English. In the perfective, transitives take their root's own vowel: k'ux → k'uxu.",
+      "label": "Verb",
+      "es_placeholder": "go out"
+    }
+  },
+  "source": {
+    "short": "Coon, «Ch'ol» (2015); INALI, writing standard (2011)",
+    "full": "Jessica Coon, «Ch'ol», in Judith Aissen, Nora England and Roberto Zavala (eds.), The Mayan Languages (2015 draft, drawing on Juan Jesús Vázquez Álvarez, A Grammar of Chol, 2011), for the verb; INALI, Ityoj ts'ijbuñtyel lakty'añ ch'ol: norma de escritura de la lengua ch'ol, for the spelling; Miguel Sánchez Álvarez (coord.), CHajpäbilbä tsolty'añ tyi lakty'añ: vocabulario de la lengua ch'ol (UNICH, 2013), for vocabulary and examples (tsa' majliyoñ, tsa' majliyob); also Enrique Jiménez Jiménez and Jorge Guzmán Gutiérrez, Its'ijbuñtyel ña'alty'añ Ch'ol (INALI, 2013)."
+  },
+  "about": [
+    "Ch'ol is a Mayan language of northern Chiapas, spoken in Tila, Tumbalá, Salto de Agua, Palenque and Sabanilla, and by communities that moved to Tabasco and Campeche. It has some two hundred thousand speakers, who call it lakty'añ, «our word».",
+    "It belongs to the Ch'olan branch, with Ch'orti' and Ch'olti', the language of many Classic Maya hieroglyphic inscriptions; this is why epigraphers study Ch'ol to read the inscriptions of Palenque. It has two main varieties, Tila and Tumbalá.",
+    "It is taught in bilingual schools and has an INALI writing standard. Radio, music and vocabularies made with speakers, such as the one by the Intercultural University of Chiapas, keep it alive."
+  ],
+  "orthography": {
+    "intro": "We use the INALI writing standard, the one of the Vocabulario de la lengua ch'ol. Consonants with an apostrophe are glottalized, ty and ñ are palatal, and the sixth vowel is written ä.",
+    "letters": [
+      { "meaning": "night" },
+      { "meaning": "path" },
+      { "meaning": "honey, bee" },
+      { "meaning": "squash" },
+      { "meaning": "star" },
+      { "meaning": "woman" },
+      { "meaning": "water" },
+      { "meaning": "coffee" },
+      { "meaning": "sun, day" },
+      { "meaning": "earth" },
+      { "meaning": "bird" },
+      { "meaning": "mother" },
+      { "meaning": "house" },
+      { "meaning": "world" },
+      { "meaning": "white" },
+      { "meaning": "dog" },
+      { "meaning": "money" },
+      { "meaning": "word" },
+      { "meaning": "moon" },
+      { "meaning": "tortilla" },
+      { "meaning": "thief" },
+      { "meaning": "fish" },
+      { "meaning": "banana" }
+    ],
+    "vowels": [{ "title": "Vowels" }],
+    "notes": [
+      "ä is a central vowel, between i and u, like ɨ: chäy «fish». It comes from an old short a; its neighbours Tseltal and Tsotsil don't have it.",
+      "After a vowel, j marks a vowel that ends in a breath: sak' «stinging» and sajk' «grasshopper» differ only in this.",
+      "ty and ñ are palatal, like the t in a quick «tune» and the ñ in «niño»; Ch'ol has almost no plain t or n. That is why the perfective is heard as tsa' or ta'.",
+      "At the start of a sentence or a name, double letters take two capitals: CHa'añ, TYi, TSa'. The apostrophe and the hyphen mark the glottal stop.",
+      "Older spellings, such as that of the Summer Institute of Linguistics, write ty as ẗ or t'y, and ä as ʌ or i̱."
+    ]
+  },
+  "grammar": {
+    "intro": "A Ch'ol verb follows an aspect word (tsa' perfective, mi imperfective, chonkol progressive) and carries two sets of person markers: Set A, prefixes (k-, a-, i-), and Set B, suffixes (-oñ, -ety, Ø). There is no grammatical tense: past and future are told with words like ak'bi «yesterday» and ijk'äl «tomorrow».",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "Negation", "description": "ma'añ before the aspect." },
+          { "slot": "Aspect", "description": "tsa' perfective, mi imperfective, chonkol progressive." },
+          { "slot": "Set A", "description": "k- / j- I, a- / aw- you, i- / y- he or she, lak- we (with you)." },
+          { "slot": "Root", "description": "majl «go», k'ux «eat», il «see»…" },
+          { "slot": "Status", "description": "-i intransitive perfective, -el imperfective, -V transitive perfective, -Vñ derived." },
+          { "slot": "Set B and plural", "description": "-oñ, -ety, Ø; plural -la, -lojoñ, -ob." }
+        ]
+      },
+      {
+        "title": "Two alignments",
+        "description": "In the perfective, the subject of an intransitive is marked like the object of a transitive, with Set B. In the imperfective and progressive, it is marked like the subject of a transitive, with Set A.",
+        "columns": ["Form", "Meaning"],
+        "rows": [
+          { "cells": ["I went."] },
+          { "cells": ["I go."] },
+          { "cells": ["I ate it."] },
+          { "cells": ["I eat it."] },
+          { "cells": ["I'm hugging you."] }
+        ]
+      },
+      {
+        "title": "Two «we»",
+        "description": "lak- and -oñla include the listener; -lojoñ leaves them out. The 2nd person plural is -la and the 3rd, -ob.",
+        "columns": ["Person", "Perfective", "Imperfective"],
+        "rows": [
+          { "label": "joñoñla «we (with you)»" },
+          { "label": "joñoñlojoñ «we (not you)»" },
+          { "label": "jatyetyla «you all»" },
+          { "label": "jiñob «they»" }
+        ]
+      },
+      {
+        "title": "Phrases",
+        "items": [
+          { "translation": "She went to sell vegetables." },
+          { "translation": "I go to school." },
+          { "translation": "I don't want pozol." },
+          { "translation": "She doesn't go to class." },
+          { "translation": "They have already left." }
+        ]
+      },
+      {
+        "title": "Suffixes that change the verb",
+        "description": "They make new verbs from a root.",
+        "items": [
+          { "kind": "causative", "meaning": "make someone do", "translation": "put to sleep" },
+          { "kind": "applicative", "meaning": "for someone", "translation": "make something for someone" },
+          { "kind": "passive", "meaning": "be done", "translation": "be hugged" },
+          { "kind": "transitivizer", "meaning": "make transitive", "translation": "sing something" }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "1st person (joñoñ / joñoñla: with you)" },
+      { "id": "1x", "label": "1st person (joñoñlojoñ: not you)" },
+      { "id": "2", "label": "2nd person (jatyety / jatyetyla)" },
+      { "id": "3", "label": "3rd person (jiñ / jiñob)" }
+    ],
+    "tenses": [
+      { "id": "perfective", "group": "Aspect", "name": "Perfective", "description": "What already happened, the finished action (tsa'). Intransitives take -i and Set B; transitives, their root's vowel." },
+      { "id": "perfective_already", "group": "Aspect", "name": "Perfective with -ix", "description": "What has already happened: tsa' plus the clitic -ix «already».", "es": { "tense": "preterite", "adverb": "already" } },
+      { "id": "imperfective", "group": "Aspect", "name": "Imperfective", "description": "What always, usually or will happen (mi). Intransitives take Set A and -el." },
+      { "id": "progressive", "group": "Aspect", "name": "Progressive", "description": "What is happening now (chonkol; in Tumbalá, woli)." },
+      { "id": "negative_perfective", "group": "Negation", "name": "Negative perfective", "description": "ma'añ tsa' …" },
+      { "id": "negative_imperfective", "group": "Negation", "name": "Negative imperfective", "description": "ma'añ mi …" }
+    ],
+    "lexicon": [
+      { "entry": "majlel", "meaning": "go", "es": "go" },
+      { "entry": "tyälel", "meaning": "come", "es": "come" },
+      { "entry": "julel", "meaning": "arrive (here)", "es": "arrive" },
+      { "entry": "k'otyel", "meaning": "arrive (there)", "es": "arrive" },
+      { "entry": "ochel", "meaning": "go in", "es": "go in" },
+      { "entry": "lok'el", "meaning": "go out", "es": "go out" },
+      { "entry": "letsel", "meaning": "go up", "es": "go up" },
+      { "entry": "yajlel", "meaning": "fall", "es": "fall" },
+      { "entry": "tyijp'el", "meaning": "jump", "es": "jump" },
+      { "entry": "wejlel", "meaning": "fly", "es": "fly" },
+      { "entry": "wäyel", "meaning": "sleep", "es": "sleep" },
+      { "entry": "uk'el", "meaning": "cry", "es": "cry" },
+      { "entry": "chämel", "meaning": "die", "es": "die" },
+      { "entry": "uch'el", "meaning": "eat", "es": "eat" },
+      { "entry": "ñumel", "meaning": "pass", "es": "pass" },
+      { "entry": "sujtyel", "meaning": "go back", "es": "go back" },
+      { "entry": "k'ux", "meaning": "eat (something), chew", "es": "eat it" },
+      { "entry": "mek'", "meaning": "hug", "es": "hug them" },
+      { "entry": "jats'", "meaning": "hit", "es": "hit it" },
+      { "entry": "kuch", "meaning": "carry", "es": "carry it" },
+      { "entry": "choñ", "meaning": "sell", "es": "sell it" },
+      { "entry": "mäñ", "meaning": "buy", "es": "buy it" },
+      { "entry": "wuts'", "meaning": "wash (clothes)", "es": "wash it" },
+      { "entry": "ch'äx", "meaning": "boil (something)", "es": "boil it" },
+      { "entry": "mos", "meaning": "cover", "es": "cover it" },
+      { "entry": "boñ", "meaning": "paint", "es": "paint it" },
+      { "entry": "päk'", "meaning": "plant", "es": "plant it" },
+      { "entry": "tyaj", "meaning": "find", "es": "find it" },
+      { "entry": "jap", "meaning": "drink", "es": "drink it" },
+      { "entry": "mel", "meaning": "make", "es": "make it" },
+      { "entry": "ch'äm", "meaning": "take, grab", "es": "take it" },
+      { "entry": "k'el", "meaning": "look at, look after", "es": "look at it" },
+      { "entry": "il", "meaning": "see", "es": "see it" },
+      { "entry": "ts'ijb", "meaning": "write", "es": "write it" },
+      { "entry": "xujch'", "meaning": "steal", "es": "steal it" },
+      { "entry": "k'ay", "meaning": "sing (something)", "es": "sing it" },
+      { "entry": "soñ", "meaning": "dance (something)", "es": "dance it" },
+      { "entry": "alas", "meaning": "play (with something)", "es": "play with it" },
+      { "entry": "pi'l", "meaning": "go with, accompany", "es": "go with them" }
+    ]
+  }
+}

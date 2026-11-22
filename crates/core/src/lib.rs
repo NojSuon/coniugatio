@@ -4,6 +4,7 @@
 //! and to WebAssembly (runs in the visitor's browser).
 
 pub mod conjugate;
+pub mod chol;
 pub mod chinese;
 pub mod english;
 pub mod itza;
@@ -77,6 +78,9 @@ pub enum Engine {
     /// Alaskan Haida: pronoun + stem + tense ending, three stem patterns.
     /// See `haida`.
     Haida(haida::Conjugation),
+    /// Ch'ol (INALI spelling): aspect word + Set A / Set B, split by aspect.
+    /// See `chol`.
+    Chol(chol::Conjugation),
 }
 
 impl Engine {
@@ -108,6 +112,7 @@ impl Engine {
             Engine::Qheswa(c) => c.conjugate_with(verb, opts),
             Engine::Mapudungun(c) => c.conjugate_with(verb, opts),
             Engine::Haida(c) => c.conjugate_with(verb, opts),
+            Engine::Chol(c) => c.conjugate_with(verb, opts),
         }
     }
 
@@ -131,6 +136,7 @@ impl Engine {
             Engine::Qheswa(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Mapudungun(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Haida(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Chol(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
     }
 }

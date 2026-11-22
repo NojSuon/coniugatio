@@ -1,0 +1,205 @@
+{
+  "slug": "chol",
+  "name": "Ch'ol",
+  "endonym": "lakty'añ",
+  "variant": "Ch'ol de Tila y Tumbalá, Norma de escritura del INALI",
+  "region": "El norte de Chiapas (Tila, Tumbalá, Salto de Agua, Palenque, Sabanilla) y partes de Tabasco y Campeche, en México",
+  "family": "maya",
+  "area": "mesoamerica",
+  "continent": "norte",
+  "status": "available",
+  "order": 18,
+  "series": "palenque",
+  "lang_code": "ctu",
+  "summary": "La lengua maya de los ch'oles del norte de Chiapas, vecinos de Palenque. Su verbo marca a quién le pasa algo de dos maneras, según si la acción ya terminó o no.",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe un verbo intransitivo con -el (majlel «ir», wäyel «dormir») o la raíz de un transitivo (k'ux «comer algo», mek' «abrazar»). También puedes escribir solo la raíz (majl).",
+    "placeholder": "majlel",
+    "keyboard": ["ä", "ñ", "'"],
+    "own": {
+      "hint": "Escribe un verbo terminado en -el (intransitivo) o una raíz transitiva, y su significado en español. Los transitivos toman en el perfectivo la vocal de su raíz: k'ux → k'uxu.",
+      "label": "Verbo",
+      "placeholder": "lok'el",
+      "es_placeholder": "salir"
+    }
+  },
+  "source": {
+    "short": "Coon, «Ch'ol» (2015); INALI, Norma de escritura (2011)",
+    "full": "Jessica Coon, «Ch'ol», en Judith Aissen, Nora England y Roberto Zavala (eds.), The Mayan Languages (borrador de 2015, a partir de Juan Jesús Vázquez Álvarez, A Grammar of Chol, 2011), para el verbo; INALI, Ityoj ts'ijbuñtyel lakty'añ ch'ol: norma de escritura de la lengua ch'ol, para la grafía; Miguel Sánchez Álvarez (coord.), CHajpäbilbä tsolty'añ tyi lakty'añ: vocabulario de la lengua ch'ol (UNICH, 2013), para el vocabulario y los ejemplos (tsa' majliyoñ, tsa' majliyob); también Enrique Jiménez Jiménez y Jorge Guzmán Gutiérrez, Its'ijbuñtyel ña'alty'añ Ch'ol (INALI, 2013)."
+  },
+  "about": [
+    "El ch'ol es una lengua maya del norte de Chiapas, hablada en Tila, Tumbalá, Salto de Agua, Palenque y Sabanilla, y por comunidades que migraron a Tabasco y Campeche. Tiene unos doscientos mil hablantes, que la llaman lakty'añ, «nuestra palabra».",
+    "Pertenece a la rama ch'olana, la misma del ch'orti' y del ch'olti', la lengua de muchas inscripciones jeroglíficas mayas del periodo clásico; por eso los epigrafistas estudian el ch'ol para leer las inscripciones de Palenque. Tiene dos variantes principales, la de Tila y la de Tumbalá.",
+    "Se enseña en escuelas bilingües y tiene una norma de escritura del INALI. La radio, la música y los vocabularios hechos con hablantes, como el de la Universidad Intercultural de Chiapas, la mantienen viva."
+  ],
+  "orthography": {
+    "intro": "Usamos la norma de escritura del INALI, la del Vocabulario de la lengua ch'ol. Las consonantes con apóstrofo son glotalizadas, ty y ñ son palatales, y la sexta vocal se escribe ä.",
+    "letters": [
+      { "letter": "a", "ipa": "a", "word": "ak'lel", "meaning": "noche" },
+      { "letter": "b", "ipa": "b ~ ɓ", "word": "bij", "meaning": "camino" },
+      { "letter": "ch", "ipa": "tʃ", "word": "chab", "meaning": "miel, abeja" },
+      { "letter": "ch'", "ipa": "tʃʼ", "word": "ch'ujm", "meaning": "calabaza" },
+      { "letter": "e", "ipa": "e", "word": "ek'", "meaning": "estrella" },
+      { "letter": "i", "ipa": "i", "word": "ixik", "meaning": "mujer" },
+      { "letter": "j", "ipa": "x", "word": "ja'", "meaning": "agua" },
+      { "letter": "k", "ipa": "k", "word": "kajpe", "meaning": "café" },
+      { "letter": "k'", "ipa": "kʼ", "word": "k'iñ", "meaning": "sol, día" },
+      { "letter": "l", "ipa": "l", "word": "lum", "meaning": "tierra" },
+      { "letter": "m", "ipa": "m", "word": "mut", "meaning": "pájaro" },
+      { "letter": "ñ", "ipa": "ɲ", "word": "ña'", "meaning": "madre" },
+      { "letter": "o", "ipa": "o", "word": "otyoty", "meaning": "casa" },
+      { "letter": "p", "ipa": "p", "word": "pañämil", "meaning": "mundo" },
+      { "letter": "s", "ipa": "s", "word": "säk", "meaning": "blanco" },
+      { "letter": "ts'", "ipa": "tsʼ", "word": "ts'i'", "meaning": "perro" },
+      { "letter": "ty", "ipa": "tʲ", "word": "tyak'iñ", "meaning": "dinero" },
+      { "letter": "ty'", "ipa": "tʲʼ", "word": "ty'añ", "meaning": "palabra" },
+      { "letter": "u", "ipa": "u", "word": "uw", "meaning": "luna" },
+      { "letter": "w", "ipa": "w", "word": "waj", "meaning": "tortilla" },
+      { "letter": "x", "ipa": "ʃ", "word": "xujch'", "meaning": "ladrón" },
+      { "letter": "ä", "ipa": "ɨ", "word": "chäy", "meaning": "pez" },
+      { "letter": "'", "ipa": "ʔ", "word": "ja'as", "meaning": "plátano" }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales",
+        "items": [
+          { "letter": "a", "ipa": "a" },
+          { "letter": "e", "ipa": "e" },
+          { "letter": "i", "ipa": "i" },
+          { "letter": "o", "ipa": "o" },
+          { "letter": "u", "ipa": "u" },
+          { "letter": "ä", "ipa": "ɨ" }
+        ]
+      }
+    ],
+    "notes": [
+      "La ä es una vocal central, entre la i y la u, como la ɨ: chäy «pez». Viene de una antigua a breve; el tseltal y el tsotsil, sus vecinos, no la tienen.",
+      "Después de una vocal, la j marca una vocal que termina en soplo: sak' «que pica» y sajk' «chapulín» se distinguen solo por eso.",
+      "Ty y ñ son palatales, como en «tiene» dicho deprisa y en «niño»; el ch'ol casi no tiene t ni n simples. Por eso el perfectivo se oye tsa' o ta'.",
+      "Al empezar una oración o un nombre, las letras dobles se escriben con las dos mayúsculas: CHa'añ, TYi, TSa'. El apóstrofo y el guion marcan el saltillo.",
+      "Otras grafías más antiguas, como la del Instituto Lingüístico de Verano, escriben ty como ẗ o tʼy, y la ä como ʌ o i̱."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo ch'ol va precedido de una palabra de aspecto (tsa' perfectivo, mi imperfectivo, chonkol progresivo) y lleva dos juegos de marcas de persona: el juego A, prefijos (k-, a-, i-), y el juego B, sufijos (-oñ, -ety, Ø). No hay tiempo gramatical: el pasado y el futuro se dicen con palabras como ak'bi «ayer» e ijk'äl «mañana».",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          { "slot": "Negación", "description": "ma'añ delante del aspecto.", "example": "ma'añ" },
+          { "slot": "Aspecto", "description": "tsa' perfectivo, mi imperfectivo, chonkol progresivo.", "example": "tsa'" },
+          { "slot": "Juego A", "description": "k- / j- yo, a- / aw- tú, i- / y- él o ella, lak- nosotros (contigo).", "example": "k-" },
+          { "slot": "Raíz", "description": "majl «ir», k'ux «comer», il «ver»…", "example": "k'ux" },
+          { "slot": "Estado", "description": "-i intransitivo perfectivo, -el imperfectivo, -V transitivo perfectivo, -Vñ derivado.", "example": "-u" },
+          { "slot": "Juego B y plural", "description": "-oñ, -ety, Ø; plural -la, -lojoñ, -ob.", "example": "-yob" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Dos alineamientos",
+        "description": "En el perfectivo, el sujeto de un intransitivo se marca como el objeto de un transitivo, con el juego B. En el imperfectivo y el progresivo, se marca como el sujeto de un transitivo, con el juego A.",
+        "columns": ["Forma", "Significado"],
+        "rows": [
+          { "label": "Tsa' majliyoñ.", "cells": ["Fui."] },
+          { "label": "Mi kmajlel.", "cells": ["Voy."] },
+          { "label": "Tsa' jk'uxu.", "cells": ["Lo comí."] },
+          { "label": "Mi jk'ux.", "cells": ["Lo como."] },
+          { "label": "Chonkol kmek'ety.", "cells": ["Te estoy abrazando."] }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Dos «nosotros»",
+        "description": "Lak- y -oñla incluyen a quien escucha; -lojoñ lo excluye. El plural de la 2.ª persona es -la y el de la 3.ª, -ob.",
+        "columns": ["Persona", "Perfectivo", "Imperfectivo"],
+        "rows": [
+          { "label": "joñoñla «nosotros (contigo)»", "cells": ["tsa' majliyoñla", "mi lakmajlel"] },
+          { "label": "joñoñlojoñ «nosotros (sin ti)»", "cells": ["tsa' majliyoñlojoñ", "mi kmajlellojoñ"] },
+          { "label": "jatyetyla «ustedes»", "cells": ["tsa' majliyetyla", "mi amajlella"] },
+          { "label": "jiñob «ellos»", "cells": ["tsa' majliyob", "mi imajlelob"] }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases",
+        "items": [
+          { "text": "Tsa' majli ijula'tyañ iñi'tsijl.", "translation": "Fue a vender verdura." },
+          { "text": "Mi kmajlel tyi eskwela.", "translation": "Voy a la escuela." },
+          { "text": "Mach kom sa'.", "translation": "No quiero pozol." },
+          { "text": "Ma'añ mi imajlel tyi klase.", "translation": "No va a clase." },
+          { "text": "Tsa'ix majliyob.", "translation": "Ya se fueron." }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Sufijos que cambian el verbo",
+        "description": "Forman verbos nuevos a partir de una raíz.",
+        "items": [
+          { "affix": "-(i)s-", "kind": "causativo", "meaning": "hacer que otro haga", "example": "wäyis", "translation": "hacer dormir" },
+          { "affix": "-b-", "kind": "aplicativo", "meaning": "para alguien", "example": "melbe", "translation": "hacerle algo a alguien" },
+          { "affix": "-j-", "kind": "pasivo", "meaning": "ser hecho", "example": "mejk'", "translation": "ser abrazado" },
+          { "affix": "-iñ", "kind": "transitivizador", "meaning": "volver transitivo", "example": "k'ayiñ", "translation": "cantar algo" }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "chol",
+    "persons": [
+      { "id": "1", "label": "1.ª persona (joñoñ / joñoñla: contigo)", "es": 0 },
+      { "id": "1x", "label": "1.ª persona (joñoñlojoñ: sin ti)", "es": 0 },
+      { "id": "2", "label": "2.ª persona (jatyety / jatyetyla)", "es": 1 },
+      { "id": "3", "label": "3.ª persona (jiñ / jiñob)", "es": 2 }
+    ],
+    "tenses": [
+      { "id": "perfective", "group": "Aspecto", "name": "Perfectivo", "description": "Lo que ya pasó, la acción terminada (tsa'). Los intransitivos llevan -i y el juego B; los transitivos, la vocal de la raíz.", "form": "perfective", "es": "preterite" },
+      { "id": "perfective_already", "group": "Aspecto", "name": "Perfectivo con -ix", "description": "Lo que ya pasó: tsa' más el clítico -ix «ya».", "form": "perfective_already", "es": { "tense": "preterite", "adverb": "ya" } },
+      { "id": "imperfective", "group": "Aspecto", "name": "Imperfectivo", "description": "Lo que pasa siempre, de costumbre o va a pasar (mi). Los intransitivos llevan el juego A y -el.", "form": "imperfective", "es": "present" },
+      { "id": "progressive", "group": "Aspecto", "name": "Progresivo", "description": "Lo que está pasando ahora (chonkol; en Tumbalá, woli).", "form": "progressive", "es": "progressive" },
+      { "id": "negative_perfective", "group": "Negación", "name": "Perfectivo negativo", "description": "ma'añ tsa' …", "form": "negative_perfective", "negative": true, "es": "preterite" },
+      { "id": "negative_imperfective", "group": "Negación", "name": "Imperfectivo negativo", "description": "ma'añ mi …", "form": "negative_imperfective", "negative": true, "es": "present" }
+    ],
+    "lexicon": [
+      { "entry": "majlel", "meaning": "ir", "es": "ir" },
+      { "entry": "tyälel", "meaning": "venir", "es": "venir" },
+      { "entry": "julel", "meaning": "llegar (aquí)", "es": "llegar" },
+      { "entry": "k'otyel", "meaning": "llegar (allá)", "es": "llegar" },
+      { "entry": "ochel", "meaning": "entrar", "es": "entrar" },
+      { "entry": "lok'el", "meaning": "salir", "es": "salir" },
+      { "entry": "letsel", "meaning": "subir", "es": "subir" },
+      { "entry": "yajlel", "meaning": "caer", "es": "caerse" },
+      { "entry": "tyijp'el", "meaning": "saltar", "es": "saltar" },
+      { "entry": "wejlel", "meaning": "volar", "es": "volar" },
+      { "entry": "wäyel", "meaning": "dormir", "es": "dormir" },
+      { "entry": "uk'el", "meaning": "llorar", "es": "llorar" },
+      { "entry": "chämel", "meaning": "morir", "es": "morir" },
+      { "entry": "uch'el", "meaning": "comer", "es": "comer" },
+      { "entry": "ñumel", "meaning": "pasar", "es": "pasar" },
+      { "entry": "sujtyel", "meaning": "regresar", "es": "regresar" },
+      { "entry": "k'ux", "kind": "transitive", "meaning": "comer (algo), masticar", "es": "comer" },
+      { "entry": "mek'", "kind": "transitive", "meaning": "abrazar", "es": "abrazar" },
+      { "entry": "jats'", "kind": "transitive", "meaning": "golpear", "es": "golpear" },
+      { "entry": "kuch", "kind": "transitive", "meaning": "cargar", "es": "cargar" },
+      { "entry": "choñ", "kind": "transitive", "meaning": "vender", "es": "vender" },
+      { "entry": "mäñ", "kind": "transitive", "meaning": "comprar", "es": "comprar" },
+      { "entry": "wuts'", "kind": "transitive", "meaning": "lavar (ropa)", "es": "lavar" },
+      { "entry": "ch'äx", "kind": "transitive", "meaning": "hervir (algo)", "es": "hervir" },
+      { "entry": "mos", "kind": "transitive", "meaning": "tapar, cubrir", "es": "tapar" },
+      { "entry": "boñ", "kind": "transitive", "meaning": "pintar", "es": "pintar" },
+      { "entry": "päk'", "kind": "transitive", "meaning": "sembrar", "es": "sembrar" },
+      { "entry": "tyaj", "kind": "transitive", "meaning": "encontrar", "es": "encontrar" },
+      { "entry": "jap", "kind": "transitive", "meaning": "beber, tomar", "es": "beber" },
+      { "entry": "mel", "kind": "transitive", "meaning": "hacer", "es": "hacer" },
+      { "entry": "ch'äm", "kind": "transitive", "meaning": "agarrar, tomar", "es": "agarrar" },
+      { "entry": "k'el", "kind": "transitive", "meaning": "mirar, cuidar", "es": "mirar" },
+      { "entry": "il", "kind": "derived", "vowel": "ä", "meaning": "ver", "es": "ver" },
+      { "entry": "ts'ijb", "kind": "derived", "vowel": "u", "meaning": "escribir", "es": "escribir" },
+      { "entry": "xujch'", "kind": "derived", "vowel": "i", "meaning": "robar", "es": "robar" },
+      { "entry": "k'ay", "kind": "derived", "vowel": "i", "meaning": "cantar (algo)", "es": "cantar" },
+      { "entry": "soñ", "kind": "derived", "vowel": "i", "meaning": "bailar (algo)", "es": "bailar" },
+      { "entry": "alas", "kind": "derived", "vowel": "i", "meaning": "jugar (con algo)", "es": "jugar" },
+      { "entry": "pi'l", "kind": "derived", "vowel": "e", "meaning": "acompañar", "es": "acompañar" }
+    ]
+  }
+}

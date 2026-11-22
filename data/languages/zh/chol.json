@@ -1,0 +1,175 @@
+{
+  "name": "乔尔语",
+  "variant": "蒂拉和通巴拉的乔尔语，采用 INALI 书写规范",
+  "region": "墨西哥恰帕斯州北部（蒂拉、通巴拉、萨尔托德阿瓜、帕伦克、萨瓦尼利亚）以及塔巴斯科州和坎佩切州的部分地区",
+  "summary": "恰帕斯州北部乔尔人的玛雅语言，他们是帕伦克的邻居。它的动词用两种方式标记事情发生在谁身上，取决于动作是否已经完成。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "输入以 -el 结尾的不及物动词（majlel「去」、wäyel「睡觉」）或及物动词的词根（k'ux「吃某物」、mek'「拥抱」）。也可以只输入词根（majl）。",
+    "own": {
+      "hint": "输入以 -el 结尾的动词（不及物）或及物词根，以及它的中文意思。在完整体中，及物动词带上词根自己的元音：k'ux → k'uxu。",
+      "label": "动词",
+      "es_placeholder": "出去"
+    }
+  },
+  "source": {
+    "short": "Coon，《Ch'ol》（2015）；INALI，书写规范（2011）",
+    "full": "Jessica Coon，《Ch'ol》，载 Judith Aissen、Nora England 与 Roberto Zavala 编《The Mayan Languages》（2015 年草稿，依据 Juan Jesús Vázquez Álvarez，《A Grammar of Chol》，2011），用于动词；INALI，《Ityoj ts'ijbuñtyel lakty'añ ch'ol: norma de escritura de la lengua ch'ol》，用于拼写；Miguel Sánchez Álvarez 主编，《CHajpäbilbä tsolty'añ tyi lakty'añ: vocabulario de la lengua ch'ol》（恰帕斯跨文化大学，2013），用于词汇和例句（tsa' majliyoñ、tsa' majliyob）；另参考 Enrique Jiménez Jiménez 与 Jorge Guzmán Gutiérrez，《Its'ijbuñtyel ña'alty'añ Ch'ol》（INALI，2013）。"
+  },
+  "about": [
+    "乔尔语是恰帕斯州北部的一种玛雅语言，在蒂拉、通巴拉、萨尔托德阿瓜、帕伦克和萨瓦尼利亚使用，迁居塔巴斯科州和坎佩切州的社区也使用。它约有二十万使用者，他们称之为 lakty'añ，意为「我们的话」。",
+    "它属于乔兰语支，与乔尔蒂语（Ch'orti'）和乔尔提语（Ch'olti'）同支，后者是许多古典期玛雅象形文字铭文的语言；因此铭文学家研究乔尔语来解读帕伦克的铭文。它有两个主要变体：蒂拉变体和通巴拉变体。",
+    "它在双语学校中教授，并有 INALI 制定的书写规范。广播、音乐以及与说话者一起编写的词汇集，例如恰帕斯跨文化大学编写的那本，让它保持活力。"
+  ],
+  "orthography": {
+    "intro": "我们采用 INALI 的书写规范，即《Vocabulario de la lengua ch'ol》所用的规范。带撇号的辅音是喉化音，ty 和 ñ 是腭化音，第六个元音写作 ä。",
+    "letters": [
+      { "meaning": "夜晚" },
+      { "meaning": "路" },
+      { "meaning": "蜂蜜，蜜蜂" },
+      { "meaning": "南瓜" },
+      { "meaning": "星星" },
+      { "meaning": "女人" },
+      { "meaning": "水" },
+      { "meaning": "咖啡" },
+      { "meaning": "太阳，日子" },
+      { "meaning": "土地" },
+      { "meaning": "鸟" },
+      { "meaning": "母亲" },
+      { "meaning": "房子" },
+      { "meaning": "世界" },
+      { "meaning": "白色" },
+      { "meaning": "狗" },
+      { "meaning": "钱" },
+      { "meaning": "话语" },
+      { "meaning": "月亮" },
+      { "meaning": "玉米饼" },
+      { "meaning": "小偷" },
+      { "meaning": "鱼" },
+      { "meaning": "香蕉" }
+    ],
+    "vowels": [{ "title": "元音" }],
+    "notes": [
+      "ä 是央元音，介于 i 和 u 之间，即 ɨ：chäy「鱼」。它来自古代的短 a；它的邻居泽尔塔尔语和佐齐尔语没有这个音。",
+      "元音后的 j 表示元音以送气结尾：sak'「刺痛的」和 sajk'「蚱蜢」只靠这一点区分。",
+      "ty 和 ñ 是腭化音；乔尔语几乎没有普通的 t 和 n。所以完整体标记听起来是 tsa' 或 ta'。",
+      "在句首或名字开头，双字母的两个字母都大写：CHa'añ、TYi、TSa'。撇号和连字符表示喉塞音。",
+      "较早的拼写，例如暑期语言学院的拼写，把 ty 写作 ẗ 或 t'y，把 ä 写作 ʌ 或 i̱。"
+    ]
+  },
+  "grammar": {
+    "intro": "乔尔语动词前面有一个体标记词（tsa' 完整体，mi 非完整体，chonkol 进行体），并带两套人称标记：A 套是前缀（k-、a-、i-），B 套是后缀（-oñ、-ety、Ø）。没有语法时态：过去和将来用 ak'bi「昨天」和 ijk'äl「明天」这样的词表示。",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "否定", "description": "体标记前的 ma'añ。" },
+          { "slot": "体", "description": "tsa' 完整体，mi 非完整体，chonkol 进行体。" },
+          { "slot": "A 套", "description": "k- / j- 我，a- / aw- 你，i- / y- 他或她，lak- 我们（包括你）。" },
+          { "slot": "词根", "description": "majl「去」，k'ux「吃」，il「看见」……" },
+          { "slot": "状态后缀", "description": "-i 不及物完整体，-el 非完整体，-V 及物完整体，-Vñ 派生及物。" },
+          { "slot": "B 套和复数", "description": "-oñ、-ety、Ø；复数 -la、-lojoñ、-ob。" }
+        ]
+      },
+      {
+        "title": "两种配列",
+        "description": "在完整体中，不及物动词的主语像及物动词的宾语一样用 B 套标记。在非完整体和进行体中，它像及物动词的主语一样用 A 套标记。",
+        "columns": ["形式", "意思"],
+        "rows": [
+          { "cells": ["我去了。"] },
+          { "cells": ["我去。"] },
+          { "cells": ["我吃了它。"] },
+          { "cells": ["我吃它。"] },
+          { "cells": ["我正在拥抱你。"] }
+        ]
+      },
+      {
+        "title": "两种「我们」",
+        "description": "lak- 和 -oñla 包括听话人；-lojoñ 不包括。第二人称复数是 -la，第三人称复数是 -ob。",
+        "columns": ["人称", "完整体", "非完整体"],
+        "rows": [
+          { "label": "joñoñla「我们（包括你）」" },
+          { "label": "joñoñlojoñ「我们（不包括你）」" },
+          { "label": "jatyetyla「你们」" },
+          { "label": "jiñob「他们」" }
+        ]
+      },
+      {
+        "title": "句子",
+        "items": [
+          { "translation": "她去卖蔬菜了。" },
+          { "translation": "我去上学。" },
+          { "translation": "我不想要玉米饮料。" },
+          { "translation": "她不去上课。" },
+          { "translation": "他们已经走了。" }
+        ]
+      },
+      {
+        "title": "改变动词的后缀",
+        "description": "它们从词根构成新的动词。",
+        "items": [
+          { "kind": "使役", "meaning": "使别人做", "translation": "哄睡" },
+          { "kind": "施用", "meaning": "为某人", "translation": "为某人做某物" },
+          { "kind": "被动", "meaning": "被做", "translation": "被拥抱" },
+          { "kind": "及物化", "meaning": "变成及物", "translation": "唱某首歌" }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "1", "label": "第一人称（joñoñ / joñoñla：包括你）" },
+      { "id": "1x", "label": "第一人称（joñoñlojoñ：不包括你）" },
+      { "id": "2", "label": "第二人称（jatyety / jatyetyla）" },
+      { "id": "3", "label": "第三人称（jiñ / jiñob）" }
+    ],
+    "tenses": [
+      { "id": "perfective", "group": "体", "name": "完整体", "description": "已经发生、已完成的动作（tsa'）。不及物动词带 -i 和 B 套；及物动词带词根的元音。" },
+      { "id": "perfective_already", "group": "体", "name": "带 -ix 的完整体", "description": "已经发生的事：tsa' 加附着词 -ix「已经」。" },
+      { "id": "imperfective", "group": "体", "name": "非完整体", "description": "总是、通常或将要发生的事（mi）。不及物动词带 A 套和 -el。" },
+      { "id": "progressive", "group": "体", "name": "进行体", "description": "正在发生的事（chonkol；在通巴拉用 woli）。" },
+      { "id": "negative_perfective", "group": "否定", "name": "完整体否定", "description": "ma'añ tsa' ……" },
+      { "id": "negative_imperfective", "group": "否定", "name": "非完整体否定", "description": "ma'añ mi ……" }
+    ],
+    "lexicon": [
+      { "entry": "majlel", "meaning": "去", "es": "去" },
+      { "entry": "tyälel", "meaning": "来", "es": "来" },
+      { "entry": "julel", "meaning": "到达（这里）", "es": "到达" },
+      { "entry": "k'otyel", "meaning": "到达（那里）", "es": "到达" },
+      { "entry": "ochel", "meaning": "进去", "es": "进去" },
+      { "entry": "lok'el", "meaning": "出去", "es": "出去" },
+      { "entry": "letsel", "meaning": "上去", "es": "上去" },
+      { "entry": "yajlel", "meaning": "摔倒", "es": "摔倒" },
+      { "entry": "tyijp'el", "meaning": "跳", "es": "跳" },
+      { "entry": "wejlel", "meaning": "飞", "es": "飞" },
+      { "entry": "wäyel", "meaning": "睡觉", "es": "睡觉" },
+      { "entry": "uk'el", "meaning": "哭", "es": "哭" },
+      { "entry": "chämel", "meaning": "死", "es": "死" },
+      { "entry": "uch'el", "meaning": "吃饭", "es": "吃饭" },
+      { "entry": "ñumel", "meaning": "经过", "es": "经过" },
+      { "entry": "sujtyel", "meaning": "回去", "es": "回去" },
+      { "entry": "k'ux", "meaning": "吃（某物），嚼", "es": "吃它" },
+      { "entry": "mek'", "meaning": "拥抱", "es": "拥抱" },
+      { "entry": "jats'", "meaning": "打", "es": "打它" },
+      { "entry": "kuch", "meaning": "背，扛", "es": "扛它" },
+      { "entry": "choñ", "meaning": "卖", "es": "卖它" },
+      { "entry": "mäñ", "meaning": "买", "es": "买它" },
+      { "entry": "wuts'", "meaning": "洗（衣服）", "es": "洗衣服" },
+      { "entry": "ch'äx", "meaning": "煮（某物）", "es": "煮它" },
+      { "entry": "mos", "meaning": "盖", "es": "盖它" },
+      { "entry": "boñ", "meaning": "涂，画", "es": "画画" },
+      { "entry": "päk'", "meaning": "种", "es": "种它" },
+      { "entry": "tyaj", "meaning": "找到", "es": "找到它" },
+      { "entry": "jap", "meaning": "喝", "es": "喝水" },
+      { "entry": "mel", "meaning": "做", "es": "做这件事" },
+      { "entry": "ch'äm", "meaning": "拿，抓", "es": "拿它" },
+      { "entry": "k'el", "meaning": "看，照看", "es": "看" },
+      { "entry": "il", "meaning": "看见", "es": "看见" },
+      { "entry": "ts'ijb", "meaning": "写", "es": "写字" },
+      { "entry": "xujch'", "meaning": "偷", "es": "偷它" },
+      { "entry": "k'ay", "meaning": "唱（某首歌）", "es": "唱歌" },
+      { "entry": "soñ", "meaning": "跳（某支舞）", "es": "跳舞" },
+      { "entry": "alas", "meaning": "玩（某物）", "es": "玩" },
+      { "entry": "pi'l", "meaning": "陪伴", "es": "陪他" }
+    ]
+  }
+}

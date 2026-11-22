@@ -75,9 +75,11 @@ Every page also exists in English under `/en/` (`/coniugatio/en/otomi/`…), wit
 
 - Haida (X̱aad Kíl, Alaskan): Jordan Lachler, *Dictionary of Alaskan Haida* (Sealaska Heritage Institute, 2010), for each verb's present, direct and indirect past (the stem rules reproduce 901 of its ~1,300 listed verbs, and all those in our lexicon) and the spelling; Erma Lawrence, *Alaskan Haida Phrasebook* (SHI, 2010), for the future, negation and commands; background: Lachler, *Haida Handbook*; Levine, *The Skidegate Dialect of Haida* (1977); Harrison, *Haida Grammar* (1895); Keen, *A Grammar of the Haida Language* (1906).
 
+- Ch'ol (lakty'añ): Jessica Coon, «Ch'ol», in *The Mayan Languages* (2015 draft, after Juan Jesús Vázquez Álvarez, *A Grammar of Chol*, 2011), for the verb; INALI, *Norma de escritura de la lengua ch'ol*, for the spelling; Miguel Sánchez Álvarez (coord.), *Vocabulario de la lengua ch'ol* (UNICH, 2013), for vocabulary and examples; also Jiménez Jiménez and Guzmán Gutiérrez, *Its'ijbuñtyel ña'alty'añ Ch'ol* (INALI, 2013).
+
 In the Mayan languages (Itza', Yucatec, Mopan, Lacandon) the implosive b is written without an apostrophe (b, not b').
 - Maya itza': Charles Andrew Hofling con Fernando Tesucún, *Itzaj Maya Grammar*, University of Utah Press, 2000; *Jiilt'an Maya Itza: Vocabulario Itza'*, Academia de Lenguas Mayas de Guatemala, 2001.
 
 All text in an indigenous language should be checked with speakers before publishing.
 
-Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha`, `yucatec`, `mopan`, `zoque`, `wixarika`, `lacandon`, `timucua`, `guarani`, `wayuu`, `quichua`, `kichwa`, `qheswa`, `mapudungun` or `haida`), which selects the rules in `crates/core`.
+Each language's `conjugation` block names its `engine` (`otomi`, `itza`, `nahuatl`, `purhepecha`, `yucatec`, `mopan`, `zoque`, `wixarika`, `lacandon`, `timucua`, `guarani`, `wayuu`, `quichua`, `kichwa`, `qheswa`, `mapudungun`, `haida` or `chol`), which selects the rules in `crates/core`.
