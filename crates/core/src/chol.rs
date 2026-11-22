@@ -1,22 +1,29 @@
-//! Conjugation for Ch'ol (lakty'añ, Mayan), after Jessica Coon, «Ch'ol»
-//! (2015, after Vázquez Álvarez 2002, 2011), in the INALI spelling of the
-//! Norma de escritura (ty, ñ, ä, ch', ts', ty'), as in the Vocabulario de la
-//! lengua ch'ol (Sánchez Álvarez et al., 2013).
+//! Conjugation for Ch'ol (lakty'añ, Mayan), after Viola Warkentin and Ruby
+//! Scott, *Gramática ch'ol* (ILV, 1980), the grammar of Aulie and Aulie's
+//! *Diccionario ch'ol* (ILV, 3rd ed. 2009) and Jessica Coon, «Ch'ol» (2015).
+//! Those sources write the old ILV spelling (c, qu, ʌ, ty); here every form
+//! is in the INALI spelling of the Norma de escritura (k, ä, ty, ñ), as in
+//! the Vocabulario de la lengua ch'ol (UNICH, 2013), and in the Tila forms
+//! (tsa', chonkol, mi kej) the grammar gives next to Tumbalá's (tsi', woli,
+//! mi kaj).
 //!
 //! The verb takes an aspect word and two sets of person markers: Set A
 //! prefixes (k-, a-, i-) and Set B suffixes (-oñ, -ety, Ø). Ch'ol has a
-//! split by aspect: in the perfective an intransitive subject is Set B, in
-//! the imperfective and progressive it is Set A, on a nominal -el stem.
+//! split by aspect: in the perfective (and the perfect) an intransitive
+//! subject is Set B; elsewhere it is Set A, on a nominal -el stem.
 //!
 //! ```text
-//!               intransitive majl «go»     transitive k'ux «eat»
-//! perfective    tsa' majli-yoñ «I went»    tsa' jk'ux-u «I ate it»
-//! imperfective  mi k-majl-el «I go»        mi jk'ux «I eat it»
+//!               intransitive majl «go»     transitive mäñ «buy»
+//! perfective    tsa' majliyoñ «I went»    tsa' kmäñä «I bought it»
+//! imperfective  mi kmajlel «I go»          mi kmäñ «I buy it»
+//! perfect       majlemoñ «I have gone»     mäñäl kcha'añ «I have bought it»
 //! ```
 //!
-//! Root transitives take a vowel that echoes the root (k'ux-u, mek'-e) in
-//! the perfective and nothing in the imperfective; derived transitives take
-//! a set vowel and -Vñ (il-ä / il-äñ, ts'ijb-u / ts'ijb-uñ).
+//! Plurals, as the Norma writes them: lak- / -oñla «we (with you)»,
+//! k-…-lojoñ / -oñlojoñ «we (not you)», la'a- / -etyla «you all», -ob «they».
+//! Root transitives take a vowel that echoes the root (k'ux-u, mek'-e; a
+//! gives ä, except after j: mäñ-ä, tyaj-a) in the perfective and the
+//! imperative; derived transitives take a set vowel and -Vñ (il-ä / il-äñ).
 
 use serde::{Deserialize, Serialize};
 
@@ -34,12 +41,21 @@ pub enum Form {
     Imperfective,
     /// chonkol kmajlel «I am going».
     Progressive,
+    /// mi kej kmajlel «I will go».
+    Future,
+    /// majlemoñ «I have gone», mäñäl kcha'añ «I have bought it».
+    Perfect,
+    /// majlemoñix «I had gone», mäñälix kcha'añ «I had bought it».
+    Pluperfect,
+    /// letsen «go up!», k'uxu «eat it!», plural -la (2nd person only).
+    Imperative,
     /// ma'añ tsa' majliyoñ «I didn't go».
     NegativePerfective,
     /// ma'añ mi kmajlel «I don't go».
     NegativeImperfective,
+    /// ma'añ mi kej kmajlel «I won't go».
+    NegativeFuture,
 }
-
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, Default)]
 #[serde(rename_all = "snake_case")]
 pub enum Kind {
@@ -102,45 +118,49 @@ fn starts_with_vowel(s: &str) -> bool {
 }
 
 /// Persons 0–6: 1sg, 2sg, 3sg, 1pl (with you), 1pl (not you), 2pl, 3pl.
-/// Set A prefix and the plural suffix that goes with it.
-fn set_a(p: usize, stem: &str) -> (String, &'static str) {
+/// Set A prefix and the plural clitic that goes with it.
+fn set_a(p: usize, stem: &str) -> (&'static str, &'static str) {
     let v = starts_with_vowel(stem);
     let prefix = match p {
-        // k- is j- before a velar: jk'ux, jkuch.
+        // k- is j- before k: jk'ux, jkuch (the Norma writes kjats', kjol).
         0 | 4 if !v && stem.starts_with('k') => "j",
         0 | 4 => "k",
         3 => "lak",
-        1 | 5 => {
-            if v {
-                "aw"
-            } else {
-                "a"
-            }
-        }
-        _ => {
-            if v {
-                "y"
-            } else {
-                "i"
-            }
-        }
+        1 if v => "aw",
+        1 => "a",
+        5 if v => "la'aw",
+        5 => "la'a",
+        _ if v => "y",
+        _ => "i",
     };
     let plural = match p {
         4 => "lojoñ",
-        5 => "la",
         6 => "ob",
         _ => "",
     };
-    (prefix.to_string(), plural)
+    (prefix, plural)
 }
 
-/// Set B suffixes for persons 0–6: -oñ, -ety, Ø, -oñla, -oñlojoñ, -etyla, -ob.
-const SET_B: [&str; 7] = ["oñ", "ety", "", "oñla", "oñlojoñ", "etyla", "ob"];
+/// Set B for persons 0–6, as the person suffix and the plural clitic:
+/// -oñ, -ety, Ø, -oñ-la, -oñ-lojoñ, -ety-la, -ob.
+const SET_B: [(&str, &str); 7] = [
+    ("oñ", ""),
+    ("ety", ""),
+    ("", ""),
+    ("oñ", "la"),
+    ("oñ", "lojoñ"),
+    ("ety", "la"),
+    ("ob", ""),
+];
 
-/// Adds a suffix, with y between vowels: majli-y-oñ, k'uxu-y-ob.
+/// Adds a suffix, with y between vowels (majli-y-oñ, k'uxu-y-ob), and
+/// -lojoñ after l as -ojoñ (kmajlel-ojoñ, as the Norma's mi kwäyelojoñ).
 fn add(stem: &str, suffix: &str) -> String {
     if suffix.is_empty() {
         return stem.to_string();
+    }
+    if suffix == "lojoñ" && stem.ends_with('l') {
+        return format!("{stem}ojoñ");
     }
     let last = stem.chars().last().is_some_and(is_vowel);
     if last && starts_with_vowel(suffix) {
@@ -150,46 +170,97 @@ fn add(stem: &str, suffix: &str) -> String {
     }
 }
 
-/// The echo vowel of a root transitive: k'ux → u, mek' → e.
+/// The echo vowel of a root transitive: k'ux → u, mek' → e. An a gives ä
+/// (mäñ-ä, jats'-ä), except after a final j (tyaj-a, as in tsa'ix ityaja).
 fn echo(root: &str) -> String {
-    root.chars().filter(|&c| is_vowel(c)).last().unwrap_or('a').to_string()
+    match root.chars().filter(|&c| is_vowel(c)).last().unwrap_or('a') {
+        'a' if !root.ends_with('j') => "ä".to_string(),
+        v => v.to_string(),
+    }
 }
 
-/// The verb for person `p` (0–6), with the aspect word.
+/// A verb with Set A for person `p`: k-mäñ, la'a-mäñ, i-mäñ-ob.
+fn with_a(stem: &str, p: usize) -> String {
+    let (a, pl) = set_a(p, stem);
+    add(&format!("{a}{stem}"), pl)
+}
+
+/// A stem with Set B for person `p`, and -ix «already» before the plural
+/// clitic: majlem-oñ-ix-la, majlem-ob-ix.
+fn with_b(stem: &str, p: usize, ix: bool) -> String {
+    let (person, clitic) = SET_B[p];
+    let mut w = add(stem, person);
+    if ix {
+        w.push_str("ix");
+    }
+    add(&w, clitic)
+}
+
+/// The verb for person `p` (0–6), with the aspect word. Empty for a person
+/// the form doesn't have (the imperative is 2nd person only).
 fn build(root: &str, kind: Kind, vowel: &str, form: Form, p: usize) -> String {
+    let transitive = kind != Kind::Intransitive;
     let (aspect, negative) = match form {
         Form::Perfective => ("tsa'", false),
         Form::PerfectiveAlready => ("tsa'ix", false),
         Form::Imperfective => ("mi", false),
         Form::Progressive => ("chonkol", false),
+        Form::Future => ("mi kej", false),
+        Form::Perfect | Form::Pluperfect | Form::Imperative => ("", false),
         Form::NegativePerfective => ("tsa'", true),
         Form::NegativeImperfective => ("mi", true),
+        Form::NegativeFuture => ("mi kej", true),
     };
-    let perfective = matches!(form, Form::Perfective | Form::PerfectiveAlready | Form::NegativePerfective);
-    let verb = match kind {
-        // Perfective: Set B on the -i stem. Otherwise: Set A on -el.
-        Kind::Intransitive if perfective => add(&format!("{root}i"), SET_B[p]),
-        Kind::Intransitive => {
-            let (a, pl) = set_a(p, root);
-            add(&format!("{a}{root}el"), pl)
-        }
-        // Transitives: Set A subject, 3rd person object (Set B Ø).
-        Kind::Transitive | Kind::Derived => {
-            let (a, pl) = set_a(p, root);
-            let stem = match (kind, perfective) {
-                (_, true) => format!("{root}{vowel}"),
-                (Kind::Derived, false) => format!("{root}{vowel}ñ"),
-                _ => root.to_string(),
+    let verb = match form {
+        Form::Imperative => {
+            if p != 1 && p != 5 {
+                return String::new();
+            }
+            // letsen, ochen; k'uxu, mäñä; iläñ. Plural -la.
+            let stem = match kind {
+                Kind::Intransitive => format!("{root}en"),
+                Kind::Transitive => format!("{root}{vowel}"),
+                Kind::Derived => format!("{root}{vowel}ñ"),
             };
-            add(&format!("{a}{stem}"), pl)
+            if p == 5 { format!("{stem}la") } else { stem }
+        }
+        Form::Perfect | Form::Pluperfect => {
+            let ix = form == Form::Pluperfect;
+            if transitive {
+                // Tila mäñäl kcha'añ «I have bought it» (Tumbalá mäñbil).
+                let participle = format!("{root}äl{}", if ix { "ix" } else { "" });
+                format!("{participle} {}", with_a("cha'añ", p))
+            } else {
+                // -em, but -eñ after a final m: majlem, chämeñ.
+                let suffix = if root.ends_with('m') { "eñ" } else { "em" };
+                with_b(&format!("{root}{suffix}"), p, ix)
+            }
+        }
+        _ => {
+            let perfective = matches!(form, Form::Perfective | Form::PerfectiveAlready | Form::NegativePerfective);
+            match kind {
+                // Perfective: Set B on the -i stem. Otherwise: Set A on -el.
+                Kind::Intransitive if perfective => with_b(&format!("{root}i"), p, false),
+                Kind::Intransitive => with_a(&format!("{root}el"), p),
+                // Transitives: Set A subject, 3rd person object (Set B Ø).
+                _ => {
+                    let stem = match (kind, perfective) {
+                        (_, true) => format!("{root}{vowel}"),
+                        (Kind::Derived, false) => format!("{root}{vowel}ñ"),
+                        _ => root.to_string(),
+                    };
+                    with_a(&stem, p)
+                }
+            }
         }
     };
-    if negative {
-        format!("ma'añ {aspect} {verb}")
-    } else {
-        format!("{aspect} {verb}")
+    match (aspect, negative) {
+        ("", _) => verb,
+        (a, false) => format!("{a} {verb}"),
+        (a, true) => format!("ma'añ {a} {verb}"),
     }
 }
+
 
 /// Lowercase, one apostrophe, Ch'ol letters only.
 fn normalize(verb: &str) -> std::result::Result<String, Error> {
@@ -264,8 +335,9 @@ impl Conjugation {
                             "2" => (Some(1), Some(5)),
                             _ => (Some(2), Some(6)),
                         };
-                        let sg = sg.map(|p| build(&root, kind, &vowel, tense.form, p));
-                        let pl = pl.map(|p| build(&root, kind, &vowel, tense.form, p));
+                        let form = |p| Some(build(&root, kind, &vowel, tense.form, p)).filter(|s| !s.is_empty());
+                        let sg = sg.and_then(form);
+                        let pl = pl.and_then(form);
                         Row {
                             person: person.label.clone(),
                             clitic: String::new(),
@@ -289,6 +361,7 @@ impl Conjugation {
     }
 }
 
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -299,8 +372,8 @@ mod tests {
 
     #[test]
     fn intransitives() {
-        // Coon (34a) tyi wäy-i-yoñ «I slept»; Vocabulario: tsa' majliyoñ,
-        // tsa' majli, tsa' majliyob.
+        // Warkentin & Scott §9.4: ti majliyon, majliyonla, majliyon lojon…;
+        // the Norma writes -oñlojoñ as one word.
         assert_eq!(
             seven("majl", Kind::Intransitive, "", Form::Perfective),
             [
@@ -308,31 +381,67 @@ mod tests {
                 "tsa' majliyoñlojoñ", "tsa' majliyetyla", "tsa' majliyob"
             ]
         );
-        // (34b) mi k-majl-el; (14a) mi i-wejl-el; (14b) k-uch'-el.
-        assert_eq!(build("majl", Kind::Intransitive, "", Form::Imperfective, 0), "mi kmajlel");
-        assert_eq!(build("wejl", Kind::Intransitive, "", Form::Imperfective, 2), "mi iwejlel");
-        assert_eq!(build("uch'", Kind::Intransitive, "", Form::Imperfective, 0), "mi kuch'el");
+        // §9.4.6 mic majlel, mi lac majlel, mi la' majlel, mi' majlelob; the
+        // Norma: mi kwäyelojoñ, la'awäyel; the Vocabulario: mi kmajlelojoñ.
+        assert_eq!(
+            seven("majl", Kind::Intransitive, "", Form::Imperfective),
+            [
+                "mi kmajlel", "mi amajlel", "mi imajlel", "mi lakmajlel",
+                "mi kmajlelojoñ", "mi la'amajlel", "mi imajlelob"
+            ]
+        );
         assert_eq!(build("och", Kind::Intransitive, "", Form::Imperfective, 2), "mi yochel");
-        assert_eq!(build("majl", Kind::Intransitive, "", Form::Imperfective, 6), "mi imajlelob");
-        // (56b) ma'añ mi i-majl-el.
-        assert_eq!(build("majl", Kind::Intransitive, "", Form::NegativeImperfective, 2), "ma'añ mi imajlel");
+        assert_eq!(build("och", Kind::Intransitive, "", Form::Imperfective, 5), "mi la'awochel");
+        // §9.4.3 mi quej c majlel.
+        assert_eq!(build("majl", Kind::Intransitive, "", Form::Future, 0), "mi kej kmajlel");
+        assert_eq!(build("majl", Kind::Intransitive, "", Form::NegativeFuture, 0), "ma'añ mi kej kmajlel");
+        // §9.4.4–5 majlemon, majlemonla, majlemob; majlemonix, majlemetixla, majlemobix.
+        assert_eq!(
+            seven("majl", Kind::Intransitive, "", Form::Perfect),
+            ["majlemoñ", "majlemety", "majlem", "majlemoñla", "majlemoñlojoñ", "majlemetyla", "majlemob"]
+        );
+        assert_eq!(build("majl", Kind::Intransitive, "", Form::Pluperfect, 5), "majlemetyixla");
+        assert_eq!(build("majl", Kind::Intransitive, "", Form::Pluperfect, 6), "majlemobix");
+        // Diccionario §2.8: chʌmen «muerto»; the Vocabulario: chämeñ.
+        assert_eq!(build("chäm", Kind::Intransitive, "", Form::Perfect, 2), "chämeñ");
+        // Diccionario §2.9: letsen, ochen; plural -la.
+        assert_eq!(build("lets", Kind::Intransitive, "", Form::Imperative, 1), "letsen");
+        assert_eq!(build("lets", Kind::Intransitive, "", Form::Imperative, 5), "letsenla");
+        assert_eq!(build("lets", Kind::Intransitive, "", Form::Imperative, 0), "");
     }
 
     #[test]
     fn transitives() {
-        // (8b) tyi k-päk'-ä «I planted»; (2) k-il-ä-yob «I saw them»;
-        // (9a) mi k-päk'; (9b) chonkol k-mek'.
-        assert_eq!(build("päk'", Kind::Transitive, "ä", Form::Perfective, 0), "tsa' kpäk'ä");
-        assert_eq!(build("päk'", Kind::Transitive, "ä", Form::Imperfective, 0), "mi kpäk'");
-        assert_eq!(build("mek'", Kind::Transitive, "e", Form::Progressive, 0), "chonkol kmek'");
+        // §6.1: chancol c man, ti c maña, ti la' maña, ti' mañayob.
+        assert_eq!(
+            seven("mäñ", Kind::Transitive, "ä", Form::Perfective),
+            [
+                "tsa' kmäñä", "tsa' amäñä", "tsa' imäñä", "tsa' lakmäñä",
+                "tsa' kmäñälojoñ", "tsa' la'amäñä", "tsa' imäñäyob"
+            ]
+        );
+        assert_eq!(build("mäñ", Kind::Transitive, "ä", Form::Progressive, 0), "chonkol kmäñ");
+        assert_eq!(build("mäñ", Kind::Transitive, "ä", Form::Future, 6), "mi kej imäñob");
+        // §6.1.5 mañal c cha'an, mañal la' cha'an; §6.1.6 mañalix c cha'an.
+        assert_eq!(build("mäñ", Kind::Transitive, "ä", Form::Perfect, 0), "mäñäl kcha'añ");
+        assert_eq!(build("mäñ", Kind::Transitive, "ä", Form::Perfect, 5), "mäñäl la'acha'añ");
+        assert_eq!(build("mäñ", Kind::Transitive, "ä", Form::Pluperfect, 6), "mäñälix icha'añob");
         assert_eq!(build("k'ux", Kind::Transitive, "u", Form::Perfective, 0), "tsa' jk'uxu");
-        assert_eq!(build("k'ux", Kind::Transitive, "u", Form::Perfective, 6), "tsa' ik'uxuyob");
-        // (11c) tyi i-ts'ijb-u; (12c) i-ts'ijb-uñ; (11d)/(12d) aw-il-ä, aw-il-äñ.
-        assert_eq!(build("ts'ijb", Kind::Derived, "u", Form::Perfective, 2), "tsa' its'ijbu");
-        assert_eq!(build("ts'ijb", Kind::Derived, "u", Form::Progressive, 2), "chonkol its'ijbuñ");
+        // §6.2: chancol quilan, ti a wilʌ, ti la' wilʌ, chancol i yilañob.
         assert_eq!(build("il", Kind::Derived, "ä", Form::Perfective, 1), "tsa' awilä");
-        assert_eq!(build("il", Kind::Derived, "ä", Form::Imperfective, 1), "mi awiläñ");
+        assert_eq!(build("il", Kind::Derived, "ä", Form::Perfective, 5), "tsa' la'awilä");
+        assert_eq!(build("il", Kind::Derived, "ä", Form::Progressive, 6), "chonkol yiläñob");
+        assert_eq!(build("ts'ijb", Kind::Derived, "u", Form::Imperfective, 2), "mi its'ijbuñ");
+        // §7.1 / Diccionario §2.9: choño, quele, chalen; tajala, quelela.
+        assert_eq!(build("choñ", Kind::Transitive, "o", Form::Imperative, 1), "choño");
+        assert_eq!(build("k'el", Kind::Transitive, "e", Form::Imperative, 5), "k'elela");
+        assert_eq!(build("cha'l", Kind::Derived, "e", Form::Imperative, 1), "cha'leñ");
+        assert_eq!(build("cha'l", Kind::Derived, "e", Form::Perfective, 2), "tsa' icha'le");
+        // Echo vowels: a → ä except after j (tsa'ix ityaja).
         assert_eq!(echo("k'ux"), "u");
+        assert_eq!(echo("jats'"), "ä");
+        assert_eq!(echo("tyaj"), "a");
+        assert_eq!(echo("päk'"), "ä");
     }
 
     #[test]

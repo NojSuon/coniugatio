@@ -13,8 +13,8 @@
     }
   },
   "source": {
-    "short": "Coon，《Ch'ol》（2015）；INALI，书写规范（2011）",
-    "full": "Jessica Coon，《Ch'ol》，载 Judith Aissen、Nora England 与 Roberto Zavala 编《The Mayan Languages》（2015 年草稿，依据 Juan Jesús Vázquez Álvarez，《A Grammar of Chol》，2011），用于动词；INALI，《Ityoj ts'ijbuñtyel lakty'añ ch'ol: norma de escritura de la lengua ch'ol》，用于拼写；Miguel Sánchez Álvarez 主编，《CHajpäbilbä tsolty'añ tyi lakty'añ: vocabulario de la lengua ch'ol》（恰帕斯跨文化大学，2013），用于词汇和例句（tsa' majliyoñ、tsa' majliyob）；另参考 Enrique Jiménez Jiménez 与 Jorge Guzmán Gutiérrez，《Its'ijbuñtyel ña'alty'añ Ch'ol》（INALI，2013）。"
+    "short": "Warkentin 与 Scott，《Gramática ch'ol》（1980）；Aulie，《Diccionario ch'ol》（2009）；INALI，书写规范",
+    "full": "Viola Warkentin 与 Ruby Scott，《Gramática ch'ol》（暑期语言学院，1980），用于动词：体、将来时、完成时、命令式和人称；H. Wilbur Aulie 与 Evelyn W. de Aulie，《Diccionario ch'ol de Tumbalá, Chiapas, con variaciones dialectales de Tila y Sabanilla》（暑期语言学院，第三版，2009）及其所附语法，用于分词、命令式和词汇；Jessica Coon，《Ch'ol》，载 Judith Aissen、Nora England 与 Roberto Zavala 编《The Mayan Languages》（2015 年草稿，依据 Juan Jesús Vázquez Álvarez，《A Grammar of Chol》，2011），用于分裂作格；INALI，《Ityoj ts'ijbuñtyel lakty'añ ch'ol: norma de escritura de la lengua ch'ol》，用于拼写，我们把暑期语言学院资料中的所有形式都改写成这种拼写（c、qu、ʌ → k、ä）；Miguel Sánchez Álvarez 主编，《CHajpäbilbä tsolty'añ tyi lakty'añ: vocabulario de la lengua ch'ol》（恰帕斯跨文化大学，2013），用于词汇和例句（tsa' majliyoñ、mi kmajlelojoñ、tsa' la'amele）；另参考 Enrique Jiménez Jiménez 与 Jorge Guzmán Gutiérrez，《Its'ijbuñtyel ña'alty'añ Ch'ol》（INALI，2013），以及《Cuaderno de trabajo chol》（暑期语言学院与墨西哥公共教育部，1974）。"
   },
   "about": [
     "乔尔语是恰帕斯州北部的一种玛雅语言，在蒂拉、通巴拉、萨尔托德阿瓜、帕伦克和萨瓦尼利亚使用，迁居塔巴斯科州和坎佩切州的社区也使用。它约有二十万使用者，他们称之为 lakty'añ，意为「我们的话」。",
@@ -58,33 +58,34 @@
     ]
   },
   "grammar": {
-    "intro": "乔尔语动词前面有一个体标记词（tsa' 完整体，mi 非完整体，chonkol 进行体），并带两套人称标记：A 套是前缀（k-、a-、i-），B 套是后缀（-oñ、-ety、Ø）。没有语法时态：过去和将来用 ak'bi「昨天」和 ijk'äl「明天」这样的词表示。",
+    "intro": "乔尔语动词前面有一个体标记词（tsa' 完整体，mi 非完整体，chonkol 进行体），并带两套人称标记：A 套是前缀（k-、a-、i-），B 套是后缀（-oñ、-ety、Ø）。将来时用 mi kej 构成，完成时用分词构成：majlemoñ「我已经去了」。ak'bi「昨天」和 ijk'äl「明天」这样的词用来表示时间。",
     "blocks": [
       {
         "items": [
           { "slot": "否定", "description": "体标记前的 ma'añ。" },
           { "slot": "体", "description": "tsa' 完整体，mi 非完整体，chonkol 进行体。" },
-          { "slot": "A 套", "description": "k- / j- 我，a- / aw- 你，i- / y- 他或她，lak- 我们（包括你）。" },
+          { "slot": "A 套", "description": "k- / j- 我，a- / aw- 你，i- / y- 他或她，lak- 我们（包括你），la'a- / la'aw- 你们。" },
           { "slot": "词根", "description": "majl「去」，k'ux「吃」，il「看见」……" },
-          { "slot": "状态后缀", "description": "-i 不及物完整体，-el 非完整体，-V 及物完整体，-Vñ 派生及物。" },
+          { "slot": "状态后缀", "description": "-i 不及物完整体，-el 非完整体，-em 分词，-V 及物完整体，-Vñ 派生及物。" },
           { "slot": "B 套和复数", "description": "-oñ、-ety、Ø；复数 -la、-lojoñ、-ob。" }
         ]
       },
       {
         "title": "两种配列",
-        "description": "在完整体中，不及物动词的主语像及物动词的宾语一样用 B 套标记。在非完整体和进行体中，它像及物动词的主语一样用 A 套标记。",
+        "description": "在完整体和完成时中，不及物动词的主语像及物动词的宾语一样用 B 套标记。在非完整体和进行体中，它像及物动词的主语一样用 A 套标记。",
         "columns": ["形式", "意思"],
         "rows": [
           { "cells": ["我去了。"] },
           { "cells": ["我去。"] },
           { "cells": ["我吃了它。"] },
           { "cells": ["我吃它。"] },
-          { "cells": ["我正在拥抱你。"] }
+          { "cells": ["我正在拥抱你。"] },
+          { "cells": ["我已经去了。"] }
         ]
       },
       {
         "title": "两种「我们」",
-        "description": "lak- 和 -oñla 包括听话人；-lojoñ 不包括。第二人称复数是 -la，第三人称复数是 -ob。",
+        "description": "lak- 和 -oñla 包括听话人；-lojoñ 不包括，在 l 之后写作 -ojoñ。「你们」的 A 套是 la'a-，B 套是 -etyla；第三人称复数是 -ob。书写规范也接受 kwäyela「我们（包括你）睡觉」和 awäyela「你们睡觉」。",
         "columns": ["人称", "完整体", "非完整体"],
         "rows": [
           { "label": "joñoñla「我们（包括你）」" },
@@ -127,8 +128,13 @@
       { "id": "perfective_already", "group": "体", "name": "带 -ix 的完整体", "description": "已经发生的事：tsa' 加附着词 -ix「已经」。" },
       { "id": "imperfective", "group": "体", "name": "非完整体", "description": "总是、通常或将要发生的事（mi）。不及物动词带 A 套和 -el。" },
       { "id": "progressive", "group": "体", "name": "进行体", "description": "正在发生的事（chonkol；在通巴拉用 woli）。" },
+      { "id": "future", "group": "将来时和完成时", "name": "将来时", "description": "将要发生的事：mi kej（在通巴拉用 mi kaj）加上与非完整体相同的动词。" },
+      { "id": "perfect", "group": "将来时和完成时", "name": "完成时", "description": "已经发生且仍然有效的事。不及物动词用分词 -em（在 m 之后用 -eñ）加 B 套；及物动词用分词 -äl 加带 A 套的 cha'añ（在通巴拉用 -bil）。" },
+      { "id": "pluperfect", "group": "将来时和完成时", "name": "过去完成时", "description": "在另一件事之前已经发生的事：完成时加 -ix。" },
+      { "id": "imperative", "group": "命令式", "name": "命令式", "description": "命令。不及物动词带 -en；及物动词带与完整体相同的元音，但派生及物动词保留 -ñ。复数加 -la。" },
       { "id": "negative_perfective", "group": "否定", "name": "完整体否定", "description": "ma'añ tsa' ……" },
-      { "id": "negative_imperfective", "group": "否定", "name": "非完整体否定", "description": "ma'añ mi ……" }
+      { "id": "negative_imperfective", "group": "否定", "name": "非完整体否定", "description": "ma'añ mi ……" },
+      { "id": "negative_future", "group": "否定", "name": "将来时否定", "description": "ma'añ mi kej ……" }
     ],
     "lexicon": [
       { "entry": "majlel", "meaning": "去", "es": "去" },
@@ -147,6 +153,7 @@
       { "entry": "uch'el", "meaning": "吃饭", "es": "吃饭" },
       { "entry": "ñumel", "meaning": "经过", "es": "经过" },
       { "entry": "sujtyel", "meaning": "回去", "es": "回去" },
+      { "entry": "ajñel", "meaning": "跑", "es": "跑" },
       { "entry": "k'ux", "meaning": "吃（某物），嚼", "es": "吃它" },
       { "entry": "mek'", "meaning": "拥抱", "es": "拥抱" },
       { "entry": "jats'", "meaning": "打", "es": "打它" },
@@ -169,7 +176,9 @@
       { "entry": "k'ay", "meaning": "唱（某首歌）", "es": "唱歌" },
       { "entry": "soñ", "meaning": "跳（某支舞）", "es": "跳舞" },
       { "entry": "alas", "meaning": "玩（某物）", "es": "玩" },
-      { "entry": "pi'l", "meaning": "陪伴", "es": "陪他" }
+      { "entry": "pi'l", "meaning": "陪伴", "es": "陪他" },
+      { "entry": "cha'leñ", "meaning": "做（某项活动）", "es": "做这件事" },
+      { "entry": "säkläñ", "meaning": "寻找", "es": "找它" }
     ]
   }
 }

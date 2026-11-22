@@ -13,8 +13,8 @@
     }
   },
   "source": {
-    "short": "Coon, «Ch'ol» (2015); INALI, writing standard (2011)",
-    "full": "Jessica Coon, «Ch'ol», in Judith Aissen, Nora England and Roberto Zavala (eds.), The Mayan Languages (2015 draft, drawing on Juan Jesús Vázquez Álvarez, A Grammar of Chol, 2011), for the verb; INALI, Ityoj ts'ijbuñtyel lakty'añ ch'ol: norma de escritura de la lengua ch'ol, for the spelling; Miguel Sánchez Álvarez (coord.), CHajpäbilbä tsolty'añ tyi lakty'añ: vocabulario de la lengua ch'ol (UNICH, 2013), for vocabulary and examples (tsa' majliyoñ, tsa' majliyob); also Enrique Jiménez Jiménez and Jorge Guzmán Gutiérrez, Its'ijbuñtyel ña'alty'añ Ch'ol (INALI, 2013)."
+    "short": "Warkentin and Scott, Gramática ch'ol (1980); Aulie, Diccionario ch'ol (2009); INALI, writing standard",
+    "full": "Viola Warkentin and Ruby Scott, Gramática ch'ol (Summer Institute of Linguistics, 1980), for the verb: aspects, future, perfect, imperative and persons; H. Wilbur Aulie and Evelyn W. de Aulie, Diccionario ch'ol de Tumbalá, Chiapas, con variaciones dialectales de Tila y Sabanilla (SIL, 3rd ed., 2009), and its grammar, for the participles, the imperative and vocabulary; Jessica Coon, «Ch'ol», in Judith Aissen, Nora England and Roberto Zavala (eds.), The Mayan Languages (2015 draft, drawing on Juan Jesús Vázquez Álvarez, A Grammar of Chol, 2011), for split ergativity; INALI, Ityoj ts'ijbuñtyel lakty'añ ch'ol: norma de escritura de la lengua ch'ol, for the spelling, into which we rewrite every form from the SIL sources (c, qu, ʌ → k, ä); Miguel Sánchez Álvarez (coord.), CHajpäbilbä tsolty'añ tyi lakty'añ: vocabulario de la lengua ch'ol (UNICH, 2013), for vocabulary and examples (tsa' majliyoñ, mi kmajlelojoñ, tsa' la'amele); also Enrique Jiménez Jiménez and Jorge Guzmán Gutiérrez, Its'ijbuñtyel ña'alty'añ Ch'ol (INALI, 2013), and the Cuaderno de trabajo chol (SIL and SEP, 1974)."
   },
   "about": [
     "Ch'ol is a Mayan language of northern Chiapas, spoken in Tila, Tumbalá, Salto de Agua, Palenque and Sabanilla, and by communities that moved to Tabasco and Campeche. It has some two hundred thousand speakers, who call it lakty'añ, «our word».",
@@ -58,33 +58,34 @@
     ]
   },
   "grammar": {
-    "intro": "A Ch'ol verb follows an aspect word (tsa' perfective, mi imperfective, chonkol progressive) and carries two sets of person markers: Set A, prefixes (k-, a-, i-), and Set B, suffixes (-oñ, -ety, Ø). There is no grammatical tense: past and future are told with words like ak'bi «yesterday» and ijk'äl «tomorrow».",
+    "intro": "A Ch'ol verb follows an aspect word (tsa' perfective, mi imperfective, chonkol progressive) and carries two sets of person markers: Set A, prefixes (k-, a-, i-), and Set B, suffixes (-oñ, -ety, Ø). The future is made with mi kej, and the perfect with a participle: majlemoñ «I have gone». Words like ak'bi «yesterday» and ijk'äl «tomorrow» place things in time.",
     "blocks": [
       {
         "items": [
           { "slot": "Negation", "description": "ma'añ before the aspect." },
           { "slot": "Aspect", "description": "tsa' perfective, mi imperfective, chonkol progressive." },
-          { "slot": "Set A", "description": "k- / j- I, a- / aw- you, i- / y- he or she, lak- we (with you)." },
+          { "slot": "Set A", "description": "k- / j- I, a- / aw- you, i- / y- he or she, lak- we (with you), la'a- / la'aw- you all." },
           { "slot": "Root", "description": "majl «go», k'ux «eat», il «see»…" },
-          { "slot": "Status", "description": "-i intransitive perfective, -el imperfective, -V transitive perfective, -Vñ derived." },
+          { "slot": "Status", "description": "-i intransitive perfective, -el imperfective, -em participle, -V transitive perfective, -Vñ derived." },
           { "slot": "Set B and plural", "description": "-oñ, -ety, Ø; plural -la, -lojoñ, -ob." }
         ]
       },
       {
         "title": "Two alignments",
-        "description": "In the perfective, the subject of an intransitive is marked like the object of a transitive, with Set B. In the imperfective and progressive, it is marked like the subject of a transitive, with Set A.",
+        "description": "In the perfective and the perfect, the subject of an intransitive is marked like the object of a transitive, with Set B. In the imperfective and progressive, it is marked like the subject of a transitive, with Set A.",
         "columns": ["Form", "Meaning"],
         "rows": [
           { "cells": ["I went."] },
           { "cells": ["I go."] },
           { "cells": ["I ate it."] },
           { "cells": ["I eat it."] },
-          { "cells": ["I'm hugging you."] }
+          { "cells": ["I'm hugging you."] },
+          { "cells": ["I have gone."] }
         ]
       },
       {
         "title": "Two «we»",
-        "description": "lak- and -oñla include the listener; -lojoñ leaves them out. The 2nd person plural is -la and the 3rd, -ob.",
+        "description": "lak- and -oñla include the listener; -lojoñ leaves them out, and after an l it is written -ojoñ. For «you all» Set A is la'a- and Set B -etyla; the 3rd person plural is -ob. The Norma also allows kwäyela «we (with you) sleep» and awäyela «you all sleep».",
         "columns": ["Person", "Perfective", "Imperfective"],
         "rows": [
           { "label": "joñoñla «we (with you)»" },
@@ -127,8 +128,13 @@
       { "id": "perfective_already", "group": "Aspect", "name": "Perfective with -ix", "description": "What has already happened: tsa' plus the clitic -ix «already».", "es": { "tense": "preterite", "adverb": "already" } },
       { "id": "imperfective", "group": "Aspect", "name": "Imperfective", "description": "What always, usually or will happen (mi). Intransitives take Set A and -el." },
       { "id": "progressive", "group": "Aspect", "name": "Progressive", "description": "What is happening now (chonkol; in Tumbalá, woli)." },
+      { "id": "future", "group": "Future and perfect", "name": "Future", "description": "What will happen: mi kej (in Tumbalá, mi kaj) and the verb as in the imperfective." },
+      { "id": "perfect", "group": "Future and perfect", "name": "Perfect", "description": "What has happened and still holds. Intransitives take the participle -em (-eñ after m) with Set B; transitives, the participle -äl and cha'añ with Set A (in Tumbalá, -bil)." },
+      { "id": "pluperfect", "group": "Future and perfect", "name": "Pluperfect", "description": "What had already happened before something else: the perfect with -ix." },
+      { "id": "imperative", "group": "Imperative", "name": "Imperative", "description": "Commands. Intransitives take -en; transitives, their vowel as in the perfective, but derived ones keep the -ñ. The plural adds -la." },
       { "id": "negative_perfective", "group": "Negation", "name": "Negative perfective", "description": "ma'añ tsa' …" },
-      { "id": "negative_imperfective", "group": "Negation", "name": "Negative imperfective", "description": "ma'añ mi …" }
+      { "id": "negative_imperfective", "group": "Negation", "name": "Negative imperfective", "description": "ma'añ mi …" },
+      { "id": "negative_future", "group": "Negation", "name": "Negative future", "description": "ma'añ mi kej …" }
     ],
     "lexicon": [
       { "entry": "majlel", "meaning": "go", "es": "go" },
@@ -147,6 +153,7 @@
       { "entry": "uch'el", "meaning": "eat", "es": "eat" },
       { "entry": "ñumel", "meaning": "pass", "es": "pass" },
       { "entry": "sujtyel", "meaning": "go back", "es": "go back" },
+      { "entry": "ajñel", "meaning": "run", "es": "run" },
       { "entry": "k'ux", "meaning": "eat (something), chew", "es": "eat it" },
       { "entry": "mek'", "meaning": "hug", "es": "hug them" },
       { "entry": "jats'", "meaning": "hit", "es": "hit it" },
@@ -169,7 +176,9 @@
       { "entry": "k'ay", "meaning": "sing (something)", "es": "sing it" },
       { "entry": "soñ", "meaning": "dance (something)", "es": "dance it" },
       { "entry": "alas", "meaning": "play (with something)", "es": "play with it" },
-      { "entry": "pi'l", "meaning": "go with, accompany", "es": "go with them" }
+      { "entry": "pi'l", "meaning": "go with, accompany", "es": "go with them" },
+      { "entry": "cha'leñ", "meaning": "do (an activity)", "es": "do it" },
+      { "entry": "säkläñ", "meaning": "look for", "es": "look for it" }
     ]
   }
 }

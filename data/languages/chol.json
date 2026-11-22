@@ -25,8 +25,8 @@
     }
   },
   "source": {
-    "short": "Coon, «Ch'ol» (2015); INALI, Norma de escritura (2011)",
-    "full": "Jessica Coon, «Ch'ol», en Judith Aissen, Nora England y Roberto Zavala (eds.), The Mayan Languages (borrador de 2015, a partir de Juan Jesús Vázquez Álvarez, A Grammar of Chol, 2011), para el verbo; INALI, Ityoj ts'ijbuñtyel lakty'añ ch'ol: norma de escritura de la lengua ch'ol, para la grafía; Miguel Sánchez Álvarez (coord.), CHajpäbilbä tsolty'añ tyi lakty'añ: vocabulario de la lengua ch'ol (UNICH, 2013), para el vocabulario y los ejemplos (tsa' majliyoñ, tsa' majliyob); también Enrique Jiménez Jiménez y Jorge Guzmán Gutiérrez, Its'ijbuñtyel ña'alty'añ Ch'ol (INALI, 2013)."
+    "short": "Warkentin y Scott, Gramática ch'ol (1980); Aulie, Diccionario ch'ol (2009); INALI, Norma de escritura",
+    "full": "Viola Warkentin y Ruby Scott, Gramática ch'ol (Instituto Lingüístico de Verano, 1980), para el verbo: aspectos, futuro, perfecto, imperativo y personas; H. Wilbur Aulie y Evelyn W. de Aulie, Diccionario ch'ol de Tumbalá, Chiapas, con variaciones dialectales de Tila y Sabanilla (ILV, 3.ª ed., 2009), y su gramática, para los participios, el imperativo y el vocabulario; Jessica Coon, «Ch'ol», en Judith Aissen, Nora England y Roberto Zavala (eds.), The Mayan Languages (borrador de 2015, a partir de Juan Jesús Vázquez Álvarez, A Grammar of Chol, 2011), para la alineación escindida; INALI, Ityoj ts'ijbuñtyel lakty'añ ch'ol: norma de escritura de la lengua ch'ol, para la grafía, en la que reescribimos todas las formas de las fuentes del ILV (c, qu, ʌ → k, ä); Miguel Sánchez Álvarez (coord.), CHajpäbilbä tsolty'añ tyi lakty'añ: vocabulario de la lengua ch'ol (UNICH, 2013), para el vocabulario y los ejemplos (tsa' majliyoñ, mi kmajlelojoñ, tsa' la'amele); también Enrique Jiménez Jiménez y Jorge Guzmán Gutiérrez, Its'ijbuñtyel ña'alty'añ Ch'ol (INALI, 2013), y el Cuaderno de trabajo chol (ILV y SEP, 1974)."
   },
   "about": [
     "El ch'ol es una lengua maya del norte de Chiapas, hablada en Tila, Tumbalá, Salto de Agua, Palenque y Sabanilla, y por comunidades que migraron a Tabasco y Campeche. Tiene unos doscientos mil hablantes, que la llaman lakty'añ, «nuestra palabra».",
@@ -82,41 +82,42 @@
     ]
   },
   "grammar": {
-    "intro": "Un verbo ch'ol va precedido de una palabra de aspecto (tsa' perfectivo, mi imperfectivo, chonkol progresivo) y lleva dos juegos de marcas de persona: el juego A, prefijos (k-, a-, i-), y el juego B, sufijos (-oñ, -ety, Ø). No hay tiempo gramatical: el pasado y el futuro se dicen con palabras como ak'bi «ayer» e ijk'äl «mañana».",
+    "intro": "Un verbo ch'ol va precedido de una palabra de aspecto (tsa' perfectivo, mi imperfectivo, chonkol progresivo) y lleva dos juegos de marcas de persona: el juego A, prefijos (k-, a-, i-), y el juego B, sufijos (-oñ, -ety, Ø). El futuro se forma con mi kej, y el perfecto con un participio: majlemoñ «he ido». Para situar en el tiempo se usan palabras como ak'bi «ayer» e ijk'äl «mañana».",
     "blocks": [
       {
         "type": "formula",
         "items": [
           { "slot": "Negación", "description": "ma'añ delante del aspecto.", "example": "ma'añ" },
           { "slot": "Aspecto", "description": "tsa' perfectivo, mi imperfectivo, chonkol progresivo.", "example": "tsa'" },
-          { "slot": "Juego A", "description": "k- / j- yo, a- / aw- tú, i- / y- él o ella, lak- nosotros (contigo).", "example": "k-" },
+          { "slot": "Juego A", "description": "k- / j- yo, a- / aw- tú, i- / y- él o ella, lak- nosotros (contigo), la'a- / la'aw- ustedes.", "example": "k-" },
           { "slot": "Raíz", "description": "majl «ir», k'ux «comer», il «ver»…", "example": "k'ux" },
-          { "slot": "Estado", "description": "-i intransitivo perfectivo, -el imperfectivo, -V transitivo perfectivo, -Vñ derivado.", "example": "-u" },
+          { "slot": "Estado", "description": "-i intransitivo perfectivo, -el imperfectivo, -em participio, -V transitivo perfectivo, -Vñ derivado.", "example": "-u" },
           { "slot": "Juego B y plural", "description": "-oñ, -ety, Ø; plural -la, -lojoñ, -ob.", "example": "-yob" }
         ]
       },
       {
         "type": "table",
         "title": "Dos alineamientos",
-        "description": "En el perfectivo, el sujeto de un intransitivo se marca como el objeto de un transitivo, con el juego B. En el imperfectivo y el progresivo, se marca como el sujeto de un transitivo, con el juego A.",
+        "description": "En el perfectivo y en el perfecto, el sujeto de un intransitivo se marca como el objeto de un transitivo, con el juego B. En el imperfectivo y el progresivo, se marca como el sujeto de un transitivo, con el juego A.",
         "columns": ["Forma", "Significado"],
         "rows": [
           { "label": "Tsa' majliyoñ.", "cells": ["Fui."] },
           { "label": "Mi kmajlel.", "cells": ["Voy."] },
           { "label": "Tsa' jk'uxu.", "cells": ["Lo comí."] },
           { "label": "Mi jk'ux.", "cells": ["Lo como."] },
-          { "label": "Chonkol kmek'ety.", "cells": ["Te estoy abrazando."] }
+          { "label": "Chonkol kmek'ety.", "cells": ["Te estoy abrazando."] },
+          { "label": "Majlemoñ.", "cells": ["He ido."] }
         ]
       },
       {
         "type": "table",
         "title": "Dos «nosotros»",
-        "description": "Lak- y -oñla incluyen a quien escucha; -lojoñ lo excluye. El plural de la 2.ª persona es -la y el de la 3.ª, -ob.",
+        "description": "Lak- y -oñla incluyen a quien escucha; -lojoñ lo excluye, y tras una l se escribe -ojoñ. Para «ustedes» el juego A es la'a- y el juego B, -etyla; el plural de la 3.ª persona es -ob. La Norma admite también kwäyela «nos dormimos (contigo)» y awäyela «se duermen (ustedes)».",
         "columns": ["Persona", "Perfectivo", "Imperfectivo"],
         "rows": [
           { "label": "joñoñla «nosotros (contigo)»", "cells": ["tsa' majliyoñla", "mi lakmajlel"] },
-          { "label": "joñoñlojoñ «nosotros (sin ti)»", "cells": ["tsa' majliyoñlojoñ", "mi kmajlellojoñ"] },
-          { "label": "jatyetyla «ustedes»", "cells": ["tsa' majliyetyla", "mi amajlella"] },
+          { "label": "joñoñlojoñ «nosotros (sin ti)»", "cells": ["tsa' majliyoñlojoñ", "mi kmajlelojoñ"] },
+          { "label": "jatyetyla «ustedes»", "cells": ["tsa' majliyetyla", "mi la'amajlel"] },
           { "label": "jiñob «ellos»", "cells": ["tsa' majliyob", "mi imajlelob"] }
         ]
       },
@@ -157,8 +158,13 @@
       { "id": "perfective_already", "group": "Aspecto", "name": "Perfectivo con -ix", "description": "Lo que ya pasó: tsa' más el clítico -ix «ya».", "form": "perfective_already", "es": { "tense": "preterite", "adverb": "ya" } },
       { "id": "imperfective", "group": "Aspecto", "name": "Imperfectivo", "description": "Lo que pasa siempre, de costumbre o va a pasar (mi). Los intransitivos llevan el juego A y -el.", "form": "imperfective", "es": "present" },
       { "id": "progressive", "group": "Aspecto", "name": "Progresivo", "description": "Lo que está pasando ahora (chonkol; en Tumbalá, woli).", "form": "progressive", "es": "progressive" },
+      { "id": "future", "group": "Futuro y perfecto", "name": "Futuro", "description": "Lo que va a pasar: mi kej (en Tumbalá, mi kaj) y el verbo como en el imperfectivo.", "form": "future", "es": "future" },
+      { "id": "perfect", "group": "Futuro y perfecto", "name": "Perfecto", "description": "Lo que ya pasó y sigue valiendo. Los intransitivos toman el participio -em (-eñ tras m) con el juego B; los transitivos, el participio -äl y cha'añ con el juego A (en Tumbalá, -bil).", "form": "perfect", "es": "perfect" },
+      { "id": "pluperfect", "group": "Futuro y perfecto", "name": "Pluscuamperfecto", "description": "Lo que ya había pasado antes de otra cosa: el perfecto con -ix.", "form": "pluperfect", "es": "pluperfect" },
+      { "id": "imperative", "group": "Imperativo", "name": "Imperativo", "description": "Órdenes. Los intransitivos toman -en; los transitivos, su vocal como en el perfectivo, pero los derivados guardan la -ñ. El plural añade -la.", "form": "imperative", "es": "imperative" },
       { "id": "negative_perfective", "group": "Negación", "name": "Perfectivo negativo", "description": "ma'añ tsa' …", "form": "negative_perfective", "negative": true, "es": "preterite" },
-      { "id": "negative_imperfective", "group": "Negación", "name": "Imperfectivo negativo", "description": "ma'añ mi …", "form": "negative_imperfective", "negative": true, "es": "present" }
+      { "id": "negative_imperfective", "group": "Negación", "name": "Imperfectivo negativo", "description": "ma'añ mi …", "form": "negative_imperfective", "negative": true, "es": "present" },
+      { "id": "negative_future", "group": "Negación", "name": "Futuro negativo", "description": "ma'añ mi kej …", "form": "negative_future", "negative": true, "es": "future" }
     ],
     "lexicon": [
       { "entry": "majlel", "meaning": "ir", "es": "ir" },
@@ -177,6 +183,7 @@
       { "entry": "uch'el", "meaning": "comer", "es": "comer" },
       { "entry": "ñumel", "meaning": "pasar", "es": "pasar" },
       { "entry": "sujtyel", "meaning": "regresar", "es": "regresar" },
+      { "entry": "ajñel", "meaning": "correr", "es": "correr" },
       { "entry": "k'ux", "kind": "transitive", "meaning": "comer (algo), masticar", "es": "comer" },
       { "entry": "mek'", "kind": "transitive", "meaning": "abrazar", "es": "abrazar" },
       { "entry": "jats'", "kind": "transitive", "meaning": "golpear", "es": "golpear" },
@@ -199,7 +206,9 @@
       { "entry": "k'ay", "kind": "derived", "vowel": "i", "meaning": "cantar (algo)", "es": "cantar" },
       { "entry": "soñ", "kind": "derived", "vowel": "i", "meaning": "bailar (algo)", "es": "bailar" },
       { "entry": "alas", "kind": "derived", "vowel": "i", "meaning": "jugar (con algo)", "es": "jugar" },
-      { "entry": "pi'l", "kind": "derived", "vowel": "e", "meaning": "acompañar", "es": "acompañar" }
+      { "entry": "pi'l", "kind": "derived", "vowel": "e", "meaning": "acompañar", "es": "acompañar" },
+      { "entry": "cha'leñ", "root": "cha'l", "kind": "derived", "vowel": "e", "meaning": "hacer (una actividad)", "es": "hacer" },
+      { "entry": "säkläñ", "root": "säkl", "kind": "derived", "vowel": "ä", "meaning": "buscar", "es": "buscar" }
     ]
   }
 }
