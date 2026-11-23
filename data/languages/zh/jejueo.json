@@ -1,0 +1,219 @@
+{
+  "name": "济州语",
+  "variant": "济州语（济州话），采用梁昌勇、梁世正与奥格雷迪的罗马字",
+  "region": "韩国济州岛",
+  "summary": "韩国南部济州岛的语言。它的动词不随人称变化：把体和时态后缀串在一起，最后用一个成分表明你是在和朋友说话，还是在和长辈说话。",
+  "conjugator": {
+    "label": "动词",
+    "hint": "输入带 -da 的动词（词典形式），或只输入词根：meog-da 或 meog「吃」、ga-da「去」、haw-da「做」。连字符可加可不加。",
+    "row_header": "语体",
+    "columns": ["陈述", "疑问"],
+    "own": {
+      "hint": "输入任意带 -da 的动作动词或它的词根，以及它的中文意思。我们使用元音和谐的一般规则：a、o、aw 之后用 -as，其他用 -eos。有些动词不遵守这条规则（menggeul-as「做了」）。",
+      "label": "动词",
+      "es_placeholder": "选"
+    }
+  },
+  "source": {
+    "short": "Yang、Yang 与 O'Grady，《Jejueo: The Language of Korea's Jeju Island》（2020）",
+    "full": "Changyong Yang、Sejung Yang 与 William O'Grady，《Jejueo: The Language of Korea's Jeju Island》（檀香山：夏威夷大学出版社，2020），第 2 章及第 5–7 章，用于拼写、罗马字、体、情态和时态后缀、句尾词和例句；Sejung Yang，《A Revised Analysis of the Tense-Aspect Markers in Jejueo》，University of Hawai'i Working Papers in Linguistics 49（2018）；联合国教科文组织，《世界濒危语言地图集》（2010）。"
+  },
+  "about": [
+    "济州语（제주어），说话人自己称为 jejumal「济州话」，是济州岛的语言。济州岛位于朝鲜半岛以南的朝鲜海峡。它与韩语同属朝鲜语系，但首尔或釜山的人几乎听不懂：在一项用济州语讲故事的测试中，他们答对的问题不到 10%。",
+    "济州岛几百年来与外界隔绝，它的语言保留了韩语已经失去的词和音，比如中古韩语的元音 ㆍ（「下 a」）。济州岛还以海女闻名：她们不带氧气瓶潜水捕捞海产，这一传统已列入联合国教科文组织的非物质文化遗产名录。",
+    "2010 年，联合国教科文组织将济州语列为极度濒危语言，估计有五千到一万名说话人；但语法书的作者认为，如今能流利使用的人要少得多，几乎都在 70 岁以上。自 2007 年济州语言条例以来，人们一直在努力教授、书写这门语言，并为最后的说话人录音。"
+  ],
+  "orthography": {
+    "intro": "济州语用韩文（谚文）书写，多一个字母：ㆍ，即「下 a」。这里我们采用梁昌勇、梁世正与奥格雷迪语法书中的罗马字：每个韩文字母对应一个拉丁字母（aw = ㆍ）。我们像书中一样用连字符分开动词的各个成分：meog-eoms-jeo「正在吃」。",
+    "letters": [
+      { "meaning": "船；肚子" },
+      { "meaning": "票" },
+      { "meaning": "骨头" },
+      { "meaning": "月亮" },
+      { "meaning": "海藻" },
+      { "meaning": "女儿" },
+      { "meaning": "青蛙" },
+      { "meaning": "蔬菜" },
+      { "meaning": "鱼饵" },
+      { "meaning": "主人" },
+      { "meaning": "羞耻" },
+      { "meaning": "笔直" },
+      { "meaning": "肉" },
+      { "meaning": "生米" },
+      { "meaning": "雾" },
+      { "meaning": "你" },
+      { "meaning": "树" },
+      { "meaning": "路" },
+      { "meaning": "爷爷" },
+      { "meaning": "以后" },
+      { "meaning": "旁边" },
+      { "meaning": "鸟" },
+      { "meaning": "字" },
+      { "meaning": "妈妈" },
+      { "meaning": "爸爸" },
+      { "meaning": "院子里的菜园" },
+      { "meaning": "哥哥" },
+      { "meaning": "心" }
+    ],
+    "vowels": [
+      { "title": "老一辈说话人的元音" }
+    ],
+    "notes": [
+      "塞音三个一组：松音（b、d、g、j）、送气音（p、t、k、ch）和紧音（pp、tt、kk、jj），s 和 ss 也是如此：dawl「月亮」、tawl「海藻」、ttawl「女儿」。",
+      "ㆍ（「下 a」）是济州语独有的元音：介于 a 和 o 之间，嘴张开，嘴唇略圆。许多词里它和 o 交替：nawmppi 或 nomppi「萝卜」。年轻人几乎已经分不清它了。",
+      "老一辈区分 e 和 ae（semi「泉水」，sæmi「一种年糕」）；年轻人读成一样。",
+      "元音之间的 l 读作闪音，像西班牙语 cara 里的 r：dawl-eumin 读作 daw-leu-min。ng 不出现在音节开头。",
+      "韩文中每个成分的写法始终不变，即使发音不同：dawg「鸡」写作 g，虽然在 dawg-nun「鸡眼」里读作 dawng。所以我们用连字符分开动词的各个成分。",
+      "双字母（ng、eu、ae、aw）可能产生歧义；必要时用点分开音节：en.gida「被抱」，me.uda「填满」。"
+    ]
+  },
+  "grammar": {
+    "intro": "济州语动词不随人称变化：「我吃」「你吃」「她吃」是同一个形式，主语在清楚时省略。词根后面按固定顺序最多加四个体、情态和时态后缀，最后是句尾词，表明这是陈述、疑问还是命令，以及说话有多客气。",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "词根", "description": "去掉 -da 的动词：meog-da → meog-。" },
+          { "slot": "体 1", "description": "-eoms，持续体：正在发生的事。" },
+          { "slot": "体 2", "description": "-eos，完整体：被看作完整的事，通常是过去。" },
+          { "slot": "情态", "description": "-euk，意图或推测；-(eu)neu，习惯或确定的事。" },
+          { "slot": "时态", "description": "-eun 非过去，-eon 过去，-eul 将来。" },
+          { "slot": "句尾词", "description": "陈述、疑问或命令，客气或不客气：-da、-jeo、-ga、-ya、-u-da……" }
+        ]
+      },
+      {
+        "title": "三种语体",
+        "description": "对家人和朋友说话用非正式语体。对长辈或地位较高的人，在句尾词前加敬语 -u（或 -euu）；在正式场合用 -eub，再加上表示信息来源的标记：-de（我看到的）或 -ne（我知道的）。",
+        "columns": ["语体", "陈述", "疑问"],
+        "rows": [
+          { "label": "非正式", "cells": ["meog-eos-jeo「吃了」", "meog-eos-ya「吃了吗？」"] },
+          { "label": "客气（-u）" },
+          { "label": "正式（-eub）", "cells": ["meog-eos-ib-de-da「（我看到）吃了」", "meog-eos-ib-de-ga"] }
+        ]
+      },
+      {
+        "title": "元音和谐",
+        "description": "如果词根的元音是 a、o，或后面跟辅音的 aw，-eoms、-eos、-eon 就把 eo 换成 a。在 a 和 eo 之后缩短；在 e、ae、aw 之后加 y；词根的 i 变成 y，eu 脱落。有些动词有自己的规则：menggeul-as「做了」，deul-eos「问了」。",
+        "columns": ["词根", "完整体", "原因"],
+        "rows": [
+          { "cells": ["meog-eos-jeo", "一般规则：eo"] },
+          { "cells": ["chawj-as-jeo", "aw + 辅音：a"] },
+          { "cells": ["ga-s-jeo", "a 之后：-s"] },
+          { "cells": ["haw-yeos-jeo", "aw 之后：y"] },
+          { "cells": ["dekky-eos-jeo", "i + eo → yeo"] },
+          { "cells": ["singg-eos-jeo", "eu 脱落"] },
+          { "cells": ["menggeul-as-jeo", "这个动词自己的 a"] }
+        ]
+      },
+      {
+        "title": "连接元音",
+        "description": "以 eu 开头的后缀（-eun、-euk、-eul、-eub、-eula）在元音后去掉 eu，在 s、j、ch 后变成 i，在 b、p、m 后变成 u。词根末尾的 l 在 n、b 和将来时的 l 之前脱落。"
+      },
+      {
+        "title": "常用句",
+        "items": [
+          { "translation": "你明天做什么？" },
+          { "translation": "这是什么？" },
+          { "translation": "她把剪刀扔了。" },
+          { "translation": "我们洗衣服吧！" },
+          { "translation": "你先吃完！" },
+          { "translation": "请吃这个。" },
+          { "translation": "我去办这件事（对长辈说）。" }
+        ]
+      },
+      {
+        "title": "动词的所有词缀",
+        "description": "动词可以带的每一个成分，按顺序排列：改变动词意义的后缀，体、情态和时态，敬语，陈述、疑问和命令的句尾词，否定，以及连接分句的连接词尾。它们可以组合：meog-eoms-eos-ik-eun-ge「那时一定正在吃」。",
+        "items": [
+          { "kind": "派生", "meaning": "被动：被做", "translation": "被吃" },
+          { "kind": "派生", "meaning": "使役：使别人做", "translation": "我来煮" },
+          { "kind": "体", "meaning": "持续体：正在发生的事；用于状态动词时表示「变得」", "translation": "正在吃" },
+          { "kind": "体", "meaning": "-ga 和 -dia 之前的持续体", "translation": "你在捡吗？" },
+          { "kind": "体", "meaning": "完整体：被看作完整的事", "translation": "挖了" },
+          { "kind": "情态", "meaning": "将行：意图（与「我」连用）或推测", "translation": "我要抓它" },
+          { "kind": "情态", "meaning": "直陈：习惯或确定的事，总是带 -n", "translation": "吃吗？" },
+          { "kind": "时态", "meaning": "非过去：事实或习惯", "translation": "吃" },
+          { "kind": "时态", "meaning": "过去；可以单独结束句子", "translation": "抓到了" },
+          { "kind": "时态", "meaning": "将来", "translation": "你会死的" },
+          { "kind": "敬语", "meaning": "对听话人的尊敬，用在体或情态之后", "translation": "我会去（对长辈说）" },
+          { "kind": "敬语", "meaning": "对听话人的尊敬，用于不带其他后缀的状态动词", "translation": "很小" },
+          { "kind": "敬语", "meaning": "正式的尊敬，与 -de、-ne 或 -seo 连用", "translation": "（我知道）她吃" },
+          { "kind": "敬语", "meaning": "更多尊敬，用于请长辈做事", "translation": "请坐" },
+          { "kind": "示证", "meaning": "因为亲眼看到而说", "translation": "（我看到）他在抓" },
+          { "kind": "示证", "meaning": "因为知道或推断而说", "translation": "（我知道）他会抓" },
+          { "kind": "陈述", "meaning": "最常见的句尾词；老年人用得更多", "translation": "吃" },
+          { "kind": "陈述", "meaning": "只用于动作动词；直接加在词根上表示「我来做」", "translation": "我来抓" },
+          { "kind": "陈述和疑问", "meaning": "非正式", "translation": "正在抓" },
+          { "kind": "陈述", "meaning": "非正式；有时表示「你本该」", "translation": "种松树" },
+          { "kind": "陈述", "meaning": "非正式，说自己注意到的事", "translation": "吃" },
+          { "kind": "陈述", "meaning": "根据看到的情况推测", "translation": "看来她也会养" },
+          { "kind": "陈述", "meaning": "以前亲眼看到的事", "translation": "（我看到）他抓得很好" },
+          { "kind": "陈述和疑问", "meaning": "陈述，或带「什么、谁」等的疑问", "translation": "我已经吃了" },
+          { "kind": "疑问", "meaning": "是非问或「什么、谁」等；也表示「我想知道」", "translation": "她捡了吗？" },
+          { "kind": "疑问", "meaning": "非正式，多为老年人使用", "translation": "你抓到了吗？" },
+          { "kind": "疑问", "meaning": "带「什么、谁、为什么」等", "translation": "为什么这么热？" },
+          { "kind": "疑问", "meaning": "带「什么、谁、为什么」等", "translation": "你在做什么？" },
+          { "kind": "疑问", "meaning": "客气，对长辈说", "translation": "您要扔掉吗？" },
+          { "kind": "疑问和陈述", "meaning": "客气，用于状态动词", "translation": "很小" },
+          { "kind": "疑问", "meaning": "正式：问对方看到或知道的事", "translation": "我坐下好吗？" },
+          { "kind": "命令", "meaning": "命令式，马上做", "translation": "坐下！" },
+          { "kind": "命令", "meaning": "提议：我们一起做吧", "translation": "我们洗衣服吧！" },
+          { "kind": "命令", "meaning": "正式的请求", "translation": "请吃" },
+          { "kind": "命令", "meaning": "年长女性对较年轻的成年人说", "translation": "抓住它！" },
+          { "kind": "敬语", "meaning": "通用的礼貌标记，多为年轻人使用" },
+          { "kind": "否定", "meaning": "不，放在动词前", "translation": "我不去" },
+          { "kind": "否定", "meaning": "不能", "translation": "没能吃" },
+          { "kind": "否定", "meaning": "长否定", "translation": "他没砍" },
+          { "kind": "否定", "meaning": "禁止：别做", "translation": "别藏在那里" },
+          { "kind": "连接", "meaning": "如果，当……时", "translation": "如果烧起来" },
+          { "kind": "连接", "meaning": "一边……一边", "translation": "一边来" },
+          { "kind": "连接", "meaning": "因为", "translation": "因为刮风" },
+          { "kind": "连接", "meaning": "然后，去做", "translation": "如果你去看" }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "informal", "label": "非正式：家人和朋友" },
+      { "id": "polite", "label": "客气（-u）：对长辈" },
+      { "id": "formal", "label": "正式（-eub）" }
+    ],
+    "tenses": [
+      { "id": "present", "group": "体和时态", "name": "非过去时", "description": "事实或习惯：陈述用 -eun-da，提问用 -(eu)neu-n-ga。动作动词不带其他后缀时没有客气的 -u 形式；正式形式是 -eub-ne-da「（我知道）她做」。" },
+      { "id": "continuative", "group": "体和时态", "name": "持续体", "description": "正在发生的事（-eoms）：meog-eoms-jeo「正在吃」。在 -ga 前去掉 s：meog-eom-ga。" },
+      { "id": "perfective", "group": "体和时态", "name": "完整体", "description": "被看作完整的事，通常是过去（-eos）：meog-eos-jeo「吃了」。正式的 -ib-de-da 表示说话人亲眼看到。" },
+      { "id": "past", "group": "体和时态", "name": "过去时 -eon", "description": "可以不带句尾词结束句子的过去时：sim-eon「抓到了」。只用于非正式语体。" },
+      { "id": "prospective", "group": "将来", "name": "将行体", "description": "与「我」连用时表示打算做的事（-euk）：meog-euk-yeo「我要吃」；与其他人连用时表示推测。带 -u 时是对长辈的承诺。" },
+      { "id": "future", "group": "将来", "name": "将来时 -eulgeo", "description": "将要发生的事，也可以不含意图：「三点开始」「你会死的」。" },
+      { "id": "imperative", "group": "命令", "name": "命令和提议", "description": "-eula，马上做！-ge，我们做吧！-eub-seo，正式的请求。", "columns": ["命令", "提议"], "es_2": "optative", "es_formal": { "tense": "present", "before": "por favor", "pronoun": false } },
+      { "id": "prohibitive", "group": "命令", "name": "禁止", "description": "-ji mal-la：别做！", "columns": ["禁止"] },
+      { "id": "negative_perfective", "group": "否定", "name": "完整体否定", "description": "动词前加 an：an meog-eos-jeo「没吃」。" },
+      { "id": "negative_prospective", "group": "否定", "name": "将行体否定", "description": "an ga-k-yeo「我不去」。" },
+      { "id": "cannot", "group": "否定", "name": "不能", "description": "动词前加 mos：mos meog-eos-jeo「没能吃」。" }
+    ],
+    "lexicon": [
+      { "entry": "meog-da", "meaning": "吃", "es": "吃" },
+      { "entry": "ga-da", "meaning": "去", "es": "去" },
+      { "entry": "haw-da", "meaning": "做", "es": "做这件事" },
+      { "entry": "sim-da", "meaning": "抓，捉", "es": "抓它" },
+      { "entry": "chawj-da", "meaning": "找，找到", "es": "找它" },
+      { "entry": "dekki-da", "meaning": "扔掉", "es": "扔掉它" },
+      { "entry": "sichi-da", "meaning": "洗", "es": "洗它" },
+      { "entry": "singgeu-da", "meaning": "种，播种", "es": "种它" },
+      { "entry": "gawm-da", "meaning": "洗（身体）", "es": "洗澡", "note": "mom gawm-da「洗澡」，字面意思是「洗身体」" },
+      { "entry": "jus-da", "meaning": "捡，收集", "es": "捡它" },
+      { "entry": "menggeul-da", "meaning": "做，准备", "es": "做它", "note": "元音是 eu，却用 a：menggeul-as-jeo" },
+      { "entry": "ig-da", "meaning": "读", "es": "读它" },
+      { "entry": "aj-da", "meaning": "坐下", "es": "坐下" },
+      { "entry": "jug-da", "meaning": "死", "es": "死" },
+      { "entry": "pa-da", "meaning": "挖", "es": "挖" },
+      { "entry": "deul-da", "meaning": "问", "es": "问" },
+      { "entry": "jab-da", "meaning": "抓住，拿", "es": "抓住它" },
+      { "entry": "geuchi-da", "meaning": "砍（树）", "es": "砍它", "note": "用 a：geuchy-as-jeo" },
+      { "entry": "chuli-da", "meaning": "付钱", "es": "付钱" },
+      { "entry": "ka-da", "meaning": "燃烧", "es": "燃烧" },
+      { "entry": "nol-da", "meaning": "玩", "es": "玩" },
+      { "entry": "seolleu-da", "meaning": "打扫，收拾", "es": "打扫" }
+    ]
+  }
+}

@@ -47,6 +47,7 @@ fn adverb(word: &str) -> Option<&'static str> {
 fn frame(word: &str) -> Option<(&'static str, &'static str)> {
     Some(match word {
         "que" => ("让", ""),
+        "por favor" => ("请", ""),
         "cuando" => ("", "的时候"),
         "aunque" => ("即使", ""),
         "si" => ("如果", ""),

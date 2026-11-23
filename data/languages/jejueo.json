@@ -1,0 +1,258 @@
+{
+  "slug": "jejueo",
+  "name": "Jejueo",
+  "endonym": "제주말",
+  "variant": "Jejueo (jejumal), en la romanización de Yang, Yang y O'Grady",
+  "region": "Isla de Jeju, Corea del Sur",
+  "family": "coreanica",
+  "area": "asia_oriental",
+  "continent": "asia",
+  "status": "available",
+  "order": 19,
+  "series": "mikkang",
+  "lang_code": "jje",
+  "summary": "La lengua de la isla de Jeju, en el sur de Corea. Su verbo no cambia por persona: encadena sufijos de aspecto y tiempo y termina con una pieza que dice si hablas con un amigo o con un mayor.",
+  "conjugator": {
+    "label": "Verbo",
+    "hint": "Escribe el verbo con -da, como en el diccionario, o solo la raíz: meog-da o meog «comer», ga-da «ir», haw-da «hacer». Los guiones son opcionales.",
+    "placeholder": "meog-da",
+    "row_header": "Nivel de habla",
+    "columns": ["Afirmación", "Pregunta"],
+    "own": {
+      "hint": "Escribe cualquier verbo de acción con -da o solo su raíz, y su significado en español. Usamos la regla general de la armonía: -as después de a, o y aw; -eos en los demás. Algunos verbos la rompen (menggeul-as «hizo»).",
+      "label": "Verbo",
+      "placeholder": "gawlleu-da",
+      "es_placeholder": "elegir"
+    }
+  },
+  "source": {
+    "short": "Yang, Yang y O'Grady, Jejueo: The Language of Korea's Jeju Island (2020)",
+    "full": "Changyong Yang, Sejung Yang y William O'Grady, Jejueo: The Language of Korea's Jeju Island (Honolulu: University of Hawai'i Press, 2020), caps. 2 y 5–7, para la ortografía, la romanización, los sufijos de aspecto, modalidad y tiempo, las terminaciones y los ejemplos; Sejung Yang, «A Revised Analysis of the Tense-Aspect Markers in Jejueo», University of Hawai'i Working Papers in Linguistics 49 (2018); UNESCO, Atlas de las lenguas del mundo en peligro (2010)."
+  },
+  "about": [
+    "El jejueo (제주어), que sus hablantes llaman jejumal, «el habla de Jeju», es la lengua de la isla de Jeju, en el estrecho de Corea, al sur de la península coreana. Es pariente del coreano, en la familia coreánica, pero un hablante de Seúl o de Busan entiende muy poco de ella: en una prueba con una historia narrada en jejueo, acertaron menos del 10 % de las preguntas.",
+    "La isla vivió siglos aislada, y su lengua guardó palabras y sonidos que el coreano perdió, como la vocal ㆍ, la «alae a» del coreano medio. La isla es famosa también por las haenyeo, las buceadoras que pescan sin tanques, cuya tradición es patrimonio de la UNESCO.",
+    "En 2010 la UNESCO declaró el jejueo en peligro crítico. Calculó entre cinco y diez mil hablantes, pero los autores de la gramática creen que hoy quedan muchos menos con fluidez, casi todos mayores de 70 años. Desde la Ley de la Lengua de Jeju de 2007 hay esfuerzos por enseñarla, escribirla y grabar a sus últimos hablantes."
+  ],
+  "orthography": {
+    "intro": "El jejueo se escribe en hangeul, el alfabeto coreano, con una letra más: ㆍ, la «alae a». Aquí lo escribimos en la romanización de la gramática de Yang, Yang y O'Grady, que da una letra latina por cada letra del hangeul (aw = ㆍ), y separamos con guiones las piezas del verbo, como hace el libro: meog-eoms-jeo «está comiendo».",
+    "letters": [
+      { "letter": "b (ㅂ)", "ipa": "p", "word": "be", "meaning": "barco; barriga" },
+      { "letter": "p (ㅍ)", "ipa": "pʰ", "word": "pe", "meaning": "boleto" },
+      { "letter": "pp (ㅃ)", "ipa": "p͈", "word": "ppe", "meaning": "hueso" },
+      { "letter": "d (ㄷ)", "ipa": "t", "word": "dawl", "meaning": "luna" },
+      { "letter": "t (ㅌ)", "ipa": "tʰ", "word": "tawl", "meaning": "alga" },
+      { "letter": "tt (ㄸ)", "ipa": "t͈", "word": "ttawl", "meaning": "hija" },
+      { "letter": "g (ㄱ)", "ipa": "k", "word": "gagebi", "meaning": "rana" },
+      { "letter": "k (ㅋ)", "ipa": "kʰ", "word": "sawngki", "meaning": "verdura" },
+      { "letter": "kk (ㄲ)", "ipa": "k͈", "word": "nikkeob", "meaning": "carnada" },
+      { "letter": "j (ㅈ)", "ipa": "tɕ", "word": "imje", "meaning": "dueño" },
+      { "letter": "ch (ㅊ)", "ipa": "tɕʰ", "word": "guche", "meaning": "vergüenza" },
+      { "letter": "jj (ㅉ)", "ipa": "t͈ɕ", "word": "gujjag", "meaning": "derecho, recto" },
+      { "letter": "s (ㅅ)", "ipa": "s", "word": "sawl", "meaning": "carne (del cuerpo)" },
+      { "letter": "ss (ㅆ)", "ipa": "s͈", "word": "ssawl", "meaning": "arroz crudo" },
+      { "letter": "m (ㅁ)", "ipa": "m", "word": "ma", "meaning": "niebla" },
+      { "letter": "n (ㄴ)", "ipa": "n", "word": "neu", "meaning": "tú" },
+      { "letter": "ng (ㅇ)", "ipa": "ŋ", "word": "nang", "meaning": "árbol" },
+      { "letter": "l (ㄹ)", "ipa": "l ~ ɾ", "word": "jil", "meaning": "camino" },
+      { "letter": "h (ㅎ)", "ipa": "h", "word": "haleubang", "meaning": "abuelo" },
+      { "letter": "i (ㅣ)", "ipa": "i", "word": "iluhuje", "meaning": "después" },
+      { "letter": "e (ㅔ)", "ipa": "e", "word": "eyeom", "meaning": "al lado" },
+      { "letter": "ae (ㅐ)", "ipa": "ɛ", "word": "saengi", "meaning": "pájaro" },
+      { "letter": "eu (ㅡ)", "ipa": "ɨ", "word": "geuljaw", "meaning": "letra" },
+      { "letter": "eo (ㅓ)", "ipa": "ʌ", "word": "eomeong", "meaning": "madre" },
+      { "letter": "a (ㅏ)", "ipa": "a", "word": "abang", "meaning": "padre" },
+      { "letter": "u (ㅜ)", "ipa": "u", "word": "uyeong", "meaning": "huerto de la casa" },
+      { "letter": "o (ㅗ)", "ipa": "o", "word": "olabang", "meaning": "hermano mayor" },
+      { "letter": "aw (ㆍ)", "ipa": "ɒ ~ ʌ", "word": "mawseum", "meaning": "mente, corazón" }
+    ],
+    "vowels": [
+      {
+        "title": "Vocales de los hablantes mayores",
+        "items": [
+          { "letter": "i", "ipa": "i" },
+          { "letter": "e", "ipa": "e" },
+          { "letter": "ae", "ipa": "ɛ" },
+          { "letter": "eu", "ipa": "ɨ" },
+          { "letter": "eo", "ipa": "ʌ" },
+          { "letter": "a", "ipa": "a" },
+          { "letter": "u", "ipa": "u" },
+          { "letter": "o", "ipa": "o" },
+          { "letter": "aw", "ipa": "ɒ" }
+        ]
+      }
+    ],
+    "notes": [
+      "Las oclusivas van de tres en tres: suave (b, d, g, j), aspirada (p, t, k, ch) y tensa (pp, tt, kk, jj), igual que la s y la ss: dawl «luna», tawl «alga», ttawl «hija».",
+      "La ㆍ, «alae a», es la vocal que distingue al jejueo: suena entre a y o, con la boca abierta y los labios algo redondos. Muchas palabras la alternan con o: nawmppi o nomppi «rábano». Los jóvenes ya casi no la distinguen.",
+      "Los mayores distinguen e de ae (semi «manantial», sæmi «un pastel de arroz»); los jóvenes las dicen igual.",
+      "La l entre vocales suena como la r de «cara»: dawl-eumin se dice daw-leu-min. La ng nunca empieza una sílaba.",
+      "El hangeul escribe cada pieza siempre igual, aunque se pronuncie distinto: dawg «pollo» se escribe con g aunque en dawg-nun «ojo de pollo» suene dawng. Por eso separamos con guiones las piezas del verbo.",
+      "Los dígrafos (ng, eu, ae, aw) pueden confundirse; cuando hace falta, un punto separa las sílabas: en.gida «ser abrazado», me.uda «llenar»."
+    ]
+  },
+  "grammar": {
+    "intro": "Un verbo de Jeju no cambia por persona: «como», «comes» y «come» son la misma forma, y el sujeto se calla si se entiende. A la raíz se le suman, en un orden fijo, hasta cuatro sufijos de aspecto, modalidad y tiempo, y al final una terminación que dice si es afirmación, pregunta u orden, y con cuánta cortesía se habla.",
+    "blocks": [
+      {
+        "type": "formula",
+        "items": [
+          { "slot": "Raíz", "description": "El verbo sin -da: meog-da → meog-.", "example": "meog-" },
+          { "slot": "Aspecto 1", "description": "-eoms, continuativo: lo que está pasando.", "example": "-eoms-" },
+          { "slot": "Aspecto 2", "description": "-eos, perfectivo: lo que se ve completo, casi siempre pasado.", "example": "-eos-" },
+          { "slot": "Modalidad", "description": "-euk, intención o conjetura; -(eu)neu, lo habitual o seguro.", "example": "-ik-" },
+          { "slot": "Tiempo", "description": "-eun no pasado, -eon pasado, -eul futuro.", "example": "-eun-" },
+          { "slot": "Terminación", "description": "Afirmación, pregunta u orden, con o sin cortesía: -da, -jeo, -ga, -ya, -u-da…", "example": "-ge" }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Tres niveles de habla",
+        "description": "Con la familia y los amigos se habla de manera informal. A un mayor o a alguien de más rango se le habla con el honorífico -u (o -euu) antes de la terminación; en situaciones formales se usa -eub con una marca de cómo se sabe lo que se dice: -de (lo vi) o -ne (lo sé).",
+        "columns": ["Nivel", "Afirmación", "Pregunta"],
+        "rows": [
+          { "label": "Informal", "cells": ["meog-eos-jeo «comió»", "meog-eos-ya «¿comió?»"] },
+          { "label": "Cortés (-u)", "cells": ["meog-eos-u-da", "meog-eos-u-gwa"] },
+          { "label": "Formal (-eub)", "cells": ["meog-eos-ib-de-da «(vi que) comió»", "meog-eos-ib-de-ga"] }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "Armonía vocálica",
+        "description": "-eoms, -eos y -eon cambian eo por a después de una raíz con a, o o (si le sigue consonante) aw. Después de a y eo se reducen; después de e, ae y aw llevan y; la i de la raíz se vuelve y, y la eu cae. Algunos verbos siguen su propia regla: menggeul-as «hizo», deul-eos «preguntó».",
+        "columns": ["Raíz", "Perfectivo", "Por qué"],
+        "rows": [
+          { "label": "meog-", "cells": ["meog-eos-jeo", "regla general: eo"] },
+          { "label": "chawj-", "cells": ["chawj-as-jeo", "aw + consonante: a"] },
+          { "label": "ga-", "cells": ["ga-s-jeo", "después de a: -s"] },
+          { "label": "haw-", "cells": ["haw-yeos-jeo", "después de aw: y"] },
+          { "label": "dekki-", "cells": ["dekky-eos-jeo", "i + eo → yeo"] },
+          { "label": "singgeu-", "cells": ["singg-eos-jeo", "la eu cae"] },
+          { "label": "menggeul-", "cells": ["menggeul-as-jeo", "a propia del verbo"] }
+        ]
+      },
+      {
+        "type": "table",
+        "title": "La vocal de apoyo",
+        "description": "Los sufijos que empiezan con eu (-eun, -euk, -eul, -eub, -eula) la pierden después de vocal, la cambian por i después de s, j y ch, y por u después de b, p y m. Una l final cae antes de n, b y la l del futuro.",
+        "columns": ["Raíz", "-eun-da", "-eula"],
+        "rows": [
+          { "label": "meog-", "cells": ["meog-eun-da", "meog-eula"] },
+          { "label": "jus-", "cells": ["jus-in-da", "jus-ila"] },
+          { "label": "sim-", "cells": ["sim-un-da", "sim-ula"] },
+          { "label": "ga-", "cells": ["ga-n-da", "ga-la"] },
+          { "label": "menggeul-", "cells": ["menggeu-n-da", "menggeul-la"] }
+        ]
+      },
+      {
+        "type": "pairs",
+        "title": "Frases",
+        "items": [
+          { "text": "Nuil musigeo he-ms-in-i?", "translation": "¿Qué haces mañana?" },
+          { "text": "I-geo musigeo?", "translation": "¿Qué es esto?" },
+          { "text": "Gawse dekky-eos-jeo.", "translation": "Tiró las tijeras." },
+          { "text": "Sawdab haw-ge!", "translation": "¡Lavemos la ropa!" },
+          { "text": "Neu mawncheo meog-eos-ila!", "translation": "¡Termina de comer primero!" },
+          { "text": "I-geo meog-eub-seo.", "translation": "Coma esto, por favor." },
+          { "text": "Buleumssi haw-k-u-da.", "translation": "Haré el mandado (dicho a un mayor)." }
+        ]
+      },
+      {
+        "type": "affixes",
+        "title": "Todos los afijos del verbo",
+        "description": "Cada pieza que puede llevar un verbo, en el orden en que va: los sufijos que cambian el verbo, el aspecto, la modalidad y el tiempo, los honoríficos, las terminaciones de afirmación, pregunta y orden, la negación y los conectores que unen oraciones. Se pueden combinar: meog-eoms-eos-ik-eun-ge «debía de estar comiendo».",
+        "items": [
+          { "affix": "-i- / -hi- / -gi-", "kind": "derivación", "meaning": "pasivo: ser hecho", "example": "meg-hi-da", "translation": "ser comido" },
+          { "affix": "-i- / -li- / -u- / -ji-", "kind": "derivación", "meaning": "causativo: hacer que otro haga", "example": "na-ga gwe-u-jeo", "translation": "lo hago hervir yo" },
+          { "affix": "-eoms", "kind": "aspecto", "meaning": "continuativo: lo que está pasando; con verbos de estado, «ir volviéndose»", "example": "meog-eoms-jeo", "translation": "está comiendo" },
+          { "affix": "-eom", "kind": "aspecto", "meaning": "el continuativo antes de -ga y -dia", "example": "jus-eom-ga?", "translation": "¿estás recogiendo?" },
+          { "affix": "-eos", "kind": "aspecto", "meaning": "perfectivo: lo que se ve completo", "example": "pa-s-jeo", "translation": "cavó" },
+          { "affix": "-euk", "kind": "modalidad", "meaning": "prospectivo: intención (con «yo») o conjetura", "example": "sim-uk-yeo", "translation": "voy a atraparlo" },
+          { "affix": "-(eu)neu", "kind": "modalidad", "meaning": "indicativo: lo habitual o seguro, siempre con -n", "example": "meog-neu-n-ga?", "translation": "¿come?" },
+          { "affix": "-eun", "kind": "tiempo", "meaning": "no pasado: un hecho o una costumbre", "example": "meog-eun-da", "translation": "come" },
+          { "affix": "-eon", "kind": "tiempo", "meaning": "pasado; puede cerrar la oración solo", "example": "sim-eon", "translation": "lo atrapó" },
+          { "affix": "-eul / -eulgeo", "kind": "tiempo", "meaning": "futuro", "example": "jug-eulgeo-yeo", "translation": "morirás" },
+          { "affix": "-u", "kind": "honorífico", "meaning": "respeto al que escucha, después de aspecto o modalidad", "example": "ga-lgeo-u-da", "translation": "iré (a un mayor)" },
+          { "affix": "-euu", "kind": "honorífico", "meaning": "respeto al que escucha, con verbos de estado sin otro sufijo", "example": "jog-euu-da", "translation": "es pequeño" },
+          { "affix": "-eub", "kind": "honorífico", "meaning": "respeto formal, con -de, -ne o -seo", "example": "meog-eub-ne-da", "translation": "(sé que) come" },
+          { "affix": "-eusi", "kind": "honorífico", "meaning": "más respeto, en órdenes a mayores", "example": "aj-isi-b-seo", "translation": "siéntese, por favor" },
+          { "affix": "-de / -di", "kind": "evidencial", "meaning": "lo dice porque lo vio", "example": "sim-ub-de-da", "translation": "(lo vi) atrapando" },
+          { "affix": "-ne / -ni", "kind": "evidencial", "meaning": "lo dice porque lo sabe o lo deduce", "example": "sim-ub-ne-da", "translation": "(sé que) atrapa" },
+          { "affix": "-(eu)da", "kind": "afirmación", "meaning": "la terminación más común; más de los mayores", "example": "meog-eun-da", "translation": "come" },
+          { "affix": "-(eu)jeo", "kind": "afirmación", "meaning": "solo verbos de acción; con la raíz sola, «lo haré yo»", "example": "na-ga sim-ujeo", "translation": "lo atrapo yo" },
+          { "affix": "-eo", "kind": "afirmación y pregunta", "meaning": "informal", "example": "sim-eoms-eo", "translation": "está atrapando" },
+          { "affix": "-(eu)ju", "kind": "afirmación", "meaning": "informal; a veces «debiste»", "example": "sonang singgeu-ju", "translation": "planta pinos" },
+          { "affix": "-ye", "kind": "afirmación", "meaning": "informal, sobre algo que uno nota", "example": "meog-neu-n-ye", "translation": "come" },
+          { "affix": "-ge", "kind": "afirmación", "meaning": "conjetura por lo que se ve", "example": "jillu-k-eun-ge", "translation": "parece que lo criará" },
+          { "affix": "-eola", "kind": "afirmación", "meaning": "lo que uno vio antes", "example": "jal sim-eola", "translation": "(vi que) atrapaba bien" },
+          { "affix": "-di", "kind": "afirmación y pregunta", "meaning": "afirmación o pregunta con qué, quién…", "example": "meog-eos-in-di", "translation": "ya comí" },
+          { "affix": "-ga", "kind": "pregunta", "meaning": "de sí o no, o con qué, quién…; también «me pregunto»", "example": "jus-eon-ga?", "translation": "¿recogió?" },
+          { "affix": "-ya", "kind": "pregunta", "meaning": "informal, sobre todo de los mayores", "example": "sim-eos-ya?", "translation": "¿lo atrapaste?" },
+          { "affix": "-go", "kind": "pregunta", "meaning": "con qué, quién, por qué…", "example": "daws-in-go?", "translation": "¿por qué hace calor?" },
+          { "affix": "-i", "kind": "pregunta", "meaning": "con qué, quién, por qué…", "example": "he-ms-in-i?", "translation": "¿qué haces?" },
+          { "affix": "-u-gwa(ng)", "kind": "pregunta", "meaning": "cortés, a un mayor", "example": "dekki-k-u-gwa?", "translation": "¿va a tirarlos?" },
+          { "affix": "-(eu)kkwa / -kkwe", "kind": "pregunta y afirmación", "meaning": "cortés, con verbos de estado", "example": "jog-eukkwe", "translation": "es pequeño" },
+          { "affix": "-eub-de-ga / -eub-ne-kka", "kind": "pregunta", "meaning": "formal: lo que el otro vio o sabe", "example": "aj-ib-ne-kka?", "translation": "¿me siento?" },
+          { "affix": "-eula", "kind": "orden", "meaning": "imperativo, para ya", "example": "aj-ila!", "translation": "¡siéntate!" },
+          { "affix": "-(eu)ge", "kind": "orden", "meaning": "propuesta: hagamos", "example": "sawdab haw-ge!", "translation": "¡lavemos la ropa!" },
+          { "affix": "-eub-seo", "kind": "orden", "meaning": "pedido formal", "example": "meog-eub-seo", "translation": "coma, por favor" },
+          { "affix": "-(eu)sim", "kind": "orden", "meaning": "de mujeres mayores a un adulto más joven", "example": "sim-usim!", "translation": "¡atrápalo!" },
+          { "affix": "masseum", "kind": "honorífico", "meaning": "cortesía para todo, sobre todo de los jóvenes" },
+          { "affix": "an / ani / ai", "kind": "negación", "meaning": "no, delante del verbo", "example": "an ga-k-yeo", "translation": "no voy a ir" },
+          { "affix": "mos", "kind": "negación", "meaning": "no poder", "example": "mos meog-eos-jeo", "translation": "no pudo comer" },
+          { "affix": "-ji ani haw-", "kind": "negación", "meaning": "negación larga", "example": "geuchi-ji ani haw-yeos-jeo", "translation": "no lo cortó" },
+          { "affix": "-ji mal-", "kind": "negación", "meaning": "prohibición: no lo hagas", "example": "gob-ji-ji mal-la", "translation": "no lo escondas" },
+          { "affix": "-eumin", "kind": "conector", "meaning": "si, cuando", "example": "ka-min", "translation": "si se quema" },
+          { "affix": "-eumeong", "kind": "conector", "meaning": "mientras", "example": "o-meong", "translation": "mientras viene" },
+          { "affix": "-nan", "kind": "conector", "meaning": "porque", "example": "bu-nan", "translation": "porque sopla" },
+          { "affix": "-ng", "kind": "conector", "meaning": "y luego, al ir a", "example": "ga-ng bo-min", "translation": "si vas y miras" }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "engine": "jejueo",
+    "persons": [
+      { "id": "informal", "label": "Informal: familia y amigos" },
+      { "id": "polite", "label": "Cortés (-u): a un mayor" },
+      { "id": "formal", "label": "Formal (-eub)" }
+    ],
+    "tenses": [
+      { "id": "present", "group": "Aspecto y tiempo", "name": "No pasado", "description": "Un hecho o una costumbre: -eun-da para afirmar, -(eu)neu-n-ga para preguntar. Con verbos de acción no hay forma cortés con -u sin otro sufijo; la formal es -eub-ne-da «(sé que) lo hace».", "form": "present", "es": "present", "es_2": { "tense": "present", "question": true } },
+      { "id": "continuative", "group": "Aspecto y tiempo", "name": "Continuativo", "description": "Lo que está pasando (-eoms): meog-eoms-jeo «está comiendo». Antes de -ga pierde la s: meog-eom-ga.", "form": "continuative", "es": "progressive", "es_2": { "tense": "progressive", "question": true } },
+      { "id": "perfective", "group": "Aspecto y tiempo", "name": "Perfectivo", "description": "Lo que se ve completo, casi siempre pasado (-eos): meog-eos-jeo «comió». La forma formal -ib-de-da dice que uno lo vio.", "form": "perfective", "es": "preterite", "es_2": { "tense": "preterite", "question": true } },
+      { "id": "past", "group": "Aspecto y tiempo", "name": "Pasado -eon", "description": "Un pasado que puede cerrar la oración sin terminación: sim-eon «lo atrapó». Solo en el habla informal.", "form": "past", "es": "preterite", "es_2": { "tense": "preterite", "question": true } },
+      { "id": "prospective", "group": "Futuro", "name": "Prospectivo", "description": "Con «yo», lo que uno se propone hacer (-euk): meog-euk-yeo «voy a comer»; con otros, una conjetura. Con -u, una promesa a un mayor.", "form": "prospective", "person": 0, "es": { "tense": "present", "aux": "ir", "link": "a" }, "es_2": { "tense": "present", "aux": "ir", "link": "a", "question": true } },
+      { "id": "future", "group": "Futuro", "name": "Futuro -eulgeo", "description": "Lo que va a pasar, también sin intención: «empieza a las tres», «morirás».", "form": "future", "es": "future", "es_2": { "tense": "future", "question": true } },
+      { "id": "imperative", "group": "Órdenes", "name": "Imperativo y propuesta", "description": "-eula, ¡hazlo ya!; -ge, ¡hagámoslo!; -eub-seo, pedido formal.", "columns": ["Orden", "Propuesta"], "form": "imperative", "person": 1, "es": "imperative", "person_2": 3, "es_2": { "tense": "subjunctive", "pronoun": false }, "es_formal": { "tense": "subjunctive", "pronoun": false } },
+      { "id": "prohibitive", "group": "Órdenes", "name": "Prohibición", "description": "-ji mal-la: ¡no lo hagas!", "columns": ["Prohibición"], "form": "prohibitive", "negative": true, "person": 1, "es": "imperative" },
+      { "id": "negative_perfective", "group": "Negación", "name": "Perfectivo negativo", "description": "an delante del verbo: an meog-eos-jeo «no comió».", "form": "negative_perfective", "negative": true, "es": "preterite", "es_2": { "tense": "preterite", "question": true } },
+      { "id": "negative_prospective", "group": "Negación", "name": "Prospectivo negativo", "description": "an ga-k-yeo «no voy a ir».", "form": "negative_prospective", "negative": true, "person": 0, "es": { "tense": "present", "aux": "ir", "link": "a" }, "es_2": { "tense": "present", "aux": "ir", "link": "a", "question": true } },
+      { "id": "cannot", "group": "Negación", "name": "No poder", "description": "mos delante del verbo: mos meog-eos-jeo «no pudo comer».", "form": "cannot_perfective", "negative": true, "es": { "tense": "preterite", "aux": "poder" }, "es_2": { "tense": "preterite", "aux": "poder", "question": true } }
+    ],
+    "lexicon": [
+      { "entry": "meog-da", "meaning": "comer", "es": "comer" },
+      { "entry": "ga-da", "meaning": "ir", "es": "ir" },
+      { "entry": "haw-da", "meaning": "hacer", "es": "hacer" },
+      { "entry": "sim-da", "meaning": "atrapar, agarrar", "es": "atrapar" },
+      { "entry": "chawj-da", "meaning": "buscar, encontrar", "es": "buscar" },
+      { "entry": "dekki-da", "meaning": "tirar, botar", "es": "tirar" },
+      { "entry": "sichi-da", "meaning": "lavar", "es": "lavar" },
+      { "entry": "singgeu-da", "meaning": "plantar, sembrar", "es": "plantar" },
+      { "entry": "gawm-da", "meaning": "lavar (el cuerpo)", "es": "bañarse", "note": "mom gawm-da «bañarse», literalmente «lavar el cuerpo»" },
+      { "entry": "jus-da", "meaning": "recoger, juntar", "es": "recoger" },
+      { "entry": "menggeul-da", "meaning": "hacer, preparar", "es": "preparar", "harmony": "a", "note": "lleva a aunque su vocal es eu: menggeul-as-jeo" },
+      { "entry": "ig-da", "meaning": "leer", "es": "leer" },
+      { "entry": "aj-da", "meaning": "sentarse", "es": "sentarse" },
+      { "entry": "jug-da", "meaning": "morir", "es": "morir" },
+      { "entry": "pa-da", "meaning": "cavar", "es": "cavar" },
+      { "entry": "deul-da", "meaning": "preguntar", "es": "preguntar", "harmony": "eo" },
+      { "entry": "jab-da", "meaning": "agarrar, tomar", "es": "agarrar" },
+      { "entry": "geuchi-da", "meaning": "cortar (un árbol)", "es": "cortar", "harmony": "a", "note": "lleva a: geuchy-as-jeo" },
+      { "entry": "chuli-da", "meaning": "pagar", "es": "pagar" },
+      { "entry": "ka-da", "meaning": "arder, quemarse", "es": "arder" },
+      { "entry": "nol-da", "meaning": "jugar", "es": "jugar" },
+      { "entry": "seolleu-da", "meaning": "limpiar, ordenar", "es": "limpiar" }
+    ]
+  }
+}

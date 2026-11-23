@@ -17,6 +17,7 @@ const FAMILIES = {
   tupi: ["Tupí-guaraní", "Tupi-Guarani", "图皮-瓜拉尼语族"],
   quechua: ["Quechua", "Quechuan", "克丘亚语系"],
   araucana: ["Araucana", "Araucanian", "阿劳坎语系"],
+  coreanica: ["Coreánica", "Koreanic", "朝鲜语系"],
 };
 const AREAS = {
   mesoamerica: ["Mesoamérica", "Mesoamerica", "中部美洲"],
@@ -27,6 +28,7 @@ const AREAS = {
   chaco: ["Gran Chaco", "Gran Chaco", "大查科地区"],
   andes: ["Andes", "Andes", "安第斯地区"],
   wallmapu: ["Wallmapu (Araucanía y Pampa)", "Wallmapu (Araucanía and the Pampas)", "瓦尔马普（阿劳卡尼亚与潘帕斯）"],
+  asia_oriental: ["Asia oriental", "East Asia", "东亚"],
 };
 // Sections of the list, in order. `soon` is shown while a section is empty.
 const CONTINENTS = [
@@ -35,6 +37,7 @@ const CONTINENTS = [
     id: "sur",
     name: t("Sudamérica", "South America", "南美洲"),
   },
+  { id: "asia", name: t("Asia", "Asia", "亚洲") },
 ];
 const label = (names, id) => (names[id] ? t(...names[id]) : id);
 

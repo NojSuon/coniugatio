@@ -8,6 +8,7 @@ pub mod chol;
 pub mod chinese;
 pub mod english;
 pub mod itza;
+pub mod jejueo;
 pub mod kichwa;
 pub mod lacandon;
 pub mod mapudungun;
@@ -81,6 +82,9 @@ pub enum Engine {
     /// Ch'ol (INALI spelling): aspect word + Set A / Set B, split by aspect.
     /// See `chol`.
     Chol(chol::Conjugation),
+    /// Jejueo (Romanized Hangeul): root + aspect, modality and tense
+    /// suffixes + a sentence ender for the level of speech. See `jejueo`.
+    Jejueo(jejueo::Conjugation),
 }
 
 impl Engine {
@@ -113,6 +117,7 @@ impl Engine {
             Engine::Mapudungun(c) => c.conjugate_with(verb, opts),
             Engine::Haida(c) => c.conjugate_with(verb, opts),
             Engine::Chol(c) => c.conjugate_with(verb, opts),
+            Engine::Jejueo(c) => c.conjugate_with(verb, opts),
         }
     }
 
@@ -137,6 +142,7 @@ impl Engine {
             Engine::Mapudungun(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Haida(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
             Engine::Chol(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
+            Engine::Jejueo(c) => c.lexicon.iter().map(|e| e.entry.clone()).collect(),
         }
     }
 }
@@ -176,7 +182,7 @@ pub struct Summary {
     /// Cultural area id: "mesoamerica", "sureste"…
     #[serde(default)]
     pub area: String,
-    /// "norte" (North and Central America) or "sur" (South America).
+    /// "norte" (North and Central America), "sur" (South America) or "asia".
     #[serde(default)]
     pub continent: String,
     /// `"available"` or `"soon"`.

@@ -295,23 +295,35 @@ function renderResult(data, own = false) {
     ? `<span class="caption">${e(lang.conjugator.no_plural)}</span>`
     : EMPTY;
 
-  const table = (tb) => `
+  // Column headers: a language whose verb doesn't change for person (Jejueo)
+  // names its own rows and columns, and a tense can override the columns
+  // (["Orden", "Propuesta"]); one column hides the second.
+  const ui = lang.conjugator || {};
+  const tenseSpec = (id) => ((lang.conjugation || {}).tenses || []).find((x) => x.id === id) || {};
+  const table = (tb) => {
+    const cols = tenseSpec(tb.id).columns || ui.columns || [t("Singular", "Singular", "单数"), t("Plural", "Plural", "复数")];
+    const two = cols.length > 1;
+    return `
     <div class="tense">
       <h4>${e(tb.name)}</h4>
       <p class="caption">${e(tb.description)}</p>
       <div class="table-scroll"><table class="data">
-        <thead><tr><th scope="col">${t("Persona", "Person", "人称")}</th><th scope="col">${t("Singular", "Singular", "单数")}</th><th scope="col">${t("Plural", "Plural", "复数")}</th></tr></thead>
+        <thead><tr><th scope="col">${e(ui.row_header || t("Persona", "Person", "人称"))}</th>${cols
+          .slice(0, 2)
+          .map((c) => `<th scope="col">${e(c)}</th>`)
+          .join("")}</tr></thead>
         <tbody>${tb.rows
           .map(
             (r) => `<tr>
               <th scope="row" class="person">${e(r.person)}</th>
               <td>${r.singular ? w(r.singular) : EMPTY}${es(r.es_singular)}</td>
-              <td>${r.plural ? w(r.plural) : noPlural}${es(r.es_plural)}</td>
+              ${two ? `<td>${r.plural ? w(r.plural) : noPlural}${es(r.es_plural)}</td>` : ""}
             </tr>`
           )
           .join("")}</tbody>
       </table></div>
     </div>`;
+  };
 
   // One group of tables at a time, with buttons to switch between them.
   const shown = groups.includes(lastGroup) ? lastGroup : groups[0];

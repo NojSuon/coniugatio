@@ -1,0 +1,219 @@
+{
+  "name": "Jejueo",
+  "variant": "Jejueo (Jejumal), in Yang, Yang and O'Grady's Romanization",
+  "region": "Jeju Island, South Korea",
+  "summary": "The language of Jeju Island, off the south of Korea. Its verb doesn't change for person: it strings together aspect and tense suffixes and ends with a piece that says whether you're talking to a friend or to an elder.",
+  "conjugator": {
+    "label": "Verb",
+    "hint": "Type the verb with -da, as in the dictionary, or just the root: meog-da or meog «eat», ga-da «go», haw-da «do». Hyphens are optional.",
+    "row_header": "Level of speech",
+    "columns": ["Statement", "Question"],
+    "own": {
+      "hint": "Type any action verb with -da or just its root, and its meaning in English. We use the general vowel-harmony rule: -as after a, o and aw; -eos elsewhere. Some verbs break it (menggeul-as «made»).",
+      "label": "Verb",
+      "es_placeholder": "choose"
+    }
+  },
+  "source": {
+    "short": "Yang, Yang and O'Grady, Jejueo: The Language of Korea's Jeju Island (2020)",
+    "full": "Changyong Yang, Sejung Yang and William O'Grady, Jejueo: The Language of Korea's Jeju Island (Honolulu: University of Hawai'i Press, 2020), chs. 2 and 5–7, for the spelling, the Romanization, the aspect, modality and tense suffixes, the sentence enders and the examples; Sejung Yang, «A Revised Analysis of the Tense-Aspect Markers in Jejueo», University of Hawai'i Working Papers in Linguistics 49 (2018); UNESCO, Atlas of the World's Languages in Danger (2010)."
+  },
+  "about": [
+    "Jejueo (제주어), which its speakers call Jejumal, «Jeju speech», is the language of Jeju Island, in the Korea Strait south of the Korean peninsula. It is related to Korean, in the Koreanic family, but a speaker from Seoul or Busan understands very little of it: in a test with a story told in Jejueo, they got fewer than 10% of the questions right.",
+    "The island lived in isolation for centuries, and its language kept words and sounds that Korean lost, such as the vowel ㆍ, the «alae a» of Middle Korean. The island is also famous for its haenyeo, the women who dive for seafood without air tanks, whose tradition is on UNESCO's heritage list.",
+    "In 2010 UNESCO listed Jejueo as critically endangered. It estimated five to ten thousand speakers, but the authors of the grammar think far fewer remain fluent today, nearly all over 70. Since Jeju's Language Act of 2007 there have been efforts to teach it, write it and record its last speakers."
+  ],
+  "orthography": {
+    "intro": "Jejueo is written in Hangeul, the Korean alphabet, with one extra letter: ㆍ, the «alae a». Here we write it in the Romanization of Yang, Yang and O'Grady's grammar, which gives one Latin letter for each Hangeul letter (aw = ㆍ), and we separate the pieces of the verb with hyphens, as the book does: meog-eoms-jeo «is eating».",
+    "letters": [
+      { "meaning": "boat; belly" },
+      { "meaning": "ticket" },
+      { "meaning": "bone" },
+      { "meaning": "moon" },
+      { "meaning": "seaweed" },
+      { "meaning": "daughter" },
+      { "meaning": "frog" },
+      { "meaning": "vegetable" },
+      { "meaning": "bait" },
+      { "meaning": "owner" },
+      { "meaning": "shame" },
+      { "meaning": "straight" },
+      { "meaning": "flesh" },
+      { "meaning": "uncooked rice" },
+      { "meaning": "fog" },
+      { "meaning": "you" },
+      { "meaning": "tree" },
+      { "meaning": "road" },
+      { "meaning": "grandfather" },
+      { "meaning": "later" },
+      { "meaning": "beside" },
+      { "meaning": "bird" },
+      { "meaning": "letter" },
+      { "meaning": "mother" },
+      { "meaning": "father" },
+      { "meaning": "house garden" },
+      { "meaning": "older brother" },
+      { "meaning": "mind, heart" }
+    ],
+    "vowels": [
+      { "title": "Vowels of older speakers" }
+    ],
+    "notes": [
+      "Stops come in threes: plain (b, d, g, j), aspirated (p, t, k, ch) and tense (pp, tt, kk, jj), and so do s and ss: dawl «moon», tawl «seaweed», ttawl «daughter».",
+      "ㆍ, «alae a», is the vowel that sets Jejueo apart: it sounds between a and o, with the mouth open and the lips slightly rounded. Many words alternate it with o: nawmppi or nomppi «radish». Younger speakers hardly distinguish it any more.",
+      "Older speakers tell e from ae (semi «spring», sæmi «a kind of rice cake»); younger ones say them the same.",
+      "l between vowels sounds like a flapped r: dawl-eumin is said daw-leu-min. ng never starts a syllable.",
+      "Hangeul always spells each piece the same way, even when it's pronounced differently: dawg «chicken» is written with g although in dawg-nun «chicken eye» it sounds dawng. That's why we separate the pieces of the verb with hyphens.",
+      "The digraphs (ng, eu, ae, aw) can be ambiguous; where needed, a dot separates syllables: en.gida «be hugged», me.uda «fill»."
+    ]
+  },
+  "grammar": {
+    "intro": "A Jeju verb doesn't change for person: «I eat», «you eat» and «she eats» are the same form, and the subject is left out when it's clear. Up to four aspect, modality and tense suffixes are added to the root in a fixed order, and at the end comes an ender that says whether it's a statement, a question or an order, and how politely one is speaking.",
+    "blocks": [
+      {
+        "items": [
+          { "slot": "Root", "description": "The verb without -da: meog-da → meog-." },
+          { "slot": "Aspect 1", "description": "-eoms, continuative: what is going on." },
+          { "slot": "Aspect 2", "description": "-eos, perfective: what is seen as complete, usually past." },
+          { "slot": "Modality", "description": "-euk, intention or guess; -(eu)neu, what is habitual or certain." },
+          { "slot": "Tense", "description": "-eun nonpast, -eon past, -eul future." },
+          { "slot": "Ender", "description": "Statement, question or order, with or without politeness: -da, -jeo, -ga, -ya, -u-da…" }
+        ]
+      },
+      {
+        "title": "Three levels of speech",
+        "description": "With family and friends people speak informally. To an elder or someone of higher rank, the honorific -u (or -euu) goes before the ender; in formal situations -eub is used with a mark of how one knows what one says: -de (I saw it) or -ne (I know it).",
+        "columns": ["Level", "Statement", "Question"],
+        "rows": [
+          { "label": "Informal", "cells": ["meog-eos-jeo «ate»", "meog-eos-ya «did … eat?»"] },
+          { "label": "Polite (-u)" },
+          { "label": "Formal (-eub)", "cells": ["meog-eos-ib-de-da «(I saw that) … ate»", "meog-eos-ib-de-ga"] }
+        ]
+      },
+      {
+        "title": "Vowel harmony",
+        "description": "-eoms, -eos and -eon swap eo for a after a root with a, o or (when a consonant follows) aw. After a and eo they shrink; after e, ae and aw they take y; a root's i becomes y, and eu drops. Some verbs follow their own rule: menggeul-as «made», deul-eos «asked».",
+        "columns": ["Root", "Perfective", "Why"],
+        "rows": [
+          { "cells": ["meog-eos-jeo", "general rule: eo"] },
+          { "cells": ["chawj-as-jeo", "aw + consonant: a"] },
+          { "cells": ["ga-s-jeo", "after a: -s"] },
+          { "cells": ["haw-yeos-jeo", "after aw: y"] },
+          { "cells": ["dekky-eos-jeo", "i + eo → yeo"] },
+          { "cells": ["singg-eos-jeo", "eu drops"] },
+          { "cells": ["menggeul-as-jeo", "the verb's own a"] }
+        ]
+      },
+      {
+        "title": "The linking vowel",
+        "description": "Suffixes that start with eu (-eun, -euk, -eul, -eub, -eula) drop it after a vowel, change it to i after s, j and ch, and to u after b, p and m. A final l drops before n, b and the l of the future."
+      },
+      {
+        "title": "Phrases",
+        "items": [
+          { "translation": "What are you doing tomorrow?" },
+          { "translation": "What is this?" },
+          { "translation": "She threw away the scissors." },
+          { "translation": "Let's do the laundry!" },
+          { "translation": "Finish eating first!" },
+          { "translation": "Please eat this." },
+          { "translation": "I'll do the errand (said to an elder)." }
+        ]
+      },
+      {
+        "title": "Every affix of the verb",
+        "description": "Every piece a verb can take, in the order it goes: suffixes that change the verb, aspect, modality and tense, honorifics, the enders for statements, questions and orders, negation and the connectives that join clauses. They can be combined: meog-eoms-eos-ik-eun-ge «must have been eating».",
+        "items": [
+          { "kind": "derivation", "meaning": "passive: be done", "translation": "be eaten" },
+          { "kind": "derivation", "meaning": "causative: make someone do", "translation": "I'll boil it" },
+          { "kind": "aspect", "meaning": "continuative: what is going on; with state verbs, «becoming»", "translation": "is eating" },
+          { "kind": "aspect", "meaning": "the continuative before -ga and -dia", "translation": "are you gathering?" },
+          { "kind": "aspect", "meaning": "perfective: seen as complete", "translation": "dug" },
+          { "kind": "modality", "meaning": "prospective: intention (with «I») or guess", "translation": "I'm going to catch it" },
+          { "kind": "modality", "meaning": "indicative: what is habitual or certain, always with -n", "translation": "does … eat?" },
+          { "kind": "tense", "meaning": "nonpast: a fact or a habit", "translation": "eats" },
+          { "kind": "tense", "meaning": "past; can end the sentence on its own", "translation": "caught it" },
+          { "kind": "tense", "meaning": "future", "translation": "you will die" },
+          { "kind": "honorific", "meaning": "respect for the listener, after aspect or modality", "translation": "I'll go (to an elder)" },
+          { "kind": "honorific", "meaning": "respect for the listener, with bare state verbs", "translation": "it's small" },
+          { "kind": "honorific", "meaning": "formal respect, with -de, -ne or -seo", "translation": "(I know) she eats" },
+          { "kind": "honorific", "meaning": "more respect, in requests to elders", "translation": "please sit down" },
+          { "kind": "evidential", "meaning": "said because one saw it", "translation": "(I saw him) catching" },
+          { "kind": "evidential", "meaning": "said because one knows or infers it", "translation": "(I know) he catches" },
+          { "kind": "statement", "meaning": "the most common ender; more used by older people", "translation": "eats" },
+          { "kind": "statement", "meaning": "action verbs only; with the bare root, «I'll do it»", "translation": "I'll catch it" },
+          { "kind": "statement and question", "meaning": "informal", "translation": "is catching" },
+          { "kind": "statement", "meaning": "informal; sometimes «you should have»", "translation": "plants pine trees" },
+          { "kind": "statement", "meaning": "informal, about something one notices", "translation": "eats" },
+          { "kind": "statement", "meaning": "a guess from what one sees", "translation": "looks like she'll raise them" },
+          { "kind": "statement", "meaning": "what one saw before", "translation": "(I saw) he caught well" },
+          { "kind": "statement and question", "meaning": "statement, or question with what, who…", "translation": "I already ate" },
+          { "kind": "question", "meaning": "yes-no or what, who…; also «I wonder»", "translation": "did she gather?" },
+          { "kind": "question", "meaning": "informal, mostly older speakers", "translation": "did you catch it?" },
+          { "kind": "question", "meaning": "with what, who, why…", "translation": "why is it warm?" },
+          { "kind": "question", "meaning": "with what, who, why…", "translation": "what are you doing?" },
+          { "kind": "question", "meaning": "polite, to an elder", "translation": "will you throw them away?" },
+          { "kind": "question and statement", "meaning": "polite, with state verbs", "translation": "it's small" },
+          { "kind": "question", "meaning": "formal: what the listener saw or knows", "translation": "shall I sit?" },
+          { "kind": "order", "meaning": "imperative, right now", "translation": "sit down!" },
+          { "kind": "order", "meaning": "proposal: let's", "translation": "let's do the laundry!" },
+          { "kind": "order", "meaning": "formal request", "translation": "please eat" },
+          { "kind": "order", "meaning": "from older women to a younger adult", "translation": "catch it!" },
+          { "kind": "honorific", "meaning": "all-purpose politeness, mostly from younger speakers" },
+          { "kind": "negation", "meaning": "not, before the verb", "translation": "I'm not going to go" },
+          { "kind": "negation", "meaning": "cannot", "translation": "couldn't eat" },
+          { "kind": "negation", "meaning": "long negation", "translation": "he didn't cut it" },
+          { "kind": "negation", "meaning": "prohibition: don't", "translation": "don't hide it" },
+          { "kind": "connective", "meaning": "if, when", "translation": "if it burns" },
+          { "kind": "connective", "meaning": "while", "translation": "while coming" },
+          { "kind": "connective", "meaning": "because", "translation": "because it blows" },
+          { "kind": "connective", "meaning": "and then, go and", "translation": "if you go and look" }
+        ]
+      }
+    ]
+  },
+  "conjugation": {
+    "persons": [
+      { "id": "informal", "label": "Informal: family and friends" },
+      { "id": "polite", "label": "Polite (-u): to an elder" },
+      { "id": "formal", "label": "Formal (-eub)" }
+    ],
+    "tenses": [
+      { "id": "present", "group": "Aspect and tense", "name": "Nonpast", "description": "A fact or a habit: -eun-da to state it, -(eu)neu-n-ga to ask. Action verbs have no polite -u form without another suffix; the formal one is -eub-ne-da «(I know) she does it»." },
+      { "id": "continuative", "group": "Aspect and tense", "name": "Continuative", "description": "What is going on (-eoms): meog-eoms-jeo «is eating». Before -ga it loses its s: meog-eom-ga." },
+      { "id": "perfective", "group": "Aspect and tense", "name": "Perfective", "description": "What is seen as complete, usually past (-eos): meog-eos-jeo «ate». The formal -ib-de-da says one saw it." },
+      { "id": "past", "group": "Aspect and tense", "name": "-eon past", "description": "A past that can end the sentence with no ender: sim-eon «caught it». Informal speech only." },
+      { "id": "prospective", "group": "Future", "name": "Prospective", "description": "With «I», what one means to do (-euk): meog-euk-yeo «I'm going to eat»; with others, a guess. With -u, a promise to an elder.", "es": { "tense": "progressive", "aux": "go", "link": "to" }, "es_2": { "tense": "progressive", "aux": "go", "link": "to", "question": true } },
+      { "id": "future", "group": "Future", "name": "-eulgeo future", "description": "What will happen, also with no intention: «it starts at three», «you will die»." },
+      { "id": "imperative", "group": "Orders", "name": "Imperative and proposal", "description": "-eula, do it now!; -ge, let's do it!; -eub-seo, formal request.", "columns": ["Order", "Proposal"], "es_2": { "tense": "present", "before": "let's", "pronoun": false }, "es_formal": { "tense": "present", "before": "please", "pronoun": false }, "person_formal": 1 },
+      { "id": "prohibitive", "group": "Orders", "name": "Prohibition", "description": "-ji mal-la: don't do it!", "columns": ["Prohibition"] },
+      { "id": "negative_perfective", "group": "Negation", "name": "Negative perfective", "description": "an before the verb: an meog-eos-jeo «didn't eat»." },
+      { "id": "negative_prospective", "group": "Negation", "name": "Negative prospective", "description": "an ga-k-yeo «I'm not going to go».", "es": { "tense": "progressive", "aux": "go", "link": "to" }, "es_2": { "tense": "progressive", "aux": "go", "link": "to", "question": true } },
+      { "id": "cannot", "group": "Negation", "name": "Cannot", "description": "mos before the verb: mos meog-eos-jeo «couldn't eat».", "es": { "tense": "preterite", "aux": "can" }, "es_2": { "tense": "preterite", "aux": "can", "question": true } }
+    ],
+    "lexicon": [
+      { "entry": "meog-da", "meaning": "eat", "es": "eat" },
+      { "entry": "ga-da", "meaning": "go", "es": "go" },
+      { "entry": "haw-da", "meaning": "do", "es": "do it" },
+      { "entry": "sim-da", "meaning": "catch, grab", "es": "catch it" },
+      { "entry": "chawj-da", "meaning": "look for, find", "es": "look for it" },
+      { "entry": "dekki-da", "meaning": "throw away", "es": "throw it away" },
+      { "entry": "sichi-da", "meaning": "wash", "es": "wash it" },
+      { "entry": "singgeu-da", "meaning": "plant, sow", "es": "plant it" },
+      { "entry": "gawm-da", "meaning": "wash (the body)", "es": "bathe", "note": "mom gawm-da «take a bath», literally «wash the body»" },
+      { "entry": "jus-da", "meaning": "gather, pick up", "es": "gather it" },
+      { "entry": "menggeul-da", "meaning": "make, prepare", "es": "make it", "note": "takes a although its vowel is eu: menggeul-as-jeo" },
+      { "entry": "ig-da", "meaning": "read", "es": "read" },
+      { "entry": "aj-da", "meaning": "sit down", "es": "sit down" },
+      { "entry": "jug-da", "meaning": "die", "es": "die" },
+      { "entry": "pa-da", "meaning": "dig", "es": "dig" },
+      { "entry": "deul-da", "meaning": "ask", "es": "ask" },
+      { "entry": "jab-da", "meaning": "grab, take", "es": "grab it" },
+      { "entry": "geuchi-da", "meaning": "cut (a tree)", "es": "cut it", "note": "takes a: geuchy-as-jeo" },
+      { "entry": "chuli-da", "meaning": "pay", "es": "pay" },
+      { "entry": "ka-da", "meaning": "burn", "es": "burn" },
+      { "entry": "nol-da", "meaning": "play", "es": "play" },
+      { "entry": "seolleu-da", "meaning": "clean up, tidy", "es": "clean up" }
+    ]
+  }
+}
