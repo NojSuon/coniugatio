@@ -369,7 +369,7 @@ p { margin: 0; max-width: 65ch; }
 .hero-carousel .hero-logo { display: block; margin-inline: auto; }
 .carousel { width: 100%; min-width: 0; }
 .carousel-track {
-  min-width: 0;
+  min-width: 0; position: relative; /* clip absolutely placed children */
   display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
   scrollbar-width: none; border-radius: var(--r-card);
   box-shadow: var(--shadow-soft);
