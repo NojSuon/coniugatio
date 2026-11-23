@@ -541,8 +541,8 @@
       },
       {
         "type": "affixes",
-        "title": "Los afijos del verbo",
-        "description": "Prefijos de persona y las marcas más comunes de tiempo, aspecto y modo. Las átonas (-ta, -kuri, -ma) dejan el acento en la raíz: ajapóta.",
+        "title": "Todos los afijos del verbo",
+        "description": "Cada pieza que puede llevar un verbo: prefijos de persona y de objeto, prefijos que cambian el verbo, marcas de tiempo, aspecto y modo, negación y sufijos que lo subordinan. Las átonas (-ta, -kuri, -ma, -pa) dejan el acento en la raíz: ajapóta.",
         "items": [
           {
             "affix": "a-",
@@ -725,7 +725,25 @@
             "meaning": "Otra vez",
             "example": "ajujey",
             "translation": "vuelvo"
-          }
+          },
+          { "affix": "ro-", "kind": "persona y objeto", "meaning": "yo (o nosotros) a ti", "example": "rohayhu", "translation": "te quiero" },
+          { "affix": "po-", "kind": "persona y objeto", "meaning": "yo (o nosotros) a ustedes", "example": "pohayhu", "translation": "los quiero (a ustedes)" },
+          { "affix": "mbo- / mo-", "kind": "derivación", "meaning": "causativo de los intransitivos: hacer que otro haga (mo- con raíz nasal)", "example": "ombopuka", "translation": "lo hace reír" },
+          { "affix": "-uka", "kind": "derivación", "meaning": "causativo de los transitivos: hacer que otro lo haga", "example": "ojapouka", "translation": "lo hace hacer" },
+          { "affix": "je- / ñe-", "kind": "derivación", "meaning": "reflexivo y pasivo (ñe- con raíz nasal)", "example": "ojejapo", "translation": "se hace" },
+          { "affix": "jo- / ño-", "kind": "derivación", "meaning": "recíproco: unos a otros", "example": "ojohayhu", "translation": "se quieren" },
+          { "affix": "-pa", "kind": "enclítico", "meaning": "pregunta (átona)", "example": "rehópa", "translation": "¿vas?" },
+          { "affix": "-ve", "kind": "grado", "meaning": "más", "example": "aikuaave", "translation": "sé más" },
+          { "affix": "-ete / -ite", "kind": "grado", "meaning": "mucho, de verdad", "example": "rohayhuete", "translation": "te quiero mucho" },
+          { "affix": "-rei", "kind": "aspecto", "meaning": "en vano, sin motivo", "example": "ajaporei", "translation": "lo hago en vano" },
+          { "affix": "-vo", "kind": "subordinación", "meaning": "mientras, al hacer", "example": "ohóvo", "translation": "al ir, yendo" },
+          { "affix": "-ramo", "kind": "subordinación", "meaning": "cuando, si", "example": "oúramo", "translation": "cuando venga, si viene" },
+          { "affix": "-rõ", "kind": "subordinación", "meaning": "si (condición)", "example": "rehórõ", "translation": "si vas" },
+          { "affix": "-rire", "kind": "subordinación", "meaning": "después de", "example": "okarúrire", "translation": "después de comer" },
+          { "affix": "-hápe", "kind": "subordinación", "meaning": "donde; porque", "example": "oikohápe", "translation": "donde vive" },
+          { "affix": "-va", "kind": "nominalización", "meaning": "relativo: el que", "example": "oúva", "translation": "el que viene" },
+          { "affix": "-ha", "kind": "nominalización", "meaning": "el que hace (agente) o donde se hace", "example": "mba'apoha", "translation": "trabajador" },
+          { "affix": "nga'u", "kind": "modo", "meaning": "ojalá: deseo que no se cumple", "example": "ou nga'u", "translation": "ojalá viniera" }
         ]
       }
     ]

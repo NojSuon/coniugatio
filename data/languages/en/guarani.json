@@ -279,8 +279,8 @@
       },
       {
         "type": "affixes",
-        "title": "The affixes of the verb",
-        "description": "Person prefixes and the most common marks of tense, aspect and mood. The unstressed ones (-ta, -kuri, -ma) leave the stress on the root: ajapóta.",
+        "title": "Every affix of the verb",
+        "description": "Every piece a verb can take: person and object prefixes, prefixes that change the verb, marks of tense, aspect and mood, negation and suffixes that make it subordinate. The unstressed ones (-ta, -kuri, -ma, -pa) leave the stress on the root: ajapóta.",
         "items": [
           {
             "kind": "person",
@@ -411,7 +411,25 @@
             "kind": "aspect",
             "meaning": "Again",
             "translation": "I come back"
-          }
+          },
+          { "kind": "person and object", "meaning": "I (or we) to you", "translation": "I love you" },
+          { "kind": "person and object", "meaning": "I (or we) to you all", "translation": "I love you all" },
+          { "kind": "derivation", "meaning": "causative of intransitives: make someone do (mo- with a nasal root)", "translation": "he makes him laugh" },
+          { "kind": "derivation", "meaning": "causative of transitives: have someone do it", "translation": "he has it done" },
+          { "kind": "derivation", "meaning": "reflexive and passive (ñe- with a nasal root)", "translation": "it is made" },
+          { "kind": "derivation", "meaning": "reciprocal: each other", "translation": "they love each other" },
+          { "kind": "enclitic", "meaning": "question (unstressed)", "translation": "are you going?" },
+          { "kind": "degree", "meaning": "more", "translation": "I know more" },
+          { "kind": "degree", "meaning": "very much, truly", "translation": "I love you very much" },
+          { "kind": "aspect", "meaning": "in vain, for nothing", "translation": "I do it for nothing" },
+          { "kind": "subordination", "meaning": "while, on doing", "translation": "on his way, while going" },
+          { "kind": "subordination", "meaning": "when, if", "translation": "when he comes, if he comes" },
+          { "kind": "subordination", "meaning": "if (condition)", "translation": "if you go" },
+          { "kind": "subordination", "meaning": "after", "translation": "after eating" },
+          { "kind": "subordination", "meaning": "where; because", "translation": "where he lives" },
+          { "kind": "nominalization", "meaning": "relative: the one who", "translation": "the one who comes" },
+          { "kind": "nominalization", "meaning": "the one who does (agent) or where it is done", "translation": "worker" },
+          { "kind": "mood", "meaning": "if only: a wish that won't come true", "translation": "if only he would come" }
         ]
       }
     ]

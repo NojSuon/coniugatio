@@ -279,8 +279,8 @@
       },
       {
         "type": "affixes",
-        "title": "动词的词缀",
-        "description": "人称前缀以及最常见的时态、体和语气标记。非重读的（-ta、-kuri、-ma）让重音留在词根上：ajapóta。",
+        "title": "动词的所有词缀",
+        "description": "动词可以带的每一个成分：人称和宾语前缀、改变动词意义的前缀、时态、体和语气标记、否定，以及使它成为从句的后缀。非重读的（-ta、-kuri、-ma、-pa）让重音留在词根上：ajapóta。",
         "items": [
           {
             "kind": "人称",
@@ -411,7 +411,25 @@
             "kind": "体",
             "meaning": "再次",
             "translation": "我回来"
-          }
+          },
+          { "kind": "人称和宾语", "meaning": "我（或我们）对你", "translation": "我爱你" },
+          { "kind": "人称和宾语", "meaning": "我（或我们）对你们", "translation": "我爱你们" },
+          { "kind": "派生", "meaning": "不及物动词的使役：使别人做（鼻音词根用 mo-）", "translation": "他逗他笑" },
+          { "kind": "派生", "meaning": "及物动词的使役：让别人做", "translation": "他让人做" },
+          { "kind": "派生", "meaning": "反身和被动（鼻音词根用 ñe-）", "translation": "它被做出来" },
+          { "kind": "派生", "meaning": "相互：互相", "translation": "他们相爱" },
+          { "kind": "附着词", "meaning": "疑问（非重读）", "translation": "你去吗？" },
+          { "kind": "程度", "meaning": "更", "translation": "我知道得更多" },
+          { "kind": "程度", "meaning": "很，真的", "translation": "我很爱你" },
+          { "kind": "体", "meaning": "徒劳，无缘无故", "translation": "我白做了" },
+          { "kind": "从属", "meaning": "在……时，做的时候", "translation": "在他去的路上" },
+          { "kind": "从属", "meaning": "当……时，如果", "translation": "他来的时候，如果他来" },
+          { "kind": "从属", "meaning": "如果（条件）", "translation": "如果你去" },
+          { "kind": "从属", "meaning": "在……之后", "translation": "吃完以后" },
+          { "kind": "从属", "meaning": "在……的地方；因为", "translation": "他住的地方" },
+          { "kind": "名词化", "meaning": "关系：……的人", "translation": "来的人" },
+          { "kind": "名词化", "meaning": "做的人（施事）或做的地方", "translation": "工人" },
+          { "kind": "语气", "meaning": "但愿：不会实现的愿望", "translation": "要是他能来就好了" }
         ]
       }
     ]
